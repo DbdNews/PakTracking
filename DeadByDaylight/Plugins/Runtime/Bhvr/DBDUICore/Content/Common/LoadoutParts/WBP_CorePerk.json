@@ -1,0 +1,3799 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WBP_CorePerk",
+    "Outer": "WBP_CorePerk_C",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_perkViewData",
+        "Flags": 1,
+        "ElementSize": 112,
+        "PropertyFlags": 2,
+        "Struct": {
+          "ObjectName": "ScriptStruct PerkViewData",
+          "ObjectPath": "/Script/DBDUIViewInterfaces"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetDynamicMaterial_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class MaterialInstanceDynamic",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_IsDesignTime",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_cooldownValue",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_IsRechargeable",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_IsRechargeableActive",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 8421377
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdatePerkCooldown",
+    "Outer": "WBP_CorePerk_C",
+    "SuperStruct": {
+      "ObjectName": "Function PerkViewInterface:UpdatePerkCooldown",
+      "ObjectPath": "/Script/DBDUIViewInterfaces"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "cooldownValue",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "IsRechargeable",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "IsRechargeableActive",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 201459712
+  },
+  {
+    "Type": "Function",
+    "Name": "PreConstruct",
+    "Outer": "WBP_CorePerk_C",
+    "SuperStruct": {
+      "ObjectName": "Function UserWidget:PreConstruct",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "IsDesignTime",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 134350856
+  },
+  {
+    "Type": "Function",
+    "Name": "ClearData",
+    "Outer": "WBP_CorePerk_C",
+    "SuperStruct": {
+      "ObjectName": "Function PerkViewInterface:ClearData",
+      "ObjectPath": "/Script/DBDUIViewInterfaces"
+    },
+    "FunctionFlags": 201459712
+  },
+  {
+    "Type": "Function",
+    "Name": "SetData",
+    "Outer": "WBP_CorePerk_C",
+    "SuperStruct": {
+      "ObjectName": "Function PerkViewInterface:SetData",
+      "ObjectPath": "/Script/DBDUIViewInterfaces"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "perkViewData",
+        "Flags": 1,
+        "ElementSize": 112,
+        "PropertyFlags": 134218134,
+        "Struct": {
+          "ObjectName": "ScriptStruct PerkViewData",
+          "ObjectPath": "/Script/DBDUIViewInterfaces"
+        }
+      }
+    ],
+    "FunctionFlags": 205654016
+  },
+  {
+    "Type": "Function",
+    "Name": "SetPerkLevel",
+    "Outer": "WBP_CorePerk_C",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "Level",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchInteger_CmpSuccess",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_IntInt_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 201588736
+  },
+  {
+    "Type": "Function",
+    "Name": "SetPerkStackCount",
+    "Outer": "WBP_CorePerk_C",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "StackCount",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_IntInt_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_IntToText_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 24
+      }
+    ],
+    "FunctionFlags": 209977344
+  },
+  {
+    "Type": "Function",
+    "Name": "SetSlotUnlockLevel",
+    "Outer": "WBP_CorePerk_C",
+    "ChildProperties": [
+      {
+        "Type": "StrProperty",
+        "Name": "DisplayName",
+        "Flags": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 148
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "UnlockLevel",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      }
+    ],
+    "FunctionFlags": 201588736
+  },
+  {
+    "Type": "Function",
+    "Name": "SetPerkDebuff",
+    "Outer": "WBP_CorePerk_C",
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "Effect Type",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "Enum": {
+          "ObjectName": "Enum EStatusEffectType",
+          "ObjectPath": "/Script/DBDSharedTypes"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": 1,
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchEnum_CmpSuccess",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetDynamicMaterial_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class MaterialInstanceDynamic",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetDynamicMaterial_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class MaterialInstanceDynamic",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": 201457664
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WBP_CorePerk_C",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree WBP_CorePerk_C:WidgetTree",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.99"
+      },
+      "bClassRequiresNativeTick": true,
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation WBP_CorePerk_C:BTN_BecameAvailable_INST",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.96"
+        },
+        {
+          "ObjectName": "WidgetAnimation WBP_CorePerk_C:Highlight_INST",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.98"
+        },
+        {
+          "ObjectName": "WidgetAnimation WBP_CorePerk_C:BTN_BecomeUnavailable_INST",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.97"
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function WBP_CorePerk_C:ExecuteUbergraph_WBP_CorePerk",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class CorePerkWidget",
+      "ObjectPath": "/Script/DBDUIViewsCore"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function WBP_CorePerk_C:SetPerkDebuff",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.8"
+      },
+      {
+        "ObjectName": "Function WBP_CorePerk_C:SetSlotUnlockLevel",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.7"
+      },
+      {
+        "ObjectName": "Function WBP_CorePerk_C:SetPerkStackCount",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.6"
+      },
+      {
+        "ObjectName": "Function WBP_CorePerk_C:SetPerkLevel",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.5"
+      },
+      {
+        "ObjectName": "Function WBP_CorePerk_C:SetData",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.4"
+      },
+      {
+        "ObjectName": "Function WBP_CorePerk_C:ClearData",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.3"
+      },
+      {
+        "ObjectName": "Function WBP_CorePerk_C:PreConstruct",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.2"
+      },
+      {
+        "ObjectName": "Function WBP_CorePerk_C:UpdatePerkCooldown",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.1"
+      },
+      {
+        "ObjectName": "Function WBP_CorePerk_C:ExecuteUbergraph_WBP_CorePerk",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "Struct": {
+          "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BTN_BecomeUnavailable",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 2147491860,
+        "PropertyClass": {
+          "ObjectName": "Class WidgetAnimation",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Highlight",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 2147491860,
+        "PropertyClass": {
+          "ObjectName": "Class WidgetAnimation",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BTN_BecameAvailable",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 2147491860,
+        "PropertyClass": {
+          "ObjectName": "Class WidgetAnimation",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "imageBg",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 562952101429260,
+        "PropertyClass": {
+          "ObjectName": "Class DBDImage",
+          "ObjectPath": "/Script/DBDUIViewsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "imageBuff",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 562952101429260,
+        "PropertyClass": {
+          "ObjectName": "Class DBDImage",
+          "ObjectPath": "/Script/DBDUIViewsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "imageDebuff",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 562952101429260,
+        "PropertyClass": {
+          "ObjectName": "Class DBDImage",
+          "ObjectPath": "/Script/DBDUIViewsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ImagePerkLevel",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 562952101429260,
+        "PropertyClass": {
+          "ObjectName": "Class DBDImage",
+          "ObjectPath": "/Script/DBDUIViewsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "layoutSizeScaleLevel",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 562952101429260,
+        "PropertyClass": {
+          "ObjectName": "Class ScaleBox",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WBP_PerkCooldown",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 562952101429260,
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass WBP_CorePerkCooldown_C",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerkCooldown.5"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "ImageIndicator2Visibility",
+        "Flags": 2097153,
+        "ElementSize": 1,
+        "PropertyFlags": 65541,
+        "Enum": {
+          "ObjectName": "Enum ESlateVisibility",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": 1,
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "ImageIndicator3Visibility",
+        "Flags": 2097153,
+        "ElementSize": 1,
+        "PropertyFlags": 65541,
+        "Enum": {
+          "ObjectName": "Enum ESlateVisibility",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": 1,
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "ImageIndicator1Visibility",
+        "Flags": 2097153,
+        "ElementSize": 1,
+        "PropertyFlags": 65541,
+        "Enum": {
+          "ObjectName": "Enum ESlateVisibility",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": 1,
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "PerkPercent",
+        "Flags": 2097153,
+        "ElementSize": 4,
+        "PropertyFlags": 65541
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "PerkViewData",
+        "Flags": 2097153,
+        "ElementSize": 112,
+        "PropertyFlags": 65541,
+        "Struct": {
+          "ObjectName": "ScriptStruct PerkViewData",
+          "ObjectPath": "/Script/DBDUIViewInterfaces"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PerkRarityTexture",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 65541,
+        "PropertyClass": {
+          "ObjectName": "Class Texture",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WBP_CorePerk": {
+        "ObjectName": "Function WBP_CorePerk_C:ExecuteUbergraph_WBP_CorePerk",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.0"
+      },
+      "UpdatePerkCooldown": {
+        "ObjectName": "Function WBP_CorePerk_C:UpdatePerkCooldown",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.1"
+      },
+      "PreConstruct": {
+        "ObjectName": "Function WBP_CorePerk_C:PreConstruct",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.2"
+      },
+      "ClearData": {
+        "ObjectName": "Function WBP_CorePerk_C:ClearData",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.3"
+      },
+      "SetData": {
+        "ObjectName": "Function WBP_CorePerk_C:SetData",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.4"
+      },
+      "SetPerkLevel": {
+        "ObjectName": "Function WBP_CorePerk_C:SetPerkLevel",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.5"
+      },
+      "SetPerkStackCount": {
+        "ObjectName": "Function WBP_CorePerk_C:SetPerkStackCount",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.6"
+      },
+      "SetSlotUnlockLevel": {
+        "ObjectName": "Function WBP_CorePerk_C:SetSlotUnlockLevel",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.7"
+      },
+      "SetPerkDebuff": {
+        "ObjectName": "Function WBP_CorePerk_C:SetPerkDebuff",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.8"
+      }
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WBP_CorePerk_C Default__WBP_CorePerk_C",
+      "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.10"
+    }
+  },
+  {
+    "Type": "WBP_CorePerk_C",
+    "Name": "Default__WBP_CorePerk_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "PerkPercent": 0.75,
+      "PerkViewData": {
+        "Level": -1,
+        "Cooldown": 0.0,
+        "StatusEffectType": "EStatusEffectType::None",
+        "StackCount": 0,
+        "IsRechargeable": false,
+        "IsRechargeableActive": false,
+        "ItemId": "None",
+        "IconTexture": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "DisplayName": "",
+        "Rarity": "EItemRarity::Common"
+      },
+      "PerkRarityTexture": {
+        "ObjectName": "Texture2D perksRarityTint",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Common/loadout/inventory/perksRarityTint.0"
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "DBDImage",
+    "Name": "imageBg",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 256.0,
+          "Y": 256.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D perksBG",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Common/loadout/inventory/perksBG.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "GridSlot WBP_CorePerk_C:WidgetTree.PerkIconRarityContainer.GridSlot_0",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.24"
+      }
+    }
+  },
+  {
+    "Type": "DBDImage",
+    "Name": "imageBuff",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 64.0,
+          "Y": 64.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D items_addon_selectedMark",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Common/loadout/inventory/items_addon_selectedMark.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "GridSlot WBP_CorePerk_C:WidgetTree.PerkIconRarityContainer.GridSlot_12",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.27"
+      },
+      "RenderTransform": {
+        "Angle": 45.0
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "DBDImage",
+    "Name": "imageDebuff",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 64.0,
+          "Y": 64.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D items_addon_selectedMark",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Common/loadout/inventory/items_addon_selectedMark.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "GridSlot WBP_CorePerk_C:WidgetTree.PerkIconRarityContainer.GridSlot_10",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.26"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": -1.0,
+          "Y": -1.0
+        },
+        "Angle": 45.0
+      }
+    }
+  },
+  {
+    "Type": "DBDImage",
+    "Name": "ImageIcon",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "DefaultImage": {
+        "ObjectName": "Texture2D iconHelp_loadingMissing",
+        "ObjectPath": "DeadByDaylight/Content/UI/UMGAssets/Icons/Help/iconHelp_loadingMissing.0"
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 256.0,
+          "Y": 256.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D iconPerks_adrenaline",
+          "ObjectPath": "DeadByDaylight/Content/UI/UMGAssets/Icons/Perks/iconPerks_adrenaline.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "GridSlot WBP_CorePerk_C:WidgetTree.PerkIconRarityContainer.GridSlot_3",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.28"
+      }
+    }
+  },
+  {
+    "Type": "DBDImage",
+    "Name": "ImagePerkLevel",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 64.0,
+          "Y": 128.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D perk_boost3",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Common/loadout/inventory/perk_boost3.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot WBP_CorePerk_C:WidgetTree.layoutSizeScaleLevel.ScaleBoxSlot_0",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.94"
+      }
+    }
+  },
+  {
+    "Type": "DBDImage",
+    "Name": "imageRarity",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 256.0,
+          "Y": 256.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D perksRarityTint",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Common/loadout/inventory/perksRarityTint.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "GridSlot WBP_CorePerk_C:WidgetTree.PerkIconRarityContainer.GridSlot_1",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.25"
+      }
+    }
+  },
+  {
+    "Type": "DBDTextBlock",
+    "Name": "TextStackCount",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "C4F1FEF64B73F423EDFFD6917C4E191F",
+        "SourceString": "2"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font DBDCoreFont",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Fonts/DBDCoreFont.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 3,
+          "OutlineColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 0.4,
+            "Hex": "66000000"
+          }
+        },
+        "Size": 30
+      },
+      "Slot": {
+        "ObjectName": "GridSlot WBP_CorePerk_C:WidgetTree.CorePerkContainer.GridSlot_7",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.21"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "GridPanel",
+    "Name": "CorePerkContainer",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "GridSlot WBP_CorePerk_C:WidgetTree.CorePerkContainer.GridSlot_6",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.20"
+        },
+        {
+          "ObjectName": "GridSlot WBP_CorePerk_C:WidgetTree.CorePerkContainer.GridSlot_9",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.23"
+        },
+        {
+          "ObjectName": "GridSlot WBP_CorePerk_C:WidgetTree.CorePerkContainer.GridSlot_7",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.21"
+        },
+        {
+          "ObjectName": "GridSlot WBP_CorePerk_C:WidgetTree.CorePerkContainer.GridSlot_8",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.22"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "GridPanel",
+    "Name": "PerkIconRarityContainer",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "GridSlot WBP_CorePerk_C:WidgetTree.PerkIconRarityContainer.GridSlot_0",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.24"
+        },
+        {
+          "ObjectName": "GridSlot WBP_CorePerk_C:WidgetTree.PerkIconRarityContainer.GridSlot_1",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.25"
+        },
+        {
+          "ObjectName": "GridSlot WBP_CorePerk_C:WidgetTree.PerkIconRarityContainer.GridSlot_3",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.28"
+        },
+        {
+          "ObjectName": "GridSlot WBP_CorePerk_C:WidgetTree.PerkIconRarityContainer.GridSlot_10",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.26"
+        },
+        {
+          "ObjectName": "GridSlot WBP_CorePerk_C:WidgetTree.PerkIconRarityContainer.GridSlot_12",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.27"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot WBP_CorePerk_C:WidgetTree.layoutSizeScale.ScaleBoxSlot_0",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.93"
+      }
+    }
+  },
+  {
+    "Type": "GridSlot",
+    "Name": "GridSlot_6",
+    "Outer": "CorePerkContainer",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "GridPanel WBP_CorePerk_C:WidgetTree.CorePerkContainer",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.18"
+      },
+      "Content": {
+        "ObjectName": "ScaleBox WBP_CorePerk_C:WidgetTree.layoutSizeScale",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.91"
+      }
+    }
+  },
+  {
+    "Type": "GridSlot",
+    "Name": "GridSlot_7",
+    "Outer": "CorePerkContainer",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Right",
+      "VerticalAlignment": "VAlign_Bottom",
+      "Layer": 20,
+      "Nudge": {
+        "X": -45.0,
+        "Y": -20.0
+      },
+      "Parent": {
+        "ObjectName": "GridPanel WBP_CorePerk_C:WidgetTree.CorePerkContainer",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.18"
+      },
+      "Content": {
+        "ObjectName": "DBDTextBlock WBP_CorePerk_C:WidgetTree.TextStackCount",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.17"
+      }
+    }
+  },
+  {
+    "Type": "GridSlot",
+    "Name": "GridSlot_8",
+    "Outer": "CorePerkContainer",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Right",
+      "VerticalAlignment": "VAlign_Top",
+      "Layer": 20,
+      "Nudge": {
+        "X": -35.0,
+        "Y": 5.0
+      },
+      "Parent": {
+        "ObjectName": "GridPanel WBP_CorePerk_C:WidgetTree.CorePerkContainer",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.18"
+      },
+      "Content": {
+        "ObjectName": "ScaleBox WBP_CorePerk_C:WidgetTree.layoutSizeScaleLevel",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.92"
+      }
+    }
+  },
+  {
+    "Type": "GridSlot",
+    "Name": "GridSlot_9",
+    "Outer": "CorePerkContainer",
+    "Properties": {
+      "Layer": 10,
+      "Parent": {
+        "ObjectName": "GridPanel WBP_CorePerk_C:WidgetTree.CorePerkContainer",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.18"
+      },
+      "Content": {
+        "ObjectName": "WBP_CorePerkCooldown_C WBP_CorePerk_C:WidgetTree.WBP_PerkCooldown",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.95"
+      }
+    }
+  },
+  {
+    "Type": "GridSlot",
+    "Name": "GridSlot_0",
+    "Outer": "PerkIconRarityContainer",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "GridPanel WBP_CorePerk_C:WidgetTree.PerkIconRarityContainer",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.19"
+      },
+      "Content": {
+        "ObjectName": "DBDImage WBP_CorePerk_C:WidgetTree.imageBg",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.11"
+      }
+    }
+  },
+  {
+    "Type": "GridSlot",
+    "Name": "GridSlot_1",
+    "Outer": "PerkIconRarityContainer",
+    "Properties": {
+      "Layer": 3,
+      "Parent": {
+        "ObjectName": "GridPanel WBP_CorePerk_C:WidgetTree.PerkIconRarityContainer",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.19"
+      },
+      "Content": {
+        "ObjectName": "DBDImage WBP_CorePerk_C:WidgetTree.imageRarity",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.16"
+      }
+    }
+  },
+  {
+    "Type": "GridSlot",
+    "Name": "GridSlot_10",
+    "Outer": "PerkIconRarityContainer",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Bottom",
+      "Layer": 5,
+      "Parent": {
+        "ObjectName": "GridPanel WBP_CorePerk_C:WidgetTree.PerkIconRarityContainer",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.19"
+      },
+      "Content": {
+        "ObjectName": "DBDImage WBP_CorePerk_C:WidgetTree.imageDebuff",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.13"
+      }
+    }
+  },
+  {
+    "Type": "GridSlot",
+    "Name": "GridSlot_12",
+    "Outer": "PerkIconRarityContainer",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Top",
+      "Layer": 5,
+      "Parent": {
+        "ObjectName": "GridPanel WBP_CorePerk_C:WidgetTree.PerkIconRarityContainer",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.19"
+      },
+      "Content": {
+        "ObjectName": "DBDImage WBP_CorePerk_C:WidgetTree.imageBuff",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.12"
+      }
+    }
+  },
+  {
+    "Type": "GridSlot",
+    "Name": "GridSlot_3",
+    "Outer": "PerkIconRarityContainer",
+    "Properties": {
+      "Layer": 4,
+      "Parent": {
+        "ObjectName": "GridPanel WBP_CorePerk_C:WidgetTree.PerkIconRarityContainer",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.19"
+      },
+      "Content": {
+        "ObjectName": "DBDImage WBP_CorePerk_C:WidgetTree.ImageIcon",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.14"
+      }
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "BTN_BecameAvailable",
+    "Outer": "BTN_BecameAvailable_INST",
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "EBEB2285-467C03CE-140EE29C-49DA451E",
+          "Name": "CanvasPerk",
+          "PossessedObjectClass": {
+            "ObjectName": "Class CanvasPanel",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "90919102-45E92BAA-41ED12A2-43BEF422",
+          "Name": "ImageHighlight",
+          "PossessedObjectClass": {
+            "ObjectName": "Class Image",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "50192A7B-45286EB9-941C0CB6-45431B78",
+          "Name": "ImageCanBeClickable",
+          "PossessedObjectClass": {
+            "ObjectName": "Class Image",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "206BA3AB-4287950B-590483AF-37948B57",
+          "Name": "ActionButton",
+          "PossessedObjectClass": {
+            "ObjectName": "Class Button",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "EBEB2285-467C03CE-140EE29C-49DA451E",
+          "BindingName": "CanvasPerk",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieScene2DTransformTrack_3",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.41"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "90919102-45E92BAA-41ED12A2-43BEF422",
+          "BindingName": "ImageHighlight",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieScene2DTransformTrack_0",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.38"
+            },
+            {
+              "ObjectName": "MovieSceneFloatTrack WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieSceneFloatTrack_2",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.83"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "50192A7B-45286EB9-941C0CB6-45431B78",
+          "BindingName": "ImageCanBeClickable",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieScene2DTransformTrack_1",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.39"
+            },
+            {
+              "ObjectName": "MovieSceneFloatTrack WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieSceneFloatTrack_4",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.85"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "206BA3AB-4287950B-590483AF-37948B57",
+          "BindingName": "ActionButton",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieScene2DTransformTrack_2",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.40"
+            },
+            {
+              "ObjectName": "MovieSceneFloatTrack WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieSceneFloatTrack_3",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.84"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": -6000
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 33001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "9C0FCEB1-4ACA5246-833EDFBE-25048B4A"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "BTN_BecomeUnavailable",
+    "Outer": "BTN_BecomeUnavailable_INST",
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "EA71B1B6-41F9BC24-87AFE79F-C84009DD",
+          "Name": "ImageHighlight",
+          "PossessedObjectClass": {
+            "ObjectName": "Class Image",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "25AD968E-44F30961-F4F5F3AB-48800817",
+          "Name": "ImageCanBeClickable",
+          "PossessedObjectClass": {
+            "ObjectName": "Class Image",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "7D82FF58-44D550D5-B94C2494-0676762D",
+          "Name": "ActionButton",
+          "PossessedObjectClass": {
+            "ObjectName": "Class Button",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "EA71B1B6-41F9BC24-87AFE79F-C84009DD",
+          "BindingName": "ImageHighlight",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack WBP_CorePerk_C:BTN_BecomeUnavailable_INST.BTN_BecomeUnavailable.MovieSceneFloatTrack_11",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.87"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "25AD968E-44F30961-F4F5F3AB-48800817",
+          "BindingName": "ImageCanBeClickable",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack WBP_CorePerk_C:BTN_BecomeUnavailable_INST.BTN_BecomeUnavailable.MovieSceneFloatTrack_10",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.86"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "7D82FF58-44D550D5-B94C2494-0676762D",
+          "BindingName": "ActionButton",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack WBP_CorePerk_C:BTN_BecomeUnavailable_INST.BTN_BecomeUnavailable.MovieSceneFloatTrack_2",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.88"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": -3000
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 30001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "A871AA32-403B8791-2B9F188A-4B109632"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Highlight",
+    "Outer": "Highlight_INST",
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "EA2EB1FA-42E403FF-8AB1B99C-F6933134",
+          "Name": "HighlightPicture",
+          "PossessedObjectClass": {
+            "ObjectName": "Class Image",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "E5E43E92-4075BADA-7B801CA9-F362D116",
+          "Name": "HighlightPicture_2",
+          "PossessedObjectClass": {
+            "ObjectName": "Class Image",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "EA2EB1FA-42E403FF-8AB1B99C-F6933134",
+          "BindingName": "HighlightPicture",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack WBP_CorePerk_C:Highlight_INST.Highlight.MovieScene2DTransformTrack_1",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.42"
+            },
+            {
+              "ObjectName": "MovieSceneFloatTrack WBP_CorePerk_C:Highlight_INST.Highlight.MovieSceneFloatTrack_1",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.89"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "E5E43E92-4075BADA-7B801CA9-F362D116",
+          "BindingName": "HighlightPicture_2",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack WBP_CorePerk_C:Highlight_INST.Highlight.MovieScene2DTransformTrack_2",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.43"
+            },
+            {
+              "ObjectName": "MovieSceneFloatTrack WBP_CorePerk_C:Highlight_INST.Highlight.MovieSceneFloatTrack_2",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.90"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": -2
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 300000
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "80F9122B-4B6ED9F6-D8EC2EBC-0B7EFC6A"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Outer": "MovieScene2DTransformTrack_0",
+    "Properties": {
+      "Scale": null,
+      "Scale": null,
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseInFunction",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.44"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseOutFunction",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.45"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 30000
+            }
+          }
+        }
+      },
+      "Signature": "FA7E1B5A-4CAEE8D9-1D1D09B3-86895E8A"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Outer": "MovieScene2DTransformTrack_1",
+    "Properties": {
+      "Scale": null,
+      "Scale": null,
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0.EaseInFunction",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.46"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0.EaseOutFunction",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.47"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": -6000
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 24000
+            }
+          }
+        }
+      },
+      "Signature": "A265209D-4A64F8F9-D399D0BF-05B656F2"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Outer": "MovieScene2DTransformTrack_2",
+    "Properties": {
+      "Scale": null,
+      "Scale": null,
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0.EaseInFunction",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.48"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0.EaseOutFunction",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.49"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 24000
+            }
+          }
+        }
+      },
+      "Signature": "9EEC18FD-4B319F0F-F08344B8-652F48AC"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Outer": "MovieScene2DTransformTrack_3",
+    "Properties": {
+      "Scale": null,
+      "Scale": null,
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieScene2DTransformTrack_3.MovieScene2DTransformSection_0.EaseInFunction",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.50"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieScene2DTransformTrack_3.MovieScene2DTransformSection_0.EaseOutFunction",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.51"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 33000
+            }
+          }
+        }
+      },
+      "Signature": "3E2590FC-49779F37-A38E849C-2868E5CF"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Outer": "MovieScene2DTransformTrack_1",
+    "Properties": {
+      "Scale": null,
+      "Scale": null,
+      "EvalOptions": {
+        "CompletionMode": "EMovieSceneCompletionMode::KeepState"
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction WBP_CorePerk_C:Highlight_INST.Highlight.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0.EaseInFunction",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.64"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction WBP_CorePerk_C:Highlight_INST.Highlight.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0.EaseOutFunction",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.65"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": -2
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 300000
+            }
+          }
+        }
+      },
+      "Signature": "53D24909-4DB197A5-596B9C9D-819DECD7"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Outer": "MovieScene2DTransformTrack_2",
+    "Properties": {
+      "Scale": null,
+      "Scale": null,
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction WBP_CorePerk_C:Highlight_INST.Highlight.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0.EaseInFunction",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.66"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction WBP_CorePerk_C:Highlight_INST.Highlight.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0.EaseOutFunction",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.67"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 21000
+            }
+          }
+        }
+      },
+      "Signature": "C8B871D6-4F1CFF5C-80C2788A-0DF481BB"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Outer": "BTN_BecameAvailable",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.32"
+        }
+      ],
+      "EvaluationFieldGuid": "B60FE55E-4081B518-134B8EB5-5F23F03F",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.32"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 30000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "B60FE55E-4081B518-134B8EB5-5F23F03F"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_1",
+    "Outer": "BTN_BecameAvailable",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.33"
+        }
+      ],
+      "EvaluationFieldGuid": "8CF42394-47F0E1A1-09EE448C-58DF8879",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.33"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": -6000
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 24000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "8CF42394-47F0E1A1-09EE448C-58DF8879"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_2",
+    "Outer": "BTN_BecameAvailable",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.34"
+        }
+      ],
+      "EvaluationFieldGuid": "6C09771E-4619637F-01E7C0B2-7364DC06",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.34"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 24000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "6C09771E-4619637F-01E7C0B2-7364DC06"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_3",
+    "Outer": "BTN_BecameAvailable",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieScene2DTransformTrack_3.MovieScene2DTransformSection_0",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.35"
+        }
+      ],
+      "EvaluationFieldGuid": "00F15991-4F32EDC0-54135688-5466B387",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieScene2DTransformTrack_3.MovieScene2DTransformSection_0",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.35"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 33000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "00F15991-4F32EDC0-54135688-5466B387"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_1",
+    "Outer": "Highlight",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection WBP_CorePerk_C:Highlight_INST.Highlight.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.36"
+        }
+      ],
+      "EvaluationFieldGuid": "41A62276-43B61EB8-EFAF43A9-6CB18913",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection WBP_CorePerk_C:Highlight_INST.Highlight.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.36"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": -2
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 300000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "41A62276-43B61EB8-EFAF43A9-6CB18913"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_2",
+    "Outer": "Highlight",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection WBP_CorePerk_C:Highlight_INST.Highlight.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.37"
+        }
+      ],
+      "EvaluationFieldGuid": "0B603BDF-49CF6505-8825A2B2-A3EC24A8",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection WBP_CorePerk_C:Highlight_INST.Highlight.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.37"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 21000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "0B603BDF-49CF6505-8825A2B2-A3EC24A8"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieScene2DTransformSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieScene2DTransformSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieScene2DTransformSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieScene2DTransformSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieScene2DTransformSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieScene2DTransformSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieScene2DTransformSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieScene2DTransformSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieScene2DTransformSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieScene2DTransformSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieScene2DTransformSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieScene2DTransformSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Outer": "BTN_BecameAvailable_INST",
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                },
+                {
+                  "StartIndex": 1,
+                  "Size": 2,
+                  "Capacity": 2
+                },
+                {
+                  "StartIndex": 3,
+                  "Size": 1,
+                  "Capacity": 1
+                },
+                {
+                  "StartIndex": 4,
+                  "Size": 4,
+                  "Capacity": 4
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 1,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 2,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 3,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 3,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 4,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 5,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 6,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 2,
+                  "Capacity": 2
+                },
+                {
+                  "StartIndex": 2,
+                  "Size": 1,
+                  "Capacity": 1
+                },
+                {
+                  "StartIndex": 3,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": -6000
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 0
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 2
+                  }
+                },
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 33000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": 1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                },
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 30000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": 0
+                    },
+                    "Index": 1
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": 2
+                  },
+                  "DataID": {
+                    "EntryIndex": 1
+                  }
+                },
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 24000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": 1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 3
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieScene2DTransformTrack_3.MovieScene2DTransformSection_0",
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.35"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0",
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.32"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 1
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieSceneFloatTrack_2.MovieSceneFloatSection_0",
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.75"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 2
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0",
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.33"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 3
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieSceneFloatTrack_4.MovieSceneFloatSection_0",
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.77"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 4
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0",
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.34"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 5
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieSceneFloatTrack_3.MovieSceneFloatSection_0",
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.76"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 6
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "EBEB2285-467C03CE-140EE29C-49DA451E"
+          },
+          {
+            "ObjectBindingID": "90919102-45E92BAA-41ED12A2-43BEF422"
+          },
+          {
+            "ObjectBindingID": "90919102-45E92BAA-41ED12A2-43BEF422"
+          },
+          {
+            "ObjectBindingID": "50192A7B-45286EB9-941C0CB6-45431B78"
+          },
+          {
+            "ObjectBindingID": "50192A7B-45286EB9-941C0CB6-45431B78"
+          },
+          {
+            "ObjectBindingID": "206BA3AB-4287950B-590483AF-37948B57"
+          },
+          {
+            "ObjectBindingID": "206BA3AB-4287950B-590483AF-37948B57"
+          }
+        ]
+      },
+      "DeterminismFences": [
+        {
+          "FrameNumber": {
+            "Value": 24000
+          },
+          "SubFrame": 0.0
+        },
+        {
+          "FrameNumber": {
+            "Value": 30000
+          },
+          "SubFrame": 0.0
+        },
+        {
+          "FrameNumber": {
+            "Value": 33000
+          },
+          "SubFrame": 0.0
+        }
+      ],
+      "CompiledSignature": "73657271-4A0FCAEC-ACB6A088-AE951876",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Outer": "BTN_BecomeUnavailable_INST",
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                },
+                {
+                  "StartIndex": 1,
+                  "Size": 2,
+                  "Capacity": 2
+                },
+                {
+                  "StartIndex": 3,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 1,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 2,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 2,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                },
+                {
+                  "StartIndex": 1,
+                  "Size": 2,
+                  "Capacity": 2
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": -3000
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 30000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": 1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                },
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 12000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": 0
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 1
+                  }
+                },
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 12000
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 30000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": 0
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 2
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection WBP_CorePerk_C:BTN_BecomeUnavailable_INST.BTN_BecomeUnavailable.MovieSceneFloatTrack_11.MovieSceneFloatSection_0",
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.79"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection WBP_CorePerk_C:BTN_BecomeUnavailable_INST.BTN_BecomeUnavailable.MovieSceneFloatTrack_10.MovieSceneFloatSection_0",
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.78"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 1
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection WBP_CorePerk_C:BTN_BecomeUnavailable_INST.BTN_BecomeUnavailable.MovieSceneFloatTrack_2.MovieSceneFloatSection_0",
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.80"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 2
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "EA71B1B6-41F9BC24-87AFE79F-C84009DD"
+          },
+          {
+            "ObjectBindingID": "25AD968E-44F30961-F4F5F3AB-48800817"
+          },
+          {
+            "ObjectBindingID": "7D82FF58-44D550D5-B94C2494-0676762D"
+          }
+        ]
+      },
+      "DeterminismFences": [
+        {
+          "FrameNumber": {
+            "Value": 12000
+          },
+          "SubFrame": 0.0
+        },
+        {
+          "FrameNumber": {
+            "Value": 30000
+          },
+          "SubFrame": 0.0
+        }
+      ],
+      "CompiledSignature": "8A937FEA-4B5B7BFB-23640297-7559B89C",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Outer": "Highlight_INST",
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                },
+                {
+                  "StartIndex": 1,
+                  "Size": 1,
+                  "Capacity": 1
+                },
+                {
+                  "StartIndex": 2,
+                  "Size": 1,
+                  "Capacity": 1
+                },
+                {
+                  "StartIndex": 3,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 1,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 2,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 3,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                },
+                {
+                  "StartIndex": 1,
+                  "Size": 1,
+                  "Capacity": 1
+                },
+                {
+                  "StartIndex": 2,
+                  "Size": 1,
+                  "Capacity": 1
+                },
+                {
+                  "StartIndex": 3,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": -2
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 300000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": 1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                },
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 300000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": 0
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": 2
+                  },
+                  "DataID": {
+                    "EntryIndex": 1
+                  }
+                },
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 21000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": 1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": 3
+                  },
+                  "DataID": {
+                    "EntryIndex": 2
+                  }
+                },
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 18000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": 2
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 3
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection WBP_CorePerk_C:Highlight_INST.Highlight.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0",
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.36"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection WBP_CorePerk_C:Highlight_INST.Highlight.MovieSceneFloatTrack_1.MovieSceneFloatSection_0",
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.81"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 1
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection WBP_CorePerk_C:Highlight_INST.Highlight.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0",
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.37"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 2
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection WBP_CorePerk_C:Highlight_INST.Highlight.MovieSceneFloatTrack_2.MovieSceneFloatSection_0",
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.82"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 3
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "EA2EB1FA-42E403FF-8AB1B99C-F6933134"
+          },
+          {
+            "ObjectBindingID": "EA2EB1FA-42E403FF-8AB1B99C-F6933134"
+          },
+          {
+            "ObjectBindingID": "E5E43E92-4075BADA-7B801CA9-F362D116"
+          },
+          {
+            "ObjectBindingID": "E5E43E92-4075BADA-7B801CA9-F362D116"
+          }
+        ]
+      },
+      "DeterminismFences": [
+        {
+          "FrameNumber": {
+            "Value": 18000
+          },
+          "SubFrame": 0.0
+        },
+        {
+          "FrameNumber": {
+            "Value": 21000
+          },
+          "SubFrame": 0.0
+        },
+        {
+          "FrameNumber": {
+            "Value": 300000
+          },
+          "SubFrame": 0.0
+        }
+      ],
+      "CompiledSignature": "8A93D1E6-4B0E39AC-7F0B5BAD-58A00E35",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Outer": "MovieSceneFloatTrack_2",
+    "Properties": {
+      "FloatCurve": null,
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieSceneFloatTrack_2.MovieSceneFloatSection_0.EaseInFunction",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.52"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieSceneFloatTrack_2.MovieSceneFloatSection_0.EaseOutFunction",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.53"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 30000
+            }
+          }
+        }
+      },
+      "Signature": "7AF511FD-49418874-AF0CA5A7-033B10FE"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Outer": "MovieSceneFloatTrack_3",
+    "Properties": {
+      "FloatCurve": null,
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieSceneFloatTrack_3.MovieSceneFloatSection_0.EaseInFunction",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.54"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieSceneFloatTrack_3.MovieSceneFloatSection_0.EaseOutFunction",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.55"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 24000
+            }
+          }
+        }
+      },
+      "Signature": "9F0D5DDA-4E10D2A1-A3C5DD95-856D5E9F"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Outer": "MovieSceneFloatTrack_4",
+    "Properties": {
+      "FloatCurve": null,
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieSceneFloatTrack_4.MovieSceneFloatSection_0.EaseInFunction",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.56"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieSceneFloatTrack_4.MovieSceneFloatSection_0.EaseOutFunction",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.57"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 24000
+            }
+          }
+        }
+      },
+      "Signature": "73DB1383-4B6A9505-5BE6119E-4EC6069A"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Outer": "MovieSceneFloatTrack_10",
+    "Properties": {
+      "FloatCurve": null,
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction WBP_CorePerk_C:BTN_BecomeUnavailable_INST.BTN_BecomeUnavailable.MovieSceneFloatTrack_10.MovieSceneFloatSection_0.EaseInFunction",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.58"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction WBP_CorePerk_C:BTN_BecomeUnavailable_INST.BTN_BecomeUnavailable.MovieSceneFloatTrack_10.MovieSceneFloatSection_0.EaseOutFunction",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.59"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 12000
+            }
+          }
+        }
+      },
+      "Signature": "6728FF67-41770430-3C83B08C-24A63CCD"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Outer": "MovieSceneFloatTrack_11",
+    "Properties": {
+      "FloatCurve": null,
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction WBP_CorePerk_C:BTN_BecomeUnavailable_INST.BTN_BecomeUnavailable.MovieSceneFloatTrack_11.MovieSceneFloatSection_0.EaseInFunction",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.60"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction WBP_CorePerk_C:BTN_BecomeUnavailable_INST.BTN_BecomeUnavailable.MovieSceneFloatTrack_11.MovieSceneFloatSection_0.EaseOutFunction",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.61"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": -3000
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 30000
+            }
+          }
+        }
+      },
+      "Signature": "016073F7-4D3459B0-63051EB8-909A0AE2"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Outer": "MovieSceneFloatTrack_2",
+    "Properties": {
+      "FloatCurve": null,
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction WBP_CorePerk_C:BTN_BecomeUnavailable_INST.BTN_BecomeUnavailable.MovieSceneFloatTrack_2.MovieSceneFloatSection_0.EaseInFunction",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.62"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction WBP_CorePerk_C:BTN_BecomeUnavailable_INST.BTN_BecomeUnavailable.MovieSceneFloatTrack_2.MovieSceneFloatSection_0.EaseOutFunction",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.63"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 30000
+            }
+          }
+        }
+      },
+      "Signature": "0A1FFA84-4408D6B8-570EECA2-F4158D8A"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Outer": "MovieSceneFloatTrack_1",
+    "Properties": {
+      "FloatCurve": null,
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction WBP_CorePerk_C:Highlight_INST.Highlight.MovieSceneFloatTrack_1.MovieSceneFloatSection_0.EaseInFunction",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.68"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction WBP_CorePerk_C:Highlight_INST.Highlight.MovieSceneFloatTrack_1.MovieSceneFloatSection_0.EaseOutFunction",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.69"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 300000
+            }
+          }
+        }
+      },
+      "Signature": "124EB938-42A8201E-38079193-4C9E1F5E"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Outer": "MovieSceneFloatTrack_2",
+    "Properties": {
+      "FloatCurve": null,
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction WBP_CorePerk_C:Highlight_INST.Highlight.MovieSceneFloatTrack_2.MovieSceneFloatSection_0.EaseInFunction",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.70"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction WBP_CorePerk_C:Highlight_INST.Highlight.MovieSceneFloatTrack_2.MovieSceneFloatSection_0.EaseOutFunction",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.71"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 18000
+            }
+          }
+        }
+      },
+      "Signature": "BCB97769-4C5253E2-38FBDAB8-2FB2865F"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_2",
+    "Outer": "BTN_BecameAvailable",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieSceneFloatTrack_2.MovieSceneFloatSection_0",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.75"
+        }
+      ],
+      "EvaluationFieldGuid": "CA8B2427-4FEC8807-62543DB2-220282D1",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieSceneFloatTrack_2.MovieSceneFloatSection_0",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.75"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 30000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "CA8B2427-4FEC8807-62543DB2-220282D1"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_3",
+    "Outer": "BTN_BecameAvailable",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieSceneFloatTrack_3.MovieSceneFloatSection_0",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.76"
+        }
+      ],
+      "EvaluationFieldGuid": "F24EF6D7-4349DC0B-500A4992-69A92F18",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieSceneFloatTrack_3.MovieSceneFloatSection_0",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.76"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 24000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "F24EF6D7-4349DC0B-500A4992-69A92F18"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_4",
+    "Outer": "BTN_BecameAvailable",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieSceneFloatTrack_4.MovieSceneFloatSection_0",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.77"
+        }
+      ],
+      "EvaluationFieldGuid": "05899111-48751665-4564818C-A4819760",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable.MovieSceneFloatTrack_4.MovieSceneFloatSection_0",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.77"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 24000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "05899111-48751665-4564818C-A4819760"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_10",
+    "Outer": "BTN_BecomeUnavailable",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection WBP_CorePerk_C:BTN_BecomeUnavailable_INST.BTN_BecomeUnavailable.MovieSceneFloatTrack_10.MovieSceneFloatSection_0",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.78"
+        }
+      ],
+      "EvaluationFieldGuid": "012CE27B-4DAFA10B-2296289D-61200343",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection WBP_CorePerk_C:BTN_BecomeUnavailable_INST.BTN_BecomeUnavailable.MovieSceneFloatTrack_10.MovieSceneFloatSection_0",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.78"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 12000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "012CE27B-4DAFA10B-2296289D-61200343"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_11",
+    "Outer": "BTN_BecomeUnavailable",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection WBP_CorePerk_C:BTN_BecomeUnavailable_INST.BTN_BecomeUnavailable.MovieSceneFloatTrack_11.MovieSceneFloatSection_0",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.79"
+        }
+      ],
+      "EvaluationFieldGuid": "D11F0F75-448231E6-E06887BC-93BA5FEB",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection WBP_CorePerk_C:BTN_BecomeUnavailable_INST.BTN_BecomeUnavailable.MovieSceneFloatTrack_11.MovieSceneFloatSection_0",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.79"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": -3000
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 30000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "D11F0F75-448231E6-E06887BC-93BA5FEB"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_2",
+    "Outer": "BTN_BecomeUnavailable",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection WBP_CorePerk_C:BTN_BecomeUnavailable_INST.BTN_BecomeUnavailable.MovieSceneFloatTrack_2.MovieSceneFloatSection_0",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.80"
+        }
+      ],
+      "EvaluationFieldGuid": "CD0391EE-4377EA4F-6E214D9A-A585EAF2",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection WBP_CorePerk_C:BTN_BecomeUnavailable_INST.BTN_BecomeUnavailable.MovieSceneFloatTrack_2.MovieSceneFloatSection_0",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.80"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 30000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "CD0391EE-4377EA4F-6E214D9A-A585EAF2"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_1",
+    "Outer": "Highlight",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection WBP_CorePerk_C:Highlight_INST.Highlight.MovieSceneFloatTrack_1.MovieSceneFloatSection_0",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.81"
+        }
+      ],
+      "EvaluationFieldGuid": "011F6204-456D909A-81144889-4CA1482F",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection WBP_CorePerk_C:Highlight_INST.Highlight.MovieSceneFloatTrack_1.MovieSceneFloatSection_0",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.81"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 300000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "011F6204-456D909A-81144889-4CA1482F"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_2",
+    "Outer": "Highlight",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection WBP_CorePerk_C:Highlight_INST.Highlight.MovieSceneFloatTrack_2.MovieSceneFloatSection_0",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.82"
+        }
+      ],
+      "EvaluationFieldGuid": "4E51F53A-4D3B7F11-122A8288-D459687A",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection WBP_CorePerk_C:Highlight_INST.Highlight.MovieSceneFloatTrack_2.MovieSceneFloatSection_0",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.82"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 18000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "4E51F53A-4D3B7F11-122A8288-D459687A"
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "layoutSizeScale",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Stretch": "EStretch::UserSpecified",
+      "UserSpecifiedScale": 0.9,
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot WBP_CorePerk_C:WidgetTree.layoutSizeScale.ScaleBoxSlot_0",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.93"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "GridSlot WBP_CorePerk_C:WidgetTree.CorePerkContainer.GridSlot_6",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.20"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "layoutSizeScaleLevel",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Stretch": "EStretch::UserSpecified",
+      "UserSpecifiedScale": 0.75,
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot WBP_CorePerk_C:WidgetTree.layoutSizeScaleLevel.ScaleBoxSlot_0",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.94"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "GridSlot WBP_CorePerk_C:WidgetTree.CorePerkContainer.GridSlot_8",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.22"
+      },
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_0",
+    "Outer": "layoutSizeScale",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "ScaleBox WBP_CorePerk_C:WidgetTree.layoutSizeScale",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.91"
+      },
+      "Content": {
+        "ObjectName": "GridPanel WBP_CorePerk_C:WidgetTree.PerkIconRarityContainer",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.19"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_0",
+    "Outer": "layoutSizeScaleLevel",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "ScaleBox WBP_CorePerk_C:WidgetTree.layoutSizeScaleLevel",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.92"
+      },
+      "Content": {
+        "ObjectName": "DBDImage WBP_CorePerk_C:WidgetTree.ImagePerkLevel",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.15"
+      }
+    }
+  },
+  {
+    "Type": "WBP_CorePerkCooldown_C",
+    "Name": "WBP_PerkCooldown",
+    "Outer": "WidgetTree",
+    "Template": "Default__WBP_CorePerkCooldown_C",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "GridSlot WBP_CorePerk_C:WidgetTree.CorePerkContainer.GridSlot_9",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.23"
+      },
+      "Visibility": "ESlateVisibility::Hidden",
+      "RenderOpacity": 0.8
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "BTN_BecameAvailable_INST",
+    "Outer": "WBP_CorePerk_C",
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene WBP_CorePerk_C:BTN_BecameAvailable_INST.BTN_BecameAvailable",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.29"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "CanvasPerk",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "EBEB2285-467C03CE-140EE29C-49DA451E",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "ImageHighlight",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "90919102-45E92BAA-41ED12A2-43BEF422",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "ImageCanBeClickable",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "50192A7B-45286EB9-941C0CB6-45431B78",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "ActionButton",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "206BA3AB-4287950B-590483AF-37948B57",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "BTN_BecameAvailable",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData WBP_CorePerk_C:BTN_BecameAvailable_INST.CompiledData",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.72"
+      },
+      "Signature": "73657271-4A0FCAEC-ACB6A088-AE951876"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "BTN_BecomeUnavailable_INST",
+    "Outer": "WBP_CorePerk_C",
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene WBP_CorePerk_C:BTN_BecomeUnavailable_INST.BTN_BecomeUnavailable",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.30"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "ImageHighlight",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "EA71B1B6-41F9BC24-87AFE79F-C84009DD",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "ImageCanBeClickable",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "25AD968E-44F30961-F4F5F3AB-48800817",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "ActionButton",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "7D82FF58-44D550D5-B94C2494-0676762D",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "BTN_BecomeUnavailable",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData WBP_CorePerk_C:BTN_BecomeUnavailable_INST.CompiledData",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.73"
+      },
+      "Signature": "8A937FEA-4B5B7BFB-23640297-7559B89C"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Highlight_INST",
+    "Outer": "WBP_CorePerk_C",
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene WBP_CorePerk_C:Highlight_INST.Highlight",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.31"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "HighlightPicture",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "EA2EB1FA-42E403FF-8AB1B99C-F6933134",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "HighlightPicture_2",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "E5E43E92-4075BADA-7B801CA9-F362D116",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "Highlight",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData WBP_CorePerk_C:Highlight_INST.CompiledData",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.74"
+      },
+      "Signature": "8A93D1E6-4B0E39AC-7F0B5BAD-58A00E35"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "WBP_CorePerk_C",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "GridPanel WBP_CorePerk_C:WidgetTree.CorePerkContainer",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/LoadoutParts/WBP_CorePerk.18"
+      }
+    }
+  }
+]

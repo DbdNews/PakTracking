@@ -1,0 +1,633 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0"
+  },
+  {
+    "Type": "DistributionFloatConstantCurve",
+    "Name": "DistributionFloatConstantCurve_0",
+    "Outer": "ParticleModuleSubUV_0",
+    "Properties": {
+      "ConstantCurve": {
+        "Points": [
+          {
+            "InVal": 0.0,
+            "OutVal": 0.0,
+            "ArriveTangent": 0.0,
+            "LeaveTangent": 0.0,
+            "InterpMode": "CIM_Linear"
+          },
+          {
+            "InVal": 1.0,
+            "OutVal": 0.0,
+            "ArriveTangent": 0.0,
+            "LeaveTangent": 0.0,
+            "InterpMode": "CIM_Linear"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_1",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired P_K21_GroundSplatter_Idle:ParticleModuleRequired_0",
+        "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer21/Dash/P_K21_GroundSplatter_Idle.8"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime P_K21_GroundSplatter_Idle:ParticleModuleLifetime_2",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer21/Dash/P_K21_GroundSplatter_Idle.4"
+        },
+        {
+          "ObjectName": "ParticleModuleSize P_K21_GroundSplatter_Idle:ParticleModuleSize_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer21/Dash/P_K21_GroundSplatter_Idle.10"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocity P_K21_GroundSplatter_Idle:ParticleModuleVelocity_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer21/Dash/P_K21_GroundSplatter_Idle.14"
+        },
+        {
+          "ObjectName": "ParticleModuleColorOverLife P_K21_GroundSplatter_Idle:ParticleModuleColorOverLife_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer21/Dash/P_K21_GroundSplatter_Idle.3"
+        },
+        {
+          "ObjectName": "ParticleModuleOrientationAxisLock P_K21_GroundSplatter_Idle:ParticleModuleOrientationAxisLock_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer21/Dash/P_K21_GroundSplatter_Idle.6"
+        },
+        {
+          "ObjectName": "ParticleModuleLocation P_K21_GroundSplatter_Idle:ParticleModuleLocation_2",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer21/Dash/P_K21_GroundSplatter_Idle.5"
+        },
+        {
+          "ObjectName": "ParticleModuleSubUV P_K21_GroundSplatter_Idle:ParticleModuleSubUV_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer21/Dash/P_K21_GroundSplatter_Idle.13"
+        },
+        {
+          "ObjectName": "ParticleModuleParameterDynamic P_K21_GroundSplatter_Idle:ParticleModuleParameterDynamic_7",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer21/Dash/P_K21_GroundSplatter_Idle.7"
+        },
+        {
+          "ObjectName": "ParticleModuleRotation P_K21_GroundSplatter_Idle:ParticleModuleRotation_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer21/Dash/P_K21_GroundSplatter_Idle.9"
+        },
+        {
+          "ObjectName": "ParticleModuleSizeMultiplyLife P_K21_GroundSplatter_Idle:ParticleModuleSizeMultiplyLife_2",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer21/Dash/P_K21_GroundSplatter_Idle.11"
+        }
+      ],
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn P_K21_GroundSplatter_Idle:ParticleModuleSpawn_2",
+        "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer21/Dash/P_K21_GroundSplatter_Idle.12"
+      },
+      "PeakActiveParticles": 28
+    }
+  },
+  {
+    "Type": "ParticleModuleColorOverLife",
+    "Name": "ParticleModuleColorOverLife_0",
+    "Outer": "P_K21_GroundSplatter_Idle",
+    "Properties": {
+      "ColorOverLife": {
+        "MinValue": 0.25,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 0.25,
+          "Y": 0.25,
+          "Z": 0.25
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 2.0,
+          "Values": [
+            1.0,
+            1.0,
+            1.0,
+            0.25,
+            0.25,
+            0.25
+          ],
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 3
+        }
+      },
+      "AlphaOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_2",
+    "Outer": "P_K21_GroundSplatter_Idle",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 1.5,
+        "MaxValue": 1.75,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.5,
+            1.75
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLocation",
+    "Name": "ParticleModuleLocation_2",
+    "Outer": "P_K21_GroundSplatter_Idle",
+    "Properties": {
+      "StartLocation": {
+        "MinValue": -15.0,
+        "MaxValue": 15.0,
+        "MinValueVec": {
+          "X": -15.0,
+          "Y": 0.0,
+          "Z": -15.0
+        },
+        "MaxValueVec": {
+          "X": 15.0,
+          "Y": 0.0,
+          "Z": 15.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -15.0,
+            0.0,
+            -15.0,
+            15.0,
+            0.0,
+            15.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleOrientationAxisLock",
+    "Name": "ParticleModuleOrientationAxisLock_0",
+    "Outer": "P_K21_GroundSplatter_Idle",
+    "Properties": {
+      "LockAxisFlags": "EPAL_Z",
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleParameterDynamic",
+    "Name": "ParticleModuleParameterDynamic_7",
+    "Outer": "P_K21_GroundSplatter_Idle",
+    "Properties": {
+      "DynamicParams": [
+        {
+          "ParamName": "DistortOffset",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": false,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 1.0,
+            "MaxValue": 1.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                1.0
+              ],
+              "Op": 1,
+              "EntryCount": 1,
+              "EntryStride": 1,
+              "SubEntryStride": 0,
+              "LockFlag": 0
+            }
+          }
+        },
+        {
+          "ParamName": "DistortAmount",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": false,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 0.0,
+            "MaxValue": 0.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                0.0
+              ],
+              "Op": 1,
+              "EntryCount": 1,
+              "EntryStride": 1,
+              "SubEntryStride": 0,
+              "LockFlag": 0
+            }
+          }
+        },
+        {
+          "ParamName": "ReflectionAmount",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": false,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 1.0,
+            "MaxValue": 1.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                1.0
+              ],
+              "Op": 1,
+              "EntryCount": 1,
+              "EntryStride": 1,
+              "SubEntryStride": 0,
+              "LockFlag": 0
+            }
+          }
+        },
+        {
+          "ParamName": "ClipAmount",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": false,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 0.0,
+            "MaxValue": 1.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 37.59096,
+              "TimeBias": 0.1753337,
+              "Values": [
+                0.0,
+                0.63378525,
+                0.9366628,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                0.9970212,
+                0.98448586,
+                0.9628818,
+                0.93307537,
+                0.8959834,
+                0.8525157,
+                0.80356663,
+                0.75003064,
+                0.6928018,
+                0.6327747,
+                0.5708436,
+                0.5079027,
+                0.44484627,
+                0.38257188,
+                0.32198372,
+                0.26397344,
+                0.20943479,
+                0.15926251,
+                0.114350684,
+                0.075593516,
+                0.043885652,
+                0.02012141,
+                0.0051946538,
+                0.0
+              ],
+              "Op": 1,
+              "EntryCount": 32,
+              "EntryStride": 1,
+              "SubEntryStride": 0,
+              "LockFlag": 0
+            }
+          }
+        }
+      ],
+      "UpdateFlags": 15,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "P_K21_GroundSplatter_Idle",
+    "Properties": {
+      "Material": {
+        "ObjectName": "MaterialInstanceConstant MI_K21_TrailSplat",
+        "ObjectPath": "DeadByDaylight/Content/Effects/Materials/Liquid/MI_K21_TrailSplat.0"
+      },
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_K21_GroundSplatter_Idle:ParticleModuleRequired_0.RequiredDistributionSpawnRate",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer21/Dash/P_K21_GroundSplatter_Idle.0"
+        }
+      },
+      "InterpolationMethod": "PSUVIM_Random",
+      "SubImages_Horizontal": 2,
+      "SubImages_Vertical": 2,
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRotation",
+    "Name": "ParticleModuleRotation_0",
+    "Outer": "P_K21_GroundSplatter_Idle",
+    "Properties": {
+      "StartRotation": {
+        "MinValue": -1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -1.0,
+            1.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "P_K21_GroundSplatter_Idle",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 5.0,
+        "MaxValue": 25.0,
+        "MinValueVec": {
+          "X": 5.0,
+          "Y": 25.0,
+          "Z": 25.0
+        },
+        "MaxValueVec": {
+          "X": 10.0,
+          "Y": 25.0,
+          "Z": 25.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            5.0,
+            25.0,
+            25.0,
+            10.0,
+            25.0,
+            25.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSizeMultiplyLife",
+    "Name": "ParticleModuleSizeMultiplyLife_2",
+    "Outer": "P_K21_GroundSplatter_Idle",
+    "Properties": {
+      "LifeMultiplier": {
+        "MinValue": 0.20566037,
+        "MaxValue": 1.1851938,
+        "MinValueVec": {
+          "X": 0.20566037,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.1851938,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 68.405655,
+          "TimeBias": 0.17636235,
+          "Values": [
+            0.20566037,
+            1.0,
+            1.0,
+            0.73853517,
+            1.0,
+            1.0,
+            1.0421342,
+            1.0,
+            1.0,
+            1.1701438,
+            1.0,
+            1.0,
+            1.1762494,
+            1.0,
+            1.0,
+            1.114137,
+            1.0,
+            1.0,
+            1.0374919,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 8,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_2",
+    "Outer": "P_K21_GroundSplatter_Idle",
+    "Properties": {
+      "Rate": {
+        "MinValue": 8.0,
+        "MaxValue": 15.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            8.0,
+            15.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "BurstScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSubUV",
+    "Name": "ParticleModuleSubUV_0",
+    "Outer": "P_K21_GroundSplatter_Idle",
+    "Properties": {
+      "SubImageIndex": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstantCurve P_K21_GroundSplatter_Idle:ParticleModuleSubUV_0.DistributionFloatConstantCurve_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer21/Dash/P_K21_GroundSplatter_Idle.1"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocity",
+    "Name": "ParticleModuleVelocity_0",
+    "Outer": "P_K21_GroundSplatter_Idle",
+    "Properties": {
+      "StartVelocity": {
+        "MinValue": -10.0,
+        "MaxValue": 100.0,
+        "MinValueVec": {
+          "X": -10.0,
+          "Y": -10.0,
+          "Z": 50.0
+        },
+        "MaxValueVec": {
+          "X": 10.0,
+          "Y": 10.0,
+          "Z": 100.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -10.0,
+            -10.0,
+            50.0,
+            10.0,
+            10.0,
+            100.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "StartVelocityRadial": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "bEnabled": false,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_1",
+    "Outer": "P_K21_GroundSplatter_Idle",
+    "Properties": {
+      "EmitterName": "Initial Burst",
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel P_K21_GroundSplatter_Idle:ParticleSpriteEmitter_1.ParticleLODLevel_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer21/Dash/P_K21_GroundSplatter_Idle.2"
+        }
+      ],
+      "DetailModeBitmask": 63
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "P_K21_GroundSplatter_Idle",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter P_K21_GroundSplatter_Idle:ParticleSpriteEmitter_1",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer21/Dash/P_K21_GroundSplatter_Idle.15"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bShouldResetPeakCounts": true
+    }
+  }
+]

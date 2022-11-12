@@ -1,0 +1,415 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "BurstScaleDistribution",
+    "Outer": "ParticleModuleSpawn_0",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired P_Lobby_SnowFog:ParticleModuleRequired_0",
+        "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Lobby/Winter/P_Lobby_SnowFog.8"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime P_Lobby_SnowFog:ParticleModuleLifetime_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Lobby/Winter/P_Lobby_SnowFog.6"
+        },
+        {
+          "ObjectName": "ParticleModuleSize P_Lobby_SnowFog:ParticleModuleSize_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Lobby/Winter/P_Lobby_SnowFog.9"
+        },
+        {
+          "ObjectName": "ParticleModuleColorOverLife P_Lobby_SnowFog:ParticleModuleColorOverLife_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Lobby/Winter/P_Lobby_SnowFog.5"
+        },
+        {
+          "ObjectName": "ParticleModuleLocation P_Lobby_SnowFog:ParticleModuleLocation_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Lobby/Winter/P_Lobby_SnowFog.7"
+        },
+        {
+          "ObjectName": "ParticleModuleAcceleration P_Lobby_SnowFog:ParticleModuleAcceleration_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Lobby/Winter/P_Lobby_SnowFog.3"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocity P_Lobby_SnowFog:ParticleModuleVelocity_1",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Lobby/Winter/P_Lobby_SnowFog.11"
+        },
+        {
+          "ObjectName": "ParticleModuleAccelerationDrag P_Lobby_SnowFog:ParticleModuleAccelerationDrag_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Lobby/Winter/P_Lobby_SnowFog.4"
+        }
+      ],
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn P_Lobby_SnowFog:ParticleModuleSpawn_0",
+        "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Lobby/Winter/P_Lobby_SnowFog.10"
+      },
+      "PeakActiveParticles": 52
+    }
+  },
+  {
+    "Type": "ParticleModuleAcceleration",
+    "Name": "ParticleModuleAcceleration_0",
+    "Outer": "P_Lobby_SnowFog",
+    "Properties": {
+      "Acceleration": {
+        "MinValue": -75.0,
+        "MinValueVec": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": -75.0
+        },
+        "MaxValueVec": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": -50.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0,
+            0.0,
+            -75.0,
+            0.0,
+            0.0,
+            -50.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "bAlwaysInWorldSpace": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleAccelerationDrag",
+    "Name": "ParticleModuleAccelerationDrag_0",
+    "Outer": "P_Lobby_SnowFog",
+    "Properties": {
+      "DragCoefficientRaw": {
+        "MinValue": 2.0,
+        "MaxValue": 2.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            2.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "bAlwaysInWorldSpace": true,
+      "bEnabled": false,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColorOverLife",
+    "Name": "ParticleModuleColorOverLife_0",
+    "Outer": "P_Lobby_SnowFog",
+    "Properties": {
+      "ColorOverLife": {
+        "MinValue": 0.36408,
+        "MaxValue": 0.41,
+        "MinValueVec": {
+          "X": 0.36408,
+          "Y": 0.373474,
+          "Z": 0.41
+        },
+        "MaxValueVec": {
+          "X": 0.36408,
+          "Y": 0.373474,
+          "Z": 0.41
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.36408,
+            0.373474,
+            0.41
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "AlphaOverLife": {
+        "MaxValue": 0.065,
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 3.0,
+          "Values": [
+            0.0,
+            0.043333333,
+            0.043333333,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 4,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "P_Lobby_SnowFog",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 4.0,
+        "MaxValue": 5.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            4.0,
+            5.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLocation",
+    "Name": "ParticleModuleLocation_0",
+    "Outer": "P_Lobby_SnowFog",
+    "Properties": {
+      "StartLocation": {
+        "MinValue": -2500.0,
+        "MaxValue": 1000.0,
+        "MinValueVec": {
+          "X": -2500.0,
+          "Y": -50.0,
+          "Z": 250.0
+        },
+        "MaxValueVec": {
+          "X": 500.0,
+          "Y": 50.0,
+          "Z": 1000.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -2500.0,
+            -50.0,
+            250.0,
+            500.0,
+            50.0,
+            1000.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "P_Lobby_SnowFog",
+    "Properties": {
+      "Material": {
+        "ObjectName": "MaterialInstanceConstant MI_LobbySnowFog",
+        "ObjectPath": "DeadByDaylight/Content/Effects/Materials/MI_LobbySnowFog.0"
+      },
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_Lobby_SnowFog:ParticleModuleRequired_0.RequiredDistributionSpawnRate",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Lobby/Winter/P_Lobby_SnowFog.0"
+        }
+      },
+      "SubImages_Horizontal": 8,
+      "SubImages_Vertical": 8,
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "P_Lobby_SnowFog",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 400.0,
+        "MaxValue": 1000.0,
+        "MinValueVec": {
+          "X": 600.0,
+          "Y": 400.0,
+          "Z": 400.0
+        },
+        "MaxValueVec": {
+          "X": 1000.0,
+          "Y": 800.0,
+          "Z": 200.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            600.0,
+            400.0,
+            400.0,
+            1000.0,
+            800.0,
+            200.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "P_Lobby_SnowFog",
+    "Properties": {
+      "Rate": {
+        "MinValue": 5.0,
+        "MaxValue": 10.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            5.0,
+            10.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "BurstScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_Lobby_SnowFog:ParticleModuleSpawn_0.BurstScaleDistribution",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Lobby/Winter/P_Lobby_SnowFog.1"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocity",
+    "Name": "ParticleModuleVelocity_1",
+    "Outer": "P_Lobby_SnowFog",
+    "Properties": {
+      "StartVelocity": {
+        "MinValue": -200.0,
+        "MaxValue": 500.0,
+        "MinValueVec": {
+          "X": 400.0,
+          "Y": -200.0,
+          "Z": 50.0
+        },
+        "MaxValueVec": {
+          "X": 500.0,
+          "Y": 200.0,
+          "Z": 100.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            400.0,
+            -200.0,
+            50.0,
+            500.0,
+            200.0,
+            100.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "StartVelocityRadial": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "P_Lobby_SnowFog",
+    "Properties": {
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel P_Lobby_SnowFog:ParticleSpriteEmitter_0.ParticleLODLevel_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Lobby/Winter/P_Lobby_SnowFog.2"
+        }
+      ],
+      "QualityLevelSpawnRateScale": 0.5,
+      "DetailModeBitmask": 63
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "P_Lobby_SnowFog",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter P_Lobby_SnowFog:ParticleSpriteEmitter_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Lobby/Winter/P_Lobby_SnowFog.12"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bShouldResetPeakCounts": true
+    }
+  }
+]

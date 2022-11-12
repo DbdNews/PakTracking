@@ -1,0 +1,251 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "ZombieAIController_BP_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript ZombieAIController_BP_C:SimpleConstructionScript_0",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K24/Zombie/AI/ZombieAIController_BP.9"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class ZombieAIController",
+      "ObjectPath": "/Script/TheK24"
+    },
+    "ClassFlags": 8653332,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ZombieAIController_BP_C Default__ZombieAIController_BP_C",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K24/Zombie/AI/ZombieAIController_BP.1"
+    }
+  },
+  {
+    "Type": "ZombieAIController_BP_C",
+    "Name": "Default__ZombieAIController_BP_C",
+    "Properties": {
+      "_zombieBehaviorTree": {
+        "ObjectName": "BehaviorTree BT_Zombie",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K24/Zombie/AI/BT_Zombie.0"
+      },
+      "_aiPerceptionComponent": {
+        "ObjectName": "AIPerceptionComponent Default__ZombieAIController_BP_C:AiPerceptionComponent",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K24/Zombie/AI/ZombieAIController_BP.2"
+      },
+      "_zombieAttackHitTime": {
+        "_dataTableRowHandle": {
+          "DataTable": {
+            "ObjectName": "DataTable K24_TunableDB",
+            "ObjectPath": "DeadByDaylight/Content/Data/Dlc/Eclipse/K24_TunableDB.0"
+          },
+          "RowName": "ZombieAttackHitTime"
+        }
+      },
+      "_zombieAttackOpenTime": {
+        "_dataTableRowHandle": {
+          "DataTable": {
+            "ObjectName": "DataTable K24_TunableDB",
+            "ObjectPath": "DeadByDaylight/Content/Data/Dlc/Eclipse/K24_TunableDB.0"
+          },
+          "RowName": "ZombieAttackOpenTime"
+        }
+      },
+      "_zombieAnimSpawnTime": {
+        "_dataTableRowHandle": {
+          "DataTable": {
+            "ObjectName": "DataTable K24_TunableDB",
+            "ObjectPath": "DeadByDaylight/Content/Data/Dlc/Eclipse/K24_TunableDB.0"
+          },
+          "RowName": "ZombieAnimSpawnTime"
+        }
+      },
+      "_zombieAnimDyingTime": {
+        "_dataTableRowHandle": {
+          "DataTable": {
+            "ObjectName": "DataTable K24_TunableDB",
+            "ObjectPath": "DeadByDaylight/Content/Data/Dlc/Eclipse/K24_TunableDB.0"
+          },
+          "RowName": "ZombieAnimDyingTime"
+        }
+      },
+      "_zombieSightRadius": {
+        "_baseValue": {
+          "_dataTableRowHandle": {
+            "DataTable": {
+              "ObjectName": "DataTable K24_TunableDB",
+              "ObjectPath": "DeadByDaylight/Content/Data/Dlc/Eclipse/K24_TunableDB.0"
+            },
+            "RowName": "ZombieSightRadius"
+          }
+        },
+        "_statModifiers": [
+          {
+            "OperationStrategy": "EModifierOperationStrategy::Add",
+            "ModifierTag": {
+              "TagName": "GameplayModifierType.ModifyZombieSightRangeAdditive"
+            },
+            "CompoundStrategy": "EModifierCompoundStrategy::Add"
+          }
+        ]
+      },
+      "_zombieLoseSightRadius": {
+        "_baseValue": {
+          "_dataTableRowHandle": {
+            "DataTable": {
+              "ObjectName": "DataTable K24_TunableDB",
+              "ObjectPath": "DeadByDaylight/Content/Data/Dlc/Eclipse/K24_TunableDB.0"
+            },
+            "RowName": "ZombieLoseSightRadius"
+          }
+        },
+        "_statModifiers": [
+          {
+            "OperationStrategy": "EModifierOperationStrategy::Add",
+            "ModifierTag": {
+              "TagName": "GameplayModifierType.ModifyZombieSightRangeAdditive"
+            },
+            "CompoundStrategy": "EModifierCompoundStrategy::Add"
+          }
+        ]
+      },
+      "_zombieVisionHalfAngle": {
+        "_baseValue": {
+          "_dataTableRowHandle": {
+            "DataTable": {
+              "ObjectName": "DataTable K24_TunableDB",
+              "ObjectPath": "DeadByDaylight/Content/Data/Dlc/Eclipse/K24_TunableDB.0"
+            },
+            "RowName": "ZombieVisionHalfAngle"
+          }
+        },
+        "_statModifiers": [
+          {
+            "OperationStrategy": "EModifierOperationStrategy::Add",
+            "ModifierTag": {
+              "TagName": "GameplayModifierType.ModifyZombieSightAngleAdditive"
+            },
+            "CompoundStrategy": "EModifierCompoundStrategy::Add"
+          }
+        ]
+      },
+      "_zombieFallSmashTime": {
+        "_dataTableRowHandle": {
+          "DataTable": {
+            "ObjectName": "DataTable K24_TunableDB",
+            "ObjectPath": "DeadByDaylight/Content/Data/Dlc/Eclipse/K24_TunableDB.0"
+          },
+          "RowName": "ZombieFallSmashTime"
+        }
+      },
+      "_zombieAttackCooldownTime": {
+        "_dataTableRowHandle": {
+          "DataTable": {
+            "ObjectName": "DataTable K24_TunableDB",
+            "ObjectPath": "DeadByDaylight/Content/Data/Dlc/Eclipse/K24_TunableDB.0"
+          },
+          "RowName": "ZombieAttackCooldownTime"
+        }
+      },
+      "PathFollowingComponent": {
+        "ObjectName": "PathFollowingComponent Default__ZombieAIController_BP_C:PathFollowingComponent",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K24/Zombie/AI/ZombieAIController_BP.4"
+      },
+      "ActionsComp": {
+        "ObjectName": "PawnActionsComponent Default__ZombieAIController_BP_C:ActionsComp",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K24/Zombie/AI/ZombieAIController_BP.5"
+      },
+      "DefaultNavigationFilterClass": {
+        "ObjectName": "BlueprintGeneratedClass ZombieNavigationQueryFilter_C",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K24/Zombie/AI/ZombieNavigationQueryFilter.0"
+      },
+      "TransformComponent": {
+        "ObjectName": "SceneComponent Default__ZombieAIController_BP_C:TransformComponent0",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K24/Zombie/AI/ZombieAIController_BP.6"
+      },
+      "RootComponent": {
+        "ObjectName": "SceneComponent Default__ZombieAIController_BP_C:TransformComponent0",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K24/Zombie/AI/ZombieAIController_BP.6"
+      }
+    }
+  },
+  {
+    "Type": "AIPerceptionComponent",
+    "Name": "AiPerceptionComponent",
+    "Outer": "Default__ZombieAIController_BP_C",
+    "Properties": {
+      "SensesConfig": [
+        {
+          "ObjectName": "AISenseConfig_Sight Default__ZombieAIController_BP_C:AiPerceptionComponent.AISenseConfig_Sight_0",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K24/Zombie/AI/ZombieAIController_BP.3"
+        }
+      ],
+      "DominantSense": {
+        "ObjectName": "Class AISense_Sight",
+        "ObjectPath": "/Script/AIModule"
+      }
+    }
+  },
+  {
+    "Type": "AISenseConfig_Sight",
+    "Name": "AISenseConfig_Sight_0",
+    "Outer": "AiPerceptionComponent",
+    "Properties": {
+      "SightRadius": 100.0,
+      "LoseSightRadius": 100.0,
+      "PeripheralVisionAngleDegrees": 10.0,
+      "MaxAge": 0.0
+    }
+  },
+  {
+    "Type": "PathFollowingComponent",
+    "Name": "PathFollowingComponent",
+    "Outer": "Default__ZombieAIController_BP_C"
+  },
+  {
+    "Type": "PawnActionsComponent",
+    "Name": "ActionsComp",
+    "Outer": "Default__ZombieAIController_BP_C"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "TransformComponent0",
+    "Outer": "Default__ZombieAIController_BP_C"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "ZombieAIController_BP_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent ZombieAIController_BP_C:DefaultSceneRoot_GEN_VARIABLE",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K24/Zombie/AI/ZombieAIController_BP.7"
+      },
+      "VariableGuid": "7AAF6828-4DF6CCD0-5B090393-F7B5A0C9",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "ZombieAIController_BP_C",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node ZombieAIController_BP_C:SimpleConstructionScript_0.SCS_Node_0",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K24/Zombie/AI/ZombieAIController_BP.8"
+      }
+    }
+  }
+]

@@ -1,0 +1,342 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "BurstScaleDistribution",
+    "Outer": "ParticleModuleSpawn_0",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired ScaredFaces:ParticleModuleRequired_0",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/DreamInducer/ScaredFaces.6"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime ScaredFaces:ParticleModuleLifetime_0",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/DreamInducer/ScaredFaces.4"
+        },
+        {
+          "ObjectName": "ParticleModuleSize ScaredFaces:ParticleModuleSize_0",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/DreamInducer/ScaredFaces.7"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocity ScaredFaces:ParticleModuleVelocity_0",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/DreamInducer/ScaredFaces.9"
+        },
+        {
+          "ObjectName": "ParticleModuleColorOverLife ScaredFaces:ParticleModuleColorOverLife_0",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/DreamInducer/ScaredFaces.3"
+        },
+        {
+          "ObjectName": "ParticleModuleLocation ScaredFaces:ParticleModuleLocation_0",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/DreamInducer/ScaredFaces.5"
+        }
+      ],
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn ScaredFaces:ParticleModuleSpawn_0",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/DreamInducer/ScaredFaces.8"
+      },
+      "PeakActiveParticles": 23
+    }
+  },
+  {
+    "Type": "ParticleModuleColorOverLife",
+    "Name": "ParticleModuleColorOverLife_0",
+    "Outer": "ScaredFaces",
+    "Properties": {
+      "ColorOverLife": {
+        "MinValue": 0.01237,
+        "MaxValue": 0.59375,
+        "MinValueVec": {
+          "X": 0.536458,
+          "Y": 0.047499,
+          "Z": 0.01237
+        },
+        "MaxValueVec": {
+          "X": 0.59375,
+          "Y": 0.275911,
+          "Z": 0.047499
+        },
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 1.0,
+          "Values": [
+            0.536458,
+            0.047499,
+            0.047499,
+            0.59375,
+            0.275911,
+            0.01237
+          ],
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 3
+        }
+      },
+      "AlphaOverLife": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 1.0,
+          "Values": [
+            1.0,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "ScaredFaces",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLocation",
+    "Name": "ParticleModuleLocation_0",
+    "Outer": "ScaredFaces",
+    "Properties": {
+      "StartLocation": {
+        "MinValue": -100.0,
+        "MaxValue": 100.0,
+        "MinValueVec": {
+          "X": -100.0,
+          "Y": -100.0,
+          "Z": 0.0
+        },
+        "MaxValueVec": {
+          "X": 100.0,
+          "Y": 100.0,
+          "Z": 0.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -100.0,
+            -100.0,
+            0.0,
+            100.0,
+            100.0,
+            0.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "ScaredFaces",
+    "Properties": {
+      "Material": {
+        "ObjectName": "Material M_UVDistortion",
+        "ObjectPath": "DeadByDaylight/Content/Effects/Materials/M_UVDistortion.0"
+      },
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant ScaredFaces:ParticleModuleRequired_0.RequiredDistributionSpawnRate",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/DreamInducer/ScaredFaces.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "ScaredFaces",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 50.0,
+        "MaxValue": 25.0,
+        "MinValueVec": {
+          "X": 50.0,
+          "Y": 50.0,
+          "Z": 50.0
+        },
+        "MaxValueVec": {
+          "X": 25.0,
+          "Y": 25.0,
+          "Z": 25.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            50.0,
+            50.0,
+            50.0,
+            25.0,
+            25.0,
+            25.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "ScaredFaces",
+    "Properties": {
+      "Rate": {
+        "MinValue": 20.0,
+        "MaxValue": 20.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            20.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "BurstScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant ScaredFaces:ParticleModuleSpawn_0.BurstScaleDistribution",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/DreamInducer/ScaredFaces.1"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocity",
+    "Name": "ParticleModuleVelocity_0",
+    "Outer": "ScaredFaces",
+    "Properties": {
+      "StartVelocity": {
+        "MinValue": -30.0,
+        "MaxValue": 100.0,
+        "MinValueVec": {
+          "X": -30.0,
+          "Y": -30.0,
+          "Z": 50.0
+        },
+        "MaxValueVec": {
+          "X": 30.0,
+          "Y": 30.0,
+          "Z": 100.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -30.0,
+            -30.0,
+            50.0,
+            30.0,
+            30.0,
+            100.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "StartVelocityRadial": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "ScaredFaces",
+    "Properties": {
+      "EmitterName": "Scared Faces",
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel ScaredFaces:ParticleSpriteEmitter_0.ParticleLODLevel_0",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/DreamInducer/ScaredFaces.2"
+        }
+      ],
+      "DetailModeBitmask": 63
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "ScaredFaces",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter ScaredFaces:ParticleSpriteEmitter_0",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/DreamInducer/ScaredFaces.10"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bShouldResetPeakCounts": true
+    }
+  }
+]

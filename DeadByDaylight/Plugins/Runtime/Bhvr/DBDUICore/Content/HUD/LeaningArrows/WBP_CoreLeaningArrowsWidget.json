@@ -1,0 +1,544 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WBP_CoreLeaningArrowsWidget",
+    "Outer": "WBP_CoreLeaningArrowsWidget_C",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_Event_leanState",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 2,
+        "Enum": {
+          "ObjectName": "Enum ELeanState",
+          "ObjectPath": "/Script/DBDSharedTypes"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": 1,
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchEnum_CmpSuccess",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "Function",
+    "Name": "SetData",
+    "Outer": "WBP_CoreLeaningArrowsWidget_C",
+    "SuperStruct": {
+      "ObjectName": "Function LeaningArrowsViewInterface:SetData",
+      "ObjectPath": "/Script/DBDUIViewInterfaces"
+    },
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "leanState",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 134218134,
+        "Enum": {
+          "ObjectName": "Enum ELeanState",
+          "ObjectPath": "/Script/DBDSharedTypes"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": 1,
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": 205654016
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WBP_CoreLeaningArrowsWidget_C",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree WBP_CoreLeaningArrowsWidget_C:WidgetTree",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.21"
+      },
+      "bClassRequiresNativeTick": true,
+      "UberGraphFunction": {
+        "ObjectName": "Function WBP_CoreLeaningArrowsWidget_C:ExecuteUbergraph_WBP_CoreLeaningArrowsWidget",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class CoreLeaningArrowsWidget",
+      "ObjectPath": "/Script/DBDUIViewsCore"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function WBP_CoreLeaningArrowsWidget_C:SetData",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.1"
+      },
+      {
+        "ObjectName": "Function WBP_CoreLeaningArrowsWidget_C:ExecuteUbergraph_WBP_CoreLeaningArrowsWidget",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "Struct": {
+          "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ghostLeft",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 562952101429260,
+        "PropertyClass": {
+          "ObjectName": "Class DBDImage",
+          "ObjectPath": "/Script/DBDUIViewsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ghostRight",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 562952101429260,
+        "PropertyClass": {
+          "ObjectName": "Class DBDImage",
+          "ObjectPath": "/Script/DBDUIViewsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "leftArrow",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 562952101429260,
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass WBP_CoreArrowButton_C",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArrowButton.8"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "rightArrow",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 562952101429260,
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass WBP_CoreArrowButton_C",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArrowButton.8"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WBP_CoreLeaningArrowsWidget": {
+        "ObjectName": "Function WBP_CoreLeaningArrowsWidget_C:ExecuteUbergraph_WBP_CoreLeaningArrowsWidget",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.0"
+      },
+      "SetData": {
+        "ObjectName": "Function WBP_CoreLeaningArrowsWidget_C:SetData",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.1"
+      }
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WBP_CoreLeaningArrowsWidget_C Default__WBP_CoreLeaningArrowsWidget_C",
+      "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.3"
+    }
+  },
+  {
+    "Type": "WBP_CoreLeaningArrowsWidget_C",
+    "Name": "Default__WBP_CoreLeaningArrowsWidget_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot WBP_CoreLeaningArrowsWidget_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Outer": "CanvasPanel_0",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": -230.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 1.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 1.0
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel WBP_CoreLeaningArrowsWidget_C:WidgetTree.CanvasPanel_0",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.4"
+      },
+      "Content": {
+        "ObjectName": "GridPanel WBP_CoreLeaningArrowsWidget_C:WidgetTree.GridPanel_0",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.8"
+      }
+    }
+  },
+  {
+    "Type": "DBDImage",
+    "Name": "ghostLeft",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 128.0,
+          "Y": 256.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D GhostFacePeek",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/HUD/Peek/GhostFacePeek.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "GridSlot WBP_CoreLeaningArrowsWidget_C:WidgetTree.GridPanel_0.GridSlot_0",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.9"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": -1.0,
+          "Y": 1.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "DBDImage",
+    "Name": "ghostRight",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 128.0,
+          "Y": 256.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D GhostFacePeek",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/HUD/Peek/GhostFacePeek.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot WBP_CoreLeaningArrowsWidget_C:WidgetTree.ScaleBox_3.ScaleBoxSlot_0",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.17"
+      }
+    }
+  },
+  {
+    "Type": "GridPanel",
+    "Name": "GridPanel_0",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "ColumnFill": [
+        1.0,
+        6.0,
+        1.0
+      ],
+      "Slots": [
+        {
+          "ObjectName": "GridSlot WBP_CoreLeaningArrowsWidget_C:WidgetTree.GridPanel_0.GridSlot_0",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.9"
+        },
+        {
+          "ObjectName": "GridSlot WBP_CoreLeaningArrowsWidget_C:WidgetTree.GridPanel_0.GridSlot_6",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.13"
+        },
+        {
+          "ObjectName": "GridSlot WBP_CoreLeaningArrowsWidget_C:WidgetTree.GridPanel_0.GridSlot_2",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.11"
+        },
+        {
+          "ObjectName": "GridSlot WBP_CoreLeaningArrowsWidget_C:WidgetTree.GridPanel_0.GridSlot_1",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.10"
+        },
+        {
+          "ObjectName": "GridSlot WBP_CoreLeaningArrowsWidget_C:WidgetTree.GridPanel_0.GridSlot_4",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.12"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot WBP_CoreLeaningArrowsWidget_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.5"
+      }
+    }
+  },
+  {
+    "Type": "GridSlot",
+    "Name": "GridSlot_0",
+    "Outer": "GridPanel_0",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Layer": 1,
+      "Parent": {
+        "ObjectName": "GridPanel WBP_CoreLeaningArrowsWidget_C:WidgetTree.GridPanel_0",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.8"
+      },
+      "Content": {
+        "ObjectName": "DBDImage WBP_CoreLeaningArrowsWidget_C:WidgetTree.ghostLeft",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.6"
+      }
+    }
+  },
+  {
+    "Type": "GridSlot",
+    "Name": "GridSlot_1",
+    "Outer": "GridPanel_0",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Column": 2,
+      "Layer": 1,
+      "Parent": {
+        "ObjectName": "GridPanel WBP_CoreLeaningArrowsWidget_C:WidgetTree.GridPanel_0",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.8"
+      },
+      "Content": {
+        "ObjectName": "ScaleBox WBP_CoreLeaningArrowsWidget_C:WidgetTree.ScaleBox_3",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.15"
+      }
+    }
+  },
+  {
+    "Type": "GridSlot",
+    "Name": "GridSlot_2",
+    "Outer": "GridPanel_0",
+    "Properties": {
+      "Column": 1,
+      "Parent": {
+        "ObjectName": "GridPanel WBP_CoreLeaningArrowsWidget_C:WidgetTree.GridPanel_0",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.8"
+      },
+      "Content": {
+        "ObjectName": "Spacer WBP_CoreLeaningArrowsWidget_C:WidgetTree.Spacer_199",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.18"
+      }
+    }
+  },
+  {
+    "Type": "GridSlot",
+    "Name": "GridSlot_4",
+    "Outer": "GridPanel_0",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Right",
+      "VerticalAlignment": "VAlign_Center",
+      "Column": 2,
+      "Nudge": {
+        "X": 60.0,
+        "Y": 0.0
+      },
+      "Parent": {
+        "ObjectName": "GridPanel WBP_CoreLeaningArrowsWidget_C:WidgetTree.GridPanel_0",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.8"
+      },
+      "Content": {
+        "ObjectName": "WBP_CoreArrowButton_C WBP_CoreLeaningArrowsWidget_C:WidgetTree.rightArrow",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.20"
+      }
+    }
+  },
+  {
+    "Type": "GridSlot",
+    "Name": "GridSlot_6",
+    "Outer": "GridPanel_0",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Left",
+      "VerticalAlignment": "VAlign_Center",
+      "Nudge": {
+        "X": -60.0,
+        "Y": 0.0
+      },
+      "Parent": {
+        "ObjectName": "GridPanel WBP_CoreLeaningArrowsWidget_C:WidgetTree.GridPanel_0",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.8"
+      },
+      "Content": {
+        "ObjectName": "ScaleBox WBP_CoreLeaningArrowsWidget_C:WidgetTree.ScaleBox_2",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.14"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "ScaleBox_2",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Stretch": "EStretch::UserSpecified",
+      "UserSpecifiedScale": 0.9,
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot WBP_CoreLeaningArrowsWidget_C:WidgetTree.ScaleBox_2.ScaleBoxSlot_0",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.16"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "GridSlot WBP_CoreLeaningArrowsWidget_C:WidgetTree.GridPanel_0.GridSlot_6",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.13"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "ScaleBox_3",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Stretch": "EStretch::UserSpecified",
+      "UserSpecifiedScale": 0.9,
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot WBP_CoreLeaningArrowsWidget_C:WidgetTree.ScaleBox_3.ScaleBoxSlot_0",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.17"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "GridSlot WBP_CoreLeaningArrowsWidget_C:WidgetTree.GridPanel_0.GridSlot_1",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.10"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_0",
+    "Outer": "ScaleBox_2",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "ScaleBox WBP_CoreLeaningArrowsWidget_C:WidgetTree.ScaleBox_2",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.14"
+      },
+      "Content": {
+        "ObjectName": "WBP_CoreArrowButton_C WBP_CoreLeaningArrowsWidget_C:WidgetTree.leftArrow",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.19"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_0",
+    "Outer": "ScaleBox_3",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "ScaleBox WBP_CoreLeaningArrowsWidget_C:WidgetTree.ScaleBox_3",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.15"
+      },
+      "Content": {
+        "ObjectName": "DBDImage WBP_CoreLeaningArrowsWidget_C:WidgetTree.ghostRight",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.7"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_199",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Size": {
+        "X": 615.0,
+        "Y": 1.0
+      },
+      "Slot": {
+        "ObjectName": "GridSlot WBP_CoreLeaningArrowsWidget_C:WidgetTree.GridPanel_0.GridSlot_2",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.11"
+      }
+    }
+  },
+  {
+    "Type": "WBP_CoreArrowButton_C",
+    "Name": "leftArrow",
+    "Outer": "WidgetTree",
+    "Template": "Default__WBP_CoreArrowButton_C",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot WBP_CoreLeaningArrowsWidget_C:WidgetTree.ScaleBox_2.ScaleBoxSlot_0",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.16"
+      }
+    }
+  },
+  {
+    "Type": "WBP_CoreArrowButton_C",
+    "Name": "rightArrow",
+    "Outer": "WidgetTree",
+    "Template": "Default__WBP_CoreArrowButton_C",
+    "Properties": {
+      "_alignment": "ETextJustify::Right",
+      "Slot": {
+        "ObjectName": "GridSlot WBP_CoreLeaningArrowsWidget_C:WidgetTree.GridPanel_0.GridSlot_4",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.12"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "WBP_CoreLeaningArrowsWidget_C",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel WBP_CoreLeaningArrowsWidget_C:WidgetTree.CanvasPanel_0",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/LeaningArrows/WBP_CoreLeaningArrowsWidget.4"
+      }
+    }
+  }
+]

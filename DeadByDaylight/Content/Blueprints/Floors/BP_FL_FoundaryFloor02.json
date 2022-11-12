@@ -1,0 +1,162 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_FL_FoundaryFloor02_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript BP_FL_FoundaryFloor02_C:SimpleConstructionScript_2",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_FL_FoundaryFloor02.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_ST_Foundary01Floor01",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class StaticMeshComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_FL_FoundaryFloor02_C Default__BP_FL_FoundaryFloor02_C",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_FL_FoundaryFloor02.1"
+    }
+  },
+  {
+    "Type": "BP_FL_FoundaryFloor02_C",
+    "Name": "Default__BP_FL_FoundaryFloor02_C",
+    "Properties": {
+      "PrimaryActorTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneComponent_162",
+    "Outer": "BP_FL_FoundaryFloor02_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_2",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent BP_FL_FoundaryFloor02_C:SceneComponent_162",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_FL_FoundaryFloor02.2"
+      },
+      "VariableGuid": "B5FA707A-444D1ABA-54E543A7-79316370",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_35",
+    "Outer": "SimpleConstructionScript_2",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class StaticMeshComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent BP_FL_FoundaryFloor02_C:SM_ST_Foundary01Floor016B8E42474E33E9CE0AB164AE611A5039",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_FL_FoundaryFloor02.6"
+      },
+      "VariableGuid": "3B50A233-495E74DA-45F2EC87-24C3136C",
+      "InternalVariableName": "SM_ST_Foundary01Floor01"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_2",
+    "Outer": "BP_FL_FoundaryFloor02_C",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node BP_FL_FoundaryFloor02_C:SimpleConstructionScript_2.SCS_Node_35",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_FL_FoundaryFloor02.4"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node BP_FL_FoundaryFloor02_C:SimpleConstructionScript_2.SCS_Node_35",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_FL_FoundaryFloor02.4"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node BP_FL_FoundaryFloor02_C:SimpleConstructionScript_2.SCS_Node_2",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_FL_FoundaryFloor02.3"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_ST_Foundary01Floor016B8E42474E33E9CE0AB164AE611A5039",
+    "Outer": "BP_FL_FoundaryFloor02_C",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh SM_ST_Foundary01Floor01",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Structures/SM_ST_Foundary01Floor01.2"
+      },
+      "bUseDefaultCollision": false,
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Interactable",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Slasher",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Blood",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "InteractionDetector",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Walkable",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "BlinkBlocker",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Ground",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        },
+        "MassInKgOverride": 450.72763
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  }
+]

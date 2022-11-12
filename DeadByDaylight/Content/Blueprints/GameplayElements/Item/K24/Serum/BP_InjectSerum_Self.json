@@ -1,0 +1,84 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_InjectSerum_Self_C",
+    "SuperStruct": {
+      "ObjectName": "Class InjectSerumSelf",
+      "ObjectPath": "/Script/TheK24"
+    },
+    "ClassFlags": 10754068,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_InjectSerum_Self_C Default__BP_InjectSerum_Self_C",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K24/Serum/BP_InjectSerum_Self.1"
+    }
+  },
+  {
+    "Type": "BP_InjectSerum_Self_C",
+    "Name": "Default__BP_InjectSerum_Self_C",
+    "Properties": {
+      "_injectSerumKillerInstinctTime": {
+        "_baseValue": {
+          "_dataTableRowHandle": {
+            "DataTable": {
+              "ObjectName": "DataTable K24_TunableDB",
+              "ObjectPath": "DeadByDaylight/Content/Data/Dlc/Eclipse/K24_TunableDB.0"
+            },
+            "RowName": "InjectSerumKillerInstinctTime"
+          }
+        },
+        "_statModifiers": [
+          {
+            "OperationStrategy": "EModifierOperationStrategy::Add",
+            "ModifierTag": {
+              "TagName": "GameplayModifierType.ModifyInjectSerumKillerInstinctTime"
+            },
+            "CompoundStrategy": "EModifierCompoundStrategy::Add"
+          }
+        ]
+      },
+      "_scoreEvent": {
+        "TagName": "GameEvent.ScoreEvent.Camper.Injected.Serum.Self"
+      },
+      "_serumApplyHeal": {
+        "_dataTableRowHandle": {
+          "DataTable": {
+            "ObjectName": "DataTable K24_TunableDB",
+            "ObjectPath": "DeadByDaylight/Content/Data/Dlc/Eclipse/K24_TunableDB.0"
+          },
+          "RowName": "SerumApplyHeal"
+        }
+      },
+      "StopInteractionOnChargeComplete": true,
+      "_interactionSpecificActionSpeedAdditiveTags": [
+        "GameplayModifierType.ModifyInjectSerumTimeAdditive"
+      ],
+      "InteractionID": "InjectSerum",
+      "CamperCanInteract": true,
+      "UseCameraMontageMode": false,
+      "CancelOnHit": true,
+      "InteractionInputType": "EInputInteractionType::VE_ItemUse",
+      "StopInteractionOnInputRelease": true,
+      "InteractionDescriptionText": {
+        "Namespace": "",
+        "Key": "5F51C7A84EC8A55CEDE2ACA288EDADE1",
+        "SourceString": "Inject Vaccine"
+      },
+      "InteractionCanBeToggled": true,
+      "_tags": [
+        "Semantics.Interaction.Id.Survivor.InjectingSerumSelf"
+      ],
+      "_activationDefinition": {
+        "_activationStrategy": "EActivationStrategy::ActivateIfAnyTagMatches",
+        "_activationTags": [
+          "State.Presence.TheK24"
+        ]
+      }
+    }
+  }
+]

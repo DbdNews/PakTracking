@@ -1,0 +1,422 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Ukraine_Lighting_Atl_C",
+    "Super": "BP_SuburbsLighting_LowEnd_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript BP_Ukraine_Lighting_Atl_C:SimpleConstructionScript_0",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Lighting/BP_Ukraine_Lighting_Atl.10"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler BP_Ukraine_Lighting_Atl_C:InheritableComponentHandler",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Lighting/BP_Ukraine_Lighting_Atl.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass BP_SuburbsLighting_LowEnd_C",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Lighting/BP_SuburbsLighting_LowEnd.1"
+    },
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Ukraine_Lighting_Atl_C Default__BP_Ukraine_Lighting_Atl_C",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Lighting/BP_Ukraine_Lighting_Atl.1"
+    }
+  },
+  {
+    "Type": "BP_Ukraine_Lighting_Atl_C",
+    "Name": "Default__BP_Ukraine_Lighting_Atl_C",
+    "Template": "Default__BP_SuburbsLighting_LowEnd_C",
+    "Properties": {
+      "Overall Color": {
+        "R": 0.008931,
+        "G": 0.010955,
+        "B": 0.015,
+        "A": 4.0,
+        "Hex": "FF171B20"
+      },
+      "Cloud opacity": 0.0,
+      "StartSkyFog": 1500.0,
+      "DistanceSkyFog": 2500.0,
+      "AdjustCullDistance": true
+    }
+  },
+  {
+    "Type": "DirectionalLightComponent",
+    "Name": "GodRayLight_GEN_VARIABLE",
+    "Outer": "BP_Ukraine_Lighting_Atl_C",
+    "Template": "GodRayLight_GEN_VARIABLE",
+    "Properties": {
+      "DetailModeBitMask": -8
+    }
+  },
+  {
+    "Type": "DirectionalLightComponent",
+    "Name": "ShadowLight_GEN_VARIABLE",
+    "Outer": "BP_Ukraine_Lighting_Atl_C",
+    "Template": "ShadowLight_GEN_VARIABLE",
+    "Properties": {
+      "DynamicShadowDistanceMovableLight": 7600.0,
+      "DynamicShadowCascades": 0,
+      "Intensity": 25.0,
+      "LightColor": {
+        "B": 41,
+        "G": 43,
+        "R": 30,
+        "A": 0,
+        "Hex": "1E2B29"
+      },
+      "DetailModeBitMask": -4
+    }
+  },
+  {
+    "Type": "ExponentialHeightFogComponent",
+    "Name": "HeightFog_GEN_VARIABLE",
+    "Outer": "BP_Ukraine_Lighting_Atl_C",
+    "Template": "HeightFog_GEN_VARIABLE",
+    "Properties": {
+      "FogDensity": 5.0,
+      "FogInscatteringColor": {
+        "R": 5.4E-05,
+        "G": 0.001064,
+        "B": 0.005208,
+        "A": 1.0,
+        "Hex": "FF000310"
+      },
+      "DirectionalInscatteringColor": {
+        "R": 0.760417,
+        "G": 0.654503,
+        "B": 0.680101,
+        "A": 1.0,
+        "Hex": "FFE2D4D7"
+      },
+      "FogMaxOpacity": 0.4,
+      "StartDistance": 0.0,
+      "DetailModeBitMask": -4
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_Ukraine_Lighting_Atl_C",
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class PostProcessComponent",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "PostProcessComponent BP_Ukraine_Lighting_Atl_C:LevelPostProcess_GEN_VARIABLE",
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Lighting/BP_Ukraine_Lighting_Atl.6"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass BP_Sky_Post_C",
+              "ObjectPath": "DeadByDaylight/Content/Materials/Sky/BP_Sky_Post.17"
+            },
+            "SCSVariableName": "LevelPostProcess",
+            "AssociatedGuid": "6C302177-4D9362D3-BC849A86-44E524B1"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class DirectionalLightComponent",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "DirectionalLightComponent BP_Ukraine_Lighting_Atl_C:ShadowLight_GEN_VARIABLE",
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Lighting/BP_Ukraine_Lighting_Atl.3"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass BP_Sky_Post_C",
+              "ObjectPath": "DeadByDaylight/Content/Materials/Sky/BP_Sky_Post.17"
+            },
+            "SCSVariableName": "ShadowLight",
+            "AssociatedGuid": "8E1CCF0D-4139D3CC-363AE68F-481B22E4"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class ExponentialHeightFogComponent",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "ExponentialHeightFogComponent BP_Ukraine_Lighting_Atl_C:HeightFog_GEN_VARIABLE",
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Lighting/BP_Ukraine_Lighting_Atl.4"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass BP_Sky_Post_C",
+              "ObjectPath": "DeadByDaylight/Content/Materials/Sky/BP_Sky_Post.17"
+            },
+            "SCSVariableName": "HeightFog",
+            "AssociatedGuid": "74916A29-4FA36772-FC6A6E86-4B4CD07D"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class SkyLightComponent",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "SkyLightComponent BP_Ukraine_Lighting_Atl_C:LevelSkyLight_GEN_VARIABLE",
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Lighting/BP_Ukraine_Lighting_Atl.11"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass BP_Sky_Post_C",
+              "ObjectPath": "DeadByDaylight/Content/Materials/Sky/BP_Sky_Post.17"
+            },
+            "SCSVariableName": "LevelSkyLight",
+            "AssociatedGuid": "C8C46290-4B7C2E69-DDA6D1B6-8954E67A"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class SceneComponent",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "SceneComponent BP_Ukraine_Lighting_Atl_C:SceneComponent_1",
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Lighting/BP_Ukraine_Lighting_Atl.8"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass BP_Sky_Post_C",
+              "ObjectPath": "DeadByDaylight/Content/Materials/Sky/BP_Sky_Post.17"
+            },
+            "SCSVariableName": "Base",
+            "AssociatedGuid": "755AA28E-19157B2A-AFFC57EA-A0F45D33"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class StaticMeshComponent",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "StaticMeshComponent BP_Ukraine_Lighting_Atl_C:SkyFollower_GEN_VARIABLE",
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Lighting/BP_Ukraine_Lighting_Atl.13"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass BP_Sky_Post_C",
+              "ObjectPath": "DeadByDaylight/Content/Materials/Sky/BP_Sky_Post.17"
+            },
+            "SCSVariableName": "SkyFollower",
+            "AssociatedGuid": "70D71414-4B3415C6-7F969E99-009CD9DF"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class StaticMeshComponent",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "StaticMeshComponent BP_Ukraine_Lighting_Atl_C:SkyMax_GEN_VARIABLE",
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Lighting/BP_Ukraine_Lighting_Atl.14"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass BP_Sky_Post_C",
+              "ObjectPath": "DeadByDaylight/Content/Materials/Sky/BP_Sky_Post.17"
+            },
+            "SCSVariableName": "SkyMax",
+            "AssociatedGuid": "C9933BDF-45430E76-BD734684-2C8D3380"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class StaticMeshComponent",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "StaticMeshComponent BP_Ukraine_Lighting_Atl_C:MoonMesh_GEN_VARIABLE",
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Lighting/BP_Ukraine_Lighting_Atl.12"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass BP_Sky_Post_C",
+              "ObjectPath": "DeadByDaylight/Content/Materials/Sky/BP_Sky_Post.17"
+            },
+            "SCSVariableName": "MoonMesh",
+            "AssociatedGuid": "5C8F8E5E-449223C9-681DA3AD-C773F710"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class DirectionalLightComponent",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "DirectionalLightComponent BP_Ukraine_Lighting_Atl_C:GodRayLight_GEN_VARIABLE",
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Lighting/BP_Ukraine_Lighting_Atl.2"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass BP_Sky_Post_C",
+              "ObjectPath": "DeadByDaylight/Content/Materials/Sky/BP_Sky_Post.17"
+            },
+            "SCSVariableName": "GodRayLight",
+            "AssociatedGuid": "14D16A01-4CBAEEBE-F05FB882-615E2A06"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "PostProcessComponent",
+    "Name": "LevelPostProcess_GEN_VARIABLE",
+    "Outer": "BP_Ukraine_Lighting_Atl_C",
+    "Template": "LevelPostProcess_GEN_VARIABLE",
+    "Properties": {
+      "Settings": {
+        "bOverride_FilmWhitePoint": true,
+        "bOverride_FilmContrast": true,
+        "bOverride_BloomThreshold": true,
+        "bOverride_AutoExposureMethod": true,
+        "AutoExposureMethod": "AEM_Basic",
+        "FilmWhitePoint": {
+          "R": 0.149098,
+          "G": 0.180592,
+          "B": 0.260417,
+          "A": 1.0,
+          "Hex": "FF6C768C"
+        },
+        "FilmSaturation": 1.2,
+        "FilmContrast": 0.07,
+        "BloomIntensity": 3.0,
+        "BloomThreshold": -1.0,
+        "AutoExposureBias": 3.8,
+        "AutoExposureBiasBackup": 3.8,
+        "AutoExposureMinBrightness": 1.0,
+        "AutoExposureMaxBrightness": 1.0
+      },
+      "DetailModeBitMask": -4
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_Ukraine_Lighting_Atl_C"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneComponent_1",
+    "Outer": "BP_Ukraine_Lighting_Atl_C",
+    "Template": "SceneComponent_1",
+    "Properties": {
+      "DetailModeBitMask": -4
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent BP_Ukraine_Lighting_Atl_C:DefaultSceneRoot_GEN_VARIABLE",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Lighting/BP_Ukraine_Lighting_Atl.7"
+      },
+      "VariableGuid": "0886612E-45E25DF0-F74480B3-A679E263",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_Ukraine_Lighting_Atl_C",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node BP_Ukraine_Lighting_Atl_C:SimpleConstructionScript_0.SCS_Node_0",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Lighting/BP_Ukraine_Lighting_Atl.9"
+      }
+    }
+  },
+  {
+    "Type": "SkyLightComponent",
+    "Name": "LevelSkyLight_GEN_VARIABLE",
+    "Outer": "BP_Ukraine_Lighting_Atl_C",
+    "Template": "LevelSkyLight_GEN_VARIABLE",
+    "Properties": {
+      "CubemapResolution": 64,
+      "Intensity": 20.0,
+      "DetailModeBitMask": -4
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "MoonMesh_GEN_VARIABLE",
+    "Outer": "BP_Ukraine_Lighting_Atl_C",
+    "Template": "MoonMesh_GEN_VARIABLE",
+    "Properties": {
+      "DetailModeBitMask": -4
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SkyFollower_GEN_VARIABLE",
+    "Outer": "BP_Ukraine_Lighting_Atl_C",
+    "Template": "SkyFollower_GEN_VARIABLE",
+    "Properties": {
+      "DetailModeBitMask": -4
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SkyMax_GEN_VARIABLE",
+    "Outer": "BP_Ukraine_Lighting_Atl_C",
+    "Template": "SkyMax_GEN_VARIABLE",
+    "Properties": {
+      "DetailModeBitMask": -8
+    }
+  }
+]

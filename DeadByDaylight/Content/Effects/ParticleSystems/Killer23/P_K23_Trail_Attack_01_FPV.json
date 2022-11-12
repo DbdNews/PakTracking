@@ -1,0 +1,371 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "BurstScaleDistribution",
+    "Outer": "ParticleModuleSpawn_0",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired P_K23_Trail_Attack_01_FPV:ParticleModuleRequired_0",
+        "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer23/P_K23_Trail_Attack_01_FPV.6"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime P_K23_Trail_Attack_01_FPV:ParticleModuleLifetime_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer23/P_K23_Trail_Attack_01_FPV.4"
+        },
+        {
+          "ObjectName": "ParticleModuleSize P_K23_Trail_Attack_01_FPV:ParticleModuleSize_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer23/P_K23_Trail_Attack_01_FPV.7"
+        },
+        {
+          "ObjectName": "ParticleModuleColorOverLife P_K23_Trail_Attack_01_FPV:ParticleModuleColorOverLife_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer23/P_K23_Trail_Attack_01_FPV.3"
+        },
+        {
+          "ObjectName": "ParticleModuleParameterDynamic P_K23_Trail_Attack_01_FPV:ParticleModuleParameterDynamic_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer23/P_K23_Trail_Attack_01_FPV.5"
+        }
+      ],
+      "TypeDataModule": {
+        "ObjectName": "ParticleModuleTypeDataAnimTrail P_K23_Trail_Attack_01_FPV:ParticleModuleTypeDataAnimTrail_0",
+        "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer23/P_K23_Trail_Attack_01_FPV.9"
+      },
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn P_K23_Trail_Attack_01_FPV:ParticleModuleSpawn_0",
+        "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer23/P_K23_Trail_Attack_01_FPV.8"
+      },
+      "PeakActiveParticles": 99
+    }
+  },
+  {
+    "Type": "ParticleModuleColorOverLife",
+    "Name": "ParticleModuleColorOverLife_0",
+    "Outer": "P_K23_Trail_Attack_01_FPV",
+    "Properties": {
+      "ColorOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "AlphaOverLife": {
+        "MinValue": 0.1,
+        "MaxValue": 0.1,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.1
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "P_K23_Trail_Attack_01_FPV",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 0.2,
+        "MaxValue": 0.2,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.2
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleParameterDynamic",
+    "Name": "ParticleModuleParameterDynamic_0",
+    "Outer": "P_K23_Trail_Attack_01_FPV",
+    "Properties": {
+      "DynamicParams": [
+        {
+          "ParamName": "Pos_X",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": false,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 0.0,
+            "MaxValue": 0.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                0.0
+              ],
+              "Op": 1,
+              "EntryCount": 1,
+              "EntryStride": 1,
+              "SubEntryStride": 0,
+              "LockFlag": 0
+            }
+          }
+        },
+        {
+          "ParamName": "Tile_N_Y",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": false,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 1.0,
+            "MaxValue": 1.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                1.0
+              ],
+              "Op": 1,
+              "EntryCount": 1,
+              "EntryStride": 1,
+              "SubEntryStride": 0,
+              "LockFlag": 0
+            }
+          }
+        },
+        {
+          "ParamName": "Distance",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": false,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 0.0,
+            "MaxValue": 0.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                0.0
+              ],
+              "Op": 1,
+              "EntryCount": 1,
+              "EntryStride": 1,
+              "SubEntryStride": 0,
+              "LockFlag": 0
+            }
+          }
+        },
+        {
+          "ParamName": "Refraction",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": false,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 1.0,
+            "MaxValue": 1.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                1.0
+              ],
+              "Op": 1,
+              "EntryCount": 1,
+              "EntryStride": 1,
+              "SubEntryStride": 0,
+              "LockFlag": 0
+            }
+          }
+        }
+      ],
+      "UpdateFlags": 15,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "P_K23_Trail_Attack_01_FPV",
+    "Properties": {
+      "Material": {
+        "ObjectName": "MaterialInstanceConstant MI_Weapon_TrailParticle_01",
+        "ObjectPath": "DeadByDaylight/Content/Effects/Materials/Trail/MI_Weapon_TrailParticle_01.0"
+      },
+      "bKillOnDeactivate": true,
+      "bKillOnCompleted": true,
+      "bUseLegacyEmitterTime": false,
+      "EmitterDuration": 0.5,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_K23_Trail_Attack_01_FPV:ParticleModuleRequired_0.RequiredDistributionSpawnRate",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer23/P_K23_Trail_Attack_01_FPV.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "EmitterLoops": 1,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "P_K23_Trail_Attack_01_FPV",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 100.0,
+        "MaxValue": 100.0,
+        "MinValueVec": {
+          "X": 100.0,
+          "Y": 100.0,
+          "Z": 100.0
+        },
+        "MaxValueVec": {
+          "X": 100.0,
+          "Y": 100.0,
+          "Z": 100.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            100.0,
+            100.0,
+            100.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "P_K23_Trail_Attack_01_FPV",
+    "Properties": {
+      "Rate": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RateScale": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "BurstList": [
+        {
+          "Count": 1,
+          "CountLow": -1,
+          "Time": 0.0
+        }
+      ],
+      "BurstScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_K23_Trail_Attack_01_FPV:ParticleModuleSpawn_0.BurstScaleDistribution",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer23/P_K23_Trail_Attack_01_FPV.1"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleTypeDataAnimTrail",
+    "Name": "ParticleModuleTypeDataAnimTrail_0",
+    "Outer": "P_K23_Trail_Attack_01_FPV",
+    "Properties": {
+      "TilingDistance": 7389.8433,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "P_K23_Trail_Attack_01_FPV",
+    "Properties": {
+      "EmitterName": "Trail_FPV",
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel P_K23_Trail_Attack_01_FPV:ParticleSpriteEmitter_0.ParticleLODLevel_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer23/P_K23_Trail_Attack_01_FPV.2"
+        }
+      ],
+      "DetailModeBitmask": 63
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "P_K23_Trail_Attack_01_FPV",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter P_K23_Trail_Attack_01_FPV:ParticleSpriteEmitter_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer23/P_K23_Trail_Attack_01_FPV.10"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bShouldResetPeakCounts": true
+    }
+  }
+]

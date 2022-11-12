@@ -1,0 +1,687 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "DistributionVelocityScale",
+    "Outer": "ParticleModuleLocationPrimitiveCylinder_0",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0"
+  },
+  {
+    "Type": "DistributionFloatParticleParameter",
+    "Name": "DistributionFloatParticleParameter_0",
+    "Outer": "ParticleModuleColorScaleOverLife_2",
+    "Properties": {
+      "ParameterName": "MistLantern",
+      "Constant": 0.4
+    }
+  },
+  {
+    "Type": "DistributionFloatParticleParameter",
+    "Name": "DistributionFloatParticleParameter_0",
+    "Outer": "ParticleModuleColorScaleOverLife_3",
+    "Properties": {
+      "ParameterName": "MistOpacity",
+      "ParamMode": "DPM_Direct",
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired P_Mist_Lantern:ParticleModuleRequired_0",
+        "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Mist_Lantern.11"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime P_Mist_Lantern:ParticleModuleLifetime_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Mist_Lantern.9"
+        },
+        {
+          "ObjectName": "ParticleModuleSubUV P_Mist_Lantern:ParticleModuleSubUV_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Mist_Lantern.18"
+        },
+        {
+          "ObjectName": "ParticleModuleSize P_Mist_Lantern:ParticleModuleSize_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Mist_Lantern.14"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocity P_Mist_Lantern:ParticleModuleVelocity_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Mist_Lantern.19"
+        },
+        {
+          "ObjectName": "ParticleModuleRotation P_Mist_Lantern:ParticleModuleRotation_1",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Mist_Lantern.12"
+        },
+        {
+          "ObjectName": "ParticleModuleSizeMultiplyLife P_Mist_Lantern:ParticleModuleSizeMultiplyLife_1",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Mist_Lantern.15"
+        },
+        {
+          "ObjectName": "ParticleModuleAccelerationDrag P_Mist_Lantern:ParticleModuleAccelerationDrag_1",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Mist_Lantern.5"
+        },
+        {
+          "ObjectName": "ParticleModuleLocationPrimitiveCylinder P_Mist_Lantern:ParticleModuleLocationPrimitiveCylinder_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Mist_Lantern.10"
+        },
+        {
+          "ObjectName": "ParticleModuleColorOverLife P_Mist_Lantern:ParticleModuleColorOverLife_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Mist_Lantern.6"
+        },
+        {
+          "ObjectName": "ParticleModuleColorScaleOverLife P_Mist_Lantern:ParticleModuleColorScaleOverLife_2",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Mist_Lantern.7"
+        },
+        {
+          "ObjectName": "ParticleModuleColorScaleOverLife P_Mist_Lantern:ParticleModuleColorScaleOverLife_3",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Mist_Lantern.8"
+        },
+        {
+          "ObjectName": "ParticleModuleRotationRate P_Mist_Lantern:ParticleModuleRotationRate_1",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Mist_Lantern.13"
+        },
+        {
+          "ObjectName": "ParticleModuleSizeMultiplyLife P_Mist_Lantern:ParticleModuleSizeMultiplyLife_2",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Mist_Lantern.16"
+        }
+      ],
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn P_Mist_Lantern:ParticleModuleSpawn_0",
+        "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Mist_Lantern.17"
+      },
+      "PeakActiveParticles": 14
+    }
+  },
+  {
+    "Type": "ParticleModuleAccelerationDrag",
+    "Name": "ParticleModuleAccelerationDrag_1",
+    "Outer": "P_Mist_Lantern",
+    "Properties": {
+      "DragCoefficientRaw": {
+        "MinValue": 0.25,
+        "MaxValue": 0.4,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.25,
+            0.4
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "bAlwaysInWorldSpace": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColorOverLife",
+    "Name": "ParticleModuleColorOverLife_0",
+    "Outer": "P_Mist_Lantern",
+    "Properties": {
+      "ColorOverLife": {
+        "MinValue": 0.6,
+        "MaxValue": 0.6,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.6,
+            0.6,
+            0.6
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "AlphaOverLife": {
+        "MaxValue": 4.0,
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 14.999999,
+          "Values": [
+            0.0,
+            1.3333334,
+            2.6666667,
+            3.9622047,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            3.9622047,
+            2.6666658,
+            1.3333328,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 16,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColorScaleOverLife",
+    "Name": "ParticleModuleColorScaleOverLife_2",
+    "Outer": "P_Mist_Lantern",
+    "Properties": {
+      "ColorScaleOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "AlphaScaleOverLife": {
+        "MinValue": 0.3,
+        "MaxValue": 0.3,
+        "Distribution": {
+          "ObjectName": "DistributionFloatParticleParameter P_Mist_Lantern:ParticleModuleColorScaleOverLife_2.DistributionFloatParticleParameter_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Mist_Lantern.2"
+        },
+        "Table": {
+          "Values": [
+            0.3
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColorScaleOverLife",
+    "Name": "ParticleModuleColorScaleOverLife_3",
+    "Outer": "P_Mist_Lantern",
+    "Properties": {
+      "ColorScaleOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "AlphaScaleOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": {
+          "ObjectName": "DistributionFloatParticleParameter P_Mist_Lantern:ParticleModuleColorScaleOverLife_3.DistributionFloatParticleParameter_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Mist_Lantern.3"
+        },
+        "Table": {
+          "Values": [
+            1.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "P_Mist_Lantern",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 10.0,
+        "MaxValue": 12.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            10.0,
+            12.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLocationPrimitiveCylinder",
+    "Name": "ParticleModuleLocationPrimitiveCylinder_0",
+    "Outer": "P_Mist_Lantern",
+    "Properties": {
+      "StartRadius": {
+        "MinValue": 50.0,
+        "MaxValue": 50.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            50.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "StartHeight": {
+        "MinValue": 10.0,
+        "MaxValue": 10.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            10.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "VelocityScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_Mist_Lantern:ParticleModuleLocationPrimitiveCylinder_0.DistributionVelocityScale",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Mist_Lantern.0"
+        }
+      },
+      "StartLocation": {
+        "MinValue": -30.0,
+        "MinValueVec": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": -30.0
+        },
+        "MaxValueVec": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": -30.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0,
+            0.0,
+            -30.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "P_Mist_Lantern",
+    "Properties": {
+      "Material": {
+        "ObjectName": "MaterialInstanceConstant MI_MistLantern",
+        "ObjectPath": "DeadByDaylight/Content/Effects/Materials/MI_MistLantern.0"
+      },
+      "SortMode": "PSORTMODE_DistanceToView",
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_Mist_Lantern:ParticleModuleRequired_0.RequiredDistributionSpawnRate",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Mist_Lantern.1"
+        }
+      },
+      "InterpolationMethod": "PSUVIM_Linear_Blend",
+      "SubImages_Horizontal": 8,
+      "SubImages_Vertical": 8,
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRotation",
+    "Name": "ParticleModuleRotation_1",
+    "Outer": "P_Mist_Lantern",
+    "Properties": {
+      "StartRotation": {
+        "MinValue": -1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -1.0,
+            1.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRotationRate",
+    "Name": "ParticleModuleRotationRate_1",
+    "Outer": "P_Mist_Lantern",
+    "Properties": {
+      "StartRotationRate": {
+        "MinValue": -0.01,
+        "MaxValue": 0.01,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -0.01,
+            0.01
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "P_Mist_Lantern",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 1.0,
+        "MaxValue": 400.0,
+        "MinValueVec": {
+          "X": 400.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 400.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            400.0,
+            1.0,
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSizeMultiplyLife",
+    "Name": "ParticleModuleSizeMultiplyLife_1",
+    "Outer": "P_Mist_Lantern",
+    "Properties": {
+      "LifeMultiplier": {
+        "MinValue": 0.5,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 1.0,
+          "Values": [
+            0.5,
+            0.5,
+            0.5,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSizeMultiplyLife",
+    "Name": "ParticleModuleSizeMultiplyLife_2",
+    "Outer": "P_Mist_Lantern",
+    "Properties": {
+      "LifeMultiplier": {
+        "MinValue": 1.0,
+        "MaxValue": 1.1,
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 1.0,
+          "Values": [
+            1.0,
+            1.0,
+            1.0,
+            1.1,
+            1.1,
+            1.1
+          ],
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "P_Mist_Lantern",
+    "Properties": {
+      "Rate": {
+        "MinValue": 0.3,
+        "MaxValue": 0.3,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.3
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "BurstScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSubUV",
+    "Name": "ParticleModuleSubUV_0",
+    "Outer": "P_Mist_Lantern",
+    "Properties": {
+      "Animation": {
+        "ObjectName": "SubUVAnimation T_SmokeSubUV_8X8_02_SubUV",
+        "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_SmokeSubUV_8X8_02_SubUV.0"
+      },
+      "SubImageIndex": {
+        "MaxValue": 63.0,
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 31.0,
+          "Values": [
+            0.0,
+            2.2828836,
+            4.6595783,
+            7.11866,
+            9.6487055,
+            12.238292,
+            14.875996,
+            17.550396,
+            20.250065,
+            22.963581,
+            25.679522,
+            28.386387,
+            31.072683,
+            33.72701,
+            36.33793,
+            38.894035,
+            41.383896,
+            43.796085,
+            46.11919,
+            48.341785,
+            50.452423,
+            52.439457,
+            54.2911,
+            55.99641,
+            57.543957,
+            58.922325,
+            60.120094,
+            61.125824,
+            61.9281,
+            62.51552,
+            62.876614,
+            63.0
+          ],
+          "Op": 1,
+          "EntryCount": 32,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocity",
+    "Name": "ParticleModuleVelocity_0",
+    "Outer": "P_Mist_Lantern",
+    "Properties": {
+      "StartVelocity": {
+        "MaxValue": 50.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            20.0,
+            20.0,
+            0.0,
+            50.0,
+            50.0,
+            0.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "StartVelocityRadial": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "P_Mist_Lantern",
+    "Properties": {
+      "EmitterName": "Mist Small",
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel P_Mist_Lantern:ParticleSpriteEmitter_0.ParticleLODLevel_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Mist_Lantern.4"
+        }
+      ],
+      "DetailModeBitmask": 63
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "P_Mist_Lantern",
+    "Properties": {
+      "WarmupTime": 10.0,
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter P_Mist_Lantern:ParticleSpriteEmitter_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Mist_Lantern.20"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "FixedRelativeBoundingBox": {
+        "Min": {
+          "X": -2000.0,
+          "Y": -2000.0,
+          "Z": -2000.0
+        },
+        "Max": {
+          "X": 2000.0,
+          "Y": 2000.0,
+          "Z": 2000.0
+        },
+        "IsValid": 1
+      },
+      "bUseFixedRelativeBoundingBox": true,
+      "bShouldResetPeakCounts": true,
+      "MinTimeBetweenTicks": 60
+    }
+  }
+]

@@ -1,0 +1,256 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_FL_Storehouse1_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript BP_FL_Storehouse1_C:SimpleConstructionScript_0",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_FL_Storehouse1.7"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Box",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class BoxComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_StoreHouse01_Door02",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class StaticMeshComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class SceneComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_FL_Storehouse1_C Default__BP_FL_Storehouse1_C",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_FL_Storehouse1.1"
+    }
+  },
+  {
+    "Type": "BP_FL_Storehouse1_C",
+    "Name": "Default__BP_FL_Storehouse1_C",
+    "Properties": {
+      "PrimaryActorTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Box_GEN_VARIABLE",
+    "Outer": "BP_FL_Storehouse1_C",
+    "Properties": {
+      "AreaClass": {
+        "ObjectName": "Class NavArea_Obstacle",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAll",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Interactable",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Slasher",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Blood",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "InteractionDetector",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BlinkBlocker",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Ground",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Walkable",
+              "Response": "ECR_Block"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -24.891602,
+        "Z": -14.179382
+      },
+      "RelativeScale3D": {
+        "X": 4.25,
+        "Y": 1.0,
+        "Z": 4.0
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneComponent_2",
+    "Outer": "BP_FL_Storehouse1_C",
+    "Properties": {
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent BP_FL_Storehouse1_C:SceneComponent_2",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_FL_Storehouse1.3"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node BP_FL_Storehouse1_C:SimpleConstructionScript_0.SCS_Node_3",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_FL_Storehouse1.5"
+        }
+      ],
+      "VariableGuid": "13A28964-417EF4EF-1AF74696-71138F9E",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class StaticMeshComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent BP_FL_Storehouse1_C:SM_StoreHouse01_Door02_GEN_VARIABLE",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_FL_Storehouse1.8"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node BP_FL_Storehouse1_C:SimpleConstructionScript_0.SCS_Node_5",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_FL_Storehouse1.6"
+        }
+      ],
+      "VariableGuid": "CCE8BA3A-4086A166-42FCDAB8-C232E7B3",
+      "InternalVariableName": "SM_StoreHouse01_Door02"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class BoxComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent BP_FL_Storehouse1_C:Box_GEN_VARIABLE",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_FL_Storehouse1.2"
+      },
+      "VariableGuid": "C016A352-42340EBC-1FD70BA2-2AEE1610",
+      "InternalVariableName": "Box"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_FL_Storehouse1_C",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node BP_FL_Storehouse1_C:SimpleConstructionScript_0.SCS_Node_0",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_FL_Storehouse1.4"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node BP_FL_Storehouse1_C:SimpleConstructionScript_0.SCS_Node_0",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_FL_Storehouse1.4"
+        },
+        {
+          "ObjectName": "SCS_Node BP_FL_Storehouse1_C:SimpleConstructionScript_0.SCS_Node_3",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_FL_Storehouse1.5"
+        },
+        {
+          "ObjectName": "SCS_Node BP_FL_Storehouse1_C:SimpleConstructionScript_0.SCS_Node_5",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_FL_Storehouse1.6"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node BP_FL_Storehouse1_C:SimpleConstructionScript_0.SCS_Node_0",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_FL_Storehouse1.4"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_StoreHouse01_Door02_GEN_VARIABLE",
+    "Outer": "BP_FL_Storehouse1_C",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh SM_StoreHouse01_Door02",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Structures/SM_StoreHouse01_Door02.2"
+      },
+      "bUseDefaultCollision": false,
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll"
+      },
+      "RelativeLocation": {
+        "X": 323.65668,
+        "Y": 226.20668,
+        "Z": 162.11742
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  }
+]

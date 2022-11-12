@@ -1,0 +1,247 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BaseGlyph_BP_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript BaseGlyph_BP_C:SimpleConstructionScript_0",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/Glyphs/BaseGlyph_BP.15"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class Glyph",
+      "ObjectPath": "/Script/Archives"
+    },
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BaseGlyph_BP_C Default__BaseGlyph_BP_C",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/Glyphs/BaseGlyph_BP.1"
+    }
+  },
+  {
+    "Type": "BaseGlyph_BP_C",
+    "Name": "Default__BaseGlyph_BP_C",
+    "Properties": {
+      "_glyphInteraction": {
+        "ObjectName": "GlyphInteraction Default__BaseGlyph_BP_C:GlyphInteraction",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/Glyphs/BaseGlyph_BP.6"
+      },
+      "_glyphInteractionKiller": {
+        "ObjectName": "GlyphInteraction Default__BaseGlyph_BP_C:GlyphInteractionKiller",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/Glyphs/BaseGlyph_BP.7"
+      },
+      "_glyphInteractionChargeable": {
+        "ObjectName": "ChargeableComponent Default__BaseGlyph_BP_C:GlyphInteractionChargeable",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/Glyphs/BaseGlyph_BP.3"
+      },
+      "_glyphInteractionChargeableKiller": {
+        "ObjectName": "ChargeableComponent Default__BaseGlyph_BP_C:GlyphInteractionChargeableKiller",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/Glyphs/BaseGlyph_BP.4"
+      },
+      "_glyphInteractor": {
+        "ObjectName": "Interactor Default__BaseGlyph_BP_C:GlyphInteractor",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/Glyphs/BaseGlyph_BP.9"
+      },
+      "_glyphInteractionZone": {
+        "ObjectName": "BoxComponent Default__BaseGlyph_BP_C:GlyphInteractionZone",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/Glyphs/BaseGlyph_BP.2"
+      },
+      "_outlineComponent": {
+        "ObjectName": "DBDOutlineComponent Default__BaseGlyph_BP_C:OutlineComponent",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/Glyphs/BaseGlyph_BP.5"
+      },
+      "_glyphMesh": {
+        "ObjectName": "StaticMeshComponent Default__BaseGlyph_BP_C:GlyphMesh",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/Glyphs/BaseGlyph_BP.16"
+      },
+      "_nearTrackedActorComponent": {
+        "ObjectName": "NearTrackedActorComponent Default__BaseGlyph_BP_C:NearPlayerTracker",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/Glyphs/BaseGlyph_BP.11"
+      },
+      "_glyphInteractionSecondsToCharge": {
+        "_dataTableRowHandle": {
+          "DataTable": {
+            "ObjectName": "DataTable ArchiveTunableDB",
+            "ObjectPath": "DeadByDaylight/Content/Data/Archives/ArchiveTunableDB.0"
+          },
+          "RowName": "GlyphInteractionDuration"
+        }
+      },
+      "_transformOptimizer": {
+        "ObjectName": "InteractableTransformOptimizer Default__BaseGlyph_BP_C:InteractableOptimizer",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/Glyphs/BaseGlyph_BP.8"
+      },
+      "RootComponent": {
+        "ObjectName": "SceneComponent Default__BaseGlyph_BP_C:Root",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/Glyphs/BaseGlyph_BP.13"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "GlyphInteractionZone",
+    "Outer": "Default__BaseGlyph_BP_C",
+    "Properties": {
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "AttachParent": {
+        "ObjectName": "SceneComponent Default__BaseGlyph_BP_C:Root",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/Glyphs/BaseGlyph_BP.13"
+      }
+    }
+  },
+  {
+    "Type": "ChargeableComponent",
+    "Name": "GlyphInteractionChargeable",
+    "Outer": "Default__BaseGlyph_BP_C"
+  },
+  {
+    "Type": "ChargeableComponent",
+    "Name": "GlyphInteractionChargeableKiller",
+    "Outer": "Default__BaseGlyph_BP_C"
+  },
+  {
+    "Type": "DBDOutlineComponent",
+    "Name": "OutlineComponent",
+    "Outer": "Default__BaseGlyph_BP_C",
+    "Properties": {
+      "OutlineName": "glyph",
+      "AttachParent": {
+        "ObjectName": "StaticMeshComponent Default__BaseGlyph_BP_C:GlyphMesh",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/Glyphs/BaseGlyph_BP.16"
+      }
+    }
+  },
+  {
+    "Type": "GlyphInteraction",
+    "Name": "GlyphInteraction",
+    "Outer": "Default__BaseGlyph_BP_C",
+    "Properties": {
+      "CheckInteractableIsInPlayerView": true,
+      "CheckInteractableInViewSphereSweepRadius": 0.0,
+      "CheckInteractableInViewOffset": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "AllowHitMontageWhenInteracting": true,
+      "_interactor": {
+        "ObjectName": "Interactor Default__BaseGlyph_BP_C:GlyphInteractor",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/Glyphs/BaseGlyph_BP.9"
+      },
+      "AttachParent": {
+        "ObjectName": "Interactor Default__BaseGlyph_BP_C:GlyphInteractor",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/Glyphs/BaseGlyph_BP.9"
+      }
+    }
+  },
+  {
+    "Type": "GlyphInteraction",
+    "Name": "GlyphInteractionKiller",
+    "Outer": "Default__BaseGlyph_BP_C",
+    "Properties": {
+      "StopUpdateMontageOnExit": true,
+      "InteractionAnimation": "EInteractionAnimation::VE_None",
+      "CheckInteractableIsInPlayerView": true,
+      "CheckInteractableInViewSphereSweepRadius": 0.0,
+      "CheckInteractableInViewOffset": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "UpdateMontage": {
+        "MontageID": "Generic_Interaction"
+      },
+      "_startUpdateMontageDuringEnter": true,
+      "_interactor": {
+        "ObjectName": "Interactor Default__BaseGlyph_BP_C:GlyphInteractor",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/Glyphs/BaseGlyph_BP.9"
+      },
+      "AttachParent": {
+        "ObjectName": "Interactor Default__BaseGlyph_BP_C:GlyphInteractor",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/Glyphs/BaseGlyph_BP.9"
+      }
+    }
+  },
+  {
+    "Type": "InteractableTransformOptimizer",
+    "Name": "InteractableOptimizer",
+    "Outer": "Default__BaseGlyph_BP_C"
+  },
+  {
+    "Type": "Interactor",
+    "Name": "GlyphInteractor",
+    "Outer": "Default__BaseGlyph_BP_C",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent Default__BaseGlyph_BP_C:GlyphInteractionZone",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/Glyphs/BaseGlyph_BP.2"
+      }
+    }
+  },
+  {
+    "Type": "MoveToGroundComponent",
+    "Name": "MoveToGroundComponent",
+    "Outer": "Default__BaseGlyph_BP_C"
+  },
+  {
+    "Type": "NearTrackedActorComponent",
+    "Name": "NearPlayerTracker",
+    "Outer": "Default__BaseGlyph_BP_C"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BaseGlyph_BP_C"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Root",
+    "Outer": "Default__BaseGlyph_BP_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent BaseGlyph_BP_C:DefaultSceneRoot_GEN_VARIABLE",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/Glyphs/BaseGlyph_BP.12"
+      },
+      "VariableGuid": "A08725F8-43B745BE-450500A5-135517BC",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BaseGlyph_BP_C",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node BaseGlyph_BP_C:SimpleConstructionScript_0.SCS_Node_0",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/Glyphs/BaseGlyph_BP.14"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "GlyphMesh",
+    "Outer": "Default__BaseGlyph_BP_C",
+    "Properties": {
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "AttachParent": {
+        "ObjectName": "SceneComponent Default__BaseGlyph_BP_C:Root",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/Glyphs/BaseGlyph_BP.13"
+      }
+    }
+  }
+]

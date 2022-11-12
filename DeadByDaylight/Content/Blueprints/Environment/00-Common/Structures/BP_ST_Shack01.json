@@ -1,0 +1,759 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_ST_Shack01_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript BP_ST_Shack01_C:SimpleConstructionScript_0",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Environment/00-Common/Structures/BP_ST_Shack01.18"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Box",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class BoxComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Mobile_Reflection",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class DBDSphereReflectionCaptureSpawnerComponent",
+          "ObjectPath": "/Script/GFXUtilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_BoardedWindow04",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class StaticMeshComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ISM_SM_ST_Shack01_Wall02",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class InstancedStaticMeshComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ISM_SM_ST_Shack01_Wall01",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class InstancedStaticMeshComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ISM_SM_WallPipeMetal04",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class InstancedStaticMeshComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_ST_Shack01",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class StaticMeshComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_PanelMetalCorrugate05",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class StaticMeshComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_ST_Shack01_WoodPile01",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class StaticMeshComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class SceneComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_ST_Shack01_C Default__BP_ST_Shack01_C",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/Environment/00-Common/Structures/BP_ST_Shack01.1"
+    }
+  },
+  {
+    "Type": "BP_ST_Shack01_C",
+    "Name": "Default__BP_ST_Shack01_C"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Box_GEN_VARIABLE",
+    "Outer": "BP_ST_Shack01_C",
+    "Properties": {
+      "AreaClass": {
+        "ObjectName": "Class NavArea_Obstacle",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "bGenerateOverlapEvents": false,
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAll",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Interactable",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Slasher",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Blood",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "InteractionDetector",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BlinkBlocker",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Ground",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Walkable",
+              "Response": "ECR_Block"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 462.5912,
+        "Y": 558.3812,
+        "Z": 215.98593
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 40.86116,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.29999462,
+        "Y": 0.934085,
+        "Z": 8.695752
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "DBDSphereReflectionCaptureSpawnerComponent",
+    "Name": "Mobile_Reflection_GEN_VARIABLE",
+    "Outer": "BP_ST_Shack01_C",
+    "Properties": {
+      "InfluenceRadius": 1000.0,
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 300.0
+      },
+      "Mobility": "EComponentMobility::Static",
+      "DetailModeBitMask": 20
+    }
+  },
+  {
+    "Type": "InstancedStaticMeshComponent",
+    "Name": "ISM_SM_ST_Shack01_Wall01_GEN_VARIABLE",
+    "Outer": "BP_ST_Shack01_C",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh SM_ST_Shack01_Wall01",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Structures/SM_ST_Shack01_Wall01.2"
+      },
+      "bUseDefaultCollision": false,
+      "bHasPerInstanceHitProxies": true,
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll"
+      },
+      "Mobility": "EComponentMobility::Static"
+    },
+    "PerInstanceSMData": [
+      {
+        "OffsetLocation": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "RelativeRotation": {
+          "Pitch": 0.0,
+          "Yaw": 0.0,
+          "Roll": 0.0
+        },
+        "RelativeScale3D": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      {
+        "OffsetLocation": {
+          "X": -52.05763,
+          "Y": 140.9575,
+          "Z": 0.0
+        },
+        "RelativeRotation": {
+          "Pitch": 0.0,
+          "Yaw": -180.0,
+          "Roll": -0.0
+        },
+        "RelativeScale3D": {
+          "X": 1.006957,
+          "Y": 0.999835,
+          "Z": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "Type": "InstancedStaticMeshComponent",
+    "Name": "ISM_SM_ST_Shack01_Wall02_GEN_VARIABLE",
+    "Outer": "BP_ST_Shack01_C",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh SM_ST_Shack01_Wall02",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Structures/SM_ST_Shack01_Wall02.2"
+      },
+      "bUseDefaultCollision": false,
+      "bHasPerInstanceHitProxies": true,
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll"
+      },
+      "Mobility": "EComponentMobility::Static"
+    },
+    "PerInstanceSMData": [
+      {
+        "OffsetLocation": {
+          "X": -30.3706,
+          "Y": -452.3643,
+          "Z": 276.1637
+        },
+        "RelativeRotation": {
+          "Pitch": 0.0,
+          "Yaw": 0.0,
+          "Roll": 0.0
+        },
+        "RelativeScale3D": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      {
+        "OffsetLocation": {
+          "X": -21.9245,
+          "Y": 598.3742,
+          "Z": 258.6862
+        },
+        "RelativeRotation": {
+          "Pitch": 0.0,
+          "Yaw": 180.0,
+          "Roll": 0.0
+        },
+        "RelativeScale3D": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "Type": "InstancedStaticMeshComponent",
+    "Name": "ISM_SM_WallPipeMetal04_GEN_VARIABLE",
+    "Outer": "BP_ST_Shack01_C",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh SM_WallPipeMetal04",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Props/SetDressing/01-Industrial/SM_WallPipeMetal04.2"
+      },
+      "bUseDefaultCollision": false,
+      "bHasPerInstanceHitProxies": true,
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll"
+      },
+      "Mobility": "EComponentMobility::Static",
+      "DetailModeBitMask": -13
+    },
+    "PerInstanceSMData": [
+      {
+        "OffsetLocation": {
+          "X": 491.8359,
+          "Y": -388.1799,
+          "Z": -36.5333
+        },
+        "RelativeRotation": {
+          "Pitch": 0.0,
+          "Yaw": 0.0,
+          "Roll": 0.0
+        },
+        "RelativeScale3D": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_ST_Shack01_C",
+    "Properties": {
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent BP_ST_Shack01_C:DefaultSceneRoot_GEN_VARIABLE",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Environment/00-Common/Structures/BP_ST_Shack01.7"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node BP_ST_Shack01_C:SimpleConstructionScript_0.SCS_Node_8",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Environment/00-Common/Structures/BP_ST_Shack01.17"
+        },
+        {
+          "ObjectName": "SCS_Node BP_ST_Shack01_C:SimpleConstructionScript_0.SCS_Node_1",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Environment/00-Common/Structures/BP_ST_Shack01.9"
+        },
+        {
+          "ObjectName": "SCS_Node BP_ST_Shack01_C:SimpleConstructionScript_0.SCS_Node_7",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Environment/00-Common/Structures/BP_ST_Shack01.16"
+        },
+        {
+          "ObjectName": "SCS_Node BP_ST_Shack01_C:SimpleConstructionScript_0.SCS_Node_13",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Environment/00-Common/Structures/BP_ST_Shack01.10"
+        },
+        {
+          "ObjectName": "SCS_Node BP_ST_Shack01_C:SimpleConstructionScript_0.SCS_Node_14",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Environment/00-Common/Structures/BP_ST_Shack01.11"
+        },
+        {
+          "ObjectName": "SCS_Node BP_ST_Shack01_C:SimpleConstructionScript_0.SCS_Node_3",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Environment/00-Common/Structures/BP_ST_Shack01.13"
+        },
+        {
+          "ObjectName": "SCS_Node BP_ST_Shack01_C:SimpleConstructionScript_0.SCS_Node_2",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Environment/00-Common/Structures/BP_ST_Shack01.12"
+        },
+        {
+          "ObjectName": "SCS_Node BP_ST_Shack01_C:SimpleConstructionScript_0.SCS_Node_5",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Environment/00-Common/Structures/BP_ST_Shack01.15"
+        },
+        {
+          "ObjectName": "SCS_Node BP_ST_Shack01_C:SimpleConstructionScript_0.SCS_Node_4",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Environment/00-Common/Structures/BP_ST_Shack01.14"
+        }
+      ],
+      "VariableGuid": "50935397-4CD18535-D047AB94-C198A976",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class StaticMeshComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent BP_ST_Shack01_C:SM_PanelMetalCorrugate05_GEN_VARIABLE",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Environment/00-Common/Structures/BP_ST_Shack01.20"
+      },
+      "VariableGuid": "4FD0336A-40D1DA84-68B980B8-9E5A2F66",
+      "InternalVariableName": "SM_PanelMetalCorrugate05"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_13",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class InstancedStaticMeshComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "InstancedStaticMeshComponent BP_ST_Shack01_C:ISM_SM_ST_Shack01_Wall01_GEN_VARIABLE",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Environment/00-Common/Structures/BP_ST_Shack01.4"
+      },
+      "VariableGuid": "B1BCABEE-4C0BBC26-44B8CBA5-2EE5F2F7",
+      "InternalVariableName": "ISM_SM_ST_Shack01_Wall01"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_14",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class InstancedStaticMeshComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "InstancedStaticMeshComponent BP_ST_Shack01_C:ISM_SM_ST_Shack01_Wall02_GEN_VARIABLE",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Environment/00-Common/Structures/BP_ST_Shack01.5"
+      },
+      "VariableGuid": "C81DAE3B-4D872EAF-A8E622A1-A9FF84B9",
+      "InternalVariableName": "ISM_SM_ST_Shack01_Wall02"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class StaticMeshComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent BP_ST_Shack01_C:SM_BoardedWindow04_GEN_VARIABLE",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Environment/00-Common/Structures/BP_ST_Shack01.19"
+      },
+      "VariableGuid": "3D80D003-461BEA3A-5D5E05B3-AC1F0489",
+      "InternalVariableName": "SM_BoardedWindow04"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class InstancedStaticMeshComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "InstancedStaticMeshComponent BP_ST_Shack01_C:ISM_SM_WallPipeMetal04_GEN_VARIABLE",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Environment/00-Common/Structures/BP_ST_Shack01.6"
+      },
+      "VariableGuid": "B1AA95E8-4DE6B913-279AFE9D-E5670998",
+      "InternalVariableName": "ISM_SM_WallPipeMetal04"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class BoxComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent BP_ST_Shack01_C:Box_GEN_VARIABLE",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Environment/00-Common/Structures/BP_ST_Shack01.2"
+      },
+      "VariableGuid": "D86758C5-461BB285-1238B1AE-991595C8",
+      "InternalVariableName": "Box"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class DBDSphereReflectionCaptureSpawnerComponent",
+        "ObjectPath": "/Script/GFXUtilities"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DBDSphereReflectionCaptureSpawnerComponent BP_ST_Shack01_C:Mobile_Reflection_GEN_VARIABLE",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Environment/00-Common/Structures/BP_ST_Shack01.3"
+      },
+      "VariableGuid": "76E67720-4AFF247C-A2C517BF-F6114738",
+      "InternalVariableName": "Mobile_Reflection"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_7",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class StaticMeshComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent BP_ST_Shack01_C:SM_ST_Shack01_GEN_VARIABLE",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Environment/00-Common/Structures/BP_ST_Shack01.21"
+      },
+      "VariableGuid": "485B7F17-43DEBC5F-6B36F89C-1EA1B53F",
+      "InternalVariableName": "SM_ST_Shack01"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_8",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class StaticMeshComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent BP_ST_Shack01_C:SM_ST_Shack01_WoodPile01_GEN_VARIABLE",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Environment/00-Common/Structures/BP_ST_Shack01.22"
+      },
+      "VariableGuid": "C90B302B-4BC02BB7-61EDF0BC-189F8C69",
+      "InternalVariableName": "SM_ST_Shack01_WoodPile01"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_ST_Shack01_C",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node BP_ST_Shack01_C:SimpleConstructionScript_0.SCS_Node_0",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Environment/00-Common/Structures/BP_ST_Shack01.8"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node BP_ST_Shack01_C:SimpleConstructionScript_0.SCS_Node_0",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Environment/00-Common/Structures/BP_ST_Shack01.8"
+        },
+        {
+          "ObjectName": "SCS_Node BP_ST_Shack01_C:SimpleConstructionScript_0.SCS_Node_8",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Environment/00-Common/Structures/BP_ST_Shack01.17"
+        },
+        {
+          "ObjectName": "SCS_Node BP_ST_Shack01_C:SimpleConstructionScript_0.SCS_Node_1",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Environment/00-Common/Structures/BP_ST_Shack01.9"
+        },
+        {
+          "ObjectName": "SCS_Node BP_ST_Shack01_C:SimpleConstructionScript_0.SCS_Node_7",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Environment/00-Common/Structures/BP_ST_Shack01.16"
+        },
+        {
+          "ObjectName": "SCS_Node BP_ST_Shack01_C:SimpleConstructionScript_0.SCS_Node_3",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Environment/00-Common/Structures/BP_ST_Shack01.13"
+        },
+        {
+          "ObjectName": "SCS_Node BP_ST_Shack01_C:SimpleConstructionScript_0.SCS_Node_13",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Environment/00-Common/Structures/BP_ST_Shack01.10"
+        },
+        {
+          "ObjectName": "SCS_Node BP_ST_Shack01_C:SimpleConstructionScript_0.SCS_Node_14",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Environment/00-Common/Structures/BP_ST_Shack01.11"
+        },
+        {
+          "ObjectName": "SCS_Node BP_ST_Shack01_C:SimpleConstructionScript_0.SCS_Node_2",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Environment/00-Common/Structures/BP_ST_Shack01.12"
+        },
+        {
+          "ObjectName": "SCS_Node BP_ST_Shack01_C:SimpleConstructionScript_0.SCS_Node_5",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Environment/00-Common/Structures/BP_ST_Shack01.15"
+        },
+        {
+          "ObjectName": "SCS_Node BP_ST_Shack01_C:SimpleConstructionScript_0.SCS_Node_4",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Environment/00-Common/Structures/BP_ST_Shack01.14"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node BP_ST_Shack01_C:SimpleConstructionScript_0.SCS_Node_0",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Environment/00-Common/Structures/BP_ST_Shack01.8"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_BoardedWindow04_GEN_VARIABLE",
+    "Outer": "BP_ST_Shack01_C",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh SM_BoardedWindow04",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Structures/Blockers/SM_BoardedWindow04.2"
+      },
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "RelativeLocation": {
+        "X": 482.96228,
+        "Y": -35.162865,
+        "Z": 216.78348
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 3.8521433,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.999982,
+        "Y": 0.999982,
+        "Z": 1.0
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_PanelMetalCorrugate05_GEN_VARIABLE",
+    "Outer": "BP_ST_Shack01_C",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh SM_PanelMetalCorrugate05",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Props/SetDressing/01-Industrial/SM_PanelMetalCorrugate05.2"
+      },
+      "bUseDefaultCollision": false,
+      "LDMaxDrawDistance": 4800.0,
+      "CachedMaxDrawDistance": 4800.0,
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll"
+      },
+      "RelativeLocation": {
+        "X": -500.99533,
+        "Y": -81.54364,
+        "Z": 301.11746
+      },
+      "RelativeRotation": {
+        "Pitch": -26.902983,
+        "Yaw": -89.999504,
+        "Roll": 4.442131
+      },
+      "RelativeScale3D": {
+        "X": 1.6263865,
+        "Y": 1.6263865,
+        "Z": 1.6263865
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_ST_Shack01_GEN_VARIABLE",
+    "Outer": "BP_ST_Shack01_C",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh SM_ST_Shack01",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Structures/SM_ST_Shack01.2"
+      },
+      "bUseDefaultCollision": false,
+      "LDMaxDrawDistance": 4800.0,
+      "CachedMaxDrawDistance": 4800.0,
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll"
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_ST_Shack01_WoodPile01_GEN_VARIABLE",
+    "Outer": "BP_ST_Shack01_C",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh SM_ST_Shack01_WoodPile01",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Structures/SM_ST_Shack01_WoodPile01.2"
+      },
+      "bUseDefaultCollision": false,
+      "LDMaxDrawDistance": 6400.0,
+      "CachedMaxDrawDistance": 6400.0,
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll"
+      },
+      "RelativeLocation": {
+        "X": 224.205,
+        "Y": -342.1224,
+        "Z": 525.132
+      },
+      "Mobility": "EComponentMobility::Static",
+      "DetailModeBitMask": -13
+    }
+  }
+]

@@ -1,0 +1,426 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Ind_WL_Br_1mCap01_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript BP_Ind_WL_Br_1mCap01_C:SimpleConstructionScript_2",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/Walls/BP_Ind_WL_Br_1mCap01.12"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Box",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class BoxComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ISM_SM_WoodPlank03",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class InstancedStaticMeshComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "HISM_SM_WL_Br_1mCap01",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class HierarchicalInstancedStaticMeshComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Scene",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class SceneComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Ind_WL_Br_1mCap01_C Default__BP_Ind_WL_Br_1mCap01_C",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/Walls/BP_Ind_WL_Br_1mCap01.1"
+    }
+  },
+  {
+    "Type": "BP_Ind_WL_Br_1mCap01_C",
+    "Name": "Default__BP_Ind_WL_Br_1mCap01_C",
+    "Properties": {
+      "NetUpdateFrequency": 0.1,
+      "NetPriority": 0.01
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Box_GEN_VARIABLE",
+    "Outer": "BP_Ind_WL_Br_1mCap01_C",
+    "Properties": {
+      "AreaClass": {
+        "ObjectName": "Class NavArea_Obstacle",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAll",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Interactable",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Slasher",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Blood",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "InteractionDetector",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BlinkBlocker",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Ground",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Walkable",
+              "Response": "ECR_Block"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -70.0,
+        "Z": 200.0
+      },
+      "RelativeScale3D": {
+        "X": 0.8,
+        "Y": 2.4,
+        "Z": 6.2
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "HierarchicalInstancedStaticMeshComponent",
+    "Name": "HISM_SM_WL_Br_1mCap01_GEN_VARIABLE",
+    "Outer": "BP_Ind_WL_Br_1mCap01_C",
+    "Properties": {
+      "SortedInstances": [
+        0
+      ],
+      "NumBuiltInstances": 1,
+      "BuiltInstanceBounds": {
+        "Min": {
+          "X": -34.705727,
+          "Y": -117.651245,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 34.456818,
+          "Y": 27.16748,
+          "Z": 413.93713
+        },
+        "IsValid": 1
+      },
+      "CacheMeshExtendedBounds": {
+        "Origin": {
+          "X": -0.1244545,
+          "Y": -45.241882,
+          "Z": 206.96857
+        },
+        "BoxExtent": {
+          "X": 34.581272,
+          "Y": 72.40936,
+          "Z": 206.96857
+        },
+        "SphereRadius": 215.06935
+      },
+      "InstanceCountToRender": 1,
+      "InstancingRandomSeed": 30987,
+      "StaticMesh": {
+        "ObjectName": "StaticMesh SM_Ind_WL_Br_1mCap01",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Structures/SM_Ind_WL_Br_1mCap01.2"
+      },
+      "bUseDefaultCollision": false,
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll"
+      },
+      "Mobility": "EComponentMobility::Static"
+    },
+    "PerInstanceSMData": [
+      {
+        "OffsetLocation": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "RelativeRotation": {
+          "Pitch": 0.0,
+          "Yaw": 0.0,
+          "Roll": 0.0
+        },
+        "RelativeScale3D": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      }
+    ],
+    "ClusterTree": [
+      {
+        "MinInstanceScale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxInstanceScale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "BoundMin": {
+          "X": -34.705727,
+          "Y": -117.651245,
+          "Z": 0.0
+        },
+        "FirstChild": -1,
+        "BoundMax": {
+          "X": 34.456818,
+          "Y": 27.16748,
+          "Z": 413.93713
+        },
+        "LastChild": -1,
+        "FirstInstance": 0,
+        "LastInstance": 0
+      }
+    ]
+  },
+  {
+    "Type": "InstancedStaticMeshComponent",
+    "Name": "ISM_SM_WoodPlank03_GEN_VARIABLE",
+    "Outer": "BP_Ind_WL_Br_1mCap01_C",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh SM_WoodPlank03",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Props/SetDressing/01-Industrial/SM_WoodPlank03.2"
+      },
+      "bUseDefaultCollision": false,
+      "LDMaxDrawDistance": 3200.0,
+      "CachedMaxDrawDistance": 3200.0,
+      "bHasPerInstanceHitProxies": true,
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll"
+      },
+      "Mobility": "EComponentMobility::Static",
+      "DetailModeBitMask": -13
+    },
+    "PerInstanceSMData": [
+      {
+        "OffsetLocation": {
+          "X": 0.36654916,
+          "Y": -60.202473,
+          "Z": 370.032
+        },
+        "RelativeRotation": {
+          "Pitch": 5.55605,
+          "Yaw": -87.75639,
+          "Roll": 0.22366224
+        },
+        "RelativeScale3D": {
+          "X": 0.99998367,
+          "Y": 0.9999864,
+          "Z": 0.9999936
+        }
+      }
+    ]
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Scene_GEN_VARIABLE",
+    "Outer": "BP_Ind_WL_Br_1mCap01_C",
+    "Properties": {
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneComponent_290",
+    "Outer": "BP_Ind_WL_Br_1mCap01_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_2",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent BP_Ind_WL_Br_1mCap01_C:Scene_GEN_VARIABLE",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/Walls/BP_Ind_WL_Br_1mCap01.5"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node BP_Ind_WL_Br_1mCap01_C:SimpleConstructionScript_2.SCS_Node_1",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/Walls/BP_Ind_WL_Br_1mCap01.8"
+        },
+        {
+          "ObjectName": "SCS_Node BP_Ind_WL_Br_1mCap01_C:SimpleConstructionScript_2.SCS_Node_4",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/Walls/BP_Ind_WL_Br_1mCap01.11"
+        },
+        {
+          "ObjectName": "SCS_Node BP_Ind_WL_Br_1mCap01_C:SimpleConstructionScript_2.SCS_Node_2",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/Walls/BP_Ind_WL_Br_1mCap01.9"
+        }
+      ],
+      "VariableGuid": "89E86F5D-4646AC05-5F6CF8BF-169057AD",
+      "InternalVariableName": "Scene"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_2",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class HierarchicalInstancedStaticMeshComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "HierarchicalInstancedStaticMeshComponent BP_Ind_WL_Br_1mCap01_C:HISM_SM_WL_Br_1mCap01_GEN_VARIABLE",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/Walls/BP_Ind_WL_Br_1mCap01.3"
+      },
+      "VariableGuid": "C4426138-418B8A5F-09BB6ABD-ACAFFFCC",
+      "InternalVariableName": "HISM_SM_WL_Br_1mCap01"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_2",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class BoxComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent BP_Ind_WL_Br_1mCap01_C:Box_GEN_VARIABLE",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/Walls/BP_Ind_WL_Br_1mCap01.2"
+      },
+      "VariableGuid": "CD910637-46AEA6B1-D31539AA-4AA2329B",
+      "InternalVariableName": "Box"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_23",
+    "Outer": "SimpleConstructionScript_2",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent BP_Ind_WL_Br_1mCap01_C:SceneComponent_290",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/Walls/BP_Ind_WL_Br_1mCap01.6"
+      },
+      "VariableGuid": "5323B8CD-4E37D943-7C9876AF-D0E489B4",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_2",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class InstancedStaticMeshComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "InstancedStaticMeshComponent BP_Ind_WL_Br_1mCap01_C:ISM_SM_WoodPlank03_GEN_VARIABLE",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/Walls/BP_Ind_WL_Br_1mCap01.4"
+      },
+      "VariableGuid": "CDC3EB70-4EB62B61-EF0EA78D-5FC1291C",
+      "InternalVariableName": "ISM_SM_WoodPlank03"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_2",
+    "Outer": "BP_Ind_WL_Br_1mCap01_C",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node BP_Ind_WL_Br_1mCap01_C:SimpleConstructionScript_2.SCS_Node_0",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/Walls/BP_Ind_WL_Br_1mCap01.7"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node BP_Ind_WL_Br_1mCap01_C:SimpleConstructionScript_2.SCS_Node_0",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/Walls/BP_Ind_WL_Br_1mCap01.7"
+        },
+        {
+          "ObjectName": "SCS_Node BP_Ind_WL_Br_1mCap01_C:SimpleConstructionScript_2.SCS_Node_1",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/Walls/BP_Ind_WL_Br_1mCap01.8"
+        },
+        {
+          "ObjectName": "SCS_Node BP_Ind_WL_Br_1mCap01_C:SimpleConstructionScript_2.SCS_Node_4",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/Walls/BP_Ind_WL_Br_1mCap01.11"
+        },
+        {
+          "ObjectName": "SCS_Node BP_Ind_WL_Br_1mCap01_C:SimpleConstructionScript_2.SCS_Node_2",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/Walls/BP_Ind_WL_Br_1mCap01.9"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node BP_Ind_WL_Br_1mCap01_C:SimpleConstructionScript_2.SCS_Node_23",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/Walls/BP_Ind_WL_Br_1mCap01.10"
+      }
+    }
+  }
+]

@@ -1,0 +1,518 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Foundry_CommandRoom_Vault_B_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript BP_Foundry_CommandRoom_Vault_B_C:SimpleConstructionScript_0",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/BP_Foundry_CommandRoom_Vault_B.14"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Box",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class BoxComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_BoardedWindow02",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class StaticMeshComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_BoardedWindow01",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class StaticMeshComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BreakableWall012",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class ActorSpawner",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ActorSpawner",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class ActorSpawner",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Root",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class SceneComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Foundry_CommandRoom_Vault_B_C Default__BP_Foundry_CommandRoom_Vault_B_C",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/BP_Foundry_CommandRoom_Vault_B.1"
+    }
+  },
+  {
+    "Type": "BP_Foundry_CommandRoom_Vault_B_C",
+    "Name": "Default__BP_Foundry_CommandRoom_Vault_B_C",
+    "Properties": {
+      "PrimaryActorTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "ActorSpawner",
+    "Name": "ActorSpawner_GEN_VARIABLE",
+    "Outer": "BP_Foundry_CommandRoom_Vault_B_C",
+    "Properties": {
+      "Visualization": {
+        "AssetPathName": "/Game/Blueprints/GameplayElements/Interactable/Window/WindowStandard.WindowStandard_C",
+        "SubPathString": ""
+      },
+      "ActivatedSceneElement": [
+        {
+          "SceneElement": {
+            "AssetPathName": "/Game/Blueprints/GameplayElements/Interactable/Window/WindowStandard.WindowStandard_C",
+            "SubPathString": ""
+          },
+          "Weight": 1.0
+        }
+      ],
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "ActorSpawner",
+    "Name": "BreakableWall012_GEN_VARIABLE",
+    "Outer": "BP_Foundry_CommandRoom_Vault_B_C",
+    "Properties": {
+      "Type": "EGameplayElementType::BreakableWalls",
+      "Visualization": {
+        "AssetPathName": "/Game/Blueprints/GameplayElements/Interactable/Breakable/BP_Breakable_01.BP_Breakable_01_C",
+        "SubPathString": ""
+      },
+      "ActivatedSceneElement": [
+        {
+          "SceneElement": {
+            "AssetPathName": "/Game/Blueprints/GameplayElements/Interactable/Breakable/BP_Breakable_01.BP_Breakable_01_C",
+            "SubPathString": ""
+          },
+          "Weight": 1.0
+        }
+      ],
+      "SpawnPriorityTier": 2,
+      "RelativeLocation": {
+        "X": -1.7558365,
+        "Y": 502.49268,
+        "Z": 2.3189468
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Box_GEN_VARIABLE",
+    "Outer": "BP_Foundry_CommandRoom_Vault_B_C",
+    "Properties": {
+      "BoxExtent": {
+        "X": 50.0,
+        "Y": 50.0,
+        "Z": 50.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class NavArea_Obstacle",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "CharacterBlocker",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel2",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel3",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel4",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel5",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel6",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Interactable",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Audio",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Slasher",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Spider",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Traps",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "InteractionDetector",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BlinkBlocker",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Ground",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 446.353,
+        "Y": -11.233604,
+        "Z": 156.5514
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 89.99899,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 1.25,
+        "Y": 0.5,
+        "Z": 3.0
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_REMOVED_A9EB5CEC44CB2E008CEDA2B2DDF8BD3C",
+    "Outer": "BP_Foundry_CommandRoom_Vault_B_C"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Root_GEN_VARIABLE",
+    "Outer": "BP_Foundry_CommandRoom_Vault_B_C",
+    "Properties": {
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent BP_Foundry_CommandRoom_Vault_B_C:DefaultSceneRoot_REMOVED_A9EB5CEC44CB2E008CEDA2B2DDF8BD3C",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/BP_Foundry_CommandRoom_Vault_B.5"
+      },
+      "VariableGuid": "A002E247-4617A384-E34AA7A6-519B603C",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class StaticMeshComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent BP_Foundry_CommandRoom_Vault_B_C:SM_BoardedWindow02_GEN_VARIABLE",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/BP_Foundry_CommandRoom_Vault_B.16"
+      },
+      "VariableGuid": "7E8EDD76-4307BCBC-5723F8A1-1D9D312C",
+      "InternalVariableName": "SM_BoardedWindow02"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class ActorSpawner",
+        "ObjectPath": "/Script/DeadByDaylight"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ActorSpawner BP_Foundry_CommandRoom_Vault_B_C:ActorSpawner_GEN_VARIABLE",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/BP_Foundry_CommandRoom_Vault_B.2"
+      },
+      "VariableGuid": "82A4F64F-44B96003-ACC1A89D-07356D87",
+      "InternalVariableName": "ActorSpawner"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class ActorSpawner",
+        "ObjectPath": "/Script/DeadByDaylight"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ActorSpawner BP_Foundry_CommandRoom_Vault_B_C:BreakableWall012_GEN_VARIABLE",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/BP_Foundry_CommandRoom_Vault_B.3"
+      },
+      "VariableGuid": "2EC81A16-49C08B0F-A6C1B3A8-279389A5",
+      "InternalVariableName": "BreakableWall012"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent BP_Foundry_CommandRoom_Vault_B_C:Root_GEN_VARIABLE",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/BP_Foundry_CommandRoom_Vault_B.6"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node BP_Foundry_CommandRoom_Vault_B_C:SimpleConstructionScript_0.SCS_Node_2",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/BP_Foundry_CommandRoom_Vault_B.9"
+        },
+        {
+          "ObjectName": "SCS_Node BP_Foundry_CommandRoom_Vault_B_C:SimpleConstructionScript_0.SCS_Node_3",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/BP_Foundry_CommandRoom_Vault_B.10"
+        },
+        {
+          "ObjectName": "SCS_Node BP_Foundry_CommandRoom_Vault_B_C:SimpleConstructionScript_0.SCS_Node_6",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/BP_Foundry_CommandRoom_Vault_B.12"
+        },
+        {
+          "ObjectName": "SCS_Node BP_Foundry_CommandRoom_Vault_B_C:SimpleConstructionScript_0.SCS_Node_1",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/BP_Foundry_CommandRoom_Vault_B.8"
+        },
+        {
+          "ObjectName": "SCS_Node BP_Foundry_CommandRoom_Vault_B_C:SimpleConstructionScript_0.SCS_Node_7",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/BP_Foundry_CommandRoom_Vault_B.13"
+        }
+      ],
+      "VariableGuid": "8E7D82DC-495CF58D-A911C8B1-850F83DE",
+      "InternalVariableName": "Root"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class StaticMeshComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent BP_Foundry_CommandRoom_Vault_B_C:SM_BoardedWindow01_GEN_VARIABLE",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/BP_Foundry_CommandRoom_Vault_B.15"
+      },
+      "VariableGuid": "82FF65CF-4FD157A1-A7B0E1B0-E860A85E",
+      "InternalVariableName": "SM_BoardedWindow01"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_7",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class BoxComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent BP_Foundry_CommandRoom_Vault_B_C:Box_GEN_VARIABLE",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/BP_Foundry_CommandRoom_Vault_B.4"
+      },
+      "VariableGuid": "4E14266C-48310DAC-C1A31CAC-7BDF4948",
+      "InternalVariableName": "Box"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_Foundry_CommandRoom_Vault_B_C",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node BP_Foundry_CommandRoom_Vault_B_C:SimpleConstructionScript_0.SCS_Node_4",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/BP_Foundry_CommandRoom_Vault_B.11"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node BP_Foundry_CommandRoom_Vault_B_C:SimpleConstructionScript_0.SCS_Node_4",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/BP_Foundry_CommandRoom_Vault_B.11"
+        },
+        {
+          "ObjectName": "SCS_Node BP_Foundry_CommandRoom_Vault_B_C:SimpleConstructionScript_0.SCS_Node_2",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/BP_Foundry_CommandRoom_Vault_B.9"
+        },
+        {
+          "ObjectName": "SCS_Node BP_Foundry_CommandRoom_Vault_B_C:SimpleConstructionScript_0.SCS_Node_3",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/BP_Foundry_CommandRoom_Vault_B.10"
+        },
+        {
+          "ObjectName": "SCS_Node BP_Foundry_CommandRoom_Vault_B_C:SimpleConstructionScript_0.SCS_Node_6",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/BP_Foundry_CommandRoom_Vault_B.12"
+        },
+        {
+          "ObjectName": "SCS_Node BP_Foundry_CommandRoom_Vault_B_C:SimpleConstructionScript_0.SCS_Node_1",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/BP_Foundry_CommandRoom_Vault_B.8"
+        },
+        {
+          "ObjectName": "SCS_Node BP_Foundry_CommandRoom_Vault_B_C:SimpleConstructionScript_0.SCS_Node_7",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/BP_Foundry_CommandRoom_Vault_B.13"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node BP_Foundry_CommandRoom_Vault_B_C:SimpleConstructionScript_0.SCS_Node_0",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/01-Industrial/BP_Foundry_CommandRoom_Vault_B.7"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_BoardedWindow01_GEN_VARIABLE",
+    "Outer": "BP_Foundry_CommandRoom_Vault_B_C",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh SM_BoardedWindow04",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Structures/Blockers/SM_BoardedWindow04.2"
+      },
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "RelativeLocation": {
+        "X": 466.5131,
+        "Y": -11.820721,
+        "Z": 128.00307
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 180.0
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_BoardedWindow02_GEN_VARIABLE",
+    "Outer": "BP_Foundry_CommandRoom_Vault_B_C",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh SM_BoardedWindow04",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Structures/Blockers/SM_BoardedWindow04.2"
+      },
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "RelativeLocation": {
+        "X": 446.24872,
+        "Y": -14.513443,
+        "Z": 156.5514
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 180.0,
+        "Roll": 0.0
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  }
+]

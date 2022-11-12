@@ -1,0 +1,67 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "SearchOpenedChest_BP_C",
+    "SuperStruct": {
+      "ObjectName": "Class SearchOpenedChestInteraction",
+      "ObjectPath": "/Script/DBDInteraction"
+    },
+    "ClassFlags": 10754068,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "SearchOpenedChest_BP_C Default__SearchOpenedChest_BP_C",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Searchable/SearchOpenedChest_BP.1"
+    }
+  },
+  {
+    "Type": "SearchOpenedChest_BP_C",
+    "Name": "Default__SearchOpenedChest_BP_C",
+    "Properties": {
+      "_rummagePrioritySources": [
+        "S31P02",
+        "S24P01"
+      ],
+      "_searchableCompleteContributionPercentTag": {
+        "TagName": "GameEvent.ScoreEvent.Camper.Chest.Search.Complete.WhileOpen"
+      },
+      "StopInteractionOnChargeComplete": true,
+      "InteractionID": "SearchOpenedChest",
+      "InteractionAnimation": "EInteractionAnimation::VE_OpenChest",
+      "CamperCanInteract": true,
+      "SnapPosition": true,
+      "SnapRotation": true,
+      "UseAuthoritativeMovement": false,
+      "CancelOnHit": true,
+      "CancelOnMoveInitialDelay": 1.0,
+      "CancelOnMoveInput": 0.1,
+      "StopInteractionOnInputRelease": true,
+      "InteractionDescriptionText": {
+        "Namespace": "",
+        "Key": "5CA3F0B94FF325C856EEB8B728439574",
+        "SourceString": "Rummage"
+      },
+      "InteractionCanBeToggled": true,
+      "SnapSocketName": "joint_AttachCamper",
+      "_tags": [
+        "Semantics.Interaction.Id.SearchAlreadyOpenChest"
+      ],
+      "_objectStateTag": {
+        "TagName": "State.Interaction.SearchAlreadyOpenedChest"
+      },
+      "_activationDefinition": {
+        "_activationStrategy": "EActivationStrategy::ActivateIfAnyTagMatches",
+        "_activationTags": [
+          "GameplayModifierFlag.CanSearchOpenedChests"
+        ]
+      },
+      "_preventingTags": [
+        "GameplayModifierFlag.IsIncapacitated"
+      ]
+    }
+  }
+]

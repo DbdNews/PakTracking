@@ -1,0 +1,71 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "TormentModeDischargeBaseAddon_C",
+    "SuperStruct": {
+      "ObjectName": "Class SecondsToRateModifierBaseAddon",
+      "ObjectPath": "/Script/DBDCompetence"
+    },
+    "ClassFlags": 10749972,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "TormentModeDischargeBaseAddon_C Default__TormentModeDischargeBaseAddon_C",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/ItemAddons/TormentModeAddons/TormentModeDischargeBaseAddon.1"
+    }
+  },
+  {
+    "Type": "TormentModeDischargeBaseAddon_C",
+    "Name": "Default__TormentModeDischargeBaseAddon_C",
+    "Properties": {
+      "_chargeRate": {
+        "_baseValue": {
+          "_dataTableRowHandle": {
+            "DataTable": {
+              "ObjectName": "DataTable K20_TunableDB",
+              "ObjectPath": "DeadByDaylight/Content/Data/Dlc/Wales/K20_TunableDB.0"
+            },
+            "RowName": "TormentMode_DischargeRate"
+          }
+        },
+        "_statModifiers": [
+          {
+            "OperationStrategy": "EModifierOperationStrategy::Mult",
+            "ModifierTag": {
+              "TagName": "GameplayModifierType.ModifyTormentModeDischargeRate"
+            },
+            "CompoundStrategy": "EModifierCompoundStrategy::Mult"
+          }
+        ]
+      },
+      "_maxCharge": {
+        "_baseValue": {
+          "_dataTableRowHandle": {
+            "DataTable": {
+              "ObjectName": "DataTable K20_TunableDB",
+              "ObjectPath": "DeadByDaylight/Content/Data/Dlc/Wales/K20_TunableDB.0"
+            },
+            "RowName": "TormentMode_MaxCharge"
+          }
+        }
+      },
+      "_rateModifierTagToCompute": {
+        "TagName": "GameplayModifierType.ModifyTormentModeDischargeRate"
+      },
+      "ModifierData": {
+        "Modifiers": [
+          {
+            "Type": {
+              "TagName": "GameplayModifierType.ModifyTormentModeDischargeRate"
+            },
+            "ModifierValue": 1.0
+          }
+        ]
+      }
+    }
+  }
+]

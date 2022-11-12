@@ -1,0 +1,59 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "ModifyFrenzyFOVEffect_C",
+    "SuperStruct": {
+      "ObjectName": "Class ModifyFrenzyFOVEffect",
+      "ObjectPath": "/Script/TheLegion"
+    },
+    "ClassFlags": 10749972,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ModifyFrenzyFOVEffect_C Default__ModifyFrenzyFOVEffect_C",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/Perks/StatusEffects/ModifyFrenzyFOVEffect.1"
+    }
+  },
+  {
+    "Type": "ModifyFrenzyFOVEffect_C",
+    "Name": "Default__ModifyFrenzyFOVEffect_C",
+    "Properties": {
+      "_increaseFOVPerHit": 1.5,
+      "_frenzyBaseFOV": {
+        "_dataTableRowHandle": {
+          "DataTable": {
+            "ObjectName": "DataTable LegionTunableDB",
+            "ObjectPath": "DeadByDaylight/Content/Data/Dlc/Kenya/LegionTunableDB.0"
+          },
+          "RowName": "Bolt_FOVModifier"
+        }
+      },
+      "ModifierData": {
+        "Conditions": [
+          {
+            "ObjectName": "BlueprintGeneratedClass KillerIsInFrenzy_C",
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/Frenzy/KillerIsInFrenzy.2"
+          },
+          {
+            "ObjectName": "BlueprintGeneratedClass IsMovingFast_C",
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/Frenzy/IsMovingFast.1"
+          }
+        ],
+        "Modifiers": [
+          {
+            "Type": {
+              "TagName": "GameplayModifierType.ModifyFOV"
+            },
+            "ModifierValue": 0.0
+          }
+        ]
+      },
+      "_canOptimizeTickActivation": true,
+      "_id": "ModifyFrenzyFOVEffect"
+    }
+  }
+]

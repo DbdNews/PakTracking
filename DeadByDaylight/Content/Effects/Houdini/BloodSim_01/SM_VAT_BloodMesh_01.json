@@ -1,0 +1,112 @@
+[
+  {
+    "Type": "BodySetup",
+    "Name": "BodySetup_0",
+    "Outer": "SM_VAT_BloodMesh_01",
+    "Properties": {
+      "DefaultInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Interactable",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Slasher",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Blood",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "InteractionDetector",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BlinkBlocker",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Ground",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Walkable",
+              "Response": "ECR_Block"
+            }
+          ]
+        }
+      }
+    },
+    "BodySetupGuid": "22BF6F9B48915FEE6D1CD792DF666FAC"
+  },
+  {
+    "Type": "NavCollision",
+    "Name": "NavCollision_4",
+    "Outer": "SM_VAT_BloodMesh_01",
+    "CookedFormatData": {
+      "NavCollision_X": {
+        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "ElementCount": 21,
+        "SizeOnDisk": 21,
+        "OffsetInFile": "0x2867D0"
+      }
+    }
+  },
+  {
+    "Type": "StaticMesh",
+    "Name": "SM_VAT_BloodMesh_01",
+    "Properties": {
+      "MinLOD": {
+        "bCooked": true,
+        "Default": 0,
+        "Value": 0
+      },
+      "StaticMaterials": [
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant MI_BloodMesh_VAT",
+            "ObjectPath": "DeadByDaylight/Content/Effects/Houdini/BloodSim_01/MI_BloodMesh_VAT.0"
+          },
+          "MaterialSlotName": "WorldGridMaterial",
+          "ImportedMaterialSlotName": "WorldGridMaterial",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 0.0
+          }
+        }
+      ],
+      "LightMapResolution": 64,
+      "ExtendedBounds": {
+        "Origin": {
+          "X": 0.25844383,
+          "Y": -0.04112339,
+          "Z": 5.5790806
+        },
+        "BoxExtent": {
+          "X": 4.7486377,
+          "Y": 4.8273497,
+          "Z": 5.52559
+        },
+        "SphereRadius": 8.373992
+      }
+    },
+    "BodySetup": {
+      "ObjectName": "BodySetup SM_VAT_BloodMesh_01:BodySetup_0",
+      "ObjectPath": "DeadByDaylight/Content/Effects/Houdini/BloodSim_01/SM_VAT_BloodMesh_01.0"
+    },
+    "NavCollision": {
+      "ObjectName": "NavCollision SM_VAT_BloodMesh_01:NavCollision_4",
+      "ObjectPath": "DeadByDaylight/Content/Effects/Houdini/BloodSim_01/SM_VAT_BloodMesh_01.1"
+    },
+    "LightingGuid": "1CE46FA0-48EF7B91-39A3668E-88EAA897",
+    "RenderData": null
+  }
+]

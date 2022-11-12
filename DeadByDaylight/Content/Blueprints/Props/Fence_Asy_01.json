@@ -1,0 +1,709 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Fence_Asy_01_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript Fence_Asy_01_C:SimpleConstructionScript_1",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/Fence_Asy_01.14"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class Actor",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "BlinkBlocker",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class BoxComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ISM_SM_Bd_Fence01_TopBricks",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class InstancedStaticMeshComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ISM_SM_WallBricks01",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class InstancedStaticMeshComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "HISM_SM_Bd_Fence01",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class HierarchicalInstancedStaticMeshComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Scene",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class SceneComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Fence_Asy_01_C Default__Fence_Asy_01_C",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/Fence_Asy_01.1"
+    }
+  },
+  {
+    "Type": "Fence_Asy_01_C",
+    "Name": "Default__Fence_Asy_01_C",
+    "Properties": {
+      "PrimaryActorTick": {
+        "bStartWithTickEnabled": false
+      },
+      "NetUpdateFrequency": 0.1,
+      "NetPriority": 0.01
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Box968E2E014E3F0465A00B5CAF477EF05C",
+    "Outer": "Fence_Asy_01_C",
+    "Properties": {
+      "BoxExtent": {
+        "X": 420.0,
+        "Y": 32.0,
+        "Z": 400.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class NavArea_Obstacle",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel14",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlinkBlocker",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Interactable",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Audio",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Slasher",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Spider",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Traps",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "InteractionDetector",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Blink",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Unused",
+              "Response": "ECR_Block"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": -370.0,
+        "Y": 0.0,
+        "Z": 231.9054
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.5625
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "HierarchicalInstancedStaticMeshComponent",
+    "Name": "HISM_SM_Bd_Fence01_GEN_VARIABLE",
+    "Outer": "Fence_Asy_01_C",
+    "Properties": {
+      "SortedInstances": [
+        0
+      ],
+      "NumBuiltInstances": 1,
+      "BuiltInstanceBounds": {
+        "Min": {
+          "X": -797.17615,
+          "Y": -85.1546,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 41.99939,
+          "Y": 37.250305,
+          "Z": 472.3338
+        },
+        "IsValid": 1
+      },
+      "CacheMeshExtendedBounds": {
+        "Origin": {
+          "X": -377.58838,
+          "Y": -23.952148,
+          "Z": 236.1669
+        },
+        "BoxExtent": {
+          "X": 419.58777,
+          "Y": 61.202454,
+          "Z": 236.1669
+        },
+        "SphereRadius": 478.3731
+      },
+      "InstanceCountToRender": 1,
+      "InstancingRandomSeed": 15139,
+      "StaticMesh": {
+        "ObjectName": "StaticMesh SM_Bd_Fence01",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Props/Fences/Models/SM_Bd_Fence01.2"
+      },
+      "bUseDefaultCollision": false,
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant MI_Brick_01_Wall_Asy",
+          "ObjectPath": "DeadByDaylight/Content/Materials/Instances/MI_Brick_01_Wall_Asy.0"
+        }
+      ],
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "CanCharacterStepUpOn": "ECB_No",
+      "Mobility": "EComponentMobility::Static"
+    },
+    "PerInstanceSMData": [
+      {
+        "OffsetLocation": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "RelativeRotation": {
+          "Pitch": 0.0,
+          "Yaw": 0.0,
+          "Roll": 0.0
+        },
+        "RelativeScale3D": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      }
+    ],
+    "ClusterTree": [
+      {
+        "MinInstanceScale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxInstanceScale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "BoundMin": {
+          "X": -797.17615,
+          "Y": -85.1546,
+          "Z": 0.0
+        },
+        "FirstChild": -1,
+        "BoundMax": {
+          "X": 41.99939,
+          "Y": 37.250305,
+          "Z": 472.3338
+        },
+        "LastChild": -1,
+        "FirstInstance": 0,
+        "LastInstance": 0
+      }
+    ]
+  },
+  {
+    "Type": "InstancedStaticMeshComponent",
+    "Name": "ISM_SM_Bd_Fence01_TopBricks_GEN_VARIABLE",
+    "Outer": "Fence_Asy_01_C",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh SM_Bd_Fence01_TopBricks",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Props/Fences/Models/SM_Bd_Fence01_TopBricks.2"
+      },
+      "bUseDefaultCollision": false,
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant MI_Brick_01_Wall_Asy",
+          "ObjectPath": "DeadByDaylight/Content/Materials/Instances/MI_Brick_01_Wall_Asy.0"
+        }
+      ],
+      "LDMaxDrawDistance": 6400.0,
+      "CachedMaxDrawDistance": 6400.0,
+      "bHasPerInstanceHitProxies": true,
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll"
+      },
+      "Mobility": "EComponentMobility::Static",
+      "DetailModeBitMask": -13
+    },
+    "PerInstanceSMData": [
+      {
+        "OffsetLocation": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "RelativeRotation": {
+          "Pitch": 0.0,
+          "Yaw": 0.0,
+          "Roll": 0.0
+        },
+        "RelativeScale3D": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "Type": "InstancedStaticMeshComponent",
+    "Name": "ISM_SM_WallBricks01_GEN_VARIABLE",
+    "Outer": "Fence_Asy_01_C",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh SM_WallBricks01",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Props/SetDressing/01-Industrial/SM_WallBricks01.2"
+      },
+      "bUseDefaultCollision": false,
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant MI_Brick_01_Wall_Asy",
+          "ObjectPath": "DeadByDaylight/Content/Materials/Instances/MI_Brick_01_Wall_Asy.0"
+        }
+      ],
+      "LDMaxDrawDistance": 2400.0,
+      "CachedMaxDrawDistance": 2400.0,
+      "bHasPerInstanceHitProxies": true,
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll"
+      },
+      "Mobility": "EComponentMobility::Static",
+      "DetailModeBitMask": -13
+    },
+    "PerInstanceSMData": [
+      {
+        "OffsetLocation": {
+          "X": -379.0783,
+          "Y": 35.28657,
+          "Z": -76.702965
+        },
+        "RelativeRotation": {
+          "Pitch": 2.4297972,
+          "Yaw": 89.99949,
+          "Roll": -2.1611684E-05
+        },
+        "RelativeScale3D": {
+          "X": 0.9999941,
+          "Y": 1.000004,
+          "Z": 0.99999714
+        }
+      },
+      {
+        "OffsetLocation": {
+          "X": -236.62436,
+          "Y": 26.722788,
+          "Z": 234.41138
+        },
+        "RelativeRotation": {
+          "Pitch": -1.6912165,
+          "Yaw": -89.999535,
+          "Roll": 179.99992
+        },
+        "RelativeScale3D": {
+          "X": 0.9999996,
+          "Y": 1.000027,
+          "Z": 1.0000316
+        }
+      },
+      {
+        "OffsetLocation": {
+          "X": -94.482895,
+          "Y": 33.508366,
+          "Z": -71.508446
+        },
+        "RelativeRotation": {
+          "Pitch": -1.146448,
+          "Yaw": -89.99937,
+          "Roll": -1.2659693E-05
+        },
+        "RelativeScale3D": {
+          "X": 0.99995214,
+          "Y": 0.999955,
+          "Z": 0.9999871
+        }
+      },
+      {
+        "OffsetLocation": {
+          "X": -700.03564,
+          "Y": 33.524536,
+          "Z": -72.17098
+        },
+        "RelativeRotation": {
+          "Pitch": -1.0312078,
+          "Yaw": -89.99965,
+          "Roll": -6.2236654E-06
+        },
+        "RelativeScale3D": {
+          "X": 0.99999994,
+          "Y": 1.000053,
+          "Z": 0.999998
+        }
+      },
+      {
+        "OffsetLocation": {
+          "X": -537.4282,
+          "Y": 21.240974,
+          "Z": 227.4114
+        },
+        "RelativeRotation": {
+          "Pitch": 3.3165936,
+          "Yaw": 89.99965,
+          "Roll": -179.99995
+        },
+        "RelativeScale3D": {
+          "X": 0.99997985,
+          "Y": 0.999991,
+          "Z": 0.9999248
+        }
+      },
+      {
+        "OffsetLocation": {
+          "X": -245.12045,
+          "Y": -13.645226,
+          "Z": 224.90613
+        },
+        "RelativeRotation": {
+          "Pitch": 2.8082194,
+          "Yaw": -89.999535,
+          "Roll": -179.99992
+        },
+        "RelativeScale3D": {
+          "X": 0.99999887,
+          "Y": 1.000002,
+          "Z": 1.0000759
+        }
+      },
+      {
+        "OffsetLocation": {
+          "X": -393.70306,
+          "Y": -29.612413,
+          "Z": -83.195
+        },
+        "RelativeRotation": {
+          "Pitch": 2.9202967,
+          "Yaw": -89.99937,
+          "Roll": 3.2233787E-05
+        },
+        "RelativeScale3D": {
+          "X": 0.99998564,
+          "Y": 0.999997,
+          "Z": 0.9999955
+        }
+      },
+      {
+        "OffsetLocation": {
+          "X": -80.83501,
+          "Y": -32.263786,
+          "Z": -78.400505
+        },
+        "RelativeRotation": {
+          "Pitch": -3.1970086,
+          "Yaw": 89.99949,
+          "Roll": -2.8868219E-05
+        },
+        "RelativeScale3D": {
+          "X": 0.99997526,
+          "Y": 0.999975,
+          "Z": 0.99998325
+        }
+      },
+      {
+        "OffsetLocation": {
+          "X": -546.7276,
+          "Y": -16.323776,
+          "Z": 234.3826
+        },
+        "RelativeRotation": {
+          "Pitch": -2.1665516,
+          "Yaw": 89.997475,
+          "Roll": -179.99991
+        },
+        "RelativeScale3D": {
+          "X": 0.9999088,
+          "Y": 0.999886,
+          "Z": 0.99980974
+        }
+      },
+      {
+        "OffsetLocation": {
+          "X": -702.9399,
+          "Y": -28.68484,
+          "Z": -84.52953
+        },
+        "RelativeRotation": {
+          "Pitch": -1.8435814,
+          "Yaw": 89.999535,
+          "Roll": 1.4860271E-05
+        },
+        "RelativeScale3D": {
+          "X": 0.9999996,
+          "Y": 1.000041,
+          "Z": 0.9999966
+        }
+      }
+    ]
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Scene_GEN_VARIABLE",
+    "Outer": "Fence_Asy_01_C",
+    "Properties": {
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneComponent_254",
+    "Outer": "Fence_Asy_01_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_1",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class InstancedStaticMeshComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "InstancedStaticMeshComponent Fence_Asy_01_C:ISM_SM_WallBricks01_GEN_VARIABLE",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/Fence_Asy_01.5"
+      },
+      "VariableGuid": "6DC37009-4B084E8E-A965F69F-4E256991",
+      "InternalVariableName": "ISM_SM_WallBricks01"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_1",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent Fence_Asy_01_C:SceneComponent_254",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/Fence_Asy_01.7"
+      },
+      "VariableGuid": "4B447BBD-471F6830-D415DDA6-F2E68132",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_1",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class BoxComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent Fence_Asy_01_C:Box968E2E014E3F0465A00B5CAF477EF05C",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/Fence_Asy_01.2"
+      },
+      "VariableGuid": "E56F7EB2-48987E03-E508A58C-5B504915",
+      "InternalVariableName": "BlinkBlocker"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_1",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class HierarchicalInstancedStaticMeshComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "HierarchicalInstancedStaticMeshComponent Fence_Asy_01_C:HISM_SM_Bd_Fence01_GEN_VARIABLE",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/Fence_Asy_01.3"
+      },
+      "VariableGuid": "861C191F-47D153C9-5CFAABA5-FFF4687E",
+      "InternalVariableName": "HISM_SM_Bd_Fence01"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_1",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class InstancedStaticMeshComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "InstancedStaticMeshComponent Fence_Asy_01_C:ISM_SM_Bd_Fence01_TopBricks_GEN_VARIABLE",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/Fence_Asy_01.4"
+      },
+      "VariableGuid": "5E2E21A9-4E803E1D-8BD26A82-640D243F",
+      "InternalVariableName": "ISM_SM_Bd_Fence01_TopBricks"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_9",
+    "Outer": "SimpleConstructionScript_1",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent Fence_Asy_01_C:Scene_GEN_VARIABLE",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/Fence_Asy_01.6"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node Fence_Asy_01_C:SimpleConstructionScript_1.SCS_Node_3",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/Fence_Asy_01.11"
+        },
+        {
+          "ObjectName": "SCS_Node Fence_Asy_01_C:SimpleConstructionScript_1.SCS_Node_0",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/Fence_Asy_01.8"
+        },
+        {
+          "ObjectName": "SCS_Node Fence_Asy_01_C:SimpleConstructionScript_1.SCS_Node_4",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/Fence_Asy_01.12"
+        },
+        {
+          "ObjectName": "SCS_Node Fence_Asy_01_C:SimpleConstructionScript_1.SCS_Node_2",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/Fence_Asy_01.10"
+        }
+      ],
+      "VariableGuid": "9BF51199-471FEAAC-C71E1CB9-2800F1F6",
+      "InternalVariableName": "Scene"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_1",
+    "Outer": "Fence_Asy_01_C",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node Fence_Asy_01_C:SimpleConstructionScript_1.SCS_Node_9",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/Fence_Asy_01.13"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node Fence_Asy_01_C:SimpleConstructionScript_1.SCS_Node_9",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/Fence_Asy_01.13"
+        },
+        {
+          "ObjectName": "SCS_Node Fence_Asy_01_C:SimpleConstructionScript_1.SCS_Node_3",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/Fence_Asy_01.11"
+        },
+        {
+          "ObjectName": "SCS_Node Fence_Asy_01_C:SimpleConstructionScript_1.SCS_Node_0",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/Fence_Asy_01.8"
+        },
+        {
+          "ObjectName": "SCS_Node Fence_Asy_01_C:SimpleConstructionScript_1.SCS_Node_4",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/Fence_Asy_01.12"
+        },
+        {
+          "ObjectName": "SCS_Node Fence_Asy_01_C:SimpleConstructionScript_1.SCS_Node_2",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/Fence_Asy_01.10"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node Fence_Asy_01_C:SimpleConstructionScript_1.SCS_Node_1",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/Fence_Asy_01.9"
+      }
+    }
+  }
+]

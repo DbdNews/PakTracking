@@ -1,0 +1,581 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_Escape01_Effect",
+    "Outer": "Escape01_Effect_C",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "Escape01_Effect_C",
+    "SuperStruct": {
+      "ObjectName": "Function Actor:ReceiveBeginPlay",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Escape01_Effect_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript Escape01_Effect_C:SimpleConstructionScript_0",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/00-Common/Escape01_Effect.19"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler Escape01_Effect_C:InheritableComponentHandler",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/00-Common/Escape01_Effect.6"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function Escape01_Effect_C:ExecuteUbergraph_Escape01_Effect",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/00-Common/Escape01_Effect.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class EscapeTile",
+      "ObjectPath": "/Script/DeadByDaylight"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function Escape01_Effect_C:ReceiveBeginPlay",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/00-Common/Escape01_Effect.1"
+      },
+      {
+        "ObjectName": "Function Escape01_Effect_C:ExecuteUbergraph_Escape01_Effect",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/00-Common/Escape01_Effect.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "Struct": {
+          "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SlasherBlocker",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class BoxComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "P_GPU_particles_attraction",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class ParticleSystemComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PointLight",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class PointLightComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "P_vectorfield",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class ParticleSystemComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BP_Cylindrical_dissolve_Character",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class ChildActorComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Root_0",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class SceneComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_Escape01_Effect": {
+        "ObjectName": "Function Escape01_Effect_C:ExecuteUbergraph_Escape01_Effect",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/00-Common/Escape01_Effect.0"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function Escape01_Effect_C:ReceiveBeginPlay",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/00-Common/Escape01_Effect.1"
+      }
+    },
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Escape01_Effect_C Default__Escape01_Effect_C",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/00-Common/Escape01_Effect.3"
+    }
+  },
+  {
+    "Type": "Escape01_Effect_C",
+    "Name": "Default__Escape01_Effect_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "MinimumSpacing": 2,
+      "Dimension": {
+        "X": 1.0,
+        "Y": 1.0
+      },
+      "AvailableEscapeTypes": [
+        "EscapeStrategyType::EscapeDoor"
+      ]
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "BoxComponent_0",
+    "Outer": "Escape01_Effect_C",
+    "Properties": {
+      "AreaClass": {
+        "ObjectName": "Class NavArea_Obstacle",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "SlasherBlocker",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel2",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel3",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel4",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel5",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel6",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Interactable",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Slasher",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Spider",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Traps",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "InteractionDetector",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BlinkBlocker",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Ground",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        },
+        "MassInKgOverride": 65.14858
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -590.0,
+        "Z": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 10.0,
+        "Y": 1.0,
+        "Z": 15.0
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "ChildActorComponent_13",
+    "Outer": "Escape01_Effect_C",
+    "Properties": {
+      "ChildActorClass": {
+        "ObjectName": "BlueprintGeneratedClass BP_Cylindrical_dissolve_Character_C",
+        "ObjectPath": "DeadByDaylight/Content/AdvancedDissolveFX/Blueprints/BP_Cylindrical_dissolve_Character.0"
+      },
+      "RelativeLocation": {
+        "X": -10.000034,
+        "Y": -560.0,
+        "Z": 130.0
+      },
+      "RelativeScale3D": {
+        "X": 4.0,
+        "Y": 5.0,
+        "Z": 4.0
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "Escape01_Effect_C"
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleSystemComponent_17",
+    "Outer": "Escape01_Effect_C",
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem P_GPU_particles_attraction",
+        "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_GPU_particles_attraction.32"
+      },
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "RelativeLocation": {
+        "X": 9.999944,
+        "Y": -860.0,
+        "Z": 198.0
+      },
+      "bHiddenInGame": true,
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleSystemComponent_22",
+    "Outer": "Escape01_Effect_C",
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem P_vectorfield",
+        "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_vectorfield.13"
+      },
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "RelativeLocation": {
+        "X": 9.999983,
+        "Y": -620.0,
+        "Z": 178.0
+      },
+      "bHiddenInGame": true,
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "PointLightComponent",
+    "Name": "PointLightComponent_5",
+    "Outer": "Escape01_Effect_C",
+    "Properties": {
+      "SourceRadius": 0.22934,
+      "AttenuationRadius": 478.37567,
+      "MaxDrawDistance": 0.0,
+      "MaxDistanceFadeRange": 0.0,
+      "Intensity": 0.0,
+      "LightColor": {
+        "B": 255,
+        "G": 251,
+        "R": 240,
+        "A": 255,
+        "Hex": "FFF0FBFF"
+      },
+      "CastDynamicShadowsWithNewDefaultValue": true,
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "RelativeLocation": {
+        "X": -32.0,
+        "Y": -540.0,
+        "Z": 210.0
+      },
+      "bHiddenInGame": true,
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneComponent_0",
+    "Outer": "Escape01_Effect_C"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneComponent_5",
+    "Outer": "Escape01_Effect_C",
+    "Properties": {
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent Escape01_Effect_C:SceneComponent_0",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/00-Common/Escape01_Effect.10"
+      },
+      "VariableGuid": "56BC9799-C494E6E6-321D4295-7D5EB316",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_10",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class ChildActorComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ChildActorComponent Escape01_Effect_C:ChildActorComponent_13",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/00-Common/Escape01_Effect.5"
+      },
+      "VariableGuid": "3DF3BDAC-4C54A930-CBB0D9A7-08590863",
+      "InternalVariableName": "BP_Cylindrical_dissolve_Character"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_12",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class ParticleSystemComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent Escape01_Effect_C:ParticleSystemComponent_22",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/00-Common/Escape01_Effect.8"
+      },
+      "VariableGuid": "621198FB-41949ADF-D2CFB18B-8649602F",
+      "InternalVariableName": "P_vectorfield"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_13",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class ParticleSystemComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent Escape01_Effect_C:ParticleSystemComponent_17",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/00-Common/Escape01_Effect.7"
+      },
+      "VariableGuid": "B203547F-4F3D095E-D3DC0AA4-FE76BE5F",
+      "InternalVariableName": "P_GPU_particles_attraction"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_15",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class PointLightComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PointLightComponent Escape01_Effect_C:PointLightComponent_5",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/00-Common/Escape01_Effect.9"
+      },
+      "VariableGuid": "87F20E59-4817D63E-09F97486-A3271E32",
+      "InternalVariableName": "PointLight"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_25",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class BoxComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent Escape01_Effect_C:BoxComponent_0",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/00-Common/Escape01_Effect.4"
+      },
+      "VariableGuid": "1B9BEC47-428EE973-6327C196-31B87F3D",
+      "InternalVariableName": "SlasherBlocker"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent Escape01_Effect_C:SceneComponent_5",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/00-Common/Escape01_Effect.11"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node Escape01_Effect_C:SimpleConstructionScript_0.SCS_Node_10",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/00-Common/Escape01_Effect.13"
+        },
+        {
+          "ObjectName": "SCS_Node Escape01_Effect_C:SimpleConstructionScript_0.SCS_Node_12",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/00-Common/Escape01_Effect.14"
+        },
+        {
+          "ObjectName": "SCS_Node Escape01_Effect_C:SimpleConstructionScript_0.SCS_Node_15",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/00-Common/Escape01_Effect.16"
+        },
+        {
+          "ObjectName": "SCS_Node Escape01_Effect_C:SimpleConstructionScript_0.SCS_Node_13",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/00-Common/Escape01_Effect.15"
+        },
+        {
+          "ObjectName": "SCS_Node Escape01_Effect_C:SimpleConstructionScript_0.SCS_Node_25",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/00-Common/Escape01_Effect.17"
+        }
+      ],
+      "VariableGuid": "D043A935-05A0EDF2-BFB3C70F-D156AFD6",
+      "InternalVariableName": "Root_0"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "Escape01_Effect_C",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node Escape01_Effect_C:SimpleConstructionScript_0.SCS_Node_6",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/00-Common/Escape01_Effect.18"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node Escape01_Effect_C:SimpleConstructionScript_0.SCS_Node_6",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/00-Common/Escape01_Effect.18"
+        },
+        {
+          "ObjectName": "SCS_Node Escape01_Effect_C:SimpleConstructionScript_0.SCS_Node_10",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/00-Common/Escape01_Effect.13"
+        },
+        {
+          "ObjectName": "SCS_Node Escape01_Effect_C:SimpleConstructionScript_0.SCS_Node_12",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/00-Common/Escape01_Effect.14"
+        },
+        {
+          "ObjectName": "SCS_Node Escape01_Effect_C:SimpleConstructionScript_0.SCS_Node_15",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/00-Common/Escape01_Effect.16"
+        },
+        {
+          "ObjectName": "SCS_Node Escape01_Effect_C:SimpleConstructionScript_0.SCS_Node_13",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/00-Common/Escape01_Effect.15"
+        },
+        {
+          "ObjectName": "SCS_Node Escape01_Effect_C:SimpleConstructionScript_0.SCS_Node_25",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/00-Common/Escape01_Effect.17"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node Escape01_Effect_C:SimpleConstructionScript_0.SCS_Node_0",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/00-Common/Escape01_Effect.12"
+      }
+    }
+  }
+]

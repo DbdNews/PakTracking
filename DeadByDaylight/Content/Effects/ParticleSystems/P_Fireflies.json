@@ -1,0 +1,407 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0"
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired P_Fireflies:ParticleModuleRequired_0",
+        "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Fireflies.5"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime P_Fireflies:ParticleModuleLifetime_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Fireflies.3"
+        },
+        {
+          "ObjectName": "ParticleModuleSize P_Fireflies:ParticleModuleSize_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Fireflies.8"
+        },
+        {
+          "ObjectName": "ParticleModuleLocation P_Fireflies:ParticleModuleLocation_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Fireflies.4"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocity P_Fireflies:ParticleModuleVelocity_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Fireflies.11"
+        },
+        {
+          "ObjectName": "ParticleModuleColorOverLife P_Fireflies:ParticleModuleColorOverLife_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Fireflies.2"
+        },
+        {
+          "ObjectName": "ParticleModuleRotation P_Fireflies:ParticleModuleRotation_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Fireflies.6"
+        },
+        {
+          "ObjectName": "ParticleModuleRotationRate P_Fireflies:ParticleModuleRotationRate_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Fireflies.7"
+        },
+        {
+          "ObjectName": "ParticleModuleSubUV P_Fireflies:ParticleModuleSubUV_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Fireflies.10"
+        }
+      ],
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn P_Fireflies:ParticleModuleSpawn_0",
+        "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Fireflies.9"
+      },
+      "PeakActiveParticles": 143
+    }
+  },
+  {
+    "Type": "ParticleModuleColorOverLife",
+    "Name": "ParticleModuleColorOverLife_0",
+    "Outer": "P_Fireflies",
+    "Properties": {
+      "ColorOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "AlphaOverLife": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 6.9999995,
+          "Values": [
+            0.0,
+            0.47619048,
+            0.95238096,
+            1.0,
+            1.0,
+            0.95238084,
+            0.47619012,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 8,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "P_Fireflies",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 1.5,
+        "MaxValue": 2.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.5,
+            2.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLocation",
+    "Name": "ParticleModuleLocation_0",
+    "Outer": "P_Fireflies",
+    "Properties": {
+      "StartLocation": {
+        "MinValue": -200.0,
+        "MaxValue": 200.0,
+        "MinValueVec": {
+          "X": -200.0,
+          "Y": -200.0,
+          "Z": 0.0
+        },
+        "MaxValueVec": {
+          "X": 200.0,
+          "Y": 200.0,
+          "Z": 180.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -200.0,
+            -200.0,
+            0.0,
+            200.0,
+            200.0,
+            180.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "P_Fireflies",
+    "Properties": {
+      "Material": {
+        "ObjectName": "MaterialInstanceConstant MI_Fireflies",
+        "ObjectPath": "DeadByDaylight/Content/Effects/Materials/MI_Fireflies.0"
+      },
+      "ScreenAlignment": "PSA_FacingCameraPosition",
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_Fireflies:ParticleModuleRequired_0.RequiredDistributionSpawnRate",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Fireflies.0"
+        }
+      },
+      "InterpolationMethod": "PSUVIM_Linear_Blend",
+      "SubImages_Horizontal": 2,
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRotation",
+    "Name": "ParticleModuleRotation_0",
+    "Outer": "P_Fireflies",
+    "Properties": {
+      "StartRotation": {
+        "MinValue": -1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -1.0,
+            1.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRotationRate",
+    "Name": "ParticleModuleRotationRate_0",
+    "Outer": "P_Fireflies",
+    "Properties": {
+      "StartRotationRate": {
+        "MinValue": -1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -1.0,
+            1.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "bEnabled": false,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "P_Fireflies",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 0.7,
+        "MaxValue": 0.7,
+        "MinValueVec": {
+          "X": 0.7,
+          "Y": 0.7,
+          "Z": 0.7
+        },
+        "MaxValueVec": {
+          "X": 0.7,
+          "Y": 0.7,
+          "Z": 0.7
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.7,
+            0.7,
+            0.7
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "P_Fireflies",
+    "Properties": {
+      "Rate": {
+        "MinValue": 70.0,
+        "MaxValue": 70.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            70.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "BurstScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "bApplyGlobalSpawnRateScale": false,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSubUV",
+    "Name": "ParticleModuleSubUV_0",
+    "Outer": "P_Fireflies",
+    "Properties": {
+      "SubImageIndex": {
+        "MaxValue": 20.0,
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 1.0,
+          "Values": [
+            0.0,
+            20.0
+          ],
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocity",
+    "Name": "ParticleModuleVelocity_0",
+    "Outer": "P_Fireflies",
+    "Properties": {
+      "StartVelocity": {
+        "MinValue": -2.0,
+        "MaxValue": 2.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -2.0,
+            -2.0,
+            -2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "StartVelocityRadial": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "P_Fireflies",
+    "Properties": {
+      "EmitterName": "Embers",
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel P_Fireflies:ParticleSpriteEmitter_0.ParticleLODLevel_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Fireflies.1"
+        }
+      ],
+      "DetailModeBitmask": 63
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "P_Fireflies",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter P_Fireflies:ParticleSpriteEmitter_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Fireflies.12"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bShouldResetPeakCounts": true
+    }
+  }
+]

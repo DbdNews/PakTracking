@@ -1,0 +1,247 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_1"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "BurstScaleDistribution",
+    "Outer": "ParticleModuleSpawn_2",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_2",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired P_HK_SwordTrail:ParticleModuleRequired_1",
+        "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer13/P_HK_SwordTrail.5"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime P_HK_SwordTrail:ParticleModuleLifetime_1",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer13/P_HK_SwordTrail.4"
+        },
+        {
+          "ObjectName": "ParticleModuleColorOverLife P_HK_SwordTrail:ParticleModuleColorOverLife_1",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer13/P_HK_SwordTrail.3"
+        }
+      ],
+      "TypeDataModule": {
+        "ObjectName": "ParticleModuleTypeDataAnimTrail P_HK_SwordTrail:ParticleModuleTypeDataAnimTrail_2",
+        "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer13/P_HK_SwordTrail.7"
+      },
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn P_HK_SwordTrail:ParticleModuleSpawn_2",
+        "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer13/P_HK_SwordTrail.6"
+      },
+      "PeakActiveParticles": 3
+    }
+  },
+  {
+    "Type": "ParticleModuleColorOverLife",
+    "Name": "ParticleModuleColorOverLife_1",
+    "Outer": "P_HK_SwordTrail",
+    "Properties": {
+      "ColorOverLife": {
+        "MaxValue": 0.12,
+        "MinValueVec": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.001
+        },
+        "MaxValueVec": {
+          "X": 0.0978,
+          "Y": 0.116297,
+          "Z": 0.12
+        },
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 3.0,
+          "Values": [
+            0.0978,
+            0.116297,
+            0.12,
+            0.037288602,
+            0.040112123,
+            0.039860222,
+            0.013514223,
+            0.0136035625,
+            0.013645752,
+            0.0,
+            0.0,
+            0.001
+          ],
+          "Op": 1,
+          "EntryCount": 4,
+          "EntryStride": 3
+        }
+      },
+      "AlphaOverLife": {
+        "MinValue": -0.01941183,
+        "MaxValue": 0.08,
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 3.0,
+          "Values": [
+            0.08,
+            -0.017489338,
+            -0.012184177,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 4,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_1",
+    "Outer": "P_HK_SwordTrail",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_1",
+    "Outer": "P_HK_SwordTrail",
+    "Properties": {
+      "Material": {
+        "ObjectName": "MaterialInstanceConstant MI_HK_SwordTrail",
+        "ObjectPath": "DeadByDaylight/Content/Effects/Materials/MI_HK_SwordTrail.0"
+      },
+      "bKillOnDeactivate": true,
+      "bKillOnCompleted": true,
+      "SortMode": "PSORTMODE_Age_NewestFirst",
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_HK_SwordTrail:ParticleModuleRequired_1.RequiredDistributionSpawnRate",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer13/P_HK_SwordTrail.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_2",
+    "Outer": "P_HK_SwordTrail",
+    "Properties": {
+      "Rate": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "BurstScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant P_HK_SwordTrail:ParticleModuleSpawn_2.BurstScaleDistribution",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer13/P_HK_SwordTrail.1"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleTypeDataAnimTrail",
+    "Name": "ParticleModuleTypeDataAnimTrail_2",
+    "Outer": "P_HK_SwordTrail",
+    "Properties": {
+      "DistanceTessellationStepSize": 5.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_2",
+    "Outer": "P_HK_SwordTrail",
+    "Properties": {
+      "EmitterName": "Trail",
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel P_HK_SwordTrail:ParticleSpriteEmitter_2.ParticleLODLevel_0",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer13/P_HK_SwordTrail.2"
+        }
+      ],
+      "DetailModeBitmask": 63
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "P_HK_SwordTrail",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter P_HK_SwordTrail:ParticleSpriteEmitter_2",
+          "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer13/P_HK_SwordTrail.8"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "FixedRelativeBoundingBox": {
+        "Min": {
+          "X": -2000.0,
+          "Y": -2000.0,
+          "Z": -2000.0
+        },
+        "Max": {
+          "X": 2000.0,
+          "Y": 2000.0,
+          "Z": 397.3283
+        },
+        "IsValid": 1
+      },
+      "bUseFixedRelativeBoundingBox": true,
+      "bShouldResetPeakCounts": true
+    }
+  }
+]

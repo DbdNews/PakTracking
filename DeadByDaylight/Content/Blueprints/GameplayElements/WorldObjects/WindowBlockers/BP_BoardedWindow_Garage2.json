@@ -1,0 +1,464 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_BoardedWindow_Garage2_C",
+    "Super": "BP_BaseBlocker_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript BP_BoardedWindow_Garage2_C:SimpleConstructionScript_1",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_BoardedWindow_Garage2.12"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler BP_BoardedWindow_Garage2_C:InheritableComponentHandler",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_BoardedWindow_Garage2.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass BP_BaseBlocker_C",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_BaseBlocker.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "box03",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class BoxComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "box02",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class BoxComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Box",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class BoxComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "StaticMesh1",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class StaticMeshComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_BoardedWindow_Garage2_C Default__BP_BoardedWindow_Garage2_C",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_BoardedWindow_Garage2.1"
+    }
+  },
+  {
+    "Type": "BP_BoardedWindow_Garage2_C",
+    "Name": "Default__BP_BoardedWindow_Garage2_C",
+    "Template": "Default__BP_BaseBlocker_C",
+    "Properties": {
+      "RemoteRole": "ROLE_SimulatedProxy",
+      "NetUpdateFrequency": 1.0,
+      "MinNetUpdateFrequency": 1.0
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "box02_GEN_VARIABLE",
+    "Outer": "BP_BoardedWindow_Garage2_C",
+    "Properties": {
+      "BoxExtent": {
+        "X": 50.0,
+        "Y": 50.0,
+        "Z": 50.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class NavArea_Obstacle",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAll",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Interactable",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Slasher",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Blood",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "InteractionDetector",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BlinkBlocker",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Ground",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Walkable",
+              "Response": "ECR_Block"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 15.18324,
+        "Y": -7.0175166,
+        "Z": 134.07858
+      },
+      "RelativeRotation": {
+        "Pitch": 4.1E-05,
+        "Yaw": -179.99995,
+        "Roll": 75.48662
+      },
+      "RelativeScale3D": {
+        "X": 0.150303,
+        "Y": 0.147403,
+        "Z": 1.75
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "box03_GEN_VARIABLE",
+    "Outer": "BP_BoardedWindow_Garage2_C",
+    "Properties": {
+      "BoxExtent": {
+        "X": 50.0,
+        "Y": 50.0,
+        "Z": 50.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class NavArea_Obstacle",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAll",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Interactable",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Slasher",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Blood",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "InteractionDetector",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BlinkBlocker",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Ground",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Walkable",
+              "Response": "ECR_Block"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 15.183252,
+        "Y": 3.9060977,
+        "Z": 172.63028
+      },
+      "RelativeRotation": {
+        "Pitch": 4.1E-05,
+        "Yaw": -179.99995,
+        "Roll": 66.76874
+      },
+      "RelativeScale3D": {
+        "X": 0.150303,
+        "Y": 0.147403,
+        "Z": 1.75
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Box_GEN_VARIABLE",
+    "Outer": "BP_BoardedWindow_Garage2_C",
+    "Properties": {
+      "BoxExtent": {
+        "X": 50.0,
+        "Y": 50.0,
+        "Z": 50.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class NavArea_Obstacle",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAll",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Interactable",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Slasher",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Blood",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "InteractionDetector",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BlinkBlocker",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Ground",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Walkable",
+              "Response": "ECR_Block"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": -0.20620728,
+        "Y": 0.5040021,
+        "Z": 39.56005
+      },
+      "RelativeScale3D": {
+        "X": 0.5,
+        "Y": 2.0,
+        "Z": 1.5
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_BoardedWindow_Garage2_C"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot79F9DA4146BA6B800F05D7A2502BD89B",
+    "Outer": "BP_BoardedWindow_Garage2_C",
+    "Properties": {
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_1",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class StaticMeshComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent BP_BoardedWindow_Garage2_C:StaticMesh1_GEN_VARIABLE",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_BoardedWindow_Garage2.13"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_BaseBlocker_C",
+      "VariableGuid": "0C4A5088-4D517594-1B043DB4-1F64C9D2",
+      "InternalVariableName": "StaticMesh1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_1",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class BoxComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent BP_BoardedWindow_Garage2_C:box02_GEN_VARIABLE",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_BoardedWindow_Garage2.2"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_BaseBlocker_C",
+      "VariableGuid": "7AB09590-489B9526-DAF5229C-75B3266B",
+      "InternalVariableName": "box02"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_1",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class BoxComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent BP_BoardedWindow_Garage2_C:Box_GEN_VARIABLE",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_BoardedWindow_Garage2.4"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_BaseBlocker_C",
+      "VariableGuid": "83483CB4-49FA4FD1-A1B13881-9707BAE5",
+      "InternalVariableName": "Box"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_1",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class BoxComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent BP_BoardedWindow_Garage2_C:box03_GEN_VARIABLE",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_BoardedWindow_Garage2.3"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_BaseBlocker_C",
+      "VariableGuid": "648DE507-4BEFA276-CC0C51A6-8537C5F9",
+      "InternalVariableName": "box03"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_1",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent BP_BoardedWindow_Garage2_C:DefaultSceneRoot79F9DA4146BA6B800F05D7A2502BD89B",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_BoardedWindow_Garage2.6"
+      },
+      "VariableGuid": "1AD58E63-40A9C639-A4B000B8-8185C416",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_1",
+    "Outer": "BP_BoardedWindow_Garage2_C",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node BP_BoardedWindow_Garage2_C:SimpleConstructionScript_1.SCS_Node_0",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_BoardedWindow_Garage2.7"
+        },
+        {
+          "ObjectName": "SCS_Node BP_BoardedWindow_Garage2_C:SimpleConstructionScript_1.SCS_Node_2",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_BoardedWindow_Garage2.9"
+        },
+        {
+          "ObjectName": "SCS_Node BP_BoardedWindow_Garage2_C:SimpleConstructionScript_1.SCS_Node_1",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_BoardedWindow_Garage2.8"
+        },
+        {
+          "ObjectName": "SCS_Node BP_BoardedWindow_Garage2_C:SimpleConstructionScript_1.SCS_Node_3",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_BoardedWindow_Garage2.10"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node BP_BoardedWindow_Garage2_C:SimpleConstructionScript_1.SCS_Node_0",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_BoardedWindow_Garage2.7"
+        },
+        {
+          "ObjectName": "SCS_Node BP_BoardedWindow_Garage2_C:SimpleConstructionScript_1.SCS_Node_2",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_BoardedWindow_Garage2.9"
+        },
+        {
+          "ObjectName": "SCS_Node BP_BoardedWindow_Garage2_C:SimpleConstructionScript_1.SCS_Node_1",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_BoardedWindow_Garage2.8"
+        },
+        {
+          "ObjectName": "SCS_Node BP_BoardedWindow_Garage2_C:SimpleConstructionScript_1.SCS_Node_3",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_BoardedWindow_Garage2.10"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node BP_BoardedWindow_Garage2_C:SimpleConstructionScript_1.SCS_Node_6",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_BoardedWindow_Garage2.11"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh1_GEN_VARIABLE",
+    "Outer": "BP_BoardedWindow_Garage2_C",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh SM_BoardedWindow04",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Structures/Blockers/SM_BoardedWindow04.2"
+      },
+      "bUseDefaultCollision": false,
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "RelativeLocation": {
+        "X": 15.131935,
+        "Y": -0.38972092,
+        "Z": 189.52238
+      }
+    }
+  }
+]
