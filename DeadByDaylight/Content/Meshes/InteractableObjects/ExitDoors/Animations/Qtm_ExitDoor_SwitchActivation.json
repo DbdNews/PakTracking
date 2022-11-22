@@ -12,6 +12,27 @@
     }
   },
   {
+    "Type": "AnimNotify_PlayParticleEffect",
+    "Name": "AnimNotify_PlayParticleEffect_0",
+    "Outer": "Qtm_ExitDoor_SwitchActivation",
+    "Properties": {
+      "PSTemplate": {
+        "ObjectName": "ParticleSystem P_SwitchSparks_Normal",
+        "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_SwitchSparks_Normal.114"
+      },
+      "LocationOffset": {
+        "X": -469.75473,
+        "Y": -375.05978,
+        "Z": 130.0
+      },
+      "RotationOffset": {
+        "Pitch": 180.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
     "Type": "AnimSequence",
     "Name": "Qtm_ExitDoor_SwitchActivation",
     "Properties": {
@@ -106,7 +127,50 @@
           "LinkValue": 1.3580294,
           "LinkedSequence": {
             "ObjectName": "AnimSequence Qtm_ExitDoor_SwitchActivation",
+            "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/ExitDoors/Animations/Qtm_ExitDoor_SwitchActivation.2"
+          }
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "P_SwitchSparks",
+          "Notify": {
+            "ObjectName": "AnimNotify_PlayParticleEffect Qtm_ExitDoor_SwitchActivation:AnimNotify_PlayParticleEffect_0",
             "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/ExitDoors/Animations/Qtm_ExitDoor_SwitchActivation.1"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 1.5116076,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 2.3333333,
+          "LinkValue": 1.5116076,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence Qtm_ExitDoor_SwitchActivation",
+            "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/ExitDoors/Animations/Qtm_ExitDoor_SwitchActivation.2"
           }
         }
       ],

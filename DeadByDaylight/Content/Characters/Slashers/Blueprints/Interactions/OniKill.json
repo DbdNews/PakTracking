@@ -1,0 +1,184 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_OniKill",
+    "Outer": "OniKill_C",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GetChargeCompleted_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_player",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class DBDPlayer",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_hasInteractionStarted",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "K2Node_DynamicCast_AsBPI_Effect_General",
+        "Flags": 1,
+        "ElementSize": 16,
+        "InterfaceClass": {
+          "ObjectName": "BlueprintGeneratedClass BPI_Effect_General_C",
+          "ObjectPath": "DeadByDaylight/Content/Effects/Blueprints/Interface/General/BPI_Effect_General.96"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInteractionFinished",
+    "Outer": "OniKill_C",
+    "Super": "OnInteractionFinished",
+    "SuperStruct": {
+      "ObjectName": "Function BaseKillWithProp_C:OnInteractionFinished",
+      "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/BaseKillWithProp.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "player",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "PropertyClass": {
+          "ObjectName": "Class DBDPlayer",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "hasInteractionStarted",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "OniKill_C",
+    "Super": "BaseKillWithProp_C",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function OniKill_C:ExecuteUbergraph_OniKill",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/OniKill.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass BaseKillWithProp_C",
+      "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/BaseKillWithProp.4"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function OniKill_C:OnInteractionFinished",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/OniKill.1"
+      },
+      {
+        "ObjectName": "Function OniKill_C:ExecuteUbergraph_OniKill",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/OniKill.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "Struct": {
+          "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_OniKill": {
+        "ObjectName": "Function OniKill_C:ExecuteUbergraph_OniKill",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/OniKill.0"
+      },
+      "OnInteractionFinished": {
+        "ObjectName": "Function OniKill_C:OnInteractionFinished",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/OniKill.1"
+      }
+    },
+    "ClassFlags": 10754068,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "OniKill_C Default__OniKill_C",
+      "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/OniKill.3"
+    }
+  },
+  {
+    "Type": "OniKill_C",
+    "Name": "Default__OniKill_C",
+    "Template": "Default__BaseKillWithProp_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "PropClasses": [
+        {
+          "ObjectName": "BlueprintGeneratedClass BP_Tongue_C",
+          "ObjectPath": "DeadByDaylight/Content/Meshes/Props/Tongue/Blueprint/BP_Tongue.0"
+        }
+      ],
+      "_manuallyManageMeshHiding": true
+    }
+  }
+]
