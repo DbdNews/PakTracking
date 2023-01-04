@@ -572,12 +572,22 @@
     "Outer": "WBP_CoreArchiveRoot_C",
     "ChildProperties": [
       {
-        "Type": "ByteProperty",
+        "Type": "EnumProperty",
         "Name": "MenuState",
         "Flags": 1,
         "ElementSize": 1,
         "PropertyFlags": 148,
-        "Enum": null
+        "Enum": {
+          "ObjectName": "Enum EArchiveMenuState",
+          "ObjectPath": "/Script/DBDSharedTypes"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": 1,
+          "ElementSize": 1,
+          "Enum": null
+        }
       },
       {
         "Type": "ObjectProperty",
@@ -826,13 +836,13 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree WBP_CoreArchiveRoot_C:WidgetTree",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.74"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.78"
       },
       "bClassRequiresNativeTick": true,
       "Animations": [
         {
           "ObjectName": "WidgetAnimation WBP_CoreArchiveRoot_C:Bg_FadeOut_INST",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.69"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.73"
         }
       ],
       "DynamicBindingObjects": [
@@ -1235,6 +1245,7 @@
         "A": 1.0,
         "Hex": "FFE80000"
       },
+      "ScaleType": "EScaleType::Menu",
       "bHasScriptImplementedTick": false,
       "bHasScriptImplementedPaint": false
     }
@@ -1251,8 +1262,8 @@
         }
       ],
       "Slot": {
-        "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0.OverlaySlot_8",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.55"
+        "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Content.OverlaySlot_3",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.49"
       }
     }
   },
@@ -1269,7 +1280,7 @@
       ],
       "Slot": {
         "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0.OverlaySlot_17",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.48"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.55"
       }
     }
   },
@@ -1338,7 +1349,7 @@
       },
       "Content": {
         "ObjectName": "WBP_CoreArchivesBackground_C WBP_CoreArchiveRoot_C:WidgetTree.WBP_CoreArchivesBackground",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.61"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.65"
       }
     }
   },
@@ -1393,7 +1404,7 @@
       },
       "Content": {
         "ObjectName": "WBP_CoreBackInputSwitcher_C WBP_CoreArchiveRoot_C:WidgetTree.BackInputSwitcher",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.66"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.70"
       }
     }
   },
@@ -1410,7 +1421,7 @@
       },
       "Content": {
         "ObjectName": "WBP_CoreKeyListenerInputPrompt_C WBP_CoreArchiveRoot_C:WidgetTree.ScrollPrompt",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.67"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.71"
       }
     }
   },
@@ -1425,7 +1436,7 @@
       },
       "Content": {
         "ObjectName": "Spacer WBP_CoreArchiveRoot_C:WidgetTree.HeightSpacer",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.56"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.60"
       }
     }
   },
@@ -1443,7 +1454,7 @@
       },
       "Slot": {
         "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.BGOverlay.OverlaySlot_1",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.44"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.45"
       },
       "Visibility": "ESlateVisibility::HitTestInvisible"
     }
@@ -1464,8 +1475,8 @@
         }
       },
       "Slot": {
-        "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0.OverlaySlot_5",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.53"
+        "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Content.OverlaySlot_8",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.54"
       },
       "Visibility": "ESlateVisibility::HitTestInvisible"
     }
@@ -1882,14 +1893,63 @@
       "Slots": [
         {
           "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.BGOverlay.OverlaySlot_1",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.44"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.45"
         }
       ],
       "Slot": {
         "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0.OverlaySlot_3",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.51"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.56"
       },
       "bIsVariable": true
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Content",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Content.OverlaySlot_8",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.54"
+        },
+        {
+          "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Content.OverlaySlot_0",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.46"
+        },
+        {
+          "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Content.OverlaySlot_1",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.47"
+        },
+        {
+          "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Content.OverlaySlot_2",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.48"
+        },
+        {
+          "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Content.OverlaySlot_3",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.49"
+        },
+        {
+          "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Content.OverlaySlot_4",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.50"
+        },
+        {
+          "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Content.OverlaySlot_5",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.51"
+        },
+        {
+          "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Content.OverlaySlot_6",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.52"
+        },
+        {
+          "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Content.OverlaySlot_7",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.53"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot WBP_CoreArchiveRoot_C:WidgetTree.ScaleContainer.ScaleBoxSlot_0",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.59"
+      }
     }
   },
   {
@@ -1899,48 +1959,16 @@
     "Properties": {
       "Slots": [
         {
-          "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0.OverlaySlot_5",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.53"
-        },
-        {
           "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0.OverlaySlot_3",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.51"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.56"
         },
         {
           "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0.OverlaySlot_17",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.48"
-        },
-        {
-          "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0.OverlaySlot_2",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.49"
-        },
-        {
-          "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0.OverlaySlot_1",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.46"
-        },
-        {
-          "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0.OverlaySlot_6",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.54"
-        },
-        {
-          "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0.OverlaySlot_8",
           "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.55"
         },
         {
-          "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0.OverlaySlot_20",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.50"
-        },
-        {
-          "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0.OverlaySlot_13",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.47"
-        },
-        {
-          "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0.OverlaySlot_0",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.45"
-        },
-        {
-          "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0.OverlaySlot_4",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.52"
+          "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0.OverlaySlot_7",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.57"
         }
       ]
     }
@@ -1965,7 +1993,115 @@
   {
     "Type": "OverlaySlot",
     "Name": "OverlaySlot_0",
-    "Outer": "Overlay_0",
+    "Outer": "Content",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay WBP_CoreArchiveRoot_C:WidgetTree.Content",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.43"
+      },
+      "Content": {
+        "ObjectName": "WidgetSwitcher WBP_CoreArchiveRoot_C:WidgetTree.MenuStateSwitcher",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.74"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Outer": "Content",
+    "Properties": {
+      "Padding": {
+        "Top": 70.0
+      },
+      "Parent": {
+        "ObjectName": "Overlay WBP_CoreArchiveRoot_C:WidgetTree.Content",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.43"
+      },
+      "Content": {
+        "ObjectName": "WBP_CoreArchiveMenu_Title_C WBP_CoreArchiveRoot_C:WidgetTree.WBP_CoreArchiveMenu_Title",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.63"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Outer": "Content",
+    "Properties": {
+      "Padding": {
+        "Left": 140.0,
+        "Top": 74.0
+      },
+      "Parent": {
+        "ObjectName": "Overlay WBP_CoreArchiveRoot_C:WidgetTree.Content",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.43"
+      },
+      "Content": {
+        "ObjectName": "WBP_CoreTabContainer_C WBP_CoreArchiveRoot_C:WidgetTree.ArchiveMenuTabs",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.72"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_3",
+    "Outer": "Content",
+    "Properties": {
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "Overlay WBP_CoreArchiveRoot_C:WidgetTree.Content",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.43"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel WBP_CoreArchiveRoot_C:WidgetTree.CanvasPanel_0",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.21"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_4",
+    "Outer": "Content",
+    "Properties": {
+      "Padding": {
+        "Right": 115.0,
+        "Bottom": 230.0
+      },
+      "HorizontalAlignment": "HAlign_Right",
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "Overlay WBP_CoreArchiveRoot_C:WidgetTree.Content",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.43"
+      },
+      "Content": {
+        "ObjectName": "WBP_CoreArchiveInfoButton_C WBP_CoreArchiveRoot_C:WidgetTree.InfoButton",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.62"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_5",
+    "Outer": "Content",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay WBP_CoreArchiveRoot_C:WidgetTree.Content",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.43"
+      },
+      "Content": {
+        "ObjectName": "WBP_CoreArchiveTomeChallenges_SlotSelector_C WBP_CoreArchiveRoot_C:WidgetTree.SlotSelector",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.68"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_6",
+    "Outer": "Content",
     "Properties": {
       "Padding": {
         "Top": 220.0,
@@ -1973,47 +2109,48 @@
       },
       "HorizontalAlignment": "HAlign_Right",
       "Parent": {
-        "ObjectName": "Overlay WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0",
+        "ObjectName": "Overlay WBP_CoreArchiveRoot_C:WidgetTree.Content",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.43"
       },
       "Content": {
         "ObjectName": "WBP_CoreArchiveTomeChallenges_Slot_C WBP_CoreArchiveRoot_C:WidgetTree.KillerChallengeSlot",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.62"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.66"
       }
     }
   },
   {
     "Type": "OverlaySlot",
-    "Name": "OverlaySlot_1",
-    "Outer": "Overlay_0",
+    "Name": "OverlaySlot_7",
+    "Outer": "Content",
     "Properties": {
       "Padding": {
-        "Top": 70.0
+        "Top": 220.0,
+        "Right": 1175.0
       },
+      "HorizontalAlignment": "HAlign_Right",
       "Parent": {
-        "ObjectName": "Overlay WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0",
+        "ObjectName": "Overlay WBP_CoreArchiveRoot_C:WidgetTree.Content",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.43"
       },
       "Content": {
-        "ObjectName": "WBP_CoreArchiveMenu_Title_C WBP_CoreArchiveRoot_C:WidgetTree.WBP_CoreArchiveMenu_Title",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.59"
+        "ObjectName": "WBP_CoreArchiveTomeChallenges_Slot_C WBP_CoreArchiveRoot_C:WidgetTree.SurvivorChallengeSlot",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.67"
       }
     }
   },
   {
     "Type": "OverlaySlot",
-    "Name": "OverlaySlot_13",
-    "Outer": "Overlay_0",
+    "Name": "OverlaySlot_8",
+    "Outer": "Content",
     "Properties": {
       "HorizontalAlignment": "HAlign_Fill",
-      "VerticalAlignment": "VAlign_Fill",
       "Parent": {
-        "ObjectName": "Overlay WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0",
+        "ObjectName": "Overlay WBP_CoreArchiveRoot_C:WidgetTree.Content",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.43"
       },
       "Content": {
-        "ObjectName": "WBP_CoreArchiveTomeChallenges_SlotSelector_C WBP_CoreArchiveRoot_C:WidgetTree.SlotSelector",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.64"
+        "ObjectName": "Image WBP_CoreArchiveRoot_C:WidgetTree.BlackOverlay_1",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.31"
       }
     }
   },
@@ -2028,49 +2165,11 @@
       "VerticalAlignment": "VAlign_Center",
       "Parent": {
         "ObjectName": "Overlay WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.43"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.44"
       },
       "Content": {
         "ObjectName": "CanvasPanel WBP_CoreArchiveRoot_C:WidgetTree.CanvasPanel_4",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.22"
-      }
-    }
-  },
-  {
-    "Type": "OverlaySlot",
-    "Name": "OverlaySlot_2",
-    "Outer": "Overlay_0",
-    "Properties": {
-      "HorizontalAlignment": "HAlign_Fill",
-      "VerticalAlignment": "VAlign_Fill",
-      "Parent": {
-        "ObjectName": "Overlay WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.43"
-      },
-      "Content": {
-        "ObjectName": "WidgetSwitcher WBP_CoreArchiveRoot_C:WidgetTree.MenuStateSwitcher",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.70"
-      }
-    }
-  },
-  {
-    "Type": "OverlaySlot",
-    "Name": "OverlaySlot_20",
-    "Outer": "Overlay_0",
-    "Properties": {
-      "Padding": {
-        "Right": 115.0,
-        "Bottom": 50.0
-      },
-      "HorizontalAlignment": "HAlign_Right",
-      "VerticalAlignment": "VAlign_Bottom",
-      "Parent": {
-        "ObjectName": "Overlay WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.43"
-      },
-      "Content": {
-        "ObjectName": "WBP_CoreArchiveInfoButton_C WBP_CoreArchiveRoot_C:WidgetTree.InfoButton",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.58"
       }
     }
   },
@@ -2083,7 +2182,7 @@
       "VerticalAlignment": "VAlign_Fill",
       "Parent": {
         "ObjectName": "Overlay WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.43"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.44"
       },
       "Content": {
         "ObjectName": "Overlay WBP_CoreArchiveRoot_C:WidgetTree.BGOverlay",
@@ -2093,72 +2192,53 @@
   },
   {
     "Type": "OverlaySlot",
-    "Name": "OverlaySlot_4",
-    "Outer": "Overlay_0",
-    "Properties": {
-      "Padding": {
-        "Top": 220.0,
-        "Right": 1175.0
-      },
-      "HorizontalAlignment": "HAlign_Right",
-      "Parent": {
-        "ObjectName": "Overlay WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.43"
-      },
-      "Content": {
-        "ObjectName": "WBP_CoreArchiveTomeChallenges_Slot_C WBP_CoreArchiveRoot_C:WidgetTree.SurvivorChallengeSlot",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.63"
-      }
-    }
-  },
-  {
-    "Type": "OverlaySlot",
-    "Name": "OverlaySlot_5",
+    "Name": "OverlaySlot_7",
     "Outer": "Overlay_0",
     "Properties": {
       "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
       "Parent": {
         "ObjectName": "Overlay WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.43"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.44"
       },
       "Content": {
-        "ObjectName": "Image WBP_CoreArchiveRoot_C:WidgetTree.BlackOverlay_1",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.31"
+        "ObjectName": "ScaleBox WBP_CoreArchiveRoot_C:WidgetTree.ScaleContainer",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.58"
       }
     }
   },
   {
-    "Type": "OverlaySlot",
-    "Name": "OverlaySlot_6",
-    "Outer": "Overlay_0",
+    "Type": "ScaleBox",
+    "Name": "ScaleContainer",
+    "Outer": "WidgetTree",
     "Properties": {
-      "Padding": {
-        "Left": 140.0,
-        "Top": 74.0
-      },
-      "Parent": {
-        "ObjectName": "Overlay WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.43"
-      },
-      "Content": {
-        "ObjectName": "WBP_CoreTabContainer_C WBP_CoreArchiveRoot_C:WidgetTree.ArchiveMenuTabs",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.68"
+      "Stretch": "EStretch::UserSpecified",
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot WBP_CoreArchiveRoot_C:WidgetTree.ScaleContainer.ScaleBoxSlot_0",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.59"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0.OverlaySlot_7",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.57"
       }
     }
   },
   {
-    "Type": "OverlaySlot",
-    "Name": "OverlaySlot_8",
-    "Outer": "Overlay_0",
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_0",
+    "Outer": "ScaleContainer",
     "Properties": {
-      "VerticalAlignment": "VAlign_Bottom",
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
       "Parent": {
-        "ObjectName": "Overlay WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.43"
+        "ObjectName": "ScaleBox WBP_CoreArchiveRoot_C:WidgetTree.ScaleContainer",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.58"
       },
       "Content": {
-        "ObjectName": "CanvasPanel WBP_CoreArchiveRoot_C:WidgetTree.CanvasPanel_0",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.21"
+        "ObjectName": "Overlay WBP_CoreArchiveRoot_C:WidgetTree.Content",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.43"
       }
     }
   },
@@ -2185,7 +2265,7 @@
     "Properties": {
       "Slot": {
         "ObjectName": "WidgetSwitcherSlot WBP_CoreArchiveRoot_C:WidgetTree.MenuStateSwitcher.WidgetSwitcherSlot_2",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.73"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.77"
       }
     }
   },
@@ -2199,7 +2279,7 @@
       "PressedSfxName": "AudioEvent_Archives_Select_Press",
       "ClickedSfxName": "AudioEvent_Archives_Select_Release",
       "Slot": {
-        "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0.OverlaySlot_20",
+        "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Content.OverlaySlot_4",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.50"
       }
     }
@@ -2211,8 +2291,8 @@
     "Template": "Default__WBP_CoreArchiveMenu_Title_C",
     "Properties": {
       "Slot": {
-        "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0.OverlaySlot_1",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.46"
+        "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Content.OverlaySlot_1",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.47"
       }
     }
   },
@@ -2224,7 +2304,7 @@
     "Properties": {
       "Slot": {
         "ObjectName": "WidgetSwitcherSlot WBP_CoreArchiveRoot_C:WidgetTree.MenuStateSwitcher.WidgetSwitcherSlot_1",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.72"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.76"
       }
     }
   },
@@ -2268,8 +2348,8 @@
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Archives/Main/Challenges/Materials/MI_UI_KillerSlotHighlight.0"
       },
       "Slot": {
-        "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0.OverlaySlot_0",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.45"
+        "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Content.OverlaySlot_6",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.52"
       }
     }
   },
@@ -2296,8 +2376,8 @@
       "ProgressBarScratchesOffsetX": 1.0,
       "ProgressBarScratchesOffsetY": 1.0,
       "Slot": {
-        "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0.OverlaySlot_4",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.52"
+        "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Content.OverlaySlot_7",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.53"
       }
     }
   },
@@ -2308,8 +2388,8 @@
     "Template": "Default__WBP_CoreArchiveTomeChallenges_SlotSelector_C",
     "Properties": {
       "Slot": {
-        "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0.OverlaySlot_13",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.47"
+        "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Content.OverlaySlot_5",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.51"
       },
       "Visibility": "ESlateVisibility::Collapsed"
     }
@@ -2322,7 +2402,7 @@
     "Properties": {
       "Slot": {
         "ObjectName": "WidgetSwitcherSlot WBP_CoreArchiveRoot_C:WidgetTree.MenuStateSwitcher.WidgetSwitcherSlot_0",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.71"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.75"
       }
     }
   },
@@ -2367,8 +2447,8 @@
       "UseControllerTabSwitching": true,
       "CanLoop": true,
       "Slot": {
-        "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0.OverlaySlot_6",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.54"
+        "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Content.OverlaySlot_2",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.48"
       }
     }
   },
@@ -2411,20 +2491,20 @@
       "Slots": [
         {
           "ObjectName": "WidgetSwitcherSlot WBP_CoreArchiveRoot_C:WidgetTree.MenuStateSwitcher.WidgetSwitcherSlot_0",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.71"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.75"
         },
         {
           "ObjectName": "WidgetSwitcherSlot WBP_CoreArchiveRoot_C:WidgetTree.MenuStateSwitcher.WidgetSwitcherSlot_1",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.72"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.76"
         },
         {
           "ObjectName": "WidgetSwitcherSlot WBP_CoreArchiveRoot_C:WidgetTree.MenuStateSwitcher.WidgetSwitcherSlot_2",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.73"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.77"
         }
       ],
       "Slot": {
-        "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0.OverlaySlot_2",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.49"
+        "ObjectName": "OverlaySlot WBP_CoreArchiveRoot_C:WidgetTree.Content.OverlaySlot_0",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.46"
       }
     }
   },
@@ -2435,11 +2515,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "WidgetSwitcher WBP_CoreArchiveRoot_C:WidgetTree.MenuStateSwitcher",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.70"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.74"
       },
       "Content": {
         "ObjectName": "WBP_CoreArchiveTomePanel_C WBP_CoreArchiveRoot_C:WidgetTree.WBP_CoreArchiveTomePanel",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.65"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.69"
       }
     }
   },
@@ -2450,11 +2530,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "WidgetSwitcher WBP_CoreArchiveRoot_C:WidgetTree.MenuStateSwitcher",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.70"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.74"
       },
       "Content": {
         "ObjectName": "WBP_CoreArchiveRiftPanel_C WBP_CoreArchiveRoot_C:WidgetTree.WBP_CoreArchiveRiftPanel",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.60"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.64"
       }
     }
   },
@@ -2465,11 +2545,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "WidgetSwitcher WBP_CoreArchiveRoot_C:WidgetTree.MenuStateSwitcher",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.70"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.74"
       },
       "Content": {
         "ObjectName": "WBP_CoreArchiveCompendiumPanel_C WBP_CoreArchiveRoot_C:WidgetTree.WBP_CoreArchiveCompendiumPanel",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.57"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.61"
       }
     }
   },
@@ -2480,7 +2560,7 @@
     "Properties": {
       "RootWidget": {
         "ObjectName": "Overlay WBP_CoreArchiveRoot_C:WidgetTree.Overlay_0",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.43"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Archives/Root/WBP_CoreArchiveRoot.44"
       }
     }
   }
