@@ -12,6 +12,26 @@
         "PropertyFlags": 148
       },
       {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": 1,
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction TimerDynamicDelegate__DelegateSignature",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetCamper_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class CamperPlayer",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
         "Type": "ObjectProperty",
         "Name": "K2Node_CustomEvent_picker",
         "Flags": 1,
@@ -38,6 +58,26 @@
         "ElementSize": 4
       },
       {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "ScriptStruct TimerHandle",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": 1,
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction OnPickedUpEvent__DelegateSignature",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
         "Type": "BoolProperty",
         "Name": "CallFunc_Greater_FloatFloat_ReturnValue",
         "Flags": 1,
@@ -48,26 +88,6 @@
         "FieldMask": 255,
         "BoolSize": 1,
         "bIsNativeBool": true
-      },
-      {
-        "Type": "DelegateProperty",
-        "Name": "K2Node_CreateDelegate_OutputDelegate",
-        "Flags": 1,
-        "ElementSize": 20,
-        "SignatureFunction": {
-          "ObjectName": "DelegateFunction TimerDynamicDelegate__DelegateSignature",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 8,
-        "Struct": {
-          "ObjectName": "ScriptStruct TimerHandle",
-          "ObjectPath": "/Script/Engine"
-        }
       }
     ],
     "FunctionFlags": 8421377
@@ -77,6 +97,16 @@
     "Name": "OnPickUpDelayDone",
     "Outer": "DropManual_C",
     "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "DropManual_C",
+    "SuperStruct": {
+      "ObjectName": "Function ActorComponent:ReceiveBeginPlay",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": 134350848
   },
   {
     "Type": "Function",
@@ -600,35 +630,6 @@
     "FunctionFlags": 1547960320
   },
   {
-    "Type": "Function",
-    "Name": "Initialize",
-    "Outer": "DropManual_C",
-    "ChildProperties": [
-      {
-        "Type": "ObjectProperty",
-        "Name": "Player",
-        "Flags": 1,
-        "ElementSize": 8,
-        "PropertyFlags": 148,
-        "PropertyClass": {
-          "ObjectName": "Class CamperPlayer",
-          "ObjectPath": "/Script/DeadByDaylight"
-        }
-      },
-      {
-        "Type": "DelegateProperty",
-        "Name": "K2Node_CreateDelegate_OutputDelegate",
-        "Flags": 1,
-        "ElementSize": 20,
-        "SignatureFunction": {
-          "ObjectName": "DelegateFunction OnPickedUpEvent__DelegateSignature",
-          "ObjectPath": "/Script/DeadByDaylight"
-        }
-      }
-    ],
-    "FunctionFlags": 201457664
-  },
-  {
     "Type": "BlueprintGeneratedClass",
     "Name": "DropManual_C",
     "Super": "Drop_C",
@@ -644,31 +645,31 @@
     },
     "Children": [
       {
-        "ObjectName": "Function DropManual_C:Initialize",
+        "ObjectName": "Function DropManual_C:IsBeingCaughtInTrap",
         "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Interactions/DropManual.8"
       },
       {
-        "ObjectName": "Function DropManual_C:IsBeingCaughtInTrap",
+        "ObjectName": "Function DropManual_C:AuthorityApplyDropPenalty",
         "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Interactions/DropManual.7"
       },
       {
-        "ObjectName": "Function DropManual_C:AuthorityApplyDropPenalty",
+        "ObjectName": "Function DropManual_C:IsInteractionPossibleClient",
         "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Interactions/DropManual.6"
       },
       {
-        "ObjectName": "Function DropManual_C:IsInteractionPossibleClient",
+        "ObjectName": "Function DropManual_C:IsInteractionPossibleBP",
         "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Interactions/DropManual.5"
       },
       {
-        "ObjectName": "Function DropManual_C:IsInteractionPossibleBP",
+        "ObjectName": "Function DropManual_C:OnPickedUpEnd_Event",
         "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Interactions/DropManual.4"
       },
       {
-        "ObjectName": "Function DropManual_C:OnPickedUpEnd_Event",
+        "ObjectName": "Function DropManual_C:OnInteractionExitStart",
         "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Interactions/DropManual.3"
       },
       {
-        "ObjectName": "Function DropManual_C:OnInteractionExitStart",
+        "ObjectName": "Function DropManual_C:ReceiveBeginPlay",
         "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Interactions/DropManual.2"
       },
       {
@@ -720,32 +721,32 @@
         "ObjectName": "Function DropManual_C:OnPickUpDelayDone",
         "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Interactions/DropManual.1"
       },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function DropManual_C:ReceiveBeginPlay",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Interactions/DropManual.2"
+      },
       "OnInteractionExitStart": {
         "ObjectName": "Function DropManual_C:OnInteractionExitStart",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Interactions/DropManual.2"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Interactions/DropManual.3"
       },
       "OnPickedUpEnd_Event": {
         "ObjectName": "Function DropManual_C:OnPickedUpEnd_Event",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Interactions/DropManual.3"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Interactions/DropManual.4"
       },
       "IsInteractionPossibleBP": {
         "ObjectName": "Function DropManual_C:IsInteractionPossibleBP",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Interactions/DropManual.4"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Interactions/DropManual.5"
       },
       "IsInteractionPossibleClient": {
         "ObjectName": "Function DropManual_C:IsInteractionPossibleClient",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Interactions/DropManual.5"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Interactions/DropManual.6"
       },
       "AuthorityApplyDropPenalty": {
         "ObjectName": "Function DropManual_C:AuthorityApplyDropPenalty",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Interactions/DropManual.6"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Interactions/DropManual.7"
       },
       "IsBeingCaughtInTrap": {
         "ObjectName": "Function DropManual_C:IsBeingCaughtInTrap",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Interactions/DropManual.7"
-      },
-      "Initialize": {
-        "ObjectName": "Function DropManual_C:Initialize",
         "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Interactions/DropManual.8"
       }
     },

@@ -13,17 +13,69 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "K2Node_Event_searchingPlayer",
+        "Name": "CallFunc_GetReverseBearTrapRemover_RBTRemover",
         "Flags": 1,
         "ElementSize": 8,
         "PropertyClass": {
-          "ObjectName": "Class CamperPlayer",
+          "ObjectName": "Class ReverseBearTrapRemover",
           "ObjectPath": "/Script/DeadByDaylight"
         }
       },
       {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasDetachStarted_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetKeyID_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
         "Type": "ObjectProperty",
-        "Name": "K2Node_Event_player",
+        "Name": "K2Node_Event_player_2",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class DBDPlayer",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_complete",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_player_1",
         "Flags": 1,
         "ElementSize": 8,
         "PropertyClass": {
@@ -110,27 +162,17 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "CallFunc_GetOwner_ReturnValue",
+        "Name": "K2Node_Event_player_3",
         "Flags": 1,
         "ElementSize": 8,
         "PropertyClass": {
-          "ObjectName": "Class Actor",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "K2Node_Event_searchingPlayer_1",
-        "Flags": 1,
-        "ElementSize": 8,
-        "PropertyClass": {
-          "ObjectName": "Class CamperPlayer",
+          "ObjectName": "Class DBDPlayer",
           "ObjectPath": "/Script/DeadByDaylight"
         }
       },
       {
         "Type": "BoolProperty",
-        "Name": "CallFunc_IsValid_ReturnValue",
+        "Name": "K2Node_Event_hasInteractionStarted",
         "Flags": 1,
         "ElementSize": 1,
         "FieldSize": 1,
@@ -142,11 +184,27 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "K2Node_DynamicCast_AsReverse_Bear_Trap_Remover",
+        "Name": "K2Node_Event_player_4",
         "Flags": 1,
         "ElementSize": 8,
         "PropertyClass": {
-          "ObjectName": "Class ReverseBearTrapRemover",
+          "ObjectName": "Class DBDPlayer",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_deltaTime",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsCamper_Player",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class CamperPlayer",
           "ObjectPath": "/Script/DeadByDaylight"
         }
       },
@@ -161,50 +219,207 @@
         "FieldMask": 255,
         "BoolSize": 1,
         "bIsNativeBool": true
-      }
-    ],
-    "FunctionFlags": 32769
-  },
-  {
-    "Type": "Function",
-    "Name": "BP_OnFinishWithoutDetach",
-    "Outer": "RemoveReverseBearTrapChargeable_C",
-    "SuperStruct": {
-      "ObjectName": "Function RemoveReverseBearTrapChargeable:BP_OnFinishWithoutDetach",
-      "ObjectPath": "/Script/ThePig"
-    },
-    "ChildProperties": [
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_TryFireScoreEvent_ReturnValue_2",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_TryFireScoreEvent_ReturnValue_3",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
       {
         "Type": "ObjectProperty",
-        "Name": "searchingPlayer",
+        "Name": "K2Node_Event_player_5",
         "Flags": 1,
         "ElementSize": 8,
-        "PropertyFlags": 148,
+        "PropertyClass": {
+          "ObjectName": "Class DBDPlayer",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_actualSnapTime",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_GetAttachedActors_OutActors",
+        "Flags": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 134217728,
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "CallFunc_GetAttachedActors_OutActors",
+          "Flags": 1,
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class Actor",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_player",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class DBDPlayer",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsCamper_Player_1",
+        "Flags": 1,
+        "ElementSize": 8,
         "PropertyClass": {
           "ObjectName": "Class CamperPlayer",
           "ObjectPath": "/Script/DeadByDaylight"
         }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetChargeableComponent_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "PropertyClass": {
+          "ObjectName": "Class ChargeableComponent",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasSuccessfullyRemoved_Success",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class Actor",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsReverse_Bear_Trap",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class ReverseBearTrap",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_2",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
       }
     ],
-    "FunctionFlags": 134744064
+    "FunctionFlags": 8421377
   },
   {
     "Type": "Function",
-    "Name": "BP_OnFinishWithDetach",
+    "Name": "OnInteractionExitStart",
     "Outer": "RemoveReverseBearTrapChargeable_C",
     "SuperStruct": {
-      "ObjectName": "Function RemoveReverseBearTrapChargeable:BP_OnFinishWithDetach",
-      "ObjectPath": "/Script/ThePig"
+      "ObjectName": "Function InteractionDefinition:OnInteractionExitStart",
+      "ObjectPath": "/Script/DeadByDaylight"
     },
     "ChildProperties": [
       {
         "Type": "ObjectProperty",
-        "Name": "searchingPlayer",
+        "Name": "player",
         "Flags": 1,
         "ElementSize": 8,
         "PropertyFlags": 148,
         "PropertyClass": {
-          "ObjectName": "Class CamperPlayer",
+          "ObjectName": "Class DBDPlayer",
           "ObjectPath": "/Script/DeadByDaylight"
         }
       }
@@ -290,6 +505,138 @@
       }
     ],
     "FunctionFlags": 134350848
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInteractionCompletionStateChanged",
+    "Outer": "RemoveReverseBearTrapChargeable_C",
+    "SuperStruct": {
+      "ObjectName": "Function ChargeableInteractionDefinition:OnInteractionCompletionStateChanged",
+      "ObjectPath": "/Script/DeadByDaylight"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "player",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "PropertyClass": {
+          "ObjectName": "Class DBDPlayer",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "complete",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInteractionFinished",
+    "Outer": "RemoveReverseBearTrapChargeable_C",
+    "SuperStruct": {
+      "ObjectName": "Function InteractionDefinition:OnInteractionFinished",
+      "ObjectPath": "/Script/DeadByDaylight"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "player",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "PropertyClass": {
+          "ObjectName": "Class DBDPlayer",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "hasInteractionStarted",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInteractionUpdateTick",
+    "Outer": "RemoveReverseBearTrapChargeable_C",
+    "SuperStruct": {
+      "ObjectName": "Function InteractionDefinition:OnInteractionUpdateTick",
+      "ObjectPath": "/Script/DeadByDaylight"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "player",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "PropertyClass": {
+          "ObjectName": "Class DBDPlayer",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "deltaTime",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      }
+    ],
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInteractionEnterStart",
+    "Outer": "RemoveReverseBearTrapChargeable_C",
+    "SuperStruct": {
+      "ObjectName": "Function InteractionDefinition:OnInteractionEnterStart",
+      "ObjectPath": "/Script/DeadByDaylight"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "player",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "PropertyClass": {
+          "ObjectName": "Class DBDPlayer",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "actualSnapTime",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      }
+    ],
+    "FunctionFlags": 134744064
   },
   {
     "Type": "Function",
@@ -405,9 +752,86 @@
       },
       {
         "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
         "Name": "CallFunc_GetKeyID_ReturnValue",
         "Flags": 1,
         "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetReverseBearTrapRemover_RBTRemover",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class ReverseBearTrapRemover",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasSearchedForKey_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 1288177664
+  },
+  {
+    "Type": "Function",
+    "Name": "GetReverseBearTrapRemover",
+    "Outer": "RemoveReverseBearTrapChargeable_C",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "RBTRemover",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 384,
+        "PropertyClass": {
+          "ObjectName": "Class ReverseBearTrapRemover",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
       },
       {
         "Type": "ObjectProperty",
@@ -443,7 +867,7 @@
       },
       {
         "Type": "BoolProperty",
-        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Name": "K2Node_DynamicCast_bSuccess",
         "Flags": 1,
         "ElementSize": 1,
         "FieldSize": 1,
@@ -452,57 +876,9 @@
         "FieldMask": 255,
         "BoolSize": 1,
         "bIsNativeBool": true
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_HasSearchedForKey_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "Temp_int_Loop_Counter_Variable",
-        "Flags": 1,
-        "ElementSize": 4
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_Not_PreBool_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_Less_IntInt_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "CallFunc_Add_IntInt_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 4
       }
     ],
-    "FunctionFlags": 1288177664
+    "FunctionFlags": 1547829248
   },
   {
     "Type": "Function",
@@ -549,8 +925,69 @@
         }
       },
       {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_AnimationMontageDescriptor",
+        "Flags": 1,
+        "ElementSize": 32,
+        "Struct": {
+          "ObjectName": "ScriptStruct AnimationMontageDescriptor",
+          "ObjectPath": "/Script/AnimationUtilities"
+        }
+      },
+      {
         "Type": "BoolProperty",
-        "Name": "CallFunc_HasSuccessfullyRemoved_ReturnValue",
+        "Name": "CallFunc_HasSuccessfullyRemoved_Success",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 1556219904
+  },
+  {
+    "Type": "Function",
+    "Name": "HasSuccessfullyRemoved",
+    "Outer": "RemoveReverseBearTrapChargeable_C",
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "Success",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 384,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetAttemptsMade_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetAttemptsNeeded_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_IntInt_ReturnValue",
         "Flags": 1,
         "ElementSize": 1,
         "FieldSize": 1,
@@ -561,17 +998,242 @@
         "bIsNativeBool": true
       },
       {
-        "Type": "StructProperty",
-        "Name": "K2Node_MakeStruct_AnimationMontageDescriptor",
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_IntInt_ReturnValue",
         "Flags": 1,
-        "ElementSize": 32,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 1547829248
+  },
+  {
+    "Type": "Function",
+    "Name": "HandlePostSuccessThings",
+    "Outer": "RemoveReverseBearTrapChargeable_C",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Survivor",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "PropertyClass": {
+          "ObjectName": "Class CamperPlayer",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 12,
         "Struct": {
-          "ObjectName": "ScriptStruct AnimationMontageDescriptor",
-          "ObjectPath": "/Script/AnimationUtilities"
+          "ObjectName": "ScriptStruct Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasPerkModifierOfType_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasPerkFlag_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetPerkModifier_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetTunableValue_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Authority_ImposeStatusEffectOfClass_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "PropertyClass": {
+          "ObjectName": "Class StatusEffect",
+          "ObjectPath": "/Script/DeadByDaylight"
         }
       }
     ],
-    "FunctionFlags": 1556219904
+    "FunctionFlags": 201457664
+  },
+  {
+    "Type": "Function",
+    "Name": "IsInteractionDone",
+    "Outer": "RemoveReverseBearTrapChargeable_C",
+    "SuperStruct": {
+      "ObjectName": "Function InteractionDefinition:IsInteractionDone",
+      "ObjectPath": "/Script/DeadByDaylight"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "player",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 150,
+        "PropertyClass": {
+          "ObjectName": "Class DBDPlayer",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "interactionType",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "Enum": {
+          "ObjectName": "Enum EInputInteractionType",
+          "ObjectPath": "/Script/DeadByDaylight"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": 1,
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 1408,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsInteractionDone_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsCamper_Player",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class CamperPlayer",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetHealthComponent_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "PropertyClass": {
+          "ObjectName": "Class CamperHealthComponent",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsKO_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 1279395840
   },
   {
     "Type": "BlueprintGeneratedClass",
@@ -583,28 +1245,56 @@
       }
     },
     "SuperStruct": {
-      "ObjectName": "Class RemoveReverseBearTrapChargeable",
-      "ObjectPath": "/Script/ThePig"
+      "ObjectName": "Class ChargeableInteractionDefinition",
+      "ObjectPath": "/Script/DeadByDaylight"
     },
     "Children": [
       {
+        "ObjectName": "Function RemoveReverseBearTrapChargeable_C:IsInteractionDone",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/ReverseBearTrap/RemoveReverseBearTrapChargeable.12"
+      },
+      {
+        "ObjectName": "Function RemoveReverseBearTrapChargeable_C:HandlePostSuccessThings",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/ReverseBearTrap/RemoveReverseBearTrapChargeable.11"
+      },
+      {
+        "ObjectName": "Function RemoveReverseBearTrapChargeable_C:HasSuccessfullyRemoved",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/ReverseBearTrap/RemoveReverseBearTrapChargeable.10"
+      },
+      {
         "ObjectName": "Function RemoveReverseBearTrapChargeable_C:GetExitMontage",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/ReverseBearTrap/RemoveReverseBearTrapChargeable.5"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/ReverseBearTrap/RemoveReverseBearTrapChargeable.9"
+      },
+      {
+        "ObjectName": "Function RemoveReverseBearTrapChargeable_C:GetReverseBearTrapRemover",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/ReverseBearTrap/RemoveReverseBearTrapChargeable.8"
       },
       {
         "ObjectName": "Function RemoveReverseBearTrapChargeable_C:IsInteractionPossibleBP",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/ReverseBearTrap/RemoveReverseBearTrapChargeable.7"
+      },
+      {
+        "ObjectName": "Function RemoveReverseBearTrapChargeable_C:OnInteractionEnterStart",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/ReverseBearTrap/RemoveReverseBearTrapChargeable.6"
+      },
+      {
+        "ObjectName": "Function RemoveReverseBearTrapChargeable_C:OnInteractionUpdateTick",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/ReverseBearTrap/RemoveReverseBearTrapChargeable.5"
+      },
+      {
+        "ObjectName": "Function RemoveReverseBearTrapChargeable_C:OnInteractionFinished",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/ReverseBearTrap/RemoveReverseBearTrapChargeable.4"
       },
       {
-        "ObjectName": "Function RemoveReverseBearTrapChargeable_C:OnSkillCheckResponseAuthorityBP",
+        "ObjectName": "Function RemoveReverseBearTrapChargeable_C:OnInteractionCompletionStateChanged",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/ReverseBearTrap/RemoveReverseBearTrapChargeable.3"
       },
       {
-        "ObjectName": "Function RemoveReverseBearTrapChargeable_C:BP_OnFinishWithDetach",
+        "ObjectName": "Function RemoveReverseBearTrapChargeable_C:OnSkillCheckResponseAuthorityBP",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/ReverseBearTrap/RemoveReverseBearTrapChargeable.2"
       },
       {
-        "ObjectName": "Function RemoveReverseBearTrapChargeable_C:BP_OnFinishWithoutDetach",
+        "ObjectName": "Function RemoveReverseBearTrapChargeable_C:OnInteractionExitStart",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/ReverseBearTrap/RemoveReverseBearTrapChargeable.1"
       },
       {
@@ -622,6 +1312,30 @@
         "Struct": {
           "ObjectName": "ScriptStruct PointerToUberGraphFrame",
           "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Charged",
+        "Flags": 2097153,
+        "ElementSize": 1,
+        "PropertyFlags": 65541,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RBT",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 67589,
+        "PropertyClass": {
+          "ObjectName": "Class ReverseBearTrap",
+          "ObjectPath": "/Script/DeadByDaylight"
         }
       },
       {
@@ -644,25 +1358,53 @@
         "ObjectName": "Function RemoveReverseBearTrapChargeable_C:ExecuteUbergraph_RemoveReverseBearTrapChargeable",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/ReverseBearTrap/RemoveReverseBearTrapChargeable.0"
       },
-      "BP_OnFinishWithoutDetach": {
-        "ObjectName": "Function RemoveReverseBearTrapChargeable_C:BP_OnFinishWithoutDetach",
+      "OnInteractionExitStart": {
+        "ObjectName": "Function RemoveReverseBearTrapChargeable_C:OnInteractionExitStart",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/ReverseBearTrap/RemoveReverseBearTrapChargeable.1"
-      },
-      "BP_OnFinishWithDetach": {
-        "ObjectName": "Function RemoveReverseBearTrapChargeable_C:BP_OnFinishWithDetach",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/ReverseBearTrap/RemoveReverseBearTrapChargeable.2"
       },
       "OnSkillCheckResponseAuthorityBP": {
         "ObjectName": "Function RemoveReverseBearTrapChargeable_C:OnSkillCheckResponseAuthorityBP",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/ReverseBearTrap/RemoveReverseBearTrapChargeable.2"
+      },
+      "OnInteractionCompletionStateChanged": {
+        "ObjectName": "Function RemoveReverseBearTrapChargeable_C:OnInteractionCompletionStateChanged",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/ReverseBearTrap/RemoveReverseBearTrapChargeable.3"
+      },
+      "OnInteractionFinished": {
+        "ObjectName": "Function RemoveReverseBearTrapChargeable_C:OnInteractionFinished",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/ReverseBearTrap/RemoveReverseBearTrapChargeable.4"
+      },
+      "OnInteractionUpdateTick": {
+        "ObjectName": "Function RemoveReverseBearTrapChargeable_C:OnInteractionUpdateTick",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/ReverseBearTrap/RemoveReverseBearTrapChargeable.5"
+      },
+      "OnInteractionEnterStart": {
+        "ObjectName": "Function RemoveReverseBearTrapChargeable_C:OnInteractionEnterStart",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/ReverseBearTrap/RemoveReverseBearTrapChargeable.6"
       },
       "IsInteractionPossibleBP": {
         "ObjectName": "Function RemoveReverseBearTrapChargeable_C:IsInteractionPossibleBP",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/ReverseBearTrap/RemoveReverseBearTrapChargeable.4"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/ReverseBearTrap/RemoveReverseBearTrapChargeable.7"
+      },
+      "GetReverseBearTrapRemover": {
+        "ObjectName": "Function RemoveReverseBearTrapChargeable_C:GetReverseBearTrapRemover",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/ReverseBearTrap/RemoveReverseBearTrapChargeable.8"
       },
       "GetExitMontage": {
         "ObjectName": "Function RemoveReverseBearTrapChargeable_C:GetExitMontage",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/ReverseBearTrap/RemoveReverseBearTrapChargeable.5"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/ReverseBearTrap/RemoveReverseBearTrapChargeable.9"
+      },
+      "HasSuccessfullyRemoved": {
+        "ObjectName": "Function RemoveReverseBearTrapChargeable_C:HasSuccessfullyRemoved",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/ReverseBearTrap/RemoveReverseBearTrapChargeable.10"
+      },
+      "HandlePostSuccessThings": {
+        "ObjectName": "Function RemoveReverseBearTrapChargeable_C:HandlePostSuccessThings",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/ReverseBearTrap/RemoveReverseBearTrapChargeable.11"
+      },
+      "IsInteractionDone": {
+        "ObjectName": "Function RemoveReverseBearTrapChargeable_C:IsInteractionDone",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/ReverseBearTrap/RemoveReverseBearTrapChargeable.12"
       }
     },
     "ClassFlags": 10754068,
@@ -674,7 +1416,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "RemoveReverseBearTrapChargeable_C Default__RemoveReverseBearTrapChargeable_C",
-      "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/ReverseBearTrap/RemoveReverseBearTrapChargeable.7"
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/ReverseBearTrap/RemoveReverseBearTrapChargeable.14"
     }
   },
   {
@@ -699,15 +1441,13 @@
       "InteractionDescriptionText": {
         "Namespace": "",
         "Key": "D65EAD0F46730490322A7A9085334381",
-        "SourceString": "Remove Trap"
+        "SourceString": "RemoveTrap",
+        "LocalizedString": "Remove Trap"
       },
       "InteractionCanBeToggled": true,
       "_tags": [
         "Semantics.Interaction.Id.Survivor.RemovingRBT"
-      ],
-      "_objectStateTag": {
-        "TagName": "State.Interaction.KillerSpecific.Pig.RemoveReverseBearTrap"
-      }
+      ]
     }
   }
 ]

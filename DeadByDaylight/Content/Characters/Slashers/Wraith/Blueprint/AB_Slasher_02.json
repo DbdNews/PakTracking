@@ -19,6 +19,18 @@
       },
       {
         "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
         "Name": "CallFunc_LessEqual_FloatFloat_ReturnValue",
         "Flags": 1,
         "ElementSize": 1,
@@ -31,7 +43,7 @@
       },
       {
         "Type": "BoolProperty",
-        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Name": "CallFunc_BooleanOR_ReturnValue",
         "Flags": 1,
         "ElementSize": 1,
         "FieldSize": 1,
@@ -52,18 +64,6 @@
         }
       },
       {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_BooleanOR_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
         "Type": "StructProperty",
         "Name": "CallFunc_K2_GetActorRotation_ReturnValue",
         "Flags": 1,
@@ -72,6 +72,18 @@
           "ObjectName": "ScriptStruct Rotator",
           "ObjectPath": "/Script/CoreUObject"
         }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
       },
       {
         "Type": "FloatProperty",
@@ -98,16 +110,14 @@
         "ElementSize": 4
       },
       {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_IsValid_ReturnValue",
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetSocketLocation_ReturnValue",
         "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
       },
       {
         "Type": "StructProperty",
@@ -116,16 +126,6 @@
         "ElementSize": 12,
         "Struct": {
           "ObjectName": "ScriptStruct Rotator",
-          "ObjectPath": "/Script/CoreUObject"
-        }
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "CallFunc_GetSocketLocation_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 12,
-        "Struct": {
-          "ObjectName": "ScriptStruct Vector",
           "ObjectPath": "/Script/CoreUObject"
         }
       },
@@ -141,16 +141,6 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "CallFunc_GetLinkedAnimGraphInstanceByTag_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 8,
-        "PropertyClass": {
-          "ObjectName": "Class AnimInstance",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
         "Name": "CallFunc_SpawnDecalAtLocation_ReturnValue",
         "Flags": 1,
         "ElementSize": 8,
@@ -159,41 +149,9 @@
           "ObjectName": "Class DecalComponent",
           "ObjectPath": "/Script/Engine"
         }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "K2Node_DynamicCast_AsAB_Slasher_Sub_Graph_Locomotion_00",
-        "Flags": 1,
-        "ElementSize": 8,
-        "PropertyClass": {
-          "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_SubGraph_Locomotion_00_C",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Anim_SubGraph/AB_Slasher_SubGraph_Locomotion_00.9"
-        }
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "K2Node_DynamicCast_bSuccess",
-        "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
       }
     ],
     "FunctionFlags": 32769
-  },
-  {
-    "Type": "Function",
-    "Name": "BlueprintLinkedAnimationLayersInitialized",
-    "Outer": "AB_Slasher_02_C",
-    "SuperStruct": {
-      "ObjectName": "Function AnimInstance:BlueprintLinkedAnimationLayersInitialized",
-      "ObjectPath": "/Script/Engine"
-    },
-    "FunctionFlags": 134350848
   },
   {
     "Type": "Function",
@@ -625,7 +583,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
             }
           }
         },
@@ -652,7 +610,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
             }
           }
         },
@@ -671,7 +629,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
             }
           }
         },
@@ -694,7 +652,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
             }
           }
         },
@@ -717,7 +675,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
             }
           }
         },
@@ -736,7 +694,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
             }
           }
         },
@@ -759,7 +717,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
             }
           }
         },
@@ -782,7 +740,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
             }
           }
         },
@@ -805,7 +763,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
             }
           }
         },
@@ -824,7 +782,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
             }
           }
         },
@@ -843,7 +801,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
             }
           }
         },
@@ -862,7 +820,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
             }
           }
         },
@@ -881,7 +839,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
             }
           }
         },
@@ -904,7 +862,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
             }
           }
         },
@@ -923,7 +881,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
             }
           }
         },
@@ -946,7 +904,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
             }
           }
         },
@@ -969,7 +927,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
             }
           }
         },
@@ -992,7 +950,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
             }
           }
         },
@@ -1011,7 +969,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
             }
           }
         },
@@ -1030,7 +988,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
             }
           }
         },
@@ -1049,7 +1007,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
             }
           }
         },
@@ -1068,7 +1026,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
             }
           }
         },
@@ -1087,7 +1045,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
             }
           }
         },
@@ -1106,7 +1064,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
             }
           }
         },
@@ -1125,7 +1083,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
             }
           }
         },
@@ -1144,7 +1102,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
             }
           }
         },
@@ -1153,7 +1111,7 @@
           "CopyRecords": [],
           "Function": {
             "ObjectName": "Function AB_Slasher_02_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AB_Slasher_02_AnimGraphNode_TransitionResult_009D31B744CA75D5AF7B35BB5CA0797A",
-            "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.3"
+            "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.2"
           },
           "ValueHandlerNodeProperty": {
             "Path": [
@@ -1161,7 +1119,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
             }
           }
         },
@@ -1180,7 +1138,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
             }
           }
         },
@@ -1199,7 +1157,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
             }
           }
         }
@@ -1231,7 +1189,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -1263,7 +1221,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -1295,7 +1253,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -1327,7 +1285,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -1359,7 +1317,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -1391,7 +1349,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -1423,7 +1381,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -1455,7 +1413,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -1487,7 +1445,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -1519,7 +1477,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -1551,7 +1509,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -1583,7 +1541,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -1615,7 +1573,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -1647,7 +1605,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -1701,7 +1659,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -1752,7 +1710,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -1803,7 +1761,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -1873,7 +1831,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -1924,7 +1882,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -1994,7 +1952,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -2045,7 +2003,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -2115,7 +2073,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -2166,7 +2124,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -2217,7 +2175,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -2287,7 +2245,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -2357,7 +2315,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -2408,7 +2366,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -2478,7 +2436,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -2529,7 +2487,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -2580,7 +2538,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -2650,7 +2608,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -2701,7 +2659,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -2771,7 +2729,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -2822,7 +2780,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -2892,7 +2850,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -2943,7 +2901,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -2994,7 +2952,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -3064,7 +3022,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -3134,7 +3092,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -3185,7 +3143,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -3236,7 +3194,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -3287,7 +3245,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -3338,7 +3296,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -3389,7 +3347,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -3440,7 +3398,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -3491,7 +3449,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
               }
             },
             "Function": null,
@@ -4272,18 +4230,14 @@
     "Children": [
       {
         "ObjectName": "Function AB_Slasher_02_C:AnimGraph",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
-      },
-      {
-        "ObjectName": "Function AB_Slasher_02_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AB_Slasher_02_AnimGraphNode_TransitionResult_009D31B744CA75D5AF7B35BB5CA0797A",
         "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.3"
       },
       {
-        "ObjectName": "Function AB_Slasher_02_C:AnimNotify_FX_TT_BreakableWall_Kick_Decal",
+        "ObjectName": "Function AB_Slasher_02_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AB_Slasher_02_AnimGraphNode_TransitionResult_009D31B744CA75D5AF7B35BB5CA0797A",
         "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.2"
       },
       {
-        "ObjectName": "Function AB_Slasher_02_C:BlueprintLinkedAnimationLayersInitialized",
+        "ObjectName": "Function AB_Slasher_02_C:AnimNotify_FX_TT_BreakableWall_Kick_Decal",
         "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.1"
       },
       {
@@ -5359,17 +5313,6 @@
           "ObjectName": "ScriptStruct AnimSequenceSelector",
           "ObjectPath": "/Script/AnimationUtilities"
         }
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "ASet_Locomotion",
-        "Flags": 2097153,
-        "ElementSize": 152,
-        "PropertyFlags": 65541,
-        "Struct": {
-          "ObjectName": "UserDefinedStruct ASet_Slasher_BaseLocomotion",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Animations/AnimSets/ASet_Slasher_BaseLocomotion.0"
-        }
       }
     ],
     "FuncMap": {
@@ -5377,21 +5320,17 @@
         "ObjectName": "Function AB_Slasher_02_C:ExecuteUbergraph_AB_Slasher_02",
         "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.0"
       },
-      "BlueprintLinkedAnimationLayersInitialized": {
-        "ObjectName": "Function AB_Slasher_02_C:BlueprintLinkedAnimationLayersInitialized",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.1"
-      },
       "AnimNotify_FX_TT_BreakableWall_Kick_Decal": {
         "ObjectName": "Function AB_Slasher_02_C:AnimNotify_FX_TT_BreakableWall_Kick_Decal",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.2"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.1"
       },
       "EvaluateGraphExposedInputs_ExecuteUbergraph_AB_Slasher_02_AnimGraphNode_TransitionResult_009D31B744CA75D5AF7B35BB5CA0797A": {
         "ObjectName": "Function AB_Slasher_02_C:EvaluateGraphExposedInputs_ExecuteUbergraph_AB_Slasher_02_AnimGraphNode_TransitionResult_009D31B744CA75D5AF7B35BB5CA0797A",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.3"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.2"
       },
       "AnimGraph": {
         "ObjectName": "Function AB_Slasher_02_C:AnimGraph",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.4"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.3"
       }
     },
     "ClassFlags": 8652824,
@@ -5403,7 +5342,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "AB_Slasher_02_C Default__AB_Slasher_02_C",
-      "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.6"
+      "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
     }
   },
   {
@@ -5455,7 +5394,7 @@
         ],
         "InstanceClass": {
           "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_SubGraph_FPVIK_00_C",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Anim_SubGraph/AB_Slasher_SubGraph_FPVIK_00.2"
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Anim_SubGraph/AB_Slasher_SubGraph_FPVIK_00.3"
         },
         "Tag": "None",
         "bReceiveNotifiesFromLinkedInstances": false,
@@ -8593,13 +8532,9 @@
           {
             "SourceIndex": 0,
             "BlendWeight": 1.0
-          },
-          {
-            "SourceIndex": 0,
-            "BlendWeight": 1.0
           }
         ],
-        "SkeletonGuid": "9F2652A5-4FDF59BE-2DBC5DB3-1F0E496E",
+        "SkeletonGuid": "BA25543D-42B5BF2A-4F706EBD-7340A4D0",
         "VirtualBoneGuid": "995D83FA-4A9560E5-229D1FAA-D164AD84"
       },
       "AnimGraphNode_BlendListByBool_5": {
@@ -11690,13 +11625,9 @@
           {
             "SourceIndex": 0,
             "BlendWeight": 1.0
-          },
-          {
-            "SourceIndex": 0,
-            "BlendWeight": 1.0
           }
         ],
-        "SkeletonGuid": "9F2652A5-4FDF59BE-2DBC5DB3-1F0E496E",
+        "SkeletonGuid": "BA25543D-42B5BF2A-4F706EBD-7340A4D0",
         "VirtualBoneGuid": "995D83FA-4A9560E5-229D1FAA-D164AD84"
       },
       "AnimGraphNode_BlendListByBool_4": {
@@ -14807,13 +14738,9 @@
           {
             "SourceIndex": 0,
             "BlendWeight": 1.0
-          },
-          {
-            "SourceIndex": 0,
-            "BlendWeight": 1.0
           }
         ],
-        "SkeletonGuid": "9F2652A5-4FDF59BE-2DBC5DB3-1F0E496E",
+        "SkeletonGuid": "BA25543D-42B5BF2A-4F706EBD-7340A4D0",
         "VirtualBoneGuid": "995D83FA-4A9560E5-229D1FAA-D164AD84"
       },
       "AnimGraphNode_UseCachedPose_4": {
@@ -17884,13 +17811,9 @@
           {
             "SourceIndex": 0,
             "BlendWeight": 1.0
-          },
-          {
-            "SourceIndex": 0,
-            "BlendWeight": 1.0
           }
         ],
-        "SkeletonGuid": "9F2652A5-4FDF59BE-2DBC5DB3-1F0E496E",
+        "SkeletonGuid": "BA25543D-42B5BF2A-4F706EBD-7340A4D0",
         "VirtualBoneGuid": "995D83FA-4A9560E5-229D1FAA-D164AD84"
       },
       "AnimGraphNode_BlendListByBool_2": {
@@ -20981,13 +20904,9 @@
           {
             "SourceIndex": 0,
             "BlendWeight": 1.0
-          },
-          {
-            "SourceIndex": 0,
-            "BlendWeight": 1.0
           }
         ],
-        "SkeletonGuid": "9F2652A5-4FDF59BE-2DBC5DB3-1F0E496E",
+        "SkeletonGuid": "BA25543D-42B5BF2A-4F706EBD-7340A4D0",
         "VirtualBoneGuid": "995D83FA-4A9560E5-229D1FAA-D164AD84"
       },
       "AnimGraphNode_BlendListByBool_1": {
@@ -24098,13 +24017,9 @@
           {
             "SourceIndex": 0,
             "BlendWeight": 1.0
-          },
-          {
-            "SourceIndex": 0,
-            "BlendWeight": 1.0
           }
         ],
-        "SkeletonGuid": "9F2652A5-4FDF59BE-2DBC5DB3-1F0E496E",
+        "SkeletonGuid": "BA25543D-42B5BF2A-4F706EBD-7340A4D0",
         "VirtualBoneGuid": "995D83FA-4A9560E5-229D1FAA-D164AD84"
       },
       "AnimGraphNode_UseCachedPose_1": {
@@ -24178,10 +24093,10 @@
         "InputPoses": [],
         "InputPoseNames": [],
         "InstanceClass": {
-          "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_SubGraph_Locomotion_00_C",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Anim_SubGraph/AB_Slasher_SubGraph_Locomotion_00.9"
+          "ObjectName": "AnimBlueprintGeneratedClass ABSub_Slasher_02_Locomotion_00_C",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/ABSub_Slasher_02_Locomotion_00.2"
         },
-        "Tag": "K02_Locomotion",
+        "Tag": "None",
         "bReceiveNotifiesFromLinkedInstances": false,
         "bPropagateNotifiesToLinkedInstances": false,
         "SourcePropertyNames": [
@@ -24504,84 +24419,6 @@
             ]
           }
         ]
-      },
-      "ASet_Locomotion": {
-        "Stand_2_3B2E928C4988C5A26B86BF8424E6BC41": {
-          "ObjectName": "AnimSequence TW_Stand",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/AnimSequences/Locomotion/TW_Stand.0"
-        },
-        "Idle_4_6328A2F8424FF53878DCA991D3524E5D": {
-          "ObjectName": "AnimSequence TW_Idle",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/AnimSequences/Locomotion/TW_Idle.0"
-        },
-        "Idle_FPV_12_0F2E8166496EE8EFEEB594A7A5F2DF2F": {
-          "ObjectName": "AnimSequence TW_Idle_FPV",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/AnimSequences/Locomotion/TW_Idle_FPV.0"
-        },
-        "BS_Locomotion_7_9C21B5A245AFB28C8D17E28F36D0D9B8": {
-          "ObjectName": "BlendSpace BS_TW_Locomotion",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blendspaces/BS_TW_Locomotion.0"
-        },
-        "BS_Locomotion_FPV_9_E9BF61EA4981B08D98C7388F62709196": {
-          "ObjectName": "BlendSpace BS_TT_Locomotion_FPV",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Trapper/Blendspaces/BS_TT_Locomotion_FPV.0"
-        },
-        "BS_Carry_Locomotion_15_E7DBF6714CE3714CA4466C9F0623BADA": {
-          "ObjectName": "BlendSpace BS_TW_Locomotion",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blendspaces/BS_TW_Locomotion.0"
-        },
-        "BS_Carry_Locomotion_FPV_46_0488917444E7A4D5A24E1FA0F1BE80A8": {
-          "ObjectName": "BlendSpace BS_TW_Locomotion",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blendspaces/BS_TW_Locomotion.0"
-        },
-        "End_Game_Walk_18_3B56BD9843A973929F9C3988155F9E33": {
-          "ObjectName": "AnimSequence TW_RunFT",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/AnimSequences/Locomotion/TW_RunFT.0"
-        },
-        "Search_Locker_20_17C21A1D41ED7FD778EF8F80B13DDD22": {
-          "ObjectName": "AnimSequence TT_Search_Locker",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Trapper/AnimSequences/Interactions/TT_Search_Locker.0"
-        },
-        "Land_Light_22_AB1CEA0D44A24466524BD2AF64864915": {
-          "ObjectName": "AnimSequence TW_LandLight",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/AnimSequences/Locomotion/TW_LandLight.0"
-        },
-        "Land_Light_FPV_24_E4110DFE41E5829161139CA4181FF0CE": {
-          "ObjectName": "AnimSequence TW_LandLight",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/AnimSequences/Locomotion/TW_LandLight.0"
-        },
-        "BS_Land_28_6DF82D5440FE21353642E8AE2490A437": {
-          "ObjectName": "BlendSpace1D BS_TW_Land",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blendspaces/BS_TW_Land.0"
-        },
-        "BS_Land_FPV_30_7C75AC0E450FA49FE64FCAAF3B5A7BD9": {
-          "ObjectName": "BlendSpace1D BS_TW_Land",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blendspaces/BS_TW_Land.0"
-        },
-        "Walk_To_Fall_33_A5C5BCB143C80C885059568C4903F37C": {
-          "ObjectName": "AnimSequence TT_Walk2Fall",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Trapper/AnimSequences/Locomotion/TT_Walk2Fall.0"
-        },
-        "Walk_To_Fall_FPV_39_41B9CFBD40D5BCA8F0086D92DBA1DE50": {
-          "ObjectName": "AnimSequence TT_Walk2Fall",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Trapper/AnimSequences/Locomotion/TT_Walk2Fall.0"
-        },
-        "Carry_Idle_40_C930FC4A43802CA008EB9EA4D8CAE6D1": {
-          "ObjectName": "AnimSequence TT_Carry_Idle",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Trapper/AnimSequences/Locomotion/TT_Carry_Idle.0"
-        },
-        "Carry_Idle_FPV_41_061F9E3F4617FE2356D0DDAEEF515C61": {
-          "ObjectName": "AnimSequence TT_Carry_Idle",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Trapper/AnimSequences/Locomotion/TT_Carry_Idle.0"
-        },
-        "Falling_42_B6B41C744ECDDAD8730F2BB7C991C452": {
-          "ObjectName": "AnimSequence TT_Fall",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Trapper/AnimSequences/Locomotion/TT_Fall.0"
-        },
-        "Falling_FPV_43_9ABB0E3C49DA478276C4AF94E24E2A23": {
-          "ObjectName": "AnimSequence TT_Fall",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Trapper/AnimSequences/Locomotion/TT_Fall.0"
-        }
       },
       "_cloakingInSelector": {
         "_thirdPerson": {

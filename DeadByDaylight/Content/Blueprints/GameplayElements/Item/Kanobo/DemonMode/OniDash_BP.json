@@ -29,18 +29,6 @@
         }
       },
       {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_IsValid_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
         "Type": "DelegateProperty",
         "Name": "Temp_delegate_Variable",
         "Flags": 1,
@@ -139,12 +127,6 @@
         }
       },
       {
-        "Type": "IntProperty",
-        "Name": "CallFunc_PostAkEvent_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 4
-      },
-      {
         "Type": "ObjectProperty",
         "Name": "K2Node_Event_player_2",
         "Flags": 1,
@@ -167,7 +149,7 @@
       },
       {
         "Type": "IntProperty",
-        "Name": "CallFunc_Array_AddUnique_ReturnValue",
+        "Name": "CallFunc_PostAkEvent_ReturnValue",
         "Flags": 1,
         "ElementSize": 4
       },
@@ -180,6 +162,35 @@
           "ObjectName": "Class DBDPlayer",
           "ObjectPath": "/Script/DeadByDaylight"
         }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAudioComponent_ReturnValue_2",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "PropertyClass": {
+          "ObjectName": "Class AkComponent",
+          "ObjectPath": "/Script/AkAudio"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_PostAkEvent_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_PostAkEvent_ReturnValue_2",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_AddUnique_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
       },
       {
         "Type": "ObjectProperty",
@@ -206,17 +217,6 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "CallFunc_GetAudioComponent_ReturnValue_2",
-        "Flags": 1,
-        "ElementSize": 8,
-        "PropertyFlags": 524288,
-        "PropertyClass": {
-          "ObjectName": "Class AkComponent",
-          "ObjectPath": "/Script/AkAudio"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
         "Name": "CallFunc_CreateDynamicMaterialInstance_ReturnValue",
         "Flags": 1,
         "ElementSize": 8,
@@ -224,18 +224,6 @@
           "ObjectName": "Class MaterialInstanceDynamic",
           "ObjectPath": "/Script/Engine"
         }
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "CallFunc_PostAkEvent_ReturnValue_1",
-        "Flags": 1,
-        "ElementSize": 4
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "CallFunc_PostAkEvent_ReturnValue_2",
-        "Flags": 1,
-        "ElementSize": 4
       },
       {
         "Type": "DelegateProperty",
@@ -304,6 +292,42 @@
         "Name": "CallFunc_PostAkEvent_ReturnValue_4",
         "Flags": 1,
         "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_ShouldUseAtlantaControls_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_ShouldUseAtlantaControls_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
       }
     ],
     "FunctionFlags": 8421377
@@ -369,10 +393,10 @@
   },
   {
     "Type": "Function",
-    "Name": "OnDashEnd",
+    "Name": "OnDashBegin",
     "Outer": "OniDash_BP_C",
     "SuperStruct": {
-      "ObjectName": "Function OniDashInteraction:OnDashEnd",
+      "ObjectName": "Function OniDashInteraction:OnDashBegin",
       "ObjectPath": "/Script/TheOni"
     },
     "ChildProperties": [
@@ -392,10 +416,10 @@
   },
   {
     "Type": "Function",
-    "Name": "OnDashBegin",
+    "Name": "OnDashEnd",
     "Outer": "OniDash_BP_C",
     "SuperStruct": {
-      "ObjectName": "Function OniDashInteraction:OnDashBegin",
+      "ObjectName": "Function OniDashInteraction:OnDashEnd",
       "ObjectPath": "/Script/TheOni"
     },
     "ChildProperties": [
@@ -428,11 +452,11 @@
     },
     "Children": [
       {
-        "ObjectName": "Function OniDash_BP_C:OnDashBegin",
+        "ObjectName": "Function OniDash_BP_C:OnDashEnd",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/Kanobo/DemonMode/OniDash_BP.4"
       },
       {
-        "ObjectName": "Function OniDash_BP_C:OnDashEnd",
+        "ObjectName": "Function OniDash_BP_C:OnDashBegin",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/Kanobo/DemonMode/OniDash_BP.3"
       },
       {
@@ -492,12 +516,12 @@
         "ObjectName": "Function OniDash_BP_C:OnChargeBegin",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/Kanobo/DemonMode/OniDash_BP.2"
       },
-      "OnDashEnd": {
-        "ObjectName": "Function OniDash_BP_C:OnDashEnd",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/Kanobo/DemonMode/OniDash_BP.3"
-      },
       "OnDashBegin": {
         "ObjectName": "Function OniDash_BP_C:OnDashBegin",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/Kanobo/DemonMode/OniDash_BP.3"
+      },
+      "OnDashEnd": {
+        "ObjectName": "Function OniDash_BP_C:OnDashEnd",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/Kanobo/DemonMode/OniDash_BP.4"
       }
     },
@@ -531,11 +555,14 @@
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/Kanobo/DemonMode/OniDashCooldownSpeedCurve.0"
       },
       "InteractionID": "OniDash",
+      "InteractionAtlantaInputType": "EInputInteractionType::VE_ActionKiller",
       "InteractionDescriptionText": {
         "Namespace": "",
         "Key": "5A29969247E1AF410FAD7BB8D1AF07D0",
-        "SourceString": "Demon Dash"
-      }
+        "SourceString": "Dash",
+        "LocalizedString": "Demon Dash"
+      },
+      "CancelButtonType": "EButtonType::SecondaryActionButton"
     }
   }
 ]
