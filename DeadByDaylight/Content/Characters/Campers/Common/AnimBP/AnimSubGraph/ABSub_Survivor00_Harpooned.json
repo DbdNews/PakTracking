@@ -192,6 +192,17 @@
         }
       },
       {
+        "Type": "StructProperty",
+        "Name": "Temp_struct_Variable_8",
+        "Flags": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 2,
+        "Struct": {
+          "ObjectName": "ScriptStruct GameplayTag",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
         "Type": "BoolProperty",
         "Name": "CallFunc_Greater_FloatFloat_ReturnValue",
         "Flags": 1,
@@ -205,7 +216,7 @@
       },
       {
         "Type": "BoolProperty",
-        "Name": "CallFunc_BooleanAND_ReturnValue",
+        "Name": "CallFunc_LessEqual_FloatFloat_ReturnValue_2",
         "Flags": 1,
         "ElementSize": 1,
         "FieldSize": 1,
@@ -216,19 +227,8 @@
         "bIsNativeBool": true
       },
       {
-        "Type": "StructProperty",
-        "Name": "Temp_struct_Variable_8",
-        "Flags": 1,
-        "ElementSize": 12,
-        "PropertyFlags": 2,
-        "Struct": {
-          "ObjectName": "ScriptStruct GameplayTag",
-          "ObjectPath": "/Script/GameplayTags"
-        }
-      },
-      {
         "Type": "BoolProperty",
-        "Name": "CallFunc_LessEqual_FloatFloat_ReturnValue_2",
+        "Name": "CallFunc_BooleanAND_ReturnValue",
         "Flags": 1,
         "ElementSize": 1,
         "FieldSize": 1,
@@ -495,31 +495,31 @@
   },
   {
     "Type": "Function",
-    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_00CC449C4F72CF73CD5F0484D07E79E2",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_95F8567F4B0569FD9606779CD455E8E0",
     "Outer": "ABSub_Survivor00_Harpooned_C",
     "FunctionFlags": 134217728
   },
   {
     "Type": "Function",
-    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_0B7FAD4B48A3F71731330B9EE29A9A33",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_B30C726846C536E5CC64238C45A6C1EE",
     "Outer": "ABSub_Survivor00_Harpooned_C",
     "FunctionFlags": 134217728
   },
   {
     "Type": "Function",
-    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_16A47B8D40B3E4BA22B0E9BE560F385C",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_6D9CB78E498AE3CD54DCBCB77AD22A9A",
     "Outer": "ABSub_Survivor00_Harpooned_C",
     "FunctionFlags": 134217728
   },
   {
     "Type": "Function",
-    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_TransitionResult_E889490E4EA802A21BED739FC9D4588D",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_TransitionResult_526EBE484317108F01EE248C927D31AA",
     "Outer": "ABSub_Survivor00_Harpooned_C",
     "FunctionFlags": 134217728
   },
   {
     "Type": "Function",
-    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_LayeredBoneBlend_0478A5DA43241BD1B898EFADD3A1ACE6",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_LayeredBoneBlend_FB6CAA9A44144EE1108B18A45D768E37",
     "Outer": "ABSub_Survivor00_Harpooned_C",
     "FunctionFlags": 134217728
   },
@@ -528,17 +528,6 @@
     "Name": "AnimGraph",
     "Outer": "ABSub_Survivor00_Harpooned_C",
     "ChildProperties": [
-      {
-        "Type": "StructProperty",
-        "Name": "InPose",
-        "Flags": 1,
-        "ElementSize": 24,
-        "PropertyFlags": 148,
-        "Struct": {
-          "ObjectName": "ScriptStruct PoseLink",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
       {
         "Type": "StructProperty",
         "Name": "AnimGraph",
@@ -554,6 +543,36 @@
     "FunctionFlags": 205520896
   },
   {
+    "Type": "Function",
+    "Name": "KillerSpecificSurvivorAnimation",
+    "Outer": "ABSub_Survivor00_Harpooned_C",
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "InPose",
+        "Flags": 1,
+        "ElementSize": 24,
+        "PropertyFlags": 148,
+        "Struct": {
+          "ObjectName": "ScriptStruct PoseLink",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "KillerSpecificSurvivorAnimation",
+        "Flags": 1,
+        "ElementSize": 24,
+        "PropertyFlags": 384,
+        "Struct": {
+          "ObjectName": "ScriptStruct PoseLink",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": 71303168
+  },
+  {
     "Type": "AnimBlueprintGeneratedClass",
     "Name": "ABSub_Survivor00_Harpooned_C",
     "Properties": {
@@ -566,7 +585,7 @@
               "StateName": "Base",
               "Transitions": [
                 {
-                  "CanTakeDelegateIndex": 7,
+                  "CanTakeDelegateIndex": 8,
                   "CustomResultNodeIndex": -1,
                   "TransitionIndex": 0,
                   "bDesiredTransitionReturnValue": true,
@@ -574,7 +593,7 @@
                   "PoseEvaluatorLinks": []
                 }
               ],
-              "StateRootNodeIndex": 1,
+              "StateRootNodeIndex": 2,
               "StartNotify": -1,
               "EndNotify": -1,
               "FullyBlendedNotify": -1,
@@ -588,7 +607,7 @@
               "StateName": "ChainBreak",
               "Transitions": [
                 {
-                  "CanTakeDelegateIndex": 8,
+                  "CanTakeDelegateIndex": 9,
                   "CustomResultNodeIndex": -1,
                   "TransitionIndex": 1,
                   "bDesiredTransitionReturnValue": true,
@@ -596,14 +615,14 @@
                   "PoseEvaluatorLinks": []
                 }
               ],
-              "StateRootNodeIndex": 3,
+              "StateRootNodeIndex": 4,
               "StartNotify": 0,
               "EndNotify": -1,
               "FullyBlendedNotify": -1,
               "bIsAConduit": false,
               "EntryRuleNodeIndex": -1,
               "PlayerNodeIndices": [
-                5
+                6
               ],
               "LayerNodeIndices": [],
               "bAlwaysResetOnEntry": false
@@ -646,7 +665,7 @@
               "StateName": "Base",
               "Transitions": [
                 {
-                  "CanTakeDelegateIndex": 39,
+                  "CanTakeDelegateIndex": 40,
                   "CustomResultNodeIndex": -1,
                   "TransitionIndex": 0,
                   "bDesiredTransitionReturnValue": true,
@@ -654,7 +673,7 @@
                   "PoseEvaluatorLinks": []
                 }
               ],
-              "StateRootNodeIndex": 14,
+              "StateRootNodeIndex": 15,
               "StartNotify": -1,
               "EndNotify": -1,
               "FullyBlendedNotify": -1,
@@ -668,7 +687,7 @@
               "StateName": "Harpooned",
               "Transitions": [
                 {
-                  "CanTakeDelegateIndex": 40,
+                  "CanTakeDelegateIndex": 41,
                   "CustomResultNodeIndex": -1,
                   "TransitionIndex": 1,
                   "bDesiredTransitionReturnValue": true,
@@ -676,7 +695,7 @@
                   "PoseEvaluatorLinks": []
                 },
                 {
-                  "CanTakeDelegateIndex": 41,
+                  "CanTakeDelegateIndex": 42,
                   "CustomResultNodeIndex": -1,
                   "TransitionIndex": 7,
                   "bDesiredTransitionReturnValue": true,
@@ -684,7 +703,7 @@
                   "PoseEvaluatorLinks": []
                 },
                 {
-                  "CanTakeDelegateIndex": 42,
+                  "CanTakeDelegateIndex": 43,
                   "CustomResultNodeIndex": -1,
                   "TransitionIndex": 6,
                   "bDesiredTransitionReturnValue": true,
@@ -697,7 +716,7 @@
               "EndNotify": -1,
               "FullyBlendedNotify": -1,
               "bIsAConduit": true,
-              "EntryRuleNodeIndex": 16,
+              "EntryRuleNodeIndex": 17,
               "PlayerNodeIndices": [],
               "LayerNodeIndices": [],
               "bAlwaysResetOnEntry": false
@@ -706,7 +725,7 @@
               "StateName": "Not_Moving",
               "Transitions": [
                 {
-                  "CanTakeDelegateIndex": 40,
+                  "CanTakeDelegateIndex": 41,
                   "CustomResultNodeIndex": -1,
                   "TransitionIndex": 8,
                   "bDesiredTransitionReturnValue": true,
@@ -714,7 +733,7 @@
                   "PoseEvaluatorLinks": []
                 },
                 {
-                  "CanTakeDelegateIndex": 41,
+                  "CanTakeDelegateIndex": 42,
                   "CustomResultNodeIndex": -1,
                   "TransitionIndex": 4,
                   "bDesiredTransitionReturnValue": true,
@@ -722,14 +741,14 @@
                   "PoseEvaluatorLinks": []
                 }
               ],
-              "StateRootNodeIndex": 17,
+              "StateRootNodeIndex": 18,
               "StartNotify": -1,
               "EndNotify": -1,
               "FullyBlendedNotify": -1,
               "bIsAConduit": false,
               "EntryRuleNodeIndex": -1,
               "PlayerNodeIndices": [
-                18
+                19
               ],
               "LayerNodeIndices": [],
               "bAlwaysResetOnEntry": false
@@ -738,7 +757,7 @@
               "StateName": "Moving",
               "Transitions": [
                 {
-                  "CanTakeDelegateIndex": 40,
+                  "CanTakeDelegateIndex": 41,
                   "CustomResultNodeIndex": -1,
                   "TransitionIndex": 9,
                   "bDesiredTransitionReturnValue": true,
@@ -746,7 +765,7 @@
                   "PoseEvaluatorLinks": []
                 },
                 {
-                  "CanTakeDelegateIndex": 42,
+                  "CanTakeDelegateIndex": 43,
                   "CustomResultNodeIndex": -1,
                   "TransitionIndex": 5,
                   "bDesiredTransitionReturnValue": true,
@@ -754,17 +773,17 @@
                   "PoseEvaluatorLinks": []
                 }
               ],
-              "StateRootNodeIndex": 19,
+              "StateRootNodeIndex": 20,
               "StartNotify": -1,
               "EndNotify": -1,
               "FullyBlendedNotify": -1,
               "bIsAConduit": false,
               "EntryRuleNodeIndex": -1,
               "PlayerNodeIndices": [
-                20,
-                22,
-                24,
-                26
+                21,
+                23,
+                25,
+                27
               ],
               "LayerNodeIndices": [],
               "bAlwaysResetOnEntry": false
@@ -773,7 +792,7 @@
               "StateName": "HitHarpooned_State",
               "Transitions": [
                 {
-                  "CanTakeDelegateIndex": 43,
+                  "CanTakeDelegateIndex": 44,
                   "CustomResultNodeIndex": -1,
                   "TransitionIndex": 2,
                   "bDesiredTransitionReturnValue": true,
@@ -781,16 +800,16 @@
                   "PoseEvaluatorLinks": []
                 }
               ],
-              "StateRootNodeIndex": 27,
+              "StateRootNodeIndex": 28,
               "StartNotify": 1,
               "EndNotify": -1,
               "FullyBlendedNotify": -1,
               "bIsAConduit": false,
               "EntryRuleNodeIndex": -1,
               "PlayerNodeIndices": [
-                28,
                 29,
-                32
+                30,
+                33
               ],
               "LayerNodeIndices": [],
               "bAlwaysResetOnEntry": false
@@ -799,7 +818,7 @@
               "StateName": "HitHarpooned_End_State",
               "Transitions": [
                 {
-                  "CanTakeDelegateIndex": 44,
+                  "CanTakeDelegateIndex": 45,
                   "CustomResultNodeIndex": -1,
                   "TransitionIndex": 3,
                   "bDesiredTransitionReturnValue": true,
@@ -807,16 +826,16 @@
                   "PoseEvaluatorLinks": []
                 }
               ],
-              "StateRootNodeIndex": 33,
+              "StateRootNodeIndex": 34,
               "StartNotify": -1,
               "EndNotify": -1,
               "FullyBlendedNotify": -1,
               "bIsAConduit": false,
               "EntryRuleNodeIndex": -1,
               "PlayerNodeIndices": [
-                34,
                 35,
-                38
+                36,
+                39
               ],
               "LayerNodeIndices": [],
               "bAlwaysResetOnEntry": false
@@ -1038,9 +1057,12 @@
       ],
       "OrderedSavedPoseIndicesMap": {
         "AnimGraph": {
+          "OrderedSavedPoseNodeIndices": []
+        },
+        "KillerSpecificSurvivorAnimation": {
           "OrderedSavedPoseNodeIndices": [
-            12,
-            45
+            13,
+            46
           ]
         }
       },
@@ -1063,7 +1085,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
             }
           }
         },
@@ -1090,7 +1112,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
             }
           }
         },
@@ -1109,15 +1131,15 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
             }
           }
         },
         {
-          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_LayeredBoneBlend_0478A5DA43241BD1B898EFADD3A1ACE6",
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_LayeredBoneBlend_FB6CAA9A44144EE1108B18A45D768E37",
           "CopyRecords": [],
           "Function": {
-            "ObjectName": "Function ABSub_Survivor00_Harpooned_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_LayeredBoneBlend_0478A5DA43241BD1B898EFADD3A1ACE6",
+            "ObjectName": "Function ABSub_Survivor00_Harpooned_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_LayeredBoneBlend_FB6CAA9A44144EE1108B18A45D768E37",
             "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.6"
           },
           "ValueHandlerNodeProperty": {
@@ -1126,7 +1148,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
             }
           }
         },
@@ -1145,15 +1167,15 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
             }
           }
         },
         {
-          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_TransitionResult_E889490E4EA802A21BED739FC9D4588D",
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_TransitionResult_526EBE484317108F01EE248C927D31AA",
           "CopyRecords": [],
           "Function": {
-            "ObjectName": "Function ABSub_Survivor00_Harpooned_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_TransitionResult_E889490E4EA802A21BED739FC9D4588D",
+            "ObjectName": "Function ABSub_Survivor00_Harpooned_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_TransitionResult_526EBE484317108F01EE248C927D31AA",
             "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.5"
           },
           "ValueHandlerNodeProperty": {
@@ -1162,7 +1184,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
             }
           }
         },
@@ -1181,7 +1203,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
             }
           }
         },
@@ -1200,7 +1222,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
             }
           }
         },
@@ -1219,7 +1241,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
             }
           }
         },
@@ -1238,15 +1260,15 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
             }
           }
         },
         {
-          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_16A47B8D40B3E4BA22B0E9BE560F385C",
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_6D9CB78E498AE3CD54DCBCB77AD22A9A",
           "CopyRecords": [],
           "Function": {
-            "ObjectName": "Function ABSub_Survivor00_Harpooned_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_16A47B8D40B3E4BA22B0E9BE560F385C",
+            "ObjectName": "Function ABSub_Survivor00_Harpooned_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_6D9CB78E498AE3CD54DCBCB77AD22A9A",
             "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.4"
           },
           "ValueHandlerNodeProperty": {
@@ -1255,7 +1277,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
             }
           }
         },
@@ -1274,7 +1296,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
             }
           }
         },
@@ -1293,7 +1315,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
             }
           }
         },
@@ -1320,7 +1342,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
             }
           }
         },
@@ -1339,7 +1361,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
             }
           }
         },
@@ -1366,7 +1388,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
             }
           }
         },
@@ -1385,15 +1407,15 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
             }
           }
         },
         {
-          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_0B7FAD4B48A3F71731330B9EE29A9A33",
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_B30C726846C536E5CC64238C45A6C1EE",
           "CopyRecords": [],
           "Function": {
-            "ObjectName": "Function ABSub_Survivor00_Harpooned_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_0B7FAD4B48A3F71731330B9EE29A9A33",
+            "ObjectName": "Function ABSub_Survivor00_Harpooned_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_B30C726846C536E5CC64238C45A6C1EE",
             "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.3"
           },
           "ValueHandlerNodeProperty": {
@@ -1402,7 +1424,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
             }
           }
         },
@@ -1421,7 +1443,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
             }
           }
         },
@@ -1440,7 +1462,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
             }
           }
         },
@@ -1459,7 +1481,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
             }
           }
         },
@@ -1478,15 +1500,15 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
             }
           }
         },
         {
-          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_00CC449C4F72CF73CD5F0484D07E79E2",
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_95F8567F4B0569FD9606779CD455E8E0",
           "CopyRecords": [],
           "Function": {
-            "ObjectName": "Function ABSub_Survivor00_Harpooned_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_00CC449C4F72CF73CD5F0484D07E79E2",
+            "ObjectName": "Function ABSub_Survivor00_Harpooned_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_95F8567F4B0569FD9606779CD455E8E0",
             "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.2"
           },
           "ValueHandlerNodeProperty": {
@@ -1495,7 +1517,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
             }
           }
         },
@@ -1514,7 +1536,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
             }
           }
         },
@@ -1533,7 +1555,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
             }
           }
         },
@@ -1552,7 +1574,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
             }
           }
         },
@@ -1571,7 +1593,7 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
             }
           }
         },
@@ -1590,11 +1612,18 @@
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
             }
           }
         }
       ],
+      "GraphAssetPlayerInformation": {
+        "KillerSpecificSurvivorAnimation": {
+          "PlayerNodeIndices": [
+            12
+          ]
+        }
+      },
       "PropertyAccessLibrary": {
         "PathSegments": [
           {
@@ -1625,7 +1654,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -1649,15 +1678,15 @@
             "Flags": 2
           },
           {
-            "Name": "_Yaw",
+            "Name": "_yaw",
             "Struct": null,
             "Property": {
               "Path": [
-                "_Yaw"
+                "_yaw"
               ],
               "ResolvedOwner": {
-                "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectName": "Class HarpoonedSurvivorSubAnimInstance",
+                "ObjectPath": "/Script/TheGunslinger"
               }
             },
             "Function": null,
@@ -1676,7 +1705,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -1700,15 +1729,15 @@
             "Flags": 2
           },
           {
-            "Name": "_Pitch",
+            "Name": "_pitch",
             "Struct": null,
             "Property": {
               "Path": [
-                "_Pitch"
+                "_pitch"
               ],
               "ResolvedOwner": {
-                "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectName": "Class HarpoonedSurvivorSubAnimInstance",
+                "ObjectPath": "/Script/TheGunslinger"
               }
             },
             "Function": null,
@@ -1727,7 +1756,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -1759,7 +1788,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -1778,7 +1807,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -1810,7 +1839,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -1829,7 +1858,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -1880,7 +1909,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -1912,7 +1941,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -1931,7 +1960,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -1955,15 +1984,15 @@
             "Flags": 2
           },
           {
-            "Name": "_Idle",
+            "Name": "_isIdle",
             "Struct": null,
             "Property": {
               "Path": [
-                "_Idle"
+                "_isIdle"
               ],
               "ResolvedOwner": {
-                "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectName": "Class HarpoonedSurvivorSubAnimInstance",
+                "ObjectPath": "/Script/TheGunslinger"
               }
             },
             "Function": null,
@@ -1982,7 +2011,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -2006,15 +2035,15 @@
             "Flags": 2
           },
           {
-            "Name": "_Idle",
+            "Name": "_isIdle",
             "Struct": null,
             "Property": {
               "Path": [
-                "_Idle"
+                "_isIdle"
               ],
               "ResolvedOwner": {
-                "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectName": "Class HarpoonedSurvivorSubAnimInstance",
+                "ObjectPath": "/Script/TheGunslinger"
               }
             },
             "Function": null,
@@ -2033,7 +2062,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -2065,7 +2094,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -2084,7 +2113,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -2116,7 +2145,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -2135,7 +2164,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -2186,7 +2215,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -2237,7 +2266,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -2288,7 +2317,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -2320,7 +2349,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -2339,7 +2368,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -2390,7 +2419,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -2441,7 +2470,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -2492,7 +2521,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -2524,7 +2553,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -2543,7 +2572,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -2575,7 +2604,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -2594,7 +2623,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -2645,7 +2674,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -2677,7 +2706,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -2696,7 +2725,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -2728,7 +2757,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -2747,7 +2776,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -2779,7 +2808,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -2798,7 +2827,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -2849,7 +2878,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -2881,7 +2910,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -2900,7 +2929,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -2932,7 +2961,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -2951,7 +2980,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -3002,7 +3031,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -3053,7 +3082,7 @@
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass ABSub_Survivor00_Harpooned_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+                "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
               }
             },
             "Function": null,
@@ -3561,27 +3590,31 @@
     },
     "Children": [
       {
+        "ObjectName": "Function ABSub_Survivor00_Harpooned_C:KillerSpecificSurvivorAnimation",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
+      },
+      {
         "ObjectName": "Function ABSub_Survivor00_Harpooned_C:AnimGraph",
         "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.7"
       },
       {
-        "ObjectName": "Function ABSub_Survivor00_Harpooned_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_LayeredBoneBlend_0478A5DA43241BD1B898EFADD3A1ACE6",
+        "ObjectName": "Function ABSub_Survivor00_Harpooned_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_LayeredBoneBlend_FB6CAA9A44144EE1108B18A45D768E37",
         "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.6"
       },
       {
-        "ObjectName": "Function ABSub_Survivor00_Harpooned_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_TransitionResult_E889490E4EA802A21BED739FC9D4588D",
+        "ObjectName": "Function ABSub_Survivor00_Harpooned_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_TransitionResult_526EBE484317108F01EE248C927D31AA",
         "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.5"
       },
       {
-        "ObjectName": "Function ABSub_Survivor00_Harpooned_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_16A47B8D40B3E4BA22B0E9BE560F385C",
+        "ObjectName": "Function ABSub_Survivor00_Harpooned_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_6D9CB78E498AE3CD54DCBCB77AD22A9A",
         "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.4"
       },
       {
-        "ObjectName": "Function ABSub_Survivor00_Harpooned_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_0B7FAD4B48A3F71731330B9EE29A9A33",
+        "ObjectName": "Function ABSub_Survivor00_Harpooned_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_B30C726846C536E5CC64238C45A6C1EE",
         "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.3"
       },
       {
-        "ObjectName": "Function ABSub_Survivor00_Harpooned_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_00CC449C4F72CF73CD5F0484D07E79E2",
+        "ObjectName": "Function ABSub_Survivor00_Harpooned_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_95F8567F4B0569FD9606779CD455E8E0",
         "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.2"
       },
       {
@@ -3607,7 +3640,7 @@
       },
       {
         "Type": "StructProperty",
-        "Name": "AnimGraphNode_Root",
+        "Name": "AnimGraphNode_Root_1",
         "Flags": 2097153,
         "ElementSize": 64,
         "Struct": {
@@ -3617,7 +3650,7 @@
       },
       {
         "Type": "StructProperty",
-        "Name": "AnimGraphNode_SubInput",
+        "Name": "AnimGraphNode_LinkedInputPose",
         "Flags": 2097153,
         "ElementSize": 296,
         "Struct": {
@@ -4086,38 +4119,14 @@
         }
       },
       {
-        "Type": "BoolProperty",
-        "Name": "_Idle",
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Root",
         "Flags": 2097153,
-        "ElementSize": 1,
-        "PropertyFlags": 65541,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "_Speed",
-        "Flags": 2097153,
-        "ElementSize": 4,
-        "PropertyFlags": 65541
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "_Yaw",
-        "Flags": 2097153,
-        "ElementSize": 4,
-        "PropertyFlags": 65541
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "_Pitch",
-        "Flags": 2097153,
-        "ElementSize": 4,
-        "PropertyFlags": 65541
+        "ElementSize": 64,
+        "Struct": {
+          "ObjectName": "ScriptStruct AnimNode_Root",
+          "ObjectPath": "/Script/Engine"
+        }
       },
       {
         "Type": "ObjectProperty",
@@ -4250,29 +4259,33 @@
         "ObjectName": "Function ABSub_Survivor00_Harpooned_C:BlueprintInitializeAnimation",
         "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.1"
       },
-      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_00CC449C4F72CF73CD5F0484D07E79E2": {
-        "ObjectName": "Function ABSub_Survivor00_Harpooned_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_00CC449C4F72CF73CD5F0484D07E79E2",
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_95F8567F4B0569FD9606779CD455E8E0": {
+        "ObjectName": "Function ABSub_Survivor00_Harpooned_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_95F8567F4B0569FD9606779CD455E8E0",
         "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.2"
       },
-      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_0B7FAD4B48A3F71731330B9EE29A9A33": {
-        "ObjectName": "Function ABSub_Survivor00_Harpooned_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_0B7FAD4B48A3F71731330B9EE29A9A33",
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_B30C726846C536E5CC64238C45A6C1EE": {
+        "ObjectName": "Function ABSub_Survivor00_Harpooned_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_B30C726846C536E5CC64238C45A6C1EE",
         "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.3"
       },
-      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_16A47B8D40B3E4BA22B0E9BE560F385C": {
-        "ObjectName": "Function ABSub_Survivor00_Harpooned_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_16A47B8D40B3E4BA22B0E9BE560F385C",
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_6D9CB78E498AE3CD54DCBCB77AD22A9A": {
+        "ObjectName": "Function ABSub_Survivor00_Harpooned_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_BlendListByBool_6D9CB78E498AE3CD54DCBCB77AD22A9A",
         "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.4"
       },
-      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_TransitionResult_E889490E4EA802A21BED739FC9D4588D": {
-        "ObjectName": "Function ABSub_Survivor00_Harpooned_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_TransitionResult_E889490E4EA802A21BED739FC9D4588D",
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_TransitionResult_526EBE484317108F01EE248C927D31AA": {
+        "ObjectName": "Function ABSub_Survivor00_Harpooned_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_TransitionResult_526EBE484317108F01EE248C927D31AA",
         "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.5"
       },
-      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_LayeredBoneBlend_0478A5DA43241BD1B898EFADD3A1ACE6": {
-        "ObjectName": "Function ABSub_Survivor00_Harpooned_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_LayeredBoneBlend_0478A5DA43241BD1B898EFADD3A1ACE6",
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_LayeredBoneBlend_FB6CAA9A44144EE1108B18A45D768E37": {
+        "ObjectName": "Function ABSub_Survivor00_Harpooned_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABSub_Survivor00_Harpooned_AnimGraphNode_LayeredBoneBlend_FB6CAA9A44144EE1108B18A45D768E37",
         "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.6"
       },
       "AnimGraph": {
         "ObjectName": "Function ABSub_Survivor00_Harpooned_C:AnimGraph",
         "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.7"
+      },
+      "KillerSpecificSurvivorAnimation": {
+        "ObjectName": "Function ABSub_Survivor00_Harpooned_C:KillerSpecificSurvivorAnimation",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.8"
       }
     },
     "ClassFlags": 8652824,
@@ -4281,10 +4294,20 @@
       "ObjectPath": "/Script/Engine"
     },
     "ClassConfigName": "Engine",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "AnimBlueprintGeneratedClass ALI_KillerSpecificSurvivorAnimation_C",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ALI_KillerSpecificSurvivorAnimation.1"
+        },
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "ABSub_Survivor00_Harpooned_C Default__ABSub_Survivor00_Harpooned_C",
-      "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.9"
+      "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Common/AnimBP/AnimSubGraph/ABSub_Survivor00_Harpooned.10"
     }
   },
   {
@@ -4292,16 +4315,16 @@
     "Name": "Default__ABSub_Survivor00_Harpooned_C",
     "Properties": {
       "UberGraphFrame": {},
-      "AnimGraphNode_Root": {
+      "AnimGraphNode_Root_1": {
         "Result": {
           "LinkID": 37
         },
-        "Name": "AnimGraph",
+        "Name": "KillerSpecificSurvivorAnimation",
         "Group": "None"
       },
-      "AnimGraphNode_SubInput": {
+      "AnimGraphNode_LinkedInputPose": {
         "Name": "InPose",
-        "Graph": "AnimGraph",
+        "Graph": "KillerSpecificSurvivorAnimation",
         "InputPose": {
           "LinkID": -1
         }
@@ -6311,6 +6334,13 @@
         "MaxTransitionsPerFrame": 3,
         "bSkipFirstUpdateTransition": true,
         "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_Root": {
+        "Result": {
+          "LinkID": -1
+        },
+        "Name": "AnimGraph",
+        "Group": "None"
       },
       "_taggedAnimCollections": [
         {

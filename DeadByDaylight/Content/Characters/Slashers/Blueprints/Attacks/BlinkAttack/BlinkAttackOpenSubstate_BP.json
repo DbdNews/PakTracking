@@ -1,0 +1,60 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BlinkAttackOpenSubstate_BP_C",
+    "SuperStruct": {
+      "ObjectName": "Class PounceAttackOpenSubstate",
+      "ObjectPath": "/Script/DBDAttack"
+    },
+    "ClassFlags": 264208,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BlinkAttackOpenSubstate_BP_C Default__BlinkAttackOpenSubstate_BP_C",
+      "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Attacks/BlinkAttack/BlinkAttackOpenSubstate_BP.1"
+    }
+  },
+  {
+    "Type": "BlinkAttackOpenSubstate_BP_C",
+    "Name": "Default__BlinkAttackOpenSubstate_BP_C",
+    "Properties": {
+      "_duration": {
+        "_useTunable": true,
+        "_tunableValue": {
+          "_dataTableRowHandle": {
+            "DataTable": {
+              "ObjectName": "DataTable KillerTunableDB",
+              "ObjectPath": "DeadByDaylight/Content/Data/KillerTunableDB.0"
+            },
+            "RowName": "SlasherAttackBlinkOpenTime"
+          }
+        },
+        "_statModifiers": [
+          {
+            "OperationStrategy": "EModifierOperationStrategy::Add",
+            "ModifierTag": {
+              "TagName": "GameplayModifierType.ModifyBlinkAttackLungeDurationAdditive"
+            },
+            "CompoundStrategy": "EModifierCompoundStrategy::Add"
+          },
+          {
+            "OperationStrategy": "EModifierOperationStrategy::Mult",
+            "ModifierTag": {
+              "TagName": "GameplayModifierType.ModifyBlinkAttackLungeDurationMultiplicative"
+            },
+            "CompoundStrategy": "EModifierCompoundStrategy::Mult"
+          }
+        ]
+      },
+      "_speedCurve": {
+        "ObjectName": "CurveFloat BlinkOpenMaxSpeed",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/AttackCurves/BlinkOpenMaxSpeed.0"
+      },
+      "_montage": "Attack_Slash_Open"
+    }
+  }
+]

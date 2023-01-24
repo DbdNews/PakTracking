@@ -342,16 +342,22 @@
         }
       },
       {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_IsValid_ReturnValue",
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector_X",
         "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector_Y",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector_Z",
+        "Flags": 1,
+        "ElementSize": 4
       },
       {
         "Type": "FloatProperty",
@@ -373,9 +379,67 @@
       },
       {
         "Type": "FloatProperty",
+        "Name": "CallFunc_Subtract_FloatFloat_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
         "Name": "CallFunc_Add_FloatFloat_ReturnValue",
         "Flags": 1,
         "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeRotator_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct Rotator",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerOwner_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class DBDPlayer",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
       },
       {
         "Type": "ArrayProperty",
@@ -393,64 +457,6 @@
             "ObjectPath": "/Script/Engine"
           }
         }
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "CallFunc_MakeRotator_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 12,
-        "Struct": {
-          "ObjectName": "ScriptStruct Rotator",
-          "ObjectPath": "/Script/CoreUObject"
-        }
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "CallFunc_GetActorForwardVector_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 12,
-        "Struct": {
-          "ObjectName": "ScriptStruct Vector",
-          "ObjectPath": "/Script/CoreUObject"
-        }
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "CallFunc_Multiply_VectorFloat_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 12,
-        "Struct": {
-          "ObjectName": "ScriptStruct Vector",
-          "ObjectPath": "/Script/CoreUObject"
-        }
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "CallFunc_Add_VectorVector_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 12,
-        "Struct": {
-          "ObjectName": "ScriptStruct Vector",
-          "ObjectPath": "/Script/CoreUObject"
-        }
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "CallFunc_BreakVector_X",
-        "Flags": 1,
-        "ElementSize": 4
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "CallFunc_BreakVector_Y",
-        "Flags": 1,
-        "ElementSize": 4
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "CallFunc_BreakVector_Z",
-        "Flags": 1,
-        "ElementSize": 4
       },
       {
         "Type": "StructProperty",
@@ -476,43 +482,14 @@
         "bIsNativeBool": true
       },
       {
-        "Type": "FloatProperty",
-        "Name": "CallFunc_Subtract_FloatFloat_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 4
-      },
-      {
         "Type": "StructProperty",
-        "Name": "CallFunc_MakeVector_ReturnValue",
+        "Name": "CallFunc_GetActorForwardVector_ReturnValue",
         "Flags": 1,
         "ElementSize": 12,
         "Struct": {
           "ObjectName": "ScriptStruct Vector",
           "ObjectPath": "/Script/CoreUObject"
         }
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "CallFunc_LineTraceSingle_OutHit_1",
-        "Flags": 1,
-        "ElementSize": 144,
-        "PropertyFlags": 549755813888,
-        "Struct": {
-          "ObjectName": "ScriptStruct HitResult",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_LineTraceSingle_ReturnValue_1",
-        "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
       },
       {
         "Type": "BoolProperty",
@@ -667,7 +644,268 @@
       },
       {
         "Type": "StructProperty",
+        "Name": "CallFunc_Multiply_VectorFloat_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
         "Name": "CallFunc_MakeTransform_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 48,
+        "Struct": {
+          "ObjectName": "ScriptStruct Transform",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Add_VectorVector_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_LineTraceSingle_OutHit_1",
+        "Flags": 1,
+        "ElementSize": 144,
+        "PropertyFlags": 549755813888,
+        "Struct": {
+          "ObjectName": "ScriptStruct HitResult",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_LineTraceSingle_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector_X_1",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector_Y_1",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector_Z_1",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Subtract_FloatFloat_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_LineTraceSingle_OutHit_2",
+        "Flags": 1,
+        "ElementSize": 144,
+        "PropertyFlags": 549755813888,
+        "Struct": {
+          "ObjectName": "ScriptStruct HitResult",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_LineTraceSingle_ReturnValue_2",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BreakHitResult_bBlockingHit_1",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BreakHitResult_bInitialOverlap_1",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakHitResult_Time_1",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakHitResult_Distance_1",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_Location_1",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_ImpactPoint_1",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_Normal_1",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_ImpactNormal_1",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_PhysMat_1",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class PhysicalMaterial",
+          "ObjectPath": "/Script/PhysicsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_HitActor_1",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class Actor",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_HitComponent_1",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "PropertyClass": {
+          "ObjectName": "Class PrimitiveComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_BreakHitResult_HitBoneName_1",
+        "Flags": 1,
+        "ElementSize": 12
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_HitItem_1",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_ElementIndex_1",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_FaceIndex_1",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_TraceStart_1",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_TraceEnd_1",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeTransform_ReturnValue_1",
         "Flags": 1,
         "ElementSize": 48,
         "Struct": {
@@ -750,7 +988,7 @@
       }
     },
     "SuperStruct": {
-      "ObjectName": "Class BaseCamperCollectable",
+      "ObjectName": "Class FirecrackerSpawner",
       "ObjectPath": "/Script/DBDGameplay"
     },
     "Children": [
