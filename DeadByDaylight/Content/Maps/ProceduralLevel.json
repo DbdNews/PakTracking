@@ -120,6 +120,16 @@
         }
       },
       {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_PlayerState_1",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class DBDPlayerState",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
         "Type": "EnumProperty",
         "Name": "K2Node_CustomEvent_NewGameState",
         "Flags": 1,
@@ -824,6 +834,17 @@
     "Name": "OnLocalPlayerGameStateChanged",
     "Outer": "ProceduralLevel_C",
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerState",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "PropertyClass": {
+          "ObjectName": "Class DBDPlayerState",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
       {
         "Type": "EnumProperty",
         "Name": "NewGameState",
@@ -2471,7 +2492,7 @@
         "BulkDataFlags": "BULKDATA_ForceInlinePayload",
         "ElementCount": 470,
         "SizeOnDisk": 470,
-        "OffsetInFile": "0x1EDE4"
+        "OffsetInFile": "0x1F102"
       }
     }
   },
@@ -2613,7 +2634,7 @@
         "BulkDataFlags": "BULKDATA_ForceInlinePayload",
         "ElementCount": 470,
         "SizeOnDisk": 470,
-        "OffsetInFile": "0x1F402"
+        "OffsetInFile": "0x1F720"
       }
     }
   },
@@ -2955,6 +2976,12 @@
         "ObjectName": "ParticleSystem P_LightRain",
         "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Weather/P_LightRain.58"
       },
+      "bOldPositionValid": true,
+      "OldPosition": {
+        "X": -10.0,
+        "Y": -310.0,
+        "Z": 20.0
+      },
       "DetailLevelBeforeCastShadows": "DM_MAX",
       "AttachParent": {
         "ObjectName": "SceneComponent ProceduralLevel:PersistentLevel.BP_ParticleManager_4.DefaultSceneRoot",
@@ -2972,6 +2999,12 @@
       "Template": {
         "ObjectName": "ParticleSystem P_Mist_Lit_Still",
         "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Mist_Lit_Still.46"
+      },
+      "bOldPositionValid": true,
+      "OldPosition": {
+        "X": -10.0,
+        "Y": -310.0,
+        "Z": 20.0
       },
       "DetailLevelBeforeCastShadows": "DM_MAX",
       "AttachParent": {
@@ -2991,6 +3024,12 @@
         "ObjectName": "ParticleSystem P_Mist_Lit_FloorClip",
         "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/P_Mist_Lit_FloorClip.23"
       },
+      "bOldPositionValid": true,
+      "OldPosition": {
+        "X": -10.0,
+        "Y": -310.0,
+        "Z": 20.0
+      },
       "DetailLevelBeforeCastShadows": "DM_MAX",
       "AttachParent": {
         "ObjectName": "SceneComponent ProceduralLevel:PersistentLevel.BP_ParticleManager_4.DefaultSceneRoot",
@@ -3007,6 +3046,12 @@
       "Template": {
         "ObjectName": "ParticleSystem P_SparksEnviro",
         "ObjectPath": "DeadByDaylight/Content/Effects/ParticleSystems/Killer07/P_SparksEnviro.38"
+      },
+      "bOldPositionValid": true,
+      "OldPosition": {
+        "X": -10.0,
+        "Y": -310.0,
+        "Z": 20.0
       },
       "DetailLevelBeforeCastShadows": "DM_MAX",
       "AttachParent": {
@@ -3037,7 +3082,7 @@
         "ObjectPath": "DeadByDaylight/Content/Maps/ProceduralLevel.49"
       },
       "LevelScriptActor": {
-        "ObjectName": "ProceduralLevel_C ProceduralLevel:PersistentLevel.ProceduralLevel_C_11",
+        "ObjectName": "ProceduralLevel_C ProceduralLevel:PersistentLevel.ProceduralLevel_C_3",
         "ObjectPath": "DeadByDaylight/Content/Maps/ProceduralLevel.53"
       },
       "LevelBuildDataId": "2D7A4C29-42248098-A1065DA7-3ADD88E8",
@@ -3125,7 +3170,7 @@
         "ObjectPath": "DeadByDaylight/Content/Maps/ProceduralLevel.45"
       },
       {
-        "ObjectName": "ProceduralLevel_C ProceduralLevel:PersistentLevel.ProceduralLevel_C_11",
+        "ObjectName": "ProceduralLevel_C ProceduralLevel:PersistentLevel.ProceduralLevel_C_3",
         "ObjectPath": "DeadByDaylight/Content/Maps/ProceduralLevel.53"
       }
     ],
@@ -3144,7 +3189,7 @@
     },
     "ModelComponents": [],
     "LevelScriptActor": {
-      "ObjectName": "ProceduralLevel_C ProceduralLevel:PersistentLevel.ProceduralLevel_C_11",
+      "ObjectName": "ProceduralLevel_C ProceduralLevel:PersistentLevel.ProceduralLevel_C_3",
       "ObjectPath": "DeadByDaylight/Content/Maps/ProceduralLevel.53"
     },
     "NavListStart": null,
@@ -4166,33 +4211,33 @@
   },
   {
     "Type": "ProceduralLevel_C",
-    "Name": "ProceduralLevel_C_11",
+    "Name": "ProceduralLevel_C_3",
     "Outer": "PersistentLevel",
     "Template": "Default__ProceduralLevel_C",
     "Properties": {
       "KillerIntroCameraPanInTimeline": {
-        "ObjectName": "TimelineComponent ProceduralLevel:PersistentLevel.ProceduralLevel_C_11.KillerIntroCameraPanInTimeline",
+        "ObjectName": "TimelineComponent ProceduralLevel:PersistentLevel.ProceduralLevel_C_3.KillerIntroCameraPanInTimeline",
         "ObjectPath": "DeadByDaylight/Content/Maps/ProceduralLevel.66"
       },
       "CameraUpdateTimeline": {
-        "ObjectName": "TimelineComponent ProceduralLevel:PersistentLevel.ProceduralLevel_C_11.CameraUpdateTimeline",
+        "ObjectName": "TimelineComponent ProceduralLevel:PersistentLevel.ProceduralLevel_C_3.CameraUpdateTimeline",
         "ObjectPath": "DeadByDaylight/Content/Maps/ProceduralLevel.64"
       },
       "FadeInTimeline": {
-        "ObjectName": "TimelineComponent ProceduralLevel:PersistentLevel.ProceduralLevel_C_11.FadeInTimeline",
+        "ObjectName": "TimelineComponent ProceduralLevel:PersistentLevel.ProceduralLevel_C_3.FadeInTimeline",
         "ObjectPath": "DeadByDaylight/Content/Maps/ProceduralLevel.65"
       },
       "BlueprintCreatedComponents": [
         {
-          "ObjectName": "TimelineComponent ProceduralLevel:PersistentLevel.ProceduralLevel_C_11.FadeInTimeline",
+          "ObjectName": "TimelineComponent ProceduralLevel:PersistentLevel.ProceduralLevel_C_3.FadeInTimeline",
           "ObjectPath": "DeadByDaylight/Content/Maps/ProceduralLevel.65"
         },
         {
-          "ObjectName": "TimelineComponent ProceduralLevel:PersistentLevel.ProceduralLevel_C_11.CameraUpdateTimeline",
+          "ObjectName": "TimelineComponent ProceduralLevel:PersistentLevel.ProceduralLevel_C_3.CameraUpdateTimeline",
           "ObjectPath": "DeadByDaylight/Content/Maps/ProceduralLevel.64"
         },
         {
-          "ObjectName": "TimelineComponent ProceduralLevel:PersistentLevel.ProceduralLevel_C_11.KillerIntroCameraPanInTimeline",
+          "ObjectName": "TimelineComponent ProceduralLevel:PersistentLevel.ProceduralLevel_C_3.KillerIntroCameraPanInTimeline",
           "ObjectPath": "DeadByDaylight/Content/Maps/ProceduralLevel.66"
         }
       ]
@@ -4399,7 +4444,7 @@
   {
     "Type": "TimelineComponent",
     "Name": "CameraUpdateTimeline",
-    "Outer": "ProceduralLevel_C_11",
+    "Outer": "ProceduralLevel_C_3",
     "Properties": {
       "TheTimeline": {
         "LengthMode": "TL_TimelineLength",
@@ -4427,7 +4472,7 @@
           "Name": "CameraUpdateTimeline__FinishedFunc"
         },
         "PropertySetObject": {
-          "ObjectName": "ProceduralLevel_C ProceduralLevel:PersistentLevel.ProceduralLevel_C_11",
+          "ObjectName": "ProceduralLevel_C ProceduralLevel:PersistentLevel.ProceduralLevel_C_3",
           "ObjectPath": "DeadByDaylight/Content/Maps/ProceduralLevel.53"
         },
         "DirectionPropertyName": "CameraUpdateTimeline__Direction_8EB8A9204B1A077AD4878D9169A5E619"
@@ -4439,7 +4484,7 @@
   {
     "Type": "TimelineComponent",
     "Name": "FadeInTimeline",
-    "Outer": "ProceduralLevel_C_11",
+    "Outer": "ProceduralLevel_C_3",
     "Properties": {
       "TheTimeline": {
         "LengthMode": "TL_TimelineLength",
@@ -4467,7 +4512,7 @@
           "Name": "FadeInTimeline__FinishedFunc"
         },
         "PropertySetObject": {
-          "ObjectName": "ProceduralLevel_C ProceduralLevel:PersistentLevel.ProceduralLevel_C_11",
+          "ObjectName": "ProceduralLevel_C ProceduralLevel:PersistentLevel.ProceduralLevel_C_3",
           "ObjectPath": "DeadByDaylight/Content/Maps/ProceduralLevel.53"
         },
         "DirectionPropertyName": "FadeInTimeline__Direction_510A37DA46429F2572AB1DA832B4246A"
@@ -4479,7 +4524,7 @@
   {
     "Type": "TimelineComponent",
     "Name": "KillerIntroCameraPanInTimeline",
-    "Outer": "ProceduralLevel_C_11",
+    "Outer": "ProceduralLevel_C_3",
     "Properties": {
       "TheTimeline": {
         "LengthMode": "TL_TimelineLength",
@@ -4507,7 +4552,7 @@
           "Name": "KillerIntroCameraPanInTimeline__FinishedFunc"
         },
         "PropertySetObject": {
-          "ObjectName": "ProceduralLevel_C ProceduralLevel:PersistentLevel.ProceduralLevel_C_11",
+          "ObjectName": "ProceduralLevel_C ProceduralLevel:PersistentLevel.ProceduralLevel_C_3",
           "ObjectPath": "DeadByDaylight/Content/Maps/ProceduralLevel.53"
         },
         "DirectionPropertyName": "KillerIntroCameraPanInTimeline__Direction_90DDCDC0413917EC974D058D1C1E7EB7"
