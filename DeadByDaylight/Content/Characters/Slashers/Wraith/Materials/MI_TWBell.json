@@ -4,20 +4,10 @@
     "Name": "MI_TWBell",
     "Properties": {
       "Parent": {
-        "ObjectName": "MaterialInstanceConstant MI_Slasher_Cust",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Materials/MI_Slasher_Cust.0"
+        "ObjectName": "MaterialInstanceConstant MV_Slasher_Cust_Dissolve",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Materials/Variants/MV_Slasher_Cust_Dissolve.0"
       },
-      "bHasStaticPermutationResource": true,
       "ScalarParameterValues": [
-        {
-          "ParameterInfo": {
-            "Name": "ObjectHeight",
-            "Association": "GlobalParameter",
-            "Index": -1
-          },
-          "ParameterValue": 500.0,
-          "ExpressionGUID": "D76113BE-4FBBDE21-D475F9A3-A272B124"
-        },
         {
           "ParameterInfo": {
             "Name": "SpecularValue",
@@ -29,12 +19,38 @@
         },
         {
           "ParameterInfo": {
+            "Name": "DissolveProgress",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 1.0,
+          "ExpressionGUID": "9A9D8BE0-4F03EED4-86217A8A-E1DD04A5"
+        },
+        {
+          "ParameterInfo": {
             "Name": "RefractionDepthBias",
             "Association": "GlobalParameter",
             "Index": -1
           },
           "ParameterValue": 0.0,
           "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "VectorParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "BorderColor",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "R": 5.0,
+            "G": 2.250738,
+            "B": 1.09375,
+            "A": 1.0,
+            "Hex": "FFFFFFFF"
+          },
+          "ExpressionGUID": "23DFC9D7-4E434C07-1BBF60B4-01917558"
         }
       ],
       "TextureParameterValues": [
@@ -52,36 +68,6 @@
         },
         {
           "ParameterInfo": {
-            "Name": "Base Color Texture",
-            "Association": "GlobalParameter",
-            "Index": -1
-          },
-          "ParameterValue": null,
-          "ExpressionGUID": "72AC35B6-464421DD-FA7F95A8-09C31A48"
-        },
-        {
-          "ParameterInfo": {
-            "Name": "Diffuse",
-            "Association": "GlobalParameter",
-            "Index": -1
-          },
-          "ParameterValue": {
-            "ObjectName": "Texture2D T_TWBell_BC",
-            "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Textures/Outfit01/T_TWBell_BC.0"
-          },
-          "ExpressionGUID": "CFE713C8-4B47B97B-BEFC90AD-BB3E6B38"
-        },
-        {
-          "ParameterInfo": {
-            "Name": "MetallicMap Texture",
-            "Association": "GlobalParameter",
-            "Index": -1
-          },
-          "ParameterValue": null,
-          "ExpressionGUID": "2D550ED7-4C889B65-F55B9B88-0EB651B3"
-        },
-        {
-          "ParameterInfo": {
             "Name": "NormalMap Texture",
             "Association": "GlobalParameter",
             "Index": -1
@@ -94,39 +80,21 @@
         },
         {
           "ParameterInfo": {
-            "Name": "RoughnessMap Texture",
+            "Name": "Diffuse",
             "Association": "GlobalParameter",
             "Index": -1
           },
-          "ParameterValue": null,
-          "ExpressionGUID": "E4D9CDDC-4863E4E5-45AC4A8A-1C9C21CD"
-        },
-        {
-          "ParameterInfo": {
-            "Name": "Specular Texture",
-            "Association": "GlobalParameter",
-            "Index": -1
+          "ParameterValue": {
+            "ObjectName": "Texture2D T_TWBell_BC",
+            "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Textures/Outfit01/T_TWBell_BC.0"
           },
-          "ParameterValue": null,
-          "ExpressionGUID": "37383E13-458E9963-6611259D-3EB27806"
+          "ExpressionGUID": "CFE713C8-4B47B97B-BEFC90AD-BB3E6B38"
         }
       ],
       "BasePropertyOverrides": {
+        "TwoSided": true,
+        "BlendMode": "BLEND_Masked",
         "OpacityMaskClipValue": 0.3333
-      },
-      "StaticParameters": {
-        "StaticSwitchParameters": [
-          {
-            "Value": false,
-            "ParameterInfo": {
-              "Name": "UseDissolveSlasher",
-              "Association": "GlobalParameter",
-              "Index": -1
-            },
-            "bOverride": true,
-            "ExpressionGUID": "8847A463-4D2DD67A-162A7194-73E876F6"
-          }
-        ]
       },
       "CachedReferencedTextures": [
         {
@@ -209,6 +177,53 @@
         {
           "ObjectName": "Texture2D Blue",
           "ObjectPath": "DeadByDaylight/Content/Textures/Environment/Tiles/Blue.0"
+        }
+      ],
+      "TextureStreamingData": [
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "Black"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "Black_Linear"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "FlatNormal"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "Green_Linear"
+        },
+        {
+          "SamplingScale": 3.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_DissolveTextures"
+        },
+        {
+          "SamplingScale": 34.98828,
+          "UVChannelIndex": 0,
+          "TextureName": "T_ETouch_Tile"
+        },
+        {
+          "SamplingScale": 29.99414,
+          "UVChannelIndex": 0,
+          "TextureName": "T_NoiseNormal_01"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_TWBell_BC"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "White"
         }
       ]
     }
