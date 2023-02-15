@@ -1,0 +1,129 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "K31_SW01_REF_PhysicsAsset",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup K31_SW01_REF_PhysicsAsset:SkeletalBodySetup_0",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K31/Weapons/K31_SW01_REF_PhysicsAsset.2"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup K31_SW01_REF_PhysicsAsset:SkeletalBodySetup_1",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K31/Weapons/K31_SW01_REF_PhysicsAsset.3"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate K31_SW01_REF_PhysicsAsset:PhysicsConstraintTemplate_0",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K31/Weapons/K31_SW01_REF_PhysicsAsset.1"
+        }
+      ],
+      "ThumbnailInfo": null
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_0",
+    "Outer": "K31_SW01_REF_PhysicsAsset",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "joint_DronHead",
+        "ConstraintBone1": "joint_DronHead",
+        "ConstraintBone2": "joint_Drone",
+        "Pos2": {
+          "X": -0.10475156,
+          "Y": 2.9709961,
+          "Z": 0.0839737
+        },
+        "PriAxis2": {
+          "X": -0.023632884,
+          "Y": 0.9995411,
+          "Z": 0.018945187
+        },
+        "SecAxis2": {
+          "X": 0.7798838,
+          "Y": 0.030289233,
+          "Z": -0.625191
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "ACM_Limited",
+            "Swing2Motion": "ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "K31_SW01_REF_PhysicsAsset",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -0.92609024,
+              "Y": 9.301326,
+              "Z": -0.54057264
+            },
+            "Rotation": {
+              "Pitch": -1.5499679,
+              "Yaw": -90.0,
+              "Roll": -56.457775
+            },
+            "Radius": 23.657894,
+            "Length": 23.677216,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "joint_Drone",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "86C8BB3D45F19436B434ED896E1D59E3"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "K31_SW01_REF_PhysicsAsset",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 17.200733,
+              "Y": -0.11937046,
+              "Z": 8.163784
+            },
+            "Rotation": {
+              "Pitch": -6.830189E-06,
+              "Yaw": 83.23436,
+              "Roll": -57.81211
+            },
+            "Radius": 17.725618,
+            "Length": 21.98882,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "joint_DronHead",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "9B3A46F94E579DB580E5A0897C09FDF3"
+  }
+]

@@ -54,6 +54,16 @@
         }
       },
       {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_SetAttackAnimationFromMainAB_self_CastInput",
+        "Flags": 1,
+        "ElementSize": 16,
+        "InterfaceClass": {
+          "ObjectName": "BlueprintGeneratedClass BPI_AB_Slasher_SubGraph_Attack_C",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Anim_SubGraph/BPI_AB_Slasher_SubGraph_Attack.1"
+        }
+      },
+      {
         "Type": "ObjectProperty",
         "Name": "K2Node_DynamicCast_AsAB_Slasher_Sub_Graph_Locomotion_08",
         "Flags": 1,
@@ -92,7 +102,7 @@
         "ElementSize": 8,
         "PropertyClass": {
           "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_SubGraph_LookAT_00_C",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Anim_SubGraph/AB_Slasher_SubGraph_LookAT_00.13"
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Anim_SubGraph/AB_Slasher_SubGraph_LookAT_00.3"
         }
       },
       {
@@ -106,6 +116,16 @@
         "FieldMask": 255,
         "BoolSize": 1,
         "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_SetLookAtAnimationFromMainAB_self_CastInput",
+        "Flags": 1,
+        "ElementSize": 16,
+        "InterfaceClass": {
+          "ObjectName": "BlueprintGeneratedClass BPI_AB_Slasher_SubGraph_LookAt_C",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Anim_SubGraph/BPI_AB_Slasher_SubGraph_LookAt.1"
+        }
       }
     ],
     "FunctionFlags": 32769
@@ -150,8 +170,10 @@
       "OrderedSavedPoseIndicesMap": {
         "AnimGraph": {
           "OrderedSavedPoseNodeIndices": [
-            10,
-            15
+            30,
+            24,
+            14,
+            13
           ]
         }
       },
@@ -191,7 +213,7 @@
           "Function": null,
           "ValueHandlerNodeProperty": {
             "Path": [
-              "AnimGraphNode_LinkedAnimGraph_1"
+              "AnimGraphNode_LinkedAnimGraph_2"
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_08_C",
@@ -204,6 +226,33 @@
           "CopyRecords": [
             {
               "CopyIndex": 7,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            },
+            {
+              "CopyIndex": 8,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            },
+            {
+              "CopyIndex": 9,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_LinkedAnimGraph"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_08_C",
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Bear/Bluprint/AB_Slasher_08.3"
+            }
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "CopyIndex": 10,
               "PostCopyOperation": "EPostCopyOperation::None"
             }
           ],
@@ -222,7 +271,7 @@
           "BoundFunction": "None",
           "CopyRecords": [
             {
-              "CopyIndex": 8,
+              "CopyIndex": 11,
               "PostCopyOperation": "EPostCopyOperation::None"
             }
           ],
@@ -241,18 +290,18 @@
           "BoundFunction": "None",
           "CopyRecords": [
             {
-              "CopyIndex": 9,
+              "CopyIndex": 12,
               "PostCopyOperation": "EPostCopyOperation::None"
             },
             {
-              "CopyIndex": 10,
+              "CopyIndex": 13,
               "PostCopyOperation": "EPostCopyOperation::None"
             }
           ],
           "Function": null,
           "ValueHandlerNodeProperty": {
             "Path": [
-              "AnimGraphNode_LinkedAnimGraph"
+              "AnimGraphNode_LinkedAnimGraph_1"
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_08_C",
@@ -504,6 +553,102 @@
             "Flags": 2
           },
           {
+            "Name": "__CustomProperty__isIdle_F71EF3654519F3642A85B9A030AAF43D",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "__CustomProperty__isIdle_F71EF3654519F3642A85B9A030AAF43D"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_08_C",
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Bear/Bluprint/AB_Slasher_08.3"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "_isAttacking",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "_isAttacking"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class KillerAnimInstance",
+                "ObjectPath": "/Script/DBDAnimation"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "__CustomProperty__isAttack_F71EF3654519F3642A85B9A030AAF43D",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "__CustomProperty__isAttack_F71EF3654519F3642A85B9A030AAF43D"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_08_C",
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Bear/Bluprint/AB_Slasher_08.3"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "_animDirection",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "_animDirection"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class KillerAnimInstance",
+                "ObjectPath": "/Script/DBDAnimation"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "__CustomProperty__direction_F71EF3654519F3642A85B9A030AAF43D",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "__CustomProperty__direction_F71EF3654519F3642A85B9A030AAF43D"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_08_C",
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Bear/Bluprint/AB_Slasher_08.3"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "_isIdle",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "_isIdle"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class KillerAnimInstance",
+                "ObjectPath": "/Script/DBDAnimation"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
             "Name": "AnimGraphNode_BlendListByBool",
             "Struct": {
               "ObjectName": "ScriptStruct AnimNode_BlendListByBool",
@@ -677,17 +822,32 @@
             "bHasEvents": false
           },
           {
-            "PathSegmentStartIndex": 17,
+            "PathSegmentStartIndex": 16,
             "PathSegmentCount": 1,
             "bHasEvents": false
           },
           {
-            "PathSegmentStartIndex": 19,
+            "PathSegmentStartIndex": 18,
             "PathSegmentCount": 1,
             "bHasEvents": false
           },
           {
-            "PathSegmentStartIndex": 21,
+            "PathSegmentStartIndex": 20,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 23,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 25,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 27,
             "PathSegmentCount": 1,
             "bHasEvents": false
           }
@@ -730,21 +890,36 @@
           },
           {
             "PathSegmentStartIndex": 15,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 17,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 19,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 21,
             "PathSegmentCount": 2,
             "bHasEvents": false
           },
           {
-            "PathSegmentStartIndex": 18,
+            "PathSegmentStartIndex": 24,
             "PathSegmentCount": 1,
             "bHasEvents": false
           },
           {
-            "PathSegmentStartIndex": 20,
+            "PathSegmentStartIndex": 26,
             "PathSegmentCount": 1,
             "bHasEvents": false
           },
           {
-            "PathSegmentStartIndex": 22,
+            "PathSegmentStartIndex": 28,
             "PathSegmentCount": 1,
             "bHasEvents": false
           }
@@ -816,6 +991,24 @@
               "DestAccessStartIndex": 10,
               "DestAccessEndIndex": 11,
               "Type": "EPropertyAccessCopyType::Bool"
+            },
+            {
+              "AccessIndex": 11,
+              "DestAccessStartIndex": 11,
+              "DestAccessEndIndex": 12,
+              "Type": "EPropertyAccessCopyType::Bool"
+            },
+            {
+              "AccessIndex": 12,
+              "DestAccessStartIndex": 12,
+              "DestAccessEndIndex": 13,
+              "Type": "EPropertyAccessCopyType::Plain"
+            },
+            {
+              "AccessIndex": 13,
+              "DestAccessStartIndex": 13,
+              "DestAccessEndIndex": 14,
+              "Type": "EPropertyAccessCopyType::Bool"
             }
           ]
         }
@@ -867,6 +1060,16 @@
       },
       {
         "Type": "StructProperty",
+        "Name": "AnimGraphNode_LinkedAnimGraph_2",
+        "Flags": 2097153,
+        "ElementSize": 176,
+        "Struct": {
+          "ObjectName": "ScriptStruct AnimNode_LinkedAnimGraph",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
         "Name": "AnimGraphNode_LinkedAnimGraph_1",
         "Flags": 2097153,
         "ElementSize": 176,
@@ -877,12 +1080,152 @@
       },
       {
         "Type": "StructProperty",
-        "Name": "AnimGraphNode_LinkedAnimGraph",
+        "Name": "AnimGraphNode_UseCachedPose_5",
+        "Flags": 2097153,
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "ScriptStruct AnimNode_UseCachedPose",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SaveCachedPose_3",
+        "Flags": 2097153,
+        "ElementSize": 352,
+        "Struct": {
+          "ObjectName": "ScriptStruct AnimNode_SaveCachedPose",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_UseCachedPose_4",
+        "Flags": 2097153,
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "ScriptStruct AnimNode_UseCachedPose",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Slot_17",
+        "Flags": 2097153,
+        "ElementSize": 88,
+        "Struct": {
+          "ObjectName": "ScriptStruct AnimNode_Slot",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Slot_16",
+        "Flags": 2097153,
+        "ElementSize": 88,
+        "Struct": {
+          "ObjectName": "ScriptStruct AnimNode_Slot",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Slot_15",
+        "Flags": 2097153,
+        "ElementSize": 88,
+        "Struct": {
+          "ObjectName": "ScriptStruct AnimNode_Slot",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SubInstance",
         "Flags": 2097153,
         "ElementSize": 176,
         "Struct": {
           "ObjectName": "ScriptStruct AnimNode_LinkedAnimGraph",
           "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SaveCachedPose_2",
+        "Flags": 2097153,
+        "ElementSize": 352,
+        "Struct": {
+          "ObjectName": "ScriptStruct AnimNode_SaveCachedPose",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Slot_14",
+        "Flags": 2097153,
+        "ElementSize": 88,
+        "Struct": {
+          "ObjectName": "ScriptStruct AnimNode_Slot",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Slot_13",
+        "Flags": 2097153,
+        "ElementSize": 88,
+        "Struct": {
+          "ObjectName": "ScriptStruct AnimNode_Slot",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Slot_12",
+        "Flags": 2097153,
+        "ElementSize": 88,
+        "Struct": {
+          "ObjectName": "ScriptStruct AnimNode_Slot",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Slot_11",
+        "Flags": 2097153,
+        "ElementSize": 88,
+        "Struct": {
+          "ObjectName": "ScriptStruct AnimNode_Slot",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Slot_10",
+        "Flags": 2097153,
+        "ElementSize": 88,
+        "Struct": {
+          "ObjectName": "ScriptStruct AnimNode_Slot",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_BlendListByBool",
+        "Flags": 2097153,
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct AnimNode_BlendListByBool",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_LayeredBoneBlend",
+        "Flags": 2097153,
+        "ElementSize": 200,
+        "Struct": {
+          "ObjectName": "ScriptStruct AnimNode_LayeredBoneBlend",
+          "ObjectPath": "/Script/AnimGraphRuntime"
         }
       },
       {
@@ -912,46 +1255,6 @@
         "ElementSize": 352,
         "Struct": {
           "ObjectName": "ScriptStruct AnimNode_SaveCachedPose",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "AnimGraphNode_Slot_8",
-        "Flags": 2097153,
-        "ElementSize": 88,
-        "Struct": {
-          "ObjectName": "ScriptStruct AnimNode_Slot",
-          "ObjectPath": "/Script/AnimGraphRuntime"
-        }
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "AnimGraphNode_Slot_7",
-        "Flags": 2097153,
-        "ElementSize": 88,
-        "Struct": {
-          "ObjectName": "ScriptStruct AnimNode_Slot",
-          "ObjectPath": "/Script/AnimGraphRuntime"
-        }
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "AnimGraphNode_Slot_6",
-        "Flags": 2097153,
-        "ElementSize": 88,
-        "Struct": {
-          "ObjectName": "ScriptStruct AnimNode_Slot",
-          "ObjectPath": "/Script/AnimGraphRuntime"
-        }
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "AnimGraphNode_SubInstance",
-        "Flags": 2097153,
-        "ElementSize": 176,
-        "Struct": {
-          "ObjectName": "ScriptStruct AnimNode_LinkedAnimGraph",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -987,11 +1290,51 @@
       },
       {
         "Type": "StructProperty",
-        "Name": "AnimGraphNode_LayeredBoneBlend",
+        "Name": "AnimGraphNode_LinkedAnimGraph",
         "Flags": 2097153,
-        "ElementSize": 200,
+        "ElementSize": 176,
         "Struct": {
-          "ObjectName": "ScriptStruct AnimNode_LayeredBoneBlend",
+          "ObjectName": "ScriptStruct AnimNode_LinkedAnimGraph",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Slot_9",
+        "Flags": 2097153,
+        "ElementSize": 88,
+        "Struct": {
+          "ObjectName": "ScriptStruct AnimNode_Slot",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Slot_8",
+        "Flags": 2097153,
+        "ElementSize": 88,
+        "Struct": {
+          "ObjectName": "ScriptStruct AnimNode_Slot",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Slot_7",
+        "Flags": 2097153,
+        "ElementSize": 88,
+        "Struct": {
+          "ObjectName": "ScriptStruct AnimNode_Slot",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Slot_6",
+        "Flags": 2097153,
+        "ElementSize": 88,
+        "Struct": {
+          "ObjectName": "ScriptStruct AnimNode_Slot",
           "ObjectPath": "/Script/AnimGraphRuntime"
         }
       },
@@ -1056,14 +1399,34 @@
         }
       },
       {
-        "Type": "StructProperty",
-        "Name": "AnimGraphNode_BlendListByBool",
+        "Type": "FloatProperty",
+        "Name": "__CustomProperty__direction_F71EF3654519F3642A85B9A030AAF43D",
         "Flags": 2097153,
-        "ElementSize": 160,
-        "Struct": {
-          "ObjectName": "ScriptStruct AnimNode_BlendListByBool",
-          "ObjectPath": "/Script/AnimGraphRuntime"
-        }
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "__CustomProperty__isAttack_F71EF3654519F3642A85B9A030AAF43D",
+        "Flags": 2097153,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "__CustomProperty__isIdle_F71EF3654519F3642A85B9A030AAF43D",
+        "Flags": 2097153,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
       },
       {
         "Type": "BoolProperty",
@@ -1088,30 +1451,6 @@
         "FieldMask": 255,
         "BoolSize": 1,
         "bIsNativeBool": true
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "__CustomProperty_IsUsingIKJoints_9440F2C84B69F554FBBD979DA89EC5C5",
-        "Flags": 2097153,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "__CustomProperty_RightHandDynamicAlpha_9440F2C84B69F554FBBD979DA89EC5C5",
-        "Flags": 2097153,
-        "ElementSize": 4
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "__CustomProperty_LeftHandDynamicAlpha_9440F2C84B69F554FBBD979DA89EC5C5",
-        "Flags": 2097153,
-        "ElementSize": 4
       },
       {
         "Type": "BoolProperty",
@@ -1299,12 +1638,12 @@
       "UberGraphFrame": {},
       "AnimGraphNode_Root": {
         "Result": {
-          "LinkID": 16
+          "LinkID": 3
         },
         "Name": "AnimGraph",
         "Group": "None"
       },
-      "AnimGraphNode_LinkedAnimGraph_1": {
+      "AnimGraphNode_LinkedAnimGraph_2": {
         "InputPoses": [],
         "InputPoseNames": [],
         "InstanceClass": {
@@ -1334,7 +1673,7 @@
         ],
         "TargetInstance": null
       },
-      "AnimGraphNode_LinkedAnimGraph": {
+      "AnimGraphNode_LinkedAnimGraph_1": {
         "InputPoses": [
           {
             "LinkID": 6
@@ -1345,7 +1684,7 @@
         ],
         "InstanceClass": {
           "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_SubGraph_LookAT_00_C",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Anim_SubGraph/AB_Slasher_SubGraph_LookAT_00.13"
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Anim_SubGraph/AB_Slasher_SubGraph_LookAT_00.3"
         },
         "Tag": "K08_LookAt",
         "bReceiveNotifiesFromLinkedInstances": false,
@@ -1353,54 +1692,48 @@
         "SourcePropertyNames": [
           "__CustomProperty__animPitch_9440F2C84B69F554FBBD979DA89EC5C5",
           "__CustomProperty__FirstPersonView_9440F2C84B69F554FBBD979DA89EC5C5",
-          "__CustomProperty_LeftHandDynamicAlpha_9440F2C84B69F554FBBD979DA89EC5C5",
-          "__CustomProperty_RightHandDynamicAlpha_9440F2C84B69F554FBBD979DA89EC5C5",
-          "__CustomProperty_IsUsingIKJoints_9440F2C84B69F554FBBD979DA89EC5C5",
           "__CustomProperty__enableDynamics_9440F2C84B69F554FBBD979DA89EC5C5"
         ],
         "DestPropertyNames": [
           "_animPitch",
           "_FirstPersonView",
-          "LeftHandDynamicAlpha",
-          "RightHandDynamicAlpha",
-          "IsUsingIKJoints",
           "_enableDynamics"
         ],
         "TargetInstance": null
       },
-      "AnimGraphNode_UseCachedPose_3": {
+      "AnimGraphNode_UseCachedPose_5": {
         "LinkToCachingNode": {
-          "LinkID": 5
+          "LinkID": 4
         },
-        "CachePoseName": "StateMachineCache"
+        "CachePoseName": "Final"
       },
-      "AnimGraphNode_UseCachedPose_2": {
-        "LinkToCachingNode": {
-          "LinkID": 5
-        },
-        "CachePoseName": "StateMachineCache"
-      },
-      "AnimGraphNode_SaveCachedPose_1": {
+      "AnimGraphNode_SaveCachedPose_3": {
         "Pose": {
-          "LinkID": 1
+          "LinkID": 11
         },
-        "CachePoseName": "StateMachineCache"
+        "CachePoseName": "Final"
       },
-      "AnimGraphNode_Slot_8": {
+      "AnimGraphNode_UseCachedPose_4": {
+        "LinkToCachingNode": {
+          "LinkID": 10
+        },
+        "CachePoseName": "Montages"
+      },
+      "AnimGraphNode_Slot_17": {
         "Source": {
-          "LinkID": 19
+          "LinkID": 24
         },
         "SlotName": "MontageGeneric",
         "bAlwaysUpdateSourcePose": false
       },
-      "AnimGraphNode_Slot_7": {
+      "AnimGraphNode_Slot_16": {
         "Source": {
           "LinkID": 2
         },
         "SlotName": "MontageIK",
         "bAlwaysUpdateSourcePose": false
       },
-      "AnimGraphNode_Slot_6": {
+      "AnimGraphNode_Slot_15": {
         "Source": {
           "LinkID": 9
         },
@@ -1418,7 +1751,7 @@
         ],
         "InstanceClass": {
           "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_SubGraph_FPVIK_00_C",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Anim_SubGraph/AB_Slasher_SubGraph_FPVIK_00.3"
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Anim_SubGraph/AB_Slasher_SubGraph_FPVIK_00.2"
         },
         "Tag": "None",
         "bReceiveNotifiesFromLinkedInstances": false,
@@ -1431,31 +1764,74 @@
         ],
         "TargetInstance": null
       },
-      "AnimGraphNode_SaveCachedPose": {
+      "AnimGraphNode_SaveCachedPose_2": {
         "Pose": {
-          "LinkID": 17
+          "LinkID": 8
         },
-        "CachePoseName": "Power"
+        "CachePoseName": "Montages"
       },
-      "AnimGraphNode_UseCachedPose_1": {
-        "LinkToCachingNode": {
-          "LinkID": 10
+      "AnimGraphNode_Slot_14": {
+        "Source": {
+          "LinkID": 12
         },
-        "CachePoseName": "Power"
+        "SlotName": "MontageIK",
+        "bAlwaysUpdateSourcePose": false
       },
-      "AnimGraphNode_UseCachedPose": {
-        "LinkToCachingNode": {
-          "LinkID": 10
+      "AnimGraphNode_Slot_13": {
+        "Source": {
+          "LinkID": 13
         },
-        "CachePoseName": "Power"
+        "SlotName": "Kill",
+        "bAlwaysUpdateSourcePose": false
+      },
+      "AnimGraphNode_Slot_12": {
+        "Source": {
+          "LinkID": 14
+        },
+        "SlotName": "ClosetPick",
+        "bAlwaysUpdateSourcePose": false
+      },
+      "AnimGraphNode_Slot_11": {
+        "Source": {
+          "LinkID": 33
+        },
+        "SlotName": "AutoPickFT",
+        "bAlwaysUpdateSourcePose": false
+      },
+      "AnimGraphNode_Slot_10": {
+        "Source": {
+          "LinkID": 22
+        },
+        "SlotName": "Power",
+        "bAlwaysUpdateSourcePose": false
+      },
+      "AnimGraphNode_BlendListByBool": {
+        "bActiveValue": false,
+        "BlendPose": [
+          {
+            "LinkID": 18
+          },
+          {
+            "LinkID": 17
+          }
+        ],
+        "BlendTime": [
+          0.0,
+          0.0
+        ],
+        "TransitionType": "EBlendListTransitionType::StandardBlend",
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
       },
       "AnimGraphNode_LayeredBoneBlend": {
         "BasePose": {
-          "LinkID": 3
+          "LinkID": 23
         },
         "BlendPoses": [
           {
-            "LinkID": 11
+            "LinkID": 19
           }
         ],
         "LayerSetup": [
@@ -4436,72 +4812,340 @@
           {
             "SourceIndex": 0,
             "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
           }
         ],
-        "SkeletonGuid": "BA25543D-42B5BF2A-4F706EBD-7340A4D0",
+        "SkeletonGuid": "86D5005B-43A898D2-C21BD69E-C6FFC84C",
         "VirtualBoneGuid": "995D83FA-4A9560E5-229D1FAA-D164AD84"
+      },
+      "AnimGraphNode_UseCachedPose_3": {
+        "LinkToCachingNode": {
+          "LinkID": 20
+        },
+        "CachePoseName": "Power"
+      },
+      "AnimGraphNode_UseCachedPose_2": {
+        "LinkToCachingNode": {
+          "LinkID": 20
+        },
+        "CachePoseName": "Power"
+      },
+      "AnimGraphNode_SaveCachedPose_1": {
+        "Pose": {
+          "LinkID": 15
+        },
+        "CachePoseName": "Power"
+      },
+      "AnimGraphNode_SaveCachedPose": {
+        "Pose": {
+          "LinkID": 1
+        },
+        "CachePoseName": "StateMachineCache"
+      },
+      "AnimGraphNode_UseCachedPose_1": {
+        "LinkToCachingNode": {
+          "LinkID": 21
+        },
+        "CachePoseName": "StateMachineCache"
+      },
+      "AnimGraphNode_UseCachedPose": {
+        "LinkToCachingNode": {
+          "LinkID": 21
+        },
+        "CachePoseName": "StateMachineCache"
+      },
+      "AnimGraphNode_LinkedAnimGraph": {
+        "InputPoses": [
+          {
+            "LinkID": 16
+          }
+        ],
+        "InputPoseNames": [
+          "InPose"
+        ],
+        "InstanceClass": {
+          "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_SubGraph_BaseAttack_00_C",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Anim_SubGraph/AB_Slasher_SubGraph_BaseAttack_00.24"
+        },
+        "Tag": "K08_Attack",
+        "bReceiveNotifiesFromLinkedInstances": false,
+        "bPropagateNotifiesToLinkedInstances": false,
+        "SourcePropertyNames": [
+          "__CustomProperty__isIdle_F71EF3654519F3642A85B9A030AAF43D",
+          "__CustomProperty__isAttack_F71EF3654519F3642A85B9A030AAF43D",
+          "__CustomProperty__direction_F71EF3654519F3642A85B9A030AAF43D"
+        ],
+        "DestPropertyNames": [
+          "_isIdle",
+          "_isAttack",
+          "_direction"
+        ],
+        "TargetInstance": null
+      },
+      "AnimGraphNode_Slot_9": {
+        "Source": {
+          "LinkID": 27
+        },
+        "SlotName": "Obstacle",
+        "bAlwaysUpdateSourcePose": false
+      },
+      "AnimGraphNode_Slot_8": {
+        "Source": {
+          "LinkID": 29
+        },
+        "SlotName": "GrabCrawlingCamper",
+        "bAlwaysUpdateSourcePose": false
+      },
+      "AnimGraphNode_Slot_7": {
+        "Source": {
+          "LinkID": 28
+        },
+        "SlotName": "HookCamper",
+        "bAlwaysUpdateSourcePose": false
+      },
+      "AnimGraphNode_Slot_6": {
+        "Source": {
+          "LinkID": 26
+        },
+        "SlotName": "DropCamper",
+        "bAlwaysUpdateSourcePose": false
       },
       "AnimGraphNode_Slot_5": {
         "Source": {
-          "LinkID": 8
+          "LinkID": 5
         },
-        "SlotName": "GetItem",
+        "SlotName": "PickCamper",
         "bAlwaysUpdateSourcePose": false
       },
       "AnimGraphNode_Slot_4": {
         "Source": {
-          "LinkID": 14
-        },
-        "SlotName": "ClosetPick",
-        "bAlwaysUpdateSourcePose": false
-      },
-      "AnimGraphNode_Slot_3": {
-        "Source": {
-          "LinkID": 15
+          "LinkID": 25
         },
         "SlotName": "Destroy",
         "bAlwaysUpdateSourcePose": false
       },
+      "AnimGraphNode_Slot_3": {
+        "Source": {
+          "LinkID": 30
+        },
+        "SlotName": "GetItem",
+        "bAlwaysUpdateSourcePose": false
+      },
       "AnimGraphNode_Slot_2": {
         "Source": {
-          "LinkID": 4
+          "LinkID": 31
         },
-        "SlotName": "Power",
+        "SlotName": "SetTrap",
         "bAlwaysUpdateSourcePose": false
       },
       "AnimGraphNode_Slot_1": {
         "Source": {
-          "LinkID": 20
+          "LinkID": 34
         },
-        "SlotName": "AttackSlot",
+        "SlotName": "CatchTrap",
         "bAlwaysUpdateSourcePose": false
       },
       "AnimGraphNode_Slot": {
         "Source": {
-          "LinkID": 18
+          "LinkID": 32
         },
-        "SlotName": "MontageGeneric",
+        "SlotName": "AutoPickBK",
         "bAlwaysUpdateSourcePose": false
-      },
-      "AnimGraphNode_BlendListByBool": {
-        "bActiveValue": false,
-        "BlendPose": [
-          {
-            "LinkID": 12
-          },
-          {
-            "LinkID": 13
-          }
-        ],
-        "BlendTime": [
-          0.0,
-          0.0
-        ],
-        "TransitionType": "EBlendListTransitionType::StandardBlend",
-        "BlendType": "EAlphaBlendOption::Linear",
-        "bResetChildOnActivation": false,
-        "CustomBlendCurve": null,
-        "BlendProfile": null
       },
       "LocoAnimSet": {
         "Stand_2_3B2E928C4988C5A26B86BF8424E6BC41": {

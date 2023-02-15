@@ -30,18 +30,6 @@
         "bIsNativeBool": true
       },
       {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_Not_PreBool_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
         "Type": "ObjectProperty",
         "Name": "CallFunc_GetKiller_ReturnValue",
         "Flags": 1,
@@ -52,18 +40,6 @@
         }
       },
       {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_BooleanOR_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
         "Type": "StructProperty",
         "Name": "CallFunc_K2_GetActorRotation_ReturnValue",
         "Flags": 1,
@@ -72,6 +48,18 @@
           "ObjectName": "ScriptStruct Rotator",
           "ObjectPath": "/Script/CoreUObject"
         }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
       },
       {
         "Type": "FloatProperty",
@@ -92,10 +80,32 @@
         "ElementSize": 4
       },
       {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
         "Type": "FloatProperty",
         "Name": "CallFunc_Multiply_FloatFloat_ReturnValue",
         "Flags": 1,
         "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeRotator_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct Rotator",
+          "ObjectPath": "/Script/CoreUObject"
+        }
       },
       {
         "Type": "BoolProperty",
@@ -108,16 +118,6 @@
         "FieldMask": 255,
         "BoolSize": 1,
         "bIsNativeBool": true
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "CallFunc_MakeRotator_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 12,
-        "Struct": {
-          "ObjectName": "ScriptStruct Rotator",
-          "ObjectPath": "/Script/CoreUObject"
-        }
       },
       {
         "Type": "StructProperty",
@@ -161,18 +161,50 @@
         }
       },
       {
-        "Type": "ObjectProperty",
-        "Name": "K2Node_DynamicCast_AsAB_Slasher_Sub_Graph_Locomotion_00",
+        "Type": "InterfaceProperty",
+        "Name": "K2Node_DynamicCast_AsBPI_AB_Slasher_Sub_Graph_Look_At",
         "Flags": 1,
-        "ElementSize": 8,
-        "PropertyClass": {
-          "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_SubGraph_Locomotion_00_C",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Anim_SubGraph/AB_Slasher_SubGraph_Locomotion_00.9"
+        "ElementSize": 16,
+        "InterfaceClass": {
+          "ObjectName": "BlueprintGeneratedClass BPI_AB_Slasher_SubGraph_LookAt_C",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Anim_SubGraph/BPI_AB_Slasher_SubGraph_LookAt.1"
         }
       },
       {
         "Type": "BoolProperty",
         "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetLinkedAnimGraphInstanceByTag_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class AnimInstance",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "K2Node_DynamicCast_AsBPI_AB_Slasher_Sub_Graph_Locomotion",
+        "Flags": 1,
+        "ElementSize": 16,
+        "InterfaceClass": {
+          "ObjectName": "BlueprintGeneratedClass BPI_AB_Slasher_SubGraph_Locomotion_C",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Anim_SubGraph/BPI_AB_Slasher_SubGraph_Locomotion.1"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
         "Flags": 1,
         "ElementSize": 1,
         "FieldSize": 1,
@@ -596,7 +628,22 @@
             {
               "CopyIndex": 2,
               "PostCopyOperation": "EPostCopyOperation::None"
-            },
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_SubInstance"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+            }
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
             {
               "CopyIndex": 3,
               "PostCopyOperation": "EPostCopyOperation::None"
@@ -616,22 +663,7 @@
             {
               "CopyIndex": 7,
               "PostCopyOperation": "EPostCopyOperation::None"
-            }
-          ],
-          "Function": null,
-          "ValueHandlerNodeProperty": {
-            "Path": [
-              "AnimGraphNode_SubInstance"
-            ],
-            "ResolvedOwner": {
-              "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
-            }
-          }
-        },
-        {
-          "BoundFunction": "None",
-          "CopyRecords": [
+            },
             {
               "CopyIndex": 8,
               "PostCopyOperation": "EPostCopyOperation::None"
@@ -1207,262 +1239,6 @@
       "PropertyAccessLibrary": {
         "PathSegments": [
           {
-            "Name": "_isCarrying",
-            "Struct": null,
-            "Property": {
-              "Path": [
-                "_isCarrying"
-              ],
-              "ResolvedOwner": {
-                "ObjectName": "Class KillerAnimInstance",
-                "ObjectPath": "/Script/DBDAnimation"
-              }
-            },
-            "Function": null,
-            "ArrayIndex": -1,
-            "Flags": 2
-          },
-          {
-            "Name": "__CustomProperty__isCarrying_A452FDF14F37F7EE1050008D0E069AD5",
-            "Struct": null,
-            "Property": {
-              "Path": [
-                "__CustomProperty__isCarrying_A452FDF14F37F7EE1050008D0E069AD5"
-              ],
-              "ResolvedOwner": {
-                "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
-              }
-            },
-            "Function": null,
-            "ArrayIndex": -1,
-            "Flags": 2
-          },
-          {
-            "Name": "_interactionType",
-            "Struct": null,
-            "Property": {
-              "Path": [
-                "_interactionType"
-              ],
-              "ResolvedOwner": {
-                "ObjectName": "Class KillerAnimInstance",
-                "ObjectPath": "/Script/DBDAnimation"
-              }
-            },
-            "Function": null,
-            "ArrayIndex": -1,
-            "Flags": 2
-          },
-          {
-            "Name": "__CustomProperty__interactionType_A452FDF14F37F7EE1050008D0E069AD5",
-            "Struct": null,
-            "Property": {
-              "Path": [
-                "__CustomProperty__interactionType_A452FDF14F37F7EE1050008D0E069AD5"
-              ],
-              "ResolvedOwner": {
-                "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
-              }
-            },
-            "Function": null,
-            "ArrayIndex": -1,
-            "Flags": 2
-          },
-          {
-            "Name": "_isInAir",
-            "Struct": null,
-            "Property": {
-              "Path": [
-                "_isInAir"
-              ],
-              "ResolvedOwner": {
-                "ObjectName": "Class KillerAnimInstance",
-                "ObjectPath": "/Script/DBDAnimation"
-              }
-            },
-            "Function": null,
-            "ArrayIndex": -1,
-            "Flags": 2
-          },
-          {
-            "Name": "__CustomProperty__isInAir_A452FDF14F37F7EE1050008D0E069AD5",
-            "Struct": null,
-            "Property": {
-              "Path": [
-                "__CustomProperty__isInAir_A452FDF14F37F7EE1050008D0E069AD5"
-              ],
-              "ResolvedOwner": {
-                "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
-              }
-            },
-            "Function": null,
-            "ArrayIndex": -1,
-            "Flags": 2
-          },
-          {
-            "Name": "_isIdle",
-            "Struct": null,
-            "Property": {
-              "Path": [
-                "_isIdle"
-              ],
-              "ResolvedOwner": {
-                "ObjectName": "Class KillerAnimInstance",
-                "ObjectPath": "/Script/DBDAnimation"
-              }
-            },
-            "Function": null,
-            "ArrayIndex": -1,
-            "Flags": 2
-          },
-          {
-            "Name": "__CustomProperty__isIdle_A452FDF14F37F7EE1050008D0E069AD5",
-            "Struct": null,
-            "Property": {
-              "Path": [
-                "__CustomProperty__isIdle_A452FDF14F37F7EE1050008D0E069AD5"
-              ],
-              "ResolvedOwner": {
-                "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
-              }
-            },
-            "Function": null,
-            "ArrayIndex": -1,
-            "Flags": 2
-          },
-          {
-            "Name": "_isAttacking",
-            "Struct": null,
-            "Property": {
-              "Path": [
-                "_isAttacking"
-              ],
-              "ResolvedOwner": {
-                "ObjectName": "Class KillerAnimInstance",
-                "ObjectPath": "/Script/DBDAnimation"
-              }
-            },
-            "Function": null,
-            "ArrayIndex": -1,
-            "Flags": 2
-          },
-          {
-            "Name": "__CustomProperty__isAttacking_A452FDF14F37F7EE1050008D0E069AD5",
-            "Struct": null,
-            "Property": {
-              "Path": [
-                "__CustomProperty__isAttacking_A452FDF14F37F7EE1050008D0E069AD5"
-              ],
-              "ResolvedOwner": {
-                "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
-              }
-            },
-            "Function": null,
-            "ArrayIndex": -1,
-            "Flags": 2
-          },
-          {
-            "Name": "_animSpeed",
-            "Struct": null,
-            "Property": {
-              "Path": [
-                "_animSpeed"
-              ],
-              "ResolvedOwner": {
-                "ObjectName": "Class KillerAnimInstance",
-                "ObjectPath": "/Script/DBDAnimation"
-              }
-            },
-            "Function": null,
-            "ArrayIndex": -1,
-            "Flags": 2
-          },
-          {
-            "Name": "__CustomProperty__animSpeed_A452FDF14F37F7EE1050008D0E069AD5",
-            "Struct": null,
-            "Property": {
-              "Path": [
-                "__CustomProperty__animSpeed_A452FDF14F37F7EE1050008D0E069AD5"
-              ],
-              "ResolvedOwner": {
-                "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
-              }
-            },
-            "Function": null,
-            "ArrayIndex": -1,
-            "Flags": 2
-          },
-          {
-            "Name": "_animDirection",
-            "Struct": null,
-            "Property": {
-              "Path": [
-                "_animDirection"
-              ],
-              "ResolvedOwner": {
-                "ObjectName": "Class KillerAnimInstance",
-                "ObjectPath": "/Script/DBDAnimation"
-              }
-            },
-            "Function": null,
-            "ArrayIndex": -1,
-            "Flags": 2
-          },
-          {
-            "Name": "__CustomProperty__animDirection_A452FDF14F37F7EE1050008D0E069AD5",
-            "Struct": null,
-            "Property": {
-              "Path": [
-                "__CustomProperty__animDirection_A452FDF14F37F7EE1050008D0E069AD5"
-              ],
-              "ResolvedOwner": {
-                "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
-              }
-            },
-            "Function": null,
-            "ArrayIndex": -1,
-            "Flags": 2
-          },
-          {
-            "Name": "_firstPersonView",
-            "Struct": null,
-            "Property": {
-              "Path": [
-                "_firstPersonView"
-              ],
-              "ResolvedOwner": {
-                "ObjectName": "Class BaseKillerAnimInstance",
-                "ObjectPath": "/Script/DBDAnimation"
-              }
-            },
-            "Function": null,
-            "ArrayIndex": -1,
-            "Flags": 2
-          },
-          {
-            "Name": "__CustomProperty__firstPersonView_A452FDF14F37F7EE1050008D0E069AD5",
-            "Struct": null,
-            "Property": {
-              "Path": [
-                "__CustomProperty__firstPersonView_A452FDF14F37F7EE1050008D0E069AD5"
-              ],
-              "ResolvedOwner": {
-                "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
-              }
-            },
-            "Function": null,
-            "ArrayIndex": -1,
-            "Flags": 2
-          },
-          {
             "Name": "_isIdle",
             "Struct": null,
             "Property": {
@@ -1548,6 +1324,262 @@
             "Property": {
               "Path": [
                 "__CustomProperty__direction_9DB03A8A4AB0F2A6B5EAECB068A3D514"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "_isCarrying",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "_isCarrying"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class KillerAnimInstance",
+                "ObjectPath": "/Script/DBDAnimation"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "__CustomProperty__isCarrying_95C28B9B4E8FE0B3E9BA868D6449500E",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "__CustomProperty__isCarrying_95C28B9B4E8FE0B3E9BA868D6449500E"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "_interactionType",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "_interactionType"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class KillerAnimInstance",
+                "ObjectPath": "/Script/DBDAnimation"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "__CustomProperty__interactionType_95C28B9B4E8FE0B3E9BA868D6449500E",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "__CustomProperty__interactionType_95C28B9B4E8FE0B3E9BA868D6449500E"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "_isInAir",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "_isInAir"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class KillerAnimInstance",
+                "ObjectPath": "/Script/DBDAnimation"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "__CustomProperty__isInAir_95C28B9B4E8FE0B3E9BA868D6449500E",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "__CustomProperty__isInAir_95C28B9B4E8FE0B3E9BA868D6449500E"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "_isIdle",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "_isIdle"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class KillerAnimInstance",
+                "ObjectPath": "/Script/DBDAnimation"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "__CustomProperty__isIdle_95C28B9B4E8FE0B3E9BA868D6449500E",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "__CustomProperty__isIdle_95C28B9B4E8FE0B3E9BA868D6449500E"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "_isAttacking",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "_isAttacking"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class KillerAnimInstance",
+                "ObjectPath": "/Script/DBDAnimation"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "__CustomProperty__isAttacking_95C28B9B4E8FE0B3E9BA868D6449500E",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "__CustomProperty__isAttacking_95C28B9B4E8FE0B3E9BA868D6449500E"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "_animSpeed",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "_animSpeed"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class KillerAnimInstance",
+                "ObjectPath": "/Script/DBDAnimation"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "__CustomProperty__animSpeed_95C28B9B4E8FE0B3E9BA868D6449500E",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "__CustomProperty__animSpeed_95C28B9B4E8FE0B3E9BA868D6449500E"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "_animDirection",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "_animDirection"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class KillerAnimInstance",
+                "ObjectPath": "/Script/DBDAnimation"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "__CustomProperty__animDirection_95C28B9B4E8FE0B3E9BA868D6449500E",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "__CustomProperty__animDirection_95C28B9B4E8FE0B3E9BA868D6449500E"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/AB_Slasher_02.5"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "_firstPersonView",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "_firstPersonView"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class BaseKillerAnimInstance",
+                "ObjectPath": "/Script/DBDAnimation"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "__CustomProperty__firstPersonView_95C28B9B4E8FE0B3E9BA868D6449500E",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "__CustomProperty__firstPersonView_95C28B9B4E8FE0B3E9BA868D6449500E"
               ],
               "ResolvedOwner": {
                 "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_02_C",
@@ -3991,13 +4023,13 @@
               "AccessIndex": 1,
               "DestAccessStartIndex": 1,
               "DestAccessEndIndex": 2,
-              "Type": "EPropertyAccessCopyType::Plain"
+              "Type": "EPropertyAccessCopyType::Bool"
             },
             {
               "AccessIndex": 2,
               "DestAccessStartIndex": 2,
               "DestAccessEndIndex": 3,
-              "Type": "EPropertyAccessCopyType::Bool"
+              "Type": "EPropertyAccessCopyType::Plain"
             },
             {
               "AccessIndex": 3,
@@ -4009,19 +4041,19 @@
               "AccessIndex": 4,
               "DestAccessStartIndex": 4,
               "DestAccessEndIndex": 5,
-              "Type": "EPropertyAccessCopyType::Bool"
+              "Type": "EPropertyAccessCopyType::Plain"
             },
             {
               "AccessIndex": 5,
               "DestAccessStartIndex": 5,
               "DestAccessEndIndex": 6,
-              "Type": "EPropertyAccessCopyType::Plain"
+              "Type": "EPropertyAccessCopyType::Bool"
             },
             {
               "AccessIndex": 6,
               "DestAccessStartIndex": 6,
               "DestAccessEndIndex": 7,
-              "Type": "EPropertyAccessCopyType::Plain"
+              "Type": "EPropertyAccessCopyType::Bool"
             },
             {
               "AccessIndex": 7,
@@ -4033,19 +4065,19 @@
               "AccessIndex": 8,
               "DestAccessStartIndex": 8,
               "DestAccessEndIndex": 9,
-              "Type": "EPropertyAccessCopyType::Bool"
+              "Type": "EPropertyAccessCopyType::Plain"
             },
             {
               "AccessIndex": 9,
               "DestAccessStartIndex": 9,
               "DestAccessEndIndex": 10,
-              "Type": "EPropertyAccessCopyType::Bool"
+              "Type": "EPropertyAccessCopyType::Plain"
             },
             {
               "AccessIndex": 10,
               "DestAccessStartIndex": 10,
               "DestAccessEndIndex": 11,
-              "Type": "EPropertyAccessCopyType::Plain"
+              "Type": "EPropertyAccessCopyType::Bool"
             },
             {
               "AccessIndex": 11,
@@ -4865,22 +4897,22 @@
       },
       {
         "Type": "StructProperty",
-        "Name": "AnimGraphNode_Slot_1",
-        "Flags": 2097153,
-        "ElementSize": 88,
-        "Struct": {
-          "ObjectName": "ScriptStruct AnimNode_Slot",
-          "ObjectPath": "/Script/AnimGraphRuntime"
-        }
-      },
-      {
-        "Type": "StructProperty",
         "Name": "AnimGraphNode_SubInstance_1",
         "Flags": 2097153,
         "ElementSize": 176,
         "Struct": {
           "ObjectName": "ScriptStruct AnimNode_LinkedAnimGraph",
           "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Slot_1",
+        "Flags": 2097153,
+        "ElementSize": 88,
+        "Struct": {
+          "ObjectName": "ScriptStruct AnimNode_Slot",
+          "ObjectPath": "/Script/AnimGraphRuntime"
         }
       },
       {
@@ -4905,7 +4937,7 @@
       },
       {
         "Type": "BoolProperty",
-        "Name": "__CustomProperty__firstPersonView_A452FDF14F37F7EE1050008D0E069AD5",
+        "Name": "__CustomProperty__firstPersonView_95C28B9B4E8FE0B3E9BA868D6449500E",
         "Flags": 2097153,
         "ElementSize": 1,
         "FieldSize": 1,
@@ -4917,19 +4949,19 @@
       },
       {
         "Type": "FloatProperty",
-        "Name": "__CustomProperty__animDirection_A452FDF14F37F7EE1050008D0E069AD5",
+        "Name": "__CustomProperty__animDirection_95C28B9B4E8FE0B3E9BA868D6449500E",
         "Flags": 2097153,
         "ElementSize": 4
       },
       {
         "Type": "FloatProperty",
-        "Name": "__CustomProperty__animSpeed_A452FDF14F37F7EE1050008D0E069AD5",
+        "Name": "__CustomProperty__animSpeed_95C28B9B4E8FE0B3E9BA868D6449500E",
         "Flags": 2097153,
         "ElementSize": 4
       },
       {
         "Type": "BoolProperty",
-        "Name": "__CustomProperty__isAttacking_A452FDF14F37F7EE1050008D0E069AD5",
+        "Name": "__CustomProperty__isAttacking_95C28B9B4E8FE0B3E9BA868D6449500E",
         "Flags": 2097153,
         "ElementSize": 1,
         "FieldSize": 1,
@@ -4941,7 +4973,7 @@
       },
       {
         "Type": "BoolProperty",
-        "Name": "__CustomProperty__isIdle_A452FDF14F37F7EE1050008D0E069AD5",
+        "Name": "__CustomProperty__isIdle_95C28B9B4E8FE0B3E9BA868D6449500E",
         "Flags": 2097153,
         "ElementSize": 1,
         "FieldSize": 1,
@@ -4953,7 +4985,7 @@
       },
       {
         "Type": "BoolProperty",
-        "Name": "__CustomProperty__isInAir_A452FDF14F37F7EE1050008D0E069AD5",
+        "Name": "__CustomProperty__isInAir_95C28B9B4E8FE0B3E9BA868D6449500E",
         "Flags": 2097153,
         "ElementSize": 1,
         "FieldSize": 1,
@@ -4965,7 +4997,7 @@
       },
       {
         "Type": "EnumProperty",
-        "Name": "__CustomProperty__interactionType_A452FDF14F37F7EE1050008D0E069AD5",
+        "Name": "__CustomProperty__interactionType_95C28B9B4E8FE0B3E9BA868D6449500E",
         "Flags": 2097153,
         "ElementSize": 1,
         "Enum": {
@@ -4982,7 +5014,7 @@
       },
       {
         "Type": "BoolProperty",
-        "Name": "__CustomProperty__isCarrying_A452FDF14F37F7EE1050008D0E069AD5",
+        "Name": "__CustomProperty__isCarrying_95C28B9B4E8FE0B3E9BA868D6449500E",
         "Flags": 2097153,
         "ElementSize": 1,
         "FieldSize": 1,
@@ -5362,6 +5394,17 @@
       },
       {
         "Type": "StructProperty",
+        "Name": "LookAtAnimSet",
+        "Flags": 2097153,
+        "ElementSize": 56,
+        "PropertyFlags": 65541,
+        "Struct": {
+          "ObjectName": "UserDefinedStruct Aset_Slasher_LookAT",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Animations/AnimSets/Aset_Slasher_LookAT.0"
+        }
+      },
+      {
+        "Type": "StructProperty",
         "Name": "ASet_Locomotion",
         "Flags": 2097153,
         "ElementSize": 152,
@@ -5428,10 +5471,10 @@
           "InPose"
         ],
         "InstanceClass": {
-          "ObjectName": "AnimBlueprintGeneratedClass ABSub_Slasher_02_LookAT_00_C",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Wraith/Blueprint/ABSub_Slasher_02_LookAT_00.2"
+          "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_SubGraph_LookAT_00_C",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Anim_SubGraph/AB_Slasher_SubGraph_LookAT_00.3"
         },
-        "Tag": "None",
+        "Tag": "K02_LookAt",
         "bReceiveNotifiesFromLinkedInstances": false,
         "bPropagateNotifiesToLinkedInstances": false,
         "SourcePropertyNames": [
@@ -5490,7 +5533,7 @@
       },
       "AnimGraphNode_Slot_3": {
         "Source": {
-          "LinkID": 56
+          "LinkID": 57
         },
         "SlotName": "MontageIK",
         "bAlwaysUpdateSourcePose": false
@@ -5504,7 +5547,7 @@
       },
       "AnimGraphNode_SaveCachedPose": {
         "Pose": {
-          "LinkID": 58
+          "LinkID": 56
         },
         "CachePoseName": "fromLocomotion"
       },
@@ -8597,9 +8640,201 @@
           {
             "SourceIndex": 0,
             "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
           }
         ],
-        "SkeletonGuid": "9F2652A5-4FDF59BE-2DBC5DB3-1F0E496E",
+        "SkeletonGuid": "86D5005B-43A898D2-C21BD69E-C6FFC84C",
         "VirtualBoneGuid": "995D83FA-4A9560E5-229D1FAA-D164AD84"
       },
       "AnimGraphNode_BlendListByBool_5": {
@@ -11694,9 +11929,201 @@
           {
             "SourceIndex": 0,
             "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
           }
         ],
-        "SkeletonGuid": "9F2652A5-4FDF59BE-2DBC5DB3-1F0E496E",
+        "SkeletonGuid": "86D5005B-43A898D2-C21BD69E-C6FFC84C",
         "VirtualBoneGuid": "995D83FA-4A9560E5-229D1FAA-D164AD84"
       },
       "AnimGraphNode_BlendListByBool_4": {
@@ -14811,9 +15238,201 @@
           {
             "SourceIndex": 0,
             "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
           }
         ],
-        "SkeletonGuid": "9F2652A5-4FDF59BE-2DBC5DB3-1F0E496E",
+        "SkeletonGuid": "86D5005B-43A898D2-C21BD69E-C6FFC84C",
         "VirtualBoneGuid": "995D83FA-4A9560E5-229D1FAA-D164AD84"
       },
       "AnimGraphNode_UseCachedPose_4": {
@@ -17888,9 +18507,201 @@
           {
             "SourceIndex": 0,
             "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
           }
         ],
-        "SkeletonGuid": "9F2652A5-4FDF59BE-2DBC5DB3-1F0E496E",
+        "SkeletonGuid": "86D5005B-43A898D2-C21BD69E-C6FFC84C",
         "VirtualBoneGuid": "995D83FA-4A9560E5-229D1FAA-D164AD84"
       },
       "AnimGraphNode_BlendListByBool_2": {
@@ -20985,9 +21796,201 @@
           {
             "SourceIndex": 0,
             "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
           }
         ],
-        "SkeletonGuid": "9F2652A5-4FDF59BE-2DBC5DB3-1F0E496E",
+        "SkeletonGuid": "86D5005B-43A898D2-C21BD69E-C6FFC84C",
         "VirtualBoneGuid": "995D83FA-4A9560E5-229D1FAA-D164AD84"
       },
       "AnimGraphNode_BlendListByBool_1": {
@@ -24102,9 +25105,201 @@
           {
             "SourceIndex": 0,
             "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
           }
         ],
-        "SkeletonGuid": "9F2652A5-4FDF59BE-2DBC5DB3-1F0E496E",
+        "SkeletonGuid": "86D5005B-43A898D2-C21BD69E-C6FFC84C",
         "VirtualBoneGuid": "995D83FA-4A9560E5-229D1FAA-D164AD84"
       },
       "AnimGraphNode_UseCachedPose_1": {
@@ -24139,6 +25334,38 @@
         "bSkipFirstUpdateTransition": true,
         "bReinitializeOnBecomingRelevant": true
       },
+      "AnimGraphNode_SubInstance_1": {
+        "InputPoses": [],
+        "InputPoseNames": [],
+        "InstanceClass": {
+          "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_SubGraph_Locomotion_00_C",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Anim_SubGraph/AB_Slasher_SubGraph_Locomotion_00.9"
+        },
+        "Tag": "K02_Locomotion",
+        "bReceiveNotifiesFromLinkedInstances": false,
+        "bPropagateNotifiesToLinkedInstances": false,
+        "SourcePropertyNames": [
+          "__CustomProperty__isCarrying_95C28B9B4E8FE0B3E9BA868D6449500E",
+          "__CustomProperty__interactionType_95C28B9B4E8FE0B3E9BA868D6449500E",
+          "__CustomProperty__isInAir_95C28B9B4E8FE0B3E9BA868D6449500E",
+          "__CustomProperty__isIdle_95C28B9B4E8FE0B3E9BA868D6449500E",
+          "__CustomProperty__isAttacking_95C28B9B4E8FE0B3E9BA868D6449500E",
+          "__CustomProperty__animSpeed_95C28B9B4E8FE0B3E9BA868D6449500E",
+          "__CustomProperty__animDirection_95C28B9B4E8FE0B3E9BA868D6449500E",
+          "__CustomProperty__firstPersonView_95C28B9B4E8FE0B3E9BA868D6449500E"
+        ],
+        "DestPropertyNames": [
+          "_isCarrying",
+          "_interactionType",
+          "_isInAir",
+          "_isIdle",
+          "_isAttacking",
+          "_animSpeed",
+          "_animDirection",
+          "_firstPersonView"
+        ],
+        "TargetInstance": null
+      },
       "AnimGraphNode_Slot_1": {
         "Source": {
           "LinkID": 1
@@ -24146,7 +25373,7 @@
         "SlotName": "Destroy",
         "bAlwaysUpdateSourcePose": false
       },
-      "AnimGraphNode_SubInstance_1": {
+      "AnimGraphNode_SubInstance": {
         "InputPoses": [
           {
             "LinkID": 55
@@ -24174,41 +25401,9 @@
         ],
         "TargetInstance": null
       },
-      "AnimGraphNode_SubInstance": {
-        "InputPoses": [],
-        "InputPoseNames": [],
-        "InstanceClass": {
-          "ObjectName": "AnimBlueprintGeneratedClass AB_Slasher_SubGraph_Locomotion_00_C",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Anim_SubGraph/AB_Slasher_SubGraph_Locomotion_00.9"
-        },
-        "Tag": "K02_Locomotion",
-        "bReceiveNotifiesFromLinkedInstances": false,
-        "bPropagateNotifiesToLinkedInstances": false,
-        "SourcePropertyNames": [
-          "__CustomProperty__isCarrying_A452FDF14F37F7EE1050008D0E069AD5",
-          "__CustomProperty__interactionType_A452FDF14F37F7EE1050008D0E069AD5",
-          "__CustomProperty__isInAir_A452FDF14F37F7EE1050008D0E069AD5",
-          "__CustomProperty__isIdle_A452FDF14F37F7EE1050008D0E069AD5",
-          "__CustomProperty__isAttacking_A452FDF14F37F7EE1050008D0E069AD5",
-          "__CustomProperty__animSpeed_A452FDF14F37F7EE1050008D0E069AD5",
-          "__CustomProperty__animDirection_A452FDF14F37F7EE1050008D0E069AD5",
-          "__CustomProperty__firstPersonView_A452FDF14F37F7EE1050008D0E069AD5"
-        ],
-        "DestPropertyNames": [
-          "_isCarrying",
-          "_interactionType",
-          "_isInAir",
-          "_isIdle",
-          "_isAttacking",
-          "_animSpeed",
-          "_animDirection",
-          "_firstPersonView"
-        ],
-        "TargetInstance": null
-      },
       "AnimGraphNode_Slot": {
         "Source": {
-          "LinkID": 57
+          "LinkID": 58
         },
         "SlotName": "MontageGeneric",
         "bAlwaysUpdateSourcePose": false
@@ -24504,6 +25699,21 @@
             ]
           }
         ]
+      },
+      "LookAtAnimSet": {
+        "Aim_Offset_FPV_2_0D30D7AF43A97DEF2CB33C825855C394": {
+          "ObjectName": "AimOffsetBlendSpace AO_KM_LookAt",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Animations/SlasherMale01/AimOffset/AO_KM_LookAt.0"
+        },
+        "Aim_Offset_4_1C4638084F5FD3A1FEE14D988B989559": {
+          "ObjectName": "AimOffsetBlendSpace AO_KM_LookAt",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Animations/SlasherMale01/AimOffset/AO_KM_LookAt.0"
+        },
+        "Aim_Offset_Carry_17_4BC537B540DC2FF18DB12B9DB37C42E9": null,
+        "TurnLeftSequence_7_FFD6BA49453CFEA6D8A893B6109C431F": null,
+        "TurnRightSequence_9_31F0358C4D2070DFC9142F820362D54F": null,
+        "CarryTurnLeftSequence_11_70DF6335436CE446A4DE3F8C8BB1C1F1": null,
+        "CarryTurnRightSequence_14_C3347F184D63EDAEB91FDDBF844D04AD": null
       },
       "ASet_Locomotion": {
         "Stand_2_3B2E928C4988C5A26B86BF8424E6BC41": {

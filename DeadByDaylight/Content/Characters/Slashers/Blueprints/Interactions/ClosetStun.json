@@ -1,0 +1,212 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_ClosetStun",
+    "Outer": "ClosetStun_C",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_player",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class DBDPlayer",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_actualSnapTime",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetInteractionPlayerProperties_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 80,
+        "PropertyFlags": 2,
+        "Struct": {
+          "ObjectName": "ScriptStruct InteractionPlayerProperties",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsCamper_Player",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class CamperPlayer",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPerkManager_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "PropertyClass": {
+          "ObjectName": "Class PerkManager",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetPerkModifier_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": 8421377
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInteractionEnterStart",
+    "Outer": "ClosetStun_C",
+    "SuperStruct": {
+      "ObjectName": "Function InteractionDefinition:OnInteractionEnterStart",
+      "ObjectPath": "/Script/DeadByDaylight"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "player",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "PropertyClass": {
+          "ObjectName": "Class DBDPlayer",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "actualSnapTime",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      }
+    ],
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "Function",
+    "Name": "GetCamper",
+    "Outer": "ClosetStun_C",
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "NewParam",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 384,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 205651968
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "ClosetStun_C",
+    "Super": "GenericStun_C",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function ClosetStun_C:ExecuteUbergraph_ClosetStun",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/ClosetStun.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass GenericStun_C",
+      "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/GenericStun.5"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function ClosetStun_C:GetCamper",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/ClosetStun.2"
+      },
+      {
+        "ObjectName": "Function ClosetStun_C:OnInteractionEnterStart",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/ClosetStun.1"
+      },
+      {
+        "ObjectName": "Function ClosetStun_C:ExecuteUbergraph_ClosetStun",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/ClosetStun.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "Struct": {
+          "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_ClosetStun": {
+        "ObjectName": "Function ClosetStun_C:ExecuteUbergraph_ClosetStun",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/ClosetStun.0"
+      },
+      "OnInteractionEnterStart": {
+        "ObjectName": "Function ClosetStun_C:OnInteractionEnterStart",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/ClosetStun.1"
+      },
+      "GetCamper": {
+        "ObjectName": "Function ClosetStun_C:GetCamper",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/ClosetStun.2"
+      }
+    },
+    "ClassFlags": 10754068,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ClosetStun_C Default__ClosetStun_C",
+      "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/ClosetStun.4"
+    }
+  },
+  {
+    "Type": "ClosetStun_C",
+    "Name": "Default__ClosetStun_C",
+    "Template": "Default__GenericStun_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "InteractionID": "ClosetStun",
+      "InteractionTime": 0.0,
+      "InteractionInputType": "EInputInteractionType::VE_ExternalRequestClosetStun"
+    }
+  }
+]
