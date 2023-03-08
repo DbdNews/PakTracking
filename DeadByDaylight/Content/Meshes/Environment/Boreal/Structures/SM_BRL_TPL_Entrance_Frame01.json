@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_BRL_TPL_Entrance_Frame01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -86,7 +87,7 @@
     "BodySetupGuid": "C480947644F2A6B245AE1285455F6790",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 76762,
         "SizeOnDisk": 76762,
         "OffsetInFile": "0x1AE13D"
@@ -97,9 +98,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_1",
     "Outer": "SM_BRL_TPL_Entrance_Frame01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 509,
         "SizeOnDisk": 509,
         "OffsetInFile": "0x1C0D5F"
@@ -109,6 +111,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_TPL_Entrance_Frame01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -116,18 +119,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_TempleBrick_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_TempleBrick_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_TempleBrick_01.0"
           },
           "MaterialSlotName": "MI_BRL_TempleBrick_01",
@@ -143,7 +156,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_StoneSmallTrim_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_StoneSmallTrim_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_StoneSmallTrim_01.0"
           },
           "MaterialSlotName": "MI_BRL_StoneSmallTrim_01",
@@ -159,7 +172,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_StoneSmall_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_StoneSmall_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_StoneSmall_01.0"
           },
           "MaterialSlotName": "MI_BRL_StoneSmall_01",
@@ -175,7 +188,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_OrnementFace_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_OrnementFace_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_OrnementFace_01.0"
           },
           "MaterialSlotName": "MI_BRL_OrnementFace_01",
@@ -191,7 +204,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_GoldTrimTemple_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_GoldTrimTemple_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_GoldTrimTemple_01.0"
           },
           "MaterialSlotName": "MI_BRL_GoldTrimTemple_01",
@@ -207,7 +220,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_TPL_BRL_ColumnA_DecoA_01",
+            "ObjectName": "MaterialInstanceConstant'MI_TPL_BRL_ColumnA_DecoA_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_TPL_BRL_ColumnA_DecoA_01.0"
           },
           "MaterialSlotName": "MI_TPL_BRL_ColumnA_DecoA_01",
@@ -241,11 +254,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_TPL_Entrance_Frame01:BodySetup_0",
+      "ObjectName": "BodySetup'SM_BRL_TPL_Entrance_Frame01:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/SM_BRL_TPL_Entrance_Frame01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_TPL_Entrance_Frame01:NavCollision_1",
+      "ObjectName": "NavCollision'SM_BRL_TPL_Entrance_Frame01:NavCollision_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/SM_BRL_TPL_Entrance_Frame01.1"
     },
     "LightingGuid": "05EB2EBA-49235511-60CAFAA2-2C51F6E4",

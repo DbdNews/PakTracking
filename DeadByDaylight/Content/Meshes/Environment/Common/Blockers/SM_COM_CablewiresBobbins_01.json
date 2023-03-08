@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_COM_CablewiresBobbins_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -222,7 +223,7 @@
     "BodySetupGuid": "9A8842BE49151E0F26697BADF8C68BC0",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 38635,
         "SizeOnDisk": 38635,
         "OffsetInFile": "0xE6392"
@@ -233,9 +234,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_1",
     "Outer": "SM_COM_CablewiresBobbins_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 697,
         "SizeOnDisk": 697,
         "OffsetInFile": "0xEFAC5"
@@ -245,6 +247,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_COM_CablewiresBobbins_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -252,18 +255,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_TrimCables",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_TrimCables'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Trims/MI_Com_TrimCables.0"
           },
           "MaterialSlotName": "MI_Com_TrimCables",
@@ -279,7 +292,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_COM_CablewiresBobbins_01",
+            "ObjectName": "MaterialInstanceConstant'MI_COM_CablewiresBobbins_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Blockers/MI_COM_CablewiresBobbins_01.0"
           },
           "MaterialSlotName": "MI_COM_CablewiresBobbins_01",
@@ -313,11 +326,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_COM_CablewiresBobbins_01:BodySetup_0",
+      "ObjectName": "BodySetup'SM_COM_CablewiresBobbins_01:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/Blockers/SM_COM_CablewiresBobbins_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_COM_CablewiresBobbins_01:NavCollision_1",
+      "ObjectName": "NavCollision'SM_COM_CablewiresBobbins_01:NavCollision_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/Blockers/SM_COM_CablewiresBobbins_01.1"
     },
     "LightingGuid": "1178545B-4DBB2637-1A6F34A0-8927B58A",

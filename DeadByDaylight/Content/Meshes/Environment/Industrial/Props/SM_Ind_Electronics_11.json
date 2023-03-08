@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_Ind_Electronics_11",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "DefaultInstance": {
         "ObjectType": "ECC_WorldStatic",
@@ -44,7 +45,7 @@
     "BodySetupGuid": "A9F89ADA4F64FDDA26FAE9ADDC8A2A3B",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 857,
         "SizeOnDisk": 857,
         "OffsetInFile": "0x9059"
@@ -55,9 +56,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_4",
     "Outer": "SM_Ind_Electronics_11",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 21,
         "SizeOnDisk": 21,
         "OffsetInFile": "0x93FA"
@@ -67,6 +69,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_Ind_Electronics_11",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -74,18 +77,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_COM_ElectronicPart_01",
+            "ObjectName": "MaterialInstanceConstant'MI_COM_ElectronicPart_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Props/MI_COM_ElectronicPart_01.0"
           },
           "MaterialSlotName": "MI_COM_ElectronicPart_01",
@@ -101,7 +114,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "Material M_Ind_Camp_ComputerScreen_Master",
+            "ObjectName": "Material'M_Ind_Camp_ComputerScreen_Master'",
             "ObjectPath": "DeadByDaylight/Content/Effects/Materials/Environment/Ind/SkullMerchant/M_Ind_Camp_ComputerScreen_Master.0"
           },
           "MaterialSlotName": "M_ComputerScreen_Master",
@@ -134,11 +147,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_Ind_Electronics_11:BodySetup_0",
+      "ObjectName": "BodySetup'SM_Ind_Electronics_11:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Props/SM_Ind_Electronics_11.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_Ind_Electronics_11:NavCollision_4",
+      "ObjectName": "NavCollision'SM_Ind_Electronics_11:NavCollision_4'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Props/SM_Ind_Electronics_11.1"
     },
     "LightingGuid": "D10807A8-428FFDA6-927A7A9E-A0BFBAEC",

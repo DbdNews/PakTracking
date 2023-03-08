@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_COM_SmallPine_02",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -212,7 +213,7 @@
     "BodySetupGuid": "69C5AC714E671BC59159788AF5AD2171",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 21439,
         "SizeOnDisk": 21439,
         "OffsetInFile": "0xC24BD"
@@ -223,9 +224,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_1",
     "Outer": "SM_COM_SmallPine_02",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 697,
         "SizeOnDisk": 697,
         "OffsetInFile": "0xC78C4"
@@ -235,6 +237,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_COM_SmallPine_02",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -242,18 +245,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_ConiferBark",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_ConiferBark'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Wood/MI_Com_ConiferBark.0"
           },
           "MaterialSlotName": "MI_COM_ConiferBark",
@@ -269,7 +282,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_COM_SmallPine_01",
+            "ObjectName": "MaterialInstanceConstant'MI_COM_SmallPine_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Nature/Vegetation/MI_COM_SmallPine_01.0"
           },
           "MaterialSlotName": "MI_COM_SmallPine_01",
@@ -302,11 +315,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_COM_SmallPine_02:BodySetup_0",
+      "ObjectName": "BodySetup'SM_COM_SmallPine_02:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/Nature/Trees/SM_COM_SmallPine_02.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_COM_SmallPine_02:NavCollision_1",
+      "ObjectName": "NavCollision'SM_COM_SmallPine_02:NavCollision_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/Nature/Trees/SM_COM_SmallPine_02.1"
     },
     "LightingGuid": "B769D713-439369C6-8A6E89AD-6AD36DC3",

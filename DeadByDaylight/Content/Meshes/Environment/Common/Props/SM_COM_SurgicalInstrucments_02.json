@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_COM_SurgicalInstrucments_02",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -168,7 +169,7 @@
     "BodySetupGuid": "0C684BE4442CAE90B1B0408AC7027B35",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 2283,
         "SizeOnDisk": 2283,
         "OffsetInFile": "0x12763"
@@ -179,9 +180,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_0",
     "Outer": "SM_COM_SurgicalInstrucments_02",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 505,
         "SizeOnDisk": 505,
         "OffsetInFile": "0x13096"
@@ -191,6 +193,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_COM_SurgicalInstrucments_02",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -198,18 +201,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_COM_SurgicalInstrucments_01_03",
+            "ObjectName": "MaterialInstanceConstant'MI_COM_SurgicalInstrucments_01_03'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Props/MI_COM_SurgicalInstrucments_01_03.0"
           },
           "MaterialSlotName": "MI_COM_SurgicalInstrucments_01_03",
@@ -242,11 +255,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_COM_SurgicalInstrucments_02:BodySetup_0",
+      "ObjectName": "BodySetup'SM_COM_SurgicalInstrucments_02:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/Props/SM_COM_SurgicalInstrucments_02.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_COM_SurgicalInstrucments_02:NavCollision_0",
+      "ObjectName": "NavCollision'SM_COM_SurgicalInstrucments_02:NavCollision_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/Props/SM_COM_SurgicalInstrucments_02.1"
     },
     "LightingGuid": "6B9FCF3B-49239D7E-F482C387-3BEDB7D5",

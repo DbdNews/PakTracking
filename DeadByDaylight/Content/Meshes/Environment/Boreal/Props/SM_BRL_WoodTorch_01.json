@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_BRL_WoodTorch_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -528,7 +529,7 @@
     "BodySetupGuid": "B2A4617B432E70B71469DCA7467F6010",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 10267,
         "SizeOnDisk": 10267,
         "OffsetInFile": "0x397CF"
@@ -539,9 +540,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_1",
     "Outer": "SM_BRL_WoodTorch_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 1765,
         "SizeOnDisk": 1765,
         "OffsetInFile": "0x3C032"
@@ -551,6 +553,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_WoodTorch_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -558,18 +561,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_WoodTorch_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_WoodTorch_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/Props/MI_BRL_WoodTorch_01.0"
           },
           "MaterialSlotName": "MI_BRL_WoodTorch_01",
@@ -585,7 +598,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_Leather_B",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_Leather_B'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Leather/MI_Com_Leather_B.0"
           },
           "MaterialSlotName": "MI_Com_Leather_B",
@@ -618,11 +631,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_WoodTorch_01:BodySetup_0",
+      "ObjectName": "BodySetup'SM_BRL_WoodTorch_01:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_WoodTorch_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_WoodTorch_01:NavCollision_1",
+      "ObjectName": "NavCollision'SM_BRL_WoodTorch_01:NavCollision_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_WoodTorch_01.1"
     },
     "LightingGuid": "7660208D-44841D25-B3B2458F-42C53806",

@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_BRL_MD_Fence_G",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -67,7 +68,7 @@
     "BodySetupGuid": "39F179C446A4F3A1AFFC4DBE9EA1696E",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 7942,
         "SizeOnDisk": 7942,
         "OffsetInFile": "0x51863"
@@ -78,9 +79,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_0",
     "Outer": "SM_BRL_MD_Fence_G",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 265,
         "SizeOnDisk": 265,
         "OffsetInFile": "0x537B1"
@@ -90,6 +92,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_MD_Fence_G",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -97,18 +100,28 @@
         "Value": 1
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 4,
-          "High": 4,
-          "Medium": 4,
-          "Low": 4,
-          "Mobile": 4
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 4
+          },
+          {
+            "High": 4
+          },
+          {
+            "Medium": 4
+          },
+          {
+            "Low": 4
+          },
+          {
+            "Mobile": 4
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_MD_Rope",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_MD_Rope'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_MD_Rope.0"
           },
           "MaterialSlotName": "MI_BRL_MD_Rope",
@@ -124,7 +137,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_GrangeWood",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_GrangeWood'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_GrangeWood.0"
           },
           "MaterialSlotName": "MI_BRL_GrangeWood",
@@ -158,11 +171,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_MD_Fence_G:BodySetup_0",
+      "ObjectName": "BodySetup'SM_BRL_MD_Fence_G:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/Mother_Dwelling/SM_BRL_MD_Fence_G.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_MD_Fence_G:NavCollision_0",
+      "ObjectName": "NavCollision'SM_BRL_MD_Fence_G:NavCollision_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/Mother_Dwelling/SM_BRL_MD_Fence_G.1"
     },
     "LightingGuid": "30BFC480-44BB9641-E991A18D-5639AAAE",

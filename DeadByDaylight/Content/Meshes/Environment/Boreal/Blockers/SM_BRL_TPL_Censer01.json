@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_BRL_TPL_Censer01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -212,7 +213,7 @@
     "BodySetupGuid": "7C757A4944DD06F3C647B8B348CFF1DE",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 17339,
         "SizeOnDisk": 17339,
         "OffsetInFile": "0x9F9EB"
@@ -223,9 +224,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_1",
     "Outer": "SM_BRL_TPL_Censer01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 697,
         "SizeOnDisk": 697,
         "OffsetInFile": "0xA3DEE"
@@ -235,6 +237,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_TPL_Censer01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -242,18 +245,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_COM_AshesChunk_01",
+            "ObjectName": "MaterialInstanceConstant'MI_COM_AshesChunk_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Wood/MI_COM_AshesChunk_01.0"
           },
           "MaterialSlotName": "MI_COM_AshesChunk_01",
@@ -269,7 +282,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_TPL_Censer01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_TPL_Censer01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_TPL_Censer01.0"
           },
           "MaterialSlotName": "MI_BRL_TPL_Censer01",
@@ -302,11 +315,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_TPL_Censer01:BodySetup_0",
+      "ObjectName": "BodySetup'SM_BRL_TPL_Censer01:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Blockers/SM_BRL_TPL_Censer01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_TPL_Censer01:NavCollision_1",
+      "ObjectName": "NavCollision'SM_BRL_TPL_Censer01:NavCollision_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Blockers/SM_BRL_TPL_Censer01.1"
     },
     "LightingGuid": "85A2E755-453EF17B-D2C04F85-86C6A6FD",

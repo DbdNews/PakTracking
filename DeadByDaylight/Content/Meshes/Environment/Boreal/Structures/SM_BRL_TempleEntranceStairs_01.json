@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_BRL_TempleEntranceStairs_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -190,7 +191,7 @@
     "BodySetupGuid": "372538AF4E83AD9E6CCCBFB7796CB639",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 33599,
         "SizeOnDisk": 33599,
         "OffsetInFile": "0x95661"
@@ -201,9 +202,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_1",
     "Outer": "SM_BRL_TempleEntranceStairs_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 577,
         "SizeOnDisk": 577,
         "OffsetInFile": "0x9D9E8"
@@ -213,6 +215,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_TempleEntranceStairs_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -220,18 +223,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 2,
-          "High": 2,
-          "Medium": 2,
-          "Low": 2,
-          "Mobile": 2
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 2
+          },
+          {
+            "High": 2
+          },
+          {
+            "Medium": 2
+          },
+          {
+            "Low": 2
+          },
+          {
+            "Mobile": 2
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_TempleBrick_Blend_03",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_TempleBrick_Blend_03'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_TempleBrick_Blend_03.0"
           },
           "MaterialSlotName": "MI_BRL_TempleBrick_Blend_03",
@@ -264,11 +277,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_TempleEntranceStairs_01:BodySetup_0",
+      "ObjectName": "BodySetup'SM_BRL_TempleEntranceStairs_01:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/SM_BRL_TempleEntranceStairs_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_TempleEntranceStairs_01:NavCollision_1",
+      "ObjectName": "NavCollision'SM_BRL_TempleEntranceStairs_01:NavCollision_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/SM_BRL_TempleEntranceStairs_01.1"
     },
     "LightingGuid": "D951FFCA-4CFE8A19-EA278086-D8D209DC",

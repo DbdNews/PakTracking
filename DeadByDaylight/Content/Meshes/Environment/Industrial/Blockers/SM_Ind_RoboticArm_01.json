@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_Ind_RoboticArm_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -67,7 +68,7 @@
     "BodySetupGuid": "2A3F3F6C43A5816624F31483957E3027",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 61796,
         "SizeOnDisk": 61796,
         "OffsetInFile": "0x2B858E"
@@ -78,9 +79,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_1",
     "Outer": "SM_Ind_RoboticArm_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 265,
         "SizeOnDisk": 265,
         "OffsetInFile": "0x2C773A"
@@ -90,6 +92,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_Ind_RoboticArm_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -98,34 +101,60 @@
       },
       "bLimitLODRangeForShadow": true,
       "ShadowMinLOD": {
-        "PerDetailModeValue": {
-          "Medium": 1,
-          "Low": 2,
-          "Mobile": 3
-        },
-        "PerDetailModeOverride": {
-          "Medium": true,
-          "Low": true,
-          "Mobile": true
-        }
+        "PerDetailModeValue": [
+          {
+            "Medium": 1
+          },
+          {
+            "Low": 2
+          },
+          {
+            "Mobile": 3
+          }
+        ],
+        "PerDetailModeOverride": [
+          {
+            "Medium": true
+          },
+          {
+            "Low": true
+          },
+          {
+            "Mobile": true
+          }
+        ]
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 2,
-          "High": 2,
-          "Medium": 2,
-          "Low": 2,
-          "Mobile": 3
-        },
-        "PerDetailModeOverride": {
-          "Ultra": true,
-          "Mobile": true
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 2
+          },
+          {
+            "High": 2
+          },
+          {
+            "Medium": 2
+          },
+          {
+            "Low": 2
+          },
+          {
+            "Mobile": 3
+          }
+        ],
+        "PerDetailModeOverride": [
+          {
+            "Ultra": true
+          },
+          {
+            "Mobile": true
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Ind_RoboticArm_01",
+            "ObjectName": "MaterialInstanceConstant'MI_Ind_RoboticArm_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Industrial/Blockers/MI_Ind_RoboticArm_01.0"
           },
           "MaterialSlotName": "MI_Ind_RoboticArm_01",
@@ -141,7 +170,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_TrimCablesAndWires",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_TrimCablesAndWires'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Trims/MI_Com_TrimCablesAndWires.0"
           },
           "MaterialSlotName": "MI_Com_TrimCablesAndWires",
@@ -175,11 +204,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_Ind_RoboticArm_01:BodySetup_0",
+      "ObjectName": "BodySetup'SM_Ind_RoboticArm_01:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Blockers/SM_Ind_RoboticArm_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_Ind_RoboticArm_01:NavCollision_1",
+      "ObjectName": "NavCollision'SM_Ind_RoboticArm_01:NavCollision_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Blockers/SM_Ind_RoboticArm_01.1"
     },
     "LightingGuid": "A7A5F472-47BC7C2F-DEF2C48B-37BC7AD3",

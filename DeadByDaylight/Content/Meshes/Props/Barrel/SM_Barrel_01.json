@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_Barrel_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -770,7 +771,7 @@
     "BodySetupGuid": "B2E9CA73419C872606436CA01A38D2F7",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 9745,
         "SizeOnDisk": 9745,
         "OffsetInFile": "0x6D41B"
@@ -781,9 +782,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_1",
     "Outer": "SM_Barrel_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 2545,
         "SizeOnDisk": 2545,
         "OffsetInFile": "0x6FA74"
@@ -793,6 +795,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_Barrel_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -801,34 +804,60 @@
       },
       "bLimitLODRangeForShadow": true,
       "ShadowMinLOD": {
-        "PerDetailModeValue": {
-          "Medium": 1,
-          "Low": 2,
-          "Mobile": 3
-        },
-        "PerDetailModeOverride": {
-          "Medium": true,
-          "Low": true,
-          "Mobile": true
-        }
+        "PerDetailModeValue": [
+          {
+            "Medium": 1
+          },
+          {
+            "Low": 2
+          },
+          {
+            "Mobile": 3
+          }
+        ],
+        "PerDetailModeOverride": [
+          {
+            "Medium": true
+          },
+          {
+            "Low": true
+          },
+          {
+            "Mobile": true
+          }
+        ]
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 2,
-          "High": 2,
-          "Medium": 2,
-          "Low": 2,
-          "Mobile": 3
-        },
-        "PerDetailModeOverride": {
-          "Ultra": true,
-          "Mobile": true
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 2
+          },
+          {
+            "High": 2
+          },
+          {
+            "Medium": 2
+          },
+          {
+            "Low": 2
+          },
+          {
+            "Mobile": 3
+          }
+        ],
+        "PerDetailModeOverride": [
+          {
+            "Ultra": true
+          },
+          {
+            "Mobile": true
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Barrel_01",
+            "ObjectName": "MaterialInstanceConstant'MI_Barrel_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/MI_Barrel_01.0"
           },
           "MaterialSlotName": "MI_Barrel_01",
@@ -862,11 +891,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_Barrel_01:BodySetup_0",
+      "ObjectName": "BodySetup'SM_Barrel_01:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Props/Barrel/SM_Barrel_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_Barrel_01:NavCollision_1",
+      "ObjectName": "NavCollision'SM_Barrel_01:NavCollision_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Props/Barrel/SM_Barrel_01.1"
     },
     "LightingGuid": "54458B86-49FABAFE-85CC27B7-A89CD9EA",

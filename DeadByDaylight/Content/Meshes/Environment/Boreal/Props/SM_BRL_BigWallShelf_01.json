@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_BRL_BigWallShelf_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -67,7 +68,7 @@
     "BodySetupGuid": "CA2960294280FAFF89781EB838579F14",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 1309,
         "SizeOnDisk": 1309,
         "OffsetInFile": "0xEA40"
@@ -78,9 +79,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_0",
     "Outer": "SM_BRL_BigWallShelf_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 265,
         "SizeOnDisk": 265,
         "OffsetInFile": "0xEFA5"
@@ -90,6 +92,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_BigWallShelf_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -97,18 +100,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_BigWallShelf_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_BigWallShelf_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/Props/MI_BRL_BigWallShelf_01.0"
           },
           "MaterialSlotName": "MI_BRL_BigWallShelf_01",
@@ -142,11 +155,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_BigWallShelf_01:BodySetup_0",
+      "ObjectName": "BodySetup'SM_BRL_BigWallShelf_01:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_BigWallShelf_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_BigWallShelf_01:NavCollision_0",
+      "ObjectName": "NavCollision'SM_BRL_BigWallShelf_01:NavCollision_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_BigWallShelf_01.1"
     },
     "LightingGuid": "4E3B8097-42B2B66C-D62D2EB3-D160CF52",

@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_BRL_Torch_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -2513,7 +2514,7 @@
     "BodySetupGuid": "107267C74C474BA2ADF878B26EC2CD09",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 34464,
         "SizeOnDisk": 34464,
         "OffsetInFile": "0x7A035"
@@ -2524,9 +2525,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_0",
     "Outer": "SM_BRL_Torch_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 8985,
         "SizeOnDisk": 8985,
         "OffsetInFile": "0x8271D"
@@ -2536,6 +2538,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_Torch_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -2543,18 +2546,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_TPL_ColumnA_FrameA_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_TPL_ColumnA_FrameA_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_TPL_ColumnA_FrameA_01.0"
           },
           "MaterialSlotName": "MI_BRL_TPL_ColumnA_FrameA_01",
@@ -2570,7 +2583,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_TPL_Censer_Chain01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_TPL_Censer_Chain01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_TPL_Censer_Chain01.0"
           },
           "MaterialSlotName": "MI_BRL_TPL_Censer_Chain01",
@@ -2604,11 +2617,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_Torch_01:BodySetup_0",
+      "ObjectName": "BodySetup'SM_BRL_Torch_01:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_Torch_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_Torch_01:NavCollision_0",
+      "ObjectName": "NavCollision'SM_BRL_Torch_01:NavCollision_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_Torch_01.1"
     },
     "LightingGuid": "D53BAF0B-4D54FD79-DAC9F187-7B3BA52C",

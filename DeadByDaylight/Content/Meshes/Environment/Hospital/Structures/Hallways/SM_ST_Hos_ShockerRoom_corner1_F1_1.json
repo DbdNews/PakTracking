@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_1",
     "Outer": "SM_ST_Hos_ShockerRoom_corner1_F1_1",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -1548,7 +1549,7 @@
     "BodySetupGuid": "6221C73F4999C22DDB2572A06FC40686",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 30479,
         "SizeOnDisk": 30479,
         "OffsetInFile": "0x2D8D1"
@@ -1559,9 +1560,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_ST_Hos_ShockerRoom_corner1_F1_1",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 5253,
         "SizeOnDisk": 5253,
         "OffsetInFile": "0x35028"
@@ -1571,6 +1573,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_ST_Hos_ShockerRoom_corner1_F1_1",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -1578,18 +1581,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 2,
-          "High": 2,
-          "Medium": 2,
-          "Low": 2,
-          "Mobile": 2
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 2
+          },
+          {
+            "High": 2
+          },
+          {
+            "Medium": 2
+          },
+          {
+            "Low": 2
+          },
+          {
+            "Mobile": 2
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Hos_ShockerRoom_Wall_Tiles_Up6",
+            "ObjectName": "MaterialInstanceConstant'MI_Hos_ShockerRoom_Wall_Tiles_Up6'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Hospital/MI_Hos_ShockerRoom_Wall_Tiles_Up6.0"
           },
           "MaterialSlotName": "MI_Hos_ShockerRoom_Wall_Tiles_Up6",
@@ -1605,7 +1618,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Rust01_Fence01",
+            "ObjectName": "MaterialInstanceConstant'MI_Rust01_Fence01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/MI_Rust01_Fence01.0"
           },
           "MaterialSlotName": "MI_Rust01_Fence01",
@@ -1621,7 +1634,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Hos_Trims01",
+            "ObjectName": "MaterialInstanceConstant'MI_Hos_Trims01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Hospital/MI_Hos_Trims01.0"
           },
           "MaterialSlotName": "MI_Hos_Trims01",
@@ -1654,11 +1667,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_ST_Hos_ShockerRoom_corner1_F1_1:BodySetup_1",
+      "ObjectName": "BodySetup'SM_ST_Hos_ShockerRoom_corner1_F1_1:BodySetup_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Hallways/SM_ST_Hos_ShockerRoom_corner1_F1_1.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_ST_Hos_ShockerRoom_corner1_F1_1:NavCollision_2",
+      "ObjectName": "NavCollision'SM_ST_Hos_ShockerRoom_corner1_F1_1:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Hallways/SM_ST_Hos_ShockerRoom_corner1_F1_1.1"
     },
     "LightingGuid": "592C2233-45068EEA-1BAC1DAF-C81F2282",

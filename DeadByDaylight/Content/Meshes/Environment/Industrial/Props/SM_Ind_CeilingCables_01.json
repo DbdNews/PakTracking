@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_2",
     "Outer": "SM_Ind_CeilingCables_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -4424,7 +4425,7 @@
     "BodySetupGuid": "AEC4E44A4040A9C508CFCD95816880B1",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 33843,
         "SizeOnDisk": 33843,
         "OffsetInFile": "0x26A3B"
@@ -4435,9 +4436,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_1",
     "Outer": "SM_Ind_CeilingCables_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 16989,
         "SizeOnDisk": 16989,
         "OffsetInFile": "0x2EEB6"
@@ -4447,6 +4449,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_Ind_CeilingCables_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -4454,18 +4457,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 4,
-          "High": 4,
-          "Medium": 4,
-          "Low": 4,
-          "Mobile": 4
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 4
+          },
+          {
+            "High": 4
+          },
+          {
+            "Medium": 4
+          },
+          {
+            "Low": 4
+          },
+          {
+            "Mobile": 4
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_TrimCablesAndWires_B",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_TrimCablesAndWires_B'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Trims/MI_Com_TrimCablesAndWires_B.0"
           },
           "MaterialSlotName": "MI_Com_TrimCablesAndWires_B",
@@ -4498,11 +4511,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_Ind_CeilingCables_01:BodySetup_2",
+      "ObjectName": "BodySetup'SM_Ind_CeilingCables_01:BodySetup_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Props/SM_Ind_CeilingCables_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_Ind_CeilingCables_01:NavCollision_1",
+      "ObjectName": "NavCollision'SM_Ind_CeilingCables_01:NavCollision_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Props/SM_Ind_CeilingCables_01.1"
     },
     "LightingGuid": "B2CF12AB-443CB842-2AD483AB-A7A8ECA1",

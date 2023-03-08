@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_1",
     "Outer": "SM_COM_Camera_03_Base",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -67,7 +68,7 @@
     "BodySetupGuid": "DA9640914D5067326CC1228CE2CE3442",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 2853,
         "SizeOnDisk": 2853,
         "OffsetInFile": "0x15F9E"
@@ -78,9 +79,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_COM_Camera_03_Base",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 265,
         "SizeOnDisk": 265,
         "OffsetInFile": "0x16B0B"
@@ -90,6 +92,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_COM_Camera_03_Base",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -97,18 +100,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_COM_Camera_03",
+            "ObjectName": "MaterialInstanceConstant'MI_COM_Camera_03'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Props/MI_COM_Camera_03.0"
           },
           "MaterialSlotName": "lambert1",
@@ -142,11 +155,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_COM_Camera_03_Base:BodySetup_1",
+      "ObjectName": "BodySetup'SM_COM_Camera_03_Base:BodySetup_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/Props/SM_COM_Camera_03_Base.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_COM_Camera_03_Base:NavCollision_2",
+      "ObjectName": "NavCollision'SM_COM_Camera_03_Base:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/Props/SM_COM_Camera_03_Base.1"
     },
     "LightingGuid": "0EC8359A-4193E7BC-688F3BAF-B9FEA53B",

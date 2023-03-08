@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_1",
     "Outer": "SM_BRL_Statue_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -17,9 +18,9 @@
               "Yaw": 90.0,
               "Roll": -90.0
             },
-            "X": 14.16645,
+            "X": 12.415796,
             "Y": 86.4175,
-            "Z": 24.111113,
+            "Z": 22.235802,
             "RestOffset": 0.0,
             "Name": "None",
             "bContributeToMass": true,
@@ -64,13 +65,13 @@
         }
       }
     },
-    "BodySetupGuid": "04CBED8941BAAD4BE451DD9A17D43A00",
+    "BodySetupGuid": "150787AF4FCFBBC5B8F3C58A81D3D05A",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
-        "ElementCount": 87175,
-        "SizeOnDisk": 87175,
-        "OffsetInFile": "0xA4B7D"
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 9889,
+        "SizeOnDisk": 9889,
+        "OffsetInFile": "0x453C8"
       }
     }
   },
@@ -78,18 +79,20 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_BRL_Statue_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 265,
         "SizeOnDisk": 265,
-        "OffsetInFile": "0xBA04C"
+        "OffsetInFile": "0x47AB1"
       }
     }
   },
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_Statue_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -97,18 +100,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_Statue_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_Statue_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/Props/MI_BRL_Statue_01.0"
           },
           "MaterialSlotName": "MI_BRL_Statue_01",
@@ -116,16 +129,17 @@
           "UVChannelData": {
             "bInitialized": true,
             "bOverrideDensities": false,
-            "LocalUVDensities": 102.636185,
-            "LocalUVDensities": 103.26937,
+            "LocalUVDensities": 101.89214,
+            "LocalUVDensities": 102.88461,
             "LocalUVDensities": 0.0,
             "LocalUVDensities": 0.0
           }
         }
       ],
-      "LightmapUVDensity": 103.26937,
+      "LightmapUVDensity": 102.88461,
       "LightMapResolution": 64,
       "LightMapCoordinateIndex": 1,
+      "LODForCollision": 3,
       "ExtendedBounds": {
         "Origin": {
           "X": -0.37694645,
@@ -141,78 +155,16 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_Statue_01:BodySetup_1",
+      "ObjectName": "BodySetup'SM_BRL_Statue_01:BodySetup_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_Statue_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_Statue_01:NavCollision_2",
+      "ObjectName": "NavCollision'SM_BRL_Statue_01:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_Statue_01.1"
     },
-    "LightingGuid": "9DB8AA8D-4F9A37CF-C2855489-842E8AA1",
+    "LightingGuid": "8A9112EB-4011600E-BE811CAE-167A47AB",
     "RenderData": {
       "LODs": [
-        {
-          "Sections": [
-            {
-              "MaterialIndex": 0,
-              "FirstIndex": 0,
-              "NumTriangles": 3126,
-              "MinVertexIndex": 0,
-              "MaxVertexIndex": 1883,
-              "bEnableCollision": true,
-              "bCastShadow": true,
-              "bForceOpaque": false,
-              "bVisibleInRayTracing": true
-            }
-          ],
-          "MaxDeviation": 0.0,
-          "PositionVertexBuffer": {
-            "Stride": 12,
-            "NumVertices": 1884
-          },
-          "VertexBuffer": {
-            "NumTexCoords": 2,
-            "NumVertices": 1884,
-            "Strides": -1,
-            "UseHighPrecisionTangentBasis": false,
-            "UseFullPrecisionUVs": false
-          },
-          "ColorVertexBuffer": {
-            "Stride": 0,
-            "NumVertices": 0
-          }
-        },
-        {
-          "Sections": [
-            {
-              "MaterialIndex": 0,
-              "FirstIndex": 0,
-              "NumTriangles": 2816,
-              "MinVertexIndex": 0,
-              "MaxVertexIndex": 1720,
-              "bEnableCollision": true,
-              "bCastShadow": true,
-              "bForceOpaque": false,
-              "bVisibleInRayTracing": true
-            }
-          ],
-          "MaxDeviation": 0.0,
-          "PositionVertexBuffer": {
-            "Stride": 12,
-            "NumVertices": 1721
-          },
-          "VertexBuffer": {
-            "NumTexCoords": 2,
-            "NumVertices": 1721,
-            "Strides": -1,
-            "UseHighPrecisionTangentBasis": false,
-            "UseFullPrecisionUVs": false
-          },
-          "ColorVertexBuffer": {
-            "Stride": 0,
-            "NumVertices": 0
-          }
-        },
         {
           "Sections": [
             {
@@ -249,9 +201,9 @@
             {
               "MaterialIndex": 0,
               "FirstIndex": 0,
-              "NumTriangles": 1076,
+              "NumTriangles": 1092,
               "MinVertexIndex": 0,
-              "MaxVertexIndex": 755,
+              "MaxVertexIndex": 769,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
@@ -261,11 +213,73 @@
           "MaxDeviation": 0.0,
           "PositionVertexBuffer": {
             "Stride": 12,
-            "NumVertices": 756
+            "NumVertices": 770
           },
           "VertexBuffer": {
             "NumTexCoords": 2,
-            "NumVertices": 756,
+            "NumVertices": 770,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          }
+        },
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 650,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 506,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 507
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 2,
+            "NumVertices": 507,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          }
+        },
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 352,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 314,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 315
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 2,
+            "NumVertices": 315,
             "Strides": -1,
             "UseHighPrecisionTangentBasis": false,
             "UseFullPrecisionUVs": false
@@ -292,9 +306,9 @@
       "bLODsShareStaticLighting": false,
       "ScreenSize": [
         1.0,
-        0.5,
-        0.25,
-        0.1,
+        0.155,
+        0.065,
+        0.05,
         0.0,
         0.0,
         0.0,

@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_Ind_Container_CeillingLight",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "DefaultInstance": {
         "ObjectType": "ECC_WorldStatic",
@@ -44,7 +45,7 @@
     "BodySetupGuid": "83AB41854CE221EEBEF72DBA3BBCC14F",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 2701,
         "SizeOnDisk": 2701,
         "OffsetInFile": "0xF1BD"
@@ -55,9 +56,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_0",
     "Outer": "SM_Ind_Container_CeillingLight",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 21,
         "SizeOnDisk": 21,
         "OffsetInFile": "0xFC92"
@@ -67,6 +69,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_Ind_Container_CeillingLight",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -74,18 +77,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 2,
-          "High": 2,
-          "Medium": 2,
-          "Low": 2,
-          "Mobile": 2
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 2
+          },
+          {
+            "High": 2
+          },
+          {
+            "Medium": 2
+          },
+          {
+            "Low": 2
+          },
+          {
+            "Mobile": 2
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_COM_GoldMaya_2",
+            "ObjectName": "MaterialInstanceConstant'MI_COM_GoldMaya_2'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Metal/MI_COM_GoldMaya_2.0"
           },
           "MaterialSlotName": "gold",
@@ -101,7 +114,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_COM_Emissive",
+            "ObjectName": "MaterialInstanceConstant'MI_COM_Emissive'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Glass/MI_COM_Emissive.0"
           },
           "MaterialSlotName": "diamond",
@@ -134,11 +147,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_Ind_Container_CeillingLight:BodySetup_0",
+      "ObjectName": "BodySetup'SM_Ind_Container_CeillingLight:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Structures/SM_Ind_Container_CeillingLight.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_Ind_Container_CeillingLight:NavCollision_0",
+      "ObjectName": "NavCollision'SM_Ind_Container_CeillingLight:NavCollision_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Structures/SM_Ind_Container_CeillingLight.1"
     },
     "LightingGuid": "22D7CBD0-4D0496B1-01E26BA0-D07AB7D6",

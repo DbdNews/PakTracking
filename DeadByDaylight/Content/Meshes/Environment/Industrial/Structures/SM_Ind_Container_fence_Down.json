@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_Ind_Container_fence_Down",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "DefaultInstance": {
         "ObjectType": "ECC_WorldStatic",
@@ -44,7 +45,7 @@
     "BodySetupGuid": "7D17918E48E732D3A3424A9836EC123E",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 6361,
         "SizeOnDisk": 6361,
         "OffsetInFile": "0x3F43B"
@@ -55,9 +56,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_Ind_Container_fence_Down",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 21,
         "SizeOnDisk": 21,
         "OffsetInFile": "0x40D5C"
@@ -67,6 +69,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_Ind_Container_fence_Down",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -74,18 +77,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_Aluminium",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_Aluminium'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Blend/Metal/MI_Com_Aluminium.0"
           },
           "MaterialSlotName": "Steel",
@@ -101,7 +114,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_Plastic_A",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_Plastic_A'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Plastic-Rubber/MI_Com_Plastic_A.0"
           },
           "MaterialSlotName": "Plastic",
@@ -117,7 +130,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_Aluminium",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_Aluminium'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Blend/Metal/MI_Com_Aluminium.0"
           },
           "MaterialSlotName": "Aluminium",
@@ -150,11 +163,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_Ind_Container_fence_Down:BodySetup_0",
+      "ObjectName": "BodySetup'SM_Ind_Container_fence_Down:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Structures/SM_Ind_Container_fence_Down.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_Ind_Container_fence_Down:NavCollision_2",
+      "ObjectName": "NavCollision'SM_Ind_Container_fence_Down:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Structures/SM_Ind_Container_fence_Down.1"
     },
     "LightingGuid": "06077FE2-4DCC6E40-22673A9E-D06A01A1",

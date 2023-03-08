@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_BRL_GrizzlyBear_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -948,7 +949,7 @@
     "BodySetupGuid": "830A808C470F2F23235BB086257FA244",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 17671,
         "SizeOnDisk": 17671,
         "OffsetInFile": "0x71944"
@@ -959,9 +960,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_BRL_GrizzlyBear_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 3681,
         "SizeOnDisk": 3681,
         "OffsetInFile": "0x75E93"
@@ -971,6 +973,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_GrizzlyBear_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -978,18 +981,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_GrizzlyBear_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_GrizzlyBear_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/Props/MI_BRL_GrizzlyBear_01.0"
           },
           "MaterialSlotName": "Mi_BRL_GrizzlyBear_01",
@@ -1023,11 +1036,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_GrizzlyBear_01:BodySetup_0",
+      "ObjectName": "BodySetup'SM_BRL_GrizzlyBear_01:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_GrizzlyBear_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_GrizzlyBear_01:NavCollision_2",
+      "ObjectName": "NavCollision'SM_BRL_GrizzlyBear_01:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_GrizzlyBear_01.1"
     },
     "LightingGuid": "4789004F-470CA13F-35DF5C84-D11AFDBC",

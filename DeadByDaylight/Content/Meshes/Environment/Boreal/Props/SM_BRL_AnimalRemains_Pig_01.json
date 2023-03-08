@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_1",
     "Outer": "SM_BRL_AnimalRemains_Pig_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -67,7 +68,7 @@
     "BodySetupGuid": "3AD7BEDA4365EEC2FD9680BB2F73DF2F",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 14549,
         "SizeOnDisk": 14549,
         "OffsetInFile": "0x8CED8"
@@ -78,9 +79,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_BRL_AnimalRemains_Pig_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 265,
         "SizeOnDisk": 265,
         "OffsetInFile": "0x907F5"
@@ -90,6 +92,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_AnimalRemains_Pig_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -97,18 +100,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_AnimalRemains_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_AnimalRemains_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/Props/MI_BRL_AnimalRemains_01.0"
           },
           "MaterialSlotName": "MI_BRL_AnimalRemains_01",
@@ -142,11 +155,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_AnimalRemains_Pig_01:BodySetup_1",
+      "ObjectName": "BodySetup'SM_BRL_AnimalRemains_Pig_01:BodySetup_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_AnimalRemains_Pig_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_AnimalRemains_Pig_01:NavCollision_2",
+      "ObjectName": "NavCollision'SM_BRL_AnimalRemains_Pig_01:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_AnimalRemains_Pig_01.1"
     },
     "LightingGuid": "7DFFBDF0-4465C66A-4EFF6188-E87DA0BF",

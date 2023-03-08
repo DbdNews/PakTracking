@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_IND_MercenaryTent_Small_Right",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -569,7 +570,7 @@
     "BodySetupGuid": "E08AF3C540B013B693ED029B507D5D77",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 23730,
         "SizeOnDisk": 23730,
         "OffsetInFile": "0xC6086"
@@ -580,9 +581,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_1",
     "Outer": "SM_IND_MercenaryTent_Small_Right",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 2009,
         "SizeOnDisk": 2009,
         "OffsetInFile": "0xCBD80"
@@ -592,6 +594,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_IND_MercenaryTent_Small_Right",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -599,18 +602,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_IND_TrimTentArmy_Mud",
+            "ObjectName": "MaterialInstanceConstant'MI_IND_TrimTentArmy_Mud'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Industrial/Structures/MI_IND_TrimTentArmy_Mud.0"
           },
           "MaterialSlotName": "MI_IND_TrimTentArmy_Mud",
@@ -626,7 +639,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_IND_TentArmy",
+            "ObjectName": "MaterialInstanceConstant'MI_IND_TentArmy'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Industrial/Structures/MI_IND_TentArmy.0"
           },
           "MaterialSlotName": "MI_IND_TentArmy",
@@ -642,7 +655,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_TentArmy",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_TentArmy'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Fabric/MI_Com_TentArmy.0"
           },
           "MaterialSlotName": "MI_Com_TentArmy",
@@ -658,7 +671,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_TrimTentArmy_Masked",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_TrimTentArmy_Masked'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Trims/MI_Com_TrimTentArmy_Masked.0"
           },
           "MaterialSlotName": "MI_Com_TrimTentArmy_Masked",
@@ -674,7 +687,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_IND_TrimTentArmy",
+            "ObjectName": "MaterialInstanceConstant'MI_IND_TrimTentArmy'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Industrial/Structures/MI_IND_TrimTentArmy.0"
           },
           "MaterialSlotName": "MI_IND_TrimTentArmy",
@@ -690,7 +703,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_Net_A",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_Net_A'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Fabric/MI_Com_Net_A.0"
           },
           "MaterialSlotName": "MI_Com_Net_A",
@@ -723,11 +736,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_IND_MercenaryTent_Small_Right:BodySetup_0",
+      "ObjectName": "BodySetup'SM_IND_MercenaryTent_Small_Right:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Structures/SM_IND_MercenaryTent_Small_Right.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_IND_MercenaryTent_Small_Right:NavCollision_1",
+      "ObjectName": "NavCollision'SM_IND_MercenaryTent_Small_Right:NavCollision_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Structures/SM_IND_MercenaryTent_Small_Right.1"
     },
     "LightingGuid": "BE9071DA-46CC4EEF-2E1EC3A6-4DB8BA58",

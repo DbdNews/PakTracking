@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_1",
     "Outer": "SM_ClockTowerExterior_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -10173,7 +10174,7 @@
     "BodySetupGuid": "D9FC08A64FD48FF381AC7290AC84BC03",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 628441,
         "SizeOnDisk": 628441,
         "OffsetInFile": "0x7349BF"
@@ -10184,9 +10185,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_ClockTowerExterior_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 34901,
         "SizeOnDisk": 34901,
         "OffsetInFile": "0x7CE0E0"
@@ -10196,6 +10198,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_ClockTowerExterior_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -10203,18 +10206,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_COM_Bricks01",
+            "ObjectName": "MaterialInstanceConstant'MI_COM_Bricks01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Stone/MI_COM_Bricks01.0"
           },
           "MaterialSlotName": "M_SmallBricks",
@@ -10230,7 +10243,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_ION_ConcretePlasterBroken_04",
+            "ObjectName": "MaterialInstanceConstant'MI_ION_ConcretePlasterBroken_04'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Ion/Structures/MI_ION_ConcretePlasterBroken_04.0"
           },
           "MaterialSlotName": "ConcretePlaster",
@@ -10246,7 +10259,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_ION_BrickPlaster_02",
+            "ObjectName": "MaterialInstanceConstant'MI_ION_BrickPlaster_02'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Ion/Structures/MI_ION_BrickPlaster_02.0"
           },
           "MaterialSlotName": "M_Plain",
@@ -10262,7 +10275,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Ion_TrimSheet_Stone_B_02",
+            "ObjectName": "MaterialInstanceConstant'MI_Ion_TrimSheet_Stone_B_02'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Ion/Structures/MI_Ion_TrimSheet_Stone_B_02.0"
           },
           "MaterialSlotName": "M_TrimStone1",
@@ -10295,11 +10308,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_ClockTowerExterior_01:BodySetup_1",
+      "ObjectName": "BodySetup'SM_ClockTowerExterior_01:BodySetup_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Ion/Structures/SM_ClockTowerExterior_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_ClockTowerExterior_01:NavCollision_2",
+      "ObjectName": "NavCollision'SM_ClockTowerExterior_01:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Ion/Structures/SM_ClockTowerExterior_01.1"
     },
     "LightingGuid": "AF1AC9ED-43A7D12D-1C59C084-2786ABDD",

@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_1",
     "Outer": "SM_Ind_Container_Table",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -923,7 +924,7 @@
     "BodySetupGuid": "25EBC4794F9F3E1B19943F94952FD751",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 10215,
         "SizeOnDisk": 10215,
         "OffsetInFile": "0x1F2F3"
@@ -934,9 +935,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_Ind_Container_Table",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 3073,
         "SizeOnDisk": 3073,
         "OffsetInFile": "0x21B22"
@@ -946,6 +948,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_Ind_Container_Table",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -953,18 +956,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 2,
-          "High": 2,
-          "Medium": 2,
-          "Low": 2,
-          "Mobile": 2
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 2
+          },
+          {
+            "High": 2
+          },
+          {
+            "Medium": 2
+          },
+          {
+            "Low": 2
+          },
+          {
+            "Mobile": 2
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_Teak",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_Teak'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Wood/MI_Com_Teak.0"
           },
           "MaterialSlotName": "MI_Com_Teak",
@@ -980,7 +993,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_Marble_Blk",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_Marble_Blk'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Marble-Granite/MI_Com_Marble_Blk.0"
           },
           "MaterialSlotName": "MI_Com_Marble_Blk",
@@ -1013,11 +1026,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_Ind_Container_Table:BodySetup_1",
+      "ObjectName": "BodySetup'SM_Ind_Container_Table:BodySetup_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Structures/SM_Ind_Container_Table.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_Ind_Container_Table:NavCollision_2",
+      "ObjectName": "NavCollision'SM_Ind_Container_Table:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Structures/SM_Ind_Container_Table.1"
     },
     "LightingGuid": "E2E9F25A-4BE357B1-2F9869A0-AB6A6704",

@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_COM_Candle_02",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "DefaultInstance": {
         "ObjectType": "ECC_WorldStatic",
@@ -44,7 +45,7 @@
     "BodySetupGuid": "DBB88B214C9EE595FDC9028CAD2F12EE",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 2901,
         "SizeOnDisk": 2901,
         "OffsetInFile": "0xC2D9"
@@ -55,9 +56,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_1",
     "Outer": "SM_COM_Candle_02",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 21,
         "SizeOnDisk": 21,
         "OffsetInFile": "0xCE76"
@@ -67,6 +69,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_COM_Candle_02",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -74,18 +77,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 2,
-          "High": 2,
-          "Medium": 2,
-          "Low": 2,
-          "Mobile": 2
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 2
+          },
+          {
+            "High": 2
+          },
+          {
+            "Medium": 2
+          },
+          {
+            "Low": 2
+          },
+          {
+            "Mobile": 2
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_COM_Candle_02",
+            "ObjectName": "MaterialInstanceConstant'MI_COM_Candle_02'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Props/MI_COM_Candle_02.0"
           },
           "MaterialSlotName": "MI_COM_Candle_02",
@@ -106,7 +119,7 @@
       "LODForCollision": 2,
       "Sockets": [
         {
-          "ObjectName": "StaticMeshSocket SM_COM_Candle_02:StaticMeshSocket_0",
+          "ObjectName": "StaticMeshSocket'SM_COM_Candle_02:StaticMeshSocket_0'",
           "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/Props/SM_COM_Candle_02.3"
         }
       ],
@@ -125,11 +138,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_COM_Candle_02:BodySetup_0",
+      "ObjectName": "BodySetup'SM_COM_Candle_02:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/Props/SM_COM_Candle_02.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_COM_Candle_02:NavCollision_1",
+      "ObjectName": "NavCollision'SM_COM_Candle_02:NavCollision_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/Props/SM_COM_Candle_02.1"
     },
     "LightingGuid": "54627608-4ACB7AD9-7523DCAE-36219F61",
@@ -259,6 +272,7 @@
     "Type": "StaticMeshSocket",
     "Name": "StaticMeshSocket_0",
     "Outer": "SM_COM_Candle_02",
+    "Class": "UScriptClass'StaticMeshSocket'",
     "Properties": {
       "SocketName": "Flame",
       "RelativeLocation": {

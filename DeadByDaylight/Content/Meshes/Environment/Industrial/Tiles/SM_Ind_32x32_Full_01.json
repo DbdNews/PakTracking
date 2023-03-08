@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_1",
     "Outer": "SM_Ind_32x32_Full_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -168,7 +169,7 @@
     "BodySetupGuid": "2514F59D4574480E02504195BEDF49DC",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 1375,
         "SizeOnDisk": 1375,
         "OffsetInFile": "0x13B07"
@@ -179,9 +180,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_Ind_32x32_Full_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 457,
         "SizeOnDisk": 457,
         "OffsetInFile": "0x140AE"
@@ -191,6 +193,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_Ind_32x32_Full_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -198,18 +201,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_IND_GroundMud",
+            "ObjectName": "MaterialInstanceConstant'MI_IND_GroundMud'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Industrial/MI_IND_GroundMud.0"
           },
           "MaterialSlotName": "MI_IND_GroundMud",
@@ -242,11 +255,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_Ind_32x32_Full_01:BodySetup_1",
+      "ObjectName": "BodySetup'SM_Ind_32x32_Full_01:BodySetup_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Tiles/SM_Ind_32x32_Full_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_Ind_32x32_Full_01:NavCollision_2",
+      "ObjectName": "NavCollision'SM_Ind_32x32_Full_01:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Tiles/SM_Ind_32x32_Full_01.1"
     },
     "LightingGuid": "0F525198-424FCA5D-E0588497-BB8EB5E5",

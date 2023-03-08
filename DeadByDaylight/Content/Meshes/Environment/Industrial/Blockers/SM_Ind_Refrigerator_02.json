@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_Ind_Refrigerator_02",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -344,7 +345,7 @@
     "BodySetupGuid": "8E5F558247F0CA2D667667BB83F943A8",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 11030,
         "SizeOnDisk": 11030,
         "OffsetInFile": "0x6C756"
@@ -355,9 +356,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_Ind_Refrigerator_02",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 1521,
         "SizeOnDisk": 1521,
         "OffsetInFile": "0x6F2B4"
@@ -367,6 +369,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_Ind_Refrigerator_02",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -374,18 +377,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_COM_Glass_Opaque_03",
+            "ObjectName": "MaterialInstanceConstant'MI_COM_Glass_Opaque_03'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Glass/MI_COM_Glass_Opaque_03.0"
           },
           "MaterialSlotName": "MI_COM_Glass_Opaque_03",
@@ -401,7 +414,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Stainless_A",
+            "ObjectName": "MaterialInstanceConstant'MI_Stainless_A'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Metal/MI_Stainless_A.0"
           },
           "MaterialSlotName": "MI_Stainless_A1",
@@ -417,7 +430,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_COM_Rubber_01",
+            "ObjectName": "MaterialInstanceConstant'MI_COM_Rubber_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Plastic-Rubber/MI_COM_Rubber_01.0"
           },
           "MaterialSlotName": "MI_COM_Rubber_02",
@@ -433,7 +446,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_COM_FormicaTable_01_metal",
+            "ObjectName": "MaterialInstanceConstant'MI_COM_FormicaTable_01_metal'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Props/MI_COM_FormicaTable_01_metal.0"
           },
           "MaterialSlotName": "MI_COM_FormicaTable_01_metal1",
@@ -466,11 +479,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_Ind_Refrigerator_02:BodySetup_0",
+      "ObjectName": "BodySetup'SM_Ind_Refrigerator_02:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Blockers/SM_Ind_Refrigerator_02.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_Ind_Refrigerator_02:NavCollision_2",
+      "ObjectName": "NavCollision'SM_Ind_Refrigerator_02:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Blockers/SM_Ind_Refrigerator_02.1"
     },
     "LightingGuid": "EB03051A-4B82CF6D-C8172EAA-69A4459B",

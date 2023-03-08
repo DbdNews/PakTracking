@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_COM_BookPile_Rich_03",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -67,7 +68,7 @@
     "BodySetupGuid": "12BA3C294F684C42AD1B7C80847F70D0",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 9521,
         "SizeOnDisk": 9521,
         "OffsetInFile": "0x51790"
@@ -78,9 +79,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_COM_BookPile_Rich_03",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 265,
         "SizeOnDisk": 265,
         "OffsetInFile": "0x53D09"
@@ -90,6 +92,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_COM_BookPile_Rich_03",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -97,18 +100,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_COM_Book_Rich_01",
+            "ObjectName": "MaterialInstanceConstant'MI_COM_Book_Rich_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Props/MI_COM_Book_Rich_01.0"
           },
           "MaterialSlotName": "MI_COM_Book_Rich_01",
@@ -142,11 +155,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_COM_BookPile_Rich_03:BodySetup_0",
+      "ObjectName": "BodySetup'SM_COM_BookPile_Rich_03:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/Props/SM_COM_BookPile_Rich_03.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_COM_BookPile_Rich_03:NavCollision_2",
+      "ObjectName": "NavCollision'SM_COM_BookPile_Rich_03:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/Props/SM_COM_BookPile_Rich_03.1"
     },
     "LightingGuid": "5D1415B6-4795D292-9A14F5BA-8E267B5F",

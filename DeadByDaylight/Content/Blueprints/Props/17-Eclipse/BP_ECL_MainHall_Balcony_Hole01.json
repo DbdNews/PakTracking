@@ -2,17 +2,29 @@
   {
     "Type": "BlueprintGeneratedClass",
     "Name": "BP_ECL_MainHall_Balcony_Hole01_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
     "Properties": {
       "SimpleConstructionScript": {
-        "ObjectName": "SimpleConstructionScript BP_ECL_MainHall_Balcony_Hole01_C:SimpleConstructionScript_4",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/17-Eclipse/BP_ECL_MainHall_Balcony_Hole01.7"
+        "ObjectName": "SimpleConstructionScript'BP_ECL_MainHall_Balcony_Hole01_C:SimpleConstructionScript_4'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/17-Eclipse/BP_ECL_MainHall_Balcony_Hole01.12"
       }
     },
     "SuperStruct": {
-      "ObjectName": "Class Actor",
+      "ObjectName": "Class'Actor'",
       "ObjectPath": "/Script/Engine"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "NavLinkProxy_Fall4",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class'ChildActorComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "SM_Ecl_MainHall_Railing2ndFloor_014",
@@ -20,7 +32,7 @@
         "ElementSize": 8,
         "PropertyFlags": 17180393476,
         "PropertyClass": {
-          "ObjectName": "Class StaticMeshComponent",
+          "ObjectName": "Class'StaticMeshComponent'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -31,26 +43,27 @@
         "ElementSize": 8,
         "PropertyFlags": 17180393476,
         "PropertyClass": {
-          "ObjectName": "Class SceneComponent",
+          "ObjectName": "Class'SceneComponent'",
           "ObjectPath": "/Script/Engine"
         }
       }
     ],
     "ClassFlags": 8652820,
     "ClassWithin": {
-      "ObjectName": "Class Object",
+      "ObjectName": "Class'Object'",
       "ObjectPath": "/Script/CoreUObject"
     },
     "ClassConfigName": "Engine",
     "bCooked": true,
     "ClassDefaultObject": {
-      "ObjectName": "BP_ECL_MainHall_Balcony_Hole01_C Default__BP_ECL_MainHall_Balcony_Hole01_C",
+      "ObjectName": "BP_ECL_MainHall_Balcony_Hole01_C'Default__BP_ECL_MainHall_Balcony_Hole01_C'",
       "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/17-Eclipse/BP_ECL_MainHall_Balcony_Hole01.1"
     }
   },
   {
     "Type": "BP_ECL_MainHall_Balcony_Hole01_C",
     "Name": "Default__BP_ECL_MainHall_Balcony_Hole01_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/Props/17-Eclipse/BP_ECL_MainHall_Balcony_Hole01.BP_ECL_MainHall_Balcony_Hole01_C'",
     "Properties": {
       "PrimaryActorTick": {
         "bStartWithTickEnabled": false
@@ -61,9 +74,82 @@
     }
   },
   {
+    "Type": "ChildActorComponent",
+    "Name": "NavLinkProxy_Fall4_GEN_VARIABLE",
+    "Outer": "BP_ECL_MainHall_Balcony_Hole01_C",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Properties": {
+      "ChildActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'NavLinkProxy_Fall_C'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Other/NavLinkProxy_Fall.0"
+      },
+      "ChildActorTemplate": {
+        "ObjectName": "NavLinkProxy_Fall_C'BP_ECL_MainHall_Balcony_Hole01_C:NavLinkProxy_Fall4_GEN_VARIABLE.NavLinkProxy_Fall4_GEN_VARIABLE_NavLinkProxy_Fall_C_CAT'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/17-Eclipse/BP_ECL_MainHall_Balcony_Hole01.4"
+      },
+      "RelativeLocation": {
+        "X": -54.780685,
+        "Y": -7.656899,
+        "Z": 57.589355
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 5.0000753,
+        "Roll": 0.0
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "DBDNavLinkCustomComponent",
+    "Name": "SmartLinkComp",
+    "Outer": "NavLinkProxy_Fall4_GEN_VARIABLE_NavLinkProxy_Fall_C_CAT",
+    "Template": "SmartLinkComp",
+    "Class": "UScriptClass'DBDNavLinkCustomComponent'",
+    "Properties": {
+      "NavLinkUserId": 6,
+      "LinkRelativeStart": {
+        "X": -20.0,
+        "Y": 2.1E-05,
+        "Z": -19.589355
+      },
+      "LinkRelativeEnd": {
+        "X": 220.0,
+        "Y": 3E-06,
+        "Z": -472.61105
+      },
+      "LinkDirection": "ENavLinkDirection::LeftToRight"
+    }
+  },
+  {
+    "Type": "NavLinkProxy_Fall_C",
+    "Name": "NavLinkProxy_Fall4_GEN_VARIABLE_NavLinkProxy_Fall_C_CAT",
+    "Outer": "NavLinkProxy_Fall4_GEN_VARIABLE",
+    "Template": "Default__NavLinkProxy_Fall_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/AI/Other/NavLinkProxy_Fall.NavLinkProxy_Fall_C'",
+    "Properties": {
+      "SmartLinkComp": {
+        "ObjectName": "DBDNavLinkCustomComponent'BP_ECL_MainHall_Balcony_Hole01_C:NavLinkProxy_Fall4_GEN_VARIABLE.NavLinkProxy_Fall4_GEN_VARIABLE_NavLinkProxy_Fall_C_CAT.SmartLinkComp'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/17-Eclipse/BP_ECL_MainHall_Balcony_Hole01.3"
+      },
+      "RootComponent": {
+        "ObjectName": "SceneComponent'BP_ECL_MainHall_Balcony_Hole01_C:NavLinkProxy_Fall4_GEN_VARIABLE.NavLinkProxy_Fall4_GEN_VARIABLE_NavLinkProxy_Fall_C_CAT.PositionComponent'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/17-Eclipse/BP_ECL_MainHall_Balcony_Hole01.5"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "PositionComponent",
+    "Outer": "NavLinkProxy_Fall4_GEN_VARIABLE_NavLinkProxy_Fall_C_CAT",
+    "Template": "PositionComponent",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
     "Type": "SceneComponent",
     "Name": "Scene_GEN_VARIABLE",
     "Outer": "BP_ECL_MainHall_Balcony_Hole01_C",
+    "Class": "UScriptClass'SceneComponent'",
     "Properties": {
       "Mobility": "EComponentMobility::Static"
     }
@@ -71,25 +157,49 @@
   {
     "Type": "SceneComponent",
     "Name": "SceneComponent_6",
-    "Outer": "BP_ECL_MainHall_Balcony_Hole01_C"
+    "Outer": "BP_ECL_MainHall_Balcony_Hole01_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_4",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ChildActorComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ChildActorComponent'BP_ECL_MainHall_Balcony_Hole01_C:NavLinkProxy_Fall4_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/17-Eclipse/BP_ECL_MainHall_Balcony_Hole01.2"
+      },
+      "VariableGuid": "C340D8DF-48DB7ECA-0C0749A6-21A0159D",
+      "InternalVariableName": "NavLinkProxy_Fall4"
+    }
   },
   {
     "Type": "SCS_Node",
     "Name": "SCS_Node_4",
     "Outer": "SimpleConstructionScript_4",
+    "Class": "UScriptClass'SCS_Node'",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class SceneComponent",
+        "ObjectName": "Class'SceneComponent'",
         "ObjectPath": "/Script/Engine"
       },
       "ComponentTemplate": {
-        "ObjectName": "SceneComponent BP_ECL_MainHall_Balcony_Hole01_C:Scene_GEN_VARIABLE",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/17-Eclipse/BP_ECL_MainHall_Balcony_Hole01.2"
+        "ObjectName": "SceneComponent'BP_ECL_MainHall_Balcony_Hole01_C:Scene_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/17-Eclipse/BP_ECL_MainHall_Balcony_Hole01.6"
       },
       "ChildNodes": [
         {
-          "ObjectName": "SCS_Node BP_ECL_MainHall_Balcony_Hole01_C:SimpleConstructionScript_4.SCS_Node_6",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/17-Eclipse/BP_ECL_MainHall_Balcony_Hole01.6"
+          "ObjectName": "SCS_Node'BP_ECL_MainHall_Balcony_Hole01_C:SimpleConstructionScript_4.SCS_Node_6'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/17-Eclipse/BP_ECL_MainHall_Balcony_Hole01.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ECL_MainHall_Balcony_Hole01_C:SimpleConstructionScript_4.SCS_Node_0'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/17-Eclipse/BP_ECL_MainHall_Balcony_Hole01.8"
         }
       ],
       "VariableGuid": "3B9D9BBB-4FD1C56E-656487B5-DDECE528",
@@ -100,14 +210,15 @@
     "Type": "SCS_Node",
     "Name": "SCS_Node_47",
     "Outer": "SimpleConstructionScript_4",
+    "Class": "UScriptClass'SCS_Node'",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class SceneComponent",
+        "ObjectName": "Class'SceneComponent'",
         "ObjectPath": "/Script/Engine"
       },
       "ComponentTemplate": {
-        "ObjectName": "SceneComponent BP_ECL_MainHall_Balcony_Hole01_C:SceneComponent_6",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/17-Eclipse/BP_ECL_MainHall_Balcony_Hole01.3"
+        "ObjectName": "SceneComponent'BP_ECL_MainHall_Balcony_Hole01_C:SceneComponent_6'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/17-Eclipse/BP_ECL_MainHall_Balcony_Hole01.7"
       },
       "VariableGuid": "0554C38E-436F4C6E-0ACBC5BA-6EDD7CDB",
       "InternalVariableName": "DefaultSceneRoot"
@@ -117,14 +228,15 @@
     "Type": "SCS_Node",
     "Name": "SCS_Node_6",
     "Outer": "SimpleConstructionScript_4",
+    "Class": "UScriptClass'SCS_Node'",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class StaticMeshComponent",
+        "ObjectName": "Class'StaticMeshComponent'",
         "ObjectPath": "/Script/Engine"
       },
       "ComponentTemplate": {
-        "ObjectName": "StaticMeshComponent BP_ECL_MainHall_Balcony_Hole01_C:SM_Ecl_MainHall_Railing2ndFloor_014_GEN_VARIABLE",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/17-Eclipse/BP_ECL_MainHall_Balcony_Hole01.8"
+        "ObjectName": "StaticMeshComponent'BP_ECL_MainHall_Balcony_Hole01_C:SM_Ecl_MainHall_Railing2ndFloor_014_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/17-Eclipse/BP_ECL_MainHall_Balcony_Hole01.13"
       },
       "VariableGuid": "0C80EA7B-4F057AC7-8D2121A4-D3A376C8",
       "InternalVariableName": "SM_Ecl_MainHall_Railing2ndFloor_014"
@@ -134,26 +246,31 @@
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_4",
     "Outer": "BP_ECL_MainHall_Balcony_Hole01_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
     "Properties": {
       "RootNodes": [
         {
-          "ObjectName": "SCS_Node BP_ECL_MainHall_Balcony_Hole01_C:SimpleConstructionScript_4.SCS_Node_4",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/17-Eclipse/BP_ECL_MainHall_Balcony_Hole01.4"
+          "ObjectName": "SCS_Node'BP_ECL_MainHall_Balcony_Hole01_C:SimpleConstructionScript_4.SCS_Node_4'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/17-Eclipse/BP_ECL_MainHall_Balcony_Hole01.9"
         }
       ],
       "AllNodes": [
         {
-          "ObjectName": "SCS_Node BP_ECL_MainHall_Balcony_Hole01_C:SimpleConstructionScript_4.SCS_Node_4",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/17-Eclipse/BP_ECL_MainHall_Balcony_Hole01.4"
+          "ObjectName": "SCS_Node'BP_ECL_MainHall_Balcony_Hole01_C:SimpleConstructionScript_4.SCS_Node_4'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/17-Eclipse/BP_ECL_MainHall_Balcony_Hole01.9"
         },
         {
-          "ObjectName": "SCS_Node BP_ECL_MainHall_Balcony_Hole01_C:SimpleConstructionScript_4.SCS_Node_6",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/17-Eclipse/BP_ECL_MainHall_Balcony_Hole01.6"
+          "ObjectName": "SCS_Node'BP_ECL_MainHall_Balcony_Hole01_C:SimpleConstructionScript_4.SCS_Node_6'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/17-Eclipse/BP_ECL_MainHall_Balcony_Hole01.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ECL_MainHall_Balcony_Hole01_C:SimpleConstructionScript_4.SCS_Node_0'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/17-Eclipse/BP_ECL_MainHall_Balcony_Hole01.8"
         }
       ],
       "DefaultSceneRootNode": {
-        "ObjectName": "SCS_Node BP_ECL_MainHall_Balcony_Hole01_C:SimpleConstructionScript_4.SCS_Node_47",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/17-Eclipse/BP_ECL_MainHall_Balcony_Hole01.5"
+        "ObjectName": "SCS_Node'BP_ECL_MainHall_Balcony_Hole01_C:SimpleConstructionScript_4.SCS_Node_47'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/17-Eclipse/BP_ECL_MainHall_Balcony_Hole01.10"
       }
     }
   },
@@ -161,9 +278,10 @@
     "Type": "StaticMeshComponent",
     "Name": "SM_Ecl_MainHall_Railing2ndFloor_014_GEN_VARIABLE",
     "Outer": "BP_ECL_MainHall_Balcony_Hole01_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
     "Properties": {
       "StaticMesh": {
-        "ObjectName": "StaticMesh SM_Ecl_MainHall_Railing2ndFloor_03",
+        "ObjectName": "StaticMesh'SM_Ecl_MainHall_Railing2ndFloor_03'",
         "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Eclipse/Structures/SM_Ecl_MainHall_Railing2ndFloor_03.2"
       },
       "DetailLevelBeforeCastShadows": "DM_MAX",

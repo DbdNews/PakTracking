@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_1",
     "Outer": "SM_COM_Projector_01_Stand",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -146,7 +147,7 @@
     "BodySetupGuid": "3A05ACAE4CFAB8A2968583A1E1969977",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 16385,
         "SizeOnDisk": 16385,
         "OffsetInFile": "0x56981"
@@ -157,9 +158,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_COM_Projector_01_Stand",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 337,
         "SizeOnDisk": 337,
         "OffsetInFile": "0x5A9CA"
@@ -169,6 +171,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_COM_Projector_01_Stand",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -176,18 +179,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_COM_Projector_01",
+            "ObjectName": "MaterialInstanceConstant'MI_COM_Projector_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Blockers/MI_COM_Projector_01.0"
           },
           "MaterialSlotName": "MI_COM_Projector_01",
@@ -220,11 +233,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_COM_Projector_01_Stand:BodySetup_1",
+      "ObjectName": "BodySetup'SM_COM_Projector_01_Stand:BodySetup_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/Blockers/SM_COM_Projector_01_Stand.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_COM_Projector_01_Stand:NavCollision_2",
+      "ObjectName": "NavCollision'SM_COM_Projector_01_Stand:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/Blockers/SM_COM_Projector_01_Stand.1"
     },
     "LightingGuid": "1A8711DF-4E67CF61-610A9FB5-D7EF7FE0",

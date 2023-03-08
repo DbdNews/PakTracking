@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_Lobby_FieldGrass_02",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "WalkableSlopeOverride": {
         "WalkableSlopeBehavior": "WalkableSlope_Unwalkable"
@@ -80,7 +81,7 @@
     "BodySetupGuid": "FC2B2DFC467C7D8D068E6EA908C22336",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 25,
         "SizeOnDisk": 25,
         "OffsetInFile": "0x1C1BC"
@@ -90,6 +91,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_Lobby_FieldGrass_02",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -97,18 +99,28 @@
         "Value": 1
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_HideGrass01",
+            "ObjectName": "MaterialInstanceConstant'MI_HideGrass01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Vegetations/MI_HideGrass01.0"
           },
           "MaterialSlotName": "MI_HideGrass01",
@@ -142,7 +154,7 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_Lobby_FieldGrass_02:BodySetup_0",
+      "ObjectName": "BodySetup'SM_Lobby_FieldGrass_02:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Lobby/SM_Lobby_FieldGrass_02.0"
     },
     "NavCollision": null,

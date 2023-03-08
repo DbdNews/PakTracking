@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_GT_Fr_32x32_Lobby",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -161,13 +162,13 @@
         }
       }
     },
-    "BodySetupGuid": "7C4EEDD84A55C5811B629EA6614532B8",
+    "BodySetupGuid": "DF48D6AB430B3AE359E4E988D41C6D70",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 21918,
         "SizeOnDisk": 21918,
-        "OffsetInFile": "0x125169"
+        "OffsetInFile": "0x125326"
       }
     }
   },
@@ -175,37 +176,82 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_GT_Fr_32x32_Lobby",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 457,
         "SizeOnDisk": 457,
-        "OffsetInFile": "0x12A74F"
+        "OffsetInFile": "0x12A90C"
       }
     }
   },
   {
     "Type": "StaticMesh",
     "Name": "SM_GT_Fr_32x32_Lobby",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
         "Default": 0,
         "Value": 0
       },
+      "bLimitLODRangeForShadow": true,
+      "ShadowMinLOD": {
+        "PerDetailModeValue": [
+          {
+            "Medium": 1
+          },
+          {
+            "Low": 2
+          },
+          {
+            "Mobile": 3
+          }
+        ],
+        "PerDetailModeOverride": [
+          {
+            "Medium": true
+          },
+          {
+            "Low": true
+          },
+          {
+            "Mobile": true
+          }
+        ]
+      },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Medium": 1
+          },
+          {
+            "Low": 2
+          },
+          {
+            "Mobile": 3
+          }
+        ],
+        "PerDetailModeOverride": [
+          {
+            "Ultra": true
+          },
+          {
+            "Medium": true
+          },
+          {
+            "Low": true
+          },
+          {
+            "Mobile": true
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_GT_Fr_32x32_Plain01",
+            "ObjectName": "MaterialInstanceConstant'MI_GT_Fr_32x32_Plain01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/MI_GT_Fr_32x32_Plain01.0"
           },
           "MaterialSlotName": "MI_Lobby_DirtTerrain",
@@ -238,11 +284,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_GT_Fr_32x32_Lobby:BodySetup_0",
+      "ObjectName": "BodySetup'SM_GT_Fr_32x32_Lobby:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Tiles/SM_GT_Fr_32x32_Lobby.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_GT_Fr_32x32_Lobby:NavCollision_2",
+      "ObjectName": "NavCollision'SM_GT_Fr_32x32_Lobby:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Tiles/SM_GT_Fr_32x32_Lobby.1"
     },
     "LightingGuid": "4FF094FF-46870B10-756B96B9-6E2B6F7B",

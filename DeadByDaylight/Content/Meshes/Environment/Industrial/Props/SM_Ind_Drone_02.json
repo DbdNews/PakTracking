@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_2",
     "Outer": "SM_Ind_Drone_02",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -183,7 +184,7 @@
     "BodySetupGuid": "AA408CA741EF30522B59B18CEF152A19",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 10135,
         "SizeOnDisk": 10135,
         "OffsetInFile": "0x6759D"
@@ -194,9 +195,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_4",
     "Outer": "SM_Ind_Drone_02",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 577,
         "SizeOnDisk": 577,
         "OffsetInFile": "0x69D7C"
@@ -206,6 +208,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_Ind_Drone_02",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -213,18 +216,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_TrimCablesAndWires_B",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_TrimCablesAndWires_B'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Trims/MI_Com_TrimCablesAndWires_B.0"
           },
           "MaterialSlotName": "MI_Com_TrimCablesAndWires_B",
@@ -240,7 +253,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Ind_Drone_01",
+            "ObjectName": "MaterialInstanceConstant'MI_Ind_Drone_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Industrial/Props/MI_Ind_Drone_01.0"
           },
           "MaterialSlotName": "MI_Ind_Drone_01",
@@ -273,11 +286,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_Ind_Drone_02:BodySetup_2",
+      "ObjectName": "BodySetup'SM_Ind_Drone_02:BodySetup_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Props/SM_Ind_Drone_02.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_Ind_Drone_02:NavCollision_4",
+      "ObjectName": "NavCollision'SM_Ind_Drone_02:NavCollision_4'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Props/SM_Ind_Drone_02.1"
     },
     "LightingGuid": "C00BE27D-4D52D7D8-8ECF549A-154DB878",

@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_1",
     "Outer": "SM_BRL_TreeBroken_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -205,7 +206,7 @@
     "BodySetupGuid": "42DA2650481777E7EE50228168D3141A",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 52219,
         "SizeOnDisk": 52219,
         "OffsetInFile": "0x1105DA"
@@ -216,9 +217,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_BRL_TreeBroken_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 577,
         "SizeOnDisk": 577,
         "OffsetInFile": "0x11D21D"
@@ -228,6 +230,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_TreeBroken_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -235,18 +238,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_TreeBroken_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_TreeBroken_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_TreeBroken_01.0"
           },
           "MaterialSlotName": "MI_BRL_TreeBroken_01",
@@ -280,11 +293,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_TreeBroken_01:BodySetup_1",
+      "ObjectName": "BodySetup'SM_BRL_TreeBroken_01:BodySetup_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Blockers/SM_BRL_TreeBroken_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_TreeBroken_01:NavCollision_2",
+      "ObjectName": "NavCollision'SM_BRL_TreeBroken_01:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Blockers/SM_BRL_TreeBroken_01.1"
     },
     "LightingGuid": "3664DE49-43223C9D-B61ED685-130C5788",

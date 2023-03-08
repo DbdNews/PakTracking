@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_1",
     "Outer": "SM_BRL_TempleEntranceTopSlab_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -437,7 +438,7 @@
     "BodySetupGuid": "995BB26143EB8E5AA9C728BD0D328028",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 71311,
         "SizeOnDisk": 71311,
         "OffsetInFile": "0x14CD5B"
@@ -448,9 +449,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_BRL_TempleEntranceTopSlab_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 1897,
         "SizeOnDisk": 1897,
         "OffsetInFile": "0x15E432"
@@ -460,6 +462,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_TempleEntranceTopSlab_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -467,18 +470,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 2,
-          "High": 2,
-          "Medium": 2,
-          "Low": 2,
-          "Mobile": 2
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 2
+          },
+          {
+            "High": 2
+          },
+          {
+            "Medium": 2
+          },
+          {
+            "Low": 2
+          },
+          {
+            "Mobile": 2
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_COM_Rock_01_A",
+            "ObjectName": "MaterialInstanceConstant'MI_COM_Rock_01_A'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Stone/MI_COM_Rock_01_A.0"
           },
           "MaterialSlotName": "MI_COM_Rock_01_A",
@@ -494,7 +507,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_TempleBrick_Blend_03",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_TempleBrick_Blend_03'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_TempleBrick_Blend_03.0"
           },
           "MaterialSlotName": "MI_BRL_TempleBrick_Blend_03",
@@ -510,7 +523,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_GoldTrimTemple_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_GoldTrimTemple_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_GoldTrimTemple_01.0"
           },
           "MaterialSlotName": "MI_BRL_GoldTrimTemple_01",
@@ -543,11 +556,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_TempleEntranceTopSlab_01:BodySetup_1",
+      "ObjectName": "BodySetup'SM_BRL_TempleEntranceTopSlab_01:BodySetup_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/SM_BRL_TempleEntranceTopSlab_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_TempleEntranceTopSlab_01:NavCollision_2",
+      "ObjectName": "NavCollision'SM_BRL_TempleEntranceTopSlab_01:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/SM_BRL_TempleEntranceTopSlab_01.1"
     },
     "LightingGuid": "D07ABA8E-4B68A80E-10C64894-06446AC6",

@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_BRL_Chandelier_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -334,7 +335,7 @@
     "BodySetupGuid": "D20ACE424790F234CB8EB391E4B024E5",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 56476,
         "SizeOnDisk": 56476,
         "OffsetInFile": "0x148A9B"
@@ -345,9 +346,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_BRL_Chandelier_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 865,
         "SizeOnDisk": 865,
         "OffsetInFile": "0x15677F"
@@ -357,6 +359,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_Chandelier_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -364,18 +367,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_COM_Candle_02",
+            "ObjectName": "MaterialInstanceConstant'MI_COM_Candle_02'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Props/MI_COM_Candle_02.0"
           },
           "MaterialSlotName": "MI_COM_Candle_02",
@@ -391,7 +404,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_Chandelier_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_Chandelier_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_Chandelier_01.0"
           },
           "MaterialSlotName": "MI_BRL_Chandelier_01",
@@ -425,11 +438,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_Chandelier_01:BodySetup_0",
+      "ObjectName": "BodySetup'SM_BRL_Chandelier_01:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_Chandelier_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_Chandelier_01:NavCollision_2",
+      "ObjectName": "NavCollision'SM_BRL_Chandelier_01:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_Chandelier_01.1"
     },
     "LightingGuid": "D4F3AF22-442DFD90-633C84AD-EB57EA8F",

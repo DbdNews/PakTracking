@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_1",
     "Outer": "SM_BRL_MD_Window_Small_B",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -67,7 +68,7 @@
     "BodySetupGuid": "043F65B24B54C1EA174B23B26202AB14",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 17539,
         "SizeOnDisk": 17539,
         "OffsetInFile": "0x55D59"
@@ -78,9 +79,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_BRL_MD_Window_Small_B",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 265,
         "SizeOnDisk": 265,
         "OffsetInFile": "0x5A224"
@@ -90,6 +92,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_MD_Window_Small_B",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -97,18 +100,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 2,
-          "High": 2,
-          "Medium": 2,
-          "Low": 2,
-          "Mobile": 2
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 2
+          },
+          {
+            "High": 2
+          },
+          {
+            "Medium": 2
+          },
+          {
+            "Low": 2
+          },
+          {
+            "Mobile": 2
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_OrnamentWood_TrimSheet",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_OrnamentWood_TrimSheet'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_OrnamentWood_TrimSheet.0"
           },
           "MaterialSlotName": "MI_BRL_OrnamentWood_TrimSheet",
@@ -124,7 +137,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_WoodenBeam",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_WoodenBeam'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_WoodenBeam.0"
           },
           "MaterialSlotName": "MI_BRL_WoodenBeam",
@@ -140,7 +153,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_MD_GlassWindows",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_MD_GlassWindows'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_MD_GlassWindows.0"
           },
           "MaterialSlotName": "MI_BRL_MD_GlassWindows",
@@ -156,7 +169,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_OldWood_TrimSheet",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_OldWood_TrimSheet'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_OldWood_TrimSheet.0"
           },
           "MaterialSlotName": "MI_BRL_OldWood_TrimSheet",
@@ -189,11 +202,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_MD_Window_Small_B:BodySetup_1",
+      "ObjectName": "BodySetup'SM_BRL_MD_Window_Small_B:BodySetup_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/Mother_Dwelling/SM_BRL_MD_Window_Small_B.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_MD_Window_Small_B:NavCollision_2",
+      "ObjectName": "NavCollision'SM_BRL_MD_Window_Small_B:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/Mother_Dwelling/SM_BRL_MD_Window_Small_B.1"
     },
     "LightingGuid": "D5D97215-4EE9D727-ACEB29BE-CC129F75",

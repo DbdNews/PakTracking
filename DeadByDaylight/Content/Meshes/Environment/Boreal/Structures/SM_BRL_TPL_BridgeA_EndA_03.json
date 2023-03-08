@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_BRL_TPL_BridgeA_EndA_03",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -762,7 +763,7 @@
     "BodySetupGuid": "EA097FB3404044D4038C1FA04AEB976A",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 22906,
         "SizeOnDisk": 22906,
         "OffsetInFile": "0x322B3"
@@ -773,9 +774,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_1",
     "Outer": "SM_BRL_TPL_BridgeA_EndA_03",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 3749,
         "SizeOnDisk": 3749,
         "OffsetInFile": "0x37C75"
@@ -785,6 +787,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_TPL_BridgeA_EndA_03",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -792,18 +795,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 1,
-          "High": 1,
-          "Medium": 1,
-          "Low": 1,
-          "Mobile": 1
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 1
+          },
+          {
+            "High": 1
+          },
+          {
+            "Medium": 1
+          },
+          {
+            "Low": 1
+          },
+          {
+            "Mobile": 1
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_TempleBrick_Blend02",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_TempleBrick_Blend02'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_TempleBrick_Blend02.0"
           },
           "MaterialSlotName": "MI_BRL_TPL_ColumnA_ArchA_01",
@@ -819,7 +832,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_TempleBrick_Blend02",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_TempleBrick_Blend02'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_TempleBrick_Blend02.0"
           },
           "MaterialSlotName": "MI_BRL_TPL_ColumnA_BrickA_01",
@@ -835,7 +848,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_TempleBrick_Blend02",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_TempleBrick_Blend02'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_TempleBrick_Blend02.0"
           },
           "MaterialSlotName": "MI_TPL_Debris01",
@@ -869,11 +882,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_TPL_BridgeA_EndA_03:BodySetup_0",
+      "ObjectName": "BodySetup'SM_BRL_TPL_BridgeA_EndA_03:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/SM_BRL_TPL_BridgeA_EndA_03.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_TPL_BridgeA_EndA_03:NavCollision_1",
+      "ObjectName": "NavCollision'SM_BRL_TPL_BridgeA_EndA_03:NavCollision_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/SM_BRL_TPL_BridgeA_EndA_03.1"
     },
     "LightingGuid": "AEDC6EF0-4413CEF5-11BBDCA8-F31A9069",

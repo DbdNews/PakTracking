@@ -1,8 +1,9 @@
 [
   {
     "Type": "BodySetup",
-    "Name": "BodySetup_2",
+    "Name": "BodySetup_0",
     "Outer": "SM_BRL_TempleStairs_02",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -169,32 +170,34 @@
         }
       }
     },
-    "BodySetupGuid": "B650954B44C1B7A491C631A67BCE6D0D",
+    "BodySetupGuid": "D037674D4593CE6D484D289E590DAA36",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
-        "ElementCount": 10443,
-        "SizeOnDisk": 10443,
-        "OffsetInFile": "0x6042F"
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 20649,
+        "SizeOnDisk": 20649,
+        "OffsetInFile": "0x5AFC3"
       }
     }
   },
   {
     "Type": "NavCollision",
-    "Name": "NavCollision_4",
+    "Name": "NavCollision_1",
     "Outer": "SM_BRL_TempleStairs_02",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 581,
         "SizeOnDisk": 581,
-        "OffsetInFile": "0x62D42"
+        "OffsetInFile": "0x600B4"
       }
     }
   },
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_TempleStairs_02",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -202,18 +205,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 2
+          },
+          {
+            "High": 2
+          },
+          {
+            "Medium": 2
+          },
+          {
+            "Low": 2
+          },
+          {
+            "Mobile": 2
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_TempleBrick_Blend_03",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_TempleBrick_Blend_03'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_TempleBrick_Blend_03.0"
           },
           "MaterialSlotName": "MI_BRL_TempleBrick_Blend_03",
@@ -221,14 +234,30 @@
           "UVChannelData": {
             "bInitialized": true,
             "bOverrideDensities": false,
-            "LocalUVDensities": 311.90924,
+            "LocalUVDensities": 313.03238,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 0.0
+          }
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_TempleBrick_BlendGround_03'",
+            "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_TempleBrick_BlendGround_03.0"
+          },
+          "MaterialSlotName": "MI_BRL_TempleBrick_BlendGround_03",
+          "ImportedMaterialSlotName": "MI_BRL_TempleBrick_BlendGround_03",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 183.11421,
             "LocalUVDensities": 0.0,
             "LocalUVDensities": 0.0,
             "LocalUVDensities": 0.0
           }
         }
       ],
-      "LightmapUVDensity": 311.90924,
+      "LightmapUVDensity": 309.64575,
       "LightMapResolution": 64,
       "LODForCollision": 3,
       "ExtendedBounds": {
@@ -246,14 +275,14 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_TempleStairs_02:BodySetup_2",
+      "ObjectName": "BodySetup'SM_BRL_TempleStairs_02:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/SM_BRL_TempleStairs_02.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_TempleStairs_02:NavCollision_4",
+      "ObjectName": "NavCollision'SM_BRL_TempleStairs_02:NavCollision_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/SM_BRL_TempleStairs_02.1"
     },
-    "LightingGuid": "331C94FE-41BE2CC7-E98F8E9B-5A37036C",
+    "LightingGuid": "867D1DE0-41C298CD-5A75E7A2-129E49CF",
     "RenderData": {
       "LODs": [
         {
@@ -261,8 +290,19 @@
             {
               "MaterialIndex": 0,
               "FirstIndex": 0,
-              "NumTriangles": 2702,
+              "NumTriangles": 2700,
               "MinVertexIndex": 0,
+              "MaxVertexIndex": 1912,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 8100,
+              "NumTriangles": 2,
+              "MinVertexIndex": 1913,
               "MaxVertexIndex": 1916,
               "bEnableCollision": true,
               "bCastShadow": true,
@@ -292,9 +332,20 @@
             {
               "MaterialIndex": 0,
               "FirstIndex": 0,
-              "NumTriangles": 1350,
+              "NumTriangles": 1348,
               "MinVertexIndex": 0,
-              "MaxVertexIndex": 1177,
+              "MaxVertexIndex": 1169,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 4044,
+              "NumTriangles": 2,
+              "MinVertexIndex": 1170,
+              "MaxVertexIndex": 1173,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
@@ -304,18 +355,18 @@
           "MaxDeviation": 0.0,
           "PositionVertexBuffer": {
             "Stride": 12,
-            "NumVertices": 1178
+            "NumVertices": 1174
           },
           "VertexBuffer": {
             "NumTexCoords": 1,
-            "NumVertices": 1178,
+            "NumVertices": 1174,
             "Strides": -1,
             "UseHighPrecisionTangentBasis": false,
             "UseFullPrecisionUVs": false
           },
           "ColorVertexBuffer": {
             "Stride": 4,
-            "NumVertices": 1178
+            "NumVertices": 1174
           }
         },
         {
@@ -323,8 +374,19 @@
             {
               "MaterialIndex": 0,
               "FirstIndex": 0,
-              "NumTriangles": 674,
+              "NumTriangles": 672,
               "MinVertexIndex": 0,
+              "MaxVertexIndex": 866,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 2016,
+              "NumTriangles": 2,
+              "MinVertexIndex": 867,
               "MaxVertexIndex": 870,
               "bEnableCollision": true,
               "bCastShadow": true,
@@ -348,37 +410,6 @@
             "Stride": 4,
             "NumVertices": 871
           }
-        },
-        {
-          "Sections": [
-            {
-              "MaterialIndex": 0,
-              "FirstIndex": 0,
-              "NumTriangles": 324,
-              "MinVertexIndex": 0,
-              "MaxVertexIndex": 598,
-              "bEnableCollision": true,
-              "bCastShadow": true,
-              "bForceOpaque": false,
-              "bVisibleInRayTracing": true
-            }
-          ],
-          "MaxDeviation": 0.0,
-          "PositionVertexBuffer": {
-            "Stride": 12,
-            "NumVertices": 599
-          },
-          "VertexBuffer": {
-            "NumTexCoords": 1,
-            "NumVertices": 599,
-            "Strides": -1,
-            "UseHighPrecisionTangentBasis": false,
-            "UseFullPrecisionUVs": false
-          },
-          "ColorVertexBuffer": {
-            "Stride": 4,
-            "NumVertices": 599
-          }
         }
       ],
       "Bounds": {
@@ -399,7 +430,7 @@
         1.0,
         0.4,
         0.2,
-        0.1,
+        0.0,
         0.0,
         0.0,
         0.0,

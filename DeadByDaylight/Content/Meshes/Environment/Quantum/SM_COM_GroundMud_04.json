@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_COM_GroundMud_04",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -250,7 +251,7 @@
     "BodySetupGuid": "FE1B31C547DB444AEFA3C5B078AF73EB",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 5423,
         "SizeOnDisk": 5423,
         "OffsetInFile": "0x1EDC4"
@@ -261,9 +262,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_1",
     "Outer": "SM_COM_GroundMud_04",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 601,
         "SizeOnDisk": 601,
         "OffsetInFile": "0x2033B"
@@ -273,6 +275,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_COM_GroundMud_04",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -280,18 +283,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_QTM_GroundMudBattleNeutral_Decal_01",
+            "ObjectName": "MaterialInstanceConstant'MI_QTM_GroundMudBattleNeutral_Decal_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Quantum/MI_QTM_GroundMudBattleNeutral_Decal_01.0"
           },
           "MaterialSlotName": "MI_QTM_GroundMudBattleNeutral_Decal_01",
@@ -325,11 +338,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_COM_GroundMud_04:BodySetup_0",
+      "ObjectName": "BodySetup'SM_COM_GroundMud_04:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Quantum/SM_COM_GroundMud_04.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_COM_GroundMud_04:NavCollision_1",
+      "ObjectName": "NavCollision'SM_COM_GroundMud_04:NavCollision_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Quantum/SM_COM_GroundMud_04.1"
     },
     "LightingGuid": "827C85D6-49B2DD8C-4EC37BA8-122B4372",

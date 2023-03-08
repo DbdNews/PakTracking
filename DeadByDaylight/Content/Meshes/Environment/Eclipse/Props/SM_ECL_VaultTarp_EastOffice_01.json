@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_ECL_VaultTarp_EastOffice_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "DefaultInstance": {
         "ObjectType": "ECC_WorldStatic",
@@ -44,7 +45,7 @@
     "BodySetupGuid": "D6D36BCE492B2F105FB7B8881BB199CD",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 1555,
         "SizeOnDisk": 1555,
         "OffsetInFile": "0xEFC8"
@@ -55,9 +56,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_ECL_VaultTarp_EastOffice_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 21,
         "SizeOnDisk": 21,
         "OffsetInFile": "0xF623"
@@ -67,6 +69,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_ECL_VaultTarp_EastOffice_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -74,18 +77,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_COM_VaultTarp_01",
+            "ObjectName": "MaterialInstanceConstant'MI_COM_VaultTarp_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Props/MI_COM_VaultTarp_01.0"
           },
           "MaterialSlotName": "MI_COM_VaultTarp_01",
@@ -119,11 +132,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_ECL_VaultTarp_EastOffice_01:BodySetup_0",
+      "ObjectName": "BodySetup'SM_ECL_VaultTarp_EastOffice_01:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Eclipse/Props/SM_ECL_VaultTarp_EastOffice_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_ECL_VaultTarp_EastOffice_01:NavCollision_2",
+      "ObjectName": "NavCollision'SM_ECL_VaultTarp_EastOffice_01:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Eclipse/Props/SM_ECL_VaultTarp_EastOffice_01.1"
     },
     "LightingGuid": "1BBEDA85-4521EA6F-2B1EEDA2-7D73DE18",

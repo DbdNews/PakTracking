@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_1",
     "Outer": "SM_BRL_TPL_Arch01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -257,7 +258,7 @@
     "BodySetupGuid": "DD23E34E4AE34D93E51B21AF2C362A27",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 97807,
         "SizeOnDisk": 97807,
         "OffsetInFile": "0x466E9C"
@@ -268,9 +269,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_BRL_TPL_Arch01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 2705,
         "SizeOnDisk": 2705,
         "OffsetInFile": "0x47ECF3"
@@ -280,6 +282,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_TPL_Arch01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -287,18 +290,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_TempleBrickSmall_Blend_03",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_TempleBrickSmall_Blend_03'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_TempleBrickSmall_Blend_03.0"
           },
           "MaterialSlotName": "MI_BRL_TempleBrickSmall_Blend_03",
@@ -314,7 +327,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_TempleBrickSmall_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_TempleBrickSmall_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_TempleBrickSmall_01.0"
           },
           "MaterialSlotName": "MI_BRL_TempleBrickSmall_01",
@@ -330,7 +343,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_TempleFlat_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_TempleFlat_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_TempleFlat_01.0"
           },
           "MaterialSlotName": "MI_BRL_TempleFlat_01",
@@ -346,7 +359,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_AtlasMoss",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_AtlasMoss'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Masked/MI_Com_AtlasMoss.0"
           },
           "MaterialSlotName": "MI_Com_AtlasMoss",
@@ -380,11 +393,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_TPL_Arch01:BodySetup_1",
+      "ObjectName": "BodySetup'SM_BRL_TPL_Arch01:BodySetup_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/SM_BRL_TPL_Arch01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_TPL_Arch01:NavCollision_2",
+      "ObjectName": "NavCollision'SM_BRL_TPL_Arch01:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/SM_BRL_TPL_Arch01.1"
     },
     "LightingGuid": "19B51C8A-43DD0C33-3E605586-E0CF4936",

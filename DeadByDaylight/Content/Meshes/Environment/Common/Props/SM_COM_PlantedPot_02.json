@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_1",
     "Outer": "SM_COM_PlantedPot_02",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -67,7 +68,7 @@
     "BodySetupGuid": "85BF79EE45821ED195D9B491482325C5",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 16017,
         "SizeOnDisk": 16017,
         "OffsetInFile": "0x4EDF5"
@@ -78,9 +79,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_COM_PlantedPot_02",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 265,
         "SizeOnDisk": 265,
         "OffsetInFile": "0x52CCE"
@@ -90,6 +92,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_COM_PlantedPot_02",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -97,18 +100,28 @@
         "Value": 1
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 4,
-          "High": 4,
-          "Medium": 4,
-          "Low": 4,
-          "Mobile": 4
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 4
+          },
+          {
+            "High": 4
+          },
+          {
+            "Medium": 4
+          },
+          {
+            "Low": 4
+          },
+          {
+            "Mobile": 4
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_COM_PlantedPot_03",
+            "ObjectName": "MaterialInstanceConstant'MI_COM_PlantedPot_03'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Props/MI_COM_PlantedPot_03.0"
           },
           "MaterialSlotName": "MI_COM_PlantedPot_03",
@@ -141,11 +154,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_COM_PlantedPot_02:BodySetup_1",
+      "ObjectName": "BodySetup'SM_COM_PlantedPot_02:BodySetup_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/Props/SM_COM_PlantedPot_02.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_COM_PlantedPot_02:NavCollision_2",
+      "ObjectName": "NavCollision'SM_COM_PlantedPot_02:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/Props/SM_COM_PlantedPot_02.1"
     },
     "LightingGuid": "B4FF4207-468053E5-7C7B2092-54A06017",

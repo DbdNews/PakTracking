@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_1",
     "Outer": "SM_BRL_Fence_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -86,7 +87,7 @@
     "BodySetupGuid": "61B9E50A4D96F57588DA9EA8A65A2569",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 51678,
         "SizeOnDisk": 51678,
         "OffsetInFile": "0x1F5B1C"
@@ -97,9 +98,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_BRL_Fence_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 509,
         "SizeOnDisk": 509,
         "OffsetInFile": "0x202542"
@@ -109,6 +111,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_Fence_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -116,18 +119,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_Leather_B",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_Leather_B'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Leather/MI_Com_Leather_B.0"
           },
           "MaterialSlotName": "MI_Com_Leather_B",
@@ -143,7 +156,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_Fence_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_Fence_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_Fence_01.0"
           },
           "MaterialSlotName": "MI_BRL_Fence_01",
@@ -159,7 +172,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_WoodEnd_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_WoodEnd_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_WoodEnd_01.0"
           },
           "MaterialSlotName": "MI_BRL_WoodEnd_01",
@@ -192,11 +205,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_Fence_01:BodySetup_1",
+      "ObjectName": "BodySetup'SM_BRL_Fence_01:BodySetup_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Blockers/SM_BRL_Fence_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_Fence_01:NavCollision_2",
+      "ObjectName": "NavCollision'SM_BRL_Fence_01:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Blockers/SM_BRL_Fence_01.1"
     },
     "LightingGuid": "C65D8856-409DE6DF-6CB8B380-48C29CEB",

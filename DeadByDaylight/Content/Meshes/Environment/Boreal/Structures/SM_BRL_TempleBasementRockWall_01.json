@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_BRL_TempleBasementRockWall_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -12030,10 +12031,10 @@
         }
       }
     },
-    "BodySetupGuid": "14B7C53B43B80CE6A31F8F935BCEB1A6",
+    "BodySetupGuid": "D580EC264FC6B3BDEFD8CD90DF930E02",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 73071,
         "SizeOnDisk": 73071,
         "OffsetInFile": "0x54623"
@@ -12044,9 +12045,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_1",
     "Outer": "SM_BRL_TempleBasementRockWall_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 31921,
         "SizeOnDisk": 31921,
         "OffsetInFile": "0x663DA"
@@ -12056,6 +12058,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_TempleBasementRockWall_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -12063,18 +12066,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_COM_Rock_01_A",
+            "ObjectName": "MaterialInstanceConstant'MI_COM_Rock_01_A'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Stone/MI_COM_Rock_01_A.0"
           },
           "MaterialSlotName": "MI_COM_Rock_01_A",
@@ -12107,11 +12120,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_TempleBasementRockWall_01:BodySetup_0",
+      "ObjectName": "BodySetup'SM_BRL_TempleBasementRockWall_01:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/SM_BRL_TempleBasementRockWall_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_TempleBasementRockWall_01:NavCollision_1",
+      "ObjectName": "NavCollision'SM_BRL_TempleBasementRockWall_01:NavCollision_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/SM_BRL_TempleBasementRockWall_01.1"
     },
     "LightingGuid": "CF01A49A-4B518078-43C8DB9A-9B7E2B38",
@@ -12257,10 +12270,10 @@
       },
       "bLODsShareStaticLighting": false,
       "ScreenSize": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
+        1.0,
+        0.4,
+        0.2,
+        0.1,
         0.0,
         0.0,
         0.0,

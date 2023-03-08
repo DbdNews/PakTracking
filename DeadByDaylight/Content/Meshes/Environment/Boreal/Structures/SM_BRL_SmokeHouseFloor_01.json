@@ -3,10 +3,11 @@
     "Type": "BodySetup",
     "Name": "BodySetup_2",
     "Outer": "SM_BRL_SmokeHouseFloor_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "DefaultInstance": {
-        "ObjectType": "ECC_WorldStatic",
-        "CollisionProfileName": "BlockAll",
+        "ObjectType": "ECC_GameTraceChannel15",
+        "CollisionProfileName": "Ground",
         "CollisionResponses": {
           "ResponseArray": [
             {
@@ -26,12 +27,8 @@
               "Response": "ECR_Ignore"
             },
             {
-              "Channel": "BlinkBlocker",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Ground",
-              "Response": "ECR_Ignore"
+              "Channel": "World",
+              "Response": "ECR_Overlap"
             },
             {
               "Channel": "Walkable",
@@ -42,32 +39,34 @@
       },
       "CollisionTraceFlag": "CTF_UseComplexAsSimple"
     },
-    "BodySetupGuid": "AF36E69F468A505B59E87CA7ADFEA232",
+    "BodySetupGuid": "8284D7BC463BD138754D2FB0CE650B05",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
-        "ElementCount": 2149,
-        "SizeOnDisk": 2149,
-        "OffsetInFile": "0x177E0"
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 29575,
+        "SizeOnDisk": 29575,
+        "OffsetInFile": "0xC3F9E"
       }
     }
   },
   {
     "Type": "NavCollision",
-    "Name": "NavCollision_2",
+    "Name": "NavCollision_1",
     "Outer": "SM_BRL_SmokeHouseFloor_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
-        "ElementCount": 3765,
-        "SizeOnDisk": 3765,
-        "OffsetInFile": "0x1808D"
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 46197,
+        "SizeOnDisk": 46197,
+        "OffsetInFile": "0xCB36D"
       }
     }
   },
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_SmokeHouseFloor_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -75,18 +74,44 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_GroundGrassNeedles_",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_SH_Rock01'",
+            "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_SH_Rock01.0"
+          },
+          "MaterialSlotName": "MI_BRL_SH_Rock01",
+          "ImportedMaterialSlotName": "MI_BRL_SH_Rock01",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 362.53574,
+            "LocalUVDensities": 1513.5563,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 0.0
+          }
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_GroundGrassNeedles_'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_GroundGrassNeedles_.0"
           },
           "MaterialSlotName": "MI_BRL_GroundGrassNeedles_",
@@ -94,40 +119,40 @@
           "UVChannelData": {
             "bInitialized": true,
             "bOverrideDensities": false,
-            "LocalUVDensities": 1059.3744,
-            "LocalUVDensities": 1323.1543,
+            "LocalUVDensities": 269.21713,
+            "LocalUVDensities": 1462.8356,
             "LocalUVDensities": 0.0,
             "LocalUVDensities": 0.0
           }
         }
       ],
-      "LightmapUVDensity": 1323.1543,
+      "LightmapUVDensity": 1482.9003,
       "LightMapResolution": 64,
       "LightMapCoordinateIndex": 1,
-      "LODForCollision": 3,
+      "LODForCollision": 2,
       "ExtendedBounds": {
         "Origin": {
           "X": 96.241394,
           "Y": 45.60785,
-          "Z": 32.149433
+          "Z": 30.301659
         },
         "BoxExtent": {
           "X": 657.42175,
           "Y": 694.51685,
-          "Z": 44.43485
+          "Z": 47.29146
         },
-        "SphereRadius": 853.6184
+        "SphereRadius": 853.43207
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_SmokeHouseFloor_01:BodySetup_2",
+      "ObjectName": "BodySetup'SM_BRL_SmokeHouseFloor_01:BodySetup_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/SM_BRL_SmokeHouseFloor_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_SmokeHouseFloor_01:NavCollision_2",
+      "ObjectName": "NavCollision'SM_BRL_SmokeHouseFloor_01:NavCollision_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/SM_BRL_SmokeHouseFloor_01.1"
     },
-    "LightingGuid": "A3E55B08-4D5CECEF-5208B088-77C77E4A",
+    "LightingGuid": "2FD5756B-414035E5-D21B8EA6-E856C409",
     "RenderData": {
       "LODs": [
         {
@@ -135,9 +160,20 @@
             {
               "MaterialIndex": 0,
               "FirstIndex": 0,
-              "NumTriangles": 653,
+              "NumTriangles": 3129,
               "MinVertexIndex": 0,
-              "MaxVertexIndex": 349,
+              "MaxVertexIndex": 3618,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 9387,
+              "NumTriangles": 725,
+              "MinVertexIndex": 3619,
+              "MaxVertexIndex": 5642,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
@@ -147,18 +183,18 @@
           "MaxDeviation": 0.0,
           "PositionVertexBuffer": {
             "Stride": 12,
-            "NumVertices": 350
+            "NumVertices": 5643
           },
           "VertexBuffer": {
             "NumTexCoords": 2,
-            "NumVertices": 350,
+            "NumVertices": 5643,
             "Strides": -1,
             "UseHighPrecisionTangentBasis": false,
             "UseFullPrecisionUVs": false
           },
           "ColorVertexBuffer": {
             "Stride": 4,
-            "NumVertices": 350
+            "NumVertices": 5643
           }
         },
         {
@@ -166,9 +202,20 @@
             {
               "MaterialIndex": 0,
               "FirstIndex": 0,
-              "NumTriangles": 326,
+              "NumTriangles": 1444,
               "MinVertexIndex": 0,
-              "MaxVertexIndex": 186,
+              "MaxVertexIndex": 2028,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 4332,
+              "NumTriangles": 483,
+              "MinVertexIndex": 2029,
+              "MaxVertexIndex": 3160,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
@@ -178,18 +225,18 @@
           "MaxDeviation": 0.0,
           "PositionVertexBuffer": {
             "Stride": 12,
-            "NumVertices": 187
+            "NumVertices": 3161
           },
           "VertexBuffer": {
             "NumTexCoords": 2,
-            "NumVertices": 187,
+            "NumVertices": 3161,
             "Strides": -1,
             "UseHighPrecisionTangentBasis": false,
             "UseFullPrecisionUVs": false
           },
           "ColorVertexBuffer": {
             "Stride": 4,
-            "NumVertices": 187
+            "NumVertices": 3161
           }
         },
         {
@@ -197,9 +244,20 @@
             {
               "MaterialIndex": 0,
               "FirstIndex": 0,
-              "NumTriangles": 162,
+              "NumTriangles": 698,
               "MinVertexIndex": 0,
-              "MaxVertexIndex": 98,
+              "MaxVertexIndex": 1130,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 2094,
+              "NumTriangles": 264,
+              "MinVertexIndex": 1131,
+              "MaxVertexIndex": 1810,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
@@ -209,18 +267,18 @@
           "MaxDeviation": 0.0,
           "PositionVertexBuffer": {
             "Stride": 12,
-            "NumVertices": 99
+            "NumVertices": 1811
           },
           "VertexBuffer": {
             "NumTexCoords": 2,
-            "NumVertices": 99,
+            "NumVertices": 1811,
             "Strides": -1,
             "UseHighPrecisionTangentBasis": false,
             "UseFullPrecisionUVs": false
           },
           "ColorVertexBuffer": {
             "Stride": 4,
-            "NumVertices": 99
+            "NumVertices": 1811
           }
         },
         {
@@ -228,9 +286,20 @@
             {
               "MaterialIndex": 0,
               "FirstIndex": 0,
-              "NumTriangles": 78,
+              "NumTriangles": 328,
               "MinVertexIndex": 0,
-              "MaxVertexIndex": 51,
+              "MaxVertexIndex": 596,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 984,
+              "NumTriangles": 133,
+              "MinVertexIndex": 597,
+              "MaxVertexIndex": 968,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
@@ -240,18 +309,18 @@
           "MaxDeviation": 0.0,
           "PositionVertexBuffer": {
             "Stride": 12,
-            "NumVertices": 52
+            "NumVertices": 969
           },
           "VertexBuffer": {
             "NumTexCoords": 2,
-            "NumVertices": 52,
+            "NumVertices": 969,
             "Strides": -1,
             "UseHighPrecisionTangentBasis": false,
             "UseFullPrecisionUVs": false
           },
           "ColorVertexBuffer": {
             "Stride": 4,
-            "NumVertices": 52
+            "NumVertices": 969
           }
         }
       ],
@@ -259,14 +328,14 @@
         "Origin": {
           "X": 96.241394,
           "Y": 45.60785,
-          "Z": 32.149433
+          "Z": 30.301659
         },
         "BoxExtent": {
           "X": 657.42175,
           "Y": 694.51685,
-          "Z": 44.43485
+          "Z": 47.29146
         },
-        "SphereRadius": 853.6184
+        "SphereRadius": 853.43207
       },
       "bLODsShareStaticLighting": false,
       "ScreenSize": [

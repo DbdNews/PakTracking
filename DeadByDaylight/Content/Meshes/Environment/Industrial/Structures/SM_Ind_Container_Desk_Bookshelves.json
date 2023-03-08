@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_1",
     "Outer": "SM_Ind_Container_Desk_Bookshelves",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -1105,13 +1106,13 @@
         }
       }
     },
-    "BodySetupGuid": "A56F5ACB4ADC830CF0F8D3A935CD39BC",
+    "BodySetupGuid": "156E3EC941A0FC17C74350AFAE22E0EF",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 18794,
         "SizeOnDisk": 18794,
-        "OffsetInFile": "0x97F78"
+        "OffsetInFile": "0x98155"
       }
     }
   },
@@ -1119,37 +1120,82 @@
     "Type": "NavCollision",
     "Name": "NavCollision_1",
     "Outer": "SM_Ind_Container_Desk_Bookshelves",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 3701,
         "SizeOnDisk": 3701,
-        "OffsetInFile": "0x9C92A"
+        "OffsetInFile": "0x9CB07"
       }
     }
   },
   {
     "Type": "StaticMesh",
     "Name": "SM_Ind_Container_Desk_Bookshelves",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
         "Default": 0,
         "Value": 0
       },
+      "bLimitLODRangeForShadow": true,
+      "ShadowMinLOD": {
+        "PerDetailModeValue": [
+          {
+            "Medium": 1
+          },
+          {
+            "Low": 2
+          },
+          {
+            "Mobile": 3
+          }
+        ],
+        "PerDetailModeOverride": [
+          {
+            "Medium": true
+          },
+          {
+            "Low": true
+          },
+          {
+            "Mobile": true
+          }
+        ]
+      },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 2
+          },
+          {
+            "High": 2
+          },
+          {
+            "Medium": 2
+          },
+          {
+            "Low": 2
+          },
+          {
+            "Mobile": 3
+          }
+        ],
+        "PerDetailModeOverride": [
+          {
+            "Ultra": true
+          },
+          {
+            "Mobile": true
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Brass",
+            "ObjectName": "MaterialInstanceConstant'MI_Brass'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Metal/MI_Brass.0"
           },
           "MaterialSlotName": "MI_COM_MetalSemiMat",
@@ -1165,7 +1211,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_Teak",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_Teak'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Wood/MI_Com_Teak.0"
           },
           "MaterialSlotName": "MI_Com_Teak",
@@ -1198,11 +1244,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_Ind_Container_Desk_Bookshelves:BodySetup_1",
+      "ObjectName": "BodySetup'SM_Ind_Container_Desk_Bookshelves:BodySetup_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Structures/SM_Ind_Container_Desk_Bookshelves.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_Ind_Container_Desk_Bookshelves:NavCollision_1",
+      "ObjectName": "NavCollision'SM_Ind_Container_Desk_Bookshelves:NavCollision_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Structures/SM_Ind_Container_Desk_Bookshelves.1"
     },
     "LightingGuid": "B8E53C2C-4541B5B1-651982B0-774F3A98",

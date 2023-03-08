@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_1",
     "Outer": "SM_BRL_SetOfBooks_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -67,7 +68,7 @@
     "BodySetupGuid": "692ED5DE4BE64E7FF5ACC287D55FEF21",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 2965,
         "SizeOnDisk": 2965,
         "OffsetInFile": "0x19C4F"
@@ -78,9 +79,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_1",
     "Outer": "SM_BRL_SetOfBooks_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 265,
         "SizeOnDisk": 265,
         "OffsetInFile": "0x1A82C"
@@ -90,6 +92,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_SetOfBooks_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -97,18 +100,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_SetOfBooks_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_SetOfBooks_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/Props/MI_BRL_SetOfBooks_01.0"
           },
           "MaterialSlotName": "MI_BRL_SetOfBooks_01",
@@ -141,11 +154,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_SetOfBooks_01:BodySetup_1",
+      "ObjectName": "BodySetup'SM_BRL_SetOfBooks_01:BodySetup_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_SetOfBooks_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_SetOfBooks_01:NavCollision_1",
+      "ObjectName": "NavCollision'SM_BRL_SetOfBooks_01:NavCollision_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_SetOfBooks_01.1"
     },
     "LightingGuid": "1B0DB2C9-45F28782-37AA87B2-A9EB25E7",

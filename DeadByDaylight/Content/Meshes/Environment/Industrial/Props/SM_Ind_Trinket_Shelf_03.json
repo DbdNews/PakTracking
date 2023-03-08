@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_Ind_Trinket_Shelf_03",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -195,7 +196,7 @@
     "BodySetupGuid": "4D871C6F4E3712DA43CBB7B2619DDED2",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 3159,
         "SizeOnDisk": 3159,
         "OffsetInFile": "0x7510"
@@ -206,9 +207,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_1",
     "Outer": "SM_Ind_Trinket_Shelf_03",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 577,
         "SizeOnDisk": 577,
         "OffsetInFile": "0x81AF"
@@ -218,6 +220,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_Ind_Trinket_Shelf_03",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -225,18 +228,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 1,
-          "High": 1,
-          "Medium": 1,
-          "Low": 1,
-          "Mobile": 1
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 1
+          },
+          {
+            "High": 1
+          },
+          {
+            "Medium": 1
+          },
+          {
+            "Low": 1
+          },
+          {
+            "Mobile": 1
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Ind_Trinket_Shelf_01",
+            "ObjectName": "MaterialInstanceConstant'MI_Ind_Trinket_Shelf_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Industrial/Props/MI_Ind_Trinket_Shelf_01.0"
           },
           "MaterialSlotName": "MI_Ind_Trinket_Shelf_01",
@@ -270,11 +283,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_Ind_Trinket_Shelf_03:BodySetup_0",
+      "ObjectName": "BodySetup'SM_Ind_Trinket_Shelf_03:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Props/SM_Ind_Trinket_Shelf_03.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_Ind_Trinket_Shelf_03:NavCollision_1",
+      "ObjectName": "NavCollision'SM_Ind_Trinket_Shelf_03:NavCollision_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Props/SM_Ind_Trinket_Shelf_03.1"
     },
     "LightingGuid": "6793AF9B-491EABBD-4DCC118A-2FCACE31",

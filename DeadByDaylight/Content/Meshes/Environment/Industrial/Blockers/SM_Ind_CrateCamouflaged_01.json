@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_Ind_CrateCamouflaged_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "DefaultInstance": {
         "ObjectType": "ECC_WorldStatic",
@@ -44,7 +45,7 @@
     "BodySetupGuid": "6F5BE843464C65DD40DC2E8F50082DD4",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 7801,
         "SizeOnDisk": 7801,
         "OffsetInFile": "0x469AF"
@@ -55,9 +56,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_1",
     "Outer": "SM_Ind_CrateCamouflaged_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 21,
         "SizeOnDisk": 21,
         "OffsetInFile": "0x48870"
@@ -67,6 +69,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_Ind_CrateCamouflaged_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -74,18 +77,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_FiletFence",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_FiletFence'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Fabric/MI_Com_FiletFence.0"
           },
           "MaterialSlotName": "MI_Com_FiletFence",
@@ -101,7 +114,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_COM_Rubber_01",
+            "ObjectName": "MaterialInstanceConstant'MI_COM_Rubber_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Plastic-Rubber/MI_COM_Rubber_01.0"
           },
           "MaterialSlotName": "MI_COM_Rubber_01",
@@ -134,11 +147,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_Ind_CrateCamouflaged_01:BodySetup_0",
+      "ObjectName": "BodySetup'SM_Ind_CrateCamouflaged_01:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Blockers/SM_Ind_CrateCamouflaged_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_Ind_CrateCamouflaged_01:NavCollision_1",
+      "ObjectName": "NavCollision'SM_Ind_CrateCamouflaged_01:NavCollision_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Blockers/SM_Ind_CrateCamouflaged_01.1"
     },
     "LightingGuid": "11C8DCB9-44DEBB8C-EE0F9090-82820656",

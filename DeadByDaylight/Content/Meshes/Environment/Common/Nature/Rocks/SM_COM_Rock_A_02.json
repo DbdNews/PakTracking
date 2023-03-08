@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_3",
     "Outer": "SM_COM_Rock_A_02",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -266,7 +267,7 @@
     "BodySetupGuid": "CD0C0C624E62021BA27B45BAE88FE7E2",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 17847,
         "SizeOnDisk": 17847,
         "OffsetInFile": "0xAB5DC"
@@ -277,9 +278,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_6",
     "Outer": "SM_COM_Rock_A_02",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 3145,
         "SizeOnDisk": 3145,
         "OffsetInFile": "0xAFBDB"
@@ -289,6 +291,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_COM_Rock_A_02",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -296,18 +299,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 5,
-          "High": 5,
-          "Medium": 5,
-          "Low": 5,
-          "Mobile": 5
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 5
+          },
+          {
+            "High": 5
+          },
+          {
+            "Medium": 5
+          },
+          {
+            "Low": 5
+          },
+          {
+            "Mobile": 5
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_Rocks_A_02",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_Rocks_A_02'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Nature/Rocks/MI_Com_Rocks_A_02.0"
           },
           "MaterialSlotName": "MI_Eng_Rock02",
@@ -341,11 +354,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_COM_Rock_A_02:BodySetup_3",
+      "ObjectName": "BodySetup'SM_COM_Rock_A_02:BodySetup_3'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/Nature/Rocks/SM_COM_Rock_A_02.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_COM_Rock_A_02:NavCollision_6",
+      "ObjectName": "NavCollision'SM_COM_Rock_A_02:NavCollision_6'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/Nature/Rocks/SM_COM_Rock_A_02.1"
     },
     "LightingGuid": "B08EB054-4F9C1D9E-678CC88A-7D86A700",

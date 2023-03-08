@@ -2,36 +2,59 @@
   {
     "Type": "BlueprintGeneratedClass",
     "Name": "BP_FL_Brl_Woodpile_01_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
     "Properties": {
       "SimpleConstructionScript": {
-        "ObjectName": "SimpleConstructionScript BP_FL_Brl_Woodpile_01_C:SimpleConstructionScript_2",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/08-Boreal/BP_FL_Brl_Woodpile_01.10"
+        "ObjectName": "SimpleConstructionScript'BP_FL_Brl_Woodpile_01_C:SimpleConstructionScript_2'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/08-Boreal/BP_FL_Brl_Woodpile_01.12"
       }
     },
     "SuperStruct": {
-      "ObjectName": "Class Actor",
+      "ObjectName": "Class'Actor'",
       "ObjectPath": "/Script/Engine"
     },
     "ChildProperties": [
       {
         "Type": "ObjectProperty",
-        "Name": "BP_Brl_LogPile_02",
+        "Name": "CharacterBlocker",
         "Flags": 2097153,
         "ElementSize": 8,
         "PropertyFlags": 17180393476,
         "PropertyClass": {
-          "ObjectName": "Class ChildActorComponent",
+          "ObjectName": "Class'BoxComponent'",
           "ObjectPath": "/Script/Engine"
         }
       },
       {
         "Type": "ObjectProperty",
-        "Name": "BP_Brl_LogPile_01",
+        "Name": "projectileBlocker",
         "Flags": 2097153,
         "ElementSize": 8,
         "PropertyFlags": 17180393476,
         "PropertyClass": {
-          "ObjectName": "Class ChildActorComponent",
+          "ObjectName": "Class'BoxComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_COM_ChoppedWood_03",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_COM_ChoppedWood_02",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -42,26 +65,27 @@
         "ElementSize": 8,
         "PropertyFlags": 17180393476,
         "PropertyClass": {
-          "ObjectName": "Class SceneComponent",
+          "ObjectName": "Class'SceneComponent'",
           "ObjectPath": "/Script/Engine"
         }
       }
     ],
     "ClassFlags": 8652820,
     "ClassWithin": {
-      "ObjectName": "Class Object",
+      "ObjectName": "Class'Object'",
       "ObjectPath": "/Script/CoreUObject"
     },
     "ClassConfigName": "Engine",
     "bCooked": true,
     "ClassDefaultObject": {
-      "ObjectName": "BP_FL_Brl_Woodpile_01_C Default__BP_FL_Brl_Woodpile_01_C",
+      "ObjectName": "BP_FL_Brl_Woodpile_01_C'Default__BP_FL_Brl_Woodpile_01_C'",
       "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/08-Boreal/BP_FL_Brl_Woodpile_01.1"
     }
   },
   {
     "Type": "BP_FL_Brl_Woodpile_01_C",
     "Name": "Default__BP_FL_Brl_Woodpile_01_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/Props/08-Boreal/BP_FL_Brl_Woodpile_01.BP_FL_Brl_Woodpile_01_C'",
     "Properties": {
       "PrimaryActorTick": {
         "bStartWithTickEnabled": false
@@ -70,40 +94,218 @@
     }
   },
   {
-    "Type": "ChildActorComponent",
-    "Name": "BP_Brl_LogPile_01_GEN_VARIABLE",
+    "Type": "BoxComponent",
+    "Name": "CharacterBlocker_GEN_VARIABLE",
     "Outer": "BP_FL_Brl_Woodpile_01_C",
+    "Class": "UScriptClass'BoxComponent'",
     "Properties": {
-      "ChildActorClass": {
-        "ObjectName": "BlueprintGeneratedClass BP_Brl_LogPile_01_C",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/08-Boreal/BP_Brl_LogPile_01.0"
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "CharacterBlocker",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel2",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel3",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel4",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel5",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel6",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Interactable",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Audio",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Slasher",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Spider",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Traps",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "InteractionDetector",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BlinkBlocker",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Ground",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
       },
       "RelativeLocation": {
-        "X": -60.0,
-        "Y": 50.0,
-        "Z": 0.0
+        "X": 16.510544,
+        "Y": -17.589218,
+        "Z": 180.01776
+      },
+      "RelativeScale3D": {
+        "X": 5.266765,
+        "Y": 3.198102,
+        "Z": 4.595654
       },
       "Mobility": "EComponentMobility::Static"
     }
   },
   {
-    "Type": "ChildActorComponent",
-    "Name": "BP_Brl_LogPile_02_GEN_VARIABLE",
+    "Type": "BoxComponent",
+    "Name": "projectileBlocker_GEN_VARIABLE",
     "Outer": "BP_FL_Brl_Woodpile_01_C",
+    "Class": "UScriptClass'BoxComponent'",
     "Properties": {
-      "ChildActorClass": {
-        "ObjectName": "BlueprintGeneratedClass BP_Brl_LogPile_02_C",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/08-Boreal/BP_Brl_LogPile_02.0"
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "Projectile",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel2",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel3",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel4",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel5",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel6",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Interactable",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Audio",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Slasher",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Spider",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Traps",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "InteractionDetector",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BlinkBlocker",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
       },
       "RelativeLocation": {
-        "X": 100.0,
-        "Y": -79.99994,
-        "Z": 0.0
+        "X": 16.510544,
+        "Y": -17.589218,
+        "Z": 90.01777
       },
-      "RelativeRotation": {
-        "Pitch": 0.0,
-        "Yaw": 180.0,
-        "Roll": 0.0
+      "RelativeScale3D": {
+        "X": 5.266765,
+        "Y": 3.198102,
+        "Z": 3.095654
       },
       "Mobility": "EComponentMobility::Static"
     }
@@ -112,6 +314,7 @@
     "Type": "SceneComponent",
     "Name": "Scene7F6D554A4C7707CE9F4C2591FE160F4C",
     "Outer": "BP_FL_Brl_Woodpile_01_C",
+    "Class": "UScriptClass'SceneComponent'",
     "Properties": {
       "Mobility": "EComponentMobility::Static"
     }
@@ -119,29 +322,57 @@
   {
     "Type": "SceneComponent",
     "Name": "SceneComponent_162",
-    "Outer": "BP_FL_Brl_Woodpile_01_C"
+    "Outer": "BP_FL_Brl_Woodpile_01_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_2",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_FL_Brl_Woodpile_01_C:SM_COM_ChoppedWood_02_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/08-Boreal/BP_FL_Brl_Woodpile_01.13"
+      },
+      "VariableGuid": "7E482E22-4850FA84-E239A196-3A950278",
+      "InternalVariableName": "SM_COM_ChoppedWood_02"
+    }
   },
   {
     "Type": "SCS_Node",
     "Name": "SCS_Node_1",
     "Outer": "SimpleConstructionScript_2",
+    "Class": "UScriptClass'SCS_Node'",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class SceneComponent",
+        "ObjectName": "Class'SceneComponent'",
         "ObjectPath": "/Script/Engine"
       },
       "ComponentTemplate": {
-        "ObjectName": "SceneComponent BP_FL_Brl_Woodpile_01_C:Scene7F6D554A4C7707CE9F4C2591FE160F4C",
+        "ObjectName": "SceneComponent'BP_FL_Brl_Woodpile_01_C:Scene7F6D554A4C7707CE9F4C2591FE160F4C'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/08-Boreal/BP_FL_Brl_Woodpile_01.4"
       },
       "ChildNodes": [
         {
-          "ObjectName": "SCS_Node BP_FL_Brl_Woodpile_01_C:SimpleConstructionScript_2.SCS_Node_3",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/08-Boreal/BP_FL_Brl_Woodpile_01.8"
+          "ObjectName": "SCS_Node'BP_FL_Brl_Woodpile_01_C:SimpleConstructionScript_2.SCS_Node_0'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/08-Boreal/BP_FL_Brl_Woodpile_01.6"
         },
         {
-          "ObjectName": "SCS_Node BP_FL_Brl_Woodpile_01_C:SimpleConstructionScript_2.SCS_Node_4",
+          "ObjectName": "SCS_Node'BP_FL_Brl_Woodpile_01_C:SimpleConstructionScript_2.SCS_Node_5'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/08-Boreal/BP_FL_Brl_Woodpile_01.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_FL_Brl_Woodpile_01_C:SimpleConstructionScript_2.SCS_Node_6'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/08-Boreal/BP_FL_Brl_Woodpile_01.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_FL_Brl_Woodpile_01_C:SimpleConstructionScript_2.SCS_Node_8'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/08-Boreal/BP_FL_Brl_Woodpile_01.11"
         }
       ],
       "VariableGuid": "CAF9195A-47222905-D4BD7385-27F57016",
@@ -152,13 +383,14 @@
     "Type": "SCS_Node",
     "Name": "SCS_Node_2",
     "Outer": "SimpleConstructionScript_2",
+    "Class": "UScriptClass'SCS_Node'",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class SceneComponent",
+        "ObjectName": "Class'SceneComponent'",
         "ObjectPath": "/Script/Engine"
       },
       "ComponentTemplate": {
-        "ObjectName": "SceneComponent BP_FL_Brl_Woodpile_01_C:SceneComponent_162",
+        "ObjectName": "SceneComponent'BP_FL_Brl_Woodpile_01_C:SceneComponent_162'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/08-Boreal/BP_FL_Brl_Woodpile_01.5"
       },
       "VariableGuid": "B5FA707A-444D1ABA-54E543A7-79316370",
@@ -167,67 +399,144 @@
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_3",
+    "Name": "SCS_Node_5",
     "Outer": "SimpleConstructionScript_2",
+    "Class": "UScriptClass'SCS_Node'",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class ChildActorComponent",
+        "ObjectName": "Class'StaticMeshComponent'",
         "ObjectPath": "/Script/Engine"
       },
       "ComponentTemplate": {
-        "ObjectName": "ChildActorComponent BP_FL_Brl_Woodpile_01_C:BP_Brl_LogPile_01_GEN_VARIABLE",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/08-Boreal/BP_FL_Brl_Woodpile_01.2"
+        "ObjectName": "StaticMeshComponent'BP_FL_Brl_Woodpile_01_C:SM_COM_ChoppedWood_03_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/08-Boreal/BP_FL_Brl_Woodpile_01.14"
       },
-      "VariableGuid": "AFB97ED4-444CE265-E8E6F190-FD5A1A52",
-      "InternalVariableName": "BP_Brl_LogPile_01"
+      "VariableGuid": "A56ECBC1-4F94F9D5-0FAECB91-768F77DD",
+      "InternalVariableName": "SM_COM_ChoppedWood_03"
     }
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_4",
+    "Name": "SCS_Node_6",
     "Outer": "SimpleConstructionScript_2",
+    "Class": "UScriptClass'SCS_Node'",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class ChildActorComponent",
+        "ObjectName": "Class'BoxComponent'",
         "ObjectPath": "/Script/Engine"
       },
       "ComponentTemplate": {
-        "ObjectName": "ChildActorComponent BP_FL_Brl_Woodpile_01_C:BP_Brl_LogPile_02_GEN_VARIABLE",
+        "ObjectName": "BoxComponent'BP_FL_Brl_Woodpile_01_C:projectileBlocker_GEN_VARIABLE'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/08-Boreal/BP_FL_Brl_Woodpile_01.3"
       },
-      "VariableGuid": "5B5ED3C7-49794387-357D63A6-3E6D0603",
-      "InternalVariableName": "BP_Brl_LogPile_02"
+      "VariableGuid": "2AE830CA-49CD3DCD-19721D87-EE6C1F30",
+      "InternalVariableName": "projectileBlocker"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_8",
+    "Outer": "SimpleConstructionScript_2",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BP_FL_Brl_Woodpile_01_C:CharacterBlocker_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/08-Boreal/BP_FL_Brl_Woodpile_01.2"
+      },
+      "VariableGuid": "6C4C6B96-48477292-6383D5B9-1FF63B33",
+      "InternalVariableName": "CharacterBlocker"
     }
   },
   {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_2",
     "Outer": "BP_FL_Brl_Woodpile_01_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
     "Properties": {
       "RootNodes": [
         {
-          "ObjectName": "SCS_Node BP_FL_Brl_Woodpile_01_C:SimpleConstructionScript_2.SCS_Node_1",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/08-Boreal/BP_FL_Brl_Woodpile_01.6"
+          "ObjectName": "SCS_Node'BP_FL_Brl_Woodpile_01_C:SimpleConstructionScript_2.SCS_Node_1'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/08-Boreal/BP_FL_Brl_Woodpile_01.7"
         }
       ],
       "AllNodes": [
         {
-          "ObjectName": "SCS_Node BP_FL_Brl_Woodpile_01_C:SimpleConstructionScript_2.SCS_Node_1",
+          "ObjectName": "SCS_Node'BP_FL_Brl_Woodpile_01_C:SimpleConstructionScript_2.SCS_Node_1'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/08-Boreal/BP_FL_Brl_Woodpile_01.7"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_FL_Brl_Woodpile_01_C:SimpleConstructionScript_2.SCS_Node_0'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/08-Boreal/BP_FL_Brl_Woodpile_01.6"
         },
         {
-          "ObjectName": "SCS_Node BP_FL_Brl_Woodpile_01_C:SimpleConstructionScript_2.SCS_Node_3",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/08-Boreal/BP_FL_Brl_Woodpile_01.8"
+          "ObjectName": "SCS_Node'BP_FL_Brl_Woodpile_01_C:SimpleConstructionScript_2.SCS_Node_5'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/08-Boreal/BP_FL_Brl_Woodpile_01.9"
         },
         {
-          "ObjectName": "SCS_Node BP_FL_Brl_Woodpile_01_C:SimpleConstructionScript_2.SCS_Node_4",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/08-Boreal/BP_FL_Brl_Woodpile_01.9"
+          "ObjectName": "SCS_Node'BP_FL_Brl_Woodpile_01_C:SimpleConstructionScript_2.SCS_Node_6'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/08-Boreal/BP_FL_Brl_Woodpile_01.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_FL_Brl_Woodpile_01_C:SimpleConstructionScript_2.SCS_Node_8'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/08-Boreal/BP_FL_Brl_Woodpile_01.11"
         }
       ],
       "DefaultSceneRootNode": {
-        "ObjectName": "SCS_Node BP_FL_Brl_Woodpile_01_C:SimpleConstructionScript_2.SCS_Node_2",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/08-Boreal/BP_FL_Brl_Woodpile_01.7"
+        "ObjectName": "SCS_Node'BP_FL_Brl_Woodpile_01_C:SimpleConstructionScript_2.SCS_Node_2'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/08-Boreal/BP_FL_Brl_Woodpile_01.8"
       }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_COM_ChoppedWood_02_GEN_VARIABLE",
+    "Outer": "BP_FL_Brl_Woodpile_01_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_COM_ChoppedWood_02'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/Blockers/SM_COM_ChoppedWood_02.2"
+      },
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "RelativeLocation": {
+        "X": 10.0,
+        "Y": -64.99994,
+        "Z": 35.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_COM_ChoppedWood_03_GEN_VARIABLE",
+    "Outer": "BP_FL_Brl_Woodpile_01_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_COM_ChoppedWood_02'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/Blockers/SM_COM_ChoppedWood_02.2"
+      },
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "RelativeLocation": {
+        "X": 10.000005,
+        "Y": 35.00006,
+        "Z": 35.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 270.0,
+        "Roll": 0.0
+      },
+      "Mobility": "EComponentMobility::Static"
     }
   }
 ]

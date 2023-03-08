@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_1",
     "Outer": "SM_BRL_MD_Structure_Main",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "DefaultInstance": {
         "ObjectType": "ECC_WorldStatic",
@@ -44,7 +45,7 @@
     "BodySetupGuid": "B39E06904C243E9E1D6AED88E438E800",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 75796,
         "SizeOnDisk": 75796,
         "OffsetInFile": "0x267E61"
@@ -55,9 +56,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_BRL_MD_Structure_Main",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 21,
         "SizeOnDisk": 21,
         "OffsetInFile": "0x27A6BD"
@@ -67,6 +69,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_MD_Structure_Main",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -74,18 +77,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_MD_Rope",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_MD_Rope'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_MD_Rope.0"
           },
           "MaterialSlotName": "MI_BRL_MD_Rope",
@@ -101,7 +114,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_MD_StoneWall",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_MD_StoneWall'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_MD_StoneWall.0"
           },
           "MaterialSlotName": "MI_BRL_MD_StoneWall",
@@ -117,7 +130,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_MD_WoodLogsChopped",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_MD_WoodLogsChopped'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_MD_WoodLogsChopped.0"
           },
           "MaterialSlotName": "MI_BRL_MD_WoodLogsChopped",
@@ -151,11 +164,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_MD_Structure_Main:BodySetup_1",
+      "ObjectName": "BodySetup'SM_BRL_MD_Structure_Main:BodySetup_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/Mother_Dwelling/SM_BRL_MD_Structure_Main.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_MD_Structure_Main:NavCollision_2",
+      "ObjectName": "NavCollision'SM_BRL_MD_Structure_Main:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/Mother_Dwelling/SM_BRL_MD_Structure_Main.1"
     },
     "LightingGuid": "FD7B08B2-48D18F99-EAAA3FB2-A2905DDB",

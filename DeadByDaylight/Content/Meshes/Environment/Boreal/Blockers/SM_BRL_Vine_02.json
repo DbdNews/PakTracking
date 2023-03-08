@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_BRL_Vine_02",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "DefaultInstance": {
         "ObjectType": "ECC_WorldStatic",
@@ -44,7 +45,7 @@
     "BodySetupGuid": "36F733E14F48B67C10AE3E86A6CA0DA5",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 5709,
         "SizeOnDisk": 5709,
         "OffsetInFile": "0x350D2"
@@ -55,9 +56,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_0",
     "Outer": "SM_BRL_Vine_02",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 21,
         "SizeOnDisk": 21,
         "OffsetInFile": "0x36767"
@@ -67,6 +69,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_Vine_02",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -74,18 +77,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_WoodBark",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_WoodBark'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_WoodBark.0"
           },
           "MaterialSlotName": "MI_BRL_WoodBark",
@@ -119,11 +132,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_Vine_02:BodySetup_0",
+      "ObjectName": "BodySetup'SM_BRL_Vine_02:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Blockers/SM_BRL_Vine_02.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_Vine_02:NavCollision_0",
+      "ObjectName": "NavCollision'SM_BRL_Vine_02:NavCollision_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Blockers/SM_BRL_Vine_02.1"
     },
     "LightingGuid": "4CF8F203-408466F5-DFAB14A1-E81913E3",

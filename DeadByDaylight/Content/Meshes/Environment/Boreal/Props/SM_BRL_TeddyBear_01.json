@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_3",
     "Outer": "SM_BRL_TeddyBear_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -226,7 +227,7 @@
     "BodySetupGuid": "D9EA601C46CCE6B8391102A01E6370A1",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 6809,
         "SizeOnDisk": 6809,
         "OffsetInFile": "0x30066"
@@ -237,9 +238,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_6",
     "Outer": "SM_BRL_TeddyBear_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 793,
         "SizeOnDisk": 793,
         "OffsetInFile": "0x31B47"
@@ -249,6 +251,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_TeddyBear_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -256,18 +259,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_TeddyBear_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_TeddyBear_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_TeddyBear_01.0"
           },
           "MaterialSlotName": "MI_BRL_TeddyBear_01",
@@ -301,11 +314,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_TeddyBear_01:BodySetup_3",
+      "ObjectName": "BodySetup'SM_BRL_TeddyBear_01:BodySetup_3'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_TeddyBear_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_TeddyBear_01:NavCollision_6",
+      "ObjectName": "NavCollision'SM_BRL_TeddyBear_01:NavCollision_6'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_TeddyBear_01.1"
     },
     "LightingGuid": "BC9DBA2D-45FB5EFF-6C53A69F-582C71CA",

@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_3",
     "Outer": "SM_COM_Bushes_03",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "DefaultInstance": {
         "ObjectType": "ECC_WorldStatic",
@@ -101,7 +102,7 @@
     "BodySetupGuid": "3C35ADBB410BE09794DEDAA1BBB96CFF",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 20547,
         "SizeOnDisk": 20547,
         "OffsetInFile": "0x713B3"
@@ -112,9 +113,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_1",
     "Outer": "SM_COM_Bushes_03",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 21,
         "SizeOnDisk": 21,
         "OffsetInFile": "0x7643E"
@@ -124,6 +126,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_COM_Bushes_03",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -131,18 +134,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_COM_Bushes_01",
+            "ObjectName": "MaterialInstanceConstant'MI_COM_Bushes_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Nature/Vegetation/MI_COM_Bushes_01.0"
           },
           "MaterialSlotName": "MI_MTR_Bushes_01",
@@ -177,11 +190,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_COM_Bushes_03:BodySetup_3",
+      "ObjectName": "BodySetup'SM_COM_Bushes_03:BodySetup_3'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/Nature/SM_COM_Bushes_03.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_COM_Bushes_03:NavCollision_1",
+      "ObjectName": "NavCollision'SM_COM_Bushes_03:NavCollision_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/Nature/SM_COM_Bushes_03.1"
     },
     "LightingGuid": "218483E3-477B9127-7D29C88E-553F221B",

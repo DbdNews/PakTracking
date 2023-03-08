@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_BRL_MD_RockPile_D",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -880,7 +881,7 @@
     "BodySetupGuid": "CA551F28465759A3C3ABA39647E4591C",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 31577,
         "SizeOnDisk": 31577,
         "OffsetInFile": "0x1C8DC4"
@@ -891,9 +892,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_0",
     "Outer": "SM_BRL_MD_RockPile_D",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 5317,
         "SizeOnDisk": 5317,
         "OffsetInFile": "0x1D0965"
@@ -903,6 +905,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_MD_RockPile_D",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -910,18 +913,28 @@
         "Value": 1
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 4,
-          "High": 4,
-          "Medium": 4,
-          "Low": 4,
-          "Mobile": 4
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 4
+          },
+          {
+            "High": 4
+          },
+          {
+            "Medium": 4
+          },
+          {
+            "Low": 4
+          },
+          {
+            "Mobile": 4
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_Rocks_A_01",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_Rocks_A_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Nature/Rocks/MI_Com_Rocks_A_01.0"
           },
           "MaterialSlotName": "MI_Com_Rocks_A_01",
@@ -937,7 +950,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_Rocks_A_03",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_Rocks_A_03'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Nature/Rocks/MI_Com_Rocks_A_03.0"
           },
           "MaterialSlotName": "MI_Com_Rocks_A_03",
@@ -971,11 +984,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_MD_RockPile_D:BodySetup_0",
+      "ObjectName": "BodySetup'SM_BRL_MD_RockPile_D:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/Mother_Dwelling/SM_BRL_MD_RockPile_D.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_MD_RockPile_D:NavCollision_0",
+      "ObjectName": "NavCollision'SM_BRL_MD_RockPile_D:NavCollision_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/Mother_Dwelling/SM_BRL_MD_RockPile_D.1"
     },
     "LightingGuid": "9B8EEB61-41124943-217398BB-FEB67B86",

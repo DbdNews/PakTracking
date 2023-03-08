@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_2",
     "Outer": "SM_Ind_Container_RoundCounter",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -1248,10 +1249,10 @@
     "BodySetupGuid": "89B2EF3147EEC7145DBD4F9D569E6BAC",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 12331,
         "SizeOnDisk": 12331,
-        "OffsetInFile": "0x29AC2"
+        "OffsetInFile": "0x29ACB"
       }
     }
   },
@@ -1259,18 +1260,20 @@
     "Type": "NavCollision",
     "Name": "NavCollision_4",
     "Outer": "SM_Ind_Container_RoundCounter",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 4161,
         "SizeOnDisk": 4161,
-        "OffsetInFile": "0x2CB35"
+        "OffsetInFile": "0x2CB3E"
       }
     }
   },
   {
     "Type": "StaticMesh",
     "Name": "SM_Ind_Container_RoundCounter",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -1279,34 +1282,63 @@
       },
       "bLimitLODRangeForShadow": true,
       "ShadowMinLOD": {
-        "PerDetailModeValue": {
-          "Medium": 1,
-          "Low": 2,
-          "Mobile": 3
-        },
-        "PerDetailModeOverride": {
-          "Medium": true,
-          "Low": true,
-          "Mobile": true
-        }
+        "PerDetailModeValue": [
+          {
+            "Medium": 1
+          },
+          {
+            "Low": 2
+          },
+          {
+            "Mobile": 3
+          }
+        ],
+        "PerDetailModeOverride": [
+          {
+            "Medium": true
+          },
+          {
+            "Low": true
+          },
+          {
+            "Mobile": true
+          }
+        ]
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 2,
-          "High": 2,
-          "Medium": 2,
-          "Low": 2,
-          "Mobile": 3
-        },
-        "PerDetailModeOverride": {
-          "Ultra": true,
-          "Mobile": true
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 1
+          },
+          {
+            "High": 1
+          },
+          {
+            "Medium": 1
+          },
+          {
+            "Low": 2
+          },
+          {
+            "Mobile": 3
+          }
+        ],
+        "PerDetailModeOverride": [
+          {
+            "Ultra": true
+          },
+          {
+            "Low": true
+          },
+          {
+            "Mobile": true
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_Teak",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_Teak'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Wood/MI_Com_Teak.0"
           },
           "MaterialSlotName": "MI_Com_Teak",
@@ -1339,11 +1371,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_Ind_Container_RoundCounter:BodySetup_2",
+      "ObjectName": "BodySetup'SM_Ind_Container_RoundCounter:BodySetup_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Structures/SM_Ind_Container_RoundCounter.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_Ind_Container_RoundCounter:NavCollision_4",
+      "ObjectName": "NavCollision'SM_Ind_Container_RoundCounter:NavCollision_4'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Structures/SM_Ind_Container_RoundCounter.1"
     },
     "LightingGuid": "20F89B4D-4452F93D-1F5AF1BF-72952DDF",

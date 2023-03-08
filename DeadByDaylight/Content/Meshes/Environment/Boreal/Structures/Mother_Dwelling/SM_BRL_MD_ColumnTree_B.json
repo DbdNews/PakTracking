@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_1",
     "Outer": "SM_BRL_MD_ColumnTree_B",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -582,7 +583,7 @@
     "BodySetupGuid": "5862098F43C85B3C0370768F781C314D",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 55255,
         "SizeOnDisk": 55255,
         "OffsetInFile": "0x214EFE"
@@ -593,9 +594,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_BRL_MD_ColumnTree_B",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 2169,
         "SizeOnDisk": 2169,
         "OffsetInFile": "0x22271D"
@@ -605,6 +607,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_MD_ColumnTree_B",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -612,18 +615,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_WoodBark",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_WoodBark'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_WoodBark.0"
           },
           "MaterialSlotName": "MI_BRL_WoodBark",
@@ -639,7 +652,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_OrnamentWood_TrimSheet",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_OrnamentWood_TrimSheet'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_OrnamentWood_TrimSheet.0"
           },
           "MaterialSlotName": "MI_BRL_OrnamentWood_TrimSheet",
@@ -655,7 +668,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_OrnamentWood_TrimSheet_Masked",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_OrnamentWood_TrimSheet_Masked'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_OrnamentWood_TrimSheet_Masked.0"
           },
           "MaterialSlotName": "MI_BRL_OrnamentWood_TrimSheet_Masked",
@@ -689,11 +702,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_MD_ColumnTree_B:BodySetup_1",
+      "ObjectName": "BodySetup'SM_BRL_MD_ColumnTree_B:BodySetup_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/Mother_Dwelling/SM_BRL_MD_ColumnTree_B.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_MD_ColumnTree_B:NavCollision_2",
+      "ObjectName": "NavCollision'SM_BRL_MD_ColumnTree_B:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/Mother_Dwelling/SM_BRL_MD_ColumnTree_B.1"
     },
     "LightingGuid": "CB2A758C-49CD8710-26F0109B-8760607D",

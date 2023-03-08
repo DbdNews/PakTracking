@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_1",
     "Outer": "SM_BRL_ExitGate_Cabin",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -683,7 +684,7 @@
     "BodySetupGuid": "45E5FE56489E94B84D3DFBB025264FAC",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 38101,
         "SizeOnDisk": 38101,
         "OffsetInFile": "0xF9C94"
@@ -694,9 +695,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_1",
     "Outer": "SM_BRL_ExitGate_Cabin",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 3473,
         "SizeOnDisk": 3473,
         "OffsetInFile": "0x1031B1"
@@ -706,6 +708,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_ExitGate_Cabin",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -713,18 +716,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_DarkLog_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_DarkLog_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_DarkLog_01.0"
           },
           "MaterialSlotName": "MI_BRL_DarkLog_01",
@@ -740,7 +753,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_TrimWoodLogs",
+            "ObjectName": "MaterialInstanceConstant'MI_TrimWoodLogs'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Trims/MI_TrimWoodLogs.0"
           },
           "MaterialSlotName": "MI_TrimWoodLogs",
@@ -756,7 +769,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_COM_RoofTile_01",
+            "ObjectName": "MaterialInstanceConstant'MI_COM_RoofTile_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Roofs/MI_COM_RoofTile_01.0"
           },
           "MaterialSlotName": "MI_COM_RoofTile_01",
@@ -790,11 +803,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_ExitGate_Cabin:BodySetup_1",
+      "ObjectName": "BodySetup'SM_BRL_ExitGate_Cabin:BodySetup_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/SM_BRL_ExitGate_Cabin.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_ExitGate_Cabin:NavCollision_1",
+      "ObjectName": "NavCollision'SM_BRL_ExitGate_Cabin:NavCollision_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/SM_BRL_ExitGate_Cabin.1"
     },
     "LightingGuid": "1F7AEAE8-45F979B8-B6E24A8A-0DC2293B",

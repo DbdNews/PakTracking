@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_3",
     "Outer": "SM_Ind_Refrigerator_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -168,7 +169,7 @@
     "BodySetupGuid": "DDD50E9C4DA993C38E9B9AAF66B5D1A8",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 5725,
         "SizeOnDisk": 5725,
         "OffsetInFile": "0x3A793"
@@ -179,9 +180,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_6",
     "Outer": "SM_Ind_Refrigerator_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 457,
         "SizeOnDisk": 457,
         "OffsetInFile": "0x3BE38"
@@ -191,6 +193,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_Ind_Refrigerator_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -198,18 +201,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_COM_MetalSemiMat",
+            "ObjectName": "MaterialInstanceConstant'MI_COM_MetalSemiMat'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Blend/Metal/MI_COM_MetalSemiMat.0"
           },
           "MaterialSlotName": "MI_COM_MetalSemiMat",
@@ -225,7 +238,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_COM_Rubber_01",
+            "ObjectName": "MaterialInstanceConstant'MI_COM_Rubber_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Plastic-Rubber/MI_COM_Rubber_01.0"
           },
           "MaterialSlotName": "MI_COM_Rubber_01",
@@ -241,7 +254,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_COM_FormicaTable_01_metal",
+            "ObjectName": "MaterialInstanceConstant'MI_COM_FormicaTable_01_metal'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Props/MI_COM_FormicaTable_01_metal.0"
           },
           "MaterialSlotName": "MI_COM_FormicaTable_01_metal",
@@ -274,11 +287,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_Ind_Refrigerator_01:BodySetup_3",
+      "ObjectName": "BodySetup'SM_Ind_Refrigerator_01:BodySetup_3'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Blockers/SM_Ind_Refrigerator_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_Ind_Refrigerator_01:NavCollision_6",
+      "ObjectName": "NavCollision'SM_Ind_Refrigerator_01:NavCollision_6'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Blockers/SM_Ind_Refrigerator_01.1"
     },
     "LightingGuid": "2153C9E7-4CD77458-14C4BEB9-8EC2EE7E",

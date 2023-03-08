@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_BRL_Hill02_Vines",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "DefaultInstance": {
         "ObjectType": "ECC_WorldStatic",
@@ -44,7 +45,7 @@
     "BodySetupGuid": "96AC9B6A462FD33A7CE8429CCB940A75",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 57889,
         "SizeOnDisk": 57889,
         "OffsetInFile": "0x213FDA"
@@ -55,9 +56,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_1",
     "Outer": "SM_BRL_Hill02_Vines",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 21,
         "SizeOnDisk": 21,
         "OffsetInFile": "0x222243"
@@ -67,6 +69,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_Hill02_Vines",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -74,18 +77,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_COM_OldWoodTrimScratch_02",
+            "ObjectName": "MaterialInstanceConstant'MI_COM_OldWoodTrimScratch_02'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Wood/MI_COM_OldWoodTrimScratch_02.0"
           },
           "MaterialSlotName": "MI_COM_OldWoodTrimScratch_02",
@@ -101,7 +114,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_COM_Leaves_Alpha_02",
+            "ObjectName": "MaterialInstanceConstant'MI_COM_Leaves_Alpha_02'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Nature/Vegetation/MI_COM_Leaves_Alpha_02.0"
           },
           "MaterialSlotName": "MI_COM_Leaves_Alpha_02",
@@ -135,11 +148,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_Hill02_Vines:BodySetup_0",
+      "ObjectName": "BodySetup'SM_BRL_Hill02_Vines:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Tiles/SM_BRL_Hill02_Vines.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_Hill02_Vines:NavCollision_1",
+      "ObjectName": "NavCollision'SM_BRL_Hill02_Vines:NavCollision_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Tiles/SM_BRL_Hill02_Vines.1"
     },
     "LightingGuid": "A1C66475-4BE593FF-1402F891-B9F3A46C",

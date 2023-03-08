@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_1",
     "Outer": "SM_BRL_Drapery_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -173,7 +174,7 @@
     "BodySetupGuid": "91FBC9D841102E787409C7943905C707",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 2701,
         "SizeOnDisk": 2701,
         "OffsetInFile": "0x11895"
@@ -184,9 +185,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_BRL_Drapery_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 457,
         "SizeOnDisk": 457,
         "OffsetInFile": "0x1236A"
@@ -196,6 +198,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_Drapery_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -203,18 +206,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_Drapery",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_Drapery'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/Props/MI_BRL_Drapery.0"
           },
           "MaterialSlotName": "MI_BRL_Drapery",
@@ -247,11 +260,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_Drapery_01:BodySetup_1",
+      "ObjectName": "BodySetup'SM_BRL_Drapery_01:BodySetup_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_Drapery_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_Drapery_01:NavCollision_2",
+      "ObjectName": "NavCollision'SM_BRL_Drapery_01:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_Drapery_01.1"
     },
     "LightingGuid": "C78F5E6B-47940F4D-33105B9D-C6A39B96",

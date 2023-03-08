@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_1",
     "Outer": "SM_COM_CappuccinoCup_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -67,7 +68,7 @@
     "BodySetupGuid": "6C84E5CD4D960E1F39AE19A139B93147",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 1657,
         "SizeOnDisk": 1657,
         "OffsetInFile": "0x96C5"
@@ -78,9 +79,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_COM_CappuccinoCup_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 265,
         "SizeOnDisk": 265,
         "OffsetInFile": "0x9D86"
@@ -90,6 +92,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_COM_CappuccinoCup_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -97,18 +100,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 2,
-          "High": 2,
-          "Medium": 2,
-          "Low": 2,
-          "Mobile": 2
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 2
+          },
+          {
+            "High": 2
+          },
+          {
+            "Medium": 2
+          },
+          {
+            "Low": 2
+          },
+          {
+            "Mobile": 2
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_COM_FormicaTable_01_metal",
+            "ObjectName": "MaterialInstanceConstant'MI_COM_FormicaTable_01_metal'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Props/MI_COM_FormicaTable_01_metal.0"
           },
           "MaterialSlotName": "lambert1",
@@ -141,11 +154,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_COM_CappuccinoCup_01:BodySetup_1",
+      "ObjectName": "BodySetup'SM_COM_CappuccinoCup_01:BodySetup_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/Props/SM_COM_CappuccinoCup_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_COM_CappuccinoCup_01:NavCollision_2",
+      "ObjectName": "NavCollision'SM_COM_CappuccinoCup_01:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/Props/SM_COM_CappuccinoCup_01.1"
     },
     "LightingGuid": "D73C4593-47B5C62B-7D3A07BD-909D5FEC",

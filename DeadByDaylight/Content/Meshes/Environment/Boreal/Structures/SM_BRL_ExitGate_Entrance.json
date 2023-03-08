@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_BRL_ExitGate_Entrance",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -105,7 +106,7 @@
     "BodySetupGuid": "7C85AE364DBDF547D7DC3AA65BED6D1F",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 27474,
         "SizeOnDisk": 27474,
         "OffsetInFile": "0x116435"
@@ -116,9 +117,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_1",
     "Outer": "SM_BRL_ExitGate_Entrance",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 753,
         "SizeOnDisk": 753,
         "OffsetInFile": "0x11CFCF"
@@ -128,6 +130,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_ExitGate_Entrance",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -135,18 +138,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_OrnamentWood_TrimSheet_Masked",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_OrnamentWood_TrimSheet_Masked'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_OrnamentWood_TrimSheet_Masked.0"
           },
           "MaterialSlotName": "MI_BRL_OrnamentWood_TrimSheet_Masked",
@@ -162,7 +175,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_TrimWoodLogs",
+            "ObjectName": "MaterialInstanceConstant'MI_TrimWoodLogs'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Trims/MI_TrimWoodLogs.0"
           },
           "MaterialSlotName": "MI_TrimWoodLogs",
@@ -196,11 +209,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_ExitGate_Entrance:BodySetup_0",
+      "ObjectName": "BodySetup'SM_BRL_ExitGate_Entrance:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/SM_BRL_ExitGate_Entrance.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_ExitGate_Entrance:NavCollision_1",
+      "ObjectName": "NavCollision'SM_BRL_ExitGate_Entrance:NavCollision_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/SM_BRL_ExitGate_Entrance.1"
     },
     "LightingGuid": "2D7DA309-49052F2F-C15C7AB7-83F0228B",

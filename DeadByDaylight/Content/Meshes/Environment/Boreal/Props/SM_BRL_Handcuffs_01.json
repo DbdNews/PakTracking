@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_3",
     "Outer": "SM_BRL_Handcuffs_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -432,7 +433,7 @@
     "BodySetupGuid": "FA03889B415BFC77148D3899C818FE21",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 12213,
         "SizeOnDisk": 12213,
         "OffsetInFile": "0x53406"
@@ -443,9 +444,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_6",
     "Outer": "SM_BRL_Handcuffs_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 1897,
         "SizeOnDisk": 1897,
         "OffsetInFile": "0x56403"
@@ -455,6 +457,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_Handcuffs_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -462,18 +465,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_Handcuffs_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_Handcuffs_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/Props/MI_BRL_Handcuffs_01.0"
           },
           "MaterialSlotName": "MI_BRL_Handcuffs_01",
@@ -507,11 +520,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_Handcuffs_01:BodySetup_3",
+      "ObjectName": "BodySetup'SM_BRL_Handcuffs_01:BodySetup_3'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_Handcuffs_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_Handcuffs_01:NavCollision_6",
+      "ObjectName": "NavCollision'SM_BRL_Handcuffs_01:NavCollision_6'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_Handcuffs_01.1"
     },
     "LightingGuid": "369075AE-423A0284-CF870280-12893592",

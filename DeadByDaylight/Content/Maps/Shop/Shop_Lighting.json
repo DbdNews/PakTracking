@@ -3,6 +3,7 @@
     "Type": "Function",
     "Name": "ExecuteUbergraph_Shop_Lighting",
     "Outer": "Shop_Lighting_C",
+    "Class": "UScriptClass'Function'",
     "ChildProperties": [
       {
         "Type": "IntProperty",
@@ -10,6 +11,23 @@
         "Flags": 1,
         "ElementSize": 4,
         "PropertyFlags": 148
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_K2_GetRootComponent_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
       },
       {
         "Type": "IntProperty",
@@ -24,20 +42,28 @@
         "ElementSize": 4
       },
       {
-        "Type": "IntProperty",
-        "Name": "Temp_int_Array_Index_Variable",
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
         "Flags": 1,
-        "ElementSize": 4
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'TimerDynamicDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "ScriptStruct'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
       },
       {
         "Type": "IntProperty",
         "Name": "Temp_int_Loop_Counter_Variable_1",
-        "Flags": 1,
-        "ElementSize": 4
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "Temp_int_Array_Index_Variable_1",
         "Flags": 1,
         "ElementSize": 4
       },
@@ -49,55 +75,7 @@
       },
       {
         "Type": "IntProperty",
-        "Name": "Temp_int_Loop_Counter_Variable_2",
-        "Flags": 1,
-        "ElementSize": 4
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "CallFunc_Add_IntInt_ReturnValue_2",
-        "Flags": 1,
-        "ElementSize": 4
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "Temp_int_Array_Index_Variable_2",
-        "Flags": 1,
-        "ElementSize": 4
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "Temp_int_Loop_Counter_Variable_3",
-        "Flags": 1,
-        "ElementSize": 4
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "CallFunc_Add_IntInt_ReturnValue_3",
-        "Flags": 1,
-        "ElementSize": 4
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "Temp_int_Loop_Counter_Variable_4",
-        "Flags": 1,
-        "ElementSize": 4
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "CallFunc_Add_IntInt_ReturnValue_4",
-        "Flags": 1,
-        "ElementSize": 4
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "Temp_int_Array_Index_Variable_3",
-        "Flags": 1,
-        "ElementSize": 4
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Name": "Temp_int_Array_Index_Variable_1",
         "Flags": 1,
         "ElementSize": 4
       },
@@ -127,19 +105,7 @@
       },
       {
         "Type": "IntProperty",
-        "Name": "Temp_int_Loop_Counter_Variable_5",
-        "Flags": 1,
-        "ElementSize": 4
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "CallFunc_Add_IntInt_ReturnValue_5",
-        "Flags": 1,
-        "ElementSize": 4
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "Temp_int_Loop_Counter_Variable_6",
+        "Name": "Temp_int_Array_Index_Variable_2",
         "Flags": 1,
         "ElementSize": 4
       },
@@ -156,12 +122,6 @@
         "bIsNativeBool": true
       },
       {
-        "Type": "IntProperty",
-        "Name": "CallFunc_Add_IntInt_ReturnValue_6",
-        "Flags": 1,
-        "ElementSize": 4
-      },
-      {
         "Type": "BoolProperty",
         "Name": "Temp_bool_Has_Been_Initd_Variable_1",
         "Flags": 1,
@@ -175,13 +135,35 @@
       },
       {
         "Type": "IntProperty",
-        "Name": "Temp_int_Array_Index_Variable_4",
+        "Name": "Temp_int_Loop_Counter_Variable_2",
         "Flags": 1,
         "ElementSize": 4
       },
       {
         "Type": "IntProperty",
-        "Name": "Temp_int_Loop_Counter_Variable_7",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_2",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable_3",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ExponentialHeightFog'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
         "Flags": 1,
         "ElementSize": 4
       },
@@ -198,28 +180,6 @@
         "bIsNativeBool": true
       },
       {
-        "Type": "IntProperty",
-        "Name": "CallFunc_Add_IntInt_ReturnValue_7",
-        "Flags": 1,
-        "ElementSize": 4
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "Temp_int_Array_Index_Variable_5",
-        "Flags": 1,
-        "ElementSize": 4
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "CallFunc_Array_Get_Item",
-        "Flags": 1,
-        "ElementSize": 8,
-        "PropertyClass": {
-          "ObjectName": "Class ExponentialHeightFog",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
         "Type": "BoolProperty",
         "Name": "CallFunc_ComponentHasTag_ReturnValue",
         "Flags": 1,
@@ -233,7 +193,7 @@
       },
       {
         "Type": "BoolProperty",
-        "Name": "CallFunc_IsVisible_ReturnValue",
+        "Name": "CallFunc_ComponentHasTag_ReturnValue_1",
         "Flags": 1,
         "ElementSize": 1,
         "FieldSize": 1,
@@ -269,6 +229,24 @@
       },
       {
         "Type": "BoolProperty",
+        "Name": "CallFunc_IsVisible_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable_3",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
         "Name": "CallFunc_BooleanAND_ReturnValue",
         "Flags": 1,
         "ElementSize": 1,
@@ -293,25 +271,25 @@
       },
       {
         "Type": "IntProperty",
-        "Name": "Temp_int_Loop_Counter_Variable_8",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_3",
         "Flags": 1,
         "ElementSize": 4
       },
       {
         "Type": "IntProperty",
-        "Name": "Temp_int_Loop_Counter_Variable_9",
+        "Name": "Temp_int_Array_Index_Variable_4",
         "Flags": 1,
         "ElementSize": 4
       },
       {
         "Type": "IntProperty",
-        "Name": "CallFunc_Add_IntInt_ReturnValue_8",
+        "Name": "Temp_int_Array_Index_Variable_5",
         "Flags": 1,
         "ElementSize": 4
       },
       {
         "Type": "IntProperty",
-        "Name": "CallFunc_Add_IntInt_ReturnValue_9",
+        "Name": "Temp_int_Loop_Counter_Variable_4",
         "Flags": 1,
         "ElementSize": 4
       },
@@ -323,45 +301,43 @@
       },
       {
         "Type": "IntProperty",
-        "Name": "Temp_int_Array_Index_Variable_7",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_4",
         "Flags": 1,
         "ElementSize": 4
       },
       {
         "Type": "IntProperty",
-        "Name": "Temp_int_Loop_Counter_Variable_10",
-        "Flags": 1,
-        "ElementSize": 4
-      },
-      {
-        "Type": "DelegateProperty",
-        "Name": "K2Node_CreateDelegate_OutputDelegate",
-        "Flags": 1,
-        "ElementSize": 20,
-        "SignatureFunction": {
-          "ObjectName": "DelegateFunction TimerDynamicDelegate__DelegateSignature",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 8,
-        "Struct": {
-          "ObjectName": "ScriptStruct TimerHandle",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "CallFunc_Add_IntInt_ReturnValue_10",
+        "Name": "Temp_int_Loop_Counter_Variable_5",
         "Flags": 1,
         "ElementSize": 4
       },
       {
         "Type": "IntProperty",
-        "Name": "Temp_int_Array_Index_Variable_8",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_5",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable_6",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable_7",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_6",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_7",
         "Flags": 1,
         "ElementSize": 4
       },
@@ -383,7 +359,7 @@
           "Flags": 1,
           "ElementSize": 8,
           "PropertyClass": {
-            "ObjectName": "Class ExponentialHeightFog",
+            "ObjectName": "Class'ExponentialHeightFog'",
             "ObjectPath": "/Script/Engine"
           }
         }
@@ -394,7 +370,7 @@
         "Flags": 1,
         "ElementSize": 8,
         "PropertyClass": {
-          "ObjectName": "Class ExponentialHeightFog",
+          "ObjectName": "Class'ExponentialHeightFog'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -406,69 +382,12 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "CallFunc_K2_GetRootComponent_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 8,
-        "PropertyFlags": 524288,
-        "PropertyClass": {
-          "ObjectName": "Class SceneComponent",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_ComponentHasTag_ReturnValue_1",
-        "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "CallFunc_Array_Length_ReturnValue_2",
-        "Flags": 1,
-        "ElementSize": 4
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "Temp_int_Array_Index_Variable_9",
-        "Flags": 1,
-        "ElementSize": 4
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_Less_IntInt_ReturnValue_1",
-        "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "CallFunc_Array_Get_Item_2",
-        "Flags": 1,
-        "ElementSize": 8,
-        "PropertyClass": {
-          "ObjectName": "Class ExponentialHeightFog",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
         "Name": "CallFunc_K2_GetRootComponent_ReturnValue_1",
         "Flags": 1,
         "ElementSize": 8,
         "PropertyFlags": 524288,
         "PropertyClass": {
-          "ObjectName": "Class SceneComponent",
+          "ObjectName": "Class'SceneComponent'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -485,6 +404,12 @@
         "bIsNativeBool": true
       },
       {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue_2",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
         "Type": "ArrayProperty",
         "Name": "CallFunc_GetAllActorsWithTag_OutActors",
         "Flags": 1,
@@ -496,14 +421,32 @@
           "Flags": 1,
           "ElementSize": 8,
           "PropertyClass": {
-            "ObjectName": "Class Actor",
+            "ObjectName": "Class'Actor'",
             "ObjectPath": "/Script/Engine"
           }
         }
       },
       {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
         "Type": "IntProperty",
         "Name": "CallFunc_Array_Length_ReturnValue_3",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue_4",
         "Flags": 1,
         "ElementSize": 4
       },
@@ -520,18 +463,14 @@
         "bIsNativeBool": true
       },
       {
-        "Type": "ObjectProperty",
-        "Name": "CallFunc_Array_Get_Item_3",
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable_8",
         "Flags": 1,
-        "ElementSize": 8,
-        "PropertyClass": {
-          "ObjectName": "Class Actor",
-          "ObjectPath": "/Script/Engine"
-        }
+        "ElementSize": 4
       },
       {
         "Type": "IntProperty",
-        "Name": "CallFunc_Array_Length_ReturnValue_4",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_8",
         "Flags": 1,
         "ElementSize": 4
       },
@@ -547,30 +486,18 @@
           "Flags": 1,
           "ElementSize": 8,
           "PropertyClass": {
-            "ObjectName": "BlueprintGeneratedClass BP_Lobby_Global_LightRig_C",
+            "ObjectName": "BlueprintGeneratedClass'BP_Lobby_Global_LightRig_C'",
             "ObjectPath": "DeadByDaylight/Content/Blueprints/2021Skysystem/BP_Lobby_Global_LightRig.0"
           }
         }
       },
       {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_Less_IntInt_ReturnValue_3",
-        "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
         "Type": "ObjectProperty",
-        "Name": "CallFunc_Array_Get_Item_4",
+        "Name": "CallFunc_Array_Get_Item_2",
         "Flags": 1,
         "ElementSize": 8,
         "PropertyClass": {
-          "ObjectName": "Class Actor",
+          "ObjectName": "Class'Actor'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -587,7 +514,7 @@
           "ElementSize": 8,
           "PropertyFlags": 524288,
           "PropertyClass": {
-            "ObjectName": "Class DirectionalLightComponent",
+            "ObjectName": "Class'DirectionalLightComponent'",
             "ObjectPath": "/Script/Engine"
           }
         }
@@ -605,45 +532,32 @@
           "ElementSize": 8,
           "PropertyFlags": 524288,
           "PropertyClass": {
-            "ObjectName": "Class SkyLightComponent",
+            "ObjectName": "Class'SkyLightComponent'",
             "ObjectPath": "/Script/Engine"
           }
         }
       },
       {
-        "Type": "IntProperty",
-        "Name": "CallFunc_Array_Length_ReturnValue_5",
-        "Flags": 1,
-        "ElementSize": 4
-      },
-      {
         "Type": "ObjectProperty",
-        "Name": "CallFunc_Array_Get_Item_5",
+        "Name": "CallFunc_Array_Get_Item_3",
         "Flags": 1,
         "ElementSize": 8,
         "PropertyFlags": 524288,
         "PropertyClass": {
-          "ObjectName": "Class SkyLightComponent",
+          "ObjectName": "Class'DirectionalLightComponent'",
           "ObjectPath": "/Script/Engine"
         }
       },
       {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_Less_IntInt_ReturnValue_4",
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item_4",
         "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "CallFunc_Array_Length_ReturnValue_6",
-        "Flags": 1,
-        "ElementSize": 4
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "PropertyClass": {
+          "ObjectName": "Class'SkyLightComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
       },
       {
         "Type": "BoolProperty",
@@ -658,122 +572,6 @@
         "bIsNativeBool": true
       },
       {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_Less_IntInt_ReturnValue_5",
-        "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_BooleanAND_ReturnValue_2",
-        "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "CallFunc_Array_Length_ReturnValue_7",
-        "Flags": 1,
-        "ElementSize": 4
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_Less_IntInt_ReturnValue_6",
-        "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "ArrayProperty",
-        "Name": "CallFunc_GetAllActorsWithTag_OutActors_1",
-        "Flags": 1,
-        "ElementSize": 16,
-        "PropertyFlags": 134217728,
-        "Inner": {
-          "Type": "ObjectProperty",
-          "Name": "CallFunc_GetAllActorsWithTag_OutActors_1",
-          "Flags": 1,
-          "ElementSize": 8,
-          "PropertyClass": {
-            "ObjectName": "Class Actor",
-            "ObjectPath": "/Script/Engine"
-          }
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "CallFunc_Array_Get_Item_6",
-        "Flags": 1,
-        "ElementSize": 8,
-        "PropertyClass": {
-          "ObjectName": "Class Actor",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "CallFunc_Array_Length_ReturnValue_8",
-        "Flags": 1,
-        "ElementSize": 4
-      },
-      {
-        "Type": "ArrayProperty",
-        "Name": "CallFunc_K2_GetComponentsByClass_ReturnValue_2",
-        "Flags": 1,
-        "ElementSize": 16,
-        "PropertyFlags": 549890031616,
-        "Inner": {
-          "Type": "ObjectProperty",
-          "Name": "CallFunc_K2_GetComponentsByClass_ReturnValue_2",
-          "Flags": 1,
-          "ElementSize": 8,
-          "PropertyFlags": 524288,
-          "PropertyClass": {
-            "ObjectName": "Class DirectionalLightComponent",
-            "ObjectPath": "/Script/Engine"
-          }
-        }
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_Less_IntInt_ReturnValue_7",
-        "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "CallFunc_Array_Get_Item_7",
-        "Flags": 1,
-        "ElementSize": 8,
-        "PropertyFlags": 524288,
-        "PropertyClass": {
-          "ObjectName": "Class DirectionalLightComponent",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
         "Type": "StrProperty",
         "Name": "CallFunc_GetDisplayName_ReturnValue",
         "Flags": 1,
@@ -781,7 +579,7 @@
       },
       {
         "Type": "BoolProperty",
-        "Name": "CallFunc_Not_PreBool_ReturnValue_3",
+        "Name": "CallFunc_BooleanAND_ReturnValue_2",
         "Flags": 1,
         "ElementSize": 1,
         "FieldSize": 1,
@@ -804,8 +602,14 @@
         "bIsNativeBool": true
       },
       {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue_5",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
         "Type": "BoolProperty",
-        "Name": "CallFunc_BooleanAND_ReturnValue_3",
+        "Name": "CallFunc_Not_PreBool_ReturnValue_3",
         "Flags": 1,
         "ElementSize": 1,
         "FieldSize": 1,
@@ -816,10 +620,28 @@
         "bIsNativeBool": true
       },
       {
-        "Type": "IntProperty",
-        "Name": "CallFunc_Array_Length_ReturnValue_9",
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue_3",
         "Flags": 1,
-        "ElementSize": 4
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue_3",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
       },
       {
         "Type": "BoolProperty",
@@ -834,8 +656,32 @@
         "bIsNativeBool": true
       },
       {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue_6",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
         "Type": "BoolProperty",
-        "Name": "CallFunc_Less_IntInt_ReturnValue_8",
+        "Name": "CallFunc_Less_IntInt_ReturnValue_4",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue_7",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue_5",
         "Flags": 1,
         "ElementSize": 1,
         "FieldSize": 1,
@@ -847,42 +693,118 @@
       },
       {
         "Type": "ArrayProperty",
-        "Name": "CallFunc_K2_GetComponentsByClass_ReturnValue_3",
+        "Name": "CallFunc_GetAllActorsWithTag_OutActors_1",
         "Flags": 1,
         "ElementSize": 16,
-        "PropertyFlags": 549890031616,
+        "PropertyFlags": 134217728,
         "Inner": {
           "Type": "ObjectProperty",
-          "Name": "CallFunc_K2_GetComponentsByClass_ReturnValue_3",
+          "Name": "CallFunc_GetAllActorsWithTag_OutActors_1",
           "Flags": 1,
           "ElementSize": 8,
-          "PropertyFlags": 524288,
           "PropertyClass": {
-            "ObjectName": "Class SkyLightComponent",
+            "ObjectName": "Class'Actor'",
             "ObjectPath": "/Script/Engine"
           }
         }
       },
       {
-        "Type": "ObjectProperty",
-        "Name": "CallFunc_Array_Get_Item_8",
-        "Flags": 1,
-        "ElementSize": 8,
-        "PropertyFlags": 524288,
-        "PropertyClass": {
-          "ObjectName": "Class SkyLightComponent",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
         "Type": "IntProperty",
-        "Name": "CallFunc_Array_Length_ReturnValue_10",
+        "Name": "Temp_int_Array_Index_Variable_7",
         "Flags": 1,
         "ElementSize": 4
       },
       {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue_8",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item_5",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ExponentialHeightFog'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
         "Type": "BoolProperty",
-        "Name": "CallFunc_Less_IntInt_ReturnValue_9",
+        "Name": "CallFunc_Less_IntInt_ReturnValue_6",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_K2_GetRootComponent_ReturnValue_2",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_ComponentHasTag_ReturnValue_3",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerCameraManager_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PlayerCameraManager'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetCameraLocation_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_GetAllActorsOfClass_OutActors_2",
+        "Flags": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 134217728,
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "CallFunc_GetAllActorsOfClass_OutActors_2",
+          "Flags": 1,
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "BlueprintGeneratedClass'BP_Lobby_Global_LightRig_C'",
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/2021Skysystem/BP_Lobby_Global_LightRig.0"
+          }
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Array_IsValidIndex_ReturnValue",
         "Flags": 1,
         "ElementSize": 1,
         "FieldSize": 1,
@@ -894,13 +816,126 @@
       },
       {
         "Type": "IntProperty",
-        "Name": "Temp_int_Loop_Counter_Variable_11",
+        "Name": "Temp_int_Array_Index_Variable_8",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item_6",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable_9",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item_7",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetFirstActorWithTag_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_K2_GetComponentsByClass_ReturnValue_2",
+        "Flags": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 549890031616,
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "CallFunc_K2_GetComponentsByClass_ReturnValue_2",
+          "Flags": 1,
+          "ElementSize": 8,
+          "PropertyFlags": 524288,
+          "PropertyClass": {
+            "ObjectName": "Class'DirectionalLightComponent'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Array_RemoveItem_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item_8",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "PropertyClass": {
+          "ObjectName": "Class'DirectionalLightComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue_9",
         "Flags": 1,
         "ElementSize": 4
       },
       {
         "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue_7",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_GetDisplayName_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 16
+      },
+      {
+        "Type": "BoolProperty",
         "Name": "CallFunc_Not_PreBool_ReturnValue_4",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Contains_ReturnValue_1",
         "Flags": 1,
         "ElementSize": 1,
         "FieldSize": 1,
@@ -923,79 +958,22 @@
         "bIsNativeBool": true
       },
       {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_Less_IntInt_ReturnValue_10",
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_K2_GetComponentsByClass_ReturnValue_3",
         "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "CallFunc_Add_IntInt_ReturnValue_11",
-        "Flags": 1,
-        "ElementSize": 4
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "Temp_int_Array_Index_Variable_10",
-        "Flags": 1,
-        "ElementSize": 4
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "CallFunc_GetPlayerCameraManager_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 8,
-        "PropertyClass": {
-          "ObjectName": "Class PlayerCameraManager",
-          "ObjectPath": "/Script/Engine"
+        "ElementSize": 16,
+        "PropertyFlags": 549890031616,
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "CallFunc_K2_GetComponentsByClass_ReturnValue_3",
+          "Flags": 1,
+          "ElementSize": 8,
+          "PropertyFlags": 524288,
+          "PropertyClass": {
+            "ObjectName": "Class'SkyLightComponent'",
+            "ObjectPath": "/Script/Engine"
+          }
         }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "CallFunc_Array_Get_Item_9",
-        "Flags": 1,
-        "ElementSize": 8,
-        "PropertyFlags": 524288,
-        "PropertyClass": {
-          "ObjectName": "Class DirectionalLightComponent",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "StrProperty",
-        "Name": "CallFunc_GetDisplayName_ReturnValue_1",
-        "Flags": 1,
-        "ElementSize": 16
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_Contains_ReturnValue_1",
-        "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_Not_PreBool_ReturnValue_5",
-        "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
       },
       {
         "Type": "BoolProperty",
@@ -1010,6 +988,35 @@
         "bIsNativeBool": true
       },
       {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item_9",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "PropertyClass": {
+          "ObjectName": "Class'SkyLightComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue_5",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue_10",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
         "Type": "BoolProperty",
         "Name": "CallFunc_BooleanAND_ReturnValue_7",
         "Flags": 1,
@@ -1022,180 +1029,8 @@
         "bIsNativeBool": true
       },
       {
-        "Type": "StructProperty",
-        "Name": "CallFunc_GetCameraLocation_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 12,
-        "Struct": {
-          "ObjectName": "ScriptStruct Vector",
-          "ObjectPath": "/Script/CoreUObject"
-        }
-      },
-      {
-        "Type": "ArrayProperty",
-        "Name": "CallFunc_GetAllActorsOfClass_OutActors_2",
-        "Flags": 1,
-        "ElementSize": 16,
-        "PropertyFlags": 134217728,
-        "Inner": {
-          "Type": "ObjectProperty",
-          "Name": "CallFunc_GetAllActorsOfClass_OutActors_2",
-          "Flags": 1,
-          "ElementSize": 8,
-          "PropertyClass": {
-            "ObjectName": "BlueprintGeneratedClass BP_Lobby_Global_LightRig_C",
-            "ObjectPath": "DeadByDaylight/Content/Blueprints/2021Skysystem/BP_Lobby_Global_LightRig.0"
-          }
-        }
-      },
-      {
         "Type": "BoolProperty",
-        "Name": "CallFunc_Array_IsValidIndex_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "Temp_int_Array_Index_Variable_11",
-        "Flags": 1,
-        "ElementSize": 4
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "CallFunc_Array_Get_Item_10",
-        "Flags": 1,
-        "ElementSize": 8,
-        "PropertyClass": {
-          "ObjectName": "Class Actor",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_Array_RemoveItem_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "CallFunc_Array_Get_Item_11",
-        "Flags": 1,
-        "ElementSize": 8,
-        "PropertyClass": {
-          "ObjectName": "Class ExponentialHeightFog",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "CallFunc_Array_Length_ReturnValue_11",
-        "Flags": 1,
-        "ElementSize": 4
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_Less_IntInt_ReturnValue_11",
-        "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_IsVisible_ReturnValue_1",
-        "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_Not_PreBool_ReturnValue_6",
-        "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "CallFunc_GetFirstActorWithTag_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 8,
-        "PropertyClass": {
-          "ObjectName": "Class Actor",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "K2Node_DynamicCast_AsExponential_Height_Fog",
-        "Flags": 1,
-        "ElementSize": 8,
-        "PropertyClass": {
-          "ObjectName": "Class ExponentialHeightFog",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "K2Node_DynamicCast_bSuccess",
-        "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "CallFunc_K2_GetRootComponent_ReturnValue_2",
-        "Flags": 1,
-        "ElementSize": 8,
-        "PropertyFlags": 524288,
-        "PropertyClass": {
-          "ObjectName": "Class SceneComponent",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "CallFunc_GetFirstActorWithTag_ReturnValue_1",
-        "Flags": 1,
-        "ElementSize": 8,
-        "PropertyClass": {
-          "ObjectName": "Class Actor",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_Array_RemoveItem_ReturnValue_1",
+        "Name": "CallFunc_Less_IntInt_ReturnValue_8",
         "Flags": 1,
         "ElementSize": 1,
         "FieldSize": 1,
@@ -1242,8 +1077,20 @@
         "bIsNativeBool": true
       },
       {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable_9",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable_10",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
         "Type": "BoolProperty",
-        "Name": "CallFunc_Array_RemoveItem_ReturnValue_2",
+        "Name": "CallFunc_Less_IntInt_ReturnValue_9",
         "Flags": 1,
         "ElementSize": 1,
         "FieldSize": 1,
@@ -1254,14 +1101,43 @@
         "bIsNativeBool": true
       },
       {
-        "Type": "StructProperty",
-        "Name": "CallFunc_GetTransform_ReturnValue",
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_9",
         "Flags": 1,
-        "ElementSize": 48,
-        "PropertyFlags": 2,
-        "Struct": {
-          "ObjectName": "ScriptStruct Transform",
-          "ObjectPath": "/Script/CoreUObject"
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue_10",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_10",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable_10",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item_10",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
         }
       },
       {
@@ -1270,7 +1146,7 @@
         "Flags": 1,
         "ElementSize": 12,
         "Struct": {
-          "ObjectName": "ScriptStruct Vector",
+          "ObjectName": "ScriptStruct'Vector'",
           "ObjectPath": "/Script/CoreUObject"
         }
       },
@@ -1280,7 +1156,7 @@
         "Flags": 1,
         "ElementSize": 12,
         "Struct": {
-          "ObjectName": "ScriptStruct Vector",
+          "ObjectName": "ScriptStruct'Vector'",
           "ObjectPath": "/Script/CoreUObject"
         }
       },
@@ -1289,6 +1165,17 @@
         "Name": "CallFunc_GetComponentBounds_SphereRadius",
         "Flags": 1,
         "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetTransform_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 48,
+        "PropertyFlags": 2,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Transform'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
       },
       {
         "Type": "BoolProperty",
@@ -1301,6 +1188,18 @@
         "FieldMask": 255,
         "BoolSize": 1,
         "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Add_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Add_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 4
       }
     ],
     "FunctionFlags": 8421377
@@ -1309,20 +1208,23 @@
     "Type": "Function",
     "Name": "ReadySetGo",
     "Outer": "Shop_Lighting_C",
+    "Class": "UScriptClass'Function'",
     "FunctionFlags": 201326592
   },
   {
     "Type": "Function",
     "Name": "Ready",
     "Outer": "Shop_Lighting_C",
+    "Class": "UScriptClass'Function'",
     "FunctionFlags": 201326592
   },
   {
     "Type": "Function",
     "Name": "ReceiveTick",
     "Outer": "Shop_Lighting_C",
+    "Class": "UScriptClass'Function'",
     "SuperStruct": {
-      "ObjectName": "Function Actor:ReceiveTick",
+      "ObjectName": "Function'Actor:ReceiveTick'",
       "ObjectPath": "/Script/Engine"
     },
     "ChildProperties": [
@@ -1340,8 +1242,9 @@
     "Type": "Function",
     "Name": "ReceiveBeginPlay",
     "Outer": "Shop_Lighting_C",
+    "Class": "UScriptClass'Function'",
     "SuperStruct": {
-      "ObjectName": "Function Actor:ReceiveBeginPlay",
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
       "ObjectPath": "/Script/Engine"
     },
     "FunctionFlags": 134744064
@@ -1349,35 +1252,36 @@
   {
     "Type": "BlueprintGeneratedClass",
     "Name": "Shop_Lighting_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
     "Properties": {
       "UberGraphFunction": {
-        "ObjectName": "Function Shop_Lighting_C:ExecuteUbergraph_Shop_Lighting",
+        "ObjectName": "Function'Shop_Lighting_C:ExecuteUbergraph_Shop_Lighting'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.0"
       }
     },
     "SuperStruct": {
-      "ObjectName": "Class LevelScriptActor",
+      "ObjectName": "Class'LevelScriptActor'",
       "ObjectPath": "/Script/Engine"
     },
     "Children": [
       {
-        "ObjectName": "Function Shop_Lighting_C:ReceiveBeginPlay",
+        "ObjectName": "Function'Shop_Lighting_C:ReceiveBeginPlay'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.4"
       },
       {
-        "ObjectName": "Function Shop_Lighting_C:ReceiveTick",
+        "ObjectName": "Function'Shop_Lighting_C:ReceiveTick'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.3"
       },
       {
-        "ObjectName": "Function Shop_Lighting_C:Ready",
+        "ObjectName": "Function'Shop_Lighting_C:Ready'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.2"
       },
       {
-        "ObjectName": "Function Shop_Lighting_C:ReadySetGo",
+        "ObjectName": "Function'Shop_Lighting_C:ReadySetGo'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.1"
       },
       {
-        "ObjectName": "Function Shop_Lighting_C:ExecuteUbergraph_Shop_Lighting",
+        "ObjectName": "Function'Shop_Lighting_C:ExecuteUbergraph_Shop_Lighting'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.0"
       }
     ],
@@ -1389,7 +1293,7 @@
         "ElementSize": 16,
         "PropertyFlags": 2105344,
         "Struct": {
-          "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -1405,7 +1309,7 @@
           "Flags": 1,
           "ElementSize": 8,
           "PropertyClass": {
-            "ObjectName": "Class ExponentialHeightFog",
+            "ObjectName": "Class'ExponentialHeightFog'",
             "ObjectPath": "/Script/Engine"
           }
         }
@@ -1417,7 +1321,7 @@
         "ElementSize": 8,
         "PropertyFlags": 67589,
         "PropertyClass": {
-          "ObjectName": "Class ExponentialHeightFog",
+          "ObjectName": "Class'ExponentialHeightFog'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -1433,7 +1337,7 @@
           "Flags": 1,
           "ElementSize": 8,
           "PropertyClass": {
-            "ObjectName": "Class Actor",
+            "ObjectName": "Class'Actor'",
             "ObjectPath": "/Script/Engine"
           }
         }
@@ -1445,7 +1349,7 @@
         "ElementSize": 8,
         "PropertyFlags": 589829,
         "PropertyClass": {
-          "ObjectName": "Class SkyLightComponent",
+          "ObjectName": "Class'SkyLightComponent'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -1456,7 +1360,7 @@
         "ElementSize": 8,
         "PropertyFlags": 589829,
         "PropertyClass": {
-          "ObjectName": "Class DirectionalLightComponent",
+          "ObjectName": "Class'DirectionalLightComponent'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -1467,7 +1371,7 @@
         "ElementSize": 8,
         "PropertyFlags": 67589,
         "PropertyClass": {
-          "ObjectName": "Class PlayerCameraManager",
+          "ObjectName": "Class'PlayerCameraManager'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -1491,7 +1395,18 @@
         "ElementSize": 8,
         "PropertyFlags": 65541,
         "Struct": {
-          "ObjectName": "ScriptStruct TimerHandle",
+          "ObjectName": "ScriptStruct'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Shop Lobby Fog",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 67589,
+        "PropertyClass": {
+          "ObjectName": "Class'ExponentialHeightFog'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -1501,56 +1416,71 @@
         "Flags": 1,
         "ElementSize": 8,
         "PropertyClass": {
-          "ObjectName": "Class TriggerBox",
+          "ObjectName": "Class'TriggerBox'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Shop_ExponentialHeightFog_ExecuteUbergraph_Shop_Lighting_RefProperty",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ExponentialHeightFog'",
           "ObjectPath": "/Script/Engine"
         }
       }
     ],
     "FuncMap": {
       "ExecuteUbergraph_Shop_Lighting": {
-        "ObjectName": "Function Shop_Lighting_C:ExecuteUbergraph_Shop_Lighting",
+        "ObjectName": "Function'Shop_Lighting_C:ExecuteUbergraph_Shop_Lighting'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.0"
       },
       "ReadySetGo": {
-        "ObjectName": "Function Shop_Lighting_C:ReadySetGo",
+        "ObjectName": "Function'Shop_Lighting_C:ReadySetGo'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.1"
       },
       "Ready": {
-        "ObjectName": "Function Shop_Lighting_C:Ready",
+        "ObjectName": "Function'Shop_Lighting_C:Ready'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.2"
       },
       "ReceiveTick": {
-        "ObjectName": "Function Shop_Lighting_C:ReceiveTick",
+        "ObjectName": "Function'Shop_Lighting_C:ReceiveTick'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.3"
       },
       "ReceiveBeginPlay": {
-        "ObjectName": "Function Shop_Lighting_C:ReceiveBeginPlay",
+        "ObjectName": "Function'Shop_Lighting_C:ReceiveBeginPlay'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.4"
       }
     },
     "ClassFlags": 8653332,
     "ClassWithin": {
-      "ObjectName": "Class Object",
+      "ObjectName": "Class'Object'",
       "ObjectPath": "/Script/CoreUObject"
     },
     "ClassConfigName": "Engine",
     "bCooked": true,
     "ClassDefaultObject": {
-      "ObjectName": "Shop_Lighting_C Default__Shop_Lighting_C",
+      "ObjectName": "Shop_Lighting_C'Default__Shop_Lighting_C'",
       "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.6"
     }
   },
   {
     "Type": "Shop_Lighting_C",
     "Name": "Default__Shop_Lighting_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Maps/Shop/Shop_Lighting.Shop_Lighting_C'",
     "Properties": {
       "UberGraphFrame": {},
       "Timer Checker": {
         "Handle": 0
       },
       "ShopCameraDetectionVolume_ExecuteUbergraph_Shop_Lighting_RefProperty": {
-        "ObjectName": "TriggerBox Shop_Lighting:PersistentLevel.ShopCameraDetectionVolume",
+        "ObjectName": "TriggerBox'Shop_Lighting:PersistentLevel.ShopCameraDetectionVolume'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.65"
+      },
+      "Shop_ExponentialHeightFog_ExecuteUbergraph_Shop_Lighting_RefProperty": {
+        "ObjectName": "ExponentialHeightFog'Shop_Lighting:PersistentLevel.Shop_ExponentialHeightFog'",
+        "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.27"
       },
       "PrimaryActorTick": {
         "bCanEverTick": true
@@ -1560,57 +1490,68 @@
   {
     "Type": "Actor",
     "Name": "Actor_0",
-    "Outer": "PersistentLevel"
+    "Outer": "PersistentLevel",
+    "Class": "UScriptClass'Actor'"
   },
   {
     "Type": "Actor",
     "Name": "Actor_1",
-    "Outer": "PersistentLevel"
+    "Outer": "PersistentLevel",
+    "Class": "UScriptClass'Actor'"
   },
   {
     "Type": "Actor",
     "Name": "Actor_2",
-    "Outer": "PersistentLevel"
+    "Outer": "PersistentLevel",
+    "Class": "UScriptClass'Actor'"
   },
   {
     "Type": "Actor",
     "Name": "Actor_3",
-    "Outer": "PersistentLevel"
+    "Outer": "PersistentLevel",
+    "Class": "UScriptClass'Actor'"
   },
   {
     "Type": "Actor",
     "Name": "Actor_4",
-    "Outer": "PersistentLevel"
+    "Outer": "PersistentLevel",
+    "Class": "UScriptClass'Actor'"
   },
   {
     "Type": "Actor",
     "Name": "Actor_5",
-    "Outer": "PersistentLevel"
+    "Outer": "PersistentLevel",
+    "Class": "UScriptClass'Actor'"
   },
   {
     "Type": "Actor",
     "Name": "Actor_6",
-    "Outer": "PersistentLevel"
+    "Outer": "PersistentLevel",
+    "Class": "UScriptClass'Actor'"
   },
   {
     "Type": "Actor",
     "Name": "Actor_7",
-    "Outer": "PersistentLevel"
+    "Outer": "PersistentLevel",
+    "Class": "UScriptClass'Actor'"
   },
   {
     "Type": "Actor",
     "Name": "Actor_8",
-    "Outer": "PersistentLevel"
+    "Outer": "PersistentLevel",
+    "Class": "UScriptClass'Actor'"
   },
   {
     "Type": "Actor",
     "Name": "Actor_9",
-    "Outer": "PersistentLevel"
+    "Outer": "PersistentLevel",
+    "Class": "UScriptClass'Actor'"
   },
   {
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "BrushComponent0",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -1742,10 +1683,10 @@
     "BodySetupGuid": "D7979EA04F296BD9CB19FB8DC163C5EE",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 470,
         "SizeOnDisk": 470,
-        "OffsetInFile": "0x20DC1"
+        "OffsetInFile": "0x2093D"
       }
     }
   },
@@ -1753,6 +1694,7 @@
     "Type": "BoxComponent",
     "Name": "CollisionComp",
     "Outer": "ShopCameraDetectionVolume",
+    "Class": "UScriptClass'BoxComponent'",
     "Properties": {
       "BoxExtent": {
         "X": 803.8929,
@@ -1760,7 +1702,7 @@
         "Z": 364.79422
       },
       "AreaClass": {
-        "ObjectName": "Class NavArea_Obstacle",
+        "ObjectName": "Class'NavArea_Obstacle'",
         "ObjectPath": "/Script/NavigationSystem"
       },
       "bGenerateOverlapEvents": false,
@@ -1876,34 +1818,35 @@
     "Name": "BP_AdaptiveShadowMapControllers_2",
     "Outer": "PersistentLevel",
     "Template": "Default__BP_AdaptiveShadowMapControllers_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/GameplayElements/Lighting/BP_AdaptiveShadowMapControllers.BP_AdaptiveShadowMapControllers_C'",
     "Properties": {
       "GMAdaptiveShadowMapControllerSpotlights": {
-        "ObjectName": "GMAdaptiveShadowMapControllerComponent Shop_Lighting:PersistentLevel.BP_AdaptiveShadowMapControllers_2.GMAdaptiveShadowMapControllerSpotlights",
+        "ObjectName": "GMAdaptiveShadowMapControllerComponent'Shop_Lighting:PersistentLevel.BP_AdaptiveShadowMapControllers_2.GMAdaptiveShadowMapControllerSpotlights'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.30"
       },
       "GMAdaptiveShadowMapControllerDirectional": {
-        "ObjectName": "GMAdaptiveShadowMapControllerComponent Shop_Lighting:PersistentLevel.BP_AdaptiveShadowMapControllers_2.GMAdaptiveShadowMapControllerDirectional",
+        "ObjectName": "GMAdaptiveShadowMapControllerComponent'Shop_Lighting:PersistentLevel.BP_AdaptiveShadowMapControllers_2.GMAdaptiveShadowMapControllerDirectional'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.29"
       },
       "DefaultSceneRoot": {
-        "ObjectName": "SceneComponent Shop_Lighting:PersistentLevel.BP_AdaptiveShadowMapControllers_2.DefaultSceneRoot",
+        "ObjectName": "SceneComponent'Shop_Lighting:PersistentLevel.BP_AdaptiveShadowMapControllers_2.DefaultSceneRoot'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.40"
       },
       "RootComponent": {
-        "ObjectName": "SceneComponent Shop_Lighting:PersistentLevel.BP_AdaptiveShadowMapControllers_2.DefaultSceneRoot",
+        "ObjectName": "SceneComponent'Shop_Lighting:PersistentLevel.BP_AdaptiveShadowMapControllers_2.DefaultSceneRoot'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.40"
       },
       "BlueprintCreatedComponents": [
         {
-          "ObjectName": "SceneComponent Shop_Lighting:PersistentLevel.BP_AdaptiveShadowMapControllers_2.DefaultSceneRoot",
+          "ObjectName": "SceneComponent'Shop_Lighting:PersistentLevel.BP_AdaptiveShadowMapControllers_2.DefaultSceneRoot'",
           "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.40"
         },
         {
-          "ObjectName": "GMAdaptiveShadowMapControllerComponent Shop_Lighting:PersistentLevel.BP_AdaptiveShadowMapControllers_2.GMAdaptiveShadowMapControllerDirectional",
+          "ObjectName": "GMAdaptiveShadowMapControllerComponent'Shop_Lighting:PersistentLevel.BP_AdaptiveShadowMapControllers_2.GMAdaptiveShadowMapControllerDirectional'",
           "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.29"
         },
         {
-          "ObjectName": "GMAdaptiveShadowMapControllerComponent Shop_Lighting:PersistentLevel.BP_AdaptiveShadowMapControllers_2.GMAdaptiveShadowMapControllerSpotlights",
+          "ObjectName": "GMAdaptiveShadowMapControllerComponent'Shop_Lighting:PersistentLevel.BP_AdaptiveShadowMapControllers_2.GMAdaptiveShadowMapControllerSpotlights'",
           "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.30"
         }
       ]
@@ -1914,66 +1857,67 @@
     "Name": "BP_Shop_Char_lighting_2",
     "Outer": "PersistentLevel",
     "Template": "Default__BP_Shop_Char_lighting_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/2021Skysystem/BP_Shop_Char_lighting.BP_Shop_Char_lighting_C'",
     "Properties": {
       "GMAdaptiveShadowMapSource": {
-        "ObjectName": "GMAdaptiveShadowMapSourceComponent Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.GMAdaptiveShadowMapSource",
+        "ObjectName": "GMAdaptiveShadowMapSourceComponent'Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.GMAdaptiveShadowMapSource'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.31"
       },
       "Shop_Char_Rim02": {
-        "ObjectName": "SpotLightComponent Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.Shop_Char_Rim02",
+        "ObjectName": "SpotLightComponent'Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.Shop_Char_Rim02'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.53"
       },
       "Shop_Char_Rim01": {
-        "ObjectName": "SpotLightComponent Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.Shop_Char_Rim01",
+        "ObjectName": "SpotLightComponent'Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.Shop_Char_Rim01'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.52"
       },
       "Shop_Char_Key": {
-        "ObjectName": "SpotLightComponent Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.Shop_Char_Key",
+        "ObjectName": "SpotLightComponent'Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.Shop_Char_Key'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.51"
       },
       "Shop_Char_Fill": {
-        "ObjectName": "SpotLightComponent Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.Shop_Char_Fill",
+        "ObjectName": "SpotLightComponent'Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.Shop_Char_Fill'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.49"
       },
       "Shop_Char_FIll_Feet": {
-        "ObjectName": "SpotLightComponent Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.Shop_Char_FIll_Feet",
+        "ObjectName": "SpotLightComponent'Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.Shop_Char_FIll_Feet'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.50"
       },
       "DefaultSceneRoot": {
-        "ObjectName": "SceneComponent Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.DefaultSceneRoot",
+        "ObjectName": "SceneComponent'Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.DefaultSceneRoot'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.41"
       },
       "RootComponent": {
-        "ObjectName": "SceneComponent Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.DefaultSceneRoot",
+        "ObjectName": "SceneComponent'Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.DefaultSceneRoot'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.41"
       },
       "BlueprintCreatedComponents": [
         {
-          "ObjectName": "SceneComponent Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.DefaultSceneRoot",
+          "ObjectName": "SceneComponent'Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.DefaultSceneRoot'",
           "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.41"
         },
         {
-          "ObjectName": "SpotLightComponent Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.Shop_Char_FIll_Feet",
+          "ObjectName": "SpotLightComponent'Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.Shop_Char_FIll_Feet'",
           "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.50"
         },
         {
-          "ObjectName": "SpotLightComponent Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.Shop_Char_Fill",
+          "ObjectName": "SpotLightComponent'Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.Shop_Char_Fill'",
           "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.49"
         },
         {
-          "ObjectName": "SpotLightComponent Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.Shop_Char_Key",
+          "ObjectName": "SpotLightComponent'Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.Shop_Char_Key'",
           "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.51"
         },
         {
-          "ObjectName": "GMAdaptiveShadowMapSourceComponent Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.GMAdaptiveShadowMapSource",
+          "ObjectName": "GMAdaptiveShadowMapSourceComponent'Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.GMAdaptiveShadowMapSource'",
           "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.31"
         },
         {
-          "ObjectName": "SpotLightComponent Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.Shop_Char_Rim01",
+          "ObjectName": "SpotLightComponent'Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.Shop_Char_Rim01'",
           "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.52"
         },
         {
-          "ObjectName": "SpotLightComponent Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.Shop_Char_Rim02",
+          "ObjectName": "SpotLightComponent'Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.Shop_Char_Rim02'",
           "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.53"
         }
       ]
@@ -1984,98 +1928,99 @@
     "Name": "BP_Shop_Lighting",
     "Outer": "PersistentLevel",
     "Template": "Default__BP_Shop_Lighting_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/2021Skysystem/BP_Shop_Lighting.BP_Shop_Lighting_C'",
     "Properties": {
       "Tree_Key4": {
-        "ObjectName": "SpotLightComponent Shop_Lighting:PersistentLevel.BP_Shop_Lighting.Tree_Key4",
+        "ObjectName": "SpotLightComponent'Shop_Lighting:PersistentLevel.BP_Shop_Lighting.Tree_Key4'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.60"
       },
       "Tree_Key3": {
-        "ObjectName": "SpotLightComponent Shop_Lighting:PersistentLevel.BP_Shop_Lighting.Tree_Key3",
+        "ObjectName": "SpotLightComponent'Shop_Lighting:PersistentLevel.BP_Shop_Lighting.Tree_Key3'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.59"
       },
       "Tree_Key2": {
-        "ObjectName": "SpotLightComponent Shop_Lighting:PersistentLevel.BP_Shop_Lighting.Tree_Key2",
+        "ObjectName": "SpotLightComponent'Shop_Lighting:PersistentLevel.BP_Shop_Lighting.Tree_Key2'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.58"
       },
       "Tree_Key1": {
-        "ObjectName": "SpotLightComponent Shop_Lighting:PersistentLevel.BP_Shop_Lighting.Tree_Key1",
+        "ObjectName": "SpotLightComponent'Shop_Lighting:PersistentLevel.BP_Shop_Lighting.Tree_Key1'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.57"
       },
       "Shop_SkyLight": {
-        "ObjectName": "SkyLightComponent Shop_Lighting:PersistentLevel.BP_Shop_Lighting.Shop_SkyLight",
+        "ObjectName": "SkyLightComponent'Shop_Lighting:PersistentLevel.BP_Shop_Lighting.Shop_SkyLight'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.45"
       },
       "GMAdaptiveShadowMapSource": {
-        "ObjectName": "GMAdaptiveShadowMapSourceComponent Shop_Lighting:PersistentLevel.BP_Shop_Lighting.GMAdaptiveShadowMapSource",
+        "ObjectName": "GMAdaptiveShadowMapSourceComponent'Shop_Lighting:PersistentLevel.BP_Shop_Lighting.GMAdaptiveShadowMapSource'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.32"
       },
       "Shop - Moon Key": {
-        "ObjectName": "DirectionalLightComponent Shop_Lighting:PersistentLevel.BP_Shop_Lighting.Shop - Moon Key",
+        "ObjectName": "DirectionalLightComponent'Shop_Lighting:PersistentLevel.BP_Shop_Lighting.Shop - Moon Key'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.24"
       },
       "RockFill": {
-        "ObjectName": "SpotLightComponent Shop_Lighting:PersistentLevel.BP_Shop_Lighting.RockFill",
+        "ObjectName": "SpotLightComponent'Shop_Lighting:PersistentLevel.BP_Shop_Lighting.RockFill'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.55"
       },
       "Tree_Key": {
-        "ObjectName": "SpotLightComponent Shop_Lighting:PersistentLevel.BP_Shop_Lighting.Tree_Key",
+        "ObjectName": "SpotLightComponent'Shop_Lighting:PersistentLevel.BP_Shop_Lighting.Tree_Key'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.56"
       },
       "MoonKey": {
-        "ObjectName": "SpotLightComponent Shop_Lighting:PersistentLevel.BP_Shop_Lighting.MoonKey",
+        "ObjectName": "SpotLightComponent'Shop_Lighting:PersistentLevel.BP_Shop_Lighting.MoonKey'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.54"
       },
       "DefaultSceneRoot": {
-        "ObjectName": "SceneComponent Shop_Lighting:PersistentLevel.BP_Shop_Lighting.DefaultSceneRoot",
+        "ObjectName": "SceneComponent'Shop_Lighting:PersistentLevel.BP_Shop_Lighting.DefaultSceneRoot'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.42"
       },
       "RootComponent": {
-        "ObjectName": "SceneComponent Shop_Lighting:PersistentLevel.BP_Shop_Lighting.DefaultSceneRoot",
+        "ObjectName": "SceneComponent'Shop_Lighting:PersistentLevel.BP_Shop_Lighting.DefaultSceneRoot'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.42"
       },
       "BlueprintCreatedComponents": [
         {
-          "ObjectName": "SceneComponent Shop_Lighting:PersistentLevel.BP_Shop_Lighting.DefaultSceneRoot",
+          "ObjectName": "SceneComponent'Shop_Lighting:PersistentLevel.BP_Shop_Lighting.DefaultSceneRoot'",
           "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.42"
         },
         {
-          "ObjectName": "SpotLightComponent Shop_Lighting:PersistentLevel.BP_Shop_Lighting.MoonKey",
+          "ObjectName": "SpotLightComponent'Shop_Lighting:PersistentLevel.BP_Shop_Lighting.MoonKey'",
           "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.54"
         },
         {
-          "ObjectName": "SpotLightComponent Shop_Lighting:PersistentLevel.BP_Shop_Lighting.Tree_Key",
+          "ObjectName": "SpotLightComponent'Shop_Lighting:PersistentLevel.BP_Shop_Lighting.Tree_Key'",
           "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.56"
         },
         {
-          "ObjectName": "SpotLightComponent Shop_Lighting:PersistentLevel.BP_Shop_Lighting.RockFill",
+          "ObjectName": "SpotLightComponent'Shop_Lighting:PersistentLevel.BP_Shop_Lighting.RockFill'",
           "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.55"
         },
         {
-          "ObjectName": "DirectionalLightComponent Shop_Lighting:PersistentLevel.BP_Shop_Lighting.Shop - Moon Key",
+          "ObjectName": "DirectionalLightComponent'Shop_Lighting:PersistentLevel.BP_Shop_Lighting.Shop - Moon Key'",
           "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.24"
         },
         {
-          "ObjectName": "GMAdaptiveShadowMapSourceComponent Shop_Lighting:PersistentLevel.BP_Shop_Lighting.GMAdaptiveShadowMapSource",
+          "ObjectName": "GMAdaptiveShadowMapSourceComponent'Shop_Lighting:PersistentLevel.BP_Shop_Lighting.GMAdaptiveShadowMapSource'",
           "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.32"
         },
         {
-          "ObjectName": "SkyLightComponent Shop_Lighting:PersistentLevel.BP_Shop_Lighting.Shop_SkyLight",
+          "ObjectName": "SkyLightComponent'Shop_Lighting:PersistentLevel.BP_Shop_Lighting.Shop_SkyLight'",
           "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.45"
         },
         {
-          "ObjectName": "SpotLightComponent Shop_Lighting:PersistentLevel.BP_Shop_Lighting.Tree_Key1",
+          "ObjectName": "SpotLightComponent'Shop_Lighting:PersistentLevel.BP_Shop_Lighting.Tree_Key1'",
           "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.57"
         },
         {
-          "ObjectName": "SpotLightComponent Shop_Lighting:PersistentLevel.BP_Shop_Lighting.Tree_Key2",
+          "ObjectName": "SpotLightComponent'Shop_Lighting:PersistentLevel.BP_Shop_Lighting.Tree_Key2'",
           "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.58"
         },
         {
-          "ObjectName": "SpotLightComponent Shop_Lighting:PersistentLevel.BP_Shop_Lighting.Tree_Key3",
+          "ObjectName": "SpotLightComponent'Shop_Lighting:PersistentLevel.BP_Shop_Lighting.Tree_Key3'",
           "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.59"
         },
         {
-          "ObjectName": "SpotLightComponent Shop_Lighting:PersistentLevel.BP_Shop_Lighting.Tree_Key4",
+          "ObjectName": "SpotLightComponent'Shop_Lighting:PersistentLevel.BP_Shop_Lighting.Tree_Key4'",
           "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.60"
         }
       ]
@@ -2086,17 +2031,18 @@
     "Name": "BP_Sky_Sphere_Shop",
     "Outer": "PersistentLevel",
     "Template": "Default__BP_Sky_Sphere_C",
+    "Class": "BlueprintGeneratedClass'Engine/Content/EngineSky/BP_Sky_Sphere.BP_Sky_Sphere_C'",
     "Properties": {
       "SkySphereMesh": {
-        "ObjectName": "StaticMeshComponent Shop_Lighting:PersistentLevel.BP_Sky_Sphere_Shop.SkySphereMesh",
+        "ObjectName": "StaticMeshComponent'Shop_Lighting:PersistentLevel.BP_Sky_Sphere_Shop.SkySphereMesh'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.63"
       },
       "Base": {
-        "ObjectName": "SceneComponent Shop_Lighting:PersistentLevel.BP_Sky_Sphere_Shop.Base",
+        "ObjectName": "SceneComponent'Shop_Lighting:PersistentLevel.BP_Sky_Sphere_Shop.Base'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.43"
       },
       "Sky material": {
-        "ObjectName": "MaterialInstanceDynamic Shop_Lighting:PersistentLevel.BP_Sky_Sphere_Shop.SkySphereMesh.MaterialInstanceDynamic_0",
+        "ObjectName": "MaterialInstanceDynamic'Shop_Lighting:PersistentLevel.BP_Sky_Sphere_Shop.SkySphereMesh.MaterialInstanceDynamic_0'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.35"
       },
       "Colors determined by sun position": false,
@@ -2129,7 +2075,7 @@
       "Stars brightness": 0.005,
       "bHidden": true,
       "RootComponent": {
-        "ObjectName": "SceneComponent Shop_Lighting:PersistentLevel.BP_Sky_Sphere_Shop.Base",
+        "ObjectName": "SceneComponent'Shop_Lighting:PersistentLevel.BP_Sky_Sphere_Shop.Base'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.43"
       },
       "Tags": [
@@ -2137,11 +2083,11 @@
       ],
       "BlueprintCreatedComponents": [
         {
-          "ObjectName": "SceneComponent Shop_Lighting:PersistentLevel.BP_Sky_Sphere_Shop.Base",
+          "ObjectName": "SceneComponent'Shop_Lighting:PersistentLevel.BP_Sky_Sphere_Shop.Base'",
           "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.43"
         },
         {
-          "ObjectName": "StaticMeshComponent Shop_Lighting:PersistentLevel.BP_Sky_Sphere_Shop.SkySphereMesh",
+          "ObjectName": "StaticMeshComponent'Shop_Lighting:PersistentLevel.BP_Sky_Sphere_Shop.SkySphereMesh'",
           "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.63"
         }
       ]
@@ -2151,13 +2097,14 @@
     "Type": "BrushComponent",
     "Name": "BrushComponent0",
     "Outer": "Shop_PPV",
+    "Class": "UScriptClass'BrushComponent'",
     "Properties": {
       "Brush": {
-        "ObjectName": "Model Shop_Lighting:PersistentLevel.Shop_PPV.Model_0",
+        "ObjectName": "Model'Shop_Lighting:PersistentLevel.Shop_PPV.Model_0'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.37"
       },
       "BrushBodySetup": {
-        "ObjectName": "BodySetup Shop_Lighting:PersistentLevel.Shop_PPV.BrushComponent0.BodySetup_0",
+        "ObjectName": "BodySetup'Shop_Lighting:PersistentLevel.Shop_PPV.BrushComponent0.BodySetup_0'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.17"
       },
       "DetailLevelBeforeCastShadows": "DM_MAX",
@@ -2181,9 +2128,10 @@
     "Name": "Shop - Moon Key",
     "Outer": "BP_Shop_Lighting",
     "Template": "Shop - Moon Key_GEN_VARIABLE",
+    "Class": "UScriptClass'DirectionalLightComponent'",
     "Properties": {
       "AttachParent": {
-        "ObjectName": "SceneComponent Shop_Lighting:PersistentLevel.BP_Shop_Lighting.DefaultSceneRoot",
+        "ObjectName": "SceneComponent'Shop_Lighting:PersistentLevel.BP_Shop_Lighting.DefaultSceneRoot'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.42"
       },
       "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
@@ -2193,10 +2141,11 @@
     "Type": "DrawSphereComponent",
     "Name": "DrawRadius0",
     "Outer": "SphereReflectionCapture_1",
+    "Class": "UScriptClass'DrawSphereComponent'",
     "Properties": {
       "SphereRadius": 2220.1904,
       "AreaClass": {
-        "ObjectName": "Class NavArea_Obstacle",
+        "ObjectName": "Class'NavArea_Obstacle'",
         "ObjectPath": "/Script/NavigationSystem"
       },
       "DetailLevelBeforeCastShadows": "DM_MAX",
@@ -2204,7 +2153,7 @@
         "MaxAngularVelocity": 3599.9998
       },
       "AttachParent": {
-        "ObjectName": "SphereReflectionCaptureComponent Shop_Lighting:PersistentLevel.SphereReflectionCapture_1.NewReflectionComponent",
+        "ObjectName": "SphereReflectionCaptureComponent'Shop_Lighting:PersistentLevel.SphereReflectionCapture_1.NewReflectionComponent'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.47"
       }
     }
@@ -2213,9 +2162,10 @@
     "Type": "DrawSphereComponent",
     "Name": "DrawRadius1",
     "Outer": "SphereReflectionCapture_1",
+    "Class": "UScriptClass'DrawSphereComponent'",
     "Properties": {
       "AreaClass": {
-        "ObjectName": "Class NavArea_Obstacle",
+        "ObjectName": "Class'NavArea_Obstacle'",
         "ObjectPath": "/Script/NavigationSystem"
       },
       "DetailLevelBeforeCastShadows": "DM_MAX",
@@ -2223,7 +2173,7 @@
         "MaxAngularVelocity": 3599.9998
       },
       "AttachParent": {
-        "ObjectName": "SphereReflectionCaptureComponent Shop_Lighting:PersistentLevel.SphereReflectionCapture_1.NewReflectionComponent",
+        "ObjectName": "SphereReflectionCaptureComponent'Shop_Lighting:PersistentLevel.SphereReflectionCapture_1.NewReflectionComponent'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.47"
       }
     }
@@ -2232,13 +2182,14 @@
     "Type": "ExponentialHeightFog",
     "Name": "Shop_ExponentialHeightFog",
     "Outer": "PersistentLevel",
+    "Class": "UScriptClass'ExponentialHeightFog'",
     "Properties": {
       "Component": {
-        "ObjectName": "ExponentialHeightFogComponent Shop_Lighting:PersistentLevel.Shop_ExponentialHeightFog.HeightFogComponent0",
+        "ObjectName": "ExponentialHeightFogComponent'Shop_Lighting:PersistentLevel.Shop_ExponentialHeightFog.HeightFogComponent0'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.28"
       },
       "RootComponent": {
-        "ObjectName": "ExponentialHeightFogComponent Shop_Lighting:PersistentLevel.Shop_ExponentialHeightFog.HeightFogComponent0",
+        "ObjectName": "ExponentialHeightFogComponent'Shop_Lighting:PersistentLevel.Shop_ExponentialHeightFog.HeightFogComponent0'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.28"
       },
       "Tags": [
@@ -2250,6 +2201,7 @@
     "Type": "ExponentialHeightFogComponent",
     "Name": "HeightFogComponent0",
     "Outer": "Shop_ExponentialHeightFog",
+    "Class": "UScriptClass'ExponentialHeightFogComponent'",
     "Properties": {
       "FogDensity": 1.0,
       "FogHeightFalloff": 5.143601,
@@ -2332,9 +2284,10 @@
     "Name": "GMAdaptiveShadowMapControllerDirectional",
     "Outer": "BP_AdaptiveShadowMapControllers_2",
     "Template": "GMAdaptiveShadowMapControllerDirectional_GEN_VARIABLE",
+    "Class": "UScriptClass'GMAdaptiveShadowMapControllerComponent'",
     "Properties": {
       "AttachParent": {
-        "ObjectName": "SceneComponent Shop_Lighting:PersistentLevel.BP_AdaptiveShadowMapControllers_2.DefaultSceneRoot",
+        "ObjectName": "SceneComponent'Shop_Lighting:PersistentLevel.BP_AdaptiveShadowMapControllers_2.DefaultSceneRoot'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.40"
       },
       "UCSSerializationIndex": 0,
@@ -2347,9 +2300,10 @@
     "Name": "GMAdaptiveShadowMapControllerSpotlights",
     "Outer": "BP_AdaptiveShadowMapControllers_2",
     "Template": "GMAdaptiveShadowMapControllerSpotlights_GEN_VARIABLE",
+    "Class": "UScriptClass'GMAdaptiveShadowMapControllerComponent'",
     "Properties": {
       "AttachParent": {
-        "ObjectName": "SceneComponent Shop_Lighting:PersistentLevel.BP_AdaptiveShadowMapControllers_2.DefaultSceneRoot",
+        "ObjectName": "SceneComponent'Shop_Lighting:PersistentLevel.BP_AdaptiveShadowMapControllers_2.DefaultSceneRoot'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.40"
       },
       "UCSSerializationIndex": 0,
@@ -2362,9 +2316,10 @@
     "Name": "GMAdaptiveShadowMapSource",
     "Outer": "BP_Shop_Char_lighting_2",
     "Template": "GMAdaptiveShadowMapSource_GEN_VARIABLE",
+    "Class": "UScriptClass'GMAdaptiveShadowMapSourceComponent'",
     "Properties": {
       "AttachParent": {
-        "ObjectName": "SpotLightComponent Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.Shop_Char_Key",
+        "ObjectName": "SpotLightComponent'Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.Shop_Char_Key'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.51"
       },
       "UCSSerializationIndex": 0,
@@ -2377,9 +2332,10 @@
     "Name": "GMAdaptiveShadowMapSource",
     "Outer": "BP_Shop_Lighting",
     "Template": "GMAdaptiveShadowMapSource_GEN_VARIABLE",
+    "Class": "UScriptClass'GMAdaptiveShadowMapSourceComponent'",
     "Properties": {
       "AttachParent": {
-        "ObjectName": "DirectionalLightComponent Shop_Lighting:PersistentLevel.BP_Shop_Lighting.Shop - Moon Key",
+        "ObjectName": "DirectionalLightComponent'Shop_Lighting:PersistentLevel.BP_Shop_Lighting.Shop - Moon Key'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.24"
       },
       "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
@@ -2389,113 +2345,114 @@
     "Type": "Level",
     "Name": "PersistentLevel",
     "Outer": "Shop_Lighting",
+    "Class": "UScriptClass'Level'",
     "Properties": {
       "Model": {
-        "ObjectName": "Model Shop_Lighting:PersistentLevel.Model_0",
+        "ObjectName": "Model'Shop_Lighting:PersistentLevel.Model_0'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.36"
       },
       "LevelScriptActor": {
-        "ObjectName": "Shop_Lighting_C Shop_Lighting:PersistentLevel.Shop_Lighting_C_8",
+        "ObjectName": "Shop_Lighting_C'Shop_Lighting:PersistentLevel.Shop_Lighting_C_0'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.44"
       },
       "LevelBuildDataId": "62BD6609-4121EC15-22824B92-68965C53",
       "MapBuildData": {
-        "ObjectName": "MapBuildDataRegistry Shop_Lighting_BuiltData",
+        "ObjectName": "MapBuildDataRegistry'Shop_Lighting_BuiltData'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting_BuiltData.0"
       },
       "WorldSettings": {
-        "ObjectName": "WorldSettings Shop_Lighting:PersistentLevel.WorldSettings",
+        "ObjectName": "WorldSettings'Shop_Lighting:PersistentLevel.WorldSettings'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.67"
       }
     },
     "Actors": [
       {
-        "ObjectName": "WorldSettings Shop_Lighting:PersistentLevel.WorldSettings",
+        "ObjectName": "WorldSettings'Shop_Lighting:PersistentLevel.WorldSettings'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.67"
       },
       null,
       {
-        "ObjectName": "Actor Shop_Lighting:PersistentLevel.Actor_0",
+        "ObjectName": "Actor'Shop_Lighting:PersistentLevel.Actor_0'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.7"
       },
       {
-        "ObjectName": "Actor Shop_Lighting:PersistentLevel.Actor_1",
+        "ObjectName": "Actor'Shop_Lighting:PersistentLevel.Actor_1'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.8"
       },
       {
-        "ObjectName": "Actor Shop_Lighting:PersistentLevel.Actor_2",
+        "ObjectName": "Actor'Shop_Lighting:PersistentLevel.Actor_2'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.9"
       },
       {
-        "ObjectName": "Actor Shop_Lighting:PersistentLevel.Actor_3",
+        "ObjectName": "Actor'Shop_Lighting:PersistentLevel.Actor_3'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.10"
       },
       {
-        "ObjectName": "Actor Shop_Lighting:PersistentLevel.Actor_4",
+        "ObjectName": "Actor'Shop_Lighting:PersistentLevel.Actor_4'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.11"
       },
       {
-        "ObjectName": "Actor Shop_Lighting:PersistentLevel.Actor_5",
+        "ObjectName": "Actor'Shop_Lighting:PersistentLevel.Actor_5'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.12"
       },
       {
-        "ObjectName": "Actor Shop_Lighting:PersistentLevel.Actor_6",
+        "ObjectName": "Actor'Shop_Lighting:PersistentLevel.Actor_6'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.13"
       },
       {
-        "ObjectName": "Actor Shop_Lighting:PersistentLevel.Actor_7",
+        "ObjectName": "Actor'Shop_Lighting:PersistentLevel.Actor_7'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.14"
       },
       {
-        "ObjectName": "Actor Shop_Lighting:PersistentLevel.Actor_8",
+        "ObjectName": "Actor'Shop_Lighting:PersistentLevel.Actor_8'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.15"
       },
       {
-        "ObjectName": "Actor Shop_Lighting:PersistentLevel.Actor_9",
+        "ObjectName": "Actor'Shop_Lighting:PersistentLevel.Actor_9'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.16"
       },
       {
-        "ObjectName": "BP_Sky_Sphere_C Shop_Lighting:PersistentLevel.BP_Sky_Sphere_Shop",
+        "ObjectName": "BP_Sky_Sphere_C'Shop_Lighting:PersistentLevel.BP_Sky_Sphere_Shop'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.22"
       },
       {
-        "ObjectName": "PostProcessVolume Shop_Lighting:PersistentLevel.Shop_PPV",
+        "ObjectName": "PostProcessVolume'Shop_Lighting:PersistentLevel.Shop_PPV'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.39"
       },
       {
-        "ObjectName": "BP_AdaptiveShadowMapControllers_C Shop_Lighting:PersistentLevel.BP_AdaptiveShadowMapControllers_2",
+        "ObjectName": "BP_AdaptiveShadowMapControllers_C'Shop_Lighting:PersistentLevel.BP_AdaptiveShadowMapControllers_2'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.19"
       },
       {
-        "ObjectName": "StaticMeshActor Shop_Lighting:PersistentLevel.DarknessSphere",
+        "ObjectName": "StaticMeshActor'Shop_Lighting:PersistentLevel.DarknessSphere'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.62"
       },
       {
-        "ObjectName": "ExponentialHeightFog Shop_Lighting:PersistentLevel.Shop_ExponentialHeightFog",
+        "ObjectName": "ExponentialHeightFog'Shop_Lighting:PersistentLevel.Shop_ExponentialHeightFog'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.27"
       },
       {
-        "ObjectName": "SphereReflectionCapture Shop_Lighting:PersistentLevel.SphereReflectionCapture_1",
+        "ObjectName": "SphereReflectionCapture'Shop_Lighting:PersistentLevel.SphereReflectionCapture_1'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.46"
       },
       {
-        "ObjectName": "BP_Shop_Lighting_C Shop_Lighting:PersistentLevel.BP_Shop_Lighting",
+        "ObjectName": "BP_Shop_Lighting_C'Shop_Lighting:PersistentLevel.BP_Shop_Lighting'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.21"
       },
       {
-        "ObjectName": "TriggerBox Shop_Lighting:PersistentLevel.ShopCameraDetectionVolume",
+        "ObjectName": "TriggerBox'Shop_Lighting:PersistentLevel.ShopCameraDetectionVolume'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.65"
       },
       {
-        "ObjectName": "SpotLight Shop_Lighting:PersistentLevel.ShadowController",
+        "ObjectName": "SpotLight'Shop_Lighting:PersistentLevel.ShadowController'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.48"
       },
       {
-        "ObjectName": "BP_Shop_Char_lighting_C Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2",
+        "ObjectName": "BP_Shop_Char_lighting_C'Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.20"
       },
       {
-        "ObjectName": "Shop_Lighting_C Shop_Lighting:PersistentLevel.Shop_Lighting_C_8",
+        "ObjectName": "Shop_Lighting_C'Shop_Lighting:PersistentLevel.Shop_Lighting_C_0'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.44"
       }
     ],
@@ -2509,12 +2466,12 @@
       "Portal": ""
     },
     "Model": {
-      "ObjectName": "Model Shop_Lighting:PersistentLevel.Model_0",
+      "ObjectName": "Model'Shop_Lighting:PersistentLevel.Model_0'",
       "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.36"
     },
     "ModelComponents": [],
     "LevelScriptActor": {
-      "ObjectName": "Shop_Lighting_C Shop_Lighting:PersistentLevel.Shop_Lighting_C_8",
+      "ObjectName": "Shop_Lighting_C'Shop_Lighting:PersistentLevel.Shop_Lighting_C_0'",
       "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.44"
     },
     "NavListStart": null,
@@ -2555,6 +2512,7 @@
     "Type": "LevelStreamingDynamic",
     "Name": "LevelStreamingDynamic_0",
     "Outer": "Shop_Lighting",
+    "Class": "UScriptClass'LevelStreamingDynamic'",
     "Properties": {
       "WorldAsset": {
         "AssetPathName": "/Game/Maps/Shop/Shop_Static.Shop_Static",
@@ -2573,9 +2531,10 @@
     "Type": "MaterialInstanceDynamic",
     "Name": "MaterialInstanceDynamic_0",
     "Outer": "SkySphereMesh",
+    "Class": "UScriptClass'MaterialInstanceDynamic'",
     "Properties": {
       "Parent": {
-        "ObjectName": "Material M_Sky_Panning_Clouds2",
+        "ObjectName": "Material'M_Sky_Panning_Clouds2'",
         "ObjectPath": "Engine/Content/EngineSky/M_Sky_Panning_Clouds2.0"
       },
       "ScalarParameterValues": [
@@ -2728,15 +2687,15 @@
       ],
       "CachedReferencedTextures": [
         {
-          "ObjectName": "Texture2D T_Sky_Clouds_M",
+          "ObjectName": "Texture2D'T_Sky_Clouds_M'",
           "ObjectPath": "Engine/Content/EngineSky/T_Sky_Clouds_M.0"
         },
         {
-          "ObjectName": "Texture2D T_Sky_Stars",
+          "ObjectName": "Texture2D'T_Sky_Stars'",
           "ObjectPath": "Engine/Content/EngineSky/T_Sky_Stars.0"
         },
         {
-          "ObjectName": "Texture2D T_Sky_Blue",
+          "ObjectName": "Texture2D'T_Sky_Blue'",
           "ObjectPath": "Engine/Content/EngineSky/T_Sky_Blue.0"
         }
       ]
@@ -2746,6 +2705,7 @@
     "Type": "Model",
     "Name": "Model_0",
     "Outer": "PersistentLevel",
+    "Class": "UScriptClass'Model'",
     "Bounds": {
       "Origin": {
         "X": 0.0,
@@ -2774,6 +2734,7 @@
     "Type": "Model",
     "Name": "Model_0",
     "Outer": "Shop_PPV",
+    "Class": "UScriptClass'Model'",
     "Bounds": {
       "Origin": {
         "X": 0.0,
@@ -3198,6 +3159,7 @@
     "Type": "NavigationSystemModuleConfig",
     "Name": "NavigationSystemModuleConfig_0",
     "Outer": "WorldSettings",
+    "Class": "UScriptClass'NavigationSystemModuleConfig'",
     "Properties": {
       "bCreateOnClient": true,
       "bAutoSpawnMissingNavData": true,
@@ -3212,6 +3174,7 @@
     "Type": "PostProcessVolume",
     "Name": "Shop_PPV",
     "Outer": "PersistentLevel",
+    "Class": "UScriptClass'PostProcessVolume'",
     "Properties": {
       "Settings": {
         "bOverride_TemperatureType": true,
@@ -3288,7 +3251,7 @@
         "VignetteIntensity": 0.304762,
         "AmbientOcclusionRadius": 28.0,
         "ColorGradingLUT": {
-          "ObjectName": "Texture2D NeutrralLut",
+          "ObjectName": "Texture2D'NeutrralLut'",
           "ObjectPath": "DeadByDaylight/Content/Effects/Textures/NeutrralLut.0"
         },
         "DepthOfFieldFocalDistance": 250.0,
@@ -3301,17 +3264,17 @@
       "Priority": 999.0,
       "BrushType": "Brush_Add",
       "Brush": {
-        "ObjectName": "Model Shop_Lighting:PersistentLevel.Shop_PPV.Model_0",
+        "ObjectName": "Model'Shop_Lighting:PersistentLevel.Shop_PPV.Model_0'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.37"
       },
       "BrushComponent": {
-        "ObjectName": "BrushComponent Shop_Lighting:PersistentLevel.Shop_PPV.BrushComponent0",
+        "ObjectName": "BrushComponent'Shop_Lighting:PersistentLevel.Shop_PPV.BrushComponent0'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.23"
       },
       "bHidden": false,
       "SpawnCollisionHandlingMethod": "ESpawnActorCollisionHandlingMethod::AlwaysSpawn",
       "RootComponent": {
-        "ObjectName": "BrushComponent Shop_Lighting:PersistentLevel.Shop_PPV.BrushComponent0",
+        "ObjectName": "BrushComponent'Shop_Lighting:PersistentLevel.Shop_PPV.BrushComponent0'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.23"
       }
     }
@@ -3321,6 +3284,7 @@
     "Name": "DefaultSceneRoot",
     "Outer": "BP_AdaptiveShadowMapControllers_2",
     "Template": "DefaultSceneRoot_GEN_VARIABLE",
+    "Class": "UScriptClass'SceneComponent'",
     "Properties": {
       "RelativeLocation": {
         "X": 5764.1626,
@@ -3333,7 +3297,7 @@
       "UCSModifiedProperties": [
         {
           "MemberParent": {
-            "ObjectName": "Class SceneComponent",
+            "ObjectName": "Class'SceneComponent'",
             "ObjectPath": "/Script/Engine"
           },
           "MemberName": "RelativeLocation",
@@ -3347,6 +3311,7 @@
     "Name": "DefaultSceneRoot",
     "Outer": "BP_Shop_Char_lighting_2",
     "Template": "DefaultSceneRoot_GEN_VARIABLE",
+    "Class": "UScriptClass'SceneComponent'",
     "Properties": {
       "RelativeLocation": {
         "X": 5613.5967,
@@ -3359,7 +3324,7 @@
       "UCSModifiedProperties": [
         {
           "MemberParent": {
-            "ObjectName": "Class SceneComponent",
+            "ObjectName": "Class'SceneComponent'",
             "ObjectPath": "/Script/Engine"
           },
           "MemberName": "RelativeLocation",
@@ -3373,6 +3338,7 @@
     "Name": "DefaultSceneRoot",
     "Outer": "BP_Shop_Lighting",
     "Template": "DefaultSceneRoot_GEN_VARIABLE",
+    "Class": "UScriptClass'SceneComponent'",
     "Properties": {
       "RelativeLocation": {
         "X": 5479.3496,
@@ -3388,7 +3354,7 @@
       "UCSModifiedProperties": [
         {
           "MemberParent": {
-            "ObjectName": "Class SceneComponent",
+            "ObjectName": "Class'SceneComponent'",
             "ObjectPath": "/Script/Engine"
           },
           "MemberName": "RelativeLocation",
@@ -3402,6 +3368,7 @@
     "Name": "Base",
     "Outer": "BP_Sky_Sphere_Shop",
     "Template": "SceneComponent_1",
+    "Class": "UScriptClass'SceneComponent'",
     "Properties": {
       "RelativeLocation": {
         "X": 5611.6445,
@@ -3414,7 +3381,7 @@
       "UCSModifiedProperties": [
         {
           "MemberParent": {
-            "ObjectName": "Class SceneComponent",
+            "ObjectName": "Class'SceneComponent'",
             "ObjectPath": "/Script/Engine"
           },
           "MemberName": "RelativeLocation",
@@ -3425,19 +3392,21 @@
   },
   {
     "Type": "Shop_Lighting_C",
-    "Name": "Shop_Lighting_C_8",
+    "Name": "Shop_Lighting_C_0",
     "Outer": "PersistentLevel",
-    "Template": "Default__Shop_Lighting_C"
+    "Template": "Default__Shop_Lighting_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Maps/Shop/Shop_Lighting.Shop_Lighting_C'"
   },
   {
     "Type": "SkyLightComponent",
     "Name": "Shop_SkyLight",
     "Outer": "BP_Shop_Lighting",
     "Template": "Shop_SkyLight_GEN_VARIABLE",
+    "Class": "UScriptClass'SkyLightComponent'",
     "Properties": {
       "bLowerHemisphereIsBlack": false,
       "AttachParent": {
-        "ObjectName": "SceneComponent Shop_Lighting:PersistentLevel.BP_Shop_Lighting.DefaultSceneRoot",
+        "ObjectName": "SceneComponent'Shop_Lighting:PersistentLevel.BP_Shop_Lighting.DefaultSceneRoot'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.42"
       },
       "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
@@ -3447,17 +3416,18 @@
     "Type": "SphereReflectionCapture",
     "Name": "SphereReflectionCapture_1",
     "Outer": "PersistentLevel",
+    "Class": "UScriptClass'SphereReflectionCapture'",
     "Properties": {
       "DrawCaptureRadius": {
-        "ObjectName": "DrawSphereComponent Shop_Lighting:PersistentLevel.SphereReflectionCapture_1.DrawRadius1",
+        "ObjectName": "DrawSphereComponent'Shop_Lighting:PersistentLevel.SphereReflectionCapture_1.DrawRadius1'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.26"
       },
       "CaptureComponent": {
-        "ObjectName": "SphereReflectionCaptureComponent Shop_Lighting:PersistentLevel.SphereReflectionCapture_1.NewReflectionComponent",
+        "ObjectName": "SphereReflectionCaptureComponent'Shop_Lighting:PersistentLevel.SphereReflectionCapture_1.NewReflectionComponent'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.47"
       },
       "RootComponent": {
-        "ObjectName": "SphereReflectionCaptureComponent Shop_Lighting:PersistentLevel.SphereReflectionCapture_1.NewReflectionComponent",
+        "ObjectName": "SphereReflectionCaptureComponent'Shop_Lighting:PersistentLevel.SphereReflectionCapture_1.NewReflectionComponent'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.47"
       }
     }
@@ -3466,16 +3436,17 @@
     "Type": "SphereReflectionCaptureComponent",
     "Name": "NewReflectionComponent",
     "Outer": "SphereReflectionCapture_1",
+    "Class": "UScriptClass'SphereReflectionCaptureComponent'",
     "Properties": {
       "InfluenceRadius": 2220.1904,
       "PreviewInfluenceRadius": {
-        "ObjectName": "DrawSphereComponent Shop_Lighting:PersistentLevel.SphereReflectionCapture_1.DrawRadius0",
+        "ObjectName": "DrawSphereComponent'Shop_Lighting:PersistentLevel.SphereReflectionCapture_1.DrawRadius0'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.25"
       },
       "CaptureOffsetComponent": null,
       "ReflectionSourceType": "EReflectionSourceType::SpecifiedCubemap",
       "Cubemap": {
-        "ObjectName": "TextureCube T_COM_Shop",
+        "ObjectName": "TextureCube'T_COM_Shop'",
         "ObjectPath": "DeadByDaylight/Content/Textures/Lighting/T_COM_Shop.0"
       },
       "Brightness": 20.0,
@@ -3492,17 +3463,18 @@
     "Type": "SpotLight",
     "Name": "ShadowController",
     "Outer": "PersistentLevel",
+    "Class": "UScriptClass'SpotLight'",
     "Properties": {
       "SpotLightComponent": {
-        "ObjectName": "SpotLightComponent Shop_Lighting:PersistentLevel.ShadowController.LightComponent0",
+        "ObjectName": "SpotLightComponent'Shop_Lighting:PersistentLevel.ShadowController.LightComponent0'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.61"
       },
       "LightComponent": {
-        "ObjectName": "SpotLightComponent Shop_Lighting:PersistentLevel.ShadowController.LightComponent0",
+        "ObjectName": "SpotLightComponent'Shop_Lighting:PersistentLevel.ShadowController.LightComponent0'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.61"
       },
       "RootComponent": {
-        "ObjectName": "SpotLightComponent Shop_Lighting:PersistentLevel.ShadowController.LightComponent0",
+        "ObjectName": "SpotLightComponent'Shop_Lighting:PersistentLevel.ShadowController.LightComponent0'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.61"
       }
     }
@@ -3512,12 +3484,13 @@
     "Name": "Shop_Char_Fill",
     "Outer": "BP_Shop_Char_lighting_2",
     "Template": "Shop_Char_Fill_GEN_VARIABLE",
+    "Class": "UScriptClass'SpotLightComponent'",
     "Properties": {
       "SourceRadius": 35.641926,
       "SoftSourceRadius": 9.737137,
       "Intensity": 0.12,
       "AttachParent": {
-        "ObjectName": "SceneComponent Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.DefaultSceneRoot",
+        "ObjectName": "SceneComponent'Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.DefaultSceneRoot'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.41"
       },
       "UCSSerializationIndex": 0,
@@ -3530,9 +3503,10 @@
     "Name": "Shop_Char_FIll_Feet",
     "Outer": "BP_Shop_Char_lighting_2",
     "Template": "Shop_Char_FIll_Feet_GEN_VARIABLE",
+    "Class": "UScriptClass'SpotLightComponent'",
     "Properties": {
       "AttachParent": {
-        "ObjectName": "SceneComponent Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.DefaultSceneRoot",
+        "ObjectName": "SceneComponent'Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.DefaultSceneRoot'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.41"
       },
       "UCSSerializationIndex": 0,
@@ -3545,13 +3519,14 @@
     "Name": "Shop_Char_Key",
     "Outer": "BP_Shop_Char_lighting_2",
     "Template": "Shop_Char_Key_GEN_VARIABLE",
+    "Class": "UScriptClass'SpotLightComponent'",
     "Properties": {
       "SourceRadius": 14.788803,
       "SoftSourceRadius": 2.675232,
       "SpecularScale": 0.8,
       "Intensity": 0.3,
       "AttachParent": {
-        "ObjectName": "SceneComponent Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.DefaultSceneRoot",
+        "ObjectName": "SceneComponent'Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.DefaultSceneRoot'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.41"
       },
       "Mobility": "EComponentMobility::Movable",
@@ -3561,7 +3536,7 @@
       "UCSModifiedProperties": [
         {
           "MemberParent": {
-            "ObjectName": "Class SceneComponent",
+            "ObjectName": "Class'SceneComponent'",
             "ObjectPath": "/Script/Engine"
           },
           "MemberName": "Mobility",
@@ -3575,11 +3550,12 @@
     "Name": "Shop_Char_Rim01",
     "Outer": "BP_Shop_Char_lighting_2",
     "Template": "Shop_Char_Rim01_GEN_VARIABLE",
+    "Class": "UScriptClass'SpotLightComponent'",
     "Properties": {
       "SourceRadius": 48.06047,
       "Intensity": 1.25,
       "AttachParent": {
-        "ObjectName": "SceneComponent Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.DefaultSceneRoot",
+        "ObjectName": "SceneComponent'Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.DefaultSceneRoot'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.41"
       },
       "Mobility": "EComponentMobility::Movable",
@@ -3589,7 +3565,7 @@
       "UCSModifiedProperties": [
         {
           "MemberParent": {
-            "ObjectName": "Class SceneComponent",
+            "ObjectName": "Class'SceneComponent'",
             "ObjectPath": "/Script/Engine"
           },
           "MemberName": "Mobility",
@@ -3603,9 +3579,10 @@
     "Name": "Shop_Char_Rim02",
     "Outer": "BP_Shop_Char_lighting_2",
     "Template": "Shop_Char_Rim02_GEN_VARIABLE",
+    "Class": "UScriptClass'SpotLightComponent'",
     "Properties": {
       "AttachParent": {
-        "ObjectName": "SceneComponent Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.DefaultSceneRoot",
+        "ObjectName": "SceneComponent'Shop_Lighting:PersistentLevel.BP_Shop_Char_lighting_2.DefaultSceneRoot'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.41"
       },
       "Mobility": "EComponentMobility::Movable",
@@ -3615,7 +3592,7 @@
       "UCSModifiedProperties": [
         {
           "MemberParent": {
-            "ObjectName": "Class SceneComponent",
+            "ObjectName": "Class'SceneComponent'",
             "ObjectPath": "/Script/Engine"
           },
           "MemberName": "Mobility",
@@ -3629,10 +3606,11 @@
     "Name": "MoonKey",
     "Outer": "BP_Shop_Lighting",
     "Template": "MoonKey_GEN_VARIABLE",
+    "Class": "UScriptClass'SpotLightComponent'",
     "Properties": {
       "bAffectTranslucentLighting": false,
       "AttachParent": {
-        "ObjectName": "SceneComponent Shop_Lighting:PersistentLevel.BP_Shop_Lighting.DefaultSceneRoot",
+        "ObjectName": "SceneComponent'Shop_Lighting:PersistentLevel.BP_Shop_Lighting.DefaultSceneRoot'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.42"
       },
       "UCSSerializationIndex": 0,
@@ -3645,11 +3623,12 @@
     "Name": "RockFill",
     "Outer": "BP_Shop_Lighting",
     "Template": "RockFill_GEN_VARIABLE",
+    "Class": "UScriptClass'SpotLightComponent'",
     "Properties": {
       "Intensity": 8.0,
       "bAffectTranslucentLighting": false,
       "AttachParent": {
-        "ObjectName": "SceneComponent Shop_Lighting:PersistentLevel.BP_Shop_Lighting.DefaultSceneRoot",
+        "ObjectName": "SceneComponent'Shop_Lighting:PersistentLevel.BP_Shop_Lighting.DefaultSceneRoot'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.42"
       },
       "UCSSerializationIndex": 0,
@@ -3662,11 +3641,12 @@
     "Name": "Tree_Key",
     "Outer": "BP_Shop_Lighting",
     "Template": "Tree_Key_GEN_VARIABLE",
+    "Class": "UScriptClass'SpotLightComponent'",
     "Properties": {
       "Intensity": 0.065,
       "bAffectTranslucentLighting": false,
       "AttachParent": {
-        "ObjectName": "SceneComponent Shop_Lighting:PersistentLevel.BP_Shop_Lighting.DefaultSceneRoot",
+        "ObjectName": "SceneComponent'Shop_Lighting:PersistentLevel.BP_Shop_Lighting.DefaultSceneRoot'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.42"
       },
       "UCSSerializationIndex": 0,
@@ -3679,10 +3659,11 @@
     "Name": "Tree_Key1",
     "Outer": "BP_Shop_Lighting",
     "Template": "Tree_Key1_GEN_VARIABLE",
+    "Class": "UScriptClass'SpotLightComponent'",
     "Properties": {
       "bAffectTranslucentLighting": false,
       "AttachParent": {
-        "ObjectName": "SceneComponent Shop_Lighting:PersistentLevel.BP_Shop_Lighting.DefaultSceneRoot",
+        "ObjectName": "SceneComponent'Shop_Lighting:PersistentLevel.BP_Shop_Lighting.DefaultSceneRoot'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.42"
       },
       "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
@@ -3693,10 +3674,11 @@
     "Name": "Tree_Key2",
     "Outer": "BP_Shop_Lighting",
     "Template": "Tree_Key2_GEN_VARIABLE",
+    "Class": "UScriptClass'SpotLightComponent'",
     "Properties": {
       "bAffectTranslucentLighting": false,
       "AttachParent": {
-        "ObjectName": "SceneComponent Shop_Lighting:PersistentLevel.BP_Shop_Lighting.DefaultSceneRoot",
+        "ObjectName": "SceneComponent'Shop_Lighting:PersistentLevel.BP_Shop_Lighting.DefaultSceneRoot'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.42"
       },
       "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
@@ -3707,10 +3689,11 @@
     "Name": "Tree_Key3",
     "Outer": "BP_Shop_Lighting",
     "Template": "Tree_Key3_GEN_VARIABLE",
+    "Class": "UScriptClass'SpotLightComponent'",
     "Properties": {
       "bAffectTranslucentLighting": false,
       "AttachParent": {
-        "ObjectName": "SceneComponent Shop_Lighting:PersistentLevel.BP_Shop_Lighting.DefaultSceneRoot",
+        "ObjectName": "SceneComponent'Shop_Lighting:PersistentLevel.BP_Shop_Lighting.DefaultSceneRoot'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.42"
       },
       "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
@@ -3721,10 +3704,11 @@
     "Name": "Tree_Key4",
     "Outer": "BP_Shop_Lighting",
     "Template": "Tree_Key4_GEN_VARIABLE",
+    "Class": "UScriptClass'SpotLightComponent'",
     "Properties": {
       "bAffectTranslucentLighting": false,
       "AttachParent": {
-        "ObjectName": "SceneComponent Shop_Lighting:PersistentLevel.BP_Shop_Lighting.DefaultSceneRoot",
+        "ObjectName": "SceneComponent'Shop_Lighting:PersistentLevel.BP_Shop_Lighting.DefaultSceneRoot'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.42"
       },
       "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
@@ -3734,6 +3718,7 @@
     "Type": "SpotLightComponent",
     "Name": "LightComponent0",
     "Outer": "ShadowController",
+    "Class": "UScriptClass'SpotLightComponent'",
     "Properties": {
       "InnerConeAngle": 40.876194,
       "OuterConeAngle": 56.790478,
@@ -3775,13 +3760,14 @@
     "Type": "StaticMeshActor",
     "Name": "DarknessSphere",
     "Outer": "PersistentLevel",
+    "Class": "UScriptClass'StaticMeshActor'",
     "Properties": {
       "StaticMeshComponent": {
-        "ObjectName": "StaticMeshComponent Shop_Lighting:PersistentLevel.DarknessSphere.StaticMeshComponent0",
+        "ObjectName": "StaticMeshComponent'Shop_Lighting:PersistentLevel.DarknessSphere.StaticMeshComponent0'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.64"
       },
       "RootComponent": {
-        "ObjectName": "StaticMeshComponent Shop_Lighting:PersistentLevel.DarknessSphere.StaticMeshComponent0",
+        "ObjectName": "StaticMeshComponent'Shop_Lighting:PersistentLevel.DarknessSphere.StaticMeshComponent0'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.64"
       }
     }
@@ -3791,15 +3777,16 @@
     "Name": "SkySphereMesh",
     "Outer": "BP_Sky_Sphere_Shop",
     "Template": "SkySphereMesh_GEN_VARIABLE",
+    "Class": "UScriptClass'StaticMeshComponent'",
     "Properties": {
       "OverrideMaterials": [
         {
-          "ObjectName": "MaterialInstanceDynamic Shop_Lighting:PersistentLevel.BP_Sky_Sphere_Shop.SkySphereMesh.MaterialInstanceDynamic_0",
+          "ObjectName": "MaterialInstanceDynamic'Shop_Lighting:PersistentLevel.BP_Sky_Sphere_Shop.SkySphereMesh.MaterialInstanceDynamic_0'",
           "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.35"
         }
       ],
       "AttachParent": {
-        "ObjectName": "SceneComponent Shop_Lighting:PersistentLevel.BP_Sky_Sphere_Shop.Base",
+        "ObjectName": "SceneComponent'Shop_Lighting:PersistentLevel.BP_Sky_Sphere_Shop.Base'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.43"
       },
       "RelativeScale3D": {
@@ -3816,7 +3803,7 @@
       "UCSModifiedProperties": [
         {
           "MemberParent": {
-            "ObjectName": "Class MeshComponent",
+            "ObjectName": "Class'MeshComponent'",
             "ObjectPath": "/Script/Engine"
           },
           "MemberName": "OverrideMaterials",
@@ -3829,14 +3816,15 @@
     "Type": "StaticMeshComponent",
     "Name": "StaticMeshComponent0",
     "Outer": "DarknessSphere",
+    "Class": "UScriptClass'StaticMeshComponent'",
     "Properties": {
       "StaticMesh": {
-        "ObjectName": "StaticMesh Sphere",
+        "ObjectName": "StaticMesh'Sphere'",
         "ObjectPath": "Engine/Content/BasicShapes/Sphere.2"
       },
       "OverrideMaterials": [
         {
-          "ObjectName": "MaterialInstanceConstant MI_Shop_LightingDarkness",
+          "ObjectName": "MaterialInstanceConstant'MI_Shop_LightingDarkness'",
           "ObjectPath": "DeadByDaylight/Content/Materials/Lighting/MI_Shop_LightingDarkness.0"
         }
       ],
@@ -3858,13 +3846,14 @@
     "Type": "TriggerBox",
     "Name": "ShopCameraDetectionVolume",
     "Outer": "PersistentLevel",
+    "Class": "UScriptClass'TriggerBox'",
     "Properties": {
       "CollisionComponent": {
-        "ObjectName": "BoxComponent Shop_Lighting:PersistentLevel.ShopCameraDetectionVolume.CollisionComp",
+        "ObjectName": "BoxComponent'Shop_Lighting:PersistentLevel.ShopCameraDetectionVolume.CollisionComp'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.18"
       },
       "RootComponent": {
-        "ObjectName": "BoxComponent Shop_Lighting:PersistentLevel.ShopCameraDetectionVolume.CollisionComp",
+        "ObjectName": "BoxComponent'Shop_Lighting:PersistentLevel.ShopCameraDetectionVolume.CollisionComp'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.18"
       }
     }
@@ -3872,14 +3861,15 @@
   {
     "Type": "World",
     "Name": "Shop_Lighting",
+    "Class": "UScriptClass'World'",
     "PersistentLevel": {
-      "ObjectName": "Level Shop_Lighting:PersistentLevel",
+      "ObjectName": "Level'Shop_Lighting:PersistentLevel'",
       "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.33"
     },
     "ExtraReferencedObjects": [],
     "StreamingLevels": [
       {
-        "ObjectName": "LevelStreamingDynamic Shop_Lighting:LevelStreamingDynamic_0",
+        "ObjectName": "LevelStreamingDynamic'Shop_Lighting:LevelStreamingDynamic_0'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.34"
       }
     ]
@@ -3888,10 +3878,11 @@
     "Type": "WorldSettings",
     "Name": "WorldSettings",
     "Outer": "PersistentLevel",
+    "Class": "UScriptClass'WorldSettings'",
     "Properties": {
       "bEnableNavigationSystem": false,
       "NavigationSystemConfig": {
-        "ObjectName": "NavigationSystemModuleConfig Shop_Lighting:PersistentLevel.WorldSettings.NavigationSystemModuleConfig_0",
+        "ObjectName": "NavigationSystemModuleConfig'Shop_Lighting:PersistentLevel.WorldSettings.NavigationSystemModuleConfig_0'",
         "ObjectPath": "DeadByDaylight/Content/Maps/Shop/Shop_Lighting.38"
       },
       "BookmarkArray": [

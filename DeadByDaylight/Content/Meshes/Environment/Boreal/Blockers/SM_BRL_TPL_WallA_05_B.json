@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_1",
     "Outer": "SM_BRL_TPL_WallA_05_B",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -801,7 +802,7 @@
     "BodySetupGuid": "CFADC7FE409CA91450A8B1ACAF86E2C8",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 60731,
         "SizeOnDisk": 60731,
         "OffsetInFile": "0x1ED2D8"
@@ -812,9 +813,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_BRL_TPL_WallA_05_B",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 3353,
         "SizeOnDisk": 3353,
         "OffsetInFile": "0x1FC05B"
@@ -824,6 +826,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_TPL_WallA_05_B",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -831,18 +834,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_StoneSmall_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_StoneSmall_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_StoneSmall_01.0"
           },
           "MaterialSlotName": "MI_BRL_StoneSmall_01",
@@ -858,7 +871,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_TempleBrickSmall_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_TempleBrickSmall_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_TempleBrickSmall_01.0"
           },
           "MaterialSlotName": "MI_BRL_TempleBrickSmall_01",
@@ -874,7 +887,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_StoneSmallTrim_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_StoneSmallTrim_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_StoneSmallTrim_01.0"
           },
           "MaterialSlotName": "MI_BRL_StoneSmallTrim_01",
@@ -890,7 +903,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_TempleFlat_GoldMotif_Blend",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_TempleFlat_GoldMotif_Blend'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_TempleFlat_GoldMotif_Blend.0"
           },
           "MaterialSlotName": "MI_BRL_TempleFlat_GoldMotif_Blend",
@@ -906,7 +919,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_GoldTrimTemple_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_GoldTrimTemple_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_GoldTrimTemple_01.0"
           },
           "MaterialSlotName": "MI_BRL_GoldTrimTemple_01",
@@ -940,11 +953,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_TPL_WallA_05_B:BodySetup_1",
+      "ObjectName": "BodySetup'SM_BRL_TPL_WallA_05_B:BodySetup_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Blockers/SM_BRL_TPL_WallA_05_B.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_TPL_WallA_05_B:NavCollision_2",
+      "ObjectName": "NavCollision'SM_BRL_TPL_WallA_05_B:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Blockers/SM_BRL_TPL_WallA_05_B.1"
     },
     "LightingGuid": "A6DD952E-476BCF51-EF765989-1009EC0E",

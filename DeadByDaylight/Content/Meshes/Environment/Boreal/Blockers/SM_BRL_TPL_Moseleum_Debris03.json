@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_BRL_TPL_Moseleum_Debris03",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -67,7 +68,7 @@
     "BodySetupGuid": "BFD49AB94E6F70BFDBBB68B8E862F2C3",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 4597,
         "SizeOnDisk": 4597,
         "OffsetInFile": "0x32A21"
@@ -78,9 +79,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_0",
     "Outer": "SM_BRL_TPL_Moseleum_Debris03",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 265,
         "SizeOnDisk": 265,
         "OffsetInFile": "0x33C5E"
@@ -90,6 +92,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_TPL_Moseleum_Debris03",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -97,18 +100,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_TempleBrickSmall_Blend_03",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_TempleBrickSmall_Blend_03'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_TempleBrickSmall_Blend_03.0"
           },
           "MaterialSlotName": "MI_BRL_TempleBrickSmall_01",
@@ -124,7 +137,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_TempleFlat_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_TempleFlat_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_TempleFlat_01.0"
           },
           "MaterialSlotName": "MI_BRL_TempleFlat_01",
@@ -140,7 +153,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_AtlasMoss",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_AtlasMoss'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Masked/MI_Com_AtlasMoss.0"
           },
           "MaterialSlotName": "MI_Com_AtlasMoss",
@@ -156,7 +169,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_ECL_Debris_04",
+            "ObjectName": "MaterialInstanceConstant'MI_ECL_Debris_04'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Eclipse/Structure/MI_ECL_Debris_04.0"
           },
           "MaterialSlotName": "MI_ECL_Debris_04",
@@ -189,11 +202,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_TPL_Moseleum_Debris03:BodySetup_0",
+      "ObjectName": "BodySetup'SM_BRL_TPL_Moseleum_Debris03:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Blockers/SM_BRL_TPL_Moseleum_Debris03.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_TPL_Moseleum_Debris03:NavCollision_0",
+      "ObjectName": "NavCollision'SM_BRL_TPL_Moseleum_Debris03:NavCollision_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Blockers/SM_BRL_TPL_Moseleum_Debris03.1"
     },
     "LightingGuid": "4B21FA0C-401F0B41-0914BFA3-46A614B7",

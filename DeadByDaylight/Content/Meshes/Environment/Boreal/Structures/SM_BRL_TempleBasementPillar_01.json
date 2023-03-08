@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_2",
     "Outer": "SM_BRL_TempleBasementPillar_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -64,13 +65,13 @@
         }
       }
     },
-    "BodySetupGuid": "3CCFD9744BB80759BE9816A3343CEC32",
+    "BodySetupGuid": "D936417E4214AB83597511AFFD930AEF",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
-        "ElementCount": 2081,
-        "SizeOnDisk": 2081,
-        "OffsetInFile": "0x46E8"
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 1217,
+        "SizeOnDisk": 1217,
+        "OffsetInFile": "0x51C3"
       }
     }
   },
@@ -78,28 +79,49 @@
     "Type": "NavCollision",
     "Name": "NavCollision_4",
     "Outer": "SM_BRL_TempleBasementPillar_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 265,
         "SizeOnDisk": 265,
-        "OffsetInFile": "0x4F51"
+        "OffsetInFile": "0x56CC"
       }
     }
   },
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_TempleBasementPillar_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
         "Default": 0,
         "Value": 0
       },
+      "ShadowMaxLOD": {
+        "PerDetailModeValue": [
+          {
+            "Ultra": 1
+          },
+          {
+            "High": 1
+          },
+          {
+            "Medium": 1
+          },
+          {
+            "Low": 1
+          },
+          {
+            "Mobile": 1
+          }
+        ]
+      },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_StoneSmall_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_StoneSmall_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_StoneSmall_01.0"
           },
           "MaterialSlotName": "MI_BRL_StoneSmall_01",
@@ -115,7 +137,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_GoldTrimTemple_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_GoldTrimTemple_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_GoldTrimTemple_01.0"
           },
           "MaterialSlotName": "MI_BRL_GoldTrimTemple_01",
@@ -123,15 +145,16 @@
           "UVChannelData": {
             "bInitialized": true,
             "bOverrideDensities": false,
-            "LocalUVDensities": 234.0831,
+            "LocalUVDensities": 232.37161,
             "LocalUVDensities": 0.0,
             "LocalUVDensities": 0.0,
             "LocalUVDensities": 0.0
           }
         }
       ],
-      "LightmapUVDensity": 418.2082,
+      "LightmapUVDensity": 427.712,
       "LightMapResolution": 64,
+      "LODForCollision": 3,
       "ExtendedBounds": {
         "Origin": {
           "X": 0.0,
@@ -147,14 +170,14 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_TempleBasementPillar_01:BodySetup_2",
+      "ObjectName": "BodySetup'SM_BRL_TempleBasementPillar_01:BodySetup_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/SM_BRL_TempleBasementPillar_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_TempleBasementPillar_01:NavCollision_4",
+      "ObjectName": "NavCollision'SM_BRL_TempleBasementPillar_01:NavCollision_4'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/SM_BRL_TempleBasementPillar_01.1"
     },
-    "LightingGuid": "0A3699CD-49EF8300-489B6ABB-FAACFE2B",
+    "LightingGuid": "98F22EE4-4BA4BAAB-CA5216B3-020439B6",
     "RenderData": {
       "LODs": [
         {
@@ -198,6 +221,48 @@
             "Stride": 0,
             "NumVertices": 0
           }
+        },
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 12,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 27,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 36,
+              "NumTriangles": 14,
+              "MinVertexIndex": 28,
+              "MaxVertexIndex": 63,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 64
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 1,
+            "NumVertices": 64,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          }
         }
       ],
       "Bounds": {
@@ -213,10 +278,10 @@
         },
         "SphereRadius": 227.11215
       },
-      "bLODsShareStaticLighting": true,
+      "bLODsShareStaticLighting": false,
       "ScreenSize": [
-        0.0,
-        0.0,
+        1.0,
+        0.4,
         0.0,
         0.0,
         0.0,

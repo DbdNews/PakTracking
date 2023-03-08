@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_BRL_MD_Roof_Front",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "DefaultInstance": {
         "ObjectType": "ECC_WorldStatic",
@@ -44,7 +45,7 @@
     "BodySetupGuid": "ED3A75AB443A9672F8C7D7BA02B93D92",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 35561,
         "SizeOnDisk": 35561,
         "OffsetInFile": "0xD1C3B"
@@ -55,9 +56,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_0",
     "Outer": "SM_BRL_MD_Roof_Front",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 21,
         "SizeOnDisk": 21,
         "OffsetInFile": "0xDA76C"
@@ -67,6 +69,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_MD_Roof_Front",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -75,34 +78,60 @@
       },
       "bLimitLODRangeForShadow": true,
       "ShadowMinLOD": {
-        "PerDetailModeValue": {
-          "Medium": 1,
-          "Low": 2,
-          "Mobile": 3
-        },
-        "PerDetailModeOverride": {
-          "Medium": true,
-          "Low": true,
-          "Mobile": true
-        }
+        "PerDetailModeValue": [
+          {
+            "Medium": 1
+          },
+          {
+            "Low": 2
+          },
+          {
+            "Mobile": 3
+          }
+        ],
+        "PerDetailModeOverride": [
+          {
+            "Medium": true
+          },
+          {
+            "Low": true
+          },
+          {
+            "Mobile": true
+          }
+        ]
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 2,
-          "High": 2,
-          "Medium": 2,
-          "Low": 2,
-          "Mobile": 3
-        },
-        "PerDetailModeOverride": {
-          "Ultra": true,
-          "Mobile": true
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 2
+          },
+          {
+            "High": 2
+          },
+          {
+            "Medium": 2
+          },
+          {
+            "Low": 2
+          },
+          {
+            "Mobile": 3
+          }
+        ],
+        "PerDetailModeOverride": [
+          {
+            "Ultra": true
+          },
+          {
+            "Mobile": true
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_PlanksRoof",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_PlanksRoof'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_PlanksRoof.0"
           },
           "MaterialSlotName": "MI_BRL_PlanksRoof",
@@ -118,7 +147,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant M_SM_BRL_MD_Roof_Front_3f56e5920a0b4e628ba3_SgBakedMaterial_LOD3_0",
+            "ObjectName": "MaterialInstanceConstant'M_SM_BRL_MD_Roof_Front_3f56e5920a0b4e628ba3_SgBakedMaterial_LOD3_0'",
             "ObjectPath": "DeadByDaylight/Content/Simplygon/LODRecipe/Materials/M_SM_BRL_MD_Roof_Front_3f56e5920a0b4e628ba3_SgBakedMaterial_LOD3_0.0"
           },
           "MaterialSlotName": "M_SM_BRL_MD_Roof_Front_3f56e5920a0b4e628ba3_SgBakedMaterial_LOD3_0",
@@ -152,11 +181,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_MD_Roof_Front:BodySetup_0",
+      "ObjectName": "BodySetup'SM_BRL_MD_Roof_Front:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/Mother_Dwelling/SM_BRL_MD_Roof_Front.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_MD_Roof_Front:NavCollision_0",
+      "ObjectName": "NavCollision'SM_BRL_MD_Roof_Front:NavCollision_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/Mother_Dwelling/SM_BRL_MD_Roof_Front.1"
     },
     "LightingGuid": "FDAEB4B8-4A2D6FE3-842C09B0-EB14DBF6",

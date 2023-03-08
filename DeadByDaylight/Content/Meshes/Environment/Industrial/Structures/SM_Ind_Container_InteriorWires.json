@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_Ind_Container_InteriorWires",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "DefaultInstance": {
         "ObjectType": "ECC_WorldStatic",
@@ -44,7 +45,7 @@
     "BodySetupGuid": "F12B120C40BE7A2FC15A9A8C72FD918C",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 89039,
         "SizeOnDisk": 89039,
         "OffsetInFile": "0x1E162F"
@@ -55,9 +56,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_4",
     "Outer": "SM_Ind_Container_InteriorWires",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 21,
         "SizeOnDisk": 21,
         "OffsetInFile": "0x1F7246"
@@ -67,6 +69,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_Ind_Container_InteriorWires",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -74,18 +77,28 @@
         "Value": 1
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_TrimCablesAndWires",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_TrimCablesAndWires'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Trims/MI_Com_TrimCablesAndWires.0"
           },
           "MaterialSlotName": "MI_Com_TrimCablesAndWires",
@@ -101,7 +114,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_TrimCablesAndWires_B",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_TrimCablesAndWires_B'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Trims/MI_Com_TrimCablesAndWires_B.0"
           },
           "MaterialSlotName": "MI_Com_TrimCablesAndWires_B",
@@ -117,7 +130,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Stainless_A",
+            "ObjectName": "MaterialInstanceConstant'MI_Stainless_A'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Metal/MI_Stainless_A.0"
           },
           "MaterialSlotName": "MI_Stainless_A",
@@ -150,11 +163,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_Ind_Container_InteriorWires:BodySetup_0",
+      "ObjectName": "BodySetup'SM_Ind_Container_InteriorWires:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Structures/SM_Ind_Container_InteriorWires.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_Ind_Container_InteriorWires:NavCollision_4",
+      "ObjectName": "NavCollision'SM_Ind_Container_InteriorWires:NavCollision_4'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Structures/SM_Ind_Container_InteriorWires.1"
     },
     "LightingGuid": "1C70A63E-4BA614CB-EE7E4398-CB7566CD",

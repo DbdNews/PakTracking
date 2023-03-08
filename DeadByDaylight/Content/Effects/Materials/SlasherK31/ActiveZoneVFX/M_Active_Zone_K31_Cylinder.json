@@ -2,8 +2,10 @@
   {
     "Type": "Material",
     "Name": "M_Active_Zone_K31_Cylinder",
+    "Class": "UScriptClass'Material'",
     "Properties": {
       "EmissiveColor": {
+        "Expression": null,
         "OutputIndex": 0,
         "InputName": "None",
         "Mask": 0,
@@ -27,6 +29,7 @@
         "ShadingModelField": 1
       },
       "WorldPositionOffset": {
+        "Expression": null,
         "OutputIndex": 1,
         "InputName": "None",
         "Mask": 0,
@@ -45,13 +48,12 @@
       "TwoSided": true,
       "bCanMaskedBeAssumedOpaque": true,
       "bCastRayTracedShadows": false,
-      "StateId": "58D85D2D-4F4875D3-11387B87-16E6B088",
+      "StateId": "8E9D63A8-4315B848-EFEAC9BB-1BACBE1A",
       "CachedExpressionData": {
         "Parameters": {
           "RuntimeEntries": {
             "NameHashes": [
               693036174696741530,
-              881532007775486596,
               3027761069634712704,
               4147217704388709686,
               4205161520477631187,
@@ -72,11 +74,6 @@
             "ParameterInfos": [
               {
                 "Name": "Noise 2 power",
-                "Association": "GlobalParameter",
-                "Index": -1
-              },
-              {
-                "Name": "Gradient Opacity",
                 "Association": "GlobalParameter",
                 "Index": -1
               },
@@ -163,7 +160,6 @@
             ],
             "ExpressionGuids": [
               "FE7C5AC8-4F6C5189-0F65178A-C7738246",
-              "8FD75C8B-46C73B24-5FD5A992-FEAA0EAE",
               "83E9410C-41135155-5D0E1C88-62C43932",
               "7AD7B54F-4CE98B7A-7B7F5094-FD34B5D8",
               "5F45EC06-40DC1CB1-21B82E8A-923B7383",
@@ -175,7 +171,7 @@
               "C12B7104-4B972A60-AB106EBD-62A79BD5",
               "CA82F5C8-49B93740-DBDFC390-7817E2FE",
               "A63261AA-4D610885-0079D096-76D1E950",
-              "A8D6426C-458E5CFD-E9019999-108EE3F3",
+              "AE97D261-4FBE91E2-E75820BC-5124A50E",
               "4DD554AF-4BF5CBAC-7539DF8A-1DB2B0E8",
               "72B36D54-400D7773-9F1A5598-799420FE",
               "8889762C-46B4E602-6D6193A7-064DF34F",
@@ -199,7 +195,6 @@
           },
           "ScalarValues": [
             1.1,
-            0.18,
             444.0,
             0.4,
             1.0,
@@ -229,507 +224,93 @@
         },
         "ReferencedTextures": [
           {
-            "ObjectName": "Texture2D T_LightRays_Flashlight_01",
+            "ObjectName": "Texture2D'T_LightRays_Flashlight_01'",
             "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_LightRays_Flashlight_01.0"
           },
-          null,
           {
-            "ObjectName": "Texture2D DefaultDiffuse",
-            "ObjectPath": "Engine/Content/EngineMaterials/DefaultDiffuse.0"
-          },
-          {
-            "ObjectName": "Texture2D T_StaticGlitch_01",
+            "ObjectName": "Texture2D'T_StaticGlitch_01'",
             "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_StaticGlitch_01.0"
           },
           {
-            "ObjectName": "Texture2D T_Dust_Noise_02",
-            "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_Dust_Noise_02.0"
-          },
-          {
-            "ObjectName": "Texture2D T_Halftone_Small",
+            "ObjectName": "Texture2D'T_Halftone_Small'",
             "ObjectPath": "DeadByDaylight/Content/Effects/Textures/K31/T_Halftone_Small.0"
           },
           {
-            "ObjectName": "Texture2D T_WhispySmoke_Blurry_01",
-            "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_WhispySmoke_Blurry_01.0"
-          },
-          {
-            "ObjectName": "Texture2D T_Lines_K31_ActiveZone2",
+            "ObjectName": "Texture2D'T_Lines_K31_ActiveZone2'",
             "ObjectPath": "DeadByDaylight/Content/Effects/Textures/K31/T_Lines_K31_ActiveZone2.0"
           },
           {
-            "ObjectName": "Texture2D T_Gradient_Flicker_Flashlight",
+            "ObjectName": "Texture2D'T_Gradient_Flicker_Flashlight'",
             "ObjectPath": "DeadByDaylight/Content/Effects/Textures/Gradient/T_Gradient_Flicker_Flashlight.0"
+          },
+          {
+            "ObjectName": "Texture2D'T_Dust_Noise_02'",
+            "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_Dust_Noise_02.0"
+          },
+          {
+            "ObjectName": "Texture2D'T_WhispySmoke_Blurry_01'",
+            "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_WhispySmoke_Blurry_01.0"
+          },
+          {
+            "ObjectName": "Texture2D'Fx_radialGradient'",
+            "ObjectPath": "DeadByDaylight/Content/Effects/Textures/Fx_radialGradient.0"
           }
         ],
         "FunctionInfos": [
           {
-            "StateId": "E6715291-45CBD5A7-9C2DB096-ABFA19DF",
+            "StateId": "DB3E993F-4E2E98B3-05AD13B9-2D8C5DA5",
             "Function": {
-              "ObjectName": "MaterialFunction AppendMany",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/AppendMany.0"
+              "ObjectName": "MaterialFunction'CameraDepthFade'",
+              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Opacity/CameraDepthFade.0"
             }
           },
           {
             "StateId": "DB3E993F-4E2E98B3-05AD13B9-2D8C5DA5",
             "Function": {
-              "ObjectName": "MaterialFunction CameraDepthFade",
+              "ObjectName": "MaterialFunction'CameraDepthFade'",
               "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Opacity/CameraDepthFade.0"
-            }
-          },
-          {
-            "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
-            "Function": {
-              "ObjectName": "MaterialFunction LinearGradient",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
-            }
-          },
-          {
-            "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
-            "Function": {
-              "ObjectName": "MaterialFunction CheapContrast",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
-            }
-          },
-          {
-            "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
-            "Function": {
-              "ObjectName": "MaterialFunction LinearGradient",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
-            }
-          },
-          {
-            "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
-            "Function": {
-              "ObjectName": "MaterialFunction CheapContrast",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
-            }
-          },
-          {
-            "StateId": "E572D701-496E6D38-CC53A5BD-C450B0ED",
-            "Function": {
-              "ObjectName": "MaterialFunction CustomRotator",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Texturing/CustomRotator.0"
-            }
-          },
-          {
-            "StateId": "E572D701-496E6D38-CC53A5BD-C450B0ED",
-            "Function": {
-              "ObjectName": "MaterialFunction CustomRotator",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Texturing/CustomRotator.0"
-            }
-          },
-          {
-            "StateId": "E572D701-496E6D38-CC53A5BD-C450B0ED",
-            "Function": {
-              "ObjectName": "MaterialFunction CustomRotator",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Texturing/CustomRotator.0"
-            }
-          },
-          {
-            "StateId": "99D92D6E-48783A4D-D29F0E90-7DD6731E",
-            "Function": {
-              "ObjectName": "MaterialFunction MF_WorldAlignedMapping_Panner",
-              "ObjectPath": "DeadByDaylight/Content/Materials/MaterialFunctions/MF_WorldAlignedMapping_Panner.0"
             }
           },
           {
             "StateId": "DB3E993F-4E2E98B3-05AD13B9-2D8C5DA5",
             "Function": {
-              "ObjectName": "MaterialFunction CameraDepthFade",
+              "ObjectName": "MaterialFunction'CameraDepthFade'",
               "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Opacity/CameraDepthFade.0"
-            }
-          },
-          {
-            "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
-            "Function": {
-              "ObjectName": "MaterialFunction LinearGradient",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
-            }
-          },
-          {
-            "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
-            "Function": {
-              "ObjectName": "MaterialFunction CheapContrast",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
-            }
-          },
-          {
-            "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
-            "Function": {
-              "ObjectName": "MaterialFunction LinearGradient",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
-            }
-          },
-          {
-            "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
-            "Function": {
-              "ObjectName": "MaterialFunction CheapContrast",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
-            }
-          },
-          {
-            "StateId": "9CD3A8E9-45185A95-097FF387-BBECD824",
-            "Function": {
-              "ObjectName": "MaterialFunction MF_WorldAlrignedMapping_Panner",
-              "ObjectPath": "DeadByDaylight/Content/Effects/Materials/Functions/MF_WorldAlrignedMapping_Panner.0"
-            }
-          },
-          {
-            "StateId": "E6715291-45CBD5A7-9C2DB096-ABFA19DF",
-            "Function": {
-              "ObjectName": "MaterialFunction AppendMany",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/AppendMany.0"
-            }
-          },
-          {
-            "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
-            "Function": {
-              "ObjectName": "MaterialFunction LinearGradient",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
-            }
-          },
-          {
-            "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
-            "Function": {
-              "ObjectName": "MaterialFunction CheapContrast",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
-            }
-          },
-          {
-            "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
-            "Function": {
-              "ObjectName": "MaterialFunction LinearGradient",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
-            }
-          },
-          {
-            "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
-            "Function": {
-              "ObjectName": "MaterialFunction CheapContrast",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
-            }
-          },
-          {
-            "StateId": "9CD3A8E9-45185A95-097FF387-BBECD824",
-            "Function": {
-              "ObjectName": "MaterialFunction MF_WorldAlrignedMapping_Panner",
-              "ObjectPath": "DeadByDaylight/Content/Effects/Materials/Functions/MF_WorldAlrignedMapping_Panner.0"
-            }
-          },
-          {
-            "StateId": "E6715291-45CBD5A7-9C2DB096-ABFA19DF",
-            "Function": {
-              "ObjectName": "MaterialFunction AppendMany",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/AppendMany.0"
-            }
-          },
-          {
-            "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
-            "Function": {
-              "ObjectName": "MaterialFunction LinearGradient",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
-            }
-          },
-          {
-            "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
-            "Function": {
-              "ObjectName": "MaterialFunction CheapContrast",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
-            }
-          },
-          {
-            "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
-            "Function": {
-              "ObjectName": "MaterialFunction LinearGradient",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
-            }
-          },
-          {
-            "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
-            "Function": {
-              "ObjectName": "MaterialFunction CheapContrast",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
-            }
-          },
-          {
-            "StateId": "9CD3A8E9-45185A95-097FF387-BBECD824",
-            "Function": {
-              "ObjectName": "MaterialFunction MF_WorldAlrignedMapping_Panner",
-              "ObjectPath": "DeadByDaylight/Content/Effects/Materials/Functions/MF_WorldAlrignedMapping_Panner.0"
-            }
-          },
-          {
-            "StateId": "E6715291-45CBD5A7-9C2DB096-ABFA19DF",
-            "Function": {
-              "ObjectName": "MaterialFunction AppendMany",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/AppendMany.0"
-            }
-          },
-          {
-            "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
-            "Function": {
-              "ObjectName": "MaterialFunction LinearGradient",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
-            }
-          },
-          {
-            "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
-            "Function": {
-              "ObjectName": "MaterialFunction CheapContrast",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
-            }
-          },
-          {
-            "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
-            "Function": {
-              "ObjectName": "MaterialFunction LinearGradient",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
-            }
-          },
-          {
-            "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
-            "Function": {
-              "ObjectName": "MaterialFunction CheapContrast",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
-            }
-          },
-          {
-            "StateId": "9CD3A8E9-45185A95-097FF387-BBECD824",
-            "Function": {
-              "ObjectName": "MaterialFunction MF_WorldAlrignedMapping_Panner",
-              "ObjectPath": "DeadByDaylight/Content/Effects/Materials/Functions/MF_WorldAlrignedMapping_Panner.0"
-            }
-          },
-          {
-            "StateId": "E6715291-45CBD5A7-9C2DB096-ABFA19DF",
-            "Function": {
-              "ObjectName": "MaterialFunction AppendMany",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/AppendMany.0"
-            }
-          },
-          {
-            "StateId": "DB3E993F-4E2E98B3-05AD13B9-2D8C5DA5",
-            "Function": {
-              "ObjectName": "MaterialFunction CameraDepthFade",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Opacity/CameraDepthFade.0"
-            }
-          },
-          {
-            "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
-            "Function": {
-              "ObjectName": "MaterialFunction LinearGradient",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
-            }
-          },
-          {
-            "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
-            "Function": {
-              "ObjectName": "MaterialFunction CheapContrast",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
-            }
-          },
-          {
-            "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
-            "Function": {
-              "ObjectName": "MaterialFunction LinearGradient",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
-            }
-          },
-          {
-            "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
-            "Function": {
-              "ObjectName": "MaterialFunction CheapContrast",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
-            }
-          },
-          {
-            "StateId": "9CD3A8E9-45185A95-097FF387-BBECD824",
-            "Function": {
-              "ObjectName": "MaterialFunction MF_WorldAlrignedMapping_Panner",
-              "ObjectPath": "DeadByDaylight/Content/Effects/Materials/Functions/MF_WorldAlrignedMapping_Panner.0"
-            }
-          },
-          {
-            "StateId": "E6715291-45CBD5A7-9C2DB096-ABFA19DF",
-            "Function": {
-              "ObjectName": "MaterialFunction AppendMany",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/AppendMany.0"
             }
           },
           {
             "StateId": "E572D701-496E6D38-CC53A5BD-C450B0ED",
             "Function": {
-              "ObjectName": "MaterialFunction CustomRotator",
+              "ObjectName": "MaterialFunction'CustomRotator'",
               "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Texturing/CustomRotator.0"
             }
           },
           {
             "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
             "Function": {
-              "ObjectName": "MaterialFunction LinearGradient",
+              "ObjectName": "MaterialFunction'LinearGradient'",
               "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
             }
           },
           {
             "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
             "Function": {
-              "ObjectName": "MaterialFunction CheapContrast",
+              "ObjectName": "MaterialFunction'CheapContrast'",
               "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
             }
           },
           {
             "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
             "Function": {
-              "ObjectName": "MaterialFunction LinearGradient",
+              "ObjectName": "MaterialFunction'LinearGradient'",
               "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
             }
           },
           {
             "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
             "Function": {
-              "ObjectName": "MaterialFunction CheapContrast",
+              "ObjectName": "MaterialFunction'CheapContrast'",
               "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
-            }
-          },
-          {
-            "StateId": "9CD3A8E9-45185A95-097FF387-BBECD824",
-            "Function": {
-              "ObjectName": "MaterialFunction MF_WorldAlrignedMapping_Panner",
-              "ObjectPath": "DeadByDaylight/Content/Effects/Materials/Functions/MF_WorldAlrignedMapping_Panner.0"
-            }
-          },
-          {
-            "StateId": "E6715291-45CBD5A7-9C2DB096-ABFA19DF",
-            "Function": {
-              "ObjectName": "MaterialFunction AppendMany",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/AppendMany.0"
-            }
-          },
-          {
-            "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
-            "Function": {
-              "ObjectName": "MaterialFunction LinearGradient",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
-            }
-          },
-          {
-            "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
-            "Function": {
-              "ObjectName": "MaterialFunction CheapContrast",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
-            }
-          },
-          {
-            "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
-            "Function": {
-              "ObjectName": "MaterialFunction LinearGradient",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
-            }
-          },
-          {
-            "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
-            "Function": {
-              "ObjectName": "MaterialFunction CheapContrast",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
-            }
-          },
-          {
-            "StateId": "9CD3A8E9-45185A95-097FF387-BBECD824",
-            "Function": {
-              "ObjectName": "MaterialFunction MF_WorldAlrignedMapping_Panner",
-              "ObjectPath": "DeadByDaylight/Content/Effects/Materials/Functions/MF_WorldAlrignedMapping_Panner.0"
-            }
-          },
-          {
-            "StateId": "E6715291-45CBD5A7-9C2DB096-ABFA19DF",
-            "Function": {
-              "ObjectName": "MaterialFunction AppendMany",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/AppendMany.0"
-            }
-          },
-          {
-            "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
-            "Function": {
-              "ObjectName": "MaterialFunction LinearGradient",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
-            }
-          },
-          {
-            "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
-            "Function": {
-              "ObjectName": "MaterialFunction CheapContrast",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
-            }
-          },
-          {
-            "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
-            "Function": {
-              "ObjectName": "MaterialFunction LinearGradient",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
-            }
-          },
-          {
-            "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
-            "Function": {
-              "ObjectName": "MaterialFunction CheapContrast",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
-            }
-          },
-          {
-            "StateId": "9CD3A8E9-45185A95-097FF387-BBECD824",
-            "Function": {
-              "ObjectName": "MaterialFunction MF_WorldAlrignedMapping_Panner",
-              "ObjectPath": "DeadByDaylight/Content/Effects/Materials/Functions/MF_WorldAlrignedMapping_Panner.0"
-            }
-          },
-          {
-            "StateId": "E6715291-45CBD5A7-9C2DB096-ABFA19DF",
-            "Function": {
-              "ObjectName": "MaterialFunction AppendMany",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/AppendMany.0"
-            }
-          },
-          {
-            "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
-            "Function": {
-              "ObjectName": "MaterialFunction LinearGradient",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
-            }
-          },
-          {
-            "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
-            "Function": {
-              "ObjectName": "MaterialFunction CheapContrast",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
-            }
-          },
-          {
-            "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
-            "Function": {
-              "ObjectName": "MaterialFunction LinearGradient",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
-            }
-          },
-          {
-            "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
-            "Function": {
-              "ObjectName": "MaterialFunction CheapContrast",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
-            }
-          },
-          {
-            "StateId": "9CD3A8E9-45185A95-097FF387-BBECD824",
-            "Function": {
-              "ObjectName": "MaterialFunction MF_WorldAlrignedMapping_Panner",
-              "ObjectPath": "DeadByDaylight/Content/Effects/Materials/Functions/MF_WorldAlrignedMapping_Panner.0"
-            }
-          },
-          {
-            "StateId": "E6715291-45CBD5A7-9C2DB096-ABFA19DF",
-            "Function": {
-              "ObjectName": "MaterialFunction AppendMany",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/AppendMany.0"
             }
           }
         ],
@@ -744,7 +325,37 @@
         {
           "SamplingScale": 1.0,
           "UVChannelIndex": 0,
+          "TextureName": "Fx_radialGradient"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_Dust_Noise_02"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
           "TextureName": "T_Gradient_Flicker_Flashlight"
+        },
+        {
+          "SamplingScale": 119.96484,
+          "UVChannelIndex": 0,
+          "TextureName": "T_Halftone_Small"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_LightRays_Flashlight_01"
+        },
+        {
+          "SamplingScale": 2.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_StaticGlitch_01"
+        },
+        {
+          "SamplingScale": 0.5,
+          "UVChannelIndex": 0,
+          "TextureName": "T_WhispySmoke_Blurry_01"
         }
       ]
     }

@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_2",
     "Outer": "SM_BRL_KillerShack_Floor",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -82,7 +83,7 @@
     "BodySetupGuid": "05F1BA104B465A5A8CE642AD8F0A7593",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 20083,
         "SizeOnDisk": 20083,
         "OffsetInFile": "0xB721C"
@@ -93,9 +94,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_4",
     "Outer": "SM_BRL_KillerShack_Floor",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 509,
         "SizeOnDisk": 509,
         "OffsetInFile": "0xBC0D7"
@@ -105,6 +107,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_KillerShack_Floor",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -112,18 +115,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_MudGrassPeeble",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_MudGrassPeeble'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_MudGrassPeeble.0"
           },
           "MaterialSlotName": "MI_BRL_MudGrassPeeble",
@@ -139,7 +152,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_WoodBark",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_WoodBark'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_WoodBark.0"
           },
           "MaterialSlotName": "MI_BRL_WoodBark",
@@ -155,7 +168,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_PlanksFloor",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_PlanksFloor'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_PlanksFloor.0"
           },
           "MaterialSlotName": "MI_BRL_PlanksFloor",
@@ -171,7 +184,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_TrimWoodLogs",
+            "ObjectName": "MaterialInstanceConstant'MI_TrimWoodLogs'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Trims/MI_TrimWoodLogs.0"
           },
           "MaterialSlotName": "MI_TrimWoodLogs",
@@ -187,7 +200,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_AtlasMoss",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_AtlasMoss'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Masked/MI_Com_AtlasMoss.0"
           },
           "MaterialSlotName": "MI_Com_AtlasMoss",
@@ -221,11 +234,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_KillerShack_Floor:BodySetup_2",
+      "ObjectName": "BodySetup'SM_BRL_KillerShack_Floor:BodySetup_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/SM_BRL_KillerShack_Floor.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_KillerShack_Floor:NavCollision_4",
+      "ObjectName": "NavCollision'SM_BRL_KillerShack_Floor:NavCollision_4'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/SM_BRL_KillerShack_Floor.1"
     },
     "LightingGuid": "F051D5E5-472EC3EB-A48DEFA4-729E579B",

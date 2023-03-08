@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_IND_MercenaryTent_Large_Roof",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -86,7 +87,7 @@
     "BodySetupGuid": "F8083C7C407C24C1C1A67D9EAD6BA300",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 37075,
         "SizeOnDisk": 37075,
         "OffsetInFile": "0x13EDCD"
@@ -97,9 +98,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_1",
     "Outer": "SM_IND_MercenaryTent_Large_Roof",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 509,
         "SizeOnDisk": 509,
         "OffsetInFile": "0x147EE8"
@@ -109,6 +111,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_IND_MercenaryTent_Large_Roof",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -116,18 +119,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_IND_TrimTentArmy",
+            "ObjectName": "MaterialInstanceConstant'MI_IND_TrimTentArmy'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Industrial/Structures/MI_IND_TrimTentArmy.0"
           },
           "MaterialSlotName": "MI_IND_TrimTentArmy",
@@ -143,7 +156,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_TentArmy",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_TentArmy'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Fabric/MI_Com_TentArmy.0"
           },
           "MaterialSlotName": "MI_Com_TentArmy",
@@ -159,7 +172,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_IND_TentArmy",
+            "ObjectName": "MaterialInstanceConstant'MI_IND_TentArmy'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Industrial/Structures/MI_IND_TentArmy.0"
           },
           "MaterialSlotName": "MI_IND_TentArmy",
@@ -175,7 +188,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_TrimTentArmy_Masked",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_TrimTentArmy_Masked'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Trims/MI_Com_TrimTentArmy_Masked.0"
           },
           "MaterialSlotName": "MI_Com_TrimTentArmy_Masked",
@@ -208,11 +221,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_IND_MercenaryTent_Large_Roof:BodySetup_0",
+      "ObjectName": "BodySetup'SM_IND_MercenaryTent_Large_Roof:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Structures/SM_IND_MercenaryTent_Large_Roof.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_IND_MercenaryTent_Large_Roof:NavCollision_1",
+      "ObjectName": "NavCollision'SM_IND_MercenaryTent_Large_Roof:NavCollision_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Structures/SM_IND_MercenaryTent_Large_Roof.1"
     },
     "LightingGuid": "B514B08E-46ADBDD4-7463D995-9D9CADBC",

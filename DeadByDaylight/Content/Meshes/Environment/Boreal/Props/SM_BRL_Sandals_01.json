@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_BRL_Sandals_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -86,7 +87,7 @@
     "BodySetupGuid": "2556B91E4884517AEFF1C28F5BDC72E7",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 13319,
         "SizeOnDisk": 13319,
         "OffsetInFile": "0x5CE60"
@@ -97,9 +98,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_BRL_Sandals_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 509,
         "SizeOnDisk": 509,
         "OffsetInFile": "0x602AF"
@@ -109,6 +111,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_Sandals_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -116,18 +119,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_SandalsRope_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_SandalsRope_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/Props/MI_BRL_SandalsRope_01.0"
           },
           "MaterialSlotName": "MI_BRL_SandalsRope_01",
@@ -143,7 +156,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_Wicker",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_Wicker'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Wood/MI_Com_Wicker.0"
           },
           "MaterialSlotName": "MI_Com_Wicker",
@@ -159,7 +172,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_RustCoarse",
+            "ObjectName": "MaterialInstanceConstant'MI_RustCoarse'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Metal/MI_RustCoarse.0"
           },
           "MaterialSlotName": "MI_RustCoarse",
@@ -193,11 +206,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_Sandals_01:BodySetup_0",
+      "ObjectName": "BodySetup'SM_BRL_Sandals_01:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_Sandals_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_Sandals_01:NavCollision_2",
+      "ObjectName": "NavCollision'SM_BRL_Sandals_01:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_Sandals_01.1"
     },
     "LightingGuid": "9D7E271B-4A64ACF1-E165B584-B60ACD8B",

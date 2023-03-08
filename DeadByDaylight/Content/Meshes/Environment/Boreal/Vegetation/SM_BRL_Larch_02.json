@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_BRL_Larch_02",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -466,7 +467,7 @@
     "BodySetupGuid": "1235DF024B7B1CAA1F4EF4B844C463CF",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 130016,
         "SizeOnDisk": 130016,
         "OffsetInFile": "0x1BD03E"
@@ -477,9 +478,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_1",
     "Outer": "SM_BRL_Larch_02",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 1021,
         "SizeOnDisk": 1021,
         "OffsetInFile": "0x1DCC66"
@@ -489,6 +491,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_Larch_02",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -496,18 +499,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_ConiferBark_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_ConiferBark_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_ConiferBark_01.0"
           },
           "MaterialSlotName": "MI_BRL_ConiferBark_01",
@@ -540,11 +553,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_Larch_02:BodySetup_0",
+      "ObjectName": "BodySetup'SM_BRL_Larch_02:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Vegetation/SM_BRL_Larch_02.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_Larch_02:NavCollision_1",
+      "ObjectName": "NavCollision'SM_BRL_Larch_02:NavCollision_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Vegetation/SM_BRL_Larch_02.1"
     },
     "LightingGuid": "05ADC0F3-43960BB9-25C84CA4-75B77A58",

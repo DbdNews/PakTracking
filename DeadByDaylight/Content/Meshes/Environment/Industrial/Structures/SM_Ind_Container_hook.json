@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_Ind_Container_hook",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -67,7 +68,7 @@
     "BodySetupGuid": "C6863446461BD276B7F1E4A97412FE93",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 2057,
         "SizeOnDisk": 2057,
         "OffsetInFile": "0x1AE50"
@@ -78,9 +79,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_0",
     "Outer": "SM_Ind_Container_hook",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 265,
         "SizeOnDisk": 265,
         "OffsetInFile": "0x1B6A1"
@@ -90,6 +92,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_Ind_Container_hook",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -97,18 +100,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_SteelRough_A",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_SteelRough_A'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Blend/Metal/MI_Com_SteelRough_A.0"
           },
           "MaterialSlotName": "lambert1",
@@ -142,11 +155,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_Ind_Container_hook:BodySetup_0",
+      "ObjectName": "BodySetup'SM_Ind_Container_hook:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Structures/SM_Ind_Container_hook.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_Ind_Container_hook:NavCollision_0",
+      "ObjectName": "NavCollision'SM_Ind_Container_hook:NavCollision_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Structures/SM_Ind_Container_hook.1"
     },
     "LightingGuid": "397202BF-43D9E5D0-8FFD3082-3588A1E0",

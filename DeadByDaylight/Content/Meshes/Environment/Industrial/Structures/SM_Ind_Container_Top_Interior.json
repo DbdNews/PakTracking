@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_1",
     "Outer": "SM_Ind_Container_Top_Interior",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -2315,13 +2316,13 @@
         }
       }
     },
-    "BodySetupGuid": "5112393E4F60A1051B1288A2413E2DA7",
+    "BodySetupGuid": "FC35BC4B48E0853D2FC1A1B2D49EC174",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 24477,
         "SizeOnDisk": 24477,
-        "OffsetInFile": "0x5E631"
+        "OffsetInFile": "0x5E817"
       }
     }
   },
@@ -2329,37 +2330,85 @@
     "Type": "NavCollision",
     "Name": "NavCollision_1",
     "Outer": "SM_Ind_Container_Top_Interior",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 8013,
         "SizeOnDisk": 8013,
-        "OffsetInFile": "0x64616"
+        "OffsetInFile": "0x647FC"
       }
     }
   },
   {
     "Type": "StaticMesh",
     "Name": "SM_Ind_Container_Top_Interior",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
         "Default": 0,
         "Value": 0
       },
+      "bLimitLODRangeForShadow": true,
+      "ShadowMinLOD": {
+        "PerDetailModeValue": [
+          {
+            "Medium": 1
+          },
+          {
+            "Low": 2
+          },
+          {
+            "Mobile": 3
+          }
+        ],
+        "PerDetailModeOverride": [
+          {
+            "Medium": true
+          },
+          {
+            "Low": true
+          },
+          {
+            "Mobile": true
+          }
+        ]
+      },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 1
+          },
+          {
+            "High": 1
+          },
+          {
+            "Medium": 1
+          },
+          {
+            "Low": 2
+          },
+          {
+            "Mobile": 3
+          }
+        ],
+        "PerDetailModeOverride": [
+          {
+            "Ultra": true
+          },
+          {
+            "Low": true
+          },
+          {
+            "Mobile": true
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_Teak",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_Teak'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Wood/MI_Com_Teak.0"
           },
           "MaterialSlotName": "MI_Com_Teak",
@@ -2375,7 +2424,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Ind_EpoxyCeilling",
+            "ObjectName": "MaterialInstanceConstant'MI_Ind_EpoxyCeilling'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Industrial/Structures/MI_Ind_EpoxyCeilling.0"
           },
           "MaterialSlotName": "MI_Ind_EpoxyCeilling",
@@ -2391,7 +2440,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_BattenWoodPanels",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_BattenWoodPanels'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Wood/MI_Com_BattenWoodPanels.0"
           },
           "MaterialSlotName": "MI_Com_BattenWoodPanels",
@@ -2407,7 +2456,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_Plaster_B",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_Plaster_B'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Plaster/MI_Com_Plaster_B.0"
           },
           "MaterialSlotName": "MI_Com_Plaster_B",
@@ -2423,7 +2472,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Ind_EpoxyFloor",
+            "ObjectName": "MaterialInstanceConstant'MI_Ind_EpoxyFloor'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Industrial/Structures/MI_Ind_EpoxyFloor.0"
           },
           "MaterialSlotName": "MI_Ind_EpoxyFloor",
@@ -2456,11 +2505,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_Ind_Container_Top_Interior:BodySetup_1",
+      "ObjectName": "BodySetup'SM_Ind_Container_Top_Interior:BodySetup_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Structures/SM_Ind_Container_Top_Interior.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_Ind_Container_Top_Interior:NavCollision_1",
+      "ObjectName": "NavCollision'SM_Ind_Container_Top_Interior:NavCollision_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Structures/SM_Ind_Container_Top_Interior.1"
     },
     "LightingGuid": "C1CEB3F2-411F90C3-13069DB3-F599809C",

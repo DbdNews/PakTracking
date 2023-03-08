@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_2",
     "Outer": "SM_BRL_Hill03",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -634,7 +635,7 @@
     "BodySetupGuid": "BF635DEA4F67CC6C2BA56B830A7F04F5",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 25986,
         "SizeOnDisk": 25986,
         "OffsetInFile": "0x61A54"
@@ -645,9 +646,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_4",
     "Outer": "SM_BRL_Hill03",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 1397,
         "SizeOnDisk": 1397,
         "OffsetInFile": "0x6801E"
@@ -657,6 +659,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_Hill03",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -664,18 +667,28 @@
         "Value": 1
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_Hill03",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_Hill03'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_Hill03.0"
           },
           "MaterialSlotName": "MI_BRL_Hill03",
@@ -691,7 +704,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_AtlasMoss",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_AtlasMoss'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Masked/MI_Com_AtlasMoss.0"
           },
           "MaterialSlotName": "MI_Com_AtlasMoss",
@@ -724,11 +737,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_Hill03:BodySetup_2",
+      "ObjectName": "BodySetup'SM_BRL_Hill03:BodySetup_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Tiles/SM_BRL_Hill03.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_Hill03:NavCollision_4",
+      "ObjectName": "NavCollision'SM_BRL_Hill03:NavCollision_4'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Tiles/SM_BRL_Hill03.1"
     },
     "LightingGuid": "0ED62332-4306AE07-E6BD0BA5-388ED8E0",

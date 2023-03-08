@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_Ind_Container_NeonLight",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -67,7 +68,7 @@
     "BodySetupGuid": "E26658CF4E59CE4B0D6DD58DF8080EBC",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 11295,
         "SizeOnDisk": 11295,
         "OffsetInFile": "0x32317"
@@ -78,9 +79,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_0",
     "Outer": "SM_Ind_Container_NeonLight",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 265,
         "SizeOnDisk": 265,
         "OffsetInFile": "0x34F7E"
@@ -90,6 +92,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_Ind_Container_NeonLight",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -97,18 +100,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 2,
-          "High": 2,
-          "Medium": 2,
-          "Low": 2,
-          "Mobile": 2
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 2
+          },
+          {
+            "High": 2
+          },
+          {
+            "Medium": 2
+          },
+          {
+            "Low": 2
+          },
+          {
+            "Mobile": 2
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Stainless_A",
+            "ObjectName": "MaterialInstanceConstant'MI_Stainless_A'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Metal/MI_Stainless_A.0"
           },
           "MaterialSlotName": "diamond",
@@ -124,7 +137,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_COM_Emissive",
+            "ObjectName": "MaterialInstanceConstant'MI_COM_Emissive'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Glass/MI_COM_Emissive.0"
           },
           "MaterialSlotName": "lambert18",
@@ -140,7 +153,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_Aluminium",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_Aluminium'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Blend/Metal/MI_Com_Aluminium.0"
           },
           "MaterialSlotName": "Steel",
@@ -173,11 +186,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_Ind_Container_NeonLight:BodySetup_0",
+      "ObjectName": "BodySetup'SM_Ind_Container_NeonLight:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Structures/SM_Ind_Container_NeonLight.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_Ind_Container_NeonLight:NavCollision_0",
+      "ObjectName": "NavCollision'SM_Ind_Container_NeonLight:NavCollision_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Structures/SM_Ind_Container_NeonLight.1"
     },
     "LightingGuid": "0BFDB470-4F207AD6-F2249196-4E3C59D5",

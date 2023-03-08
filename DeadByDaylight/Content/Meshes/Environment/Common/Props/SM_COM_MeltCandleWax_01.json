@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_COM_MeltCandleWax_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -67,7 +68,7 @@
     "BodySetupGuid": "CA70303248D97342152633A1C4CA2182",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 3963,
         "SizeOnDisk": 3963,
         "OffsetInFile": "0x1E78B"
@@ -78,9 +79,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_COM_MeltCandleWax_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 265,
         "SizeOnDisk": 265,
         "OffsetInFile": "0x1F74E"
@@ -90,20 +92,31 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_COM_MeltCandleWax_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_COM_MeltingWaX_01",
+            "ObjectName": "MaterialInstanceConstant'MI_COM_MeltingWaX_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Props/MI_COM_MeltingWaX_01.0"
           },
           "MaterialSlotName": "lambert2",
@@ -137,11 +150,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_COM_MeltCandleWax_01:BodySetup_0",
+      "ObjectName": "BodySetup'SM_COM_MeltCandleWax_01:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/Props/SM_COM_MeltCandleWax_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_COM_MeltCandleWax_01:NavCollision_2",
+      "ObjectName": "NavCollision'SM_COM_MeltCandleWax_01:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/Props/SM_COM_MeltCandleWax_01.1"
     },
     "LightingGuid": "CA3F3897-4F55553E-772A98B0-A386F801",

@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_IND_MercenaryTent_Door",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -173,7 +174,7 @@
     "BodySetupGuid": "B534FA8540DD537AE652DD899C672210",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 4123,
         "SizeOnDisk": 4123,
         "OffsetInFile": "0x1EE69"
@@ -184,9 +185,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_0",
     "Outer": "SM_IND_MercenaryTent_Door",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 457,
         "SizeOnDisk": 457,
         "OffsetInFile": "0x1FECC"
@@ -196,6 +198,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_IND_MercenaryTent_Door",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -203,18 +206,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_TentArmy",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_TentArmy'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Fabric/MI_Com_TentArmy.0"
           },
           "MaterialSlotName": "MI_Com_TentArmy",
@@ -247,11 +260,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_IND_MercenaryTent_Door:BodySetup_0",
+      "ObjectName": "BodySetup'SM_IND_MercenaryTent_Door:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Structures/SM_IND_MercenaryTent_Door.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_IND_MercenaryTent_Door:NavCollision_0",
+      "ObjectName": "NavCollision'SM_IND_MercenaryTent_Door:NavCollision_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Structures/SM_IND_MercenaryTent_Door.1"
     },
     "LightingGuid": "129DF6FF-4F2C718F-F9A9FBBA-E37FB113",

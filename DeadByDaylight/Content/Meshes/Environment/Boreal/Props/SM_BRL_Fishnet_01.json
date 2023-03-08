@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_BRL_Fishnet_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -168,7 +169,7 @@
     "BodySetupGuid": "D1A955CE405A4E8FA6C95E864B342678",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 36368,
         "SizeOnDisk": 36368,
         "OffsetInFile": "0x103B3D"
@@ -179,9 +180,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_BRL_Fishnet_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 457,
         "SizeOnDisk": 457,
         "OffsetInFile": "0x10C995"
@@ -191,6 +193,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_Fishnet_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -198,18 +201,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_FishNet01",
+            "ObjectName": "MaterialInstanceConstant'MI_FishNet01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/MI_FishNet01.0"
           },
           "MaterialSlotName": "MI_FishNet01",
@@ -225,7 +238,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_Fishnet_accessory01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_Fishnet_accessory01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/Props/MI_BRL_Fishnet_accessory01.0"
           },
           "MaterialSlotName": "MI_BRL_Fishnet_accessory01",
@@ -259,11 +272,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_Fishnet_01:BodySetup_0",
+      "ObjectName": "BodySetup'SM_BRL_Fishnet_01:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_Fishnet_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_Fishnet_01:NavCollision_2",
+      "ObjectName": "NavCollision'SM_BRL_Fishnet_01:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_Fishnet_01.1"
     },
     "LightingGuid": "760EB06B-48109912-687A6E84-803A9D70",

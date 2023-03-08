@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_3",
     "Outer": "SM_Ind_Camp_WallLogo_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -156,7 +157,7 @@
     "BodySetupGuid": "B91B90414FA67F44A2A4779B4FE4B536",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 3023,
         "SizeOnDisk": 3023,
         "OffsetInFile": "0x2E9C7"
@@ -167,9 +168,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_6",
     "Outer": "SM_Ind_Camp_WallLogo_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 337,
         "SizeOnDisk": 337,
         "OffsetInFile": "0x2F5DE"
@@ -179,6 +181,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_Ind_Camp_WallLogo_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -186,18 +189,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Ind_WallLogo_01",
+            "ObjectName": "MaterialInstanceConstant'MI_Ind_WallLogo_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Industrial/Props/MI_Ind_WallLogo_01.0"
           },
           "MaterialSlotName": "MI_Ind_SkullMerchantWallLogo_01",
@@ -230,11 +243,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_Ind_Camp_WallLogo_01:BodySetup_3",
+      "ObjectName": "BodySetup'SM_Ind_Camp_WallLogo_01:BodySetup_3'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Props/SM_Ind_Camp_WallLogo_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_Ind_Camp_WallLogo_01:NavCollision_6",
+      "ObjectName": "NavCollision'SM_Ind_Camp_WallLogo_01:NavCollision_6'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Props/SM_Ind_Camp_WallLogo_01.1"
     },
     "LightingGuid": "76177CE7-4D646AC8-E0EC2E9B-70CC27B6",

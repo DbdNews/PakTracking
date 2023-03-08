@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_1",
     "Outer": "SM_Ind_Container_Top_Windows_Doorframe",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -2278,7 +2279,7 @@
     "BodySetupGuid": "7416BB8D4183A62134673BBE17EEE4E1",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 43347,
         "SizeOnDisk": 43347,
         "OffsetInFile": "0x180065"
@@ -2289,9 +2290,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_Ind_Container_Top_Windows_Doorframe",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 8109,
         "SizeOnDisk": 8109,
         "OffsetInFile": "0x18AA00"
@@ -2301,6 +2303,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_Ind_Container_Top_Windows_Doorframe",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -2308,18 +2311,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_Teak",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_Teak'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Wood/MI_Com_Teak.0"
           },
           "MaterialSlotName": "MI_Com_Teak",
@@ -2335,7 +2348,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_IronBumpedPainted_A",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_IronBumpedPainted_A'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Blend/Metal/MI_Com_IronBumpedPainted_A.0"
           },
           "MaterialSlotName": "MI_Com_IronBumpedPainted_A",
@@ -2351,7 +2364,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_IND_Window",
+            "ObjectName": "MaterialInstanceConstant'MI_IND_Window'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Industrial/Structures/MI_IND_Window.0"
           },
           "MaterialSlotName": "MI_COM_Glass01",
@@ -2384,11 +2397,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_Ind_Container_Top_Windows_Doorframe:BodySetup_1",
+      "ObjectName": "BodySetup'SM_Ind_Container_Top_Windows_Doorframe:BodySetup_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Structures/SM_Ind_Container_Top_Windows_Doorframe.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_Ind_Container_Top_Windows_Doorframe:NavCollision_2",
+      "ObjectName": "NavCollision'SM_Ind_Container_Top_Windows_Doorframe:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Structures/SM_Ind_Container_Top_Windows_Doorframe.1"
     },
     "LightingGuid": "BCB9ED57-47DCD88C-3A8C3892-A5377A4F",

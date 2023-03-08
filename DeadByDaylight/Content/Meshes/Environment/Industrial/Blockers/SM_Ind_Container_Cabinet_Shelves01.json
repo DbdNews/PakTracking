@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_Ind_Container_Cabinet_Shelves01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -67,7 +68,7 @@
     "BodySetupGuid": "97FF63ED4679EAC9100BDF9107248B48",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 4199,
         "SizeOnDisk": 4199,
         "OffsetInFile": "0x15A89"
@@ -78,9 +79,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_1",
     "Outer": "SM_Ind_Container_Cabinet_Shelves01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 265,
         "SizeOnDisk": 265,
         "OffsetInFile": "0x16B38"
@@ -90,6 +92,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_Ind_Container_Cabinet_Shelves01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -97,18 +100,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 2,
-          "High": 2,
-          "Medium": 2,
-          "Low": 2,
-          "Mobile": 2
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 2
+          },
+          {
+            "High": 2
+          },
+          {
+            "Medium": 2
+          },
+          {
+            "Low": 2
+          },
+          {
+            "Mobile": 2
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_MetalPainted_02",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_MetalPainted_02'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Metal/MI_Com_MetalPainted_02.0"
           },
           "MaterialSlotName": "blinn5",
@@ -124,7 +137,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Stainless_Diamond",
+            "ObjectName": "MaterialInstanceConstant'MI_Stainless_Diamond'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Metal/MI_Stainless_Diamond.0"
           },
           "MaterialSlotName": "Wall",
@@ -140,7 +153,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_IronPainted_02",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_IronPainted_02'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Metal/MI_Com_IronPainted_02.0"
           },
           "MaterialSlotName": "Steel",
@@ -173,11 +186,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_Ind_Container_Cabinet_Shelves01:BodySetup_0",
+      "ObjectName": "BodySetup'SM_Ind_Container_Cabinet_Shelves01:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Blockers/SM_Ind_Container_Cabinet_Shelves01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_Ind_Container_Cabinet_Shelves01:NavCollision_1",
+      "ObjectName": "NavCollision'SM_Ind_Container_Cabinet_Shelves01:NavCollision_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Blockers/SM_Ind_Container_Cabinet_Shelves01.1"
     },
     "LightingGuid": "43784057-4C0AC440-C6F984BA-C0E3EBE7",

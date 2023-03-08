@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_BRL_MD_Wood_Debris_A",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -547,7 +548,7 @@
     "BodySetupGuid": "B3AFF60F431459A220F677BDAB7B4052",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 5149,
         "SizeOnDisk": 5149,
         "OffsetInFile": "0x1BE08"
@@ -558,9 +559,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_1",
     "Outer": "SM_BRL_MD_Wood_Debris_A",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 1429,
         "SizeOnDisk": 1429,
         "OffsetInFile": "0x1D26D"
@@ -570,6 +572,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_MD_Wood_Debris_A",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -577,18 +580,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_DarkPlankWood_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_DarkPlankWood_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_DarkPlankWood_01.0"
           },
           "MaterialSlotName": "MI_BRL_DarkPlankWood_01",
@@ -622,11 +635,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_MD_Wood_Debris_A:BodySetup_0",
+      "ObjectName": "BodySetup'SM_BRL_MD_Wood_Debris_A:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/Mother_Dwelling/SM_BRL_MD_Wood_Debris_A.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_MD_Wood_Debris_A:NavCollision_1",
+      "ObjectName": "NavCollision'SM_BRL_MD_Wood_Debris_A:NavCollision_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/Mother_Dwelling/SM_BRL_MD_Wood_Debris_A.1"
     },
     "LightingGuid": "5099B218-42A2721D-6D1686BF-C67A5E08",

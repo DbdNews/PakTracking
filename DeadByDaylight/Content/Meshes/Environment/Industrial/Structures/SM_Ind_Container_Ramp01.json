@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_Ind_Container_Ramp01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -1283,7 +1284,7 @@
     "BodySetupGuid": "9C81673F45AA59D2B3721982691306E2",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 43826,
         "SizeOnDisk": 43826,
         "OffsetInFile": "0x1D3016"
@@ -1294,9 +1295,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_1",
     "Outer": "SM_Ind_Container_Ramp01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 4597,
         "SizeOnDisk": 4597,
         "OffsetInFile": "0x1DDB90"
@@ -1306,6 +1308,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_Ind_Container_Ramp01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -1313,18 +1316,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Stainless_A",
+            "ObjectName": "MaterialInstanceConstant'MI_Stainless_A'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Metal/MI_Stainless_A.0"
           },
           "MaterialSlotName": "MI_Stainless_A",
@@ -1340,7 +1353,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_Aluminium",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_Aluminium'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Blend/Metal/MI_Com_Aluminium.0"
           },
           "MaterialSlotName": "MI_SAT_Aluminium",
@@ -1356,7 +1369,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Stainless_Diamond",
+            "ObjectName": "MaterialInstanceConstant'MI_Stainless_Diamond'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Industrial/Structures/MI_Stainless_Diamond.0"
           },
           "MaterialSlotName": "MI_Stainless_Diamond",
@@ -1372,7 +1385,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_Grid_02_02",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_Grid_02_02'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Metal/MI_Com_Grid_02_02.0"
           },
           "MaterialSlotName": "MI_Com_Grid_02_02",
@@ -1405,11 +1418,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_Ind_Container_Ramp01:BodySetup_0",
+      "ObjectName": "BodySetup'SM_Ind_Container_Ramp01:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Structures/SM_Ind_Container_Ramp01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_Ind_Container_Ramp01:NavCollision_1",
+      "ObjectName": "NavCollision'SM_Ind_Container_Ramp01:NavCollision_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Structures/SM_Ind_Container_Ramp01.1"
     },
     "LightingGuid": "30F30CC9-4047E7D3-64B5A3B7-5238F771",

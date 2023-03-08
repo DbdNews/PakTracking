@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_1",
     "Outer": "SM_BRL_RockWall_04",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -288,7 +289,7 @@
     "BodySetupGuid": "CE9E2D19406D82C9ABE28CBB044F24AB",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 6917,
         "SizeOnDisk": 6917,
         "OffsetInFile": "0x359A4"
@@ -299,9 +300,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_BRL_RockWall_04",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 893,
         "SizeOnDisk": 893,
         "OffsetInFile": "0x374F1"
@@ -311,6 +313,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_RockWall_04",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -318,18 +321,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 4,
-          "High": 4,
-          "Medium": 4,
-          "Low": 4,
-          "Mobile": 4
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 4
+          },
+          {
+            "High": 4
+          },
+          {
+            "Medium": 4
+          },
+          {
+            "Low": 4
+          },
+          {
+            "Mobile": 4
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_RockWall_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_RockWall_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/Props/MI_BRL_RockWall_01.0"
           },
           "MaterialSlotName": "MI_BRL_RockWall_01",
@@ -345,7 +358,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_ECL_Debris_04",
+            "ObjectName": "MaterialInstanceConstant'MI_ECL_Debris_04'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Eclipse/Structure/MI_ECL_Debris_04.0"
           },
           "MaterialSlotName": "MI_ECL_Debris_04",
@@ -379,11 +392,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_RockWall_04:BodySetup_1",
+      "ObjectName": "BodySetup'SM_BRL_RockWall_04:BodySetup_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/SM_BRL_RockWall_04.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_RockWall_04:NavCollision_2",
+      "ObjectName": "NavCollision'SM_BRL_RockWall_04:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/SM_BRL_RockWall_04.1"
     },
     "LightingGuid": "315A0E1F-426B6D3E-576136AA-860CA72C",

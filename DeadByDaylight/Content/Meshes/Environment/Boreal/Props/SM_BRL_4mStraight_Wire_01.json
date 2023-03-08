@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_BRL_4mStraight_Wire_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "DefaultInstance": {
         "ObjectType": "ECC_WorldStatic",
@@ -44,7 +45,7 @@
     "BodySetupGuid": "4F42CC58469E51297347C48C9530365C",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 1301,
         "SizeOnDisk": 1301,
         "OffsetInFile": "0x4AC5"
@@ -55,9 +56,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_0",
     "Outer": "SM_BRL_4mStraight_Wire_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 21,
         "SizeOnDisk": 21,
         "OffsetInFile": "0x5022"
@@ -67,20 +69,31 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_4mStraight_Wire_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 1,
-          "High": 1,
-          "Medium": 1,
-          "Low": 1,
-          "Mobile": 1
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 1
+          },
+          {
+            "High": 1
+          },
+          {
+            "Medium": 1
+          },
+          {
+            "Low": 1
+          },
+          {
+            "Mobile": 1
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_COM_BarbedWire_01",
+            "ObjectName": "MaterialInstanceConstant'MI_COM_BarbedWire_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Fence/MI_COM_BarbedWire_01.0"
           },
           "MaterialSlotName": "MI_COM_BarbedWire_01",
@@ -114,11 +127,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_4mStraight_Wire_01:BodySetup_0",
+      "ObjectName": "BodySetup'SM_BRL_4mStraight_Wire_01:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_4mStraight_Wire_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_4mStraight_Wire_01:NavCollision_0",
+      "ObjectName": "NavCollision'SM_BRL_4mStraight_Wire_01:NavCollision_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_4mStraight_Wire_01.1"
     },
     "LightingGuid": "026D888B-41C051F3-3F8E998A-01FD0515",

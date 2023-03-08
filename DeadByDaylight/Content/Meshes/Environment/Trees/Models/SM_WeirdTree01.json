@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_WeirdTree01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -23285,7 +23286,7 @@
     "BodySetupGuid": "FB7704954F160460B4BA339B9ADE88D0",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 243348,
         "SizeOnDisk": 243348,
         "OffsetInFile": "0x852D69"
@@ -23296,9 +23297,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_1",
     "Outer": "SM_WeirdTree01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 57349,
         "SizeOnDisk": 57349,
         "OffsetInFile": "0x88E445"
@@ -23308,6 +23310,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_WeirdTree01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -23315,18 +23318,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 4,
-          "High": 4,
-          "Medium": 4,
-          "Low": 4,
-          "Mobile": 4
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 4
+          },
+          {
+            "High": 4
+          },
+          {
+            "Medium": 4
+          },
+          {
+            "Low": 4
+          },
+          {
+            "Mobile": 4
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_WeirdTree02",
+            "ObjectName": "MaterialInstanceConstant'MI_WeirdTree02'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/MI_WeirdTree02.0"
           },
           "MaterialSlotName": "MI_WeirdTree02",
@@ -23342,7 +23355,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_DirtTerrain02",
+            "ObjectName": "MaterialInstanceConstant'MI_DirtTerrain02'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Substance/MI_DirtTerrain02.0"
           },
           "MaterialSlotName": "MI_DirtTerrain02",
@@ -23358,7 +23371,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Ind_Rock03_01",
+            "ObjectName": "MaterialInstanceConstant'MI_Ind_Rock03_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Industrial/Rocks/MI_Ind_Rock03_01.0"
           },
           "MaterialSlotName": "MI_Ind_Rock03_01",
@@ -23374,7 +23387,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Ind_Rock02_01",
+            "ObjectName": "MaterialInstanceConstant'MI_Ind_Rock02_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Industrial/Rocks/MI_Ind_Rock02_01.0"
           },
           "MaterialSlotName": "MI_Ind_Rock02_01",
@@ -23408,11 +23421,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_WeirdTree01:BodySetup_0",
+      "ObjectName": "BodySetup'SM_WeirdTree01:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Trees/Models/SM_WeirdTree01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_WeirdTree01:NavCollision_1",
+      "ObjectName": "NavCollision'SM_WeirdTree01:NavCollision_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Trees/Models/SM_WeirdTree01.1"
     },
     "LightingGuid": "41ADD0EB-4D4A8559-4D175C94-A6CDC4B3",

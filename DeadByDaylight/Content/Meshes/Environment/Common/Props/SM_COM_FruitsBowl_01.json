@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_2",
     "Outer": "SM_COM_FruitsBowl_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -212,7 +213,7 @@
     "BodySetupGuid": "3FDC93774E4ADEEFDE280F9F80ED5FCD",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 10243,
         "SizeOnDisk": 10243,
         "OffsetInFile": "0x57777"
@@ -223,9 +224,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_4",
     "Outer": "SM_COM_FruitsBowl_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 697,
         "SizeOnDisk": 697,
         "OffsetInFile": "0x59FC2"
@@ -235,6 +237,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_COM_FruitsBowl_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -242,18 +245,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_COM_FruitsBowl_01",
+            "ObjectName": "MaterialInstanceConstant'MI_COM_FruitsBowl_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Props/MI_COM_FruitsBowl_01.0"
           },
           "MaterialSlotName": "MI_COM_FruitsBowl_01",
@@ -286,11 +299,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_COM_FruitsBowl_01:BodySetup_2",
+      "ObjectName": "BodySetup'SM_COM_FruitsBowl_01:BodySetup_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/Props/SM_COM_FruitsBowl_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_COM_FruitsBowl_01:NavCollision_4",
+      "ObjectName": "NavCollision'SM_COM_FruitsBowl_01:NavCollision_4'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/Props/SM_COM_FruitsBowl_01.1"
     },
     "LightingGuid": "CE1BEDD8-4586EA47-3F5A189C-D0E74E4E",

@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_2",
     "Outer": "SM_IND_TallTree04_Leaves",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "DefaultInstance": {
         "ObjectType": "ECC_WorldStatic",
@@ -101,7 +102,7 @@
     "BodySetupGuid": "80D96663404643CD52310AB99B1FA951",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 112979,
         "SizeOnDisk": 112979,
         "OffsetInFile": "0x1A6D40"
@@ -112,9 +113,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_IND_TallTree04_Leaves",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 21,
         "SizeOnDisk": 21,
         "OffsetInFile": "0x1C26DB"
@@ -124,6 +126,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_IND_TallTree04_Leaves",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -131,18 +134,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_TallTree04_Leaves",
+            "ObjectName": "MaterialInstanceConstant'MI_TallTree04_Leaves'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Vegetations/MI_TallTree04_Leaves.0"
           },
           "MaterialSlotName": "MI_TallTree04_Leaves",
@@ -176,11 +189,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_IND_TallTree04_Leaves:BodySetup_2",
+      "ObjectName": "BodySetup'SM_IND_TallTree04_Leaves:BodySetup_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Vegetation/SM_IND_TallTree04_Leaves.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_IND_TallTree04_Leaves:NavCollision_2",
+      "ObjectName": "NavCollision'SM_IND_TallTree04_Leaves:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Vegetation/SM_IND_TallTree04_Leaves.1"
     },
     "LightingGuid": "199A137D-4B6ABE03-F772C9BA-18D86558",

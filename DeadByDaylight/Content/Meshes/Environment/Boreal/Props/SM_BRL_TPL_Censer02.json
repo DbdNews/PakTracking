@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_1",
     "Outer": "SM_BRL_TPL_Censer02",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -386,7 +387,7 @@
     "BodySetupGuid": "6CE02D4E4BAA5A7843B5B586CEE923A7",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 26049,
         "SizeOnDisk": 26049,
         "OffsetInFile": "0x9ADD4"
@@ -397,9 +398,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_BRL_TPL_Censer02",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 1373,
         "SizeOnDisk": 1373,
         "OffsetInFile": "0xA13DD"
@@ -409,6 +411,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_TPL_Censer02",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -416,18 +419,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_TPL_Censer02",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_TPL_Censer02'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_TPL_Censer02.0"
           },
           "MaterialSlotName": "lambert1",
@@ -461,11 +474,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_TPL_Censer02:BodySetup_1",
+      "ObjectName": "BodySetup'SM_BRL_TPL_Censer02:BodySetup_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_TPL_Censer02.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_TPL_Censer02:NavCollision_2",
+      "ObjectName": "NavCollision'SM_BRL_TPL_Censer02:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_TPL_Censer02.1"
     },
     "LightingGuid": "4E36972F-41C93CAD-50B311B7-124BC016",

@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_1",
     "Outer": "SM_BRL_MD_Wall_Back",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -1033,7 +1034,7 @@
     "BodySetupGuid": "5E96AC594099483414BFD7B9761E5F4B",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 21310,
         "SizeOnDisk": 21310,
         "OffsetInFile": "0xA65AD"
@@ -1044,9 +1045,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_BRL_MD_Wall_Back",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 3341,
         "SizeOnDisk": 3341,
         "OffsetInFile": "0xAB933"
@@ -1056,6 +1058,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_MD_Wall_Back",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -1063,18 +1066,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_DarkPlankWood_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_DarkPlankWood_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_DarkPlankWood_01.0"
           },
           "MaterialSlotName": "MI_BRL_DarkPlankWood_01",
@@ -1090,7 +1103,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_GrangeWood",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_GrangeWood'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_GrangeWood.0"
           },
           "MaterialSlotName": "MI_BRL_GrangeWood",
@@ -1106,7 +1119,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_RottenWoodPlanks_A",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_RottenWoodPlanks_A'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_RottenWoodPlanks_A.0"
           },
           "MaterialSlotName": "MI_BRL_RottenWoodPlanks_A",
@@ -1140,11 +1153,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_MD_Wall_Back:BodySetup_1",
+      "ObjectName": "BodySetup'SM_BRL_MD_Wall_Back:BodySetup_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/Mother_Dwelling/SM_BRL_MD_Wall_Back.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_MD_Wall_Back:NavCollision_2",
+      "ObjectName": "NavCollision'SM_BRL_MD_Wall_Back:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Structures/Mother_Dwelling/SM_BRL_MD_Wall_Back.1"
     },
     "LightingGuid": "21BF71A3-40B453E7-00385086-DA132EA0",

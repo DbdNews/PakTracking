@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_GT_16x16_Brl_Shack01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -380,7 +381,7 @@
     "BodySetupGuid": "7FED85C649035A08659C74B847F5FE8F",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 4289,
         "SizeOnDisk": 4289,
         "OffsetInFile": "0x4817E"
@@ -391,9 +392,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_0",
     "Outer": "SM_GT_16x16_Brl_Shack01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 1765,
         "SizeOnDisk": 1765,
         "OffsetInFile": "0x49287"
@@ -403,6 +405,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_GT_16x16_Brl_Shack01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -410,18 +413,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Boreal_Ground01",
+            "ObjectName": "MaterialInstanceConstant'MI_Boreal_Ground01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Substance/MI_Boreal_Ground01.0"
           },
           "MaterialSlotName": "MI_Boreal_Ground01",
@@ -455,11 +468,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_GT_16x16_Brl_Shack01:BodySetup_0",
+      "ObjectName": "BodySetup'SM_GT_16x16_Brl_Shack01:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Tiles/SM_GT_16x16_Brl_Shack01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_GT_16x16_Brl_Shack01:NavCollision_0",
+      "ObjectName": "NavCollision'SM_GT_16x16_Brl_Shack01:NavCollision_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Tiles/SM_GT_16x16_Brl_Shack01.1"
     },
     "LightingGuid": "AB429C92-479D2020-B2F7BEA5-4E863B0A",

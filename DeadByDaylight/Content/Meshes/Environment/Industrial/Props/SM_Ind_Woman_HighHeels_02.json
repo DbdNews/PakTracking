@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_Ind_Woman_HighHeels_02",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -188,7 +189,7 @@
     "BodySetupGuid": "00E91DAC493B723AAB06C98FD862A378",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 4279,
         "SizeOnDisk": 4279,
         "OffsetInFile": "0x1FAF9"
@@ -199,9 +200,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_0",
     "Outer": "SM_Ind_Woman_HighHeels_02",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 673,
         "SizeOnDisk": 673,
         "OffsetInFile": "0x20BF8"
@@ -211,6 +213,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_Ind_Woman_HighHeels_02",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -218,18 +221,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Ind_Woman_HighHeels_01",
+            "ObjectName": "MaterialInstanceConstant'MI_Ind_Woman_HighHeels_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Industrial/Props/MI_Ind_Woman_HighHeels_01.0"
           },
           "MaterialSlotName": "MI_Ind_Woman_HighHeels_01",
@@ -245,7 +258,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Ind_Woman_HighHeels_02",
+            "ObjectName": "MaterialInstanceConstant'MI_Ind_Woman_HighHeels_02'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Industrial/Props/MI_Ind_Woman_HighHeels_02.0"
           },
           "MaterialSlotName": "MI_Ind_Woman_HighHeels_02",
@@ -278,11 +291,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_Ind_Woman_HighHeels_02:BodySetup_0",
+      "ObjectName": "BodySetup'SM_Ind_Woman_HighHeels_02:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Props/SM_Ind_Woman_HighHeels_02.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_Ind_Woman_HighHeels_02:NavCollision_0",
+      "ObjectName": "NavCollision'SM_Ind_Woman_HighHeels_02:NavCollision_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Props/SM_Ind_Woman_HighHeels_02.1"
     },
     "LightingGuid": "61B81C23-44192D24-E2D6F3AD-D37372B4",

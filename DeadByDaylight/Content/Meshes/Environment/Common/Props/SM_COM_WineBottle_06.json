@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_COM_WineBottle_06",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -168,7 +169,7 @@
     "BodySetupGuid": "B1E85C0F48E296D6448B53A12B80EA44",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 3595,
         "SizeOnDisk": 3595,
         "OffsetInFile": "0x1732F"
@@ -179,9 +180,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_0",
     "Outer": "SM_COM_WineBottle_06",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 457,
         "SizeOnDisk": 457,
         "OffsetInFile": "0x18182"
@@ -191,6 +193,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_COM_WineBottle_06",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -198,18 +201,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_COM_WineBottles_03_06",
+            "ObjectName": "MaterialInstanceConstant'MI_COM_WineBottles_03_06'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Props/MI_COM_WineBottles_03_06.0"
           },
           "MaterialSlotName": "MI_COM_WineBottles_03_06",
@@ -242,11 +255,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_COM_WineBottle_06:BodySetup_0",
+      "ObjectName": "BodySetup'SM_COM_WineBottle_06:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/Props/SM_COM_WineBottle_06.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_COM_WineBottle_06:NavCollision_0",
+      "ObjectName": "NavCollision'SM_COM_WineBottle_06:NavCollision_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/Props/SM_COM_WineBottle_06.1"
     },
     "LightingGuid": "08CE686C-4E82589D-F4A24484-EC2713DF",

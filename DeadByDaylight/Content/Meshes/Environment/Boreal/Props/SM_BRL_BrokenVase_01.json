@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_2",
     "Outer": "SM_BRL_BrokenVase_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -181,7 +182,7 @@
     "BodySetupGuid": "2E3A263B4B71583C6099C59EBE5ADC0D",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 20337,
         "SizeOnDisk": 20337,
         "OffsetInFile": "0x87926"
@@ -192,9 +193,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_4",
     "Outer": "SM_BRL_BrokenVase_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 937,
         "SizeOnDisk": 937,
         "OffsetInFile": "0x8C8DF"
@@ -204,6 +206,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_BrokenVase_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -211,18 +214,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_BrokenVase_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_BrokenVase_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/MI_BRL_BrokenVase_01.0"
           },
           "MaterialSlotName": "MI_BRL_BrokenVase_01",
@@ -256,11 +269,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_BrokenVase_01:BodySetup_2",
+      "ObjectName": "BodySetup'SM_BRL_BrokenVase_01:BodySetup_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_BrokenVase_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_BrokenVase_01:NavCollision_4",
+      "ObjectName": "NavCollision'SM_BRL_BrokenVase_01:NavCollision_4'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_BrokenVase_01.1"
     },
     "LightingGuid": "E4CA8D0C-435A2D1B-C458E198-BAE307F9",

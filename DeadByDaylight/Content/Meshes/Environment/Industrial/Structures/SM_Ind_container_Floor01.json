@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_1",
     "Outer": "SM_Ind_container_Floor01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -63,7 +64,7 @@
     "BodySetupGuid": "B582DBE8487BA62668FDE9B0F3F5986C",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 20391,
         "SizeOnDisk": 20391,
         "OffsetInFile": "0xB84FB"
@@ -74,9 +75,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_Ind_container_Floor01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 265,
         "SizeOnDisk": 265,
         "OffsetInFile": "0xBD4EA"
@@ -86,6 +88,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_Ind_container_Floor01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -93,18 +96,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_IND_WorkshopGrid",
+            "ObjectName": "MaterialInstanceConstant'MI_IND_WorkshopGrid'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Industrial/Structures/MI_IND_WorkshopGrid.0"
           },
           "MaterialSlotName": "Light",
@@ -120,7 +133,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_IND_WorkshopMetalFloor",
+            "ObjectName": "MaterialInstanceConstant'MI_IND_WorkshopMetalFloor'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Industrial/Structures/MI_IND_WorkshopMetalFloor.0"
           },
           "MaterialSlotName": "lambert1",
@@ -136,7 +149,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_IND_WorkShopFloor",
+            "ObjectName": "MaterialInstanceConstant'MI_IND_WorkShopFloor'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Industrial/Structures/MI_IND_WorkShopFloor.0"
           },
           "MaterialSlotName": "MI_Com_Plastic_A",
@@ -169,11 +182,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_Ind_container_Floor01:BodySetup_1",
+      "ObjectName": "BodySetup'SM_Ind_container_Floor01:BodySetup_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Structures/SM_Ind_container_Floor01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_Ind_container_Floor01:NavCollision_2",
+      "ObjectName": "NavCollision'SM_Ind_container_Floor01:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Structures/SM_Ind_container_Floor01.1"
     },
     "LightingGuid": "6B68F6A1-4CE4BACE-0B4C8CBA-284F2F16",

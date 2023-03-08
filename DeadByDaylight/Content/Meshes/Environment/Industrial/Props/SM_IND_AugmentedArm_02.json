@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_2",
     "Outer": "SM_IND_AugmentedArm_02",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -67,7 +68,7 @@
     "BodySetupGuid": "D5FCEDFB44AF785CBC1078956653AF9E",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 44547,
         "SizeOnDisk": 44547,
         "OffsetInFile": "0x11CC30"
@@ -78,9 +79,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_4",
     "Outer": "SM_IND_AugmentedArm_02",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 265,
         "SizeOnDisk": 265,
         "OffsetInFile": "0x127A7B"
@@ -90,6 +92,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_IND_AugmentedArm_02",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -97,18 +100,28 @@
         "Value": 1
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_IND_AugmentedArm_Mech_02",
+            "ObjectName": "MaterialInstanceConstant'MI_IND_AugmentedArm_Mech_02'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Industrial/Props/MI_IND_AugmentedArm_Mech_02.0"
           },
           "MaterialSlotName": "MI_IND_AugmentedArm_Mech_02",
@@ -124,7 +137,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_IND_AugmentedArm_Strap",
+            "ObjectName": "MaterialInstanceConstant'MI_IND_AugmentedArm_Strap'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Industrial/Props/MI_IND_AugmentedArm_Strap.0"
           },
           "MaterialSlotName": "MI_IND_AugmentedArm_Strap",
@@ -140,7 +153,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_IND_Augmented_Arm_02",
+            "ObjectName": "MaterialInstanceConstant'MI_IND_Augmented_Arm_02'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Industrial/Props/MI_IND_Augmented_Arm_02.0"
           },
           "MaterialSlotName": "MI_IND_Augmented_Arm_02",
@@ -174,11 +187,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_IND_AugmentedArm_02:BodySetup_2",
+      "ObjectName": "BodySetup'SM_IND_AugmentedArm_02:BodySetup_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Props/SM_IND_AugmentedArm_02.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_IND_AugmentedArm_02:NavCollision_4",
+      "ObjectName": "NavCollision'SM_IND_AugmentedArm_02:NavCollision_4'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Props/SM_IND_AugmentedArm_02.1"
     },
     "LightingGuid": "3118FFC6-4A28E169-CFCA72BA-ED52D3ED",

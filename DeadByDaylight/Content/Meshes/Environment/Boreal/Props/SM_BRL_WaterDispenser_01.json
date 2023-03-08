@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_BRL_WaterDispenser_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -310,7 +311,7 @@
     "BodySetupGuid": "C1AF2BE649C156A7A53846836C22EBDB",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 23585,
         "SizeOnDisk": 23585,
         "OffsetInFile": "0x93C66"
@@ -321,9 +322,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_1",
     "Outer": "SM_BRL_WaterDispenser_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 1273,
         "SizeOnDisk": 1273,
         "OffsetInFile": "0x998CF"
@@ -333,6 +335,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_WaterDispenser_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -340,18 +343,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_WaterDispenser_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_WaterDispenser_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/Props/MI_BRL_WaterDispenser_01.0"
           },
           "MaterialSlotName": "MI_BRL_WaterDispenser_01",
@@ -385,11 +398,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_WaterDispenser_01:BodySetup_0",
+      "ObjectName": "BodySetup'SM_BRL_WaterDispenser_01:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_WaterDispenser_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_WaterDispenser_01:NavCollision_1",
+      "ObjectName": "NavCollision'SM_BRL_WaterDispenser_01:NavCollision_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_WaterDispenser_01.1"
     },
     "LightingGuid": "FE27A279-4AA57152-84A105B0-7CA2FE41",

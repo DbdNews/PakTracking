@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_2",
     "Outer": "SM_IND_MercenaryTent_Small_Left",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -324,7 +325,7 @@
     "BodySetupGuid": "AAAEC7AD4DD8DA7F9D8659AC02114F89",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 16809,
         "SizeOnDisk": 16809,
         "OffsetInFile": "0x84643"
@@ -335,9 +336,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_4",
     "Outer": "SM_IND_MercenaryTent_Small_Left",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 1137,
         "SizeOnDisk": 1137,
         "OffsetInFile": "0x88834"
@@ -347,6 +349,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_IND_MercenaryTent_Small_Left",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -354,18 +357,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_IND_TrimTentArmy",
+            "ObjectName": "MaterialInstanceConstant'MI_IND_TrimTentArmy'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Industrial/Structures/MI_IND_TrimTentArmy.0"
           },
           "MaterialSlotName": "MI_IND_TrimTentArmy",
@@ -381,7 +394,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_TentArmy",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_TentArmy'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Fabric/MI_Com_TentArmy.0"
           },
           "MaterialSlotName": "MI_Com_TentArmy",
@@ -397,7 +410,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_IND_TentArmy",
+            "ObjectName": "MaterialInstanceConstant'MI_IND_TentArmy'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Industrial/Structures/MI_IND_TentArmy.0"
           },
           "MaterialSlotName": "MI_IND_TentArmy",
@@ -413,7 +426,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Com_TrimTentArmy_Masked",
+            "ObjectName": "MaterialInstanceConstant'MI_Com_TrimTentArmy_Masked'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Trims/MI_Com_TrimTentArmy_Masked.0"
           },
           "MaterialSlotName": "MI_Com_TrimTentArmy_Masked",
@@ -429,7 +442,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_IND_TrimTentArmy_Mud",
+            "ObjectName": "MaterialInstanceConstant'MI_IND_TrimTentArmy_Mud'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Industrial/Structures/MI_IND_TrimTentArmy_Mud.0"
           },
           "MaterialSlotName": "MI_IND_TrimTentArmy_Mud",
@@ -462,11 +475,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_IND_MercenaryTent_Small_Left:BodySetup_2",
+      "ObjectName": "BodySetup'SM_IND_MercenaryTent_Small_Left:BodySetup_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Structures/SM_IND_MercenaryTent_Small_Left.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_IND_MercenaryTent_Small_Left:NavCollision_4",
+      "ObjectName": "NavCollision'SM_IND_MercenaryTent_Small_Left:NavCollision_4'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Industrial/Structures/SM_IND_MercenaryTent_Small_Left.1"
     },
     "LightingGuid": "C36E44C9-4CC1286C-0F8E2EAF-FA0FA77F",

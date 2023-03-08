@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_2",
     "Outer": "SM_BRL_WallTowel_01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -900,7 +901,7 @@
     "BodySetupGuid": "2A20A0A44B0B717EFE757FB67D9AA778",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 10976,
         "SizeOnDisk": 10976,
         "OffsetInFile": "0x48D0D"
@@ -911,9 +912,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_4",
     "Outer": "SM_BRL_WallTowel_01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 1997,
         "SizeOnDisk": 1997,
         "OffsetInFile": "0x4B835"
@@ -923,6 +925,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_WallTowel_01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -930,18 +933,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_BRL_WallTowel_01",
+            "ObjectName": "MaterialInstanceConstant'MI_BRL_WallTowel_01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Boreal/Props/MI_BRL_WallTowel_01.0"
           },
           "MaterialSlotName": "MI_BRL_WallTowel_01",
@@ -975,11 +988,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_WallTowel_01:BodySetup_2",
+      "ObjectName": "BodySetup'SM_BRL_WallTowel_01:BodySetup_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_WallTowel_01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_WallTowel_01:NavCollision_4",
+      "ObjectName": "NavCollision'SM_BRL_WallTowel_01:NavCollision_4'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_WallTowel_01.1"
     },
     "LightingGuid": "B7B3965D-452BA832-74368E99-6AEBF6A8",

@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_1",
     "Outer": "SM_BRL_MeatPiece_03",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -1693,7 +1694,7 @@
     "BodySetupGuid": "71A8C362471D72D8E54CFCA09CA447A6",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 13495,
         "SizeOnDisk": 13495,
         "OffsetInFile": "0x1F402"
@@ -1704,9 +1705,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_BRL_MeatPiece_03",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 6017,
         "SizeOnDisk": 6017,
         "OffsetInFile": "0x22901"
@@ -1716,6 +1718,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_BRL_MeatPiece_03",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -1723,18 +1726,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 3,
-          "High": 3,
-          "Medium": 3,
-          "Low": 3,
-          "Mobile": 3
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_SM_BRL_MeatPieces",
+            "ObjectName": "MaterialInstanceConstant'MI_SM_BRL_MeatPieces'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/MI_SM_BRL_MeatPieces.0"
           },
           "MaterialSlotName": "MI_SM_BRL_MeatPieces",
@@ -1768,11 +1781,11 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_BRL_MeatPiece_03:BodySetup_1",
+      "ObjectName": "BodySetup'SM_BRL_MeatPiece_03:BodySetup_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_MeatPiece_03.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_BRL_MeatPiece_03:NavCollision_2",
+      "ObjectName": "NavCollision'SM_BRL_MeatPiece_03:NavCollision_2'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Boreal/Props/SM_BRL_MeatPiece_03.1"
     },
     "LightingGuid": "C4617DA1-429E5E12-215BEB87-6632EEDD",
