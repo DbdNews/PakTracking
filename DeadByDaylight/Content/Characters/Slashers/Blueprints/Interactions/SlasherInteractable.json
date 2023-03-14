@@ -1,0 +1,750 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_SlasherInteractable",
+    "Outer": "SlasherInteractable_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_player",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DBDPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "Function",
+    "Name": "InitInteractable",
+    "Outer": "SlasherInteractable_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'PlayerInteractable:InitInteractable'",
+      "ObjectPath": "/Script/DeadByDaylight"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "player",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "PropertyClass": {
+          "ObjectName": "Class'DBDPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      }
+    ],
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "Function",
+    "Name": "IsInteractionPossibleInternal",
+    "Outer": "SlasherInteractable_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "player",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "PropertyClass": {
+          "ObjectName": "Class'DBDPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "interactor",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524438,
+        "PropertyClass": {
+          "ObjectName": "Class'Interactor'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "definition",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524438,
+        "PropertyClass": {
+          "ObjectName": "Class'InteractionDefinition'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "interactionType",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "Enum": {
+          "ObjectName": "Enum'EInputInteractionType'",
+          "ObjectPath": "/Script/DBDSharedTypes"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": 1,
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 1408,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 1279393792
+  },
+  {
+    "Type": "Function",
+    "Name": "GetSlasher",
+    "Outer": "SlasherInteractable_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Slasher",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 384,
+        "PropertyClass": {
+          "ObjectName": "Class'SlasherPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Ret",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 2053,
+        "PropertyClass": {
+          "ObjectName": "Class'SlasherPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwner_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsSlasher_Player",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'SlasherPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 205651968
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "SlasherInteractable_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'SlasherInteractable_C:SimpleConstructionScript_1'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.26"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'SlasherInteractable_C:ExecuteUbergraph_SlasherInteractable'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'PlayerInteractable'",
+      "ObjectPath": "/Script/DeadByDaylight"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'SlasherInteractable_C:GetSlasher'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.3"
+      },
+      {
+        "ObjectName": "Function'SlasherInteractable_C:IsInteractionPossibleInternal'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.2"
+      },
+      {
+        "ObjectName": "Function'SlasherInteractable_C:InitInteractable'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.1"
+      },
+      {
+        "ObjectName": "Function'SlasherInteractable_C:ExecuteUbergraph_SlasherInteractable'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "GeneratorTrapStun",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'GeneratorTrapStun_C'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/GeneratorTrapStun.2"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PalletStun",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'PalletStun_C'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/PalletStun.3"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ClosetStun",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'ClosetStun_C'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/ClosetStun.3"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "StunBySkillCheck",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'StunBySkillCheck_C'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Interactions/StunBySkillCheck.7"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "GenericStun",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'GenericStun_C'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/GenericStun.5"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "KickStun",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'GenericStun_C'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/GenericStun.5"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "EvilWithinStun",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'GenericStun_C'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/GenericStun.5"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "GenericStunInteractor",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class'Interactor'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Root",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_SlasherInteractable": {
+        "ObjectName": "Function'SlasherInteractable_C:ExecuteUbergraph_SlasherInteractable'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.0"
+      },
+      "InitInteractable": {
+        "ObjectName": "Function'SlasherInteractable_C:InitInteractable'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.1"
+      },
+      "IsInteractionPossibleInternal": {
+        "ObjectName": "Function'SlasherInteractable_C:IsInteractionPossibleInternal'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.2"
+      },
+      "GetSlasher": {
+        "ObjectName": "Function'SlasherInteractable_C:GetSlasher'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.3"
+      }
+    },
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "SlasherInteractable_C'Default__SlasherInteractable_C'",
+      "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.5"
+    }
+  },
+  {
+    "Type": "SlasherInteractable_C",
+    "Name": "Default__SlasherInteractable_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.SlasherInteractable_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "_useSingleZone": true,
+      "_transformOptimizer": {
+        "ObjectName": "InteractableTransformOptimizer'Default__SlasherInteractable_C:InteractableOptimizer'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.11"
+      },
+      "PrimaryActorTick": {
+        "bStartWithTickEnabled": false,
+        "bAllowTickOnDedicatedServer": false
+      },
+      "NetUpdateFrequency": 1.0,
+      "MinNetUpdateFrequency": 1.0
+    }
+  },
+  {
+    "Type": "ClosetStun_C",
+    "Name": "ClosetStun_GEN_VARIABLE",
+    "Outer": "SlasherInteractable_C",
+    "Template": "Default__ClosetStun_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/ClosetStun.ClosetStun_C'"
+  },
+  {
+    "Type": "GeneratorTrapStun_C",
+    "Name": "GeneratorTrapStun_GEN_VARIABLE",
+    "Outer": "SlasherInteractable_C",
+    "Template": "Default__GeneratorTrapStun_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/GeneratorTrapStun.GeneratorTrapStun_C'"
+  },
+  {
+    "Type": "GenericStun_C",
+    "Name": "GenericStun1FBF68CB0459AB94ACAC8B4AF93EBF1B0",
+    "Outer": "SlasherInteractable_C",
+    "Template": "Default__GenericStun_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/GenericStun.GenericStun_C'",
+    "Properties": {
+      "InteractionID": "EvilWithinStun",
+      "AutoBindToParentZone": false,
+      "InteractionInputType": "EInputInteractionType::VE_ExternalRequestStunEvilWithin"
+    }
+  },
+  {
+    "Type": "GenericStun_C",
+    "Name": "GenericStunD1466C184C856322CBD53D84F8409466",
+    "Outer": "SlasherInteractable_C",
+    "Template": "Default__GenericStun_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/GenericStun.GenericStun_C'",
+    "Properties": {
+      "AutoBindToParentZone": false
+    }
+  },
+  {
+    "Type": "GenericStun_C",
+    "Name": "KickStun_GEN_VARIABLE",
+    "Outer": "SlasherInteractable_C",
+    "Template": "Default__GenericStun_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/GenericStun.GenericStun_C'",
+    "Properties": {
+      "InteractionID": "KickStun",
+      "AutoBindToParentZone": false,
+      "InteractionTime": 7.0,
+      "InteractionInputType": "EInputInteractionType::VE_ExternalRequestKickStun"
+    }
+  },
+  {
+    "Type": "InteractableTransformOptimizer",
+    "Name": "InteractableOptimizer",
+    "Outer": "Default__SlasherInteractable_C",
+    "Class": "UScriptClass'InteractableTransformOptimizer'"
+  },
+  {
+    "Type": "Interactor",
+    "Name": "Interactor6D8E6B77491BE4A0A88748854F46C86F",
+    "Outer": "SlasherInteractable_C",
+    "Class": "UScriptClass'Interactor'",
+    "Properties": {
+      "bAbsoluteLocation": true,
+      "bAbsoluteRotation": true,
+      "bAbsoluteScale": true,
+      "Mobility": "EComponentMobility::Stationary"
+    }
+  },
+  {
+    "Type": "PalletStun_C",
+    "Name": "PalletStun_GEN_VARIABLE",
+    "Outer": "SlasherInteractable_C",
+    "Template": "Default__PalletStun_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/PalletStun.PalletStun_C'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRootD0ABDD4448565E345D66018C00109833",
+    "Outer": "SlasherInteractable_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneF16496CC46BA5C6220A5DC8F04FDFA14",
+    "Outer": "SlasherInteractable_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'GenericStun_C'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/GenericStun.5"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "GenericStun_C'SlasherInteractable_C:KickStun_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.10"
+      },
+      "VariableGuid": "59811214-48382DC3-C643318C-FFC3338B",
+      "InternalVariableName": "KickStun"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'SlasherInteractable_C:DefaultSceneRootD0ABDD4448565E345D66018C00109833'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.14"
+      },
+      "VariableGuid": "689234B9-47588979-E9C28781-00BEE99C",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_10",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'Interactor'",
+        "ObjectPath": "/Script/DeadByDaylight"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "Interactor'SlasherInteractable_C:Interactor6D8E6B77491BE4A0A88748854F46C86F'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.12"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'SlasherInteractable_C:SimpleConstructionScript_1.SCS_Node_2'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.20"
+        },
+        {
+          "ObjectName": "SCS_Node'SlasherInteractable_C:SimpleConstructionScript_1.SCS_Node_0'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.16"
+        },
+        {
+          "ObjectName": "SCS_Node'SlasherInteractable_C:SimpleConstructionScript_1.SCS_Node_11'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.19"
+        },
+        {
+          "ObjectName": "SCS_Node'SlasherInteractable_C:SimpleConstructionScript_1.SCS_Node_5'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.23"
+        },
+        {
+          "ObjectName": "SCS_Node'SlasherInteractable_C:SimpleConstructionScript_1.SCS_Node_4'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.22"
+        },
+        {
+          "ObjectName": "SCS_Node'SlasherInteractable_C:SimpleConstructionScript_1.SCS_Node_3'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.21"
+        },
+        {
+          "ObjectName": "SCS_Node'SlasherInteractable_C:SimpleConstructionScript_1.SCS_Node_7'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.25"
+        }
+      ],
+      "VariableGuid": "84CB4881-49466471-AF60E78C-3C522F69",
+      "InternalVariableName": "GenericStunInteractor"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_11",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'GenericStun_C'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/GenericStun.5"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "GenericStun_C'SlasherInteractable_C:GenericStunD1466C184C856322CBD53D84F8409466'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.9"
+      },
+      "VariableGuid": "7EA3D579-4FB630C8-2C7FE294-F4CF78D2",
+      "InternalVariableName": "GenericStun"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'GenericStun_C'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/GenericStun.5"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "GenericStun_C'SlasherInteractable_C:GenericStun1FBF68CB0459AB94ACAC8B4AF93EBF1B0'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.8"
+      },
+      "VariableGuid": "FA066742-4DA00E30-11A14BA9-162C58FF",
+      "InternalVariableName": "EvilWithinStun"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'PalletStun_C'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/PalletStun.3"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PalletStun_C'SlasherInteractable_C:PalletStun_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.13"
+      },
+      "VariableGuid": "9E27CA37-41A9C865-7236B19E-3A190037",
+      "InternalVariableName": "PalletStun"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'ClosetStun_C'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/ClosetStun.3"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ClosetStun_C'SlasherInteractable_C:ClosetStun_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.6"
+      },
+      "VariableGuid": "AD5120D0-47E9A2A2-2B17AD9D-CD64584B",
+      "InternalVariableName": "ClosetStun"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'StunBySkillCheck_C'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Interactions/StunBySkillCheck.7"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StunBySkillCheck_C'SlasherInteractable_C:StunBySkillCheck_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.27"
+      },
+      "VariableGuid": "DD846ED1-4B2BD0AC-2295D7AC-A50993A4",
+      "InternalVariableName": "StunBySkillCheck"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'SlasherInteractable_C:SceneF16496CC46BA5C6220A5DC8F04FDFA14'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.15"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'SlasherInteractable_C:SimpleConstructionScript_1.SCS_Node_10'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.18"
+        }
+      ],
+      "VariableGuid": "A55EBF9C-4EE03A27-F69546A2-1C747647",
+      "InternalVariableName": "Root"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_7",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'GeneratorTrapStun_C'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/GeneratorTrapStun.2"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "GeneratorTrapStun_C'SlasherInteractable_C:GeneratorTrapStun_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.7"
+      },
+      "VariableGuid": "81D97F2A-4A9718E2-60D32687-F15AAD46",
+      "InternalVariableName": "GeneratorTrapStun"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_1",
+    "Outer": "SlasherInteractable_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'SlasherInteractable_C:SimpleConstructionScript_1.SCS_Node_6'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.24"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'SlasherInteractable_C:SimpleConstructionScript_1.SCS_Node_6'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.24"
+        },
+        {
+          "ObjectName": "SCS_Node'SlasherInteractable_C:SimpleConstructionScript_1.SCS_Node_10'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.18"
+        },
+        {
+          "ObjectName": "SCS_Node'SlasherInteractable_C:SimpleConstructionScript_1.SCS_Node_2'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.20"
+        },
+        {
+          "ObjectName": "SCS_Node'SlasherInteractable_C:SimpleConstructionScript_1.SCS_Node_0'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.16"
+        },
+        {
+          "ObjectName": "SCS_Node'SlasherInteractable_C:SimpleConstructionScript_1.SCS_Node_11'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.19"
+        },
+        {
+          "ObjectName": "SCS_Node'SlasherInteractable_C:SimpleConstructionScript_1.SCS_Node_5'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.23"
+        },
+        {
+          "ObjectName": "SCS_Node'SlasherInteractable_C:SimpleConstructionScript_1.SCS_Node_4'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.22"
+        },
+        {
+          "ObjectName": "SCS_Node'SlasherInteractable_C:SimpleConstructionScript_1.SCS_Node_3'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.21"
+        },
+        {
+          "ObjectName": "SCS_Node'SlasherInteractable_C:SimpleConstructionScript_1.SCS_Node_7'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.25"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'SlasherInteractable_C:SimpleConstructionScript_1.SCS_Node_1'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/SlasherInteractable.17"
+      }
+    }
+  },
+  {
+    "Type": "StunBySkillCheck_C",
+    "Name": "StunBySkillCheck_GEN_VARIABLE",
+    "Outer": "SlasherInteractable_C",
+    "Template": "Default__StunBySkillCheck_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Characters/Campers/Blueprints/Interactions/StunBySkillCheck.StunBySkillCheck_C'"
+  }
+]

@@ -42,7 +42,7 @@
       },
       {
         "Type": "BoolProperty",
-        "Name": "K2Node_Event_canPlaceDrone",
+        "Name": "K2Node_Event_doesRadarDetectAnySurvivors",
         "Flags": 1,
         "ElementSize": 1,
         "FieldSize": 1,
@@ -55,54 +55,6 @@
       {
         "Type": "BoolProperty",
         "Name": "K2Node_Event_isPowerOnCooldown",
-        "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "K2Node_Event_hasDronesToPlace",
-        "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_Not_PreBool_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_BooleanOR_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "K2Node_Event_doesRadarDetectAnySurvivors",
         "Flags": 1,
         "ElementSize": 1,
         "FieldSize": 1,
@@ -136,7 +88,7 @@
       },
       {
         "Type": "BoolProperty",
-        "Name": "CallFunc_Not_PreBool_ReturnValue_1",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
         "Flags": 1,
         "ElementSize": 1,
         "FieldSize": 1,
@@ -179,17 +131,17 @@
   },
   {
     "Type": "Function",
-    "Name": "Cosmetic_DoesRadarDetectAnySurvivorsUpdatedEvent",
+    "Name": "Cosmetic_IsOnPowerCooldownUpdatedEvent",
     "Outer": "BP_K31PowerCosmeticHelper_C",
     "Class": "UScriptClass'Function'",
     "SuperStruct": {
-      "ObjectName": "Function'K31PowerCosmeticHelper:Cosmetic_DoesRadarDetectAnySurvivorsUpdatedEvent'",
+      "ObjectName": "Function'K31PowerCosmeticHelper:Cosmetic_IsOnPowerCooldownUpdatedEvent'",
       "ObjectPath": "/Script/TheK31"
     },
     "ChildProperties": [
       {
         "Type": "BoolProperty",
-        "Name": "doesRadarDetectAnySurvivors",
+        "Name": "isPowerOnCooldown",
         "Flags": 1,
         "ElementSize": 1,
         "PropertyFlags": 148,
@@ -205,43 +157,17 @@
   },
   {
     "Type": "Function",
-    "Name": "Cosmetic_OnDeployDroneIndicatorUpdated",
+    "Name": "Cosmetic_DoesRadarDetectAnySurvivorsUpdatedEvent",
     "Outer": "BP_K31PowerCosmeticHelper_C",
     "Class": "UScriptClass'Function'",
     "SuperStruct": {
-      "ObjectName": "Function'K31PowerCosmeticHelper:Cosmetic_OnDeployDroneIndicatorUpdated'",
+      "ObjectName": "Function'K31PowerCosmeticHelper:Cosmetic_DoesRadarDetectAnySurvivorsUpdatedEvent'",
       "ObjectPath": "/Script/TheK31"
     },
     "ChildProperties": [
       {
         "Type": "BoolProperty",
-        "Name": "canPlaceDrone",
-        "Flags": 1,
-        "ElementSize": 1,
-        "PropertyFlags": 148,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "isPowerOnCooldown",
-        "Flags": 1,
-        "ElementSize": 1,
-        "PropertyFlags": 148,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "hasDronesToPlace",
+        "Name": "doesRadarDetectAnySurvivors",
         "Flags": 1,
         "ElementSize": 1,
         "PropertyFlags": 148,
@@ -274,12 +200,6 @@
         "bIsNativeBool": true
       },
       {
-        "Type": "IntProperty",
-        "Name": "Temp_int_Variable",
-        "Flags": 1,
-        "ElementSize": 4
-      },
-      {
         "Type": "FloatProperty",
         "Name": "Temp_float_Variable",
         "Flags": 1,
@@ -292,14 +212,20 @@
         "ElementSize": 4
       },
       {
-        "Type": "FloatProperty",
-        "Name": "Temp_float_Variable_2",
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable_1",
         "Flags": 1,
-        "ElementSize": 4
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
       },
       {
-        "Type": "IntProperty",
-        "Name": "Temp_int_Variable_1",
+        "Type": "FloatProperty",
+        "Name": "Temp_float_Variable_2",
         "Flags": 1,
         "ElementSize": 4
       },
@@ -310,26 +236,20 @@
         "ElementSize": 4
       },
       {
-        "Type": "FloatProperty",
-        "Name": "Temp_float_Variable_4",
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable_2",
         "Flags": 1,
-        "ElementSize": 4
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "Temp_float_Variable_5",
-        "Flags": 1,
-        "ElementSize": 4
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
       },
       {
         "Type": "FloatProperty",
         "Name": "K2Node_Select_Default",
-        "Flags": 1,
-        "ElementSize": 4
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "K2Node_Select_Default_1",
         "Flags": 1,
         "ElementSize": 4
       },
@@ -345,7 +265,7 @@
       },
       {
         "Type": "FloatProperty",
-        "Name": "K2Node_Select_Default_2",
+        "Name": "K2Node_Select_Default_1",
         "Flags": 1,
         "ElementSize": 4
       },
@@ -370,6 +290,12 @@
         "FieldMask": 255,
         "BoolSize": 1,
         "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Select_Default_2",
+        "Flags": 1,
+        "ElementSize": 4
       }
     ],
     "FunctionFlags": 201457664
@@ -457,11 +383,11 @@
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31PowerCosmeticHelper.3"
       },
       {
-        "ObjectName": "Function'BP_K31PowerCosmeticHelper_C:Cosmetic_OnDeployDroneIndicatorUpdated'",
+        "ObjectName": "Function'BP_K31PowerCosmeticHelper_C:Cosmetic_DoesRadarDetectAnySurvivorsUpdatedEvent'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31PowerCosmeticHelper.2"
       },
       {
-        "ObjectName": "Function'BP_K31PowerCosmeticHelper_C:Cosmetic_DoesRadarDetectAnySurvivorsUpdatedEvent'",
+        "ObjectName": "Function'BP_K31PowerCosmeticHelper_C:Cosmetic_IsOnPowerCooldownUpdatedEvent'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31PowerCosmeticHelper.1"
       },
       {
@@ -480,13 +406,6 @@
           "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
           "ObjectPath": "/Script/Engine"
         }
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "DeployDroneLightCachedState",
-        "Flags": 2097153,
-        "ElementSize": 4,
-        "PropertyFlags": 65541
       },
       {
         "Type": "BoolProperty",
@@ -513,6 +432,19 @@
         "FieldMask": 255,
         "BoolSize": 1,
         "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Is Power on Cooldown Cached",
+        "Flags": 2097153,
+        "ElementSize": 1,
+        "PropertyFlags": 65541,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
       }
     ],
     "FuncMap": {
@@ -520,12 +452,12 @@
         "ObjectName": "Function'BP_K31PowerCosmeticHelper_C:ExecuteUbergraph_BP_K31PowerCosmeticHelper'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31PowerCosmeticHelper.0"
       },
-      "Cosmetic_DoesRadarDetectAnySurvivorsUpdatedEvent": {
-        "ObjectName": "Function'BP_K31PowerCosmeticHelper_C:Cosmetic_DoesRadarDetectAnySurvivorsUpdatedEvent'",
+      "Cosmetic_IsOnPowerCooldownUpdatedEvent": {
+        "ObjectName": "Function'BP_K31PowerCosmeticHelper_C:Cosmetic_IsOnPowerCooldownUpdatedEvent'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31PowerCosmeticHelper.1"
       },
-      "Cosmetic_OnDeployDroneIndicatorUpdated": {
-        "ObjectName": "Function'BP_K31PowerCosmeticHelper_C:Cosmetic_OnDeployDroneIndicatorUpdated'",
+      "Cosmetic_DoesRadarDetectAnySurvivorsUpdatedEvent": {
+        "ObjectName": "Function'BP_K31PowerCosmeticHelper_C:Cosmetic_DoesRadarDetectAnySurvivorsUpdatedEvent'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31PowerCosmeticHelper.2"
       },
       "UpdateButtonLightVFX": {

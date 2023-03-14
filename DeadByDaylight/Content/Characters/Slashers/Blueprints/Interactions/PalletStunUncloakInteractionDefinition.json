@@ -1,0 +1,391 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_PalletStunUncloakInteractionDefinition",
+    "Outer": "PalletStunUncloakInteractionDefinition_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_player_1",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DBDPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_hasInteractionStarted",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_player",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DBDPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_actualSnapTime",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsSlasher_Player",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'SlasherPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInteractionEnterStart",
+    "Outer": "PalletStunUncloakInteractionDefinition_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'InteractionDefinition:OnInteractionEnterStart'",
+      "ObjectPath": "/Script/DeadByDaylight"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "player",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "PropertyClass": {
+          "ObjectName": "Class'DBDPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "actualSnapTime",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      }
+    ],
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInteractionFinished",
+    "Outer": "PalletStunUncloakInteractionDefinition_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'InteractionDefinition:OnInteractionFinished'",
+      "ObjectPath": "/Script/DeadByDaylight"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "player",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "PropertyClass": {
+          "ObjectName": "Class'DBDPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "hasInteractionStarted",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "Function",
+    "Name": "IsInteractionPossibleBP",
+    "Outer": "PalletStunUncloakInteractionDefinition_C",
+    "Super": "IsInteractionPossibleBP",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'GenericStun_C:IsInteractionPossibleBP'",
+      "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/GenericStun.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "player",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 150,
+        "PropertyClass": {
+          "ObjectName": "Class'DBDPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "interactionType",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "Enum": {
+          "ObjectName": "Enum'EInputInteractionType'",
+          "ObjectPath": "/Script/DBDSharedTypes"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": 1,
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 1408,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "IsInteractionPossible",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 5,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsSlasher_Player",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'SlasherPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsCloaked_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasKillerAbility_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 1279789056
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "PalletStunUncloakInteractionDefinition_C",
+    "Super": "PalletStun_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'PalletStunUncloakInteractionDefinition_C:ExecuteUbergraph_PalletStunUncloakInteractionDefinition'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/PalletStunUncloakInteractionDefinition.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'PalletStun_C'",
+      "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/PalletStun.3"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'PalletStunUncloakInteractionDefinition_C:IsInteractionPossibleBP'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/PalletStunUncloakInteractionDefinition.3"
+      },
+      {
+        "ObjectName": "Function'PalletStunUncloakInteractionDefinition_C:OnInteractionFinished'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/PalletStunUncloakInteractionDefinition.2"
+      },
+      {
+        "ObjectName": "Function'PalletStunUncloakInteractionDefinition_C:OnInteractionEnterStart'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/PalletStunUncloakInteractionDefinition.1"
+      },
+      {
+        "ObjectName": "Function'PalletStunUncloakInteractionDefinition_C:ExecuteUbergraph_PalletStunUncloakInteractionDefinition'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/PalletStunUncloakInteractionDefinition.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "InteractingSlasher",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 75781,
+        "PropertyClass": {
+          "ObjectName": "Class'SlasherPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_PalletStunUncloakInteractionDefinition": {
+        "ObjectName": "Function'PalletStunUncloakInteractionDefinition_C:ExecuteUbergraph_PalletStunUncloakInteractionDefinition'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/PalletStunUncloakInteractionDefinition.0"
+      },
+      "OnInteractionEnterStart": {
+        "ObjectName": "Function'PalletStunUncloakInteractionDefinition_C:OnInteractionEnterStart'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/PalletStunUncloakInteractionDefinition.1"
+      },
+      "OnInteractionFinished": {
+        "ObjectName": "Function'PalletStunUncloakInteractionDefinition_C:OnInteractionFinished'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/PalletStunUncloakInteractionDefinition.2"
+      },
+      "IsInteractionPossibleBP": {
+        "ObjectName": "Function'PalletStunUncloakInteractionDefinition_C:IsInteractionPossibleBP'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/PalletStunUncloakInteractionDefinition.3"
+      }
+    },
+    "ClassFlags": 10754068,
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "PalletStunUncloakInteractionDefinition_C'Default__PalletStunUncloakInteractionDefinition_C'",
+      "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/PalletStunUncloakInteractionDefinition.5"
+    }
+  },
+  {
+    "Type": "PalletStunUncloakInteractionDefinition_C",
+    "Name": "Default__PalletStunUncloakInteractionDefinition_C",
+    "Template": "Default__PalletStun_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/PalletStunUncloakInteractionDefinition.PalletStunUncloakInteractionDefinition_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "InteractionID": "Uncloak",
+      "StopInteractionOnMontageComplete": false,
+      "StopInteractionOnTimerExpire": true,
+      "StopEnterMontageOnExit": false,
+      "StopUpdateMontageOnExit": false,
+      "CanInteractWhileIncapacitated": false,
+      "CanInteractWhileChainLinked": false,
+      "UseCameraMontageMode": false,
+      "OwnerBlocksAttack": false,
+      "UseAuthoritativeMovement": false,
+      "CanAuthoritativePush": true,
+      "InteractionTime": 4.0,
+      "InteractionInputType": "EInputInteractionType::VE_ExternalRequestPalletStunUncloak",
+      "InteractionDescriptionText": {
+        "Namespace": "",
+        "Key": "F5B7F7994E304536E0205D91DA0310F1",
+        "SourceString": "Uncloak",
+        "LocalizedString": "Uncloak"
+      },
+      "UpdateMontage": {
+        "MontageID": "FlashlightUncloak"
+      }
+    }
+  }
+]

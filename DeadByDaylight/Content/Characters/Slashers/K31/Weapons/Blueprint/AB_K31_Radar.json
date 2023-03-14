@@ -227,11 +227,11 @@
           ]
         },
         {
-          "MachineName": "Radar_SM",
+          "MachineName": "Radar_TopLeftButton_SM",
           "InitialState": 0,
           "States": [
             {
-              "StateName": "OFF",
+              "StateName": "Down",
               "Transitions": [
                 {
                   "CanTakeDelegateIndex": 26,
@@ -255,7 +255,7 @@
               "bAlwaysResetOnEntry": false
             },
             {
-              "StateName": "To_On",
+              "StateName": "To_Up",
               "Transitions": [
                 {
                   "CanTakeDelegateIndex": 27,
@@ -279,7 +279,7 @@
               "bAlwaysResetOnEntry": false
             },
             {
-              "StateName": "On",
+              "StateName": "Up",
               "Transitions": [
                 {
                   "CanTakeDelegateIndex": 28,
@@ -303,7 +303,7 @@
               "bAlwaysResetOnEntry": false
             },
             {
-              "StateName": "To_Off",
+              "StateName": "To_Down",
               "Transitions": [
                 {
                   "CanTakeDelegateIndex": 29,
@@ -517,7 +517,7 @@
           "CopyRecords": [
             {
               "CopyIndex": 2,
-              "PostCopyOperation": "EPostCopyOperation::None"
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool"
             }
           ],
           "Function": null,
@@ -536,7 +536,7 @@
           "CopyRecords": [
             {
               "CopyIndex": 3,
-              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool"
+              "PostCopyOperation": "EPostCopyOperation::None"
             }
           ],
           "Function": null,
@@ -656,11 +656,11 @@
             "Flags": 2
           },
           {
-            "Name": "_isAbleToPlaceDrone",
+            "Name": "_isPowerOnCooldown",
             "Struct": null,
             "Property": {
               "Path": [
-                "_isAbleToPlaceDrone"
+                "_isPowerOnCooldown"
               ],
               "ResolvedOwner": {
                 "ObjectName": "Class'K31RadarAnimInstance'",
@@ -707,11 +707,11 @@
             "Flags": 2
           },
           {
-            "Name": "_isAbleToPlaceDrone",
+            "Name": "_isPowerOnCooldown",
             "Struct": null,
             "Property": {
               "Path": [
-                "_isAbleToPlaceDrone"
+                "_isPowerOnCooldown"
               ],
               "ResolvedOwner": {
                 "ObjectName": "Class'K31RadarAnimInstance'",
@@ -1296,7 +1296,7 @@
         "Result": {
           "LinkID": 5
         },
-        "Name": "To_Off",
+        "Name": "To_Down",
         "Group": "None"
       },
       "AnimGraphNode_SequencePlayer_4": {
@@ -1338,7 +1338,7 @@
         "Result": {
           "LinkID": 7
         },
-        "Name": "On",
+        "Name": "Up",
         "Group": "None"
       },
       "AnimGraphNode_SequencePlayer_3": {
@@ -1380,7 +1380,7 @@
         "Result": {
           "LinkID": 9
         },
-        "Name": "To_On",
+        "Name": "To_Up",
         "Group": "None"
       },
       "AnimGraphNode_SequencePlayer_2": {
@@ -1422,7 +1422,7 @@
         "Result": {
           "LinkID": 11
         },
-        "Name": "OFF",
+        "Name": "Down",
         "Group": "None"
       },
       "AnimGraphNode_StateMachine_2": {

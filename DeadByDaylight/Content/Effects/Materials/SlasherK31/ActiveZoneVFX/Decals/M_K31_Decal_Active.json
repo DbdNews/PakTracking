@@ -30,16 +30,18 @@
         "ShadingModelField": 1
       },
       "bCanMaskedBeAssumedOpaque": true,
-      "StateId": "AC93EC54-4F1FF228-E01643A7-BAB7E3BC",
+      "StateId": "A3F65E5F-40BEF3F2-614E4C99-1B1B7E85",
       "CachedExpressionData": {
         "Parameters": {
           "RuntimeEntries": {
             "NameHashes": [
               3111153263125431957,
-              3889930272483892913,
-              4618414537133014341,
+              3906155456821230539,
+              8337916293493064881,
+              9586082219006987514,
+              10911257035176316780,
               15684328969772911168,
-              18158801208111029204
+              16517126834131980131
             ],
             "ParameterInfos": [
               {
@@ -48,12 +50,22 @@
                 "Index": -1
               },
               {
-                "Name": "InteriorSize",
+                "Name": "GlitchDistortion_Scale_Y",
                 "Association": "GlobalParameter",
                 "Index": -1
               },
               {
-                "Name": "OuterEdgeSharpness",
+                "Name": "GlitchDistortion",
+                "Association": "GlobalParameter",
+                "Index": -1
+              },
+              {
+                "Name": "GlitchDistortion_Scale_X",
+                "Association": "GlobalParameter",
+                "Index": -1
+              },
+              {
+                "Name": "GlitchDistortion_PanSpeed_X",
                 "Association": "GlobalParameter",
                 "Index": -1
               },
@@ -63,17 +75,19 @@
                 "Index": -1
               },
               {
-                "Name": "InnerEdgeSharpness",
+                "Name": "GlitchDistortion_PanSpeed_Y",
                 "Association": "GlobalParameter",
                 "Index": -1
               }
             ],
             "ExpressionGuids": [
               "AA2EC54F-431571BA-75F8A79C-F9E50D54",
-              "EECB0970-4CF206A8-48787F92-8F7BB80C",
-              "121E3DFA-41F09DE1-9E66ADAE-427845D2",
+              "B31BDF2D-432D08E0-BBBA6CB5-6919E751",
+              "EAB3B3C4-41941FD7-C3535F81-AF478FEC",
+              "6A5599EA-4680E43C-CEE825BA-0E40FE86",
+              "59F55838-4EB49622-76BA2E94-E2222387",
               "BB11A572-4818047C-1FBA82B6-D5E70288",
-              "F7EC8B18-49A8AC30-F319A885-4C38F966"
+              "36F50446-4F1945E7-01D367BD-0151644C"
             ]
           },
           "RuntimeEntries": {
@@ -101,7 +115,8 @@
           "RuntimeEntries": {
             "NameHashes": [
               7376579258098759584,
-              8370121904344411576
+              8370121904344411576,
+              13012433719548824057
             ],
             "ParameterInfos": [
               {
@@ -113,19 +128,27 @@
                 "Name": "Texture",
                 "Association": "GlobalParameter",
                 "Index": -1
+              },
+              {
+                "Name": "Glitch/Distortion_Flowmap",
+                "Association": "GlobalParameter",
+                "Index": -1
               }
             ],
             "ExpressionGuids": [
               "B9DBDE65-4E5F4590-4F313684-40892340",
-              "640F8F3C-416E8E62-2E53F380-DBF7AFB9"
+              "640F8F3C-416E8E62-2E53F380-DBF7AFB9",
+              "B5335194-415D94F6-2934D080-E1C98F50"
             ]
           },
           "ScalarValues": [
             20.0,
-            0.001,
-            10.0,
             1.0,
-            30.0
+            0.03,
+            3.0,
+            0.05,
+            1.0,
+            0.15
           ],
           "VectorValues": [
             {
@@ -151,6 +174,10 @@
             {
               "ObjectName": "Texture2D'T_Active_Decal'",
               "ObjectPath": "DeadByDaylight/Content/Effects/Textures/K31/T_Active_Decal.0"
+            },
+            {
+              "ObjectName": "Texture2D'T_StaticGlitch_01'",
+              "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_StaticGlitch_01.0"
             }
           ]
         },
@@ -166,6 +193,10 @@
           {
             "ObjectName": "Texture2D'T_Active_Decal'",
             "ObjectPath": "DeadByDaylight/Content/Effects/Textures/K31/T_Active_Decal.0"
+          },
+          {
+            "ObjectName": "Texture2D'T_StaticGlitch_01'",
+            "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_StaticGlitch_01.0"
           }
         ],
         "FunctionInfos": [
@@ -191,27 +222,6 @@
             }
           },
           {
-            "StateId": "42FB52C9-4B6E464D-2D6CB2B5-E6A65899",
-            "Function": {
-              "ObjectName": "MaterialFunction'ExponentialDensity'",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Density/ExponentialDensity.0"
-            }
-          },
-          {
-            "StateId": "42FB52C9-4B6E464D-2D6CB2B5-E6A65899",
-            "Function": {
-              "ObjectName": "MaterialFunction'ExponentialDensity'",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Density/ExponentialDensity.0"
-            }
-          },
-          {
-            "StateId": "235C8133-44D704CA-0297108A-59B9F710",
-            "Function": {
-              "ObjectName": "MaterialFunction'RadialGradientExponential'",
-              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/RadialGradientExponential.0"
-            }
-          },
-          {
             "StateId": "E572D701-496E6D38-CC53A5BD-C450B0ED",
             "Function": {
               "ObjectName": "MaterialFunction'CustomRotator'",
@@ -223,6 +233,20 @@
             "Function": {
               "ObjectName": "MaterialFunction'CustomRotator'",
               "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Texturing/CustomRotator.0"
+            }
+          },
+          {
+            "StateId": "2C1DDB6E-406BC9FC-1D4141A1-7C82122A",
+            "Function": {
+              "ObjectName": "MaterialFunction'BreakOutFloat2Components'",
+              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.0"
+            }
+          },
+          {
+            "StateId": "B2F4A5A7-4EDE33D8-E70A4A83-A28D1503",
+            "Function": {
+              "ObjectName": "MaterialFunction'ScaleUVsByCenter'",
+              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Texturing/ScaleUVsByCenter.0"
             }
           }
         ],

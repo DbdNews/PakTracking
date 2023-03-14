@@ -7415,7 +7415,7 @@
         "PropertyFlags": 148,
         "Enum": {
           "ObjectName": "Enum'EInputInteractionType'",
-          "ObjectPath": "/Script/DeadByDaylight"
+          "ObjectPath": "/Script/DBDSharedTypes"
         },
         "UnderlyingProp": {
           "Type": "ByteProperty",
@@ -8889,7 +8889,14 @@
       },
       {
         "Type": "FloatProperty",
-        "Name": "DetectionZoneIntensityOverride",
+        "Name": "DetectionZoneCylinderIntensityOverride",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 384
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "DetectionZoneDecalIntensityOverride",
         "Flags": 1,
         "ElementSize": 4,
         "PropertyFlags": 384
@@ -19601,7 +19608,14 @@
     "Type": "ScreamComponent",
     "Name": "ScreamComponent",
     "Outer": "Default__BP_Camper_Character_C",
-    "Class": "UScriptClass'ScreamComponent'"
+    "Class": "UScriptClass'ScreamComponent'",
+    "Properties": {
+      "_tagsPreventingScream": [
+        {
+          "TagName": "State.K25.IsHeldHostageByLamentConfiguration"
+        }
+      ]
+    }
   },
   {
     "Type": "ScreenSpaceLocationComponent",
