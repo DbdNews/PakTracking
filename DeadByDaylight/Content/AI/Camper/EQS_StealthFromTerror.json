@@ -2,11 +2,12 @@
   {
     "Type": "EnvQuery",
     "Name": "EQS_StealthFromTerror",
+    "Class": "UScriptClass'EnvQuery'",
     "Properties": {
       "QueryName": "EQS_WaitInTerror",
       "Options": [
         {
-          "ObjectName": "EnvQueryOption EQS_StealthFromTerror:EnvQueryOption_0",
+          "ObjectName": "EnvQueryOption'EQS_StealthFromTerror:EnvQueryOption_0'",
           "ObjectPath": "DeadByDaylight/Content/AI/Camper/EQS_StealthFromTerror.2"
         }
       ]
@@ -16,6 +17,7 @@
     "Type": "EnvQueryGenerator_SimpleGrid",
     "Name": "EnvQueryGenerator_SimpleGrid_0",
     "Outer": "EQS_StealthFromTerror",
+    "Class": "UScriptClass'EnvQueryGenerator_SimpleGrid'",
     "Properties": {
       "GridSize": {
         "DefaultValue": 2500.0
@@ -24,13 +26,13 @@
         "DefaultValue": 200.0
       },
       "GenerateAround": {
-        "ObjectName": "Class EnvQueryContext_PinLocation",
+        "ObjectName": "Class'EnvQueryContext_PinLocation'",
         "ObjectPath": "/Script/DBDBots"
       },
       "ProjectionData": {
         "VersionNum": 1,
         "NavigationFilter": {
-          "ObjectName": "Class NavigationQueryFilter_CamperStealth",
+          "ObjectName": "Class'NavigationQueryFilter_CamperStealth'",
           "ObjectPath": "/Script/DBDBots"
         },
         "SerializedChannel": "ECC_Visibility"
@@ -42,31 +44,36 @@
     "Type": "EnvQueryOption",
     "Name": "EnvQueryOption_0",
     "Outer": "EQS_StealthFromTerror",
+    "Class": "UScriptClass'EnvQueryOption'",
     "Properties": {
       "Generator": {
-        "ObjectName": "EnvQueryGenerator_SimpleGrid EQS_StealthFromTerror:EnvQueryGenerator_SimpleGrid_0",
+        "ObjectName": "EnvQueryGenerator_SimpleGrid'EQS_StealthFromTerror:EnvQueryGenerator_SimpleGrid_0'",
         "ObjectPath": "DeadByDaylight/Content/AI/Camper/EQS_StealthFromTerror.1"
       },
       "Tests": [
         {
-          "ObjectName": "EnvQueryTest_IsValidDestination EQS_StealthFromTerror:EnvQueryTest_IsValidDestination_0",
-          "ObjectPath": "DeadByDaylight/Content/AI/Camper/EQS_StealthFromTerror.5"
-        },
-        {
-          "ObjectName": "EnvQueryTest_Distance EQS_StealthFromTerror:EnvQueryTest_Distance_0",
-          "ObjectPath": "DeadByDaylight/Content/AI/Camper/EQS_StealthFromTerror.3"
-        },
-        {
-          "ObjectName": "EnvQueryTest_Dot EQS_StealthFromTerror:EnvQueryTest_Dot_1",
-          "ObjectPath": "DeadByDaylight/Content/AI/Camper/EQS_StealthFromTerror.4"
-        },
-        {
-          "ObjectName": "EnvQueryTest_LineOfSight EQS_StealthFromTerror:EnvQueryTest_LineOfSight_0",
+          "ObjectName": "EnvQueryTest_IsValidDestination'EQS_StealthFromTerror:EnvQueryTest_IsValidDestination_0'",
           "ObjectPath": "DeadByDaylight/Content/AI/Camper/EQS_StealthFromTerror.6"
         },
         {
-          "ObjectName": "EnvQueryTest_PathfindingBatch EQS_StealthFromTerror:EnvQueryTest_PathfindingBatch_1",
+          "ObjectName": "EnvQueryTest_IsInDangerObjectRange'EQS_StealthFromTerror:EnvQueryTest_IsInDangerObjectRange_0'",
+          "ObjectPath": "DeadByDaylight/Content/AI/Camper/EQS_StealthFromTerror.5"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance'EQS_StealthFromTerror:EnvQueryTest_Distance_0'",
+          "ObjectPath": "DeadByDaylight/Content/AI/Camper/EQS_StealthFromTerror.3"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Dot'EQS_StealthFromTerror:EnvQueryTest_Dot_1'",
+          "ObjectPath": "DeadByDaylight/Content/AI/Camper/EQS_StealthFromTerror.4"
+        },
+        {
+          "ObjectName": "EnvQueryTest_LineOfSight'EQS_StealthFromTerror:EnvQueryTest_LineOfSight_0'",
           "ObjectPath": "DeadByDaylight/Content/AI/Camper/EQS_StealthFromTerror.7"
+        },
+        {
+          "ObjectName": "EnvQueryTest_PathfindingBatch'EQS_StealthFromTerror:EnvQueryTest_PathfindingBatch_1'",
+          "ObjectPath": "DeadByDaylight/Content/AI/Camper/EQS_StealthFromTerror.8"
         }
       ]
     }
@@ -75,13 +82,14 @@
     "Type": "EnvQueryTest_Distance",
     "Name": "EnvQueryTest_Distance_0",
     "Outer": "EQS_StealthFromTerror",
+    "Class": "UScriptClass'EnvQueryTest_Distance'",
     "Properties": {
       "TestMode": "EEnvTestDistance::Distance2D",
       "DistanceTo": {
-        "ObjectName": "Class EnvQueryContext_TerrorRadius",
+        "ObjectName": "Class'EnvQueryContext_TerrorRadius'",
         "ObjectPath": "/Script/DBDBots"
       },
-      "TestOrder": 1,
+      "TestOrder": 2,
       "FilterType": "EEnvTestFilterType::Minimum",
       "FloatValueMin": {
         "DefaultValue": 1800.0
@@ -93,26 +101,27 @@
     "Type": "EnvQueryTest_Dot",
     "Name": "EnvQueryTest_Dot_1",
     "Outer": "EQS_StealthFromTerror",
+    "Class": "UScriptClass'EnvQueryTest_Dot'",
     "Properties": {
       "LineA": {
         "LineFrom": {
-          "ObjectName": "Class EnvQueryContext_TerrorRadius",
+          "ObjectName": "Class'EnvQueryContext_TerrorRadius'",
           "ObjectPath": "/Script/DBDBots"
         },
         "LineTo": {
-          "ObjectName": "Class EnvQueryContext_Item",
+          "ObjectName": "Class'EnvQueryContext_Item'",
           "ObjectPath": "/Script/AIModule"
         },
         "DirMode": "EEnvDirection::TwoPoints"
       },
       "LineB": {
         "Rotation": {
-          "ObjectName": "Class EnvQueryContext_PinActor",
+          "ObjectName": "Class'EnvQueryContext_PinActor'",
           "ObjectPath": "/Script/DBDBots"
         }
       },
       "TestMode": "EEnvTestDot::Dot2D",
-      "TestOrder": 2,
+      "TestOrder": 3,
       "TestPurpose": "EEnvTestPurpose::Filter",
       "FilterType": "EEnvTestFilterType::Minimum",
       "ScoringEquation": "EEnvTestScoreEquation::Constant",
@@ -124,9 +133,20 @@
     }
   },
   {
+    "Type": "EnvQueryTest_IsInDangerObjectRange",
+    "Name": "EnvQueryTest_IsInDangerObjectRange_0",
+    "Outer": "EQS_StealthFromTerror",
+    "Class": "UScriptClass'EnvQueryTest_IsInDangerObjectRange'",
+    "Properties": {
+      "TestOrder": 1,
+      "VerNum": 1
+    }
+  },
+  {
     "Type": "EnvQueryTest_IsValidDestination",
     "Name": "EnvQueryTest_IsValidDestination_0",
     "Outer": "EQS_StealthFromTerror",
+    "Class": "UScriptClass'EnvQueryTest_IsValidDestination'",
     "Properties": {
       "VerNum": 1
     }
@@ -135,9 +155,10 @@
     "Type": "EnvQueryTest_LineOfSight",
     "Name": "EnvQueryTest_LineOfSight_0",
     "Outer": "EQS_StealthFromTerror",
+    "Class": "UScriptClass'EnvQueryTest_LineOfSight'",
     "Properties": {
       "ToContext": {
-        "ObjectName": "Class EnvQueryContext_TerrorRadius",
+        "ObjectName": "Class'EnvQueryContext_TerrorRadius'",
         "ObjectPath": "/Script/DBDBots"
       },
       "ItemHeightOffset": {
@@ -146,7 +167,7 @@
       "Invert": {
         "DefaultValue": true
       },
-      "TestOrder": 3,
+      "TestOrder": 4,
       "TestPurpose": "EEnvTestPurpose::Score",
       "VerNum": 1
     }
@@ -155,12 +176,13 @@
     "Type": "EnvQueryTest_PathfindingBatch",
     "Name": "EnvQueryTest_PathfindingBatch_1",
     "Outer": "EQS_StealthFromTerror",
+    "Class": "UScriptClass'EnvQueryTest_PathfindingBatch'",
     "Properties": {
       "FilterClass": {
-        "ObjectName": "Class NavigationQueryFilter_Camper_Cheap",
+        "ObjectName": "Class'NavigationQueryFilter_Camper_Cheap'",
         "ObjectPath": "/Script/DBDBots"
       },
-      "TestOrder": 4,
+      "TestOrder": 5,
       "TestPurpose": "EEnvTestPurpose::Filter",
       "VerNum": 1
     }

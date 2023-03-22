@@ -226,6 +226,13 @@
   },
   {
     "Type": "Function",
+    "Name": "K31_RemoveScanningLines",
+    "Outer": "BP_K31ClawTrap_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": 201457664
+  },
+  {
+    "Type": "Function",
     "Name": "Cosmetic_OnTrapRemoved",
     "Outer": "BP_K31ClawTrap_C",
     "Class": "UScriptClass'Function'",
@@ -274,14 +281,24 @@
   },
   {
     "Type": "Function",
-    "Name": "ReceiveBeginPlay",
+    "Name": "K31_Mori_DissolveDroneIn",
     "Outer": "BP_K31ClawTrap_C",
     "Class": "UScriptClass'Function'",
-    "SuperStruct": {
-      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
-      "ObjectPath": "/Script/Engine"
-    },
-    "FunctionFlags": 134744064
+    "FunctionFlags": 201457664
+  },
+  {
+    "Type": "Function",
+    "Name": "K31_RemoveClawTrap",
+    "Outer": "BP_K31ClawTrap_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": 201457664
+  },
+  {
+    "Type": "Function",
+    "Name": "K31_AddScanningLines",
+    "Outer": "BP_K31ClawTrap_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": 201457664
   },
   {
     "Type": "Function",
@@ -328,6 +345,83 @@
       }
     ],
     "FunctionFlags": 134350856
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BP_K31ClawTrap_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "Function",
+    "Name": "UserConstructionScript",
+    "Outer": "BP_K31ClawTrap_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:UserConstructionScript'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_GetAllChildActors_ChildActors",
+        "Flags": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 134217728,
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "CallFunc_GetAllChildActors_ChildActors",
+          "Flags": 1,
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'Actor'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 209848320
   },
   {
     "Type": "Function",
@@ -502,7 +596,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BP_K31ClawTrap_C:SimpleConstructionScript_0'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.17"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.22"
       },
       "UberGraphFunction": {
         "ObjectName": "Function'BP_K31ClawTrap_C:ExecuteUbergraph_BP_K31ClawTrap'",
@@ -516,34 +610,54 @@
     "Children": [
       {
         "ObjectName": "Function'BP_K31ClawTrap_C:SpawnSparks'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.8"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.13"
       },
       {
         "ObjectName": "Function'BP_K31ClawTrap_C:UpdateBatteryChargeLightVFX'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.7"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.12"
       },
       {
-        "ObjectName": "Function'BP_K31ClawTrap_C:Cosmetic_OnBatteryChargeUpdated'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.6"
-      },
-      {
-        "ObjectName": "Function'BP_K31ClawTrap_C:Cosmetic_OnIsBroadcastingChanged'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.5"
+        "ObjectName": "Function'BP_K31ClawTrap_C:UserConstructionScript'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.11"
       },
       {
         "ObjectName": "Function'BP_K31ClawTrap_C:ReceiveBeginPlay'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.4"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.10"
+      },
+      {
+        "ObjectName": "Function'BP_K31ClawTrap_C:Cosmetic_OnBatteryChargeUpdated'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.9"
+      },
+      {
+        "ObjectName": "Function'BP_K31ClawTrap_C:Cosmetic_OnIsBroadcastingChanged'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.8"
+      },
+      {
+        "ObjectName": "Function'BP_K31ClawTrap_C:K31_AddScanningLines'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.7"
+      },
+      {
+        "ObjectName": "Function'BP_K31ClawTrap_C:K31_RemoveClawTrap'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.6"
+      },
+      {
+        "ObjectName": "Function'BP_K31ClawTrap_C:K31_Mori_DissolveDroneIn'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.5"
       },
       {
         "ObjectName": "Function'BP_K31ClawTrap_C:Cosmetic_Spark'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.3"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.4"
       },
       {
         "ObjectName": "Function'BP_K31ClawTrap_C:Cosmetic_OnTrapAdded'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.2"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.3"
       },
       {
         "ObjectName": "Function'BP_K31ClawTrap_C:Cosmetic_OnTrapRemoved'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.2"
+      },
+      {
+        "ObjectName": "Function'BP_K31ClawTrap_C:K31_RemoveScanningLines'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.1"
       },
       {
@@ -587,7 +701,7 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "Mesh",
+        "Name": "ClawTrap Mesh",
         "Flags": 2097153,
         "ElementSize": 8,
         "PropertyFlags": 17180393476,
@@ -631,6 +745,17 @@
         "Flags": 2097153,
         "ElementSize": 4,
         "PropertyFlags": 65541
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Claw Trap",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 589829,
+        "PropertyClass": {
+          "ObjectName": "Class'ActorComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
       }
     ],
     "FuncMap": {
@@ -638,37 +763,57 @@
         "ObjectName": "Function'BP_K31ClawTrap_C:ExecuteUbergraph_BP_K31ClawTrap'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.0"
       },
+      "K31_RemoveScanningLines": {
+        "ObjectName": "Function'BP_K31ClawTrap_C:K31_RemoveScanningLines'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.1"
+      },
       "Cosmetic_OnTrapRemoved": {
         "ObjectName": "Function'BP_K31ClawTrap_C:Cosmetic_OnTrapRemoved'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.1"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.2"
       },
       "Cosmetic_OnTrapAdded": {
         "ObjectName": "Function'BP_K31ClawTrap_C:Cosmetic_OnTrapAdded'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.2"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.3"
       },
       "Cosmetic_Spark": {
         "ObjectName": "Function'BP_K31ClawTrap_C:Cosmetic_Spark'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.3"
-      },
-      "ReceiveBeginPlay": {
-        "ObjectName": "Function'BP_K31ClawTrap_C:ReceiveBeginPlay'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.4"
+      },
+      "K31_Mori_DissolveDroneIn": {
+        "ObjectName": "Function'BP_K31ClawTrap_C:K31_Mori_DissolveDroneIn'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.5"
+      },
+      "K31_RemoveClawTrap": {
+        "ObjectName": "Function'BP_K31ClawTrap_C:K31_RemoveClawTrap'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.6"
+      },
+      "K31_AddScanningLines": {
+        "ObjectName": "Function'BP_K31ClawTrap_C:K31_AddScanningLines'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.7"
       },
       "Cosmetic_OnIsBroadcastingChanged": {
         "ObjectName": "Function'BP_K31ClawTrap_C:Cosmetic_OnIsBroadcastingChanged'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.5"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.8"
       },
       "Cosmetic_OnBatteryChargeUpdated": {
         "ObjectName": "Function'BP_K31ClawTrap_C:Cosmetic_OnBatteryChargeUpdated'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.6"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.9"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_K31ClawTrap_C:ReceiveBeginPlay'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.10"
+      },
+      "UserConstructionScript": {
+        "ObjectName": "Function'BP_K31ClawTrap_C:UserConstructionScript'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.11"
       },
       "UpdateBatteryChargeLightVFX": {
         "ObjectName": "Function'BP_K31ClawTrap_C:UpdateBatteryChargeLightVFX'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.7"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.12"
       },
       "SpawnSparks": {
         "ObjectName": "Function'BP_K31ClawTrap_C:SpawnSparks'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.8"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.13"
       }
     },
     "ClassFlags": 8652820,
@@ -677,10 +822,20 @@
       "ObjectPath": "/Script/CoreUObject"
     },
     "ClassConfigName": "Engine",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "BlueprintGeneratedClass'BPI_K31_C'",
+          "ObjectPath": "DeadByDaylight/Content/Effects/Blueprints/Interface/K31/BPI_K31.4"
+        },
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BP_K31ClawTrap_C'Default__BP_K31ClawTrap_C'",
-      "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.10"
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.15"
     }
   },
   {
@@ -722,12 +877,12 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BP_K31ClawTrap_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.12"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.17"
       },
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BP_K31ClawTrap_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.14"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.19"
         }
       ],
       "VariableGuid": "1FBAEF8B-44B6DDA8-2F10CEAB-90185BCE",
@@ -745,17 +900,17 @@
         "ObjectPath": "/Script/Engine"
       },
       "ComponentTemplate": {
-        "ObjectName": "SkeletalMeshComponent'BP_K31ClawTrap_C:Mesh_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.18"
+        "ObjectName": "SkeletalMeshComponent'BP_K31ClawTrap_C:ClawTrap Mesh_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.23"
       },
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BP_K31ClawTrap_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.15"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.20"
         }
       ],
       "VariableGuid": "0D1C6D62-42A24A27-FB33C5AC-E80B6077",
-      "InternalVariableName": "Mesh"
+      "InternalVariableName": "ClawTrap Mesh"
     }
   },
   {
@@ -770,12 +925,12 @@
       },
       "ComponentTemplate": {
         "ObjectName": "AkComponent'BP_K31ClawTrap_C:AkClawTrap_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.11"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.16"
       },
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BP_K31ClawTrap_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.16"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.21"
         }
       ],
       "VariableGuid": "0C43E21F-4CF2CC98-6C595B9D-79C109E6",
@@ -794,7 +949,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SpotLightComponent'BP_K31ClawTrap_C:SpotLight_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.19"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.24"
       },
       "VariableGuid": "A1964F37-43FA3B74-518E8CA7-26D2039C",
       "InternalVariableName": "SpotLight"
@@ -809,36 +964,36 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BP_K31ClawTrap_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.13"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.18"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BP_K31ClawTrap_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.13"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.18"
         },
         {
           "ObjectName": "SCS_Node'BP_K31ClawTrap_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.14"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.19"
         },
         {
           "ObjectName": "SCS_Node'BP_K31ClawTrap_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.15"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.20"
         },
         {
           "ObjectName": "SCS_Node'BP_K31ClawTrap_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.16"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.21"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BP_K31ClawTrap_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.13"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K31Power/BP_K31ClawTrap.18"
       }
     }
   },
   {
     "Type": "SkeletalMeshComponent",
-    "Name": "Mesh_GEN_VARIABLE",
+    "Name": "ClawTrap Mesh_GEN_VARIABLE",
     "Outer": "BP_K31ClawTrap_C",
     "Class": "UScriptClass'SkeletalMeshComponent'",
     "Properties": {
