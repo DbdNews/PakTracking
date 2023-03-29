@@ -1077,7 +1077,7 @@
           "ChildComposite": null,
           "ChildTask": {
             "ObjectName": "BTTask_ExtMoveTo'BT_Camper_OutTerrorRadius:BTTask_ExtMoveTo_6'",
-            "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_OutTerrorRadius.132"
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_OutTerrorRadius.131"
           },
           "Decorators": [],
           "DecoratorOps": []
@@ -1114,7 +1114,7 @@
           "ChildComposite": null,
           "ChildTask": {
             "ObjectName": "BTTask_FleeMoveTo'BT_Camper_OutTerrorRadius:BTTask_FleeMoveTo_0'",
-            "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_OutTerrorRadius.134"
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_OutTerrorRadius.133"
           },
           "Decorators": [],
           "DecoratorOps": []
@@ -1371,7 +1371,7 @@
           "ChildComposite": null,
           "ChildTask": {
             "ObjectName": "BTTask_ExtMoveTo'BT_Camper_OutTerrorRadius:BTTask_ExtMoveTo_7'",
-            "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_OutTerrorRadius.133"
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_OutTerrorRadius.132"
           },
           "Decorators": [],
           "DecoratorOps": []
@@ -1413,8 +1413,8 @@
         {
           "ChildComposite": null,
           "ChildTask": {
-            "ObjectName": "BTTask_ExtMoveTo'BT_Camper_OutTerrorRadius:BTTask_ExtMoveTo_3'",
-            "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_OutTerrorRadius.130"
+            "ObjectName": "BTTask_FleeMoveTo'BT_Camper_OutTerrorRadius:BTTask_FleeMoveTo_1'",
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_OutTerrorRadius.134"
           },
           "Decorators": [],
           "DecoratorOps": []
@@ -1519,7 +1519,7 @@
           "ChildComposite": null,
           "ChildTask": {
             "ObjectName": "BTTask_ExtMoveTo'BT_Camper_OutTerrorRadius:BTTask_ExtMoveTo_4'",
-            "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_OutTerrorRadius.131"
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_OutTerrorRadius.130"
           },
           "Decorators": [],
           "DecoratorOps": []
@@ -4034,40 +4034,6 @@
   },
   {
     "Type": "BTTask_ExtMoveTo",
-    "Name": "BTTask_ExtMoveTo_3",
-    "Outer": "BT_Camper_OutTerrorRadius",
-    "Class": "UScriptClass'BTTask_ExtMoveTo'",
-    "Properties": {
-      "BBStrafeFocus": {
-        "SelectedKeyName": "HostileStimulusOriginLocation"
-      },
-      "StrafeFocus": "EExtMoveToStrafeFocusOptions::Always",
-      "NormalMoveUnderNavLinkDistance": 0.0,
-      "BBIgnoreGroupAvoidance": {},
-      "MovementModesNearActors": [],
-      "IgnoreDangerObjects": true,
-      "FilterClass": {
-        "ObjectName": "BlueprintGeneratedClass'NavQuery_Camper_Terrified_C'",
-        "ObjectPath": "DeadByDaylight/Content/AI/Camper/NavQuery_Camper_Terrified.0"
-      },
-      "bReachTestIncludesAgentRadius": false,
-      "bStopOnOverlapNeedsUpdate": false,
-      "BlackboardKey": {
-        "SelectedKeyName": "FallPalletLocation"
-      },
-      "NodeName": "Move To Pallet Location",
-      "TreeAsset": {
-        "ObjectName": "BehaviorTree'BT_Camper_OutTerrorRadius'",
-        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_OutTerrorRadius.0"
-      },
-      "ParentNode": {
-        "ObjectName": "BTComposite_SimpleParallel'BT_Camper_OutTerrorRadius:BTComposite_SimpleParallel_2'",
-        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_OutTerrorRadius.26"
-      }
-    }
-  },
-  {
-    "Type": "BTTask_ExtMoveTo",
     "Name": "BTTask_ExtMoveTo_4",
     "Outer": "BT_Camper_OutTerrorRadius",
     "Class": "UScriptClass'BTTask_ExtMoveTo'",
@@ -4195,6 +4161,41 @@
       "ParentNode": {
         "ObjectName": "BTComposite_Sequence'BT_Camper_OutTerrorRadius:BTComposite_Sequence_4'",
         "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_OutTerrorRadius.20"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FleeMoveTo",
+    "Name": "BTTask_FleeMoveTo_1",
+    "Outer": "BT_Camper_OutTerrorRadius",
+    "Class": "UScriptClass'BTTask_FleeMoveTo'",
+    "Properties": {
+      "CrouchWithinLastEvadeLoopPointRadius": 0.0,
+      "BBStrafeFocus": {
+        "SelectedKeyName": "HostileStimulusOriginLocation"
+      },
+      "NormalMoveUnderNavLinkDistance": 0.0,
+      "BBIgnoreGroupAvoidance": {},
+      "MovementModesNearActors": [],
+      "IgnoreDangerObjects": true,
+      "AcceptableRadius": 30.0,
+      "FilterClass": {
+        "ObjectName": "BlueprintGeneratedClass'NavQuery_Camper_Terrified_C'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/NavQuery_Camper_Terrified.0"
+      },
+      "bReachTestIncludesAgentRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "FallPalletLocation"
+      },
+      "NodeName": "Flee Move To Pallet",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Camper_OutTerrorRadius'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_OutTerrorRadius.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Camper_OutTerrorRadius:BTComposite_SimpleParallel_2'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_OutTerrorRadius.26"
       }
     }
   },

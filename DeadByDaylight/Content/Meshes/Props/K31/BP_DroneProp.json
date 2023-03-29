@@ -14,6 +14,17 @@
       },
       {
         "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnSystemAttached_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
         "Name": "CallFunc_CreateDynamicMaterialInstance_ReturnValue",
         "Flags": 1,
         "ElementSize": 8,
@@ -30,17 +41,6 @@
         "PropertyClass": {
           "ObjectName": "Class'MaterialInstanceDynamic'",
           "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "CallFunc_SpawnSystemAttached_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 8,
-        "PropertyFlags": 524288,
-        "PropertyClass": {
-          "ObjectName": "Class'NiagaraComponent'",
-          "ObjectPath": "/Script/Niagara"
         }
       }
     ],
@@ -94,20 +94,20 @@
       "Timelines": [
         {
           "ObjectName": "TimelineTemplate'BP_DroneProp_C:Dissolve_Spawn_Template'",
-          "ObjectPath": "DeadByDaylight/Content/Meshes/Props/K31/BP_DroneProp.18"
+          "ObjectPath": "DeadByDaylight/Content/Meshes/Props/K31/BP_DroneProp.20"
         },
         {
           "ObjectName": "TimelineTemplate'BP_DroneProp_C:Dissolve_Despawn_Template'",
-          "ObjectPath": "DeadByDaylight/Content/Meshes/Props/K31/BP_DroneProp.17"
+          "ObjectPath": "DeadByDaylight/Content/Meshes/Props/K31/BP_DroneProp.19"
         }
       ],
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BP_DroneProp_C:SimpleConstructionScript_0'",
-        "ObjectPath": "DeadByDaylight/Content/Meshes/Props/K31/BP_DroneProp.15"
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Props/K31/BP_DroneProp.18"
       },
       "InheritableComponentHandler": {
         "ObjectName": "InheritableComponentHandler'BP_DroneProp_C:InheritableComponentHandler'",
-        "ObjectPath": "DeadByDaylight/Content/Meshes/Props/K31/BP_DroneProp.10"
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Props/K31/BP_DroneProp.11"
       },
       "UberGraphFunction": {
         "ObjectName": "Function'BP_DroneProp_C:ExecuteUbergraph_BP_DroneProp'",
@@ -338,6 +338,46 @@
     }
   },
   {
+    "Type": "DBDSkeletalMeshComponentBudgeted",
+    "Name": "SkeletalMeshComponent_GEN_VARIABLE",
+    "Outer": "BP_DroneProp_C",
+    "Template": "SkeletalMeshComponent_GEN_VARIABLE",
+    "Class": "UScriptClass'DBDSkeletalMeshComponentBudgeted'",
+    "Properties": {
+      "_significanceStrategy": {
+        "ObjectName": "LinearSignificanceStrategy'BP_DroneProp_C:SkeletalMeshComponent_GEN_VARIABLE.LinearSignificanceStrategy_0'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Props/K31/BP_DroneProp.12"
+      },
+      "_animBudgeterSignificanceStrategy": {
+        "ObjectName": "SimpleAnimBudgeterSignificanceStrategy'BP_DroneProp_C:SkeletalMeshComponent_GEN_VARIABLE.SimpleAnimBudgeterSignificanceStrategy_0'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Props/K31/BP_DroneProp.17"
+      },
+      "AnimationData": {
+        "AnimToPlay": {
+          "ObjectName": "AnimSequence'K31_Drone_Mori01'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K31/Weapons/Animation/Drone/K31_Drone_Mori01.2"
+        },
+        "bSavedLooping": false,
+        "bSavedPlaying": false
+      },
+      "AnimationMode": "EAnimationMode::AnimationSingleNode",
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'K31_Drone_REF'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K31/Weapons/K31_Drone_REF.0"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_K31SWAcc01_Mori'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K31/Weapons/Materials/SW01/MI_K31SWAcc01_Mori.0"
+        },
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_K31SW01_Mori'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K31/Weapons/Materials/SW01/MI_K31SW01_Mori.0"
+        }
+      ]
+    }
+  },
+  {
     "Type": "InheritableComponentHandler",
     "Name": "InheritableComponentHandler",
     "Outer": "BP_DroneProp_C",
@@ -346,20 +386,20 @@
       "Records": [
         {
           "ComponentClass": {
-            "ObjectName": "Class'SkeletalMeshComponent'",
-            "ObjectPath": "/Script/Engine"
+            "ObjectName": "Class'DBDSkeletalMeshComponentBudgeted'",
+            "ObjectPath": "/Script/DBDAnimationBudgetAllocator"
           },
           "ComponentTemplate": {
-            "ObjectName": "SkeletalMeshComponent'BP_DroneProp_C:SkeletalMeshFE59122C4A43BB174128E88ACF5B3C35'",
-            "ObjectPath": "DeadByDaylight/Content/Meshes/Props/K31/BP_DroneProp.16"
+            "ObjectName": "DBDSkeletalMeshComponentBudgeted'BP_DroneProp_C:SkeletalMeshComponent_GEN_VARIABLE'",
+            "ObjectPath": "DeadByDaylight/Content/Meshes/Props/K31/BP_DroneProp.10"
           },
           "ComponentKey": {
             "OwnerClass": {
               "ObjectName": "BlueprintGeneratedClass'BP_KillProp_C'",
               "ObjectPath": "DeadByDaylight/Content/Meshes/Props/Guts/BP_KillProp.0"
             },
-            "SCSVariableName": "SkeletalMesh",
-            "AssociatedGuid": "AA90C451-4907A5D3-029728BA-0D0E32E3"
+            "SCSVariableName": "SkeletalMeshComponent",
+            "AssociatedGuid": "1D947572-43258D71-D6DB588F-E9D96FB0"
           },
           "CookedComponentInstancingData": {
             "ChangedPropertyList": [],
@@ -367,6 +407,34 @@
           }
         }
       ]
+    }
+  },
+  {
+    "Type": "LinearSignificanceStrategy",
+    "Name": "LinearSignificanceStrategy_0",
+    "Outer": "SkeletalMeshComponent_GEN_VARIABLE",
+    "Class": "UScriptClass'LinearSignificanceStrategy'",
+    "Properties": {
+      "_maxDistance": {
+        "PerDetailModeValue": [
+          {
+            "Ultra": 1600.0
+          },
+          {
+            "High": 1600.0
+          },
+          {
+            "Medium": 1600.0
+          },
+          {
+            "Low": 1600.0
+          },
+          {
+            "Mobile": 1600.0
+          }
+        ]
+      },
+      "_updateEvenIfNotRendered": true
     }
   },
   {
@@ -416,7 +484,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BP_DroneProp_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Meshes/Props/K31/BP_DroneProp.12"
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Props/K31/BP_DroneProp.14"
       },
       "VariableGuid": "6947C058-46B9FE83-A3ECEF82-54F784AD",
       "InternalVariableName": "DefaultSceneRoot"
@@ -434,12 +502,21 @@
       },
       "ComponentTemplate": {
         "ObjectName": "MaterialHelper'BP_DroneProp_C:MaterialHelper_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Meshes/Props/K31/BP_DroneProp.11"
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Props/K31/BP_DroneProp.13"
       },
       "ParentComponentOrVariableName": "DefaultSceneRoot",
       "ParentComponentOwnerClassName": "BP_KillProp_C",
       "VariableGuid": "8CDFA0D3-44B14F57-73E803A7-5BDDE475",
       "InternalVariableName": "MaterialHelper"
+    }
+  },
+  {
+    "Type": "SimpleAnimBudgeterSignificanceStrategy",
+    "Name": "SimpleAnimBudgeterSignificanceStrategy_0",
+    "Outer": "SkeletalMeshComponent_GEN_VARIABLE",
+    "Class": "UScriptClass'SimpleAnimBudgeterSignificanceStrategy'",
+    "Properties": {
+      "_tickEvenIfNotRendered": true
     }
   },
   {
@@ -451,49 +528,19 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BP_DroneProp_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "DeadByDaylight/Content/Meshes/Props/K31/BP_DroneProp.14"
+          "ObjectPath": "DeadByDaylight/Content/Meshes/Props/K31/BP_DroneProp.16"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BP_DroneProp_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "DeadByDaylight/Content/Meshes/Props/K31/BP_DroneProp.14"
+          "ObjectPath": "DeadByDaylight/Content/Meshes/Props/K31/BP_DroneProp.16"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BP_DroneProp_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "DeadByDaylight/Content/Meshes/Props/K31/BP_DroneProp.13"
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Props/K31/BP_DroneProp.15"
       }
-    }
-  },
-  {
-    "Type": "SkeletalMeshComponent",
-    "Name": "SkeletalMeshFE59122C4A43BB174128E88ACF5B3C35",
-    "Outer": "BP_DroneProp_C",
-    "Template": "SkeletalMeshFE59122C4A43BB174128E88ACF5B3C35",
-    "Class": "UScriptClass'SkeletalMeshComponent'",
-    "Properties": {
-      "AnimationData": {
-        "AnimToPlay": {
-          "ObjectName": "AnimSequence'K31_Drone_Mori01'",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K31/Weapons/Animation/Drone/K31_Drone_Mori01.3"
-        }
-      },
-      "AnimationMode": "EAnimationMode::AnimationSingleNode",
-      "SkeletalMesh": {
-        "ObjectName": "SkeletalMesh'K31_Drone_REF'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K31/Weapons/K31_Drone_REF.0"
-      },
-      "OverrideMaterials": [
-        {
-          "ObjectName": "MaterialInstanceConstant'MI_K31SWAcc01_Mori'",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K31/Weapons/Materials/SW01/MI_K31SWAcc01_Mori.0"
-        },
-        {
-          "ObjectName": "MaterialInstanceConstant'MI_K31SW01_Mori'",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K31/Weapons/Materials/SW01/MI_K31SW01_Mori.0"
-        }
-      ]
     }
   },
   {

@@ -13,12 +13,6 @@
         "PropertyFlags": 148
       },
       {
-        "Type": "FloatProperty",
-        "Name": "K2Node_Event_percent",
-        "Flags": 1,
-        "ElementSize": 4
-      },
-      {
         "Type": "DelegateProperty",
         "Name": "Temp_delegate_Variable",
         "Flags": 1,
@@ -274,6 +268,12 @@
           "ObjectName": "Class'EntityAnimInstance'",
           "ObjectPath": "/Script/DBDAnimation"
         }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_percent",
+        "Flags": 1,
+        "ElementSize": 4
       }
     ],
     "FunctionFlags": 8421377
@@ -499,7 +499,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BP_Entity_C:SimpleConstructionScript_0'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.28"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.31"
       },
       "UberGraphFunction": {
         "ObjectName": "Function'BP_Entity_C:ExecuteUbergraph_BP_Entity'",
@@ -574,6 +574,28 @@
       },
       {
         "Type": "ObjectProperty",
+        "Name": "MaterialHelper",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialHelper'",
+          "ObjectPath": "/Script/GFXUtilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MeatHookSpider",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class'DBDSkeletalMeshComponentBudgeted'",
+          "ObjectPath": "/Script/DBDAnimationBudgetAllocator"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
         "Name": "SleepingSkinnedMeshRegisterer",
         "Flags": 2097153,
         "ElementSize": 8,
@@ -613,28 +635,6 @@
         "PropertyFlags": 17180393476,
         "PropertyClass": {
           "ObjectName": "Class'ChildActorComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "MaterialHelper",
-        "Flags": 2097153,
-        "ElementSize": 8,
-        "PropertyFlags": 17180393476,
-        "PropertyClass": {
-          "ObjectName": "Class'MaterialHelper'",
-          "ObjectPath": "/Script/GFXUtilities"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "SK_MeatHook_Spider_REF",
-        "Flags": 2097153,
-        "ElementSize": 8,
-        "PropertyFlags": 17180393476,
-        "PropertyClass": {
-          "ObjectName": "Class'SkeletalMeshComponent'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -781,6 +781,67 @@
     }
   },
   {
+    "Type": "DBDSkeletalMeshComponentBudgeted",
+    "Name": "MeatHookSpider_GEN_VARIABLE",
+    "Outer": "BP_Entity_C",
+    "Class": "UScriptClass'DBDSkeletalMeshComponentBudgeted'",
+    "Properties": {
+      "_significanceStrategy": {
+        "ObjectName": "LinearSignificanceStrategy'BP_Entity_C:MeatHookSpider_GEN_VARIABLE.LinearSignificanceStrategy_0'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.18"
+      },
+      "_animBudgeterSignificanceStrategy": {
+        "ObjectName": "SimpleAnimBudgeterSignificanceStrategy'BP_Entity_C:MeatHookSpider_GEN_VARIABLE.SimpleAnimBudgeterSignificanceStrategy_0'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.30"
+      },
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'AB_Entity_C'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/Entity_Objects/Animations/AB_Entity.3"
+      },
+      "bEnablePhysicsOnDedicatedServer": false,
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_MeatHook_Spider_REF'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/Entity_Objects/Models/SK_MeatHook_Spider_REF.0"
+      },
+      "VisibilityBasedAnimTickOption": "EVisibilityBasedAnimTickOption::OnlyTickPoseWhenRendered",
+      "bPerBoneMotionBlur": false,
+      "bEnableUpdateRateOptimizations": true,
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "bApplyImpulseOnDamage": false,
+      "BodyInstance": {
+        "bEnableGravity": false
+      },
+      "bVisible": false
+    }
+  },
+  {
+    "Type": "LinearSignificanceStrategy",
+    "Name": "LinearSignificanceStrategy_0",
+    "Outer": "MeatHookSpider_GEN_VARIABLE",
+    "Class": "UScriptClass'LinearSignificanceStrategy'",
+    "Properties": {
+      "_maxDistance": {
+        "PerDetailModeValue": [
+          {
+            "Ultra": 1600.0
+          },
+          {
+            "High": 1600.0
+          },
+          {
+            "Medium": 1600.0
+          },
+          {
+            "Low": 1600.0
+          },
+          {
+            "Mobile": 1600.0
+          }
+        ]
+      }
+    }
+  },
+  {
     "Type": "MaterialHelper",
     "Name": "MaterialHelper753F36A04E8789F3BD40008C3F567244",
     "Outer": "BP_Entity_C",
@@ -819,20 +880,20 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BP_Entity_C:DefaultSceneRoot4355F1764083389E798F68BB5858A96F'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.19"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.21"
       },
       "ChildNodes": [
         {
-          "ObjectName": "SCS_Node'BP_Entity_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.24"
-        },
-        {
           "ObjectName": "SCS_Node'BP_Entity_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.25"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.26"
         },
         {
           "ObjectName": "SCS_Node'BP_Entity_C:SimpleConstructionScript_0.SCS_Node_19'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.22"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.24"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Entity_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.29"
         }
       ],
       "VariableGuid": "2C14D227-47CBB978-C61ECCB2-DF2DE5BD",
@@ -851,7 +912,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "MontagePlayer'BP_Entity_C:MontagePlayer_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.18"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.20"
       },
       "VariableGuid": "4678DDCD-48C13791-51FE2FAD-34B9FE1D",
       "InternalVariableName": "MontagePlayer"
@@ -895,30 +956,6 @@
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_3",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'SkeletalMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "SkeletalMeshComponent'BP_Entity_C:SK_MeatHook_Spider_REF61994426462BD6A4DF9659BEC27CA26F'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.29"
-      },
-      "ChildNodes": [
-        {
-          "ObjectName": "SCS_Node'BP_Entity_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.26"
-        }
-      ],
-      "VariableGuid": "0FA1E722-45E2DF55-9285F9BA-8142B790",
-      "InternalVariableName": "SK_MeatHook_Spider_REF"
-    }
-  },
-  {
-    "Type": "SCS_Node",
     "Name": "SCS_Node_4",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
@@ -947,7 +984,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "MaterialHelper'BP_Entity_C:MaterialHelper753F36A04E8789F3BD40008C3F567244'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.17"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.19"
       },
       "VariableGuid": "3376F757-489789D1-5ADA54B7-91019110",
       "InternalVariableName": "MaterialHelper"
@@ -965,11 +1002,41 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SleepingSkinnedMeshRegisterer'BP_Entity_C:SleepingSkinnedMeshRegisterer_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.30"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.32"
       },
       "VariableGuid": "38B59733-4895A432-9C8B37B3-E4E78D4D",
       "InternalVariableName": "SleepingSkinnedMeshRegisterer"
     }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_7",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DBDSkeletalMeshComponentBudgeted'",
+        "ObjectPath": "/Script/DBDAnimationBudgetAllocator"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DBDSkeletalMeshComponentBudgeted'BP_Entity_C:MeatHookSpider_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.17"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Entity_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.27"
+        }
+      ],
+      "VariableGuid": "0B31BAFE-41B7145F-623BE88F-440A7197",
+      "InternalVariableName": "MeatHookSpider"
+    }
+  },
+  {
+    "Type": "SimpleAnimBudgeterSignificanceStrategy",
+    "Name": "SimpleAnimBudgeterSignificanceStrategy_0",
+    "Outer": "MeatHookSpider_GEN_VARIABLE",
+    "Class": "UScriptClass'SimpleAnimBudgeterSignificanceStrategy'"
   },
   {
     "Type": "SimpleConstructionScript",
@@ -980,90 +1047,59 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BP_Entity_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.23"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.25"
         },
         {
           "ObjectName": "SCS_Node'BP_Entity_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.20"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.22"
         },
         {
           "ObjectName": "SCS_Node'BP_Entity_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.21"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.23"
         },
         {
           "ObjectName": "SCS_Node'BP_Entity_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.27"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.28"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BP_Entity_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.23"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_Entity_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.20"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_Entity_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.24"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_Entity_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.26"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_Entity_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.25"
         },
         {
-          "ObjectName": "SCS_Node'BP_Entity_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.21"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_Entity_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectName": "SCS_Node'BP_Entity_C:SimpleConstructionScript_0.SCS_Node_0'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.22"
         },
         {
+          "ObjectName": "SCS_Node'BP_Entity_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Entity_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Entity_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.24"
+        },
+        {
           "ObjectName": "SCS_Node'BP_Entity_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.28"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Entity_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.29"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Entity_C:SimpleConstructionScript_0.SCS_Node_5'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.27"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BP_Entity_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.20"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Entity/BP_Entity.22"
       }
-    }
-  },
-  {
-    "Type": "SkeletalMeshComponent",
-    "Name": "SK_MeatHook_Spider_REF61994426462BD6A4DF9659BEC27CA26F",
-    "Outer": "BP_Entity_C",
-    "Class": "UScriptClass'SkeletalMeshComponent'",
-    "Properties": {
-      "AnimClass": {
-        "ObjectName": "AnimBlueprintGeneratedClass'AB_Entity_C'",
-        "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/Entity_Objects/Animations/AB_Entity.3"
-      },
-      "bEnablePhysicsOnDedicatedServer": false,
-      "ClothingSimulationFactory": {
-        "ObjectName": "Class'ClothingSimulationFactoryNv'",
-        "ObjectPath": "/Script/ClothingSystemRuntimeNv"
-      },
-      "SkeletalMesh": {
-        "ObjectName": "SkeletalMesh'SK_MeatHook_Spider_REF'",
-        "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/Entity_Objects/Models/SK_MeatHook_Spider_REF.0"
-      },
-      "VisibilityBasedAnimTickOption": "EVisibilityBasedAnimTickOption::OnlyTickPoseWhenRendered",
-      "bPerBoneMotionBlur": false,
-      "bEnableUpdateRateOptimizations": true,
-      "DetailLevelBeforeCastShadows": "DM_MAX",
-      "bApplyImpulseOnDamage": false,
-      "BodyInstance": {
-        "MassInKgOverride": 29305.441,
-        "bEnableGravity": false
-      },
-      "bVisible": false
     }
   },
   {

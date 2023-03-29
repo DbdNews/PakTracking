@@ -7,11 +7,11 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'DreamPallet_Qtm_C:SimpleConstructionScript_0'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/DreamPallet_Qtm.8"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/DreamPallet_Qtm.11"
       },
       "InheritableComponentHandler": {
         "ObjectName": "InheritableComponentHandler'DreamPallet_Qtm_C:InheritableComponentHandler'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/DreamPallet_Qtm.3"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/DreamPallet_Qtm.4"
       }
     },
     "SuperStruct": {
@@ -42,11 +42,11 @@
       },
       "_palletPulldownBlockerComponent": {
         "ObjectName": "PalletPulldownBlockerComponent'Default__DreamPallet_Qtm_C:PalletPulldownBlockerComponent'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/DreamPallet_Qtm.5"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/DreamPallet_Qtm.7"
       },
       "_transformOptimizer": {
         "ObjectName": "InteractableTransformOptimizer'Default__DreamPallet_Qtm_C:InteractableOptimizer'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/DreamPallet_Qtm.4"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/DreamPallet_Qtm.5"
       }
     }
   },
@@ -56,6 +56,27 @@
     "Outer": "Default__DreamPallet_Qtm_C",
     "Template": "NavEvadeLoopComponent",
     "Class": "UScriptClass'DBDNavEvadeLoopComponent'"
+  },
+  {
+    "Type": "DBDSkeletalMeshComponentBudgeted",
+    "Name": "PalletMesh_GEN_VARIABLE",
+    "Outer": "DreamPallet_Qtm_C",
+    "Template": "PalletMesh_GEN_VARIABLE",
+    "Class": "UScriptClass'DBDSkeletalMeshComponentBudgeted'",
+    "Properties": {
+      "_significanceStrategy": {
+        "ObjectName": "LinearSignificanceStrategy'DreamPallet_Qtm_C:PalletMesh_GEN_VARIABLE.LinearSignificanceStrategy_0'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/DreamPallet_Qtm.6"
+      },
+      "_animBudgeterSignificanceStrategy": {
+        "ObjectName": "SimpleAnimBudgeterSignificanceStrategy'DreamPallet_Qtm_C:PalletMesh_GEN_VARIABLE.SimpleAnimBudgeterSignificanceStrategy_0'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/DreamPallet_Qtm.10"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_QTM_Pallet_01_REF'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/Pallet/Mesh/SK_QTM_Pallet_01_REF.0"
+      }
+    }
   },
   {
     "Type": "InheritableComponentHandler",
@@ -71,7 +92,7 @@
           },
           "ComponentTemplate": {
             "ObjectName": "StaticMeshComponent'DreamPallet_Qtm_C:Pallet_destroy_broken_GEN_VARIABLE'",
-            "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/DreamPallet_Qtm.10"
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/DreamPallet_Qtm.12"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -88,34 +109,12 @@
         },
         {
           "ComponentClass": {
-            "ObjectName": "Class'SkeletalMeshComponent'",
-            "ObjectPath": "/Script/Engine"
-          },
-          "ComponentTemplate": {
-            "ObjectName": "SkeletalMeshComponent'DreamPallet_Qtm_C:SkeletalMeshComponent_5'",
-            "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/DreamPallet_Qtm.9"
-          },
-          "ComponentKey": {
-            "OwnerClass": {
-              "ObjectName": "BlueprintGeneratedClass'BP_Pallet_C'",
-              "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/BP_Pallet.48"
-            },
-            "SCSVariableName": "Model",
-            "AssociatedGuid": "73478CBE-4DE6EEF2-C1E5FB96-D6D4642B"
-          },
-          "CookedComponentInstancingData": {
-            "ChangedPropertyList": [],
-            "bHasValidCookedData": false
-          }
-        },
-        {
-          "ComponentClass": {
             "ObjectName": "Class'StaticMeshComponent'",
             "ObjectPath": "/Script/Engine"
           },
           "ComponentTemplate": {
             "ObjectName": "StaticMeshComponent'DreamPallet_Qtm_C:SM_Pallet_Destroy_VAT_GEN_VARIABLE'",
-            "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/DreamPallet_Qtm.11"
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/DreamPallet_Qtm.13"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -124,6 +123,28 @@
             },
             "SCSVariableName": "SM_Pallet_Destroy_VAT",
             "AssociatedGuid": "6C010ED7-45E978D4-E265E5B9-C37FA11B"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'DBDSkeletalMeshComponentBudgeted'",
+            "ObjectPath": "/Script/DBDAnimationBudgetAllocator"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "DBDSkeletalMeshComponentBudgeted'DreamPallet_Qtm_C:PalletMesh_GEN_VARIABLE'",
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/DreamPallet_Qtm.3"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_Pallet_C'",
+              "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/BP_Pallet.48"
+            },
+            "SCSVariableName": "PalletMesh",
+            "AssociatedGuid": "ADC7AA4B-4FE6BFA9-822AC193-59A3F5E3"
           },
           "CookedComponentInstancingData": {
             "ChangedPropertyList": [],
@@ -139,6 +160,13 @@
     "Outer": "Default__DreamPallet_Qtm_C",
     "Template": "InteractableOptimizer",
     "Class": "UScriptClass'InteractableTransformOptimizer'"
+  },
+  {
+    "Type": "LinearSignificanceStrategy",
+    "Name": "LinearSignificanceStrategy_0",
+    "Outer": "PalletMesh_GEN_VARIABLE",
+    "Template": "LinearSignificanceStrategy_0",
+    "Class": "UScriptClass'LinearSignificanceStrategy'"
   },
   {
     "Type": "PalletPulldownBlockerComponent",
@@ -165,11 +193,18 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'DreamPallet_Qtm_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/DreamPallet_Qtm.6"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/DreamPallet_Qtm.8"
       },
       "VariableGuid": "9A2010F6-42BB3425-5CF7F294-0F2BE617",
       "InternalVariableName": "DefaultSceneRoot"
     }
+  },
+  {
+    "Type": "SimpleAnimBudgeterSignificanceStrategy",
+    "Name": "SimpleAnimBudgeterSignificanceStrategy_0",
+    "Outer": "PalletMesh_GEN_VARIABLE",
+    "Template": "SimpleAnimBudgeterSignificanceStrategy_0",
+    "Class": "UScriptClass'SimpleAnimBudgeterSignificanceStrategy'"
   },
   {
     "Type": "SimpleConstructionScript",
@@ -179,20 +214,7 @@
     "Properties": {
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'DreamPallet_Qtm_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/DreamPallet_Qtm.7"
-      }
-    }
-  },
-  {
-    "Type": "SkeletalMeshComponent",
-    "Name": "SkeletalMeshComponent_5",
-    "Outer": "DreamPallet_Qtm_C",
-    "Template": "SkeletalMeshComponent_5",
-    "Class": "UScriptClass'SkeletalMeshComponent'",
-    "Properties": {
-      "SkeletalMesh": {
-        "ObjectName": "SkeletalMesh'SK_QTM_Pallet_01_REF'",
-        "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/Pallet/Mesh/SK_QTM_Pallet_01_REF.0"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/DreamPallet_Qtm.9"
       }
     }
   },

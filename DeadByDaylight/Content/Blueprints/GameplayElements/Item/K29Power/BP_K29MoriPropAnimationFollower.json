@@ -2,58 +2,115 @@
   {
     "Type": "BlueprintGeneratedClass",
     "Name": "BP_K29MoriPropAnimationFollower_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
     "Properties": {
       "SimpleConstructionScript": {
-        "ObjectName": "SimpleConstructionScript BP_K29MoriPropAnimationFollower_C:SimpleConstructionScript_0",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29MoriPropAnimationFollower.6"
+        "ObjectName": "SimpleConstructionScript'BP_K29MoriPropAnimationFollower_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29MoriPropAnimationFollower.9"
       }
     },
     "SuperStruct": {
-      "ObjectName": "Class AnimationFollowerActor",
+      "ObjectName": "Class'AnimationFollowerActor'",
       "ObjectPath": "/Script/DeadByDaylight"
     },
     "ClassFlags": 8652820,
     "ClassWithin": {
-      "ObjectName": "Class Object",
+      "ObjectName": "Class'Object'",
       "ObjectPath": "/Script/CoreUObject"
     },
     "ClassConfigName": "Engine",
     "bCooked": true,
     "ClassDefaultObject": {
-      "ObjectName": "BP_K29MoriPropAnimationFollower_C Default__BP_K29MoriPropAnimationFollower_C",
+      "ObjectName": "BP_K29MoriPropAnimationFollower_C'Default__BP_K29MoriPropAnimationFollower_C'",
       "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29MoriPropAnimationFollower.1"
     }
   },
   {
     "Type": "BP_K29MoriPropAnimationFollower_C",
     "Name": "Default__BP_K29MoriPropAnimationFollower_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29MoriPropAnimationFollower.BP_K29MoriPropAnimationFollower_C'",
     "Properties": {
-      "_skeletalMesh": {
-        "ObjectName": "SkeletalMeshComponent Default__BP_K29MoriPropAnimationFollower_C:Skeletal Mesh",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29MoriPropAnimationFollower.7"
+      "_skeletalMeshComponent": {
+        "ObjectName": "DBDSkeletalMeshComponentBudgeted'Default__BP_K29MoriPropAnimationFollower_C:SkeletalMesh'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29MoriPropAnimationFollower.3"
       },
       "_montageFollower": {
-        "ObjectName": "AnimationMontageSlave Default__BP_K29MoriPropAnimationFollower_C:MontageSlave",
+        "ObjectName": "AnimationMontageSlave'Default__BP_K29MoriPropAnimationFollower_C:MontageSlave'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29MoriPropAnimationFollower.2"
       },
       "_montagePlayer": {
-        "ObjectName": "MontagePlayer Default__BP_K29MoriPropAnimationFollower_C:AnimMontagePlayer",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29MoriPropAnimationFollower.3"
+        "ObjectName": "MontagePlayer'Default__BP_K29MoriPropAnimationFollower_C:AnimMontagePlayer'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29MoriPropAnimationFollower.5"
       }
     }
   },
   {
     "Type": "AnimationMontageSlave",
     "Name": "MontageSlave",
-    "Outer": "Default__BP_K29MoriPropAnimationFollower_C"
+    "Outer": "Default__BP_K29MoriPropAnimationFollower_C",
+    "Class": "UScriptClass'AnimationMontageSlave'"
+  },
+  {
+    "Type": "DBDSkeletalMeshComponentBudgeted",
+    "Name": "SkeletalMesh",
+    "Outer": "Default__BP_K29MoriPropAnimationFollower_C",
+    "Class": "UScriptClass'DBDSkeletalMeshComponentBudgeted'",
+    "Properties": {
+      "_significanceStrategy": {
+        "ObjectName": "LinearSignificanceStrategy'Default__BP_K29MoriPropAnimationFollower_C:SkeletalMesh.LinearSignificanceStrategy_0'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29MoriPropAnimationFollower.4"
+      },
+      "_animBudgeterSignificanceStrategy": {
+        "ObjectName": "SimpleAnimBudgeterSignificanceStrategy'Default__BP_K29MoriPropAnimationFollower_C:SkeletalMesh.SimpleAnimBudgeterSignificanceStrategy_0'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29MoriPropAnimationFollower.8"
+      },
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'AB_K29_Mori_Tentacle_C'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/AB_K29_Mori_Tentacle.4"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'K29_Mori_Tentacle_REF'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/k29/Weapons/Models/K29_Mori_Tentacle_REF.0"
+      },
+      "DetailLevelBeforeCastShadows": "DM_MAX"
+    }
+  },
+  {
+    "Type": "LinearSignificanceStrategy",
+    "Name": "LinearSignificanceStrategy_0",
+    "Outer": "SkeletalMesh",
+    "Class": "UScriptClass'LinearSignificanceStrategy'",
+    "Properties": {
+      "_maxDistance": {
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3200.0
+          },
+          {
+            "High": 3200.0
+          },
+          {
+            "Medium": 3200.0
+          },
+          {
+            "Low": 3200.0
+          },
+          {
+            "Mobile": 3200.0
+          }
+        ]
+      },
+      "_updateEvenIfNotRendered": true
+    }
   },
   {
     "Type": "MontagePlayer",
     "Name": "AnimMontagePlayer",
     "Outer": "Default__BP_K29MoriPropAnimationFollower_C",
+    "Class": "UScriptClass'MontagePlayer'",
     "Properties": {
       "_animationMappingsTable": {
-        "ObjectName": "DataTable K29MoriTentacleAnimMappings",
+        "ObjectName": "DataTable'K29MoriTentacleAnimMappings'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/K29MoriTentacleAnimMappings.0"
       }
     }
@@ -61,50 +118,46 @@
   {
     "Type": "SceneComponent",
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
-    "Outer": "BP_K29MoriPropAnimationFollower_C"
+    "Outer": "BP_K29MoriPropAnimationFollower_C",
+    "Class": "UScriptClass'SceneComponent'"
   },
   {
     "Type": "SCS_Node",
     "Name": "SCS_Node_0",
     "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class SceneComponent",
+        "ObjectName": "Class'SceneComponent'",
         "ObjectPath": "/Script/Engine"
       },
       "ComponentTemplate": {
-        "ObjectName": "SceneComponent BP_K29MoriPropAnimationFollower_C:DefaultSceneRoot_GEN_VARIABLE",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29MoriPropAnimationFollower.4"
+        "ObjectName": "SceneComponent'BP_K29MoriPropAnimationFollower_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29MoriPropAnimationFollower.6"
       },
       "VariableGuid": "1982D580-41C7816A-30DCC68C-49CD3417",
       "InternalVariableName": "DefaultSceneRoot"
     }
   },
   {
-    "Type": "SimpleConstructionScript",
-    "Name": "SimpleConstructionScript_0",
-    "Outer": "BP_K29MoriPropAnimationFollower_C",
+    "Type": "SimpleAnimBudgeterSignificanceStrategy",
+    "Name": "SimpleAnimBudgeterSignificanceStrategy_0",
+    "Outer": "SkeletalMesh",
+    "Class": "UScriptClass'SimpleAnimBudgeterSignificanceStrategy'",
     "Properties": {
-      "DefaultSceneRootNode": {
-        "ObjectName": "SCS_Node BP_K29MoriPropAnimationFollower_C:SimpleConstructionScript_0.SCS_Node_0",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29MoriPropAnimationFollower.5"
-      }
+      "_tickEvenIfNotRendered": true
     }
   },
   {
-    "Type": "SkeletalMeshComponent",
-    "Name": "Skeletal Mesh",
-    "Outer": "Default__BP_K29MoriPropAnimationFollower_C",
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_K29MoriPropAnimationFollower_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
     "Properties": {
-      "AnimClass": {
-        "ObjectName": "AnimBlueprintGeneratedClass AB_K29_Mori_Tentacle_C",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/AB_K29_Mori_Tentacle.2"
-      },
-      "SkeletalMesh": {
-        "ObjectName": "SkeletalMesh K29_Mori_Tentacle_REF",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/k29/Weapons/Models/K29_Mori_Tentacle_REF.0"
-      },
-      "DetailLevelBeforeCastShadows": "DM_MAX"
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_K29MoriPropAnimationFollower_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29MoriPropAnimationFollower.7"
+      }
     }
   }
 ]

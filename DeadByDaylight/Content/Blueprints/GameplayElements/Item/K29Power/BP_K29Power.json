@@ -21,7 +21,7 @@
         }
       }
     ],
-    "FunctionFlags": 206047232
+    "FunctionFlags": 474089472
   },
   {
     "Type": "Function",
@@ -93,7 +93,7 @@
         }
       }
     ],
-    "FunctionFlags": 205654016
+    "FunctionFlags": 474089472
   },
   {
     "Type": "Function",
@@ -208,7 +208,7 @@
         }
       }
     ],
-    "FunctionFlags": 205654016
+    "FunctionFlags": 474089472
   },
   {
     "Type": "Function",
@@ -232,7 +232,7 @@
         }
       }
     ],
-    "FunctionFlags": 205654016
+    "FunctionFlags": 474089472
   },
   {
     "Type": "Function",
@@ -280,7 +280,7 @@
         }
       }
     ],
-    "FunctionFlags": 205654016
+    "FunctionFlags": 474089472
   },
   {
     "Type": "Function",
@@ -307,13 +307,37 @@
     "FunctionFlags": 205654016
   },
   {
+    "Type": "Function",
+    "Name": "GetDropSurvivorCooldownInteraction",
+    "Outer": "BP_K29Power_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'K29Power:GetDropSurvivorCooldownInteraction'",
+      "ObjectPath": "/Script/TheK29"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 525696,
+        "PropertyClass": {
+          "ObjectName": "Class'K29RushCooldownInteraction'",
+          "ObjectPath": "/Script/TheK29"
+        }
+      }
+    ],
+    "FunctionFlags": 474089472
+  },
+  {
     "Type": "BlueprintGeneratedClass",
     "Name": "BP_K29Power_C",
     "Class": "UScriptClass'BlueprintGeneratedClass'",
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BP_K29Power_C:SimpleConstructionScript_0'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.50"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.52"
       }
     },
     "SuperStruct": {
@@ -321,6 +345,10 @@
       "ObjectPath": "/Script/TheK29"
     },
     "Children": [
+      {
+        "ObjectName": "Function'BP_K29Power_C:GetDropSurvivorCooldownInteraction'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.11"
+      },
       {
         "ObjectName": "Function'BP_K29Power_C:GetPushSurvivorOverLedgeInteraction'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.10"
@@ -544,6 +572,10 @@
       "GetPushSurvivorOverLedgeInteraction": {
         "ObjectName": "Function'BP_K29Power_C:GetPushSurvivorOverLedgeInteraction'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.10"
+      },
+      "GetDropSurvivorCooldownInteraction": {
+        "ObjectName": "Function'BP_K29Power_C:GetDropSurvivorCooldownInteraction'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.11"
       }
     },
     "ClassFlags": 8652820,
@@ -555,7 +587,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BP_K29Power_C'Default__BP_K29Power_C'",
-      "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.12"
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.13"
     }
   },
   {
@@ -565,23 +597,23 @@
     "Properties": {
       "_rushChargeableComponent": {
         "ObjectName": "ChargeableComponent'Default__BP_K29Power_C:Rush Chargeable'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.26"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.27"
       },
       "_interactor": {
         "ObjectName": "Interactor'Default__BP_K29Power_C:Interactor'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.29"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.31"
       },
       "_interactionVolume": {
         "ObjectName": "BoxPlayerOverlapComponent'Default__BP_K29Power_C:Interaction Volume'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.14"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.15"
       },
       "_powerChargePresentationItemProgressComponent": {
         "ObjectName": "K29PowerChargePresentationItemProgressComponent'Default__BP_K29Power_C:Rush Power UI Presenter'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.33"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.35"
       },
       "_powerChargePresentationPowerFadeComponent": {
         "ObjectName": "K29PowerChargePresentationPowerFadeComponent'Default__BP_K29Power_C:Rush Power UI Fade Presenter'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.34"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.36"
       },
       "_powerStatusHandlerComponentClass": {
         "ObjectName": "BlueprintGeneratedClass'BP_K29PowerStatusHandlerComponent_C'",
@@ -629,50 +661,50 @@
       "ItemID": "Item_Slasher_K29Power",
       "BaseItemModifier": {
         "ObjectName": "ItemModifier'Default__BP_K29Power_C:ItemModifier'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.30"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.32"
       },
       "ItemModifier1": {
         "ObjectName": "ItemModifier'Default__BP_K29Power_C:ItemModifier1'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.31"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.33"
       },
       "ItemModifier2": {
         "ObjectName": "ItemModifier'Default__BP_K29Power_C:ItemModifier2'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.32"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.34"
       },
       "_mesh": {
-        "ObjectName": "SkeletalMeshComponent'Default__BP_K29Power_C:ItemMesh'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.51"
+        "ObjectName": "DBDSkeletalMeshComponentBudgeted'Default__BP_K29Power_C:ItemMesh'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.28"
       },
       "_objectState": {
         "ObjectName": "GameplayTagContainerComponent'Default__BP_K29Power_C:ObjectState'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.27"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.29"
       },
       "_placementOrigin": {
         "ObjectName": "SceneComponent'Default__BP_K29Power_C:PlacementOrigin'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.36"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.38"
       },
       "_itemModifiers": [
         {
           "ObjectName": "ItemModifier'Default__BP_K29Power_C:ItemModifier'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.30"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.32"
         },
         {
           "ObjectName": "ItemModifier'Default__BP_K29Power_C:ItemModifier1'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.31"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.33"
         },
         {
           "ObjectName": "ItemModifier'Default__BP_K29Power_C:ItemModifier2'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.32"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.34"
         }
       ],
       "_attachToSocketName": "EAttachToSocketNameEnum::Weapon_SocketLT",
       "_transformOptimizer": {
         "ObjectName": "InteractableTransformOptimizer'Default__BP_K29Power_C:InteractableOptimizer'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.28"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.30"
       },
       "RootComponent": {
-        "ObjectName": "SkeletalMeshComponent'Default__BP_K29Power_C:ItemMesh'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.51"
+        "ObjectName": "DBDSkeletalMeshComponentBudgeted'Default__BP_K29Power_C:ItemMesh'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.28"
       }
     }
   },
@@ -779,8 +811,8 @@
         }
       },
       "AttachParent": {
-        "ObjectName": "SkeletalMeshComponent'Default__BP_K29Power_C:ItemMesh'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.51"
+        "ObjectName": "DBDSkeletalMeshComponentBudgeted'Default__BP_K29Power_C:ItemMesh'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.28"
       },
       "ComponentTags": [
         "Interactor"
@@ -871,6 +903,15 @@
     "Class": "UScriptClass'ChargeableComponent'"
   },
   {
+    "Type": "DBDSkeletalMeshComponentBudgeted",
+    "Name": "ItemMesh",
+    "Outer": "Default__BP_K29Power_C",
+    "Class": "UScriptClass'DBDSkeletalMeshComponentBudgeted'",
+    "Properties": {
+      "DetailLevelBeforeCastShadows": "DM_MAX"
+    }
+  },
+  {
     "Type": "GameplayTagContainerComponent",
     "Name": "ObjectState",
     "Outer": "Default__BP_K29Power_C",
@@ -890,7 +931,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "BoxPlayerOverlapComponent'Default__BP_K29Power_C:Interaction Volume'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.14"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.15"
       }
     }
   },
@@ -937,8 +978,8 @@
     "Class": "UScriptClass'SceneComponent'",
     "Properties": {
       "AttachParent": {
-        "ObjectName": "SkeletalMeshComponent'Default__BP_K29Power_C:ItemMesh'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.51"
+        "ObjectName": "DBDSkeletalMeshComponentBudgeted'Default__BP_K29Power_C:ItemMesh'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.28"
       }
     }
   },
@@ -954,7 +995,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BP_K29Power_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.35"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.37"
       },
       "VariableGuid": "535B56FA-47F93602-8BEC0C8F-C343F21E",
       "InternalVariableName": "DefaultSceneRoot"
@@ -972,7 +1013,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SleepingSkinnedMeshRegisterer'BP_K29Power_C:SleepingSkinnedMeshRegisterer_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.52"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.53"
       },
       "VariableGuid": "85EE1DD5-49271859-30133D8E-D07176A8",
       "InternalVariableName": "SleepingSkinnedMeshRegisterer"
@@ -990,7 +1031,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BP_K29SlashBreakableInteractionDefinition_C'BP_K29Power_C:BP_K29SlashBreakableInteractionDefinition_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.24"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.25"
       },
       "ParentComponentOrVariableName": "Interactor",
       "bIsParentComponentNative": true,
@@ -1010,7 +1051,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BP_K29DropSurvivorInteractionDefinition_C'BP_K29Power_C:BP_K29DropSurvivorInteractionDefinition_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.17"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.18"
       },
       "ParentComponentOrVariableName": "Interactor",
       "bIsParentComponentNative": true,
@@ -1030,7 +1071,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BP_K29DropSurvivorCooldownInteraction_C'BP_K29Power_C:BP_K29DropSurvivorCooldownInteraction_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.16"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.17"
       },
       "ParentComponentOrVariableName": "Interactor",
       "bIsParentComponentNative": true,
@@ -1050,7 +1091,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BP_K29RushChargeableInteraction_C'BP_K29Power_C:BP_K29RushChargeableInteraction_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.19"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.20"
       },
       "ParentComponentOrVariableName": "Interactor",
       "bIsParentComponentNative": true,
@@ -1070,7 +1111,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BP_K29RushCompleteSurvivorThrowCooldownInteraction_C'BP_K29Power_C:BP_K29RushCompleteSurvivorThrowCooldownInteraction_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.22"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.23"
       },
       "ParentComponentOrVariableName": "Interactor",
       "bIsParentComponentNative": true,
@@ -1090,7 +1131,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BP_K29ChargeCancelCooldownInteraction_C'BP_K29Power_C:BP_K29ChargeCancelCooldownInteraction_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.15"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.16"
       },
       "ParentComponentOrVariableName": "Interactor",
       "bIsParentComponentNative": true,
@@ -1110,7 +1151,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BP_K29RushCompleteNoSurvivorCooldownInteraction_C'BP_K29Power_C:BP_K29RushCompleteNoSurvivorCooldownInteraction_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.20"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.21"
       },
       "ParentComponentOrVariableName": "Interactor",
       "bIsParentComponentNative": true,
@@ -1130,7 +1171,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BP_K29RushCompleteSurvivorHitCooldownInteraction_C'BP_K29Power_C:BP_K29RushCompleteSurvivorHitCooldownInteraction_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.21"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.22"
       },
       "ParentComponentOrVariableName": "Interactor",
       "bIsParentComponentNative": true,
@@ -1150,7 +1191,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BP_K29RushVaultCooldownInteraction_C'BP_K29Power_C:BP_K29RushVaultCooldownInteraction_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.23"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.24"
       },
       "ParentComponentOrVariableName": "Interactor",
       "bIsParentComponentNative": true,
@@ -1170,7 +1211,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BP_K29RushBreakableCooldownInteraction_C'BP_K29Power_C:BP_K29RushBreakableCooldownInteraction_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.18"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.19"
       },
       "ParentComponentOrVariableName": "Interactor",
       "bIsParentComponentNative": true,
@@ -1190,7 +1231,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BP_K29SlashSurvivorInteractionDefinition_C'BP_K29Power_C:BP_K29SlashAtSurvivorInteractionDefinition_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.25"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.26"
       },
       "ParentComponentOrVariableName": "Interactor",
       "bIsParentComponentNative": true,
@@ -1207,116 +1248,107 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.38"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.42"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.44"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.45"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.46"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.43"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.47"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.48"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.49"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_10'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.39"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_11'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.40"
         },
         {
-          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.44"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.46"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.47"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.48"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.45"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.49"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.50"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.51"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_10'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.41"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.42"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.43"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.38"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.42"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.44"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.45"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.46"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.43"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.47"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.48"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.49"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_10'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.39"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_11'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.40"
         },
         {
-          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.44"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.46"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.47"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.48"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.45"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.49"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.50"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.51"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_10'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.41"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.42"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.43"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BP_K29Power_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.37"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K29Power/BP_K29Power.39"
       }
-    }
-  },
-  {
-    "Type": "SkeletalMeshComponent",
-    "Name": "ItemMesh",
-    "Outer": "Default__BP_K29Power_C",
-    "Class": "UScriptClass'SkeletalMeshComponent'",
-    "Properties": {
-      "DetailLevelBeforeCastShadows": "DM_MAX"
     }
   },
   {

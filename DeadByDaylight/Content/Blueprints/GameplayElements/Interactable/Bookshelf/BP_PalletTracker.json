@@ -321,7 +321,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BP_PalletTracker_C:SimpleConstructionScript_0'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.15"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.18"
       },
       "UberGraphFunction": {
         "ObjectName": "Function'BP_PalletTracker_C:ExecuteUbergraph_BP_PalletTracker'",
@@ -383,13 +383,13 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "SkeletalMesh",
+        "Name": "SkeletalMeshComponent",
         "Flags": 2097153,
         "ElementSize": 8,
         "PropertyFlags": 17180393476,
         "PropertyClass": {
-          "ObjectName": "Class'SkeletalMeshComponent'",
-          "ObjectPath": "/Script/Engine"
+          "ObjectName": "Class'DBDSkeletalMeshComponentBudgeted'",
+          "ObjectPath": "/Script/DBDAnimationBudgetAllocator"
         }
       },
       {
@@ -504,14 +504,14 @@
       },
       "_indicatorLocation": {
         "ObjectName": "SceneComponent'Default__BP_PalletTracker_C:IndicatorLocation'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.10"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.12"
       },
       "PrimaryActorTick": {
         "TickInterval": 1.0
       },
       "RootComponent": {
         "ObjectName": "SceneComponent'Default__BP_PalletTracker_C:PalletTrackerRootcomponent'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.11"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.13"
       }
     }
   },
@@ -529,6 +529,80 @@
     }
   },
   {
+    "Type": "DBDSkeletalMeshComponentBudgeted",
+    "Name": "SkeletalMeshComponent_GEN_VARIABLE",
+    "Outer": "BP_PalletTracker_C",
+    "Class": "UScriptClass'DBDSkeletalMeshComponentBudgeted'",
+    "Properties": {
+      "_significanceStrategy": {
+        "ObjectName": "LinearSignificanceStrategy'BP_PalletTracker_C:SkeletalMeshComponent_GEN_VARIABLE.LinearSignificanceStrategy_0'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.10"
+      },
+      "_animBudgeterSignificanceStrategy": {
+        "ObjectName": "SimpleAnimBudgeterSignificanceStrategy'BP_PalletTracker_C:SkeletalMeshComponent_GEN_VARIABLE.SimpleAnimBudgeterSignificanceStrategy_0'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.17"
+      },
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'PullDownsAnimBP_C'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/PullDownsAnimBP.9"
+      },
+      "bUpdateOverlapsOnAnimationFinalize": false,
+      "bEnablePhysicsOnDedicatedServer": false,
+      "bSkipBoundsUpdateWhenInterpolating": true,
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_Pallet_01_REF'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/Pallet/Mesh/SK_Pallet_01_REF.0"
+      },
+      "VisibilityBasedAnimTickOption": "EVisibilityBasedAnimTickOption::AlwaysTickPose",
+      "bComponentUseFixedSkelBounds": true,
+      "bEnableUpdateRateOptimizations": true,
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material'M_Indicator_Mesh'",
+          "ObjectPath": "DeadByDaylight/Content/Effects/Materials/M_Indicator_Mesh.0"
+        }
+      ],
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "bRenderCustomDepth": true,
+      "BodyInstance": {
+        "MassInKgOverride": 230.18498
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -100.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "LinearSignificanceStrategy",
+    "Name": "LinearSignificanceStrategy_0",
+    "Outer": "SkeletalMeshComponent_GEN_VARIABLE",
+    "Class": "UScriptClass'LinearSignificanceStrategy'",
+    "Properties": {
+      "_maxDistance": {
+        "PerDetailModeValue": [
+          {
+            "Ultra": 1600.0
+          },
+          {
+            "High": 1600.0
+          },
+          {
+            "Medium": 1600.0
+          },
+          {
+            "Low": 1600.0
+          },
+          {
+            "Mobile": 1600.0
+          }
+        ]
+      },
+      "_updateEvenIfNotRendered": true
+    }
+  },
+  {
     "Type": "SceneComponent",
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
     "Outer": "BP_PalletTracker_C",
@@ -542,7 +616,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "SceneComponent'Default__BP_PalletTracker_C:PalletTrackerRootcomponent'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.11"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.13"
       },
       "RelativeLocation": {
         "X": 0.0,
@@ -569,7 +643,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BP_PalletTracker_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.9"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.11"
       },
       "VariableGuid": "42B7D938-4446FDA2-0ED26490-8CE8DFDA",
       "InternalVariableName": "DefaultSceneRoot"
@@ -595,28 +669,37 @@
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_2",
+    "Name": "SCS_Node_3",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class'SkeletalMeshComponent'",
-        "ObjectPath": "/Script/Engine"
+        "ObjectName": "Class'DBDSkeletalMeshComponentBudgeted'",
+        "ObjectPath": "/Script/DBDAnimationBudgetAllocator"
       },
       "ComponentTemplate": {
-        "ObjectName": "SkeletalMeshComponent'BP_PalletTracker_C:SkeletalMesh_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.16"
+        "ObjectName": "DBDSkeletalMeshComponentBudgeted'BP_PalletTracker_C:SkeletalMeshComponent_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.9"
       },
       "ParentComponentOrVariableName": "PalletTrackerRootcomponent",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BP_PalletTracker_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.13"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.15"
         }
       ],
-      "VariableGuid": "5CD849A4-4AAF5270-9CCD2A9D-AB17C429",
-      "InternalVariableName": "SkeletalMesh"
+      "VariableGuid": "CE90FE49-4A8B5409-97C2FAA1-B81A0476",
+      "InternalVariableName": "SkeletalMeshComponent"
+    }
+  },
+  {
+    "Type": "SimpleAnimBudgeterSignificanceStrategy",
+    "Name": "SimpleAnimBudgeterSignificanceStrategy_0",
+    "Outer": "SkeletalMeshComponent_GEN_VARIABLE",
+    "Class": "UScriptClass'SimpleAnimBudgeterSignificanceStrategy'",
+    "Properties": {
+      "_tickEvenIfNotRendered": true
     }
   },
   {
@@ -627,65 +710,23 @@
     "Properties": {
       "RootNodes": [
         {
-          "ObjectName": "SCS_Node'BP_PalletTracker_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.14"
+          "ObjectName": "SCS_Node'BP_PalletTracker_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.16"
         }
       ],
       "AllNodes": [
         {
-          "ObjectName": "SCS_Node'BP_PalletTracker_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.14"
+          "ObjectName": "SCS_Node'BP_PalletTracker_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.16"
         },
         {
           "ObjectName": "SCS_Node'BP_PalletTracker_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.13"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.15"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BP_PalletTracker_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.12"
-      }
-    }
-  },
-  {
-    "Type": "SkeletalMeshComponent",
-    "Name": "SkeletalMesh_GEN_VARIABLE",
-    "Outer": "BP_PalletTracker_C",
-    "Class": "UScriptClass'SkeletalMeshComponent'",
-    "Properties": {
-      "AnimClass": {
-        "ObjectName": "AnimBlueprintGeneratedClass'PullDownsAnimBP_C'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/PullDownsAnimBP.9"
-      },
-      "bUpdateOverlapsOnAnimationFinalize": false,
-      "bEnablePhysicsOnDedicatedServer": false,
-      "bSkipBoundsUpdateWhenInterpolating": true,
-      "ClothingSimulationFactory": {
-        "ObjectName": "Class'ClothingSimulationFactoryNv'",
-        "ObjectPath": "/Script/ClothingSystemRuntimeNv"
-      },
-      "SkeletalMesh": {
-        "ObjectName": "SkeletalMesh'SK_Pallet_01_REF'",
-        "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/Pallet/Mesh/SK_Pallet_01_REF.0"
-      },
-      "VisibilityBasedAnimTickOption": "EVisibilityBasedAnimTickOption::AlwaysTickPose",
-      "bComponentUseFixedSkelBounds": true,
-      "bEnableUpdateRateOptimizations": true,
-      "OverrideMaterials": [
-        {
-          "ObjectName": "Material'M_Indicator_Mesh'",
-          "ObjectPath": "DeadByDaylight/Content/Effects/Materials/M_Indicator_Mesh.0"
-        }
-      ],
-      "DetailLevelBeforeCastShadows": "DM_MAX",
-      "bRenderCustomDepth": true,
-      "BodyInstance": {
-        "MassInKgOverride": 230.18498
-      },
-      "RelativeLocation": {
-        "X": 0.0,
-        "Y": -100.0,
-        "Z": 0.0
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.14"
       }
     }
   }

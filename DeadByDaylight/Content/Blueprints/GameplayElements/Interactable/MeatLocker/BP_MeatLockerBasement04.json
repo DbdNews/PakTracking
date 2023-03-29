@@ -124,11 +124,11 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BP_MeatLockerBasement04_C:SimpleConstructionScript_4'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/BP_MeatLockerBasement04.19"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/BP_MeatLockerBasement04.22"
       },
       "InheritableComponentHandler": {
         "ObjectName": "InheritableComponentHandler'BP_MeatLockerBasement04_C:InheritableComponentHandler'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/BP_MeatLockerBasement04.10"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/BP_MeatLockerBasement04.11"
       }
     },
     "SuperStruct": {
@@ -152,6 +152,17 @@
     "ChildProperties": [
       {
         "Type": "ObjectProperty",
+        "Name": "SK_BasementDeerHangerMesh",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class'DBDSkeletalMeshComponentBudgeted'",
+          "ObjectPath": "/Script/DBDAnimationBudgetAllocator"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
         "Name": "SleepingSkinnedMeshRegisterer",
         "Flags": 2097153,
         "ElementSize": 8,
@@ -169,17 +180,6 @@
         "PropertyFlags": 17180393476,
         "PropertyClass": {
           "ObjectName": "Class'ChildActorComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "SK_BasementDeerHanger_REF",
-        "Flags": 2097153,
-        "ElementSize": 8,
-        "PropertyFlags": 17180393476,
-        "PropertyClass": {
-          "ObjectName": "Class'SkeletalMeshComponent'",
           "ObjectPath": "/Script/Engine"
         }
       }
@@ -222,7 +222,7 @@
       },
       "_eventListener": {
         "ObjectName": "PollableEventListener'Default__BP_MeatLockerBasement04_C:EventListener'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/BP_MeatLockerBasement04.13"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/BP_MeatLockerBasement04.15"
       },
       "_perceptionStimuliComponent": {
         "ObjectName": "AIPerceptionStimuliSourceComponent'Default__BP_MeatLockerBasement04_C:AIPerceptionStimuliSourceComponent'",
@@ -230,7 +230,7 @@
       },
       "_transformOptimizer": {
         "ObjectName": "InteractableTransformOptimizer'Default__BP_MeatLockerBasement04_C:InteractableOptimizer'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/BP_MeatLockerBasement04.11"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/BP_MeatLockerBasement04.12"
       }
     }
   },
@@ -297,6 +297,55 @@
     }
   },
   {
+    "Type": "DBDSkeletalMeshComponentBudgeted",
+    "Name": "SK_BasementDeerHangerMesh_GEN_VARIABLE",
+    "Outer": "BP_MeatLockerBasement04_C",
+    "Class": "UScriptClass'DBDSkeletalMeshComponentBudgeted'",
+    "Properties": {
+      "_significanceStrategy": {
+        "ObjectName": "LinearSignificanceStrategy'BP_MeatLockerBasement04_C:SK_BasementDeerHangerMesh_GEN_VARIABLE.LinearSignificanceStrategy_0'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/BP_MeatLockerBasement04.13"
+      },
+      "_animBudgeterSignificanceStrategy": {
+        "ObjectName": "SimpleAnimBudgeterSignificanceStrategy'BP_MeatLockerBasement04_C:SK_BasementDeerHangerMesh_GEN_VARIABLE.SimpleAnimBudgeterSignificanceStrategy_0'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/BP_MeatLockerBasement04.21"
+      },
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'AB_SmallMeatLocker_C'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/AB_SmallMeatLocker.3"
+      },
+      "bUpdateOverlapsOnAnimationFinalize": false,
+      "bEnablePhysicsOnDedicatedServer": false,
+      "bSkipKinematicUpdateWhenInterpolating": true,
+      "bSkipBoundsUpdateWhenInterpolating": true,
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_BasementDeerHanger_REF'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/MeatHook/Model/SK_BasementDeerHanger_REF.0"
+      },
+      "VisibilityBasedAnimTickOption": "EVisibilityBasedAnimTickOption::OnlyTickMontagesWhenNotRendered",
+      "bComponentUseFixedSkelBounds": true,
+      "bEnableUpdateRateOptimizations": true,
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_DeerHanger02'",
+          "ObjectPath": "DeadByDaylight/Content/Materials/Instances/MI_DeerHanger02.0"
+        }
+      ],
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "bRenderCustomDepth": true,
+      "RelativeLocation": {
+        "X": -1E-06,
+        "Y": 8.0,
+        "Z": 1.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
     "Type": "InheritableComponentHandler",
     "Name": "InheritableComponentHandler",
     "Outer": "BP_MeatLockerBasement04_C",
@@ -354,7 +403,7 @@
           },
           "ComponentTemplate": {
             "ObjectName": "StaticMeshComponent'BP_MeatLockerBasement04_C:StaticMeshD90576114AF337419CBB50A6754BE5C7'",
-            "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/BP_MeatLockerBasement04.22"
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/BP_MeatLockerBasement04.24"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -402,6 +451,34 @@
     "Class": "UScriptClass'InteractableTransformOptimizer'"
   },
   {
+    "Type": "LinearSignificanceStrategy",
+    "Name": "LinearSignificanceStrategy_0",
+    "Outer": "SK_BasementDeerHangerMesh_GEN_VARIABLE",
+    "Class": "UScriptClass'LinearSignificanceStrategy'",
+    "Properties": {
+      "_maxDistance": {
+        "PerDetailModeValue": [
+          {
+            "Ultra": 1600.0
+          },
+          {
+            "High": 1600.0
+          },
+          {
+            "Medium": 1600.0
+          },
+          {
+            "Low": 1600.0
+          },
+          {
+            "Mobile": 1600.0
+          }
+        ]
+      },
+      "_updateEvenIfNotRendered": true
+    }
+  },
+  {
     "Type": "MeatHookEntityVisibilityComponent",
     "Name": "MeatHookEntityVisibilityComponent",
     "Outer": "Default__BP_MeatLockerBasement04_C",
@@ -433,7 +510,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SleepingSkinnedMeshRegisterer'BP_MeatLockerBasement04_C:SleepingSkinnedMeshRegisterer_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/BP_MeatLockerBasement04.21"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/BP_MeatLockerBasement04.23"
       },
       "VariableGuid": "6B146FD3-42F8D7BD-712244B1-ED69DA0D",
       "InternalVariableName": "SleepingSkinnedMeshRegisterer"
@@ -441,22 +518,22 @@
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_18",
+    "Name": "SCS_Node_1",
     "Outer": "SimpleConstructionScript_4",
     "Class": "UScriptClass'SCS_Node'",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class'SkeletalMeshComponent'",
-        "ObjectPath": "/Script/Engine"
+        "ObjectName": "Class'DBDSkeletalMeshComponentBudgeted'",
+        "ObjectPath": "/Script/DBDAnimationBudgetAllocator"
       },
       "ComponentTemplate": {
-        "ObjectName": "SkeletalMeshComponent'BP_MeatLockerBasement04_C:SK_BasementDeerHanger_REF63AF4B7E4A77E38ED4D9A7A673282ECF'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/BP_MeatLockerBasement04.20"
+        "ObjectName": "DBDSkeletalMeshComponentBudgeted'BP_MeatLockerBasement04_C:SK_BasementDeerHangerMesh_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/BP_MeatLockerBasement04.10"
       },
       "ParentComponentOrVariableName": "root",
       "ParentComponentOwnerClassName": "BP_MeatHook_Shared_C",
-      "VariableGuid": "8E6B9B6D-4EC934FB-F303EAA6-D92A045E",
-      "InternalVariableName": "SK_BasementDeerHanger_REF"
+      "VariableGuid": "CCB730A8-4A117683-C71D3E98-5FDB2790",
+      "InternalVariableName": "SK_BasementDeerHangerMesh"
     }
   },
   {
@@ -471,7 +548,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BP_MeatLockerBasement04_C:SceneComponent_18'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/BP_MeatLockerBasement04.14"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/BP_MeatLockerBasement04.16"
       },
       "VariableGuid": "262C38D6-4508221A-424A5D9D-6557C449",
       "InternalVariableName": "DefaultSceneRoot"
@@ -498,6 +575,15 @@
     }
   },
   {
+    "Type": "SimpleAnimBudgeterSignificanceStrategy",
+    "Name": "SimpleAnimBudgeterSignificanceStrategy_0",
+    "Outer": "SK_BasementDeerHangerMesh_GEN_VARIABLE",
+    "Class": "UScriptClass'SimpleAnimBudgeterSignificanceStrategy'",
+    "Properties": {
+      "_tickEvenIfNotRendered": true
+    }
+  },
+  {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_4",
     "Outer": "BP_MeatLockerBasement04_C",
@@ -505,83 +591,35 @@
     "Properties": {
       "RootNodes": [
         {
-          "ObjectName": "SCS_Node'BP_MeatLockerBasement04_C:SimpleConstructionScript_4.SCS_Node_18'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/BP_MeatLockerBasement04.16"
-        },
-        {
           "ObjectName": "SCS_Node'BP_MeatLockerBasement04_C:SimpleConstructionScript_4.SCS_Node_7'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/BP_MeatLockerBasement04.18"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/BP_MeatLockerBasement04.20"
         },
         {
           "ObjectName": "SCS_Node'BP_MeatLockerBasement04_C:SimpleConstructionScript_4.SCS_Node_0'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/BP_MeatLockerBasement04.15"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/BP_MeatLockerBasement04.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_MeatLockerBasement04_C:SimpleConstructionScript_4.SCS_Node_1'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/BP_MeatLockerBasement04.18"
         }
       ],
       "AllNodes": [
         {
-          "ObjectName": "SCS_Node'BP_MeatLockerBasement04_C:SimpleConstructionScript_4.SCS_Node_18'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/BP_MeatLockerBasement04.16"
-        },
-        {
           "ObjectName": "SCS_Node'BP_MeatLockerBasement04_C:SimpleConstructionScript_4.SCS_Node_7'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/BP_MeatLockerBasement04.18"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/BP_MeatLockerBasement04.20"
         },
         {
           "ObjectName": "SCS_Node'BP_MeatLockerBasement04_C:SimpleConstructionScript_4.SCS_Node_0'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/BP_MeatLockerBasement04.15"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/BP_MeatLockerBasement04.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_MeatLockerBasement04_C:SimpleConstructionScript_4.SCS_Node_1'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/BP_MeatLockerBasement04.18"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BP_MeatLockerBasement04_C:SimpleConstructionScript_4.SCS_Node_6'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/BP_MeatLockerBasement04.17"
-      }
-    }
-  },
-  {
-    "Type": "SkeletalMeshComponent",
-    "Name": "SK_BasementDeerHanger_REF63AF4B7E4A77E38ED4D9A7A673282ECF",
-    "Outer": "BP_MeatLockerBasement04_C",
-    "Class": "UScriptClass'SkeletalMeshComponent'",
-    "Properties": {
-      "AnimClass": {
-        "ObjectName": "AnimBlueprintGeneratedClass'AB_SmallMeatLocker_C'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/AB_SmallMeatLocker.3"
-      },
-      "bUpdateOverlapsOnAnimationFinalize": false,
-      "bEnablePhysicsOnDedicatedServer": false,
-      "bSkipKinematicUpdateWhenInterpolating": true,
-      "bSkipBoundsUpdateWhenInterpolating": true,
-      "ClothingSimulationFactory": {
-        "ObjectName": "Class'ClothingSimulationFactoryNv'",
-        "ObjectPath": "/Script/ClothingSystemRuntimeNv"
-      },
-      "SkeletalMesh": {
-        "ObjectName": "SkeletalMesh'SK_BasementDeerHanger_REF'",
-        "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/MeatHook/Model/SK_BasementDeerHanger_REF.0"
-      },
-      "VisibilityBasedAnimTickOption": "EVisibilityBasedAnimTickOption::OnlyTickMontagesWhenNotRendered",
-      "bComponentUseFixedSkelBounds": true,
-      "bEnableUpdateRateOptimizations": true,
-      "OverrideMaterials": [
-        {
-          "ObjectName": "MaterialInstanceConstant'MI_DeerHanger02'",
-          "ObjectPath": "DeadByDaylight/Content/Materials/Instances/MI_DeerHanger02.0"
-        }
-      ],
-      "DetailLevelBeforeCastShadows": "DM_MAX",
-      "bRenderCustomDepth": true,
-      "BodyInstance": {
-        "MassInKgOverride": 28.651613
-      },
-      "RelativeLocation": {
-        "X": -5.892019E-07,
-        "Y": 8.0,
-        "Z": 1.0
-      },
-      "RelativeRotation": {
-        "Pitch": 0.0,
-        "Yaw": -90.0,
-        "Roll": 0.0
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/BP_MeatLockerBasement04.19"
       }
     }
   },
