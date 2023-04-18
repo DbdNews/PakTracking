@@ -211,6 +211,123 @@
     "Name": "AB_Slasher_14_C",
     "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
     "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "Frenzy_Cooldown",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Locomotion",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 24,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 12,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Frenzy",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 25,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 14,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Cooldown",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 26,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": true,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 17,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                23
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
       "TargetSkeleton": {
         "ObjectName": "Skeleton'SlasherMale_REF_Skeleton'",
         "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Models/SlasherMale_REF_Skeleton.444"
@@ -219,8 +336,8 @@
         {
           "AnimGraph": {
             "OrderedSavedPoseNodeIndices": [
-              11,
-              3
+              7,
+              2
             ]
           }
         }
@@ -231,8 +348,23 @@
           "CopyRecords": [
             {
               "CopyIndex": 0,
-              "PostCopyOperation": "EPostCopyOperation::None"
-            },
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_TransitionResult_1"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "AnimBlueprintGeneratedClass'AB_Slasher_14_C'",
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Kenya/Blueprints/AB_Slasher_14.3"
+            }
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
             {
               "CopyIndex": 1,
               "PostCopyOperation": "EPostCopyOperation::None"
@@ -260,6 +392,10 @@
             {
               "CopyIndex": 7,
               "PostCopyOperation": "EPostCopyOperation::None"
+            },
+            {
+              "CopyIndex": 8,
+              "PostCopyOperation": "EPostCopyOperation::None"
             }
           ],
           "Function": null,
@@ -276,10 +412,6 @@
         {
           "BoundFunction": "None",
           "CopyRecords": [
-            {
-              "CopyIndex": 8,
-              "PostCopyOperation": "EPostCopyOperation::None"
-            },
             {
               "CopyIndex": 9,
               "PostCopyOperation": "EPostCopyOperation::None"
@@ -307,6 +439,10 @@
             {
               "CopyIndex": 15,
               "PostCopyOperation": "EPostCopyOperation::None"
+            },
+            {
+              "CopyIndex": 16,
+              "PostCopyOperation": "EPostCopyOperation::None"
             }
           ],
           "Function": null,
@@ -324,7 +460,7 @@
           "BoundFunction": "None",
           "CopyRecords": [
             {
-              "CopyIndex": 16,
+              "CopyIndex": 17,
               "PostCopyOperation": "EPostCopyOperation::None"
             }
           ],
@@ -343,15 +479,15 @@
           "BoundFunction": "None",
           "CopyRecords": [
             {
-              "CopyIndex": 17,
-              "PostCopyOperation": "EPostCopyOperation::None"
-            },
-            {
               "CopyIndex": 18,
               "PostCopyOperation": "EPostCopyOperation::None"
             },
             {
               "CopyIndex": 19,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            },
+            {
+              "CopyIndex": 20,
               "PostCopyOperation": "EPostCopyOperation::None"
             }
           ],
@@ -370,7 +506,7 @@
           "BoundFunction": "None",
           "CopyRecords": [
             {
-              "CopyIndex": 20,
+              "CopyIndex": 21,
               "PostCopyOperation": "EPostCopyOperation::None"
             }
           ],
@@ -389,7 +525,7 @@
           "BoundFunction": "None",
           "CopyRecords": [
             {
-              "CopyIndex": 21,
+              "CopyIndex": 22,
               "PostCopyOperation": "EPostCopyOperation::None"
             }
           ],
@@ -408,11 +544,11 @@
           "BoundFunction": "None",
           "CopyRecords": [
             {
-              "CopyIndex": 22,
+              "CopyIndex": 23,
               "PostCopyOperation": "EPostCopyOperation::None"
             },
             {
-              "CopyIndex": 23,
+              "CopyIndex": 24,
               "PostCopyOperation": "EPostCopyOperation::None"
             }
           ],
@@ -431,15 +567,15 @@
           "BoundFunction": "None",
           "CopyRecords": [
             {
-              "CopyIndex": 24,
-              "PostCopyOperation": "EPostCopyOperation::None"
-            },
-            {
               "CopyIndex": 25,
               "PostCopyOperation": "EPostCopyOperation::None"
             },
             {
               "CopyIndex": 26,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            },
+            {
+              "CopyIndex": 27,
               "PostCopyOperation": "EPostCopyOperation::None"
             }
           ],
@@ -453,10 +589,99 @@
               "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Kenya/Blueprints/AB_Slasher_14.3"
             }
           }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "CopyIndex": 28,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_BlendListByBool_2"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "AnimBlueprintGeneratedClass'AB_Slasher_14_C'",
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Kenya/Blueprints/AB_Slasher_14.3"
+            }
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "CopyIndex": 29,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_TransitionResult"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "AnimBlueprintGeneratedClass'AB_Slasher_14_C'",
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Kenya/Blueprints/AB_Slasher_14.3"
+            }
+          }
         }
       ],
       "PropertyAccessLibrary": {
         "PathSegments": [
+          {
+            "Name": "_isFrenzy",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "_isFrenzy"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'LegionAnimInstance'",
+                "ObjectPath": "/Script/TheLegion"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_TransitionResult_1",
+            "Struct": {
+              "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+              "ObjectPath": "/Script/Engine"
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_TransitionResult_1"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'AB_Slasher_14_C'",
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Kenya/Blueprints/AB_Slasher_14.3"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bCanEnterTransition",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bCanEnterTransition"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                "ObjectPath": "/Script/Engine"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
           {
             "Name": "_isCarrying",
             "Struct": null,
@@ -1358,148 +1583,113 @@
             "Function": null,
             "ArrayIndex": -1,
             "Flags": 2
+          },
+          {
+            "Name": "_firstPersonView",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "_firstPersonView"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'BaseKillerAnimInstance'",
+                "ObjectPath": "/Script/DBDAnimation"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_BlendListByBool_2",
+            "Struct": {
+              "ObjectName": "ScriptStruct'AnimNode_BlendListByBool'",
+              "ObjectPath": "/Script/AnimGraphRuntime"
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_BlendListByBool_2"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'AB_Slasher_14_C'",
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Kenya/Blueprints/AB_Slasher_14.3"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bActiveValue",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bActiveValue"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "ScriptStruct'AnimNode_BlendListByBool'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "_isFrenzy",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "_isFrenzy"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'LegionAnimInstance'",
+                "ObjectPath": "/Script/TheLegion"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_TransitionResult",
+            "Struct": {
+              "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+              "ObjectPath": "/Script/Engine"
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_TransitionResult"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'AB_Slasher_14_C'",
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Kenya/Blueprints/AB_Slasher_14.3"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bCanEnterTransition",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bCanEnterTransition"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                "ObjectPath": "/Script/Engine"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
           }
         ],
         "SrcPaths": [
           {
             "PathSegmentStartIndex": 0,
-            "PathSegmentCount": 1,
-            "bHasEvents": false
-          },
-          {
-            "PathSegmentStartIndex": 2,
-            "PathSegmentCount": 1,
-            "bHasEvents": false
-          },
-          {
-            "PathSegmentStartIndex": 4,
-            "PathSegmentCount": 1,
-            "bHasEvents": false
-          },
-          {
-            "PathSegmentStartIndex": 6,
-            "PathSegmentCount": 1,
-            "bHasEvents": false
-          },
-          {
-            "PathSegmentStartIndex": 8,
-            "PathSegmentCount": 1,
-            "bHasEvents": false
-          },
-          {
-            "PathSegmentStartIndex": 10,
-            "PathSegmentCount": 1,
-            "bHasEvents": false
-          },
-          {
-            "PathSegmentStartIndex": 12,
-            "PathSegmentCount": 1,
-            "bHasEvents": false
-          },
-          {
-            "PathSegmentStartIndex": 14,
-            "PathSegmentCount": 1,
-            "bHasEvents": false
-          },
-          {
-            "PathSegmentStartIndex": 16,
-            "PathSegmentCount": 1,
-            "bHasEvents": false
-          },
-          {
-            "PathSegmentStartIndex": 18,
-            "PathSegmentCount": 1,
-            "bHasEvents": false
-          },
-          {
-            "PathSegmentStartIndex": 20,
-            "PathSegmentCount": 1,
-            "bHasEvents": false
-          },
-          {
-            "PathSegmentStartIndex": 22,
-            "PathSegmentCount": 1,
-            "bHasEvents": false
-          },
-          {
-            "PathSegmentStartIndex": 24,
-            "PathSegmentCount": 1,
-            "bHasEvents": false
-          },
-          {
-            "PathSegmentStartIndex": 26,
-            "PathSegmentCount": 1,
-            "bHasEvents": false
-          },
-          {
-            "PathSegmentStartIndex": 28,
-            "PathSegmentCount": 1,
-            "bHasEvents": false
-          },
-          {
-            "PathSegmentStartIndex": 30,
-            "PathSegmentCount": 1,
-            "bHasEvents": false
-          },
-          {
-            "PathSegmentStartIndex": 32,
-            "PathSegmentCount": 1,
-            "bHasEvents": false
-          },
-          {
-            "PathSegmentStartIndex": 35,
-            "PathSegmentCount": 1,
-            "bHasEvents": false
-          },
-          {
-            "PathSegmentStartIndex": 37,
-            "PathSegmentCount": 1,
-            "bHasEvents": false
-          },
-          {
-            "PathSegmentStartIndex": 39,
-            "PathSegmentCount": 1,
-            "bHasEvents": false
-          },
-          {
-            "PathSegmentStartIndex": 41,
-            "PathSegmentCount": 1,
-            "bHasEvents": false
-          },
-          {
-            "PathSegmentStartIndex": 44,
-            "PathSegmentCount": 1,
-            "bHasEvents": false
-          },
-          {
-            "PathSegmentStartIndex": 46,
-            "PathSegmentCount": 1,
-            "bHasEvents": false
-          },
-          {
-            "PathSegmentStartIndex": 48,
-            "PathSegmentCount": 1,
-            "bHasEvents": false
-          },
-          {
-            "PathSegmentStartIndex": 50,
-            "PathSegmentCount": 1,
-            "bHasEvents": false
-          },
-          {
-            "PathSegmentStartIndex": 52,
-            "PathSegmentCount": 1,
-            "bHasEvents": false
-          },
-          {
-            "PathSegmentStartIndex": 54,
-            "PathSegmentCount": 1,
-            "bHasEvents": false
-          }
-        ],
-        "DestPaths": [
-          {
-            "PathSegmentStartIndex": 1,
             "PathSegmentCount": 1,
             "bHasEvents": false
           },
@@ -1580,11 +1770,11 @@
           },
           {
             "PathSegmentStartIndex": 33,
-            "PathSegmentCount": 2,
+            "PathSegmentCount": 1,
             "bHasEvents": false
           },
           {
-            "PathSegmentStartIndex": 36,
+            "PathSegmentStartIndex": 35,
             "PathSegmentCount": 1,
             "bHasEvents": false
           },
@@ -1600,11 +1790,11 @@
           },
           {
             "PathSegmentStartIndex": 42,
-            "PathSegmentCount": 2,
+            "PathSegmentCount": 1,
             "bHasEvents": false
           },
           {
-            "PathSegmentStartIndex": 45,
+            "PathSegmentStartIndex": 44,
             "PathSegmentCount": 1,
             "bHasEvents": false
           },
@@ -1632,6 +1822,173 @@
             "PathSegmentStartIndex": 55,
             "PathSegmentCount": 1,
             "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 57,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 59,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 62,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          }
+        ],
+        "DestPaths": [
+          {
+            "PathSegmentStartIndex": 1,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 4,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 6,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 8,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 10,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 12,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 14,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 16,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 18,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 20,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 22,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 24,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 26,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 28,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 30,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 32,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 34,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 36,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 39,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 41,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 43,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 45,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 48,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 50,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 52,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 54,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 56,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 58,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 60,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 63,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
           }
         ],
         "CopyBatches": {
@@ -1646,13 +2003,13 @@
               "AccessIndex": 1,
               "DestAccessStartIndex": 1,
               "DestAccessEndIndex": 2,
-              "Type": "EPropertyAccessCopyType::Plain"
+              "Type": "EPropertyAccessCopyType::Bool"
             },
             {
               "AccessIndex": 2,
               "DestAccessStartIndex": 2,
               "DestAccessEndIndex": 3,
-              "Type": "EPropertyAccessCopyType::Bool"
+              "Type": "EPropertyAccessCopyType::Plain"
             },
             {
               "AccessIndex": 3,
@@ -1670,7 +2027,7 @@
               "AccessIndex": 5,
               "DestAccessStartIndex": 5,
               "DestAccessEndIndex": 6,
-              "Type": "EPropertyAccessCopyType::Plain"
+              "Type": "EPropertyAccessCopyType::Bool"
             },
             {
               "AccessIndex": 6,
@@ -1682,7 +2039,7 @@
               "AccessIndex": 7,
               "DestAccessStartIndex": 7,
               "DestAccessEndIndex": 8,
-              "Type": "EPropertyAccessCopyType::Bool"
+              "Type": "EPropertyAccessCopyType::Plain"
             },
             {
               "AccessIndex": 8,
@@ -1694,13 +2051,13 @@
               "AccessIndex": 9,
               "DestAccessStartIndex": 9,
               "DestAccessEndIndex": 10,
-              "Type": "EPropertyAccessCopyType::Plain"
+              "Type": "EPropertyAccessCopyType::Bool"
             },
             {
               "AccessIndex": 10,
               "DestAccessStartIndex": 10,
               "DestAccessEndIndex": 11,
-              "Type": "EPropertyAccessCopyType::Bool"
+              "Type": "EPropertyAccessCopyType::Plain"
             },
             {
               "AccessIndex": 11,
@@ -1718,7 +2075,7 @@
               "AccessIndex": 13,
               "DestAccessStartIndex": 13,
               "DestAccessEndIndex": 14,
-              "Type": "EPropertyAccessCopyType::Plain"
+              "Type": "EPropertyAccessCopyType::Bool"
             },
             {
               "AccessIndex": 14,
@@ -1730,7 +2087,7 @@
               "AccessIndex": 15,
               "DestAccessStartIndex": 15,
               "DestAccessEndIndex": 16,
-              "Type": "EPropertyAccessCopyType::Bool"
+              "Type": "EPropertyAccessCopyType::Plain"
             },
             {
               "AccessIndex": 16,
@@ -1754,13 +2111,13 @@
               "AccessIndex": 19,
               "DestAccessStartIndex": 19,
               "DestAccessEndIndex": 20,
-              "Type": "EPropertyAccessCopyType::Plain"
+              "Type": "EPropertyAccessCopyType::Bool"
             },
             {
               "AccessIndex": 20,
               "DestAccessStartIndex": 20,
               "DestAccessEndIndex": 21,
-              "Type": "EPropertyAccessCopyType::Bool"
+              "Type": "EPropertyAccessCopyType::Plain"
             },
             {
               "AccessIndex": 21,
@@ -1772,13 +2129,13 @@
               "AccessIndex": 22,
               "DestAccessStartIndex": 22,
               "DestAccessEndIndex": 23,
-              "Type": "EPropertyAccessCopyType::Plain"
+              "Type": "EPropertyAccessCopyType::Bool"
             },
             {
               "AccessIndex": 23,
               "DestAccessStartIndex": 23,
               "DestAccessEndIndex": 24,
-              "Type": "EPropertyAccessCopyType::Bool"
+              "Type": "EPropertyAccessCopyType::Plain"
             },
             {
               "AccessIndex": 24,
@@ -1796,7 +2153,25 @@
               "AccessIndex": 26,
               "DestAccessStartIndex": 26,
               "DestAccessEndIndex": 27,
+              "Type": "EPropertyAccessCopyType::Bool"
+            },
+            {
+              "AccessIndex": 27,
+              "DestAccessStartIndex": 27,
+              "DestAccessEndIndex": 28,
               "Type": "EPropertyAccessCopyType::Plain"
+            },
+            {
+              "AccessIndex": 28,
+              "DestAccessStartIndex": 28,
+              "DestAccessEndIndex": 29,
+              "Type": "EPropertyAccessCopyType::Bool"
+            },
+            {
+              "AccessIndex": 29,
+              "DestAccessStartIndex": 29,
+              "DestAccessEndIndex": 30,
+              "Type": "EPropertyAccessCopyType::Bool"
             }
           ]
         }
@@ -1868,7 +2243,67 @@
       },
       {
         "Type": "StructProperty",
-        "Name": "AnimGraphNode_UseCachedPose_3",
+        "Name": "AnimGraphNode_TransitionResult_2",
+        "Flags": 2097153,
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_1",
+        "Flags": 2097153,
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult",
+        "Flags": 2097153,
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer",
+        "Flags": 2097153,
+        "ElementSize": 136,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_BlendListByBool_2",
+        "Flags": 2097153,
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_BlendListByBool'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_LayeredBoneBlend",
+        "Flags": 2097153,
+        "ElementSize": 200,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_UseCachedPose_5",
         "Flags": 2097153,
         "ElementSize": 56,
         "Struct": {
@@ -1878,7 +2313,37 @@
       },
       {
         "Type": "StructProperty",
-        "Name": "AnimGraphNode_UseCachedPose_2",
+        "Name": "AnimGraphNode_Slot_2",
+        "Flags": 2097153,
+        "ElementSize": 88,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_Slot'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_UseCachedPose_4",
+        "Flags": 2097153,
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_UseCachedPose'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_2",
+        "Flags": 2097153,
+        "ElementSize": 64,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_UseCachedPose_3",
         "Flags": 2097153,
         "ElementSize": 56,
         "Struct": {
@@ -1898,11 +2363,41 @@
       },
       {
         "Type": "StructProperty",
-        "Name": "AnimGraphNode_SaveCachedPose_1",
+        "Name": "AnimGraphNode_StateResult_1",
         "Flags": 2097153,
-        "ElementSize": 352,
+        "ElementSize": 64,
         "Struct": {
-          "ObjectName": "ScriptStruct'AnimNode_SaveCachedPose'",
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_UseCachedPose_2",
+        "Flags": 2097153,
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_UseCachedPose'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult",
+        "Flags": 2097153,
+        "ElementSize": 64,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateMachine",
+        "Flags": 2097153,
+        "ElementSize": 176,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -1918,11 +2413,31 @@
       },
       {
         "Type": "StructProperty",
+        "Name": "AnimGraphNode_Slot",
+        "Flags": 2097153,
+        "ElementSize": 88,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_Slot'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
         "Name": "AnimGraphNode_UseCachedPose",
         "Flags": 2097153,
         "ElementSize": 56,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_UseCachedPose'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SaveCachedPose_1",
+        "Flags": 2097153,
+        "ElementSize": 352,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SaveCachedPose'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -1958,16 +2473,6 @@
       },
       {
         "Type": "StructProperty",
-        "Name": "AnimGraphNode_LayeredBoneBlend",
-        "Flags": 2097153,
-        "ElementSize": 200,
-        "Struct": {
-          "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
-          "ObjectPath": "/Script/AnimGraphRuntime"
-        }
-      },
-      {
-        "Type": "StructProperty",
         "Name": "AnimGraphNode_BlendListByBool",
         "Flags": 2097153,
         "ElementSize": 160,
@@ -1994,16 +2499,6 @@
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_LinkedAnimGraph'",
           "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "AnimGraphNode_Slot",
-        "Flags": 2097153,
-        "ElementSize": 88,
-        "Struct": {
-          "ObjectName": "ScriptStruct'AnimNode_Slot'",
-          "ObjectPath": "/Script/AnimGraphRuntime"
         }
       },
       {
@@ -2354,19 +2849,6 @@
         }
       },
       {
-        "Type": "BoolProperty",
-        "Name": "_IsVaultingToFall",
-        "Flags": 2097153,
-        "ElementSize": 1,
-        "PropertyFlags": 65541,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
         "Type": "ObjectProperty",
         "Name": "Cooldown",
         "Flags": 2097153,
@@ -2375,35 +2857,6 @@
         "PropertyClass": {
           "ObjectName": "Class'AnimSequence'",
           "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "_CooldownFPV",
-        "Flags": 2097153,
-        "ElementSize": 24,
-        "PropertyFlags": 65541,
-        "Struct": {
-          "ObjectName": "ScriptStruct'AnimSequenceSelector'",
-          "ObjectPath": "/Script/AnimationUtilities"
-        }
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "CooldownPlayrate",
-        "Flags": 2097153,
-        "ElementSize": 4,
-        "PropertyFlags": 65541
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "_Cooldown",
-        "Flags": 2097153,
-        "ElementSize": 24,
-        "PropertyFlags": 65541,
-        "Struct": {
-          "ObjectName": "ScriptStruct'AnimSequenceSelector'",
-          "ObjectPath": "/Script/AnimationUtilities"
         }
       },
       {
@@ -2485,7 +2938,7 @@
       "UberGraphFrame": {},
       "AnimGraphNode_Root": {
         "Result": {
-          "LinkID": 5
+          "LinkID": 20
         },
         "Name": "AnimGraph",
         "Group": "None"
@@ -2493,7 +2946,7 @@
       "AnimGraphNode_LinkedAnimGraph_3": {
         "InputPoses": [
           {
-            "LinkID": 3
+            "LinkID": 19
           }
         ],
         "InputPoseNames": [
@@ -2521,7 +2974,7 @@
       "AnimGraphNode_LinkedAnimGraph_2": {
         "InputPoses": [
           {
-            "LinkID": 10
+            "LinkID": 24
           }
         ],
         "InputPoseNames": [
@@ -2546,75 +2999,58 @@
         ],
         "TargetInstance": null
       },
-      "AnimGraphNode_UseCachedPose_3": {
-        "LinkToCachingNode": {
-          "LinkID": 6
-        },
-        "CachePoseName": "Power"
+      "AnimGraphNode_TransitionResult_2": {
+        "bCanEnterTransition": false
       },
-      "AnimGraphNode_UseCachedPose_2": {
-        "LinkToCachingNode": {
-          "LinkID": 6
-        },
-        "CachePoseName": "Power"
+      "AnimGraphNode_TransitionResult_1": {
+        "bCanEnterTransition": false
       },
-      "AnimGraphNode_Slot_1": {
-        "Source": {
-          "LinkID": 9
-        },
-        "SlotName": "MontageFullOverride",
-        "bAlwaysUpdateSourcePose": false
+      "AnimGraphNode_TransitionResult": {
+        "bCanEnterTransition": false
       },
-      "AnimGraphNode_SaveCachedPose_1": {
-        "Pose": {
-          "LinkID": 12
+      "AnimGraphNode_SequencePlayer": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'KK_Idle_Power_CoolDown_FPV'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Kenya/AnimSequences/Locomotion/KK_Idle_Power_CoolDown_FPV.1"
         },
-        "CachePoseName": "Power"
-      },
-      "AnimGraphNode_UseCachedPose_1": {
-        "LinkToCachingNode": {
-          "LinkID": 14
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
         },
-        "CachePoseName": "LegionLocomotion"
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupName": "None",
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "GroupScope": "EAnimSyncGroupScope::Local",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
       },
-      "AnimGraphNode_UseCachedPose": {
-        "LinkToCachingNode": {
-          "LinkID": 14
-        },
-        "CachePoseName": "LegionLocomotion"
-      },
-      "AnimGraphNode_SubInstance_1": {
-        "InputPoses": [
-          {
-            "LinkID": 2
-          }
-        ],
-        "InputPoseNames": [
-          "InPose"
-        ],
-        "InstanceClass": {
-          "ObjectName": "AnimBlueprintGeneratedClass'AB_Slasher_SubGraph_FPVIK_00_C'",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Anim_SubGraph/AB_Slasher_SubGraph_FPVIK_00.2"
-        },
-        "Tag": "None",
-        "bReceiveNotifiesFromLinkedInstances": false,
-        "bPropagateNotifiesToLinkedInstances": false,
-        "SourcePropertyNames": [
-          "__CustomProperty__FirstPersonView_084A332A446E6CBE13A2678FF29FE335"
-        ],
-        "DestPropertyNames": [
-          "_FirstPersonView"
-        ],
-        "TargetInstance": null
-      },
-      "AnimGraphNode_BlendListByBool_1": {
+      "AnimGraphNode_BlendListByBool_2": {
         "bActiveValue": false,
         "BlendPose": [
           {
-            "LinkID": 11
+            "LinkID": 6
           },
           {
-            "LinkID": 1
+            "LinkID": 8
           }
         ],
         "BlendTime": [
@@ -2627,41 +3063,13 @@
         "CustomBlendCurve": null,
         "BlendProfile": null
       },
-      "AnimGraphNode_SubInstance": {
-        "InputPoses": [
-          {
-            "LinkID": 4
-          }
-        ],
-        "InputPoseNames": [
-          "InPose"
-        ],
-        "InstanceClass": {
-          "ObjectName": "AnimBlueprintGeneratedClass'AB_Slasher_SubGraph_BaseAttack_00_C'",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Anim_SubGraph/AB_Slasher_SubGraph_BaseAttack_00.24"
-        },
-        "Tag": "KK_FrenzyAttack",
-        "bReceiveNotifiesFromLinkedInstances": false,
-        "bPropagateNotifiesToLinkedInstances": false,
-        "SourcePropertyNames": [
-          "__CustomProperty__isIdle_DBAF8A4644AB2C8216E8EA9CDF04D420",
-          "__CustomProperty__isAttack_DBAF8A4644AB2C8216E8EA9CDF04D420",
-          "__CustomProperty__direction_DBAF8A4644AB2C8216E8EA9CDF04D420"
-        ],
-        "DestPropertyNames": [
-          "_isIdle",
-          "_isAttack",
-          "_direction"
-        ],
-        "TargetInstance": null
-      },
       "AnimGraphNode_LayeredBoneBlend": {
         "BasePose": {
-          "LinkID": 7
+          "LinkID": 11
         },
         "BlendPoses": [
           {
-            "LinkID": 16
+            "LinkID": 10
           }
         ],
         "LayerSetup": [
@@ -5835,14 +6243,176 @@
         "SkeletonGuid": "86D5005B-43A898D2-C21BD69E-C6FFC84C",
         "VirtualBoneGuid": "995D83FA-4A9560E5-229D1FAA-D164AD84"
       },
+      "AnimGraphNode_UseCachedPose_5": {
+        "LinkToCachingNode": {
+          "LinkID": 27
+        },
+        "CachePoseName": "LegionLocomotion"
+      },
+      "AnimGraphNode_Slot_2": {
+        "Source": {
+          "LinkID": 9
+        },
+        "SlotName": "Power",
+        "bAlwaysUpdateSourcePose": false
+      },
+      "AnimGraphNode_UseCachedPose_4": {
+        "LinkToCachingNode": {
+          "LinkID": 27
+        },
+        "CachePoseName": "LegionLocomotion"
+      },
+      "AnimGraphNode_StateResult_2": {
+        "Result": {
+          "LinkID": 7
+        },
+        "Name": "Cooldown",
+        "Group": "None"
+      },
+      "AnimGraphNode_UseCachedPose_3": {
+        "LinkToCachingNode": {
+          "LinkID": 27
+        },
+        "CachePoseName": "LegionLocomotion"
+      },
+      "AnimGraphNode_Slot_1": {
+        "Source": {
+          "LinkID": 13
+        },
+        "SlotName": "Power",
+        "bAlwaysUpdateSourcePose": false
+      },
+      "AnimGraphNode_StateResult_1": {
+        "Result": {
+          "LinkID": 14
+        },
+        "Name": "Frenzy",
+        "Group": "None"
+      },
+      "AnimGraphNode_UseCachedPose_2": {
+        "LinkToCachingNode": {
+          "LinkID": 27
+        },
+        "CachePoseName": "LegionLocomotion"
+      },
+      "AnimGraphNode_StateResult": {
+        "Result": {
+          "LinkID": 16
+        },
+        "Name": "Locomotion",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_UseCachedPose_1": {
+        "LinkToCachingNode": {
+          "LinkID": 22
+        },
+        "CachePoseName": "Power"
+      },
+      "AnimGraphNode_Slot": {
+        "Source": {
+          "LinkID": 23
+        },
+        "SlotName": "MontageFullOverride",
+        "bAlwaysUpdateSourcePose": false
+      },
+      "AnimGraphNode_UseCachedPose": {
+        "LinkToCachingNode": {
+          "LinkID": 22
+        },
+        "CachePoseName": "Power"
+      },
+      "AnimGraphNode_SaveCachedPose_1": {
+        "Pose": {
+          "LinkID": 18
+        },
+        "CachePoseName": "Power"
+      },
+      "AnimGraphNode_SubInstance_1": {
+        "InputPoses": [
+          {
+            "LinkID": 2
+          }
+        ],
+        "InputPoseNames": [
+          "InPose"
+        ],
+        "InstanceClass": {
+          "ObjectName": "AnimBlueprintGeneratedClass'AB_Slasher_SubGraph_FPVIK_00_C'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Anim_SubGraph/AB_Slasher_SubGraph_FPVIK_00.2"
+        },
+        "Tag": "None",
+        "bReceiveNotifiesFromLinkedInstances": false,
+        "bPropagateNotifiesToLinkedInstances": false,
+        "SourcePropertyNames": [
+          "__CustomProperty__FirstPersonView_084A332A446E6CBE13A2678FF29FE335"
+        ],
+        "DestPropertyNames": [
+          "_FirstPersonView"
+        ],
+        "TargetInstance": null
+      },
+      "AnimGraphNode_BlendListByBool_1": {
+        "bActiveValue": false,
+        "BlendPose": [
+          {
+            "LinkID": 25
+          },
+          {
+            "LinkID": 1
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.1
+        ],
+        "TransitionType": "EBlendListTransitionType::StandardBlend",
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      },
+      "AnimGraphNode_SubInstance": {
+        "InputPoses": [
+          {
+            "LinkID": 21
+          }
+        ],
+        "InputPoseNames": [
+          "InPose"
+        ],
+        "InstanceClass": {
+          "ObjectName": "AnimBlueprintGeneratedClass'AB_Slasher_SubGraph_BaseAttack_00_C'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Anim_SubGraph/AB_Slasher_SubGraph_BaseAttack_00.24"
+        },
+        "Tag": "KK_FrenzyAttack",
+        "bReceiveNotifiesFromLinkedInstances": false,
+        "bPropagateNotifiesToLinkedInstances": false,
+        "SourcePropertyNames": [
+          "__CustomProperty__isIdle_DBAF8A4644AB2C8216E8EA9CDF04D420",
+          "__CustomProperty__isAttack_DBAF8A4644AB2C8216E8EA9CDF04D420",
+          "__CustomProperty__direction_DBAF8A4644AB2C8216E8EA9CDF04D420"
+        ],
+        "DestPropertyNames": [
+          "_isIdle",
+          "_isAttack",
+          "_direction"
+        ],
+        "TargetInstance": null
+      },
       "AnimGraphNode_BlendListByBool": {
         "bActiveValue": false,
         "BlendPose": [
           {
-            "LinkID": 17
+            "LinkID": 29
           },
           {
-            "LinkID": 15
+            "LinkID": 28
           }
         ],
         "BlendTime": [
@@ -5857,7 +6427,7 @@
       },
       "AnimGraphNode_SaveCachedPose": {
         "Pose": {
-          "LinkID": 13
+          "LinkID": 26
         },
         "CachePoseName": "LegionLocomotion"
       },
@@ -5894,13 +6464,6 @@
           "_firstPersonView"
         ],
         "TargetInstance": null
-      },
-      "AnimGraphNode_Slot": {
-        "Source": {
-          "LinkID": 8
-        },
-        "SlotName": "Power",
-        "bAlwaysUpdateSourcePose": false
       },
       "AnimGraphNode_LinkedAnimGraph": {
         "InputPoses": [],
@@ -6232,14 +6795,6 @@
         "TurnRightSequence_9_31F0358C4D2070DFC9142F820362D54F": null,
         "CarryTurnLeftSequence_11_70DF6335436CE446A4DE3F8C8BB1C1F1": null,
         "CarryTurnRightSequence_14_C3347F184D63EDAEB91FDDBF844D04AD": null
-      },
-      "_CooldownFPV": {
-        "_selected": null,
-        "_taggedSequences": []
-      },
-      "_Cooldown": {
-        "_selected": null,
-        "_taggedSequences": []
       },
       "FrenzyAttackAnimSet": {
         "Attack_In_2_F1088CF94CB5CD5805E3C5A5297C24E8": {

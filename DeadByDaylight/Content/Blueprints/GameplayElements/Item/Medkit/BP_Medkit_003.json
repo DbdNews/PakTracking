@@ -292,7 +292,7 @@
             "Type": {
               "TagName": "GameplayModifierType.ActionSpeed"
             },
-            "ModifierValue": 0.3
+            "ModifierValue": 0.45
           }
         ]
       }
@@ -303,7 +303,31 @@
     "Name": "ItemModifier2",
     "Outer": "Default__BP_Medkit_003_C",
     "Template": "ItemModifier2",
-    "Class": "UScriptClass'ItemModifier'"
+    "Class": "UScriptClass'ItemModifier'",
+    "Properties": {
+      "ModifierData": {
+        "Conditions": [
+          {
+            "ObjectName": "BlueprintGeneratedClass'PlayerIsHealingSelfWithMedkit_C'",
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/Perks/PerkConditions/PlayerIsHealingSelfWithMedkit.0"
+          }
+        ],
+        "Modifiers": [
+          {
+            "Type": {
+              "TagName": "GameplayModifierType.ActionSpeed"
+            },
+            "ModifierValue": -0.3333
+          },
+          {
+            "Type": {
+              "TagName": "GameplayModifierType.ModifyItemEfficiency"
+            },
+            "ModifierValue": -0.3333
+          }
+        ]
+      }
+    }
   },
   {
     "Type": "MaterialHelper",

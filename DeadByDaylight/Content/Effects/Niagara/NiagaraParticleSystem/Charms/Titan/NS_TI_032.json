@@ -1,0 +1,6132 @@
+[
+  {
+    "Type": "NiagaraEmitter",
+    "Name": "Shields_0",
+    "Outer": "NS_TI_032",
+    "Class": "UScriptClass'NiagaraEmitter'",
+    "Properties": {
+      "bLocalSpace": true,
+      "UpdateScriptProps": {
+        "Script": {
+          "ObjectName": "NiagaraScript'NS_TI_032:Shields_0.UpdateScript'",
+          "ObjectPath": "DeadByDaylight/Content/Effects/Niagara/NiagaraParticleSystem/Charms/Titan/NS_TI_032.3"
+        }
+      },
+      "SpawnScriptProps": {
+        "Script": {
+          "ObjectName": "NiagaraScript'NS_TI_032:Shields_0.SpawnScript'",
+          "ObjectPath": "DeadByDaylight/Content/Effects/Niagara/NiagaraParticleSystem/Charms/Titan/NS_TI_032.2"
+        }
+      },
+      "Platforms": {
+        "QualityLevelMask": 31
+      },
+      "UniqueEmitterName": "Shields",
+      "RendererProperties": [
+        {
+          "ObjectName": "NiagaraMeshRendererProperties'NS_TI_032:Shields_0.NiagaraMeshRendererProperties_0'",
+          "ObjectPath": "DeadByDaylight/Content/Effects/Niagara/NiagaraParticleSystem/Charms/Titan/NS_TI_032.1"
+        }
+      ],
+      "GPUComputeScript": null
+    }
+  },
+  {
+    "Type": "NiagaraMeshRendererProperties",
+    "Name": "NiagaraMeshRendererProperties_0",
+    "Outer": "Shields_0",
+    "Class": "UScriptClass'NiagaraMeshRendererProperties'",
+    "Properties": {
+      "Meshes": [
+        {
+          "Mesh": {
+            "ObjectName": "StaticMesh'SM_UV_Hemisphere'",
+            "ObjectPath": "DeadByDaylight/Content/Effects/Mesh/BasicShape/SM_UV_Hemisphere.2"
+          },
+          "Scale": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          },
+          "PivotOffset": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "PivotOffsetSpace": "ENiagaraMeshPivotOffsetSpace::Mesh"
+        }
+      ],
+      "bOverrideMaterials": true,
+      "OverrideMaterials": [
+        {
+          "ExplicitMat": {
+            "ObjectName": "Material'M_TI_032_EnergyShield'",
+            "ObjectPath": "DeadByDaylight/Content/Effects/Materials/Charms/Titan/M_TI_032_EnergyShield.0"
+          },
+          "UserParamBinding": {
+            "Parameter": {
+              "VarData": "",
+              "Name": "None",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'MaterialInterface'",
+                  "ObjectPath": "/Script/Engine"
+                },
+                "UnderlyingType": 1
+              }
+            }
+          }
+        }
+      ],
+      "PositionBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "ColorBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "MeshOrientationBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "ScaleBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "MaterialRandomBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "CustomSortingBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "NormalizedAgeBinding": {
+        "bBindingExistsOnSource": true
+      }
+    }
+  },
+  {
+    "Type": "NiagaraScript",
+    "Name": "SpawnScript",
+    "Outer": "Shields_0",
+    "Class": "UScriptClass'NiagaraScript'",
+    "Properties": {
+      "Usage": "ENiagaraScriptUsage::ParticleSpawnScript",
+      "RapidIterationParameters": {},
+      "ScriptExecutionParamStore": {
+        "ParameterSize": 8,
+        "PaddedParameterSize": 16,
+        "SortedParameterOffsets": [
+          {
+            "Offset": 4,
+            "Name": "Shields.DistanceTraveled",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "Offset": 0,
+            "Name": "Shields.SpawnGroup",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraInt32'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CachedScriptVMId": {
+        "CompilerVersionID": "375F6E63-7F2144F2-AD4EC387-0AB6472D",
+        "ScriptUsageType": "ENiagaraScriptUsage::ParticleSpawnScript",
+        "bUsesRapidIterationParams": false,
+        "BaseScriptCompileHash": {
+          "DataHash": [
+            24,
+            139,
+            134,
+            91,
+            138,
+            111,
+            232,
+            199,
+            23,
+            117,
+            9,
+            180,
+            212,
+            223,
+            128,
+            1,
+            51,
+            166,
+            27,
+            171
+          ]
+        }
+      },
+      "CachedScriptVM": {
+        "ByteCode": [
+          91,
+          104,
+          2,
+          88,
+          0,
+          0,
+          44,
+          1,
+          68,
+          2,
+          0,
+          0,
+          1,
+          0,
+          91,
+          108,
+          2,
+          91,
+          112,
+          2,
+          59,
+          3,
+          112,
+          2,
+          96,
+          2,
+          0,
+          0,
+          43,
+          6,
+          0,
+          0,
+          116,
+          2,
+          120,
+          2,
+          2,
+          0,
+          43,
+          6,
+          0,
+          0,
+          120,
+          2,
+          120,
+          2,
+          3,
+          0,
+          43,
+          6,
+          0,
+          0,
+          120,
+          2,
+          120,
+          2,
+          4,
+          0,
+          3,
+          1,
+          124,
+          2,
+          2,
+          0,
+          0,
+          0,
+          3,
+          1,
+          128,
+          2,
+          3,
+          0,
+          2,
+          0,
+          3,
+          1,
+          132,
+          2,
+          4,
+          0,
+          3,
+          0,
+          35,
+          1,
+          120,
+          2,
+          4,
+          0,
+          59,
+          3,
+          112,
+          2,
+          96,
+          2,
+          5,
+          0,
+          43,
+          6,
+          5,
+          0,
+          116,
+          2,
+          120,
+          2,
+          6,
+          0,
+          43,
+          6,
+          5,
+          0,
+          136,
+          2,
+          136,
+          2,
+          7,
+          0,
+          43,
+          6,
+          5,
+          0,
+          140,
+          2,
+          140,
+          2,
+          8,
+          0,
+          91,
+          144,
+          2,
+          3,
+          0,
+          7,
+          0,
+          7,
+          0,
+          5,
+          0,
+          5,
+          0,
+          6,
+          0,
+          6,
+          0,
+          5,
+          0,
+          9,
+          0,
+          5,
+          0,
+          8,
+          0,
+          8,
+          0,
+          9,
+          0,
+          5,
+          0,
+          9,
+          0,
+          5,
+          0,
+          9,
+          0,
+          37,
+          2,
+          9,
+          0,
+          148,
+          2,
+          5,
+          0,
+          43,
+          2,
+          5,
+          0,
+          152,
+          2,
+          6,
+          0,
+          10,
+          0,
+          43,
+          2,
+          5,
+          0,
+          152,
+          2,
+          7,
+          0,
+          6,
+          0,
+          43,
+          2,
+          5,
+          0,
+          120,
+          2,
+          8,
+          0,
+          7,
+          0,
+          43,
+          2,
+          5,
+          0,
+          120,
+          2,
+          9,
+          0,
+          8,
+          0,
+          4,
+          0,
+          10,
+          0,
+          8,
+          0,
+          9,
+          0,
+          4,
+          0,
+          6,
+          0,
+          8,
+          0,
+          10,
+          0,
+          4,
+          0,
+          7,
+          0,
+          8,
+          0,
+          6,
+          0,
+          43,
+          2,
+          5,
+          0,
+          152,
+          2,
+          9,
+          0,
+          7,
+          0,
+          43,
+          2,
+          5,
+          0,
+          152,
+          2,
+          10,
+          0,
+          8,
+          0,
+          43,
+          2,
+          5,
+          0,
+          120,
+          2,
+          6,
+          0,
+          9,
+          0,
+          3,
+          0,
+          8,
+          0,
+          8,
+          0,
+          5,
+          0,
+          5,
+          0,
+          7,
+          0,
+          7,
+          0,
+          5,
+          0,
+          6,
+          0,
+          5,
+          0,
+          9,
+          0,
+          9,
+          0,
+          6,
+          0,
+          5,
+          0,
+          9,
+          0,
+          5,
+          0,
+          6,
+          0,
+          37,
+          2,
+          6,
+          0,
+          148,
+          2,
+          5,
+          0,
+          43,
+          2,
+          5,
+          0,
+          120,
+          2,
+          7,
+          0,
+          10,
+          0,
+          43,
+          2,
+          5,
+          0,
+          152,
+          2,
+          8,
+          0,
+          7,
+          0,
+          43,
+          2,
+          5,
+          0,
+          152,
+          2,
+          9,
+          0,
+          8,
+          0,
+          43,
+          2,
+          5,
+          0,
+          120,
+          2,
+          6,
+          0,
+          9,
+          0,
+          4,
+          0,
+          10,
+          0,
+          9,
+          0,
+          6,
+          0,
+          4,
+          0,
+          7,
+          0,
+          9,
+          0,
+          10,
+          0,
+          4,
+          0,
+          8,
+          0,
+          9,
+          0,
+          7,
+          0,
+          43,
+          2,
+          5,
+          0,
+          120,
+          2,
+          6,
+          0,
+          8,
+          0,
+          43,
+          2,
+          5,
+          0,
+          152,
+          2,
+          10,
+          0,
+          6,
+          0,
+          43,
+          2,
+          5,
+          0,
+          152,
+          2,
+          7,
+          0,
+          9,
+          0,
+          1,
+          2,
+          9,
+          0,
+          120,
+          2,
+          5,
+          0,
+          10,
+          0,
+          6,
+          0,
+          7,
+          0,
+          40,
+          2,
+          5,
+          0,
+          156,
+          2,
+          6,
+          0,
+          43,
+          4,
+          6,
+          0,
+          7,
+          0,
+          152,
+          2,
+          9,
+          0,
+          43,
+          4,
+          6,
+          0,
+          8,
+          0,
+          116,
+          2,
+          7,
+          0,
+          43,
+          6,
+          6,
+          0,
+          152,
+          2,
+          152,
+          2,
+          8,
+          0,
+          43,
+          4,
+          6,
+          0,
+          5,
+          0,
+          152,
+          2,
+          10,
+          0,
+          3,
+          0,
+          7,
+          0,
+          7,
+          0,
+          5,
+          0,
+          5,
+          0,
+          9,
+          0,
+          9,
+          0,
+          5,
+          0,
+          6,
+          0,
+          5,
+          0,
+          8,
+          0,
+          8,
+          0,
+          6,
+          0,
+          5,
+          0,
+          5,
+          0,
+          10,
+          0,
+          10,
+          0,
+          5,
+          0,
+          6,
+          0,
+          8,
+          0,
+          6,
+          0,
+          5,
+          0,
+          3,
+          0,
+          9,
+          0,
+          5,
+          0,
+          6,
+          0,
+          3,
+          0,
+          7,
+          0,
+          5,
+          0,
+          9,
+          0,
+          3,
+          0,
+          8,
+          0,
+          5,
+          0,
+          7,
+          0,
+          3,
+          0,
+          10,
+          0,
+          5,
+          0,
+          8,
+          0,
+          1,
+          2,
+          6,
+          0,
+          152,
+          2,
+          5,
+          0,
+          5,
+          7,
+          152,
+          2,
+          116,
+          2,
+          152,
+          2,
+          6,
+          0,
+          1,
+          3,
+          152,
+          2,
+          152,
+          2,
+          10,
+          0,
+          5,
+          3,
+          152,
+          2,
+          116,
+          2,
+          8,
+          0,
+          11,
+          0,
+          1,
+          1,
+          152,
+          2,
+          5,
+          0,
+          8,
+          0,
+          1,
+          0,
+          9,
+          0,
+          6,
+          0,
+          5,
+          0,
+          5,
+          3,
+          152,
+          2,
+          116,
+          2,
+          10,
+          0,
+          6,
+          0,
+          5,
+          3,
+          152,
+          2,
+          116,
+          2,
+          11,
+          0,
+          9,
+          0,
+          5,
+          3,
+          152,
+          2,
+          116,
+          2,
+          8,
+          0,
+          10,
+          0,
+          1,
+          1,
+          152,
+          2,
+          5,
+          0,
+          8,
+          0,
+          1,
+          0,
+          7,
+          0,
+          6,
+          0,
+          5,
+          0,
+          5,
+          3,
+          152,
+          2,
+          116,
+          2,
+          9,
+          0,
+          6,
+          0,
+          92,
+          92,
+          92,
+          86,
+          1,
+          0,
+          0,
+          160,
+          2,
+          7,
+          0,
+          83,
+          1,
+          0,
+          0,
+          7,
+          0,
+          152,
+          2,
+          0,
+          0,
+          83,
+          1,
+          0,
+          0,
+          7,
+          0,
+          164,
+          2,
+          1,
+          0,
+          83,
+          1,
+          0,
+          0,
+          7,
+          0,
+          168,
+          2,
+          2,
+          0,
+          83,
+          1,
+          0,
+          0,
+          7,
+          0,
+          172,
+          2,
+          3,
+          0,
+          83,
+          1,
+          0,
+          0,
+          7,
+          0,
+          176,
+          2,
+          4,
+          0,
+          83,
+          1,
+          0,
+          0,
+          7,
+          0,
+          120,
+          2,
+          5,
+          0,
+          83,
+          0,
+          0,
+          0,
+          7,
+          0,
+          4,
+          0,
+          6,
+          0,
+          83,
+          0,
+          0,
+          0,
+          7,
+          0,
+          10,
+          0,
+          7,
+          0,
+          83,
+          0,
+          0,
+          0,
+          7,
+          0,
+          8,
+          0,
+          8,
+          0,
+          83,
+          0,
+          0,
+          0,
+          7,
+          0,
+          5,
+          0,
+          9,
+          0,
+          83,
+          0,
+          0,
+          0,
+          7,
+          0,
+          6,
+          0,
+          10,
+          0,
+          83,
+          1,
+          0,
+          0,
+          7,
+          0,
+          152,
+          2,
+          11,
+          0,
+          83,
+          0,
+          0,
+          0,
+          7,
+          0,
+          0,
+          0,
+          12,
+          0,
+          83,
+          0,
+          0,
+          0,
+          7,
+          0,
+          2,
+          0,
+          13,
+          0,
+          83,
+          0,
+          0,
+          0,
+          7,
+          0,
+          3,
+          0,
+          14,
+          0,
+          83,
+          1,
+          0,
+          0,
+          7,
+          0,
+          152,
+          2,
+          15,
+          0,
+          83,
+          1,
+          0,
+          0,
+          7,
+          0,
+          152,
+          2,
+          16,
+          0,
+          83,
+          1,
+          0,
+          0,
+          7,
+          0,
+          152,
+          2,
+          17,
+          0,
+          83,
+          1,
+          0,
+          0,
+          7,
+          0,
+          152,
+          2,
+          18,
+          0,
+          83,
+          1,
+          0,
+          0,
+          7,
+          0,
+          152,
+          2,
+          19,
+          0,
+          83,
+          1,
+          0,
+          0,
+          7,
+          0,
+          152,
+          2,
+          20,
+          0,
+          83,
+          1,
+          0,
+          0,
+          7,
+          0,
+          152,
+          2,
+          21,
+          0,
+          83,
+          1,
+          0,
+          0,
+          7,
+          0,
+          152,
+          2,
+          22,
+          0,
+          83,
+          1,
+          0,
+          0,
+          7,
+          0,
+          152,
+          2,
+          23,
+          0,
+          83,
+          1,
+          0,
+          0,
+          7,
+          0,
+          152,
+          2,
+          24,
+          0,
+          83,
+          1,
+          0,
+          0,
+          7,
+          0,
+          180,
+          2,
+          25,
+          0,
+          83,
+          1,
+          0,
+          0,
+          7,
+          0,
+          180,
+          2,
+          26,
+          0,
+          83,
+          1,
+          0,
+          0,
+          7,
+          0,
+          184,
+          2,
+          27,
+          0,
+          84,
+          1,
+          0,
+          0,
+          7,
+          0,
+          96,
+          2,
+          0,
+          0,
+          84,
+          0,
+          0,
+          0,
+          7,
+          0,
+          1,
+          0,
+          1,
+          0,
+          92,
+          0
+        ],
+        "NumTempRegisters": 12,
+        "CompileTags": [
+          {
+            "Variable": {
+              "VarData": "AACAPw==",
+              "Name": "Particles.Mass",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            "StringValue": "Trimmed"
+          },
+          {
+            "Variable": {
+              "VarData": "",
+              "Name": "Particles.InitialRotation",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'Quat'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            "StringValue": "Trimmed"
+          },
+          {
+            "Variable": {
+              "VarData": "AAAAAA==",
+              "Name": "Particles.RibbonUVDistance",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            "StringValue": "Trimmed"
+          }
+        ],
+        "ScriptLiterals": [
+          3,
+          0,
+          0,
+          0,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          128,
+          191,
+          0,
+          0,
+          128,
+          63,
+          159,
+          77,
+          17,
+          66,
+          109,
+          69,
+          227,
+          193,
+          0,
+          0,
+          72,
+          194,
+          0,
+          0,
+          0,
+          191,
+          102,
+          102,
+          6,
+          191,
+          2,
+          0,
+          0,
+          0,
+          172,
+          197,
+          39,
+          55,
+          0,
+          0,
+          0,
+          0,
+          7,
+          66,
+          178,
+          57,
+          255,
+          255,
+          255,
+          255,
+          77,
+          253,
+          151,
+          61,
+          68,
+          139,
+          40,
+          63,
+          247,
+          144,
+          16,
+          63,
+          205,
+          204,
+          204,
+          60,
+          0,
+          0,
+          0,
+          63,
+          51,
+          51,
+          51,
+          62
+        ],
+        "Attributes": [
+          {
+            "VarData": "",
+            "Name": "Age",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Color",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Lifetime",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "MaterialRandom",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "MeshOrientation",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'Quat'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "NormalizedAge",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Position",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'Vector'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Previous.MeshOrientation",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'Quat'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Previous.Position",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'Vector'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Previous.Scale",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'Vector'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "AACAPwAAgD8AAIA/",
+            "Name": "Scale",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'Vector'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "AAAAAA==",
+            "Name": "SpawnGroup",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraInt32'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "UniqueID",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraInt32'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          }
+        ],
+        "StatScopes": [
+          {
+            "FullName": "SpawnScript",
+            "FriendlyName": "SpawnScript"
+          },
+          {
+            "FullName": "InitializeParticle_Emitter_Func_",
+            "FriendlyName": "InitializeParticle_Emitter"
+          },
+          {
+            "FullName": "InitialMeshOrientation_Emitter_Func_",
+            "FriendlyName": "InitialMeshOrientation_Emitter"
+          },
+          {
+            "FullName": "SpawnScript_Main",
+            "FriendlyName": "Main"
+          },
+          {
+            "FullName": "SpawnScript_MapMain",
+            "FriendlyName": "MapMain"
+          }
+        ],
+        "LastCompileStatus": "ENiagaraScriptCompileStatus::NCS_UpToDate"
+      }
+    }
+  },
+  {
+    "Type": "NiagaraScript",
+    "Name": "UpdateScript",
+    "Outer": "Shields_0",
+    "Class": "UScriptClass'NiagaraScript'",
+    "Properties": {
+      "Usage": "ENiagaraScriptUsage::ParticleUpdateScript",
+      "RapidIterationParameters": {},
+      "ScriptExecutionParamStore": {
+        "ParameterSize": 8,
+        "PaddedParameterSize": 16,
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "Shields.ExecutionState",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Enum'ENiagaraExecutionState'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 3
+            }
+          },
+          {
+            "Offset": 4,
+            "Name": "System.ExecutionState",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Enum'ENiagaraExecutionState'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 3
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CachedScriptVMId": {
+        "CompilerVersionID": "375F6E63-7F2144F2-AD4EC387-0AB6472D",
+        "ScriptUsageType": "ENiagaraScriptUsage::ParticleUpdateScript",
+        "bUsesRapidIterationParams": false,
+        "BaseScriptCompileHash": {
+          "DataHash": [
+            221,
+            244,
+            64,
+            140,
+            155,
+            145,
+            120,
+            40,
+            136,
+            122,
+            159,
+            10,
+            152,
+            64,
+            252,
+            111,
+            231,
+            187,
+            192,
+            142
+          ]
+        }
+      },
+      "CachedScriptVM": {
+        "ByteCode": [
+          91,
+          104,
+          2,
+          77,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          77,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          77,
+          0,
+          0,
+          2,
+          0,
+          2,
+          0,
+          77,
+          0,
+          0,
+          3,
+          0,
+          3,
+          0,
+          77,
+          0,
+          0,
+          4,
+          0,
+          4,
+          0,
+          77,
+          0,
+          0,
+          5,
+          0,
+          5,
+          0,
+          77,
+          0,
+          0,
+          6,
+          0,
+          6,
+          0,
+          77,
+          0,
+          0,
+          7,
+          0,
+          7,
+          0,
+          77,
+          0,
+          0,
+          8,
+          0,
+          8,
+          0,
+          77,
+          0,
+          0,
+          9,
+          0,
+          9,
+          0,
+          77,
+          0,
+          0,
+          10,
+          0,
+          10,
+          0,
+          77,
+          0,
+          0,
+          12,
+          0,
+          11,
+          0,
+          77,
+          0,
+          0,
+          13,
+          0,
+          12,
+          0,
+          77,
+          0,
+          0,
+          14,
+          0,
+          13,
+          0,
+          77,
+          0,
+          0,
+          25,
+          0,
+          14,
+          0,
+          77,
+          0,
+          0,
+          26,
+          0,
+          15,
+          0,
+          77,
+          0,
+          0,
+          27,
+          0,
+          16,
+          0,
+          78,
+          0,
+          0,
+          0,
+          0,
+          17,
+          0,
+          78,
+          0,
+          0,
+          1,
+          0,
+          18,
+          0,
+          91,
+          108,
+          2,
+          91,
+          112,
+          2,
+          91,
+          116,
+          2,
+          60,
+          3,
+          96,
+          2,
+          112,
+          2,
+          19,
+          0,
+          60,
+          3,
+          100,
+          2,
+          112,
+          2,
+          20,
+          0,
+          68,
+          0,
+          19,
+          0,
+          20,
+          0,
+          21,
+          0,
+          1,
+          2,
+          0,
+          0,
+          0,
+          0,
+          19,
+          0,
+          30,
+          2,
+          5,
+          0,
+          120,
+          2,
+          0,
+          0,
+          2,
+          2,
+          0,
+          0,
+          124,
+          2,
+          20,
+          0,
+          39,
+          0,
+          19,
+          0,
+          20,
+          0,
+          22,
+          0,
+          67,
+          0,
+          22,
+          0,
+          21,
+          0,
+          20,
+          0,
+          43,
+          6,
+          20,
+          0,
+          128,
+          2,
+          132,
+          2,
+          21,
+          0,
+          4,
+          0,
+          19,
+          0,
+          0,
+          0,
+          20,
+          0,
+          92,
+          92,
+          92,
+          86,
+          0,
+          0,
+          0,
+          21,
+          0,
+          0,
+          0,
+          83,
+          0,
+          0,
+          0,
+          0,
+          0,
+          19,
+          0,
+          0,
+          0,
+          83,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          83,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          2,
+          0,
+          83,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          0,
+          3,
+          0,
+          83,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4,
+          0,
+          4,
+          0,
+          83,
+          0,
+          0,
+          0,
+          0,
+          0,
+          5,
+          0,
+          5,
+          0,
+          83,
+          0,
+          0,
+          0,
+          0,
+          0,
+          6,
+          0,
+          6,
+          0,
+          83,
+          0,
+          0,
+          0,
+          0,
+          0,
+          7,
+          0,
+          7,
+          0,
+          83,
+          0,
+          0,
+          0,
+          0,
+          0,
+          8,
+          0,
+          8,
+          0,
+          83,
+          0,
+          0,
+          0,
+          0,
+          0,
+          9,
+          0,
+          9,
+          0,
+          83,
+          0,
+          0,
+          0,
+          0,
+          0,
+          10,
+          0,
+          10,
+          0,
+          83,
+          0,
+          0,
+          0,
+          0,
+          0,
+          20,
+          0,
+          11,
+          0,
+          83,
+          0,
+          0,
+          0,
+          0,
+          0,
+          11,
+          0,
+          12,
+          0,
+          83,
+          0,
+          0,
+          0,
+          0,
+          0,
+          12,
+          0,
+          13,
+          0,
+          83,
+          0,
+          0,
+          0,
+          0,
+          0,
+          13,
+          0,
+          14,
+          0,
+          83,
+          0,
+          0,
+          0,
+          0,
+          0,
+          7,
+          0,
+          15,
+          0,
+          83,
+          0,
+          0,
+          0,
+          0,
+          0,
+          8,
+          0,
+          16,
+          0,
+          83,
+          0,
+          0,
+          0,
+          0,
+          0,
+          9,
+          0,
+          17,
+          0,
+          83,
+          0,
+          0,
+          0,
+          0,
+          0,
+          10,
+          0,
+          18,
+          0,
+          83,
+          0,
+          0,
+          0,
+          0,
+          0,
+          11,
+          0,
+          19,
+          0,
+          83,
+          0,
+          0,
+          0,
+          0,
+          0,
+          12,
+          0,
+          20,
+          0,
+          83,
+          0,
+          0,
+          0,
+          0,
+          0,
+          13,
+          0,
+          21,
+          0,
+          83,
+          0,
+          0,
+          0,
+          0,
+          0,
+          14,
+          0,
+          22,
+          0,
+          83,
+          0,
+          0,
+          0,
+          0,
+          0,
+          15,
+          0,
+          23,
+          0,
+          83,
+          0,
+          0,
+          0,
+          0,
+          0,
+          16,
+          0,
+          24,
+          0,
+          83,
+          0,
+          0,
+          0,
+          0,
+          0,
+          14,
+          0,
+          25,
+          0,
+          83,
+          0,
+          0,
+          0,
+          0,
+          0,
+          15,
+          0,
+          26,
+          0,
+          83,
+          0,
+          0,
+          0,
+          0,
+          0,
+          16,
+          0,
+          27,
+          0,
+          84,
+          0,
+          0,
+          0,
+          0,
+          0,
+          17,
+          0,
+          0,
+          0,
+          84,
+          0,
+          0,
+          0,
+          0,
+          0,
+          18,
+          0,
+          1,
+          0,
+          92,
+          0
+        ],
+        "NumTempRegisters": 23,
+        "CompileTags": [
+          {
+            "Variable": {
+              "VarData": "/////w==",
+              "Name": "bIsInfinitelyLived",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraBool'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            "StringValue": ""
+          },
+          {
+            "Variable": {
+              "VarData": "/////w==",
+              "Name": "bCanDieWhenEmitterDeactivates",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraBool'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            "StringValue": ""
+          },
+          {
+            "Variable": {
+              "VarData": "AACAPw==",
+              "Name": "Particles.Mass",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            "StringValue": "Trimmed"
+          },
+          {
+            "Variable": {
+              "VarData": "",
+              "Name": "Particles.RibbonUVDistance",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            "StringValue": "Trimmed"
+          },
+          {
+            "Variable": {
+              "VarData": "",
+              "Name": "Particles.InitialRotation",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'Quat'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            "StringValue": "Trimmed"
+          }
+        ],
+        "ScriptLiterals": [
+          2,
+          0,
+          0,
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          172,
+          197,
+          39,
+          55,
+          23,
+          183,
+          209,
+          56,
+          0,
+          0,
+          0,
+          0,
+          255,
+          255,
+          255,
+          255
+        ],
+        "Attributes": [
+          {
+            "VarData": "",
+            "Name": "Age",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Color",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "AAAAAA==",
+            "Name": "Lifetime",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "MaterialRandom",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "MeshOrientation",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'Quat'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "NormalizedAge",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Position",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'Vector'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Previous.MeshOrientation",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'Quat'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Previous.Position",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'Vector'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Previous.Scale",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'Vector'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "AACAPwAAgD8AAIA/",
+            "Name": "Scale",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'Vector'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "SpawnGroup",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraInt32'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "UniqueID",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraInt32'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          }
+        ],
+        "StatScopes": [
+          {
+            "FullName": "UpdateScript",
+            "FriendlyName": "UpdateScript"
+          },
+          {
+            "FullName": "ParticleState_Emitter_Func_",
+            "FriendlyName": "ParticleState_Emitter"
+          },
+          {
+            "FullName": "UpdateScript_Main",
+            "FriendlyName": "Main"
+          },
+          {
+            "FullName": "UpdateScript_MapMain",
+            "FriendlyName": "MapMain"
+          }
+        ],
+        "LastCompileStatus": "ENiagaraScriptCompileStatus::NCS_UpToDate"
+      }
+    }
+  },
+  {
+    "Type": "NiagaraScript",
+    "Name": "SystemSpawnScript",
+    "Outer": "NS_TI_032",
+    "Class": "UScriptClass'NiagaraScript'",
+    "Properties": {
+      "Usage": "ENiagaraScriptUsage::SystemSpawnScript",
+      "RapidIterationParameters": {},
+      "ScriptExecutionParamStore": {
+        "ParameterSize": 4,
+        "PaddedParameterSize": 16,
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "Emitter.RandomSeed",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraInt32'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CachedScriptVMId": {
+        "CompilerVersionID": "375F6E63-7F2144F2-AD4EC387-0AB6472D",
+        "ScriptUsageType": "ENiagaraScriptUsage::SystemSpawnScript",
+        "bUsesRapidIterationParams": false,
+        "BaseScriptCompileHash": {
+          "DataHash": [
+            238,
+            86,
+            237,
+            91,
+            197,
+            218,
+            198,
+            93,
+            45,
+            189,
+            177,
+            153,
+            174,
+            94,
+            80,
+            149,
+            3,
+            2,
+            231,
+            134
+          ]
+        }
+      },
+      "CachedScriptVM": {
+        "ByteCode": [
+          91,
+          36,
+          0,
+          86,
+          1,
+          0,
+          0,
+          40,
+          0,
+          0,
+          0,
+          84,
+          1,
+          0,
+          0,
+          0,
+          0,
+          32,
+          0,
+          0,
+          0,
+          83,
+          1,
+          0,
+          0,
+          0,
+          0,
+          44,
+          0,
+          0,
+          0,
+          83,
+          1,
+          0,
+          0,
+          0,
+          0,
+          44,
+          0,
+          1,
+          0,
+          83,
+          1,
+          0,
+          0,
+          0,
+          0,
+          44,
+          0,
+          2,
+          0,
+          84,
+          1,
+          0,
+          0,
+          0,
+          0,
+          48,
+          0,
+          1,
+          0,
+          84,
+          1,
+          0,
+          0,
+          0,
+          0,
+          48,
+          0,
+          2,
+          0,
+          84,
+          1,
+          0,
+          0,
+          0,
+          0,
+          52,
+          0,
+          3,
+          0,
+          84,
+          1,
+          0,
+          0,
+          0,
+          0,
+          48,
+          0,
+          4,
+          0,
+          83,
+          1,
+          0,
+          0,
+          0,
+          0,
+          44,
+          0,
+          3,
+          0,
+          83,
+          1,
+          0,
+          0,
+          0,
+          0,
+          44,
+          0,
+          4,
+          0,
+          83,
+          1,
+          0,
+          0,
+          0,
+          0,
+          44,
+          0,
+          5,
+          0,
+          84,
+          1,
+          0,
+          0,
+          0,
+          0,
+          48,
+          0,
+          5,
+          0,
+          83,
+          1,
+          0,
+          0,
+          0,
+          0,
+          44,
+          0,
+          6,
+          0,
+          83,
+          1,
+          0,
+          0,
+          0,
+          0,
+          44,
+          0,
+          7,
+          0,
+          84,
+          1,
+          0,
+          0,
+          0,
+          0,
+          48,
+          0,
+          6,
+          0,
+          84,
+          1,
+          0,
+          0,
+          0,
+          0,
+          48,
+          0,
+          7,
+          0,
+          83,
+          1,
+          0,
+          0,
+          0,
+          0,
+          44,
+          0,
+          8,
+          0,
+          83,
+          1,
+          0,
+          0,
+          0,
+          0,
+          44,
+          0,
+          9,
+          0,
+          84,
+          1,
+          0,
+          0,
+          0,
+          0,
+          48,
+          0,
+          8,
+          0,
+          84,
+          1,
+          0,
+          0,
+          0,
+          0,
+          48,
+          0,
+          9,
+          0,
+          83,
+          1,
+          0,
+          0,
+          0,
+          0,
+          44,
+          0,
+          10,
+          0,
+          84,
+          1,
+          0,
+          0,
+          0,
+          0,
+          52,
+          0,
+          10,
+          0,
+          83,
+          1,
+          0,
+          0,
+          0,
+          0,
+          44,
+          0,
+          11,
+          0,
+          84,
+          1,
+          0,
+          0,
+          0,
+          0,
+          48,
+          0,
+          11,
+          0,
+          84,
+          1,
+          0,
+          0,
+          0,
+          0,
+          48,
+          0,
+          12,
+          0,
+          84,
+          1,
+          0,
+          0,
+          0,
+          0,
+          48,
+          0,
+          13,
+          0,
+          83,
+          1,
+          0,
+          0,
+          0,
+          0,
+          44,
+          0,
+          12,
+          0,
+          83,
+          1,
+          0,
+          0,
+          0,
+          0,
+          44,
+          0,
+          13,
+          0,
+          92,
+          0
+        ],
+        "NumTempRegisters": 1,
+        "ScriptLiterals": [
+          2,
+          0,
+          0,
+          0,
+          255,
+          255,
+          255,
+          255,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Attributes": [
+          {
+            "VarData": "AAAAAA==",
+            "Name": "Emitter.RandomSeed",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraInt32'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Shields.Age",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Shields.CurrentLoopDuration",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Shields.DistanceTraveled",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Shields.ExecutionState",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Enum'ENiagaraExecutionState'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 3
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Shields.ExecutionStateSource",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Enum'ENiagaraExecutionStateSource'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 3
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Shields.Localspace",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraBool'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Shields.LoopCount",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraInt32'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Shields.LoopedAge",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Shields.NormalizedLoopAge",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Shields.Scalability.DistanceFraction",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Shields.SpawnBurst_Instantaneous.SpawnBurst",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraSpawnInfo'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Shields.SpawnBurst_Instantaneous001.SpawnBurst",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraSpawnInfo'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Shields.SpawnGroup",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraInt32'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "System.Age",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "AAAAAA==",
+            "Name": "System.bCompleteOnInactive",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraBool'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "System.CurrentLoopDuration",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "System.ExecutionState",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Enum'ENiagaraExecutionState'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 3
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "System.ExecutionStateSource",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Enum'ENiagaraExecutionStateSource'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 3
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "System.LoopCount",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraInt32'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "System.LoopedAge",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "System.NormalizedLoopAge",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          }
+        ],
+        "StatScopes": [
+          {
+            "FullName": "SystemSpawnScript",
+            "FriendlyName": "SystemSpawnScript"
+          },
+          {
+            "FullName": "Shields",
+            "FriendlyName": "Shields"
+          },
+          {
+            "FullName": "SystemSpawnScript_Main",
+            "FriendlyName": "Main"
+          },
+          {
+            "FullName": "SystemSpawnScript_MapMain",
+            "FriendlyName": "MapMain"
+          }
+        ],
+        "LastCompileStatus": "ENiagaraScriptCompileStatus::NCS_UpToDate"
+      }
+    }
+  },
+  {
+    "Type": "NiagaraScript",
+    "Name": "SystemUpdateScript",
+    "Outer": "NS_TI_032",
+    "Class": "UScriptClass'NiagaraScript'",
+    "Properties": {
+      "Usage": "ENiagaraScriptUsage::SystemUpdateScript",
+      "RapidIterationParameters": {},
+      "ScriptExecutionParamStore": {
+        "ParameterSize": 4,
+        "PaddedParameterSize": 16,
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "Emitter.RandomSeed",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraInt32'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "CachedScriptVMId": {
+        "CompilerVersionID": "375F6E63-7F2144F2-AD4EC387-0AB6472D",
+        "ScriptUsageType": "ENiagaraScriptUsage::SystemUpdateScript",
+        "bUsesRapidIterationParams": false,
+        "BaseScriptCompileHash": {
+          "DataHash": [
+            14,
+            117,
+            25,
+            17,
+            218,
+            162,
+            91,
+            248,
+            180,
+            42,
+            138,
+            218,
+            49,
+            157,
+            73,
+            111,
+            33,
+            225,
+            142,
+            15
+          ]
+        }
+      },
+      "CachedScriptVM": {
+        "ByteCode": [
+          91,
+          36,
+          0,
+          77,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          77,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          77,
+          0,
+          0,
+          2,
+          0,
+          2,
+          0,
+          78,
+          0,
+          0,
+          1,
+          0,
+          3,
+          0,
+          78,
+          0,
+          0,
+          2,
+          0,
+          4,
+          0,
+          78,
+          0,
+          0,
+          3,
+          0,
+          5,
+          0,
+          77,
+          0,
+          0,
+          3,
+          0,
+          6,
+          0,
+          78,
+          0,
+          0,
+          9,
+          0,
+          7,
+          0,
+          77,
+          0,
+          0,
+          10,
+          0,
+          8,
+          0,
+          77,
+          0,
+          0,
+          11,
+          0,
+          9,
+          0,
+          78,
+          0,
+          0,
+          11,
+          0,
+          10,
+          0,
+          78,
+          0,
+          0,
+          12,
+          0,
+          11,
+          0,
+          78,
+          0,
+          0,
+          13,
+          0,
+          12,
+          0,
+          77,
+          0,
+          0,
+          12,
+          0,
+          13,
+          0,
+          78,
+          1,
+          0,
+          2,
+          0,
+          14,
+          0,
+          77,
+          1,
+          0,
+          0,
+          0,
+          15,
+          0,
+          77,
+          1,
+          0,
+          1,
+          0,
+          16,
+          0,
+          77,
+          1,
+          0,
+          2,
+          0,
+          17,
+          0,
+          77,
+          1,
+          0,
+          3,
+          0,
+          18,
+          0,
+          78,
+          1,
+          0,
+          3,
+          0,
+          19,
+          0,
+          77,
+          1,
+          0,
+          4,
+          0,
+          20,
+          0,
+          91,
+          40,
+          0,
+          91,
+          44,
+          0,
+          91,
+          48,
+          0,
+          41,
+          2,
+          8,
+          0,
+          52,
+          0,
+          21,
+          0,
+          43,
+          2,
+          21,
+          0,
+          56,
+          0,
+          9,
+          0,
+          22,
+          0,
+          1,
+          1,
+          0,
+          0,
+          13,
+          0,
+          9,
+          0,
+          4,
+          0,
+          9,
+          0,
+          22,
+          0,
+          13,
+          0,
+          71,
+          0,
+          13,
+          0,
+          21,
+          0,
+          50,
+          2,
+          21,
+          0,
+          44,
+          0,
+          13,
+          0,
+          72,
+          0,
+          13,
+          0,
+          21,
+          0,
+          3,
+          0,
+          21,
+          0,
+          22,
+          0,
+          23,
+          0,
+          2,
+          0,
+          9,
+          0,
+          23,
+          0,
+          21,
+          0,
+          44,
+          0,
+          13,
+          0,
+          12,
+          0,
+          9,
+          0,
+          1,
+          2,
+          8,
+          0,
+          0,
+          0,
+          12,
+          0,
+          57,
+          2,
+          13,
+          0,
+          44,
+          0,
+          8,
+          0,
+          43,
+          0,
+          8,
+          0,
+          22,
+          0,
+          22,
+          0,
+          13,
+          0,
+          43,
+          0,
+          8,
+          0,
+          21,
+          0,
+          21,
+          0,
+          22,
+          0,
+          4,
+          0,
+          22,
+          0,
+          13,
+          0,
+          8,
+          0,
+          56,
+          2,
+          11,
+          0,
+          44,
+          0,
+          21,
+          0,
+          43,
+          2,
+          21,
+          0,
+          44,
+          0,
+          10,
+          0,
+          23,
+          0,
+          43,
+          2,
+          21,
+          0,
+          44,
+          0,
+          11,
+          0,
+          10,
+          0,
+          60,
+          2,
+          14,
+          0,
+          44,
+          0,
+          11,
+          0,
+          56,
+          2,
+          10,
+          0,
+          60,
+          0,
+          21,
+          0,
+          67,
+          0,
+          11,
+          0,
+          21,
+          0,
+          24,
+          0,
+          43,
+          0,
+          24,
+          0,
+          14,
+          0,
+          23,
+          0,
+          11,
+          0,
+          43,
+          2,
+          24,
+          0,
+          60,
+          0,
+          10,
+          0,
+          14,
+          0,
+          92,
+          91,
+          60,
+          0,
+          91,
+          64,
+          0,
+          41,
+          2,
+          0,
+          0,
+          52,
+          0,
+          10,
+          0,
+          43,
+          2,
+          10,
+          0,
+          68,
+          0,
+          1,
+          0,
+          21,
+          0,
+          1,
+          1,
+          0,
+          0,
+          6,
+          0,
+          1,
+          0,
+          1,
+          2,
+          0,
+          0,
+          0,
+          0,
+          6,
+          0,
+          28,
+          6,
+          15,
+          0,
+          52,
+          0,
+          72,
+          0,
+          0,
+          0,
+          59,
+          2,
+          19,
+          0,
+          44,
+          0,
+          10,
+          0,
+          59,
+          2,
+          14,
+          0,
+          44,
+          0,
+          15,
+          0,
+          60,
+          2,
+          3,
+          0,
+          64,
+          0,
+          19,
+          0,
+          60,
+          2,
+          3,
+          0,
+          76,
+          0,
+          23,
+          0,
+          67,
+          0,
+          19,
+          0,
+          23,
+          0,
+          24,
+          0,
+          67,
+          0,
+          15,
+          0,
+          24,
+          0,
+          19,
+          0,
+          56,
+          0,
+          4,
+          0,
+          14,
+          0,
+          15,
+          0,
+          67,
+          0,
+          19,
+          0,
+          15,
+          0,
+          23,
+          0,
+          43,
+          0,
+          23,
+          0,
+          11,
+          0,
+          3,
+          0,
+          15,
+          0,
+          43,
+          0,
+          23,
+          0,
+          14,
+          0,
+          4,
+          0,
+          3,
+          0,
+          60,
+          2,
+          11,
+          0,
+          44,
+          0,
+          4,
+          0,
+          59,
+          2,
+          14,
+          0,
+          60,
+          0,
+          19,
+          0,
+          67,
+          0,
+          4,
+          0,
+          19,
+          0,
+          23,
+          0,
+          60,
+          2,
+          15,
+          0,
+          64,
+          0,
+          4,
+          0,
+          60,
+          2,
+          15,
+          0,
+          76,
+          0,
+          19,
+          0,
+          67,
+          0,
+          4,
+          0,
+          19,
+          0,
+          24,
+          0,
+          67,
+          0,
+          23,
+          0,
+          24,
+          0,
+          4,
+          0,
+          56,
+          2,
+          3,
+          0,
+          48,
+          0,
+          19,
+          0,
+          67,
+          0,
+          4,
+          0,
+          19,
+          0,
+          23,
+          0,
+          43,
+          2,
+          23,
+          0,
+          48,
+          0,
+          15,
+          0,
+          4,
+          0,
+          43,
+          2,
+          23,
+          0,
+          48,
+          0,
+          3,
+          0,
+          15,
+          0,
+          60,
+          2,
+          4,
+          0,
+          44,
+          0,
+          3,
+          0,
+          60,
+          2,
+          15,
+          0,
+          44,
+          0,
+          19,
+          0,
+          67,
+          0,
+          3,
+          0,
+          19,
+          0,
+          23,
+          0,
+          67,
+          0,
+          10,
+          0,
+          23,
+          0,
+          3,
+          0,
+          60,
+          2,
+          4,
+          0,
+          64,
+          0,
+          10,
+          0,
+          60,
+          2,
+          4,
+          0,
+          76,
+          0,
+          19,
+          0,
+          67,
+          0,
+          10,
+          0,
+          19,
+          0,
+          23,
+          0,
+          67,
+          0,
+          3,
+          0,
+          23,
+          0,
+          10,
+          0,
+          56,
+          2,
+          15,
+          0,
+          64,
+          0,
+          3,
+          0,
+          67,
+          0,
+          10,
+          0,
+          3,
+          0,
+          19,
+          0,
+          43,
+          2,
+          19,
+          0,
+          64,
+          0,
+          4,
+          0,
+          3,
+          0,
+          43,
+          2,
+          19,
+          0,
+          64,
+          0,
+          15,
+          0,
+          4,
+          0,
+          3,
+          0,
+          17,
+          0,
+          17,
+          0,
+          10,
+          0,
+          5,
+          0,
+          16,
+          0,
+          16,
+          0,
+          10,
+          0,
+          15,
+          0,
+          5,
+          0,
+          18,
+          0,
+          18,
+          0,
+          15,
+          0,
+          10,
+          0,
+          9,
+          0,
+          10,
+          0,
+          15,
+          0,
+          4,
+          2,
+          15,
+          0,
+          80,
+          0,
+          10,
+          0,
+          25,
+          2,
+          2,
+          0,
+          84,
+          0,
+          15,
+          0,
+          1,
+          0,
+          10,
+          0,
+          15,
+          0,
+          2,
+          0,
+          92,
+          91,
+          76,
+          0,
+          71,
+          0,
+          20,
+          0,
+          10,
+          0,
+          50,
+          2,
+          10,
+          0,
+          48,
+          0,
+          15,
+          0,
+          2,
+          2,
+          1,
+          0,
+          0,
+          0,
+          10,
+          0,
+          10,
+          0,
+          10,
+          0,
+          16,
+          0,
+          40,
+          2,
+          16,
+          0,
+          52,
+          0,
+          10,
+          0,
+          10,
+          0,
+          1,
+          0,
+          17,
+          0,
+          37,
+          2,
+          17,
+          0,
+          52,
+          0,
+          18,
+          0,
+          67,
+          0,
+          10,
+          0,
+          18,
+          0,
+          17,
+          0,
+          76,
+          0,
+          17,
+          0,
+          10,
+          0,
+          59,
+          2,
+          10,
+          0,
+          48,
+          0,
+          18,
+          0,
+          43,
+          4,
+          18,
+          0,
+          15,
+          0,
+          44,
+          0,
+          10,
+          0,
+          76,
+          0,
+          17,
+          0,
+          15,
+          0,
+          59,
+          2,
+          15,
+          0,
+          44,
+          0,
+          17,
+          0,
+          43,
+          2,
+          17,
+          0,
+          44,
+          0,
+          10,
+          0,
+          15,
+          0,
+          92,
+          91,
+          88,
+          0,
+          71,
+          0,
+          20,
+          0,
+          10,
+          0,
+          50,
+          2,
+          10,
+          0,
+          48,
+          0,
+          17,
+          0,
+          2,
+          2,
+          1,
+          0,
+          0,
+          0,
+          10,
+          0,
+          10,
+          0,
+          10,
+          0,
+          18,
+          0,
+          40,
+          2,
+          18,
+          0,
+          52,
+          0,
+          10,
+          0,
+          10,
+          0,
+          1,
+          0,
+          19,
+          0,
+          37,
+          2,
+          19,
+          0,
+          52,
+          0,
+          20,
+          0,
+          67,
+          0,
+          10,
+          0,
+          20,
+          0,
+          19,
+          0,
+          76,
+          0,
+          19,
+          0,
+          10,
+          0,
+          59,
+          2,
+          10,
+          0,
+          48,
+          0,
+          20,
+          0,
+          43,
+          4,
+          20,
+          0,
+          17,
+          0,
+          44,
+          0,
+          10,
+          0,
+          76,
+          0,
+          19,
+          0,
+          17,
+          0,
+          59,
+          2,
+          17,
+          0,
+          44,
+          0,
+          19,
+          0,
+          43,
+          2,
+          19,
+          0,
+          44,
+          0,
+          10,
+          0,
+          17,
+          0,
+          92,
+          92,
+          92,
+          92,
+          86,
+          1,
+          0,
+          0,
+          92,
+          0,
+          10,
+          0,
+          84,
+          1,
+          0,
+          0,
+          10,
+          0,
+          32,
+          0,
+          0,
+          0,
+          83,
+          0,
+          0,
+          0,
+          10,
+          0,
+          6,
+          0,
+          0,
+          0,
+          83,
+          0,
+          0,
+          0,
+          10,
+          0,
+          21,
+          0,
+          1,
+          0,
+          83,
+          0,
+          0,
+          0,
+          10,
+          0,
+          2,
+          0,
+          2,
+          0,
+          84,
+          0,
+          0,
+          0,
+          10,
+          0,
+          3,
+          0,
+          1,
+          0,
+          84,
+          0,
+          0,
+          0,
+          10,
+          0,
+          4,
+          0,
+          2,
+          0,
+          84,
+          0,
+          0,
+          0,
+          10,
+          0,
+          5,
+          0,
+          3,
+          0,
+          84,
+          1,
+          0,
+          0,
+          10,
+          0,
+          44,
+          0,
+          4,
+          0,
+          83,
+          0,
+          0,
+          0,
+          10,
+          0,
+          1,
+          0,
+          3,
+          0,
+          83,
+          1,
+          0,
+          0,
+          10,
+          0,
+          52,
+          0,
+          4,
+          0,
+          83,
+          0,
+          0,
+          0,
+          10,
+          0,
+          0,
+          0,
+          5,
+          0,
+          84,
+          0,
+          0,
+          0,
+          10,
+          0,
+          15,
+          0,
+          5,
+          0,
+          83,
+          0,
+          0,
+          0,
+          10,
+          0,
+          16,
+          0,
+          6,
+          0,
+          83,
+          1,
+          0,
+          0,
+          10,
+          0,
+          52,
+          0,
+          7,
+          0,
+          84,
+          1,
+          0,
+          0,
+          10,
+          0,
+          44,
+          0,
+          6,
+          0,
+          84,
+          0,
+          0,
+          0,
+          10,
+          0,
+          17,
+          0,
+          7,
+          0,
+          83,
+          0,
+          0,
+          0,
+          10,
+          0,
+          18,
+          0,
+          8,
+          0,
+          83,
+          1,
+          0,
+          0,
+          10,
+          0,
+          52,
+          0,
+          9,
+          0,
+          84,
+          1,
+          0,
+          0,
+          10,
+          0,
+          48,
+          0,
+          8,
+          0,
+          84,
+          0,
+          0,
+          0,
+          10,
+          0,
+          7,
+          0,
+          9,
+          0,
+          83,
+          0,
+          0,
+          0,
+          10,
+          0,
+          12,
+          0,
+          10,
+          0,
+          84,
+          1,
+          0,
+          0,
+          10,
+          0,
+          92,
+          0,
+          10,
+          0,
+          83,
+          0,
+          0,
+          0,
+          10,
+          0,
+          13,
+          0,
+          11,
+          0,
+          84,
+          0,
+          0,
+          0,
+          10,
+          0,
+          11,
+          0,
+          11,
+          0,
+          84,
+          0,
+          0,
+          0,
+          10,
+          0,
+          14,
+          0,
+          12,
+          0,
+          84,
+          0,
+          0,
+          0,
+          10,
+          0,
+          9,
+          0,
+          13,
+          0,
+          83,
+          0,
+          0,
+          0,
+          10,
+          0,
+          22,
+          0,
+          12,
+          0,
+          83,
+          0,
+          0,
+          0,
+          10,
+          0,
+          8,
+          0,
+          13,
+          0,
+          92,
+          0
+        ],
+        "NumTempRegisters": 25,
+        "ScriptLiterals": [
+          6,
+          0,
+          0,
+          0,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          160,
+          64,
+          2,
+          0,
+          0,
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          220,
+          127,
+          71,
+          71,
+          3,
+          128,
+          63,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          200,
+          66,
+          32,
+          188,
+          190,
+          76,
+          5,
+          0,
+          0,
+          0,
+          255,
+          255,
+          255,
+          255
+        ],
+        "Attributes": [
+          {
+            "VarData": "AAAAAA==",
+            "Name": "Emitter.RandomSeed",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraInt32'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Shields.Age",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Shields.CurrentLoopDuration",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Shields.DistanceTraveled",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Shields.ExecutionState",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Enum'ENiagaraExecutionState'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 3
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Shields.ExecutionStateSource",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Enum'ENiagaraExecutionStateSource'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 3
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Shields.Localspace",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraBool'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "AAAAAA==",
+            "Name": "Shields.LoopCount",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraInt32'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Shields.LoopedAge",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Shields.NormalizedLoopAge",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Shields.Scalability.DistanceFraction",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Shields.SpawnBurst_Instantaneous.SpawnBurst",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraSpawnInfo'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Shields.SpawnBurst_Instantaneous001.SpawnBurst",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraSpawnInfo'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "Shields.SpawnGroup",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraInt32'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "System.Age",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "AAAAAA==",
+            "Name": "System.bCompleteOnInactive",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraBool'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "AAAAAA==",
+            "Name": "System.CurrentLoopDuration",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "AAAAAA==",
+            "Name": "System.ExecutionState",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Enum'ENiagaraExecutionState'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 3
+            }
+          },
+          {
+            "VarData": "AAAAAA==",
+            "Name": "System.ExecutionStateSource",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Enum'ENiagaraExecutionStateSource'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 3
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "System.LoopCount",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraInt32'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "AAAAAA==",
+            "Name": "System.LoopedAge",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "VarData": "",
+            "Name": "System.NormalizedLoopAge",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          }
+        ],
+        "StatScopes": [
+          {
+            "FullName": "SystemUpdateScript",
+            "FriendlyName": "SystemUpdateScript"
+          },
+          {
+            "FullName": "SystemState_Func_",
+            "FriendlyName": "SystemState"
+          },
+          {
+            "FullName": "Shields",
+            "FriendlyName": "Shields"
+          },
+          {
+            "FullName": "EmitterState_Shields_Func_",
+            "FriendlyName": "EmitterState_Shields"
+          },
+          {
+            "FullName": "SpawnBurst_Instantaneous_Shields_Func_",
+            "FriendlyName": "SpawnBurst_Instantaneous_Shields"
+          },
+          {
+            "FullName": "SpawnBurst_Instantaneous001_Shields_Func_",
+            "FriendlyName": "SpawnBurst_Instantaneous001_Shields"
+          },
+          {
+            "FullName": "SystemUpdateScript_Main",
+            "FriendlyName": "Main"
+          },
+          {
+            "FullName": "SystemUpdateScript_MapMain",
+            "FriendlyName": "MapMain"
+          }
+        ],
+        "LastCompileStatus": "ENiagaraScriptCompileStatus::NCS_UpToDate"
+      }
+    }
+  },
+  {
+    "Type": "NiagaraSystem",
+    "Name": "NS_TI_032",
+    "Class": "UScriptClass'NiagaraSystem'",
+    "Properties": {
+      "EmitterHandles": [
+        {
+          "Id": "E10E7688-4B9CD592-AF12D590-2C1719BE",
+          "IdName": "E10E76884B9CD592AF12D5902C1719BE",
+          "bIsEnabled": true,
+          "Name": "Shields",
+          "Instance": {
+            "ObjectName": "NiagaraEmitter'NS_TI_032:Shields_0'",
+            "ObjectPath": "DeadByDaylight/Content/Effects/Niagara/NiagaraParticleSystem/Charms/Titan/NS_TI_032.0"
+          }
+        }
+      ],
+      "SystemSpawnScript": {
+        "ObjectName": "NiagaraScript'NS_TI_032:SystemSpawnScript'",
+        "ObjectPath": "DeadByDaylight/Content/Effects/Niagara/NiagaraParticleSystem/Charms/Titan/NS_TI_032.4"
+      },
+      "SystemUpdateScript": {
+        "ObjectName": "NiagaraScript'NS_TI_032:SystemUpdateScript'",
+        "ObjectPath": "DeadByDaylight/Content/Effects/Niagara/NiagaraParticleSystem/Charms/Titan/NS_TI_032.5"
+      },
+      "SystemCompiledData": {
+        "DataSetCompiledData": {
+          "Variables": [
+            {
+              "VarData": "AAAAAA==",
+              "Name": "Emitter.RandomSeed",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraInt32'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "",
+              "Name": "Shields.Age",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "",
+              "Name": "Shields.CurrentLoopDuration",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "",
+              "Name": "Shields.DistanceTraveled",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "",
+              "Name": "Shields.ExecutionState",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Enum'ENiagaraExecutionState'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 3
+              }
+            },
+            {
+              "VarData": "",
+              "Name": "Shields.ExecutionStateSource",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Enum'ENiagaraExecutionStateSource'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 3
+              }
+            },
+            {
+              "VarData": "",
+              "Name": "Shields.Localspace",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraBool'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "AAAAAA==",
+              "Name": "Shields.LoopCount",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraInt32'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "",
+              "Name": "Shields.LoopedAge",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "",
+              "Name": "Shields.NormalizedLoopAge",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "",
+              "Name": "Shields.Scalability.DistanceFraction",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "",
+              "Name": "Shields.SpawnBurst_Instantaneous.SpawnBurst",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraSpawnInfo'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "",
+              "Name": "Shields.SpawnBurst_Instantaneous001.SpawnBurst",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraSpawnInfo'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "",
+              "Name": "Shields.SpawnGroup",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraInt32'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "",
+              "Name": "System.Age",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "AAAAAA==",
+              "Name": "System.bCompleteOnInactive",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraBool'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "AAAAAA==",
+              "Name": "System.CurrentLoopDuration",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "AAAAAA==",
+              "Name": "System.ExecutionState",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Enum'ENiagaraExecutionState'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 3
+              }
+            },
+            {
+              "VarData": "AAAAAA==",
+              "Name": "System.ExecutionStateSource",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Enum'ENiagaraExecutionStateSource'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 3
+              }
+            },
+            {
+              "VarData": "",
+              "Name": "System.LoopCount",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraInt32'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "AAAAAA==",
+              "Name": "System.LoopedAge",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "",
+              "Name": "System.NormalizedLoopAge",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            }
+          ],
+          "VariableLayouts": [
+            {
+              "FloatComponentStart": 0,
+              "Int32ComponentStart": 0,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [],
+                "FloatComponentRegisterOffsets": [],
+                "Int32ComponentByteOffsets": [
+                  0
+                ],
+                "Int32ComponentRegisterOffsets": [
+                  0
+                ],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 0,
+              "Int32ComponentStart": 1,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [
+                  0
+                ],
+                "FloatComponentRegisterOffsets": [
+                  0
+                ],
+                "Int32ComponentByteOffsets": [],
+                "Int32ComponentRegisterOffsets": [],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 1,
+              "Int32ComponentStart": 1,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [
+                  0
+                ],
+                "FloatComponentRegisterOffsets": [
+                  0
+                ],
+                "Int32ComponentByteOffsets": [],
+                "Int32ComponentRegisterOffsets": [],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 2,
+              "Int32ComponentStart": 1,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [
+                  0
+                ],
+                "FloatComponentRegisterOffsets": [
+                  0
+                ],
+                "Int32ComponentByteOffsets": [],
+                "Int32ComponentRegisterOffsets": [],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 3,
+              "Int32ComponentStart": 1,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [],
+                "FloatComponentRegisterOffsets": [],
+                "Int32ComponentByteOffsets": [
+                  0
+                ],
+                "Int32ComponentRegisterOffsets": [
+                  0
+                ],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 3,
+              "Int32ComponentStart": 2,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [],
+                "FloatComponentRegisterOffsets": [],
+                "Int32ComponentByteOffsets": [
+                  0
+                ],
+                "Int32ComponentRegisterOffsets": [
+                  0
+                ],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 3,
+              "Int32ComponentStart": 3,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [],
+                "FloatComponentRegisterOffsets": [],
+                "Int32ComponentByteOffsets": [
+                  0
+                ],
+                "Int32ComponentRegisterOffsets": [
+                  0
+                ],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 3,
+              "Int32ComponentStart": 4,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [],
+                "FloatComponentRegisterOffsets": [],
+                "Int32ComponentByteOffsets": [
+                  0
+                ],
+                "Int32ComponentRegisterOffsets": [
+                  0
+                ],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 3,
+              "Int32ComponentStart": 5,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [
+                  0
+                ],
+                "FloatComponentRegisterOffsets": [
+                  0
+                ],
+                "Int32ComponentByteOffsets": [],
+                "Int32ComponentRegisterOffsets": [],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 4,
+              "Int32ComponentStart": 5,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [
+                  0
+                ],
+                "FloatComponentRegisterOffsets": [
+                  0
+                ],
+                "Int32ComponentByteOffsets": [],
+                "Int32ComponentRegisterOffsets": [],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 5,
+              "Int32ComponentStart": 5,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [
+                  0
+                ],
+                "FloatComponentRegisterOffsets": [
+                  0
+                ],
+                "Int32ComponentByteOffsets": [],
+                "Int32ComponentRegisterOffsets": [],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 6,
+              "Int32ComponentStart": 5,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [
+                  4,
+                  8
+                ],
+                "FloatComponentRegisterOffsets": [
+                  0,
+                  1
+                ],
+                "Int32ComponentByteOffsets": [
+                  0,
+                  12
+                ],
+                "Int32ComponentRegisterOffsets": [
+                  0,
+                  1
+                ],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 8,
+              "Int32ComponentStart": 7,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [
+                  4,
+                  8
+                ],
+                "FloatComponentRegisterOffsets": [
+                  0,
+                  1
+                ],
+                "Int32ComponentByteOffsets": [
+                  0,
+                  12
+                ],
+                "Int32ComponentRegisterOffsets": [
+                  0,
+                  1
+                ],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 10,
+              "Int32ComponentStart": 9,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [],
+                "FloatComponentRegisterOffsets": [],
+                "Int32ComponentByteOffsets": [
+                  0
+                ],
+                "Int32ComponentRegisterOffsets": [
+                  0
+                ],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 10,
+              "Int32ComponentStart": 10,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [
+                  0
+                ],
+                "FloatComponentRegisterOffsets": [
+                  0
+                ],
+                "Int32ComponentByteOffsets": [],
+                "Int32ComponentRegisterOffsets": [],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 11,
+              "Int32ComponentStart": 10,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [],
+                "FloatComponentRegisterOffsets": [],
+                "Int32ComponentByteOffsets": [
+                  0
+                ],
+                "Int32ComponentRegisterOffsets": [
+                  0
+                ],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 11,
+              "Int32ComponentStart": 11,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [
+                  0
+                ],
+                "FloatComponentRegisterOffsets": [
+                  0
+                ],
+                "Int32ComponentByteOffsets": [],
+                "Int32ComponentRegisterOffsets": [],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 12,
+              "Int32ComponentStart": 11,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [],
+                "FloatComponentRegisterOffsets": [],
+                "Int32ComponentByteOffsets": [
+                  0
+                ],
+                "Int32ComponentRegisterOffsets": [
+                  0
+                ],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 12,
+              "Int32ComponentStart": 12,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [],
+                "FloatComponentRegisterOffsets": [],
+                "Int32ComponentByteOffsets": [
+                  0
+                ],
+                "Int32ComponentRegisterOffsets": [
+                  0
+                ],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 12,
+              "Int32ComponentStart": 13,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [],
+                "FloatComponentRegisterOffsets": [],
+                "Int32ComponentByteOffsets": [
+                  0
+                ],
+                "Int32ComponentRegisterOffsets": [
+                  0
+                ],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 12,
+              "Int32ComponentStart": 14,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [
+                  0
+                ],
+                "FloatComponentRegisterOffsets": [
+                  0
+                ],
+                "Int32ComponentByteOffsets": [],
+                "Int32ComponentRegisterOffsets": [],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 13,
+              "Int32ComponentStart": 14,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [
+                  0
+                ],
+                "FloatComponentRegisterOffsets": [
+                  0
+                ],
+                "Int32ComponentByteOffsets": [],
+                "Int32ComponentRegisterOffsets": [],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            }
+          ],
+          "TotalFloatComponents": 14,
+          "TotalInt32Components": 14
+        },
+        "SpawnInstanceParamsDataSetCompiledData": {
+          "Variables": [
+            {
+              "VarData": "",
+              "Name": "Engine.Emitter.InstanceSeed",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraInt32'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "",
+              "Name": "Engine.Emitter.TotalSpawnedParticles",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraInt32'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            }
+          ],
+          "VariableLayouts": [
+            {
+              "FloatComponentStart": 0,
+              "Int32ComponentStart": 0,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [],
+                "FloatComponentRegisterOffsets": [],
+                "Int32ComponentByteOffsets": [
+                  0
+                ],
+                "Int32ComponentRegisterOffsets": [
+                  0
+                ],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 0,
+              "Int32ComponentStart": 1,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [],
+                "FloatComponentRegisterOffsets": [],
+                "Int32ComponentByteOffsets": [
+                  0
+                ],
+                "Int32ComponentRegisterOffsets": [
+                  0
+                ],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            }
+          ],
+          "TotalInt32Components": 2
+        },
+        "UpdateInstanceParamsDataSetCompiledData": {
+          "Variables": [
+            {
+              "VarData": "",
+              "Name": "Engine.Emitter.InstanceSeed",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraInt32'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "",
+              "Name": "Engine.Emitter.TotalSpawnedParticles",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraInt32'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "",
+              "Name": "Engine.Owner.ExecutionState",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Enum'ENiagaraExecutionState'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 3
+              }
+            },
+            {
+              "VarData": "AAAAAA==",
+              "Name": "Engine.Owner.LODDistanceFraction",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "AAAAAAAAAAAAAAAA",
+              "Name": "Engine.Owner.Velocity",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'Vector'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "AAAAAA==",
+              "Name": "Engine.Shields.NumParticles",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraInt32'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "AAAAAA==",
+              "Name": "Engine.Shields.SpawnCountScale",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            }
+          ],
+          "VariableLayouts": [
+            {
+              "FloatComponentStart": 0,
+              "Int32ComponentStart": 0,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [],
+                "FloatComponentRegisterOffsets": [],
+                "Int32ComponentByteOffsets": [
+                  0
+                ],
+                "Int32ComponentRegisterOffsets": [
+                  0
+                ],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 0,
+              "Int32ComponentStart": 1,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [],
+                "FloatComponentRegisterOffsets": [],
+                "Int32ComponentByteOffsets": [
+                  0
+                ],
+                "Int32ComponentRegisterOffsets": [
+                  0
+                ],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 0,
+              "Int32ComponentStart": 2,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [],
+                "FloatComponentRegisterOffsets": [],
+                "Int32ComponentByteOffsets": [
+                  0
+                ],
+                "Int32ComponentRegisterOffsets": [
+                  0
+                ],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 0,
+              "Int32ComponentStart": 3,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [
+                  0
+                ],
+                "FloatComponentRegisterOffsets": [
+                  0
+                ],
+                "Int32ComponentByteOffsets": [],
+                "Int32ComponentRegisterOffsets": [],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 1,
+              "Int32ComponentStart": 3,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [
+                  0,
+                  4,
+                  8
+                ],
+                "FloatComponentRegisterOffsets": [
+                  0,
+                  1,
+                  2
+                ],
+                "Int32ComponentByteOffsets": [],
+                "Int32ComponentRegisterOffsets": [],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 4,
+              "Int32ComponentStart": 3,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [],
+                "FloatComponentRegisterOffsets": [],
+                "Int32ComponentByteOffsets": [
+                  0
+                ],
+                "Int32ComponentRegisterOffsets": [
+                  0
+                ],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 4,
+              "Int32ComponentStart": 4,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [
+                  0
+                ],
+                "FloatComponentRegisterOffsets": [
+                  0
+                ],
+                "Int32ComponentByteOffsets": [],
+                "Int32ComponentRegisterOffsets": [],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            }
+          ],
+          "TotalFloatComponents": 5,
+          "TotalInt32Components": 4
+        },
+        "SpawnInstanceEmitterBindings": [
+          {
+            "FloatOffsets": [],
+            "Int32Offsets": []
+          }
+        ],
+        "UpdateInstanceSystemBinding": {
+          "FloatOffsets": [
+            {
+              "ParameterOffset": 8,
+              "DataSetComponentOffset": 0
+            }
+          ],
+          "Int32Offsets": [
+            {
+              "ParameterOffset": 16,
+              "DataSetComponentOffset": 2
+            }
+          ]
+        },
+        "UpdateInstanceOwnerBinding": {
+          "FloatOffsets": [
+            {
+              "ParameterOffset": 416,
+              "DataSetComponentOffset": 1
+            },
+            {
+              "ParameterOffset": 420,
+              "DataSetComponentOffset": 2
+            },
+            {
+              "ParameterOffset": 424,
+              "DataSetComponentOffset": 3
+            }
+          ]
+        },
+        "UpdateInstanceEmitterBindings": [
+          {
+            "FloatOffsets": [
+              {
+                "ParameterOffset": 8,
+                "DataSetComponentOffset": 4
+              }
+            ],
+            "Int32Offsets": [
+              {
+                "ParameterOffset": 0,
+                "DataSetComponentOffset": 3
+              }
+            ]
+          }
+        ]
+      },
+      "ExposedParameters": {}
+    },
+    "EmitterCompiledStructs": [
+      {
+        "SpawnAttributes": [
+          "Shields.SpawnBurst_Instantaneous.SpawnBurst",
+          "Shields.SpawnBurst_Instantaneous001.SpawnBurst"
+        ],
+        "EmitterSpawnIntervalVar": {
+          "VarData": "",
+          "Name": "Shields.SpawnInterval",
+          "TypeDef": {
+            "ClassStructOrEnum": {
+              "ObjectName": "ScriptStruct'NiagaraFloat'",
+              "ObjectPath": "/Script/Niagara"
+            },
+            "UnderlyingType": 2
+          }
+        },
+        "EmitterInterpSpawnStartDTVar": {
+          "VarData": "",
+          "Name": "Shields.InterpSpawnStartDt",
+          "TypeDef": {
+            "ClassStructOrEnum": {
+              "ObjectName": "ScriptStruct'NiagaraFloat'",
+              "ObjectPath": "/Script/Niagara"
+            },
+            "UnderlyingType": 2
+          }
+        },
+        "EmitterSpawnGroupVar": {
+          "VarData": "",
+          "Name": "Shields.SpawnGroup",
+          "TypeDef": {
+            "ClassStructOrEnum": {
+              "ObjectName": "ScriptStruct'NiagaraInt32'",
+              "ObjectPath": "/Script/Niagara"
+            },
+            "UnderlyingType": 2
+          }
+        },
+        "EmitterAgeVar": {
+          "VarData": "",
+          "Name": "Shields.Age",
+          "TypeDef": {
+            "ClassStructOrEnum": {
+              "ObjectName": "ScriptStruct'NiagaraFloat'",
+              "ObjectPath": "/Script/Niagara"
+            },
+            "UnderlyingType": 2
+          }
+        },
+        "EmitterRandomSeedVar": {
+          "VarData": "",
+          "Name": "Shields.RandomSeed",
+          "TypeDef": {
+            "ClassStructOrEnum": {
+              "ObjectName": "ScriptStruct'NiagaraInt32'",
+              "ObjectPath": "/Script/Niagara"
+            },
+            "UnderlyingType": 2
+          }
+        },
+        "EmitterInstanceSeedVar": {
+          "VarData": "",
+          "Name": "Engine.Shields.InstanceSeed",
+          "TypeDef": {
+            "ClassStructOrEnum": {
+              "ObjectName": "ScriptStruct'NiagaraInt32'",
+              "ObjectPath": "/Script/Niagara"
+            },
+            "UnderlyingType": 2
+          }
+        },
+        "EmitterTotalSpawnedParticlesVar": {
+          "VarData": "",
+          "Name": "Engine.Shields.TotalSpawnedParticles",
+          "TypeDef": {
+            "ClassStructOrEnum": {
+              "ObjectName": "ScriptStruct'NiagaraInt32'",
+              "ObjectPath": "/Script/Niagara"
+            },
+            "UnderlyingType": 2
+          }
+        },
+        "DataSetCompiledData": {
+          "Variables": [
+            {
+              "VarData": "",
+              "Name": "Age",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "",
+              "Name": "Color",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "AAAAAA==",
+              "Name": "Lifetime",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "",
+              "Name": "MaterialRandom",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "",
+              "Name": "MeshOrientation",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'Quat'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "",
+              "Name": "NormalizedAge",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "",
+              "Name": "Position",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'Vector'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "",
+              "Name": "Previous.MeshOrientation",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'Quat'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "",
+              "Name": "Previous.Position",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'Vector'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "",
+              "Name": "Previous.Scale",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'Vector'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "AACAPwAAgD8AAIA/",
+              "Name": "Scale",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'Vector'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "",
+              "Name": "SpawnGroup",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraInt32'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            {
+              "VarData": "",
+              "Name": "UniqueID",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraInt32'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            }
+          ],
+          "VariableLayouts": [
+            {
+              "FloatComponentStart": 0,
+              "Int32ComponentStart": 0,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [
+                  0
+                ],
+                "FloatComponentRegisterOffsets": [
+                  0
+                ],
+                "Int32ComponentByteOffsets": [],
+                "Int32ComponentRegisterOffsets": [],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 1,
+              "Int32ComponentStart": 0,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [
+                  0,
+                  4,
+                  8,
+                  12
+                ],
+                "FloatComponentRegisterOffsets": [
+                  0,
+                  1,
+                  2,
+                  3
+                ],
+                "Int32ComponentByteOffsets": [],
+                "Int32ComponentRegisterOffsets": [],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 5,
+              "Int32ComponentStart": 0,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [
+                  0
+                ],
+                "FloatComponentRegisterOffsets": [
+                  0
+                ],
+                "Int32ComponentByteOffsets": [],
+                "Int32ComponentRegisterOffsets": [],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 6,
+              "Int32ComponentStart": 0,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [
+                  0
+                ],
+                "FloatComponentRegisterOffsets": [
+                  0
+                ],
+                "Int32ComponentByteOffsets": [],
+                "Int32ComponentRegisterOffsets": [],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 7,
+              "Int32ComponentStart": 0,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [
+                  0,
+                  4,
+                  8,
+                  12
+                ],
+                "FloatComponentRegisterOffsets": [
+                  0,
+                  1,
+                  2,
+                  3
+                ],
+                "Int32ComponentByteOffsets": [],
+                "Int32ComponentRegisterOffsets": [],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 11,
+              "Int32ComponentStart": 0,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [
+                  0
+                ],
+                "FloatComponentRegisterOffsets": [
+                  0
+                ],
+                "Int32ComponentByteOffsets": [],
+                "Int32ComponentRegisterOffsets": [],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 12,
+              "Int32ComponentStart": 0,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [
+                  0,
+                  4,
+                  8
+                ],
+                "FloatComponentRegisterOffsets": [
+                  0,
+                  1,
+                  2
+                ],
+                "Int32ComponentByteOffsets": [],
+                "Int32ComponentRegisterOffsets": [],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 15,
+              "Int32ComponentStart": 0,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [
+                  0,
+                  4,
+                  8,
+                  12
+                ],
+                "FloatComponentRegisterOffsets": [
+                  0,
+                  1,
+                  2,
+                  3
+                ],
+                "Int32ComponentByteOffsets": [],
+                "Int32ComponentRegisterOffsets": [],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 19,
+              "Int32ComponentStart": 0,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [
+                  0,
+                  4,
+                  8
+                ],
+                "FloatComponentRegisterOffsets": [
+                  0,
+                  1,
+                  2
+                ],
+                "Int32ComponentByteOffsets": [],
+                "Int32ComponentRegisterOffsets": [],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 22,
+              "Int32ComponentStart": 0,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [
+                  0,
+                  4,
+                  8
+                ],
+                "FloatComponentRegisterOffsets": [
+                  0,
+                  1,
+                  2
+                ],
+                "Int32ComponentByteOffsets": [],
+                "Int32ComponentRegisterOffsets": [],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 25,
+              "Int32ComponentStart": 0,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [
+                  0,
+                  4,
+                  8
+                ],
+                "FloatComponentRegisterOffsets": [
+                  0,
+                  1,
+                  2
+                ],
+                "Int32ComponentByteOffsets": [],
+                "Int32ComponentRegisterOffsets": [],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 28,
+              "Int32ComponentStart": 0,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [],
+                "FloatComponentRegisterOffsets": [],
+                "Int32ComponentByteOffsets": [
+                  0
+                ],
+                "Int32ComponentRegisterOffsets": [
+                  0
+                ],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            },
+            {
+              "FloatComponentStart": 28,
+              "Int32ComponentStart": 1,
+              "HalfComponentStart": 0,
+              "LayoutInfo": {
+                "FloatComponentByteOffsets": [],
+                "FloatComponentRegisterOffsets": [],
+                "Int32ComponentByteOffsets": [
+                  0
+                ],
+                "Int32ComponentRegisterOffsets": [
+                  0
+                ],
+                "HalfComponentByteOffsets": [],
+                "HalfComponentRegisterOffsets": []
+              }
+            }
+          ],
+          "ID": {
+            "Name": "E10E76884B9CD592AF12D5902C1719BE",
+            "Type": "ENiagaraDataSetType::ParticleData"
+          },
+          "TotalFloatComponents": 28,
+          "TotalInt32Components": 2,
+          "TotalHalfComponents": 0,
+          "bRequiresPersistentIDs": false,
+          "SimTarget": "ENiagaraSimTarget::CPUSim"
+        }
+      }
+    ]
+  }
+]

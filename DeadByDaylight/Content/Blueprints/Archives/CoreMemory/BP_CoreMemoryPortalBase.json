@@ -1,0 +1,464 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_CoreMemoryPortalBase_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_CoreMemoryPortalBase_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/CoreMemory/BP_CoreMemoryPortalBase.15"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'CoreMemoryPortal'",
+      "ObjectPath": "/Script/CoreMemory"
+    },
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_CoreMemoryPortalBase_C'Default__BP_CoreMemoryPortalBase_C'",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/CoreMemory/BP_CoreMemoryPortalBase.1"
+    }
+  },
+  {
+    "Type": "BP_CoreMemoryPortalBase_C",
+    "Name": "Default__BP_CoreMemoryPortalBase_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/Archives/CoreMemory/BP_CoreMemoryPortalBase.BP_CoreMemoryPortalBase_C'",
+    "Properties": {
+      "_coreMemoryPortalStaticMesh": {
+        "ObjectName": "StaticMeshComponent'Default__BP_CoreMemoryPortalBase_C:CoreMemoryStaticMeshComponent'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/CoreMemory/BP_CoreMemoryPortalBase.16"
+      },
+      "_coreMemoryController": {
+        "ObjectName": "CoreMemoryController'Default__BP_CoreMemoryPortalBase_C:CoreMemoryController'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/CoreMemory/BP_CoreMemoryPortalBase.5"
+      },
+      "_coreMemoryPortalComponent": {
+        "ObjectName": "CoreMemoryPortalComponent'Default__BP_CoreMemoryPortalBase_C:CoreMemoryPortalComponent'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/CoreMemory/BP_CoreMemoryPortalBase.6"
+      },
+      "_coreMemoryPortalFXComponent": {
+        "ObjectName": "CoreMemoryPortalFXComponent'Default__BP_CoreMemoryPortalBase_C:CoreMemoryPortalFXComponent'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/CoreMemory/BP_CoreMemoryPortalBase.7"
+      },
+      "_synchronizeCoreMemoryInteractor": {
+        "ObjectName": "Interactor'Default__BP_CoreMemoryPortalBase_C:SynchronizeCoreMemoryInteractor'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/CoreMemory/BP_CoreMemoryPortalBase.11"
+      },
+      "_synchronizeCoreMemoryInteraction": {
+        "ObjectName": "SynchronizeCoreMemoryInteraction'Default__BP_CoreMemoryPortalBase_C:SynchronizeCoreMemoryInteraction'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/CoreMemory/BP_CoreMemoryPortalBase.17"
+      },
+      "_synchronizeCoreMemoryInteractionKiller": {
+        "ObjectName": "SynchronizeCoreMemoryInteraction'Default__BP_CoreMemoryPortalBase_C:SynchronizeCoreMemoryInteractionKiller'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/CoreMemory/BP_CoreMemoryPortalBase.18"
+      },
+      "_synchronizeCoreMemoryInteractionChargeable": {
+        "ObjectName": "ChargeableComponent'Default__BP_CoreMemoryPortalBase_C:SynchronizeCoreMemoryInteractionChargeable'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/CoreMemory/BP_CoreMemoryPortalBase.3"
+      },
+      "_synchronizeCoreMemoryInteractionChargeableKiller": {
+        "ObjectName": "ChargeableComponent'Default__BP_CoreMemoryPortalBase_C:SynchronizeCoreMemoryInteractionChargeableKiller'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/CoreMemory/BP_CoreMemoryPortalBase.4"
+      },
+      "_synchronizeCoreMemoryInteractionZone": {
+        "ObjectName": "BoxComponent'Default__BP_CoreMemoryPortalBase_C:SynchronizeCoreMemoryInteractionZone'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/CoreMemory/BP_CoreMemoryPortalBase.2"
+      },
+      "_transformOptimizer": {
+        "ObjectName": "InteractableTransformOptimizer'Default__BP_CoreMemoryPortalBase_C:InteractableOptimizer'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/CoreMemory/BP_CoreMemoryPortalBase.10"
+      },
+      "RootComponent": {
+        "ObjectName": "SceneComponent'Default__BP_CoreMemoryPortalBase_C:Root'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/CoreMemory/BP_CoreMemoryPortalBase.13"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "SynchronizeCoreMemoryInteractionZone",
+    "Outer": "Default__BP_CoreMemoryPortalBase_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 32.0,
+        "Y": 32.0,
+        "Z": 60.0
+      },
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel1",
+        "CollisionProfileName": "Interactable",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel2",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel3",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel4",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel5",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel6",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Interactable",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Audio",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Slasher",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Spider",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Traps",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BlinkBlocker",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Ground",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_CoreMemoryPortalBase_C:Root'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/CoreMemory/BP_CoreMemoryPortalBase.13"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 30.0
+      }
+    }
+  },
+  {
+    "Type": "ChargeableComponent",
+    "Name": "SynchronizeCoreMemoryInteractionChargeable",
+    "Outer": "Default__BP_CoreMemoryPortalBase_C",
+    "Class": "UScriptClass'ChargeableComponent'"
+  },
+  {
+    "Type": "ChargeableComponent",
+    "Name": "SynchronizeCoreMemoryInteractionChargeableKiller",
+    "Outer": "Default__BP_CoreMemoryPortalBase_C",
+    "Class": "UScriptClass'ChargeableComponent'"
+  },
+  {
+    "Type": "CoreMemoryController",
+    "Name": "CoreMemoryController",
+    "Outer": "Default__BP_CoreMemoryPortalBase_C",
+    "Class": "UScriptClass'CoreMemoryController'",
+    "Properties": {
+      "_archiveSpecialBehaviourId": "CoreMemoryPortal",
+      "bAutoActivate": true
+    }
+  },
+  {
+    "Type": "CoreMemoryPortalComponent",
+    "Name": "CoreMemoryPortalComponent",
+    "Outer": "Default__BP_CoreMemoryPortalBase_C",
+    "Class": "UScriptClass'CoreMemoryPortalComponent'"
+  },
+  {
+    "Type": "CoreMemoryPortalFXComponent",
+    "Name": "CoreMemoryPortalFXComponent",
+    "Outer": "Default__BP_CoreMemoryPortalBase_C",
+    "Class": "UScriptClass'CoreMemoryPortalFXComponent'"
+  },
+  {
+    "Type": "CoreMemoryPortalOutlineUpdateStrategy",
+    "Name": "CoreMemoryPortalOutlineUpdateStrategy",
+    "Outer": "Default__BP_CoreMemoryPortalBase_C",
+    "Class": "UScriptClass'CoreMemoryPortalOutlineUpdateStrategy'",
+    "Properties": {
+      "_outlineComponent": {
+        "ObjectName": "DBDOutlineComponent'Default__BP_CoreMemoryPortalBase_C:CoreMemoryPortalOutline'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/CoreMemory/BP_CoreMemoryPortalBase.9"
+      }
+    }
+  },
+  {
+    "Type": "DBDOutlineComponent",
+    "Name": "CoreMemoryPortalOutline",
+    "Outer": "Default__BP_CoreMemoryPortalBase_C",
+    "Class": "UScriptClass'DBDOutlineComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "StaticMeshComponent'Default__BP_CoreMemoryPortalBase_C:CoreMemoryStaticMeshComponent'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/CoreMemory/BP_CoreMemoryPortalBase.16"
+      }
+    }
+  },
+  {
+    "Type": "InteractableTransformOptimizer",
+    "Name": "InteractableOptimizer",
+    "Outer": "Default__BP_CoreMemoryPortalBase_C",
+    "Class": "UScriptClass'InteractableTransformOptimizer'"
+  },
+  {
+    "Type": "Interactor",
+    "Name": "SynchronizeCoreMemoryInteractor",
+    "Outer": "Default__BP_CoreMemoryPortalBase_C",
+    "Class": "UScriptClass'Interactor'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BP_CoreMemoryPortalBase_C:SynchronizeCoreMemoryInteractionZone'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/CoreMemory/BP_CoreMemoryPortalBase.2"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_CoreMemoryPortalBase_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Root",
+    "Outer": "Default__BP_CoreMemoryPortalBase_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_CoreMemoryPortalBase_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/CoreMemory/BP_CoreMemoryPortalBase.12"
+      },
+      "VariableGuid": "8D643FAB-4D9AE218-7C948C99-AE18329E",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_CoreMemoryPortalBase_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_CoreMemoryPortalBase_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/CoreMemory/BP_CoreMemoryPortalBase.14"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "CoreMemoryStaticMeshComponent",
+    "Outer": "Default__BP_CoreMemoryPortalBase_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Halloween2022_UnstableRift_01'",
+        "ObjectPath": "DeadByDaylight/Content/Effects/Mesh/SM_Halloween2022_UnstableRift_01.2"
+      },
+      "bUseDefaultCollision": false,
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel1",
+        "CollisionEnabled": "ECollisionEnabled::QueryOnly",
+        "CollisionProfileName": "Interactable",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel2",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel3",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel4",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel5",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel6",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Interactable",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Audio",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Slasher",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Spider",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Traps",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BlinkBlocker",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Ground",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        },
+        "bEnableGravity": false
+      },
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_CoreMemoryPortalBase_C:Root'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/CoreMemory/BP_CoreMemoryPortalBase.13"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 60.0
+      }
+    }
+  },
+  {
+    "Type": "SynchronizeCoreMemoryInteraction",
+    "Name": "SynchronizeCoreMemoryInteraction",
+    "Outer": "Default__BP_CoreMemoryPortalBase_C",
+    "Class": "UScriptClass'SynchronizeCoreMemoryInteraction'",
+    "Properties": {
+      "InteractionAnimation": "EInteractionAnimation::VE_InteractWithGlyph",
+      "CamperCanInteract": true,
+      "_interactor": {
+        "ObjectName": "Interactor'Default__BP_CoreMemoryPortalBase_C:SynchronizeCoreMemoryInteractor'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/CoreMemory/BP_CoreMemoryPortalBase.11"
+      },
+      "AttachParent": {
+        "ObjectName": "Interactor'Default__BP_CoreMemoryPortalBase_C:SynchronizeCoreMemoryInteractor'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/CoreMemory/BP_CoreMemoryPortalBase.11"
+      }
+    }
+  },
+  {
+    "Type": "SynchronizeCoreMemoryInteraction",
+    "Name": "SynchronizeCoreMemoryInteractionKiller",
+    "Outer": "Default__BP_CoreMemoryPortalBase_C",
+    "Class": "UScriptClass'SynchronizeCoreMemoryInteraction'",
+    "Properties": {
+      "SlasherCanInteract": true,
+      "UpdateMontage": {
+        "MontageID": "Generic_Interaction"
+      },
+      "_interactor": {
+        "ObjectName": "Interactor'Default__BP_CoreMemoryPortalBase_C:SynchronizeCoreMemoryInteractor'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/CoreMemory/BP_CoreMemoryPortalBase.11"
+      },
+      "AttachParent": {
+        "ObjectName": "Interactor'Default__BP_CoreMemoryPortalBase_C:SynchronizeCoreMemoryInteractor'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/CoreMemory/BP_CoreMemoryPortalBase.11"
+      }
+    }
+  }
+]

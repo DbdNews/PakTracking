@@ -3,6 +3,7 @@
     "Type": "Function",
     "Name": "ExecuteUbergraph_BP_Wal_CorpseSetup_02",
     "Outer": "BP_Wal_CorpseSetup_02_C",
+    "Class": "UScriptClass'Function'",
     "ChildProperties": [
       {
         "Type": "IntProperty",
@@ -12,16 +13,15 @@
         "PropertyFlags": 148
       },
       {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_ShouldUseAtlantaContent_ReturnValue",
+        "Type": "DelegateProperty",
+        "Name": "Temp_delegate_Variable",
         "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
+        "ElementSize": 20,
+        "PropertyFlags": 2,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'OnAkPostEventCallback__DelegateSignature'",
+          "ObjectPath": "/Script/AkAudio"
+        }
       },
       {
         "Type": "ObjectProperty",
@@ -29,7 +29,7 @@
         "Flags": 1,
         "ElementSize": 8,
         "PropertyClass": {
-          "ObjectName": "Class GameInstance",
+          "ObjectName": "Class'GameInstance'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -39,7 +39,7 @@
         "Flags": 1,
         "ElementSize": 8,
         "PropertyClass": {
-          "ObjectName": "Class DBDGameInstance",
+          "ObjectName": "Class'DBDGameInstance'",
           "ObjectPath": "/Script/DeadByDaylight"
         }
       },
@@ -56,44 +56,13 @@
         "bIsNativeBool": true
       },
       {
-        "Type": "StructProperty",
-        "Name": "CallFunc_K2_GetComponentLocation_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 12,
-        "Struct": {
-          "ObjectName": "ScriptStruct Vector",
-          "ObjectPath": "/Script/CoreUObject"
-        }
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "CallFunc_Add_VectorVector_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 12,
-        "Struct": {
-          "ObjectName": "ScriptStruct Vector",
-          "ObjectPath": "/Script/CoreUObject"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "CallFunc_SpawnDecalAtLocation_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 8,
-        "PropertyFlags": 524288,
-        "PropertyClass": {
-          "ObjectName": "Class DecalComponent",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
         "Type": "ObjectProperty",
         "Name": "K2Node_ComponentBoundEvent_OverlappedComponent",
         "Flags": 1,
         "ElementSize": 8,
         "PropertyFlags": 524288,
         "PropertyClass": {
-          "ObjectName": "Class PrimitiveComponent",
+          "ObjectName": "Class'PrimitiveComponent'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -103,7 +72,7 @@
         "Flags": 1,
         "ElementSize": 8,
         "PropertyClass": {
-          "ObjectName": "Class Actor",
+          "ObjectName": "Class'Actor'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -114,7 +83,7 @@
         "ElementSize": 8,
         "PropertyFlags": 524288,
         "PropertyClass": {
-          "ObjectName": "Class PrimitiveComponent",
+          "ObjectName": "Class'PrimitiveComponent'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -143,7 +112,7 @@
         "ElementSize": 144,
         "PropertyFlags": 549755813890,
         "Struct": {
-          "ObjectName": "ScriptStruct HitResult",
+          "ObjectName": "ScriptStruct'HitResult'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -153,7 +122,7 @@
         "Flags": 1,
         "ElementSize": 1,
         "Enum": {
-          "ObjectName": "Enum EAkResult",
+          "ObjectName": "Enum'EAkResult'",
           "ObjectPath": "/Script/AkAudio"
         },
         "UnderlyingProp": {
@@ -162,17 +131,6 @@
           "Flags": 1,
           "ElementSize": 1,
           "Enum": null
-        }
-      },
-      {
-        "Type": "DelegateProperty",
-        "Name": "Temp_delegate_Variable",
-        "Flags": 1,
-        "ElementSize": 20,
-        "PropertyFlags": 2,
-        "SignatureFunction": {
-          "ObjectName": "DelegateFunction OnAkPostEventCallback__DelegateSignature",
-          "ObjectPath": "/Script/AkAudio"
         }
       },
       {
@@ -187,7 +145,7 @@
           "Flags": 1,
           "ElementSize": 56,
           "Struct": {
-            "ObjectName": "ScriptStruct AkExternalSourceInfo",
+            "ObjectName": "ScriptStruct'AkExternalSourceInfo'",
             "ObjectPath": "/Script/AkAudio"
           }
         }
@@ -204,8 +162,39 @@
         "Flags": 1,
         "ElementSize": 20,
         "SignatureFunction": {
-          "ObjectName": "DelegateFunction OnAkBankCallback__DelegateSignature",
+          "ObjectName": "DelegateFunction'OnAkBankCallback__DelegateSignature'",
           "ObjectPath": "/Script/AkAudio"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentLocation_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Add_VectorVector_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnDecalAtLocation_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "PropertyClass": {
+          "ObjectName": "Class'DecalComponent'",
+          "ObjectPath": "/Script/Engine"
         }
       }
     ],
@@ -215,6 +204,7 @@
     "Type": "Function",
     "Name": "CustomEvent_0",
     "Outer": "BP_Wal_CorpseSetup_02_C",
+    "Class": "UScriptClass'Function'",
     "ChildProperties": [
       {
         "Type": "EnumProperty",
@@ -223,7 +213,7 @@
         "ElementSize": 1,
         "PropertyFlags": 148,
         "Enum": {
-          "ObjectName": "Enum EAkResult",
+          "ObjectName": "Enum'EAkResult'",
           "ObjectPath": "/Script/AkAudio"
         },
         "UnderlyingProp": {
@@ -241,6 +231,7 @@
     "Type": "Function",
     "Name": "BndEvt__DetectionVolume_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature",
     "Outer": "BP_Wal_CorpseSetup_02_C",
+    "Class": "UScriptClass'Function'",
     "ChildProperties": [
       {
         "Type": "ObjectProperty",
@@ -249,7 +240,7 @@
         "ElementSize": 8,
         "PropertyFlags": 524436,
         "PropertyClass": {
-          "ObjectName": "Class PrimitiveComponent",
+          "ObjectName": "Class'PrimitiveComponent'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -260,7 +251,7 @@
         "ElementSize": 8,
         "PropertyFlags": 148,
         "PropertyClass": {
-          "ObjectName": "Class Actor",
+          "ObjectName": "Class'Actor'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -271,7 +262,7 @@
         "ElementSize": 8,
         "PropertyFlags": 524436,
         "PropertyClass": {
-          "ObjectName": "Class PrimitiveComponent",
+          "ObjectName": "Class'PrimitiveComponent'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -302,7 +293,7 @@
         "ElementSize": 144,
         "PropertyFlags": 549890032022,
         "Struct": {
-          "ObjectName": "ScriptStruct HitResult",
+          "ObjectName": "ScriptStruct'HitResult'",
           "ObjectPath": "/Script/Engine"
         }
       }
@@ -313,8 +304,9 @@
     "Type": "Function",
     "Name": "ReceiveBeginPlay",
     "Outer": "BP_Wal_CorpseSetup_02_C",
+    "Class": "UScriptClass'Function'",
     "SuperStruct": {
-      "ObjectName": "Function Actor:ReceiveBeginPlay",
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
       "ObjectPath": "/Script/Engine"
     },
     "FunctionFlags": 134744064
@@ -322,41 +314,42 @@
   {
     "Type": "BlueprintGeneratedClass",
     "Name": "BP_Wal_CorpseSetup_02_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
     "Properties": {
       "DynamicBindingObjects": [
         {
-          "ObjectName": "ComponentDelegateBinding BP_Wal_CorpseSetup_02_C:ComponentDelegateBinding_0",
+          "ObjectName": "ComponentDelegateBinding'BP_Wal_CorpseSetup_02_C:ComponentDelegateBinding_0'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.10"
         }
       ],
       "SimpleConstructionScript": {
-        "ObjectName": "SimpleConstructionScript BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.21"
+        "ObjectName": "SimpleConstructionScript'BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.27"
       },
       "UberGraphFunction": {
-        "ObjectName": "Function BP_Wal_CorpseSetup_02_C:ExecuteUbergraph_BP_Wal_CorpseSetup_02",
+        "ObjectName": "Function'BP_Wal_CorpseSetup_02_C:ExecuteUbergraph_BP_Wal_CorpseSetup_02'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.0"
       }
     },
     "SuperStruct": {
-      "ObjectName": "Class Actor",
+      "ObjectName": "Class'Actor'",
       "ObjectPath": "/Script/Engine"
     },
     "Children": [
       {
-        "ObjectName": "Function BP_Wal_CorpseSetup_02_C:ReceiveBeginPlay",
+        "ObjectName": "Function'BP_Wal_CorpseSetup_02_C:ReceiveBeginPlay'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.3"
       },
       {
-        "ObjectName": "Function BP_Wal_CorpseSetup_02_C:BndEvt__DetectionVolume_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature",
+        "ObjectName": "Function'BP_Wal_CorpseSetup_02_C:BndEvt__DetectionVolume_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.2"
       },
       {
-        "ObjectName": "Function BP_Wal_CorpseSetup_02_C:CustomEvent_0",
+        "ObjectName": "Function'BP_Wal_CorpseSetup_02_C:CustomEvent_0'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.1"
       },
       {
-        "ObjectName": "Function BP_Wal_CorpseSetup_02_C:ExecuteUbergraph_BP_Wal_CorpseSetup_02",
+        "ObjectName": "Function'BP_Wal_CorpseSetup_02_C:ExecuteUbergraph_BP_Wal_CorpseSetup_02'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.0"
       }
     ],
@@ -368,8 +361,30 @@
         "ElementSize": 16,
         "PropertyFlags": 2105344,
         "Struct": {
-          "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
           "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WAL_LockersStandardLargeMesh",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class'DBDSkeletalMeshComponentBudgeted'",
+          "ObjectPath": "/Script/DBDAnimationBudgetAllocator"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Corpse02Mesh",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class'DBDSkeletalMeshComponentBudgeted'",
+          "ObjectPath": "/Script/DBDAnimationBudgetAllocator"
         }
       },
       {
@@ -379,7 +394,7 @@
         "ElementSize": 8,
         "PropertyFlags": 17180393476,
         "PropertyClass": {
-          "ObjectName": "Class SleepingSkinnedMeshRegisterer",
+          "ObjectName": "Class'SleepingSkinnedMeshRegisterer'",
           "ObjectPath": "/Script/AnimationUtilities"
         }
       },
@@ -390,7 +405,7 @@
         "ElementSize": 8,
         "PropertyFlags": 17180393476,
         "PropertyClass": {
-          "ObjectName": "Class BoxComponent",
+          "ObjectName": "Class'BoxComponent'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -401,7 +416,7 @@
         "ElementSize": 8,
         "PropertyFlags": 17180393476,
         "PropertyClass": {
-          "ObjectName": "Class BoxComponent",
+          "ObjectName": "Class'BoxComponent'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -412,7 +427,7 @@
         "ElementSize": 8,
         "PropertyFlags": 17180393476,
         "PropertyClass": {
-          "ObjectName": "Class AkComponent",
+          "ObjectName": "Class'AkComponent'",
           "ObjectPath": "/Script/AkAudio"
         }
       },
@@ -423,18 +438,7 @@
         "ElementSize": 8,
         "PropertyFlags": 17180393476,
         "PropertyClass": {
-          "ObjectName": "Class StaticMeshComponent",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "WAL_LockersStandardLarge01_REF",
-        "Flags": 2097153,
-        "ElementSize": 8,
-        "PropertyFlags": 17180393476,
-        "PropertyClass": {
-          "ObjectName": "Class SkeletalMeshComponent",
+          "ObjectName": "Class'StaticMeshComponent'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -445,18 +449,7 @@
         "ElementSize": 8,
         "PropertyFlags": 17180393476,
         "PropertyClass": {
-          "ObjectName": "Class BoxComponent",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "Corpse02_REF",
-        "Flags": 2097153,
-        "ElementSize": 8,
-        "PropertyFlags": 17180393476,
-        "PropertyClass": {
-          "ObjectName": "Class SkeletalMeshComponent",
+          "ObjectName": "Class'BoxComponent'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -467,7 +460,7 @@
         "ElementSize": 8,
         "PropertyFlags": 17180393476,
         "PropertyClass": {
-          "ObjectName": "Class SceneComponent",
+          "ObjectName": "Class'SceneComponent'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -487,37 +480,38 @@
     ],
     "FuncMap": {
       "ExecuteUbergraph_BP_Wal_CorpseSetup_02": {
-        "ObjectName": "Function BP_Wal_CorpseSetup_02_C:ExecuteUbergraph_BP_Wal_CorpseSetup_02",
+        "ObjectName": "Function'BP_Wal_CorpseSetup_02_C:ExecuteUbergraph_BP_Wal_CorpseSetup_02'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.0"
       },
       "CustomEvent_0": {
-        "ObjectName": "Function BP_Wal_CorpseSetup_02_C:CustomEvent_0",
+        "ObjectName": "Function'BP_Wal_CorpseSetup_02_C:CustomEvent_0'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.1"
       },
       "BndEvt__DetectionVolume_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature": {
-        "ObjectName": "Function BP_Wal_CorpseSetup_02_C:BndEvt__DetectionVolume_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature",
+        "ObjectName": "Function'BP_Wal_CorpseSetup_02_C:BndEvt__DetectionVolume_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.2"
       },
       "ReceiveBeginPlay": {
-        "ObjectName": "Function BP_Wal_CorpseSetup_02_C:ReceiveBeginPlay",
+        "ObjectName": "Function'BP_Wal_CorpseSetup_02_C:ReceiveBeginPlay'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.3"
       }
     },
     "ClassFlags": 8652820,
     "ClassWithin": {
-      "ObjectName": "Class Object",
+      "ObjectName": "Class'Object'",
       "ObjectPath": "/Script/CoreUObject"
     },
     "ClassConfigName": "Engine",
     "bCooked": true,
     "ClassDefaultObject": {
-      "ObjectName": "BP_Wal_CorpseSetup_02_C Default__BP_Wal_CorpseSetup_02_C",
+      "ObjectName": "BP_Wal_CorpseSetup_02_C'Default__BP_Wal_CorpseSetup_02_C'",
       "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.5"
     }
   },
   {
     "Type": "BP_Wal_CorpseSetup_02_C",
     "Name": "Default__BP_Wal_CorpseSetup_02_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.BP_Wal_CorpseSetup_02_C'",
     "Properties": {
       "UberGraphFrame": {},
       "bReplicates": true
@@ -527,6 +521,7 @@
     "Type": "AkComponent",
     "Name": "Ak_Audio_WalCorpseSetup_GEN_VARIABLE",
     "Outer": "BP_Wal_CorpseSetup_02_C",
+    "Class": "UScriptClass'AkComponent'",
     "Properties": {
       "AttenuationScalingFactor": 2.0,
       "OcclusionRefreshInterval": 0.4,
@@ -552,9 +547,10 @@
     "Type": "BoxComponent",
     "Name": "Box1_GEN_VARIABLE",
     "Outer": "BP_Wal_CorpseSetup_02_C",
+    "Class": "UScriptClass'BoxComponent'",
     "Properties": {
       "AreaClass": {
-        "ObjectName": "Class NavArea_Obstacle",
+        "ObjectName": "Class'NavArea_Obstacle'",
         "ObjectPath": "/Script/NavigationSystem"
       },
       "DetailLevelBeforeCastShadows": "DM_MAX",
@@ -646,9 +642,10 @@
     "Type": "BoxComponent",
     "Name": "Box2_GEN_VARIABLE",
     "Outer": "BP_Wal_CorpseSetup_02_C",
+    "Class": "UScriptClass'BoxComponent'",
     "Properties": {
       "AreaClass": {
-        "ObjectName": "Class NavArea_Obstacle",
+        "ObjectName": "Class'NavArea_Obstacle'",
         "ObjectPath": "/Script/NavigationSystem"
       },
       "DetailLevelBeforeCastShadows": "DM_MAX",
@@ -760,9 +757,10 @@
     "Type": "BoxComponent",
     "Name": "DetectionVolume_GEN_VARIABLE",
     "Outer": "BP_Wal_CorpseSetup_02_C",
+    "Class": "UScriptClass'BoxComponent'",
     "Properties": {
       "AreaClass": {
-        "ObjectName": "Class NavArea_Obstacle",
+        "ObjectName": "Class'NavArea_Obstacle'",
         "ObjectPath": "/Script/NavigationSystem"
       },
       "DetailLevelBeforeCastShadows": "DM_MAX",
@@ -847,6 +845,7 @@
     "Type": "ComponentDelegateBinding",
     "Name": "ComponentDelegateBinding_0",
     "Outer": "BP_Wal_CorpseSetup_02_C",
+    "Class": "UScriptClass'ComponentDelegateBinding'",
     "Properties": {
       "ComponentDelegateBindings": [
         {
@@ -858,274 +857,29 @@
     }
   },
   {
-    "Type": "SceneComponent",
-    "Name": "DefaultSceneRoot79F9DA4146BA6B800F05D7A2502BD89B",
+    "Type": "DBDSkeletalMeshComponentBudgeted",
+    "Name": "Corpse02Mesh_GEN_VARIABLE",
     "Outer": "BP_Wal_CorpseSetup_02_C",
+    "Class": "UScriptClass'DBDSkeletalMeshComponentBudgeted'",
     "Properties": {
-      "Mobility": "EComponentMobility::Static"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_0",
-    "Outer": "SimpleConstructionScript_1",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class SleepingSkinnedMeshRegisterer",
-        "ObjectPath": "/Script/AnimationUtilities"
+      "_significanceStrategy": {
+        "ObjectName": "LinearSignificanceStrategy'BP_Wal_CorpseSetup_02_C:Corpse02Mesh_GEN_VARIABLE.LinearSignificanceStrategy_0'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.13"
       },
-      "ComponentTemplate": {
-        "ObjectName": "SleepingSkinnedMeshRegisterer BP_Wal_CorpseSetup_02_C:SleepingSkinnedMeshRegisterer_GEN_VARIABLE",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.24"
-      },
-      "VariableGuid": "4DB5A2E7-4C9630E7-89365A8C-029C01F3",
-      "InternalVariableName": "SleepingSkinnedMeshRegisterer"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_1",
-    "Outer": "SimpleConstructionScript_1",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class SkeletalMeshComponent",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "SkeletalMeshComponent BP_Wal_CorpseSetup_02_C:Corpse02_REF_GEN_VARIABLE",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.22"
-      },
-      "VariableGuid": "6AAB698B-4F494FB7-C4D38BB0-7BCD50FD",
-      "InternalVariableName": "Corpse02_REF"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_2",
-    "Outer": "SimpleConstructionScript_1",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class BoxComponent",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "BoxComponent BP_Wal_CorpseSetup_02_C:DetectionVolume_GEN_VARIABLE",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.9"
-      },
-      "VariableGuid": "AAD8F789-4DA8B2D0-12FA8585-F82298C0",
-      "InternalVariableName": "DetectionVolume"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_3",
-    "Outer": "SimpleConstructionScript_1",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class AkComponent",
-        "ObjectPath": "/Script/AkAudio"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "AkComponent BP_Wal_CorpseSetup_02_C:Ak_Audio_WalCorpseSetup_GEN_VARIABLE",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.6"
-      },
-      "VariableGuid": "C26EA732-4B10C1E5-78659F8A-43FAAE51",
-      "InternalVariableName": "Ak_Audio_WalCorpseSetup"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_5",
-    "Outer": "SimpleConstructionScript_1",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class SkeletalMeshComponent",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "SkeletalMeshComponent BP_Wal_CorpseSetup_02_C:WAL_LockersStandardLarge01_REF_GEN_VARIABLE",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.23"
-      },
-      "VariableGuid": "7428A08C-4CEA2575-FFFE3EB4-683D5DD5",
-      "InternalVariableName": "WAL_LockersStandardLarge01_REF"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_6",
-    "Outer": "SimpleConstructionScript_1",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class SceneComponent",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "SceneComponent BP_Wal_CorpseSetup_02_C:DefaultSceneRoot79F9DA4146BA6B800F05D7A2502BD89B",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.11"
-      },
-      "ChildNodes": [
-        {
-          "ObjectName": "SCS_Node BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_1",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.13"
-        },
-        {
-          "ObjectName": "SCS_Node BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_2",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.14"
-        },
-        {
-          "ObjectName": "SCS_Node BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_5",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.16"
-        },
-        {
-          "ObjectName": "SCS_Node BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_7",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.18"
-        },
-        {
-          "ObjectName": "SCS_Node BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_3",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.15"
-        },
-        {
-          "ObjectName": "SCS_Node BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_8",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.19"
-        },
-        {
-          "ObjectName": "SCS_Node BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_9",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.20"
-        }
-      ],
-      "VariableGuid": "1AD58E63-40A9C639-A4B000B8-8185C416",
-      "InternalVariableName": "DefaultSceneRoot"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_7",
-    "Outer": "SimpleConstructionScript_1",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class StaticMeshComponent",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "StaticMeshComponent BP_Wal_CorpseSetup_02_C:SM_WAL_LockersStandardUnit_door01_GEN_VARIABLE",
+      "_animBudgeterSignificanceStrategy": {
+        "ObjectName": "SimpleAnimBudgeterSignificanceStrategy'BP_Wal_CorpseSetup_02_C:Corpse02Mesh_GEN_VARIABLE.SimpleAnimBudgeterSignificanceStrategy_0'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.25"
       },
-      "VariableGuid": "6158B6CF-41EE5A70-94D2EE85-C0B69C8B",
-      "InternalVariableName": "SM_WAL_LockersStandardUnit_door01"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_8",
-    "Outer": "SimpleConstructionScript_1",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class BoxComponent",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "BoxComponent BP_Wal_CorpseSetup_02_C:Box1_GEN_VARIABLE",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.7"
-      },
-      "VariableGuid": "9AC65134-4FB1B5CC-6939BFB1-66B3A662",
-      "InternalVariableName": "Box1"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_9",
-    "Outer": "SimpleConstructionScript_1",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class BoxComponent",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "BoxComponent BP_Wal_CorpseSetup_02_C:Box2_GEN_VARIABLE",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.8"
-      },
-      "VariableGuid": "877E2202-4A47FBD5-E10FD7A4-7289E1C0",
-      "InternalVariableName": "Box2"
-    }
-  },
-  {
-    "Type": "SimpleConstructionScript",
-    "Name": "SimpleConstructionScript_1",
-    "Outer": "BP_Wal_CorpseSetup_02_C",
-    "Properties": {
-      "RootNodes": [
-        {
-          "ObjectName": "SCS_Node BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_6",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.17"
-        },
-        {
-          "ObjectName": "SCS_Node BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_0",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.12"
-        }
-      ],
-      "AllNodes": [
-        {
-          "ObjectName": "SCS_Node BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_6",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.17"
-        },
-        {
-          "ObjectName": "SCS_Node BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_1",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.13"
-        },
-        {
-          "ObjectName": "SCS_Node BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_2",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.14"
-        },
-        {
-          "ObjectName": "SCS_Node BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_5",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.16"
-        },
-        {
-          "ObjectName": "SCS_Node BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_7",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.18"
-        },
-        {
-          "ObjectName": "SCS_Node BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_3",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.15"
-        },
-        {
-          "ObjectName": "SCS_Node BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_8",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.19"
-        },
-        {
-          "ObjectName": "SCS_Node BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_9",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.20"
-        },
-        {
-          "ObjectName": "SCS_Node BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_0",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.12"
-        }
-      ],
-      "DefaultSceneRootNode": {
-        "ObjectName": "SCS_Node BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_6",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.17"
-      }
-    }
-  },
-  {
-    "Type": "SkeletalMeshComponent",
-    "Name": "Corpse02_REF_GEN_VARIABLE",
-    "Outer": "BP_Wal_CorpseSetup_02_C",
-    "Properties": {
       "AnimationMode": "EAnimationMode::AnimationCustomMode",
-      "ClothingSimulationFactory": {
-        "ObjectName": "Class ClothingSimulationFactoryNv",
-        "ObjectPath": "/Script/ClothingSystemRuntimeNv"
-      },
       "SkeletalMesh": {
-        "ObjectName": "SkeletalMesh Corpse02_REF",
+        "ObjectName": "SkeletalMesh'Corpse02_REF'",
         "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/Corpses/Mesh/Corpse02_REF.0"
       },
       "VisibilityBasedAnimTickOption": "EVisibilityBasedAnimTickOption::OnlyTickPoseWhenRendered",
       "DetailLevelBeforeCastShadows": "DM_MAX",
       "RelativeLocation": {
         "X": -123.56446,
-        "Y": -3.3775117,
+        "Y": -3.377512,
         "Z": 12.389678
       },
       "RelativeRotation": {
@@ -1136,119 +890,383 @@
     }
   },
   {
-    "Type": "SkeletalMeshComponent",
-    "Name": "WAL_LockersStandardLarge01_REF_GEN_VARIABLE",
+    "Type": "DBDSkeletalMeshComponentBudgeted",
+    "Name": "WAL_LockersStandardLargeMesh_GEN_VARIABLE",
     "Outer": "BP_Wal_CorpseSetup_02_C",
+    "Class": "UScriptClass'DBDSkeletalMeshComponentBudgeted'",
     "Properties": {
-      "ClothingSimulationFactory": {
-        "ObjectName": "Class ClothingSimulationFactoryNv",
-        "ObjectPath": "/Script/ClothingSystemRuntimeNv"
+      "_significanceStrategy": {
+        "ObjectName": "LinearSignificanceStrategy'BP_Wal_CorpseSetup_02_C:WAL_LockersStandardLargeMesh_GEN_VARIABLE.LinearSignificanceStrategy_0'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.14"
+      },
+      "_animBudgeterSignificanceStrategy": {
+        "ObjectName": "SimpleAnimBudgeterSignificanceStrategy'BP_Wal_CorpseSetup_02_C:WAL_LockersStandardLargeMesh_GEN_VARIABLE.SimpleAnimBudgeterSignificanceStrategy_0'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.26"
       },
       "SkeletalMesh": {
-        "ObjectName": "SkeletalMesh WAL_LockersStandardLarge01_REF",
+        "ObjectName": "SkeletalMesh'WAL_LockersStandardLarge01_REF'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/16-Wales/Objects/Locker_Deadbody/Skeleton/WAL_LockersStandardLarge01_REF.0"
       },
       "VisibilityBasedAnimTickOption": "EVisibilityBasedAnimTickOption::OnlyTickPoseWhenRendered",
       "DetailLevelBeforeCastShadows": "DM_MAX",
-      "BodyInstance": {
-        "CollisionResponses": {
-          "ResponseArray": [
-            {
-              "Channel": "Interactable",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Slasher",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "InteractionDetector",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "BlinkBlocker",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Ground",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "WorldStatic",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "WorldDynamic",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Pawn",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Visibility",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Camera",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "PhysicsBody",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Vehicle",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Destructible",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Audio",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Spider",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Traps",
-              "Response": "ECR_Ignore"
-            }
-          ]
-        }
-      },
       "RelativeLocation": {
         "X": -106.82022,
         "Y": 14.298692,
         "Z": 12.986636
       },
       "RelativeRotation": {
-        "Pitch": -6.830189E-05,
+        "Pitch": -6.8E-05,
         "Yaw": -90.0,
-        "Roll": 8.9922505E-05
+        "Roll": 9E-05
       },
       "RelativeScale3D": {
         "X": 1.0,
-        "Y": 0.9515497,
-        "Z": 0.99999994
+        "Y": 0.95155,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "LinearSignificanceStrategy",
+    "Name": "LinearSignificanceStrategy_0",
+    "Outer": "Corpse02Mesh_GEN_VARIABLE",
+    "Class": "UScriptClass'LinearSignificanceStrategy'",
+    "Properties": {
+      "_maxDistance": {
+        "PerDetailModeValue": [
+          {
+            "Ultra": 1700.0
+          },
+          {
+            "High": 1700.0
+          },
+          {
+            "Medium": 1700.0
+          },
+          {
+            "Low": 1700.0
+          },
+          {
+            "Mobile": 1700.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "LinearSignificanceStrategy",
+    "Name": "LinearSignificanceStrategy_0",
+    "Outer": "WAL_LockersStandardLargeMesh_GEN_VARIABLE",
+    "Class": "UScriptClass'LinearSignificanceStrategy'",
+    "Properties": {
+      "_maxDistance": {
+        "PerDetailModeValue": [
+          {
+            "Ultra": 1700.0
+          },
+          {
+            "High": 1700.0
+          },
+          {
+            "Medium": 1700.0
+          },
+          {
+            "Low": 1700.0
+          },
+          {
+            "Mobile": 1700.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot79F9DA4146BA6B800F05D7A2502BD89B",
+    "Outer": "BP_Wal_CorpseSetup_02_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SleepingSkinnedMeshRegisterer'",
+        "ObjectPath": "/Script/AnimationUtilities"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SleepingSkinnedMeshRegisterer'BP_Wal_CorpseSetup_02_C:SleepingSkinnedMeshRegisterer_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.28"
+      },
+      "VariableGuid": "4DB5A2E7-4C9630E7-89365A8C-029C01F3",
+      "InternalVariableName": "SleepingSkinnedMeshRegisterer"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_10",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DBDSkeletalMeshComponentBudgeted'",
+        "ObjectPath": "/Script/DBDAnimationBudgetAllocator"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DBDSkeletalMeshComponentBudgeted'BP_Wal_CorpseSetup_02_C:WAL_LockersStandardLargeMesh_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.12"
+      },
+      "VariableGuid": "09CF3102-49872266-F04AE1BE-CC191F50",
+      "InternalVariableName": "WAL_LockersStandardLargeMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BP_Wal_CorpseSetup_02_C:DetectionVolume_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.9"
+      },
+      "VariableGuid": "AAD8F789-4DA8B2D0-12FA8585-F82298C0",
+      "InternalVariableName": "DetectionVolume"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'AkComponent'",
+        "ObjectPath": "/Script/AkAudio"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "AkComponent'BP_Wal_CorpseSetup_02_C:Ak_Audio_WalCorpseSetup_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.6"
+      },
+      "VariableGuid": "C26EA732-4B10C1E5-78659F8A-43FAAE51",
+      "InternalVariableName": "Ak_Audio_WalCorpseSetup"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DBDSkeletalMeshComponentBudgeted'",
+        "ObjectPath": "/Script/DBDAnimationBudgetAllocator"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DBDSkeletalMeshComponentBudgeted'BP_Wal_CorpseSetup_02_C:Corpse02Mesh_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.11"
+      },
+      "VariableGuid": "570270F2-4CE3BFC7-27B5F1B7-B8D70219",
+      "InternalVariableName": "Corpse02Mesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Wal_CorpseSetup_02_C:DefaultSceneRoot79F9DA4146BA6B800F05D7A2502BD89B'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.15"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_2'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_7'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.22"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_3'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_8'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_9'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.24"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_4'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_10'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.17"
+        }
+      ],
+      "VariableGuid": "1AD58E63-40A9C639-A4B000B8-8185C416",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_7",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_Wal_CorpseSetup_02_C:SM_WAL_LockersStandardUnit_door01_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.29"
+      },
+      "VariableGuid": "6158B6CF-41EE5A70-94D2EE85-C0B69C8B",
+      "InternalVariableName": "SM_WAL_LockersStandardUnit_door01"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_8",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BP_Wal_CorpseSetup_02_C:Box1_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.7"
+      },
+      "VariableGuid": "9AC65134-4FB1B5CC-6939BFB1-66B3A662",
+      "InternalVariableName": "Box1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_9",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BP_Wal_CorpseSetup_02_C:Box2_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.8"
+      },
+      "VariableGuid": "877E2202-4A47FBD5-E10FD7A4-7289E1C0",
+      "InternalVariableName": "Box2"
+    }
+  },
+  {
+    "Type": "SimpleAnimBudgeterSignificanceStrategy",
+    "Name": "SimpleAnimBudgeterSignificanceStrategy_0",
+    "Outer": "Corpse02Mesh_GEN_VARIABLE",
+    "Class": "UScriptClass'SimpleAnimBudgeterSignificanceStrategy'"
+  },
+  {
+    "Type": "SimpleAnimBudgeterSignificanceStrategy",
+    "Name": "SimpleAnimBudgeterSignificanceStrategy_0",
+    "Outer": "WAL_LockersStandardLargeMesh_GEN_VARIABLE",
+    "Class": "UScriptClass'SimpleAnimBudgeterSignificanceStrategy'"
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_1",
+    "Outer": "BP_Wal_CorpseSetup_02_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_6'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_0'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.16"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_6'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_2'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_7'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.22"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_3'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_8'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_9'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.24"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_0'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_4'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_10'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.17"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Wal_CorpseSetup_02_C:SimpleConstructionScript_1.SCS_Node_6'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/WorldObjects/WindowBlockers/BP_Wal_CorpseSetup_02.21"
       }
     }
   },
   {
     "Type": "SleepingSkinnedMeshRegisterer",
     "Name": "SleepingSkinnedMeshRegisterer_GEN_VARIABLE",
-    "Outer": "BP_Wal_CorpseSetup_02_C"
+    "Outer": "BP_Wal_CorpseSetup_02_C",
+    "Class": "UScriptClass'SleepingSkinnedMeshRegisterer'"
   },
   {
     "Type": "StaticMeshComponent",
     "Name": "SM_WAL_LockersStandardUnit_door01_GEN_VARIABLE",
     "Outer": "BP_Wal_CorpseSetup_02_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
     "Properties": {
       "StaticMesh": {
-        "ObjectName": "StaticMesh SM_WAL_LockersStandardUnit_door01",
+        "ObjectName": "StaticMesh'SM_WAL_LockersStandardUnit_door01'",
         "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Wales/Blockers/SM_WAL_LockersStandardUnit_door01.2"
       },
       "DetailLevelBeforeCastShadows": "DM_MAX",

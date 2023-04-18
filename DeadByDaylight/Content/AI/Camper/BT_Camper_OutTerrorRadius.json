@@ -2527,6 +2527,7 @@
     "Outer": "BT_Camper_OutTerrorRadius",
     "Class": "UScriptClass'BTDecorator_IsAtLocation'",
     "Properties": {
+      "bUseNavAgentGoalLocation": false,
       "BlackboardKey": {
         "SelectedKeyName": "FallPalletLocation"
       },
@@ -3448,8 +3449,9 @@
       "PlacedNearGamePalletPenalty": {
         "DefaultValue": 0.25
       },
+      "ForcePalletRange": 100.0,
       "BBSearchAround": {},
-      "SearchInterval": 0.25,
+      "SearchInterval": 0.2,
       "BBOnlyFromActor": {},
       "RejectIfWasInCooldownAndFocusedOnAnotherObject": false,
       "RejectAboveRange": 1200.0,
@@ -3460,7 +3462,9 @@
         "SelectedKeyName": "FallPalletInteractor"
       },
       "BBUnsafeActionID": {},
-      "BBUnsafeActionUsesItemAddons": {},
+      "BBUnsafeActionUsesItemAddons": {
+        "SelectedKeyName": "IsInWaitExitZone"
+      },
       "NodeName": "Find Standing Pallet",
       "TreeAsset": {
         "ObjectName": "BehaviorTree'BT_Camper_OutTerrorRadius'",
@@ -4178,7 +4182,6 @@
       "BBIgnoreGroupAvoidance": {},
       "MovementModesNearActors": [],
       "IgnoreDangerObjects": true,
-      "AcceptableRadius": 30.0,
       "FilterClass": {
         "ObjectName": "BlueprintGeneratedClass'NavQuery_Camper_Terrified_C'",
         "ObjectPath": "DeadByDaylight/Content/AI/Camper/NavQuery_Camper_Terrified.0"
@@ -4463,6 +4466,7 @@
         "SelectedKeyName": "FallPalletInteractor"
       },
       "Input": "EPawnInputPressTypes::FastInteract",
+      "OnFailFocusCooldownDuration": 0.0,
       "NodeName": "Interact With Pallet",
       "TreeAsset": {
         "ObjectName": "BehaviorTree'BT_Camper_OutTerrorRadius'",
