@@ -2,44 +2,18 @@
   {
     "Type": "MaterialInstanceConstant",
     "Name": "MI_UKR_Hidebush01",
+    "Class": "UScriptClass'MaterialInstanceConstant'",
     "Properties": {
       "PhysMaterial": {
-        "ObjectName": "PhysicalMaterial PM_Vegetation",
+        "ObjectName": "PhysicalMaterial'PM_Vegetation'",
         "ObjectPath": "DeadByDaylight/Content/Materials/PhysicalMaterials/PM_Vegetation.0"
       },
       "Parent": {
-        "ObjectName": "MaterialInstanceConstant MI_Plants",
-        "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Vegetations/MI_Plants.0"
+        "ObjectName": "MaterialInstanceConstant'MI_Foliage_v2_Masked'",
+        "ObjectPath": "DeadByDaylight/Content/Materials/Masters/MI_Foliage_v2_Masked.0"
       },
       "bHasStaticPermutationResource": true,
       "ScalarParameterValues": [
-        {
-          "ParameterInfo": {
-            "Name": "Specular",
-            "Association": "GlobalParameter",
-            "Index": -1
-          },
-          "ParameterValue": 0.0,
-          "ExpressionGUID": "17491C85-40DD5E29-DEFC84B2-DAA68882"
-        },
-        {
-          "ParameterInfo": {
-            "Name": "Roughness",
-            "Association": "GlobalParameter",
-            "Index": -1
-          },
-          "ParameterValue": 0.8,
-          "ExpressionGUID": "1B4D22B8-414D32A0-A69260BD-D1C78BE2"
-        },
-        {
-          "ParameterInfo": {
-            "Name": "SubsurfaceMult",
-            "Association": "GlobalParameter",
-            "Index": -1
-          },
-          "ParameterValue": 0.65,
-          "ExpressionGUID": "4AA07FC2-40E0D7A5-A928D78D-586289ED"
-        },
         {
           "ParameterInfo": {
             "Name": "018_FadeRadiusDistance",
@@ -107,6 +81,21 @@
       "VectorParameterValues": [
         {
           "ParameterInfo": {
+            "Name": "Main_BaseColorTint",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "R": 0.604167,
+            "G": 0.604167,
+            "B": 0.604167,
+            "A": 0.0,
+            "Hex": "CCCCCC"
+          },
+          "ExpressionGUID": "BA25F801-435799DF-DA8D0186-06F60E6A"
+        },
+        {
+          "ParameterInfo": {
             "Name": "050_MinVariation",
             "Association": "GlobalParameter",
             "Index": -1
@@ -139,27 +128,27 @@
       "TextureParameterValues": [
         {
           "ParameterInfo": {
-            "Name": "Normal",
+            "Name": "Main_Normal",
             "Association": "GlobalParameter",
             "Index": -1
           },
           "ParameterValue": {
-            "ObjectName": "Texture2D T_UKR_HideBush_N",
+            "ObjectName": "Texture2D'T_UKR_HideBush_N'",
             "ObjectPath": "DeadByDaylight/Content/Textures/Environment/_Common/Nature/T_UKR_HideBush_N.0"
           },
-          "ExpressionGUID": "0C27AEDA-4A27BAD5-CCD7E181-4E361AC4"
+          "ExpressionGUID": "6048E55E-41423122-BFC3259E-FB0D9E25"
         },
         {
           "ParameterInfo": {
-            "Name": "BaseColor",
+            "Name": "Main_BaseColor",
             "Association": "GlobalParameter",
             "Index": -1
           },
           "ParameterValue": {
-            "ObjectName": "Texture2D T_UKR_HideBush_BC",
+            "ObjectName": "Texture2D'T_UKR_HideBush_BC'",
             "ObjectPath": "DeadByDaylight/Content/Textures/Environment/_Common/Nature/T_UKR_HideBush_BC.0"
           },
-          "ExpressionGUID": "62990E33-49C7EBF4-D658CDB4-42E7883B"
+          "ExpressionGUID": "19F0818F-451317BF-6ECB6EAC-7DF0A364"
         }
       ],
       "BasePropertyOverrides": {
@@ -173,16 +162,6 @@
       },
       "StaticParameters": {
         "StaticSwitchParameters": [
-          {
-            "Value": true,
-            "ParameterInfo": {
-              "Name": "UseNormal",
-              "Association": "GlobalParameter",
-              "Index": -1
-            },
-            "bOverride": true,
-            "ExpressionGUID": "88B0DF88-4D3E5409-921727BB-9272DC38"
-          },
           {
             "Value": true,
             "ParameterInfo": {
@@ -227,45 +206,68 @@
       },
       "CachedReferencedTextures": [
         {
-          "ObjectName": "Texture2D T_PlantAtlasAlpha_BC",
-          "ObjectPath": "DeadByDaylight/Content/Textures/Environment/Vegetations/T_PlantAtlasAlpha_BC.0"
-        },
-        {
-          "ObjectName": "Texture2D Good64x64TilingNoiseHighFreq",
-          "ObjectPath": "Engine/Content/EngineMaterials/Good64x64TilingNoiseHighFreq.0"
-        },
-        {
-          "ObjectName": "Texture2D BlendFunc_DefBlend",
+          "ObjectName": "Texture2D'BlendFunc_DefBlend'",
           "ObjectPath": "Engine/Content/EngineMaterials/BlendFunc_DefBlend.0"
         },
         {
-          "ObjectName": "Texture2D BlendFunc_DefBase",
+          "ObjectName": "Texture2D'BlendFunc_DefBase'",
           "ObjectPath": "Engine/Content/EngineMaterials/BlendFunc_DefBase.0"
         },
         {
-          "ObjectName": "Texture2D T_treeLeaf01_Atl_MaskRGB",
-          "ObjectPath": "DeadByDaylight/Content/Textures/Environment/Vegetations/Atlanta/T_treeLeaf01_Atl_MaskRGB.0"
-        },
-        {
-          "ObjectName": "Texture2D FlatNormal",
+          "ObjectName": "Texture2D'FlatNormal'",
           "ObjectPath": "Engine/Content/EngineMaterials/FlatNormal.0"
         },
-        null,
         {
-          "ObjectName": "Texture2D DefaultDiffuse",
-          "ObjectPath": "Engine/Content/EngineMaterials/DefaultDiffuse.0"
+          "ObjectName": "Texture2D'T_checker_grid'",
+          "ObjectPath": "DeadByDaylight/Content/Textures/Props/Misc/T_checker_grid.0"
         },
         {
-          "ObjectName": "Texture2D Moss_diffuse",
-          "ObjectPath": "DeadByDaylight/Content/Textures/Environment/Vegetations/Moss_diffuse.0"
-        },
-        {
-          "ObjectName": "Texture2D T_CrawlingMoss_Mask_01",
-          "ObjectPath": "DeadByDaylight/Content/Textures/Environment/Vegetations/T_CrawlingMoss_Mask_01.0"
-        },
-        {
-          "ObjectName": "Texture2D Yellow_Linear",
+          "ObjectName": "Texture2D'Yellow_Linear'",
           "ObjectPath": "DeadByDaylight/Content/Textures/Environment/Tiles/Yellow_Linear.0"
+        },
+        {
+          "ObjectName": "Texture2D'Black_Linear'",
+          "ObjectPath": "DeadByDaylight/Content/Textures/Environment/Tiles/Black_Linear.0"
+        },
+        {
+          "ObjectName": "Texture2D'White_Linear'",
+          "ObjectPath": "DeadByDaylight/Content/Textures/Environment/Tiles/White_Linear.0"
+        },
+        {
+          "ObjectName": "Texture2D'Good64x64TilingNoiseHighFreq'",
+          "ObjectPath": "Engine/Content/EngineMaterials/Good64x64TilingNoiseHighFreq.0"
+        },
+        {
+          "ObjectName": "Texture2D'T_FoliageWaves_02_N'",
+          "ObjectPath": "DeadByDaylight/Content/Textures/Environment/Vegetations/T_FoliageWaves_02_N.0"
+        },
+        {
+          "ObjectName": "Texture2D'T_MapleOakLeaves01_Wind'",
+          "ObjectPath": "DeadByDaylight/Content/Textures/Environment/Vegetations/T_MapleOakLeaves01_Wind.0"
+        },
+        {
+          "ObjectName": "Texture2D'T_Dissolve_spiderthing'",
+          "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_Dissolve_spiderthing.0"
+        },
+        {
+          "ObjectName": "Texture2D'T_Veins'",
+          "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_Veins.0"
+        },
+        {
+          "ObjectName": "Texture2D'T_NoiseNormal_01'",
+          "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_NoiseNormal_01.0"
+        },
+        {
+          "ObjectName": "Texture2D'T_Noise02'",
+          "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_Noise02.0"
+        },
+        {
+          "ObjectName": "Texture2D'Dissolve_border_Entity'",
+          "ObjectPath": "DeadByDaylight/Content/Textures/InteractableObjects/Entity_Objects/Dissolve_border_Entity.0"
+        },
+        {
+          "ObjectName": "Texture2D'T_TilingNoise03'",
+          "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_TilingNoise03.0"
         }
       ],
       "TextureStreamingData": [
@@ -278,6 +280,11 @@
           "SamplingScale": 1.0,
           "UVChannelIndex": 0,
           "TextureName": "T_UKR_HideBush_N"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "Yellow_Linear"
         }
       ]
     }

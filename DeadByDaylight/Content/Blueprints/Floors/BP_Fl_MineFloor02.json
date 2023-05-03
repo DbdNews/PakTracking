@@ -2,17 +2,62 @@
   {
     "Type": "BlueprintGeneratedClass",
     "Name": "BP_Fl_MineFloor02_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
     "Properties": {
       "SimpleConstructionScript": {
-        "ObjectName": "SimpleConstructionScript BP_Fl_MineFloor02_C:SimpleConstructionScript_2",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.13"
+        "ObjectName": "SimpleConstructionScript'BP_Fl_MineFloor02_C:SimpleConstructionScript_2'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.21"
       }
     },
     "SuperStruct": {
-      "ObjectName": "Class Actor",
+      "ObjectName": "Class'Actor'",
       "ObjectPath": "/Script/Engine"
     },
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Victor_Collsion",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class'BoxComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CollsionSnare3",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class'BoxComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CollsionSnare2",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class'BoxComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CollsionSnare1",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class'BoxComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "ProjectileColl05",
@@ -20,7 +65,7 @@
         "ElementSize": 8,
         "PropertyFlags": 17180393476,
         "PropertyClass": {
-          "ObjectName": "Class BoxComponent",
+          "ObjectName": "Class'BoxComponent'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -31,7 +76,7 @@
         "ElementSize": 8,
         "PropertyFlags": 17180393476,
         "PropertyClass": {
-          "ObjectName": "Class BoxComponent",
+          "ObjectName": "Class'BoxComponent'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -42,7 +87,7 @@
         "ElementSize": 8,
         "PropertyFlags": 17180393476,
         "PropertyClass": {
-          "ObjectName": "Class BoxComponent",
+          "ObjectName": "Class'BoxComponent'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -53,7 +98,7 @@
         "ElementSize": 8,
         "PropertyFlags": 17180393476,
         "PropertyClass": {
-          "ObjectName": "Class StaticMeshComponent",
+          "ObjectName": "Class'StaticMeshComponent'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -64,26 +109,27 @@
         "ElementSize": 8,
         "PropertyFlags": 17180393476,
         "PropertyClass": {
-          "ObjectName": "Class SceneComponent",
+          "ObjectName": "Class'SceneComponent'",
           "ObjectPath": "/Script/Engine"
         }
       }
     ],
     "ClassFlags": 8652820,
     "ClassWithin": {
-      "ObjectName": "Class Object",
+      "ObjectName": "Class'Object'",
       "ObjectPath": "/Script/CoreUObject"
     },
     "ClassConfigName": "Engine",
     "bCooked": true,
     "ClassDefaultObject": {
-      "ObjectName": "BP_Fl_MineFloor02_C Default__BP_Fl_MineFloor02_C",
+      "ObjectName": "BP_Fl_MineFloor02_C'Default__BP_Fl_MineFloor02_C'",
       "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.1"
     }
   },
   {
     "Type": "BP_Fl_MineFloor02_C",
     "Name": "Default__BP_Fl_MineFloor02_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.BP_Fl_MineFloor02_C'",
     "Properties": {
       "PrimaryActorTick": {
         "bStartWithTickEnabled": false
@@ -92,11 +138,210 @@
   },
   {
     "Type": "BoxComponent",
-    "Name": "ProjectileColl02_GEN_VARIABLE",
+    "Name": "CollsionSnare1_GEN_VARIABLE",
     "Outer": "BP_Fl_MineFloor02_C",
+    "Class": "UScriptClass'BoxComponent'",
     "Properties": {
       "AreaClass": {
-        "ObjectName": "Class NavArea_Obstacle",
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAll",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Interactable",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Slasher",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Blood",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "InteractionDetector",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BlinkBlocker",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Ground",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Walkable",
+              "Response": "ECR_Block"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": -221.34851,
+        "Y": -1029.7725,
+        "Z": -220.13693
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -81.99124,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 6.666485,
+        "Y": 1.6734533,
+        "Z": 5.004241
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "CollsionSnare2_GEN_VARIABLE",
+    "Outer": "BP_Fl_MineFloor02_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAll",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Interactable",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Slasher",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Blood",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "InteractionDetector",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BlinkBlocker",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Ground",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Walkable",
+              "Response": "ECR_Block"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": -705.868,
+        "Y": -1169.9121,
+        "Z": -220.13693
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -88.48458,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 6.666485,
+        "Y": 1.1822141,
+        "Z": 5.004241
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "CollsionSnare3_GEN_VARIABLE",
+    "Outer": "BP_Fl_MineFloor02_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAll",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Interactable",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Slasher",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Blood",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "InteractionDetector",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BlinkBlocker",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Ground",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Walkable",
+              "Response": "ECR_Block"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": -441.12494,
+        "Y": -1404.8457,
+        "Z": -220.13693
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 4.0030174,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 7.215725,
+        "Y": 2.3652656,
+        "Z": 5.004241
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "ProjectileColl02_GEN_VARIABLE",
+    "Outer": "BP_Fl_MineFloor02_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
         "ObjectPath": "/Script/NavigationSystem"
       },
       "DetailLevelBeforeCastShadows": "DM_MAX",
@@ -202,9 +447,10 @@
     "Type": "BoxComponent",
     "Name": "ProjectileColl04_GEN_VARIABLE",
     "Outer": "BP_Fl_MineFloor02_C",
+    "Class": "UScriptClass'BoxComponent'",
     "Properties": {
       "AreaClass": {
-        "ObjectName": "Class NavArea_Obstacle",
+        "ObjectName": "Class'NavArea_Obstacle'",
         "ObjectPath": "/Script/NavigationSystem"
       },
       "DetailLevelBeforeCastShadows": "DM_MAX",
@@ -310,9 +556,10 @@
     "Type": "BoxComponent",
     "Name": "ProjectileColl05_GEN_VARIABLE",
     "Outer": "BP_Fl_MineFloor02_C",
+    "Class": "UScriptClass'BoxComponent'",
     "Properties": {
       "AreaClass": {
-        "ObjectName": "Class NavArea_Obstacle",
+        "ObjectName": "Class'NavArea_Obstacle'",
         "ObjectPath": "/Script/NavigationSystem"
       },
       "DetailLevelBeforeCastShadows": "DM_MAX",
@@ -415,9 +662,128 @@
     }
   },
   {
+    "Type": "BoxComponent",
+    "Name": "Victor_Collsion_GEN_VARIABLE",
+    "Outer": "BP_Fl_MineFloor02_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "CharacterBlocker",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel2",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel3",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel4",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel5",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel6",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Interactable",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Audio",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Slasher",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Spider",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Traps",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "InteractionDetector",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BlinkBlocker",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Ground",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": -441.12494,
+        "Y": -1451.5519,
+        "Z": -220.13693
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 4.003017,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 7.215725,
+        "Y": 2.365266,
+        "Z": 5.004241
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
     "Type": "SceneComponent",
     "Name": "Scene_GEN_VARIABLE",
     "Outer": "BP_Fl_MineFloor02_C",
+    "Class": "UScriptClass'SceneComponent'",
     "Properties": {
       "Mobility": "EComponentMobility::Static"
     }
@@ -425,20 +791,22 @@
   {
     "Type": "SceneComponent",
     "Name": "SceneComponent_162",
-    "Outer": "BP_Fl_MineFloor02_C"
+    "Outer": "BP_Fl_MineFloor02_C",
+    "Class": "UScriptClass'SceneComponent'"
   },
   {
     "Type": "SCS_Node",
     "Name": "SCS_Node_0",
     "Outer": "SimpleConstructionScript_2",
+    "Class": "UScriptClass'SCS_Node'",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class StaticMeshComponent",
+        "ObjectName": "Class'StaticMeshComponent'",
         "ObjectPath": "/Script/Engine"
       },
       "ComponentTemplate": {
-        "ObjectName": "StaticMeshComponent BP_Fl_MineFloor02_C:SM_ST_Mine01_Floor02_GEN_VARIABLE",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.14"
+        "ObjectName": "StaticMeshComponent'BP_Fl_MineFloor02_C:SM_ST_Mine01_Floor02_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.22"
       },
       "VariableGuid": "14B5E73C-4D160914-58DE6589-3F50F83F",
       "InternalVariableName": "SM_ST_Mine01_Floor02"
@@ -448,31 +816,48 @@
     "Type": "SCS_Node",
     "Name": "SCS_Node_1",
     "Outer": "SimpleConstructionScript_2",
+    "Class": "UScriptClass'SCS_Node'",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class SceneComponent",
+        "ObjectName": "Class'SceneComponent'",
         "ObjectPath": "/Script/Engine"
       },
       "ComponentTemplate": {
-        "ObjectName": "SceneComponent BP_Fl_MineFloor02_C:Scene_GEN_VARIABLE",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.5"
+        "ObjectName": "SceneComponent'BP_Fl_MineFloor02_C:Scene_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.9"
       },
       "ChildNodes": [
         {
-          "ObjectName": "SCS_Node BP_Fl_MineFloor02_C:SimpleConstructionScript_2.SCS_Node_0",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.7"
-        },
-        {
-          "ObjectName": "SCS_Node BP_Fl_MineFloor02_C:SimpleConstructionScript_2.SCS_Node_3",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.10"
-        },
-        {
-          "ObjectName": "SCS_Node BP_Fl_MineFloor02_C:SimpleConstructionScript_2.SCS_Node_8",
+          "ObjectName": "SCS_Node'BP_Fl_MineFloor02_C:SimpleConstructionScript_2.SCS_Node_0'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.11"
         },
         {
-          "ObjectName": "SCS_Node BP_Fl_MineFloor02_C:SimpleConstructionScript_2.SCS_Node_9",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.12"
+          "ObjectName": "SCS_Node'BP_Fl_MineFloor02_C:SimpleConstructionScript_2.SCS_Node_3'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Fl_MineFloor02_C:SimpleConstructionScript_2.SCS_Node_8'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Fl_MineFloor02_C:SimpleConstructionScript_2.SCS_Node_9'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Fl_MineFloor02_C:SimpleConstructionScript_2.SCS_Node_4'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Fl_MineFloor02_C:SimpleConstructionScript_2.SCS_Node_5'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Fl_MineFloor02_C:SimpleConstructionScript_2.SCS_Node_6'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Fl_MineFloor02_C:SimpleConstructionScript_2.SCS_Node_7'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.18"
         }
       ],
       "VariableGuid": "E2C44D3F-4D789AF8-AA6BB793-75D9CC12",
@@ -483,14 +868,15 @@
     "Type": "SCS_Node",
     "Name": "SCS_Node_2",
     "Outer": "SimpleConstructionScript_2",
+    "Class": "UScriptClass'SCS_Node'",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class SceneComponent",
+        "ObjectName": "Class'SceneComponent'",
         "ObjectPath": "/Script/Engine"
       },
       "ComponentTemplate": {
-        "ObjectName": "SceneComponent BP_Fl_MineFloor02_C:SceneComponent_162",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.6"
+        "ObjectName": "SceneComponent'BP_Fl_MineFloor02_C:SceneComponent_162'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.10"
       },
       "VariableGuid": "B5FA707A-444D1ABA-54E543A7-79316370",
       "InternalVariableName": "DefaultSceneRoot"
@@ -500,14 +886,15 @@
     "Type": "SCS_Node",
     "Name": "SCS_Node_3",
     "Outer": "SimpleConstructionScript_2",
+    "Class": "UScriptClass'SCS_Node'",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class BoxComponent",
+        "ObjectName": "Class'BoxComponent'",
         "ObjectPath": "/Script/Engine"
       },
       "ComponentTemplate": {
-        "ObjectName": "BoxComponent BP_Fl_MineFloor02_C:ProjectileColl02_GEN_VARIABLE",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.2"
+        "ObjectName": "BoxComponent'BP_Fl_MineFloor02_C:ProjectileColl02_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.5"
       },
       "VariableGuid": "323B8F1F-4B50AFF2-98945D8D-C560FF17",
       "InternalVariableName": "ProjectileColl02"
@@ -515,16 +902,89 @@
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_8",
+    "Name": "SCS_Node_4",
     "Outer": "SimpleConstructionScript_2",
+    "Class": "UScriptClass'SCS_Node'",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class BoxComponent",
+        "ObjectName": "Class'BoxComponent'",
         "ObjectPath": "/Script/Engine"
       },
       "ComponentTemplate": {
-        "ObjectName": "BoxComponent BP_Fl_MineFloor02_C:ProjectileColl04_GEN_VARIABLE",
+        "ObjectName": "BoxComponent'BP_Fl_MineFloor02_C:CollsionSnare1_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.2"
+      },
+      "VariableGuid": "498A8588-454D3457-CCC3A795-93CDA734",
+      "InternalVariableName": "CollsionSnare1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_2",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BP_Fl_MineFloor02_C:CollsionSnare2_GEN_VARIABLE'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.3"
+      },
+      "VariableGuid": "A761F455-4D58BF12-C43A6380-0C8FA40F",
+      "InternalVariableName": "CollsionSnare2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_2",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BP_Fl_MineFloor02_C:CollsionSnare3_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.4"
+      },
+      "VariableGuid": "CC550CF4-4BBD6EA3-F024748D-50BDFBAE",
+      "InternalVariableName": "CollsionSnare3"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_7",
+    "Outer": "SimpleConstructionScript_2",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BP_Fl_MineFloor02_C:Victor_Collsion_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.8"
+      },
+      "VariableGuid": "9AFC0744-440A6BD5-42977180-94CC1A3E",
+      "InternalVariableName": "Victor_Collsion"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_8",
+    "Outer": "SimpleConstructionScript_2",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BP_Fl_MineFloor02_C:ProjectileColl04_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.6"
       },
       "VariableGuid": "32A125FA-4BF6AD5E-A1003183-6CD5DC96",
       "InternalVariableName": "ProjectileColl04"
@@ -534,14 +994,15 @@
     "Type": "SCS_Node",
     "Name": "SCS_Node_9",
     "Outer": "SimpleConstructionScript_2",
+    "Class": "UScriptClass'SCS_Node'",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class BoxComponent",
+        "ObjectName": "Class'BoxComponent'",
         "ObjectPath": "/Script/Engine"
       },
       "ComponentTemplate": {
-        "ObjectName": "BoxComponent BP_Fl_MineFloor02_C:ProjectileColl05_GEN_VARIABLE",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.4"
+        "ObjectName": "BoxComponent'BP_Fl_MineFloor02_C:ProjectileColl05_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.7"
       },
       "VariableGuid": "5231C5AE-48F20EE7-AEB80B9E-55C748EC",
       "InternalVariableName": "ProjectileColl05"
@@ -551,38 +1012,55 @@
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_2",
     "Outer": "BP_Fl_MineFloor02_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
     "Properties": {
       "RootNodes": [
         {
-          "ObjectName": "SCS_Node BP_Fl_MineFloor02_C:SimpleConstructionScript_2.SCS_Node_1",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.8"
+          "ObjectName": "SCS_Node'BP_Fl_MineFloor02_C:SimpleConstructionScript_2.SCS_Node_1'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.12"
         }
       ],
       "AllNodes": [
         {
-          "ObjectName": "SCS_Node BP_Fl_MineFloor02_C:SimpleConstructionScript_2.SCS_Node_1",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.8"
+          "ObjectName": "SCS_Node'BP_Fl_MineFloor02_C:SimpleConstructionScript_2.SCS_Node_1'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.12"
         },
         {
-          "ObjectName": "SCS_Node BP_Fl_MineFloor02_C:SimpleConstructionScript_2.SCS_Node_0",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.7"
-        },
-        {
-          "ObjectName": "SCS_Node BP_Fl_MineFloor02_C:SimpleConstructionScript_2.SCS_Node_3",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.10"
-        },
-        {
-          "ObjectName": "SCS_Node BP_Fl_MineFloor02_C:SimpleConstructionScript_2.SCS_Node_8",
+          "ObjectName": "SCS_Node'BP_Fl_MineFloor02_C:SimpleConstructionScript_2.SCS_Node_0'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.11"
         },
         {
-          "ObjectName": "SCS_Node BP_Fl_MineFloor02_C:SimpleConstructionScript_2.SCS_Node_9",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.12"
+          "ObjectName": "SCS_Node'BP_Fl_MineFloor02_C:SimpleConstructionScript_2.SCS_Node_3'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Fl_MineFloor02_C:SimpleConstructionScript_2.SCS_Node_8'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Fl_MineFloor02_C:SimpleConstructionScript_2.SCS_Node_9'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Fl_MineFloor02_C:SimpleConstructionScript_2.SCS_Node_4'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Fl_MineFloor02_C:SimpleConstructionScript_2.SCS_Node_5'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Fl_MineFloor02_C:SimpleConstructionScript_2.SCS_Node_6'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Fl_MineFloor02_C:SimpleConstructionScript_2.SCS_Node_7'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.18"
         }
       ],
       "DefaultSceneRootNode": {
-        "ObjectName": "SCS_Node BP_Fl_MineFloor02_C:SimpleConstructionScript_2.SCS_Node_2",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.9"
+        "ObjectName": "SCS_Node'BP_Fl_MineFloor02_C:SimpleConstructionScript_2.SCS_Node_2'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Floors/BP_Fl_MineFloor02.13"
       }
     }
   },
@@ -590,9 +1068,10 @@
     "Type": "StaticMeshComponent",
     "Name": "SM_ST_Mine01_Floor02_GEN_VARIABLE",
     "Outer": "BP_Fl_MineFloor02_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
     "Properties": {
       "StaticMesh": {
-        "ObjectName": "StaticMesh SM_ST_Mine01_Floor02",
+        "ObjectName": "StaticMesh'SM_ST_Mine01_Floor02'",
         "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Structures/SM_ST_Mine01_Floor02.2"
       },
       "DetailLevelBeforeCastShadows": "DM_MAX",

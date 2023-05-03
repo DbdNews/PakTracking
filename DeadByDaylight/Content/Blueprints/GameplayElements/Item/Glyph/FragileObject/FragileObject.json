@@ -13,16 +13,6 @@
         "PropertyFlags": 148
       },
       {
-        "Type": "ObjectProperty",
-        "Name": "CallFunc_GetPreviousCollector_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 8,
-        "PropertyClass": {
-          "ObjectName": "Class'DBDPlayer'",
-          "ObjectPath": "/Script/DeadByDaylight"
-        }
-      },
-      {
         "Type": "ArrayProperty",
         "Name": "Temp_struct_Variable",
         "Flags": 1,
@@ -49,12 +39,6 @@
           "ObjectName": "DelegateFunction'OnAkPostEventCallback__DelegateSignature'",
           "ObjectPath": "/Script/AkAudio"
         }
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "CallFunc_PostEvent_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 4
       },
       {
         "Type": "StructProperty",
@@ -90,6 +74,16 @@
       },
       {
         "Type": "ObjectProperty",
+        "Name": "CallFunc_GetLocallyControlledCharacter_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DBDPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
         "Name": "CallFunc_SpawnSystemAttached_ReturnValue",
         "Flags": 1,
         "ElementSize": 8,
@@ -101,7 +95,7 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "CallFunc_GetLocallyControlledCharacter_ReturnValue",
+        "Name": "CallFunc_GetLocallyControlledCharacter_ReturnValue_1",
         "Flags": 1,
         "ElementSize": 8,
         "PropertyClass": {
@@ -111,13 +105,19 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "CallFunc_GetLocallyControlledCharacter_ReturnValue_1",
+        "Name": "CallFunc_GetPreviousCollector_ReturnValue",
         "Flags": 1,
         "ElementSize": 8,
         "PropertyClass": {
           "ObjectName": "Class'DBDPlayer'",
           "ObjectPath": "/Script/DeadByDaylight"
         }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_PostEvent_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
       },
       {
         "Type": "BoolProperty",
@@ -249,10 +249,16 @@
           "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/Glyph/FragileObject/FragileObject.11"
         }
       ],
+      "ComponentTemplates": [
+        {
+          "ObjectName": "NiagaraComponent'FragileObject_C:NODE_AddNiagaraComponent-0'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/Glyph/FragileObject/FragileObject.25"
+        }
+      ],
       "Timelines": [
         {
           "ObjectName": "TimelineTemplate'FragileObject_C:TML_RepairedGlowIntensity_Template'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/Glyph/FragileObject/FragileObject.36"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/Glyph/FragileObject/FragileObject.37"
         }
       ],
       "SimpleConstructionScript": {
@@ -308,6 +314,17 @@
       },
       {
         "Type": "ObjectProperty",
+        "Name": "SpotLight",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class'SpotLightComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
         "Name": "Ak_Audio_FragileObject",
         "Flags": 2097153,
         "ElementSize": 8,
@@ -315,17 +332,6 @@
         "PropertyClass": {
           "ObjectName": "Class'AkComponent'",
           "ObjectPath": "/Script/AkAudio"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "RepairedGlow",
-        "Flags": 2097153,
-        "ElementSize": 8,
-        "PropertyFlags": 17180393476,
-        "PropertyClass": {
-          "ObjectName": "Class'PointLightComponent'",
-          "ObjectPath": "/Script/Engine"
         }
       },
       {
@@ -441,7 +447,7 @@
       },
       "_survivorCollectableOutlineUpdateStrategy": {
         "ObjectName": "SurvivorCollectableOutlineUpdateStrategy'Default__FragileObject_C:SurvivorCollectableOutlineUpdateStrategy'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/Glyph/FragileObject/FragileObject.35"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/Glyph/FragileObject/FragileObject.36"
       },
       "HandPosition": "EItemHandPosition::FragileObjectItem",
       "ItemID": "Item_FragileObject",
@@ -715,20 +721,12 @@
     }
   },
   {
-    "Type": "PointLightComponent",
-    "Name": "RepairedGlow_GEN_VARIABLE",
+    "Type": "NiagaraComponent",
+    "Name": "NODE_AddNiagaraComponent-0",
     "Outer": "FragileObject_C",
-    "Class": "UScriptClass'PointLightComponent'",
+    "Class": "UScriptClass'NiagaraComponent'",
     "Properties": {
-      "AttenuationRadius": 50.0,
-      "Intensity": 0.0,
-      "LightColor": {
-        "B": 254,
-        "G": 255,
-        "R": 203,
-        "A": 255,
-        "Hex": "FFCBFFFE"
-      },
+      "OverrideParameters": {},
       "DetailLevelBeforeCastShadows": "DM_MAX"
     }
   },
@@ -788,26 +786,6 @@
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_3",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'PointLightComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "PointLightComponent'FragileObject_C:RepairedGlow_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/Glyph/FragileObject/FragileObject.25"
-      },
-      "ParentComponentOrVariableName": "ItemMesh",
-      "bIsParentComponentNative": true,
-      "VariableGuid": "D4560489-438EB78F-9B9B15B9-DE63C264",
-      "InternalVariableName": "RepairedGlow"
-    }
-  },
-  {
-    "Type": "SCS_Node",
     "Name": "SCS_Node_4",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
@@ -827,6 +805,26 @@
     }
   },
   {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SpotLightComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SpotLightComponent'FragileObject_C:SpotLight_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/Glyph/FragileObject/FragileObject.35"
+      },
+      "ParentComponentOrVariableName": "ItemMesh",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "416C5537-488740BF-3F2F9BAF-292A379E",
+      "InternalVariableName": "SpotLight"
+    }
+  },
+  {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_0",
     "Outer": "FragileObject_C",
@@ -838,11 +836,11 @@
           "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/Glyph/FragileObject/FragileObject.29"
         },
         {
-          "ObjectName": "SCS_Node'FragileObject_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectName": "SCS_Node'FragileObject_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/Glyph/FragileObject/FragileObject.30"
         },
         {
-          "ObjectName": "SCS_Node'FragileObject_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectName": "SCS_Node'FragileObject_C:SimpleConstructionScript_0.SCS_Node_5'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/Glyph/FragileObject/FragileObject.31"
         }
       ],
@@ -852,11 +850,11 @@
           "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/Glyph/FragileObject/FragileObject.29"
         },
         {
-          "ObjectName": "SCS_Node'FragileObject_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectName": "SCS_Node'FragileObject_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/Glyph/FragileObject/FragileObject.30"
         },
         {
-          "ObjectName": "SCS_Node'FragileObject_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectName": "SCS_Node'FragileObject_C:SimpleConstructionScript_0.SCS_Node_5'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/Glyph/FragileObject/FragileObject.31"
         }
       ],
@@ -889,6 +887,30 @@
       "AttachParent": {
         "ObjectName": "DBDSkeletalMeshComponentBudgeted'Default__FragileObject_C:ItemMesh'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/Glyph/FragileObject/FragileObject.14"
+      }
+    }
+  },
+  {
+    "Type": "SpotLightComponent",
+    "Name": "SpotLight_GEN_VARIABLE",
+    "Outer": "FragileObject_C",
+    "Class": "UScriptClass'SpotLightComponent'",
+    "Properties": {
+      "OuterConeAngle": 80.0,
+      "AttenuationRadius": 50.0,
+      "Intensity": 9.0,
+      "LightColor": {
+        "B": 255,
+        "G": 255,
+        "R": 203,
+        "A": 255,
+        "Hex": "FFCBFFFF"
+      },
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "RelativeRotation": {
+        "Pitch": 90.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
       }
     }
   },

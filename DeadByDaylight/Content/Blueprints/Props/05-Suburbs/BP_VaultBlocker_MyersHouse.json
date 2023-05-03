@@ -1,0 +1,389 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_VaultBlocker_MyersHouse_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_VaultBlocker_MyersHouse_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/05-Suburbs/BP_VaultBlocker_MyersHouse.12"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ActorSpawner",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class'ActorSpawner'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Box",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class'BoxComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_COM_Door_H",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BP_HAD_Vault1_None",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class'ChildActorComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_VaultBlocker_MyersHouse_C'Default__BP_VaultBlocker_MyersHouse_C'",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/05-Suburbs/BP_VaultBlocker_MyersHouse.1"
+    }
+  },
+  {
+    "Type": "BP_VaultBlocker_MyersHouse_C",
+    "Name": "Default__BP_VaultBlocker_MyersHouse_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/Props/05-Suburbs/BP_VaultBlocker_MyersHouse.BP_VaultBlocker_MyersHouse_C'"
+  },
+  {
+    "Type": "ActorSpawner",
+    "Name": "ActorSpawner_GEN_VARIABLE",
+    "Outer": "BP_VaultBlocker_MyersHouse_C",
+    "Class": "UScriptClass'ActorSpawner'",
+    "Properties": {
+      "Visualization": {
+        "AssetPathName": "/Game/Blueprints/Editor/BP_Editor_Locker.BP_Editor_Locker_C",
+        "SubPathString": ""
+      },
+      "ActivatedSceneElement": [
+        {
+          "SceneElement": {
+            "AssetPathName": "/Game/Blueprints/GameplayElements/Interactable/Closet/ClosetStandard.ClosetStandard_C",
+            "SubPathString": ""
+          },
+          "Weight": 1.0
+        }
+      ],
+      "RelativeLocation": {
+        "X": -1148.7933,
+        "Y": -304.159,
+        "Z": 0.00012207031
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -180.2144,
+        "Roll": 0.0
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Box_GEN_VARIABLE",
+    "Outer": "BP_VaultBlocker_MyersHouse_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAll",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Interactable",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Slasher",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Blood",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "InteractionDetector",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BlinkBlocker",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Ground",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Walkable",
+              "Response": "ECR_Block"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": -330.19946,
+        "Y": -79.630554,
+        "Z": 230.73468
+      },
+      "RelativeScale3D": {
+        "X": 10.226644,
+        "Y": 8.440145,
+        "Z": 7.862729
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "BP_HAD_Vault1_None_C",
+    "Name": "BP_HAD_Vault1_None_GEN_VARIABLE_BP_HAD_Vault1_None_C_CAT",
+    "Outer": "BP_HAD_Vault1_None_GEN_VARIABLE",
+    "Template": "Default__BP_HAD_Vault1_None_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/Props/05-Suburbs/BP_HAD_Vault1_None.BP_HAD_Vault1_None_C'"
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "BP_HAD_Vault1_None_GEN_VARIABLE",
+    "Outer": "BP_VaultBlocker_MyersHouse_C",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Properties": {
+      "ChildActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_HAD_Vault1_None_C'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/05-Suburbs/BP_HAD_Vault1_None.0"
+      },
+      "ChildActorTemplate": {
+        "ObjectName": "BP_HAD_Vault1_None_C'BP_VaultBlocker_MyersHouse_C:BP_HAD_Vault1_None_GEN_VARIABLE.BP_HAD_Vault1_None_GEN_VARIABLE_BP_HAD_Vault1_None_C_CAT'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/05-Suburbs/BP_VaultBlocker_MyersHouse.4"
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_VaultBlocker_MyersHouse_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_VaultBlocker_MyersHouse_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/05-Suburbs/BP_VaultBlocker_MyersHouse.6"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_VaultBlocker_MyersHouse_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/05-Suburbs/BP_VaultBlocker_MyersHouse.8"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_VaultBlocker_MyersHouse_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/05-Suburbs/BP_VaultBlocker_MyersHouse.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_VaultBlocker_MyersHouse_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/05-Suburbs/BP_VaultBlocker_MyersHouse.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_VaultBlocker_MyersHouse_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/05-Suburbs/BP_VaultBlocker_MyersHouse.11"
+        }
+      ],
+      "VariableGuid": "61795F4B-45B3E153-34BB4098-C0A569B8",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ChildActorComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ChildActorComponent'BP_VaultBlocker_MyersHouse_C:BP_HAD_Vault1_None_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/05-Suburbs/BP_VaultBlocker_MyersHouse.5"
+      },
+      "VariableGuid": "79E3EA5D-41F14C98-F1075E81-A4FEA2EC",
+      "InternalVariableName": "BP_HAD_Vault1_None"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_VaultBlocker_MyersHouse_C:SM_COM_Door_H_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/05-Suburbs/BP_VaultBlocker_MyersHouse.13"
+      },
+      "VariableGuid": "F68CEA90-4ACB2CF9-6E794395-97858895",
+      "InternalVariableName": "SM_COM_Door_H"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BP_VaultBlocker_MyersHouse_C:Box_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/05-Suburbs/BP_VaultBlocker_MyersHouse.3"
+      },
+      "VariableGuid": "553455F6-4B27EF3A-383D7C8E-23702CE3",
+      "InternalVariableName": "Box"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ActorSpawner'",
+        "ObjectPath": "/Script/DeadByDaylight"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ActorSpawner'BP_VaultBlocker_MyersHouse_C:ActorSpawner_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/05-Suburbs/BP_VaultBlocker_MyersHouse.2"
+      },
+      "VariableGuid": "19DDA777-4D1A4E5D-2287FCAB-4C358099",
+      "InternalVariableName": "ActorSpawner"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_VaultBlocker_MyersHouse_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_VaultBlocker_MyersHouse_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/05-Suburbs/BP_VaultBlocker_MyersHouse.7"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_VaultBlocker_MyersHouse_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/05-Suburbs/BP_VaultBlocker_MyersHouse.7"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_VaultBlocker_MyersHouse_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/05-Suburbs/BP_VaultBlocker_MyersHouse.8"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_VaultBlocker_MyersHouse_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/05-Suburbs/BP_VaultBlocker_MyersHouse.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_VaultBlocker_MyersHouse_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/05-Suburbs/BP_VaultBlocker_MyersHouse.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_VaultBlocker_MyersHouse_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/05-Suburbs/BP_VaultBlocker_MyersHouse.11"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_VaultBlocker_MyersHouse_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Props/05-Suburbs/BP_VaultBlocker_MyersHouse.7"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_COM_Door_H_GEN_VARIABLE",
+    "Outer": "BP_VaultBlocker_MyersHouse_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_COM_Door_H'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/Structures/SM_COM_Door_H.2"
+      },
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "RelativeLocation": {
+        "X": -656.60004,
+        "Y": -227.25836,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  }
+]
