@@ -1046,21 +1046,21 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.176"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.180"
       },
       "bClassRequiresNativeTick": true,
       "Animations": [
         {
           "ObjectName": "WidgetAnimation'WBP_CoreLoadoutMenuPopupWidget_C:GoToNextPage_INST'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.174"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.178"
         },
         {
           "ObjectName": "WidgetAnimation'WBP_CoreLoadoutMenuPopupWidget_C:GoToPreviousPage_INST'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.175"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.179"
         },
         {
           "ObjectName": "WidgetAnimation'WBP_CoreLoadoutMenuPopupWidget_C:DisplayNewPage_INST'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.173"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.177"
         }
       ],
       "DynamicBindingObjects": [
@@ -1251,6 +1251,17 @@
       },
       {
         "Type": "ObjectProperty",
+        "Name": "Bar02",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 562952101429260,
+        "PropertyClass": {
+          "ObjectName": "Class'DBDImage'",
+          "ObjectPath": "/Script/DBDUIViewsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
         "Name": "BG",
         "Flags": 2097153,
         "ElementSize": 8,
@@ -1296,17 +1307,6 @@
       {
         "Type": "ObjectProperty",
         "Name": "PaginationBg",
-        "Flags": 2097153,
-        "ElementSize": 8,
-        "PropertyFlags": 562952101429260,
-        "PropertyClass": {
-          "ObjectName": "Class'DBDImage'",
-          "ObjectPath": "/Script/DBDUIViewsCore"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "PlusIcon",
         "Flags": 2097153,
         "ElementSize": 8,
         "PropertyFlags": 562952101429260,
@@ -1639,6 +1639,29 @@
   },
   {
     "Type": "DBDImage",
+    "Name": "Bar02",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'DBDImage'",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 32.0,
+          "Y": 16.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Bar02'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/CustomBots/Bar02.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_3.HorizontalBoxSlot_1'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.91"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "DBDImage",
     "Name": "BG",
     "Outer": "WidgetTree",
     "Class": "UScriptClass'DBDImage'",
@@ -1656,7 +1679,7 @@
       },
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.Overlay_148.OverlaySlot_5'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.134"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.138"
       },
       "Visibility": "ESlateVisibility::SelfHitTestInvisible"
     }
@@ -1692,7 +1715,7 @@
       },
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.Overlay_148.OverlaySlot_7'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.136"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.140"
       },
       "Visibility": "ESlateVisibility::SelfHitTestInvisible"
     }
@@ -1724,7 +1747,7 @@
       },
       "Slot": {
         "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PerkOverlay.GridSlot_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.62"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.64"
       },
       "Visibility": "ESlateVisibility::SelfHitTestInvisible"
     }
@@ -1756,7 +1779,30 @@
       },
       "Slot": {
         "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.InventoryContainer.GridSlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.55"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.57"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "DBDImage",
+    "Name": "LinkBarImage",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'DBDImage'",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 128.0,
+          "Y": 16.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Bar01'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/CustomBots/Bar01.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_1.HorizontalBoxSlot_3'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.87"
       },
       "Visibility": "ESlateVisibility::SelfHitTestInvisible"
     }
@@ -1786,14 +1832,14 @@
       },
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.Overlay_1.OverlaySlot_2'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.131"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.135"
       },
       "Visibility": "ESlateVisibility::SelfHitTestInvisible"
     }
   },
   {
     "Type": "DBDImage",
-    "Name": "PlusIcon",
+    "Name": "PlusSignImage",
     "Outer": "WidgetTree",
     "Class": "UScriptClass'DBDImage'",
     "Properties": {
@@ -1809,7 +1855,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_1.HorizontalBoxSlot_2'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.84"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.86"
       },
       "Visibility": "ESlateVisibility::SelfHitTestInvisible"
     }
@@ -1841,7 +1887,7 @@
       },
       "Slot": {
         "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PowerItemOverlay.GridSlot_19'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.69"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.71"
       }
     }
   },
@@ -1865,7 +1911,7 @@
       },
       "Slot": {
         "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PowerItemOverlay.GridSlot_3'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.71"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.73"
       }
     }
   },
@@ -1889,7 +1935,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_2.HorizontalBoxSlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.85"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.88"
       }
     }
   },
@@ -1913,7 +1959,7 @@
       },
       "Slot": {
         "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PowerItemOverlay.GridSlot_4'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.72"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.74"
       }
     }
   },
@@ -1937,7 +1983,7 @@
       },
       "Slot": {
         "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PerkOverlay.GridSlot_2'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.63"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.65"
       }
     }
   },
@@ -1961,7 +2007,7 @@
       },
       "Slot": {
         "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PowerItemOverlay.GridSlot_2'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.70"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.72"
       }
     }
   },
@@ -1985,7 +2031,7 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PresetOverlay.VerticalBoxSlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.149"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.153"
       }
     }
   },
@@ -2009,7 +2055,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_2.HorizontalBoxSlot_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.86"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.89"
       }
     }
   },
@@ -2026,7 +2072,7 @@
       "AutoWrapText": true,
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.Overlay_148.OverlaySlot_6'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.135"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.139"
       },
       "RenderTransform": {
         "Scale": {
@@ -2078,7 +2124,7 @@
       "Justification": "ETextJustify::Center",
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.Overlay_148.OverlaySlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.132"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.136"
       },
       "RenderOpacity": 0.0
     }
@@ -2108,7 +2154,7 @@
       },
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HeaderPanel.OverlaySlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.128"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.132"
       },
       "Visibility": "ESlateVisibility::SelfHitTestInvisible"
     }
@@ -2122,36 +2168,36 @@
       "Slots": [
         {
           "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.InventoryContainer.GridSlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.55"
-        },
-        {
-          "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.InventoryContainer.GridSlot_1'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.56"
-        },
-        {
-          "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.InventoryContainer.GridSlot_3'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.58"
-        },
-        {
-          "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.InventoryContainer.GridSlot_6'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.61"
-        },
-        {
-          "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.InventoryContainer.GridSlot_2'",
           "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.57"
         },
         {
-          "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.InventoryContainer.GridSlot_4'",
+          "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.InventoryContainer.GridSlot_1'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.58"
+        },
+        {
+          "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.InventoryContainer.GridSlot_3'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.60"
+        },
+        {
+          "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.InventoryContainer.GridSlot_6'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.63"
+        },
+        {
+          "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.InventoryContainer.GridSlot_2'",
           "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.59"
         },
         {
+          "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.InventoryContainer.GridSlot_4'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.61"
+        },
+        {
           "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.InventoryContainer.GridSlot_5'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.60"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.62"
         }
       ],
       "Slot": {
         "ObjectName": "VerticalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.VerticalBox_141.VerticalBoxSlot_4'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.154"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.158"
       }
     }
   },
@@ -2163,7 +2209,7 @@
     "Properties": {
       "Slot": {
         "ObjectName": "ScaleBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.InventoryGridScaler_SmallerInGame.ScaleBoxSlot_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.141"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.145"
       },
       "bIsVariable": true
     }
@@ -2177,20 +2223,20 @@
       "Slots": [
         {
           "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PerkOverlay.GridSlot_1'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.62"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.64"
         },
         {
           "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PerkOverlay.GridSlot_2'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.63"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.65"
         },
         {
           "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PerkOverlay.GridSlot_4'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.64"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.66"
         }
       ],
       "Slot": {
         "ObjectName": "VerticalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.VerticalBox_141.VerticalBoxSlot_3'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.153"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.157"
       }
     }
   },
@@ -2203,44 +2249,44 @@
       "Slots": [
         {
           "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PowerItemOverlay.GridSlot_2'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.70"
-        },
-        {
-          "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PowerItemOverlay.GridSlot_3'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.71"
-        },
-        {
-          "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PowerItemOverlay.GridSlot_4'",
           "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.72"
         },
         {
-          "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PowerItemOverlay.GridSlot_1'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.66"
-        },
-        {
-          "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PowerItemOverlay.GridSlot_16'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.68"
-        },
-        {
-          "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PowerItemOverlay.GridSlot_8'",
+          "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PowerItemOverlay.GridSlot_3'",
           "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.73"
         },
         {
+          "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PowerItemOverlay.GridSlot_4'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.74"
+        },
+        {
+          "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PowerItemOverlay.GridSlot_1'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.68"
+        },
+        {
+          "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PowerItemOverlay.GridSlot_16'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.70"
+        },
+        {
+          "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PowerItemOverlay.GridSlot_8'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.75"
+        },
+        {
           "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PowerItemOverlay.GridSlot_19'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.69"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.71"
         },
         {
           "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PowerItemOverlay.GridSlot_15'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.67"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.69"
         },
         {
           "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PowerItemOverlay.GridSlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.65"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.67"
         }
       ],
       "Slot": {
         "ObjectName": "VerticalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.VerticalBox_141.VerticalBoxSlot_2'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.152"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.156"
       }
     }
   },
@@ -2252,11 +2298,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "GridPanel'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.InventoryContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.51"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.53"
       },
       "Content": {
         "ObjectName": "DBDImage'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.Divider_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.37"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.38"
       }
     }
   },
@@ -2273,11 +2319,11 @@
       "Row": 1,
       "Parent": {
         "ObjectName": "GridPanel'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.InventoryContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.51"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.53"
       },
       "Content": {
         "ObjectName": "HorizontalBox'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_2'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.76"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.78"
       }
     }
   },
@@ -2297,11 +2343,11 @@
       "Row": 2,
       "Parent": {
         "ObjectName": "GridPanel'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.InventoryContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.51"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.53"
       },
       "Content": {
         "ObjectName": "ScaleBox'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.InventoryGridScaler_SmallerInGame'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.139"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.143"
       }
     }
   },
@@ -2320,11 +2366,11 @@
       },
       "Parent": {
         "ObjectName": "GridPanel'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.InventoryContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.51"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.53"
       },
       "Content": {
         "ObjectName": "WBP_CoreSelectionArrowInputSwitcher_C'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.LeftArrow'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.167"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.171"
       }
     }
   },
@@ -2342,11 +2388,11 @@
       "Row": 2,
       "Parent": {
         "ObjectName": "GridPanel'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.InventoryContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.51"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.53"
       },
       "Content": {
         "ObjectName": "WBP_CoreSelectionArrowInputSwitcher_C'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.RightArrow'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.168"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.172"
       }
     }
   },
@@ -2362,11 +2408,11 @@
       "Row": 3,
       "Parent": {
         "ObjectName": "GridPanel'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.InventoryContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.51"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.53"
       },
       "Content": {
         "ObjectName": "Overlay'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.Overlay_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.121"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.125"
       }
     }
   },
@@ -2382,11 +2428,11 @@
       "Row": 2,
       "Parent": {
         "ObjectName": "GridPanel'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.InventoryContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.51"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.53"
       },
       "Content": {
         "ObjectName": "Spacer'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.FakeGRid'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.143"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.147"
       }
     }
   },
@@ -2400,11 +2446,11 @@
       "ColumnSpan": 1,
       "Parent": {
         "ObjectName": "GridPanel'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PerkOverlay'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.53"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.55"
       },
       "Content": {
         "ObjectName": "DBDImage'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.Divider'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.36"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.37"
       }
     }
   },
@@ -2422,11 +2468,11 @@
       "Layer": 5,
       "Parent": {
         "ObjectName": "GridPanel'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PerkOverlay'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.53"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.55"
       },
       "Content": {
         "ObjectName": "DBDRichTextBlock'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.LoadoutMenuPerkRTB'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.44"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.46"
       }
     }
   },
@@ -2437,18 +2483,18 @@
     "Class": "UScriptClass'GridSlot'",
     "Properties": {
       "Padding": {
-        "Left": -25.0,
+        "Left": -46.0,
         "Top": 20.0,
         "Right": -25.0
       },
       "Row": 3,
       "Parent": {
         "ObjectName": "GridPanel'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PerkOverlay'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.53"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.55"
       },
       "Content": {
         "ObjectName": "HorizontalBox'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.74"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.76"
       }
     }
   },
@@ -2462,11 +2508,11 @@
       "ColumnSpan": 5,
       "Parent": {
         "ObjectName": "GridPanel'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PowerItemOverlay'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.54"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.56"
       },
       "Content": {
         "ObjectName": "Spacer'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PADDING_BOTTOM'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.144"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.148"
       }
     }
   },
@@ -2480,11 +2526,11 @@
       "ColumnSpan": 5,
       "Parent": {
         "ObjectName": "GridPanel'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PowerItemOverlay'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.54"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.56"
       },
       "Content": {
         "ObjectName": "Spacer'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PADDING_TOP'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.145"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.149"
       }
     }
   },
@@ -2494,17 +2540,20 @@
     "Outer": "PowerItemOverlay",
     "Class": "UScriptClass'GridSlot'",
     "Properties": {
+      "Padding": {
+        "Right": 30.0
+      },
       "HorizontalAlignment": "HAlign_Center",
       "VerticalAlignment": "VAlign_Center",
       "Row": 2,
       "Column": 3,
       "Parent": {
         "ObjectName": "GridPanel'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PowerItemOverlay'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.54"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.56"
       },
       "Content": {
         "ObjectName": "WBP_CoreMenuOffering_C'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.CoreOffering'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.160"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.164"
       }
     }
   },
@@ -2517,11 +2566,11 @@
       "Row": 2,
       "Parent": {
         "ObjectName": "GridPanel'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PowerItemOverlay'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.54"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.56"
       },
       "Content": {
         "ObjectName": "HorizontalBox'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.75"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.77"
       }
     }
   },
@@ -2541,11 +2590,11 @@
       "Column": 2,
       "Parent": {
         "ObjectName": "GridPanel'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PowerItemOverlay'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.54"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.56"
       },
       "Content": {
         "ObjectName": "DBDImage'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.Separator'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.40"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.42"
       }
     }
   },
@@ -2563,11 +2612,11 @@
       "ColumnSpan": 1,
       "Parent": {
         "ObjectName": "GridPanel'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PowerItemOverlay'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.54"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.56"
       },
       "Content": {
         "ObjectName": "DBDRichTextBlock'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.LoadoutMenuPowerItemRTB'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.45"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.47"
       }
     }
   },
@@ -2583,11 +2632,11 @@
       "ColumnSpan": 2,
       "Parent": {
         "ObjectName": "GridPanel'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PowerItemOverlay'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.54"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.56"
       },
       "Content": {
         "ObjectName": "DBDRichTextBlock'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.LoadoutMenuAddonRTB'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.41"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.43"
       }
     }
   },
@@ -2600,11 +2649,11 @@
       "Column": 3,
       "Parent": {
         "ObjectName": "GridPanel'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PowerItemOverlay'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.54"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.56"
       },
       "Content": {
         "ObjectName": "DBDRichTextBlock'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.LoadoutMenuOfferingRTB'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.43"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.45"
       }
     }
   },
@@ -2619,11 +2668,11 @@
       "Column": 1,
       "Parent": {
         "ObjectName": "GridPanel'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PowerItemOverlay'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.54"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.56"
       },
       "Content": {
         "ObjectName": "HorizontalBox'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_3'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.77"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.79"
       }
     }
   },
@@ -2636,24 +2685,24 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.78"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.80"
         },
         {
           "ObjectName": "HorizontalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_1'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.79"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_4'",
           "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.81"
         },
         {
+          "ObjectName": "HorizontalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_4'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.83"
+        },
+        {
           "ObjectName": "HorizontalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_3'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.80"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.82"
         }
       ],
       "Slot": {
         "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PerkOverlay.GridSlot_4'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.64"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.66"
       }
     }
   },
@@ -2666,20 +2715,24 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_1.HorizontalBoxSlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.82"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.84"
         },
         {
           "ObjectName": "HorizontalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_1.HorizontalBoxSlot_1'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.83"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.85"
         },
         {
           "ObjectName": "HorizontalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_1.HorizontalBoxSlot_2'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.84"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.86"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_1.HorizontalBoxSlot_3'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.87"
         }
       ],
       "Slot": {
         "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PowerItemOverlay.GridSlot_16'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.68"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.70"
       }
     }
   },
@@ -2692,16 +2745,16 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_2.HorizontalBoxSlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.85"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.88"
         },
         {
           "ObjectName": "HorizontalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_2.HorizontalBoxSlot_1'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.86"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.89"
         }
       ],
       "Slot": {
         "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.InventoryContainer.GridSlot_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.56"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.58"
       }
     }
   },
@@ -2714,16 +2767,20 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_3.HorizontalBoxSlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.87"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.90"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_3.HorizontalBoxSlot_1'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.91"
         },
         {
           "ObjectName": "HorizontalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_3.HorizontalBoxSlot_2'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.88"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.92"
         }
       ],
       "Slot": {
         "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PowerItemOverlay.GridSlot_8'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.73"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.75"
       }
     }
   },
@@ -2738,11 +2795,11 @@
       },
       "Parent": {
         "ObjectName": "HorizontalBox'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.74"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.76"
       },
       "Content": {
         "ObjectName": "WBP_CoreMenuPerk_C'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.CorePerk_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.161"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.165"
       }
     }
   },
@@ -2757,11 +2814,11 @@
       },
       "Parent": {
         "ObjectName": "HorizontalBox'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.74"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.76"
       },
       "Content": {
         "ObjectName": "WBP_CoreMenuPerk_C'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.CorePerk_2'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.162"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.166"
       }
     }
   },
@@ -2776,11 +2833,11 @@
       },
       "Parent": {
         "ObjectName": "HorizontalBox'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.74"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.76"
       },
       "Content": {
         "ObjectName": "WBP_CoreMenuPerk_C'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.CorePerk_4'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.164"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.168"
       }
     }
   },
@@ -2795,11 +2852,11 @@
       },
       "Parent": {
         "ObjectName": "HorizontalBox'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.74"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.76"
       },
       "Content": {
         "ObjectName": "WBP_CoreMenuPerk_C'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.CorePerk_3'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.163"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.167"
       }
     }
   },
@@ -2815,11 +2872,11 @@
       "HorizontalAlignment": "HAlign_Left",
       "Parent": {
         "ObjectName": "HorizontalBox'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.75"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.77"
       },
       "Content": {
         "ObjectName": "WBP_CoreMenuItem_C'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.CoreMenuItem'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.159"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.163"
       }
     }
   },
@@ -2835,11 +2892,11 @@
       "HorizontalAlignment": "HAlign_Left",
       "Parent": {
         "ObjectName": "HorizontalBox'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.75"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.77"
       },
       "Content": {
         "ObjectName": "WBP_CoreMenuPower_C'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.CoreMenuPower'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.165"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.169"
       }
     }
   },
@@ -2860,10 +2917,35 @@
       "VerticalAlignment": "VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.75"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.77"
       },
       "Content": {
-        "ObjectName": "DBDImage'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PlusIcon'",
+        "ObjectName": "DBDImage'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PlusSignImage'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.41"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Outer": "HorizontalBox_1",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Padding": {
+        "Left": -14.0,
+        "Right": -14.0
+      },
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_1'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.77"
+      },
+      "Content": {
+        "ObjectName": "DBDImage'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.LinkBarImage'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.39"
       }
     }
@@ -2876,11 +2958,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "HorizontalBox'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_2'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.76"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.78"
       },
       "Content": {
         "ObjectName": "DBDRichTextBlock'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.LoadoutMenuInventoryRTB'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.42"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.44"
       }
     }
   },
@@ -2896,11 +2978,11 @@
       "HorizontalAlignment": "HAlign_Left",
       "Parent": {
         "ObjectName": "HorizontalBox'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_2'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.76"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.78"
       },
       "Content": {
         "ObjectName": "DBDRichTextBlock'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.LoadoutMenuSubtitleRTB'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.47"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.49"
       }
     }
   },
@@ -2912,11 +2994,36 @@
     "Properties": {
       "Parent": {
         "ObjectName": "HorizontalBox'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_3'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.77"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.79"
       },
       "Content": {
         "ObjectName": "WBP_CoreMenuAddon_C'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.CoreAddon_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.157"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.161"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Outer": "HorizontalBox_3",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Properties": {
+      "Padding": {
+        "Left": -17.0,
+        "Right": -32.5
+      },
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_3'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.79"
+      },
+      "Content": {
+        "ObjectName": "DBDImage'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.Bar02'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.34"
       }
     }
   },
@@ -2932,11 +3039,11 @@
       "HorizontalAlignment": "HAlign_Left",
       "Parent": {
         "ObjectName": "HorizontalBox'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_3'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.77"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.79"
       },
       "Content": {
         "ObjectName": "WBP_CoreMenuAddon_C'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.CoreAddon_2'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.158"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.162"
       }
     }
   },
@@ -2965,11 +3072,11 @@
           "Tracks": [
             {
               "ObjectName": "MovieSceneFloatTrack'WBP_CoreLoadoutMenuPopupWidget_C:DisplayNewPage_INST.DisplayNewPage.MovieSceneFloatTrack_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.116"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.120"
             },
             {
               "ObjectName": "MovieScene2DTransformTrack'WBP_CoreLoadoutMenuPopupWidget_C:DisplayNewPage_INST.DisplayNewPage.MovieScene2DTransformTrack_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.95"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.99"
             }
           ]
         }
@@ -3021,11 +3128,11 @@
           "Tracks": [
             {
               "ObjectName": "MovieSceneFloatTrack'WBP_CoreLoadoutMenuPopupWidget_C:GoToNextPage_INST.GoToNextPage.MovieSceneFloatTrack_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.117"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.121"
             },
             {
               "ObjectName": "MovieScene2DTransformTrack'WBP_CoreLoadoutMenuPopupWidget_C:GoToNextPage_INST.GoToNextPage.MovieScene2DTransformTrack_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.96"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.100"
             }
           ]
         }
@@ -3077,11 +3184,11 @@
           "Tracks": [
             {
               "ObjectName": "MovieSceneFloatTrack'WBP_CoreLoadoutMenuPopupWidget_C:GoToPreviousPage_INST.GoToPreviousPage.MovieSceneFloatTrack_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.118"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.122"
             },
             {
               "ObjectName": "MovieScene2DTransformTrack'WBP_CoreLoadoutMenuPopupWidget_C:GoToPreviousPage_INST.GoToPreviousPage.MovieScene2DTransformTrack_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.97"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.101"
             }
           ]
         }
@@ -3353,11 +3460,11 @@
       "Easing": {
         "EaseIn": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreLoadoutMenuPopupWidget_C:DisplayNewPage_INST.DisplayNewPage.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseInFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.98"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.102"
         },
         "EaseOut": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreLoadoutMenuPopupWidget_C:DisplayNewPage_INST.DisplayNewPage.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseOutFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.99"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.103"
         }
       },
       "SectionRange": {
@@ -3624,11 +3731,11 @@
       "Easing": {
         "EaseIn": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreLoadoutMenuPopupWidget_C:GoToNextPage_INST.GoToNextPage.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseInFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.102"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.106"
         },
         "EaseOut": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreLoadoutMenuPopupWidget_C:GoToNextPage_INST.GoToNextPage.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseOutFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.103"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.107"
         }
       },
       "SectionRange": {
@@ -3895,11 +4002,11 @@
       "Easing": {
         "EaseIn": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreLoadoutMenuPopupWidget_C:GoToPreviousPage_INST.GoToPreviousPage.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseInFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.106"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.110"
         },
         "EaseOut": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreLoadoutMenuPopupWidget_C:GoToPreviousPage_INST.GoToPreviousPage.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseOutFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.107"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.111"
         }
       },
       "SectionRange": {
@@ -3935,7 +4042,7 @@
       "Sections": [
         {
           "ObjectName": "MovieScene2DTransformSection'WBP_CoreLoadoutMenuPopupWidget_C:DisplayNewPage_INST.DisplayNewPage.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.92"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.96"
         }
       ],
       "EvaluationFieldGuid": "2C1C768D-43B27CE8-07215DA9-ECEB11D0",
@@ -3944,7 +4051,7 @@
           {
             "Section": {
               "ObjectName": "MovieScene2DTransformSection'WBP_CoreLoadoutMenuPopupWidget_C:DisplayNewPage_INST.DisplayNewPage.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.92"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.96"
             },
             "Range": {
               "LowerBound": {
@@ -3985,7 +4092,7 @@
       "Sections": [
         {
           "ObjectName": "MovieScene2DTransformSection'WBP_CoreLoadoutMenuPopupWidget_C:GoToNextPage_INST.GoToNextPage.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.93"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.97"
         }
       ],
       "EvaluationFieldGuid": "2FECC642-414DCEB4-7FEE0393-9A6A8400",
@@ -3994,7 +4101,7 @@
           {
             "Section": {
               "ObjectName": "MovieScene2DTransformSection'WBP_CoreLoadoutMenuPopupWidget_C:GoToNextPage_INST.GoToNextPage.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.93"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.97"
             },
             "Range": {
               "LowerBound": {
@@ -4035,7 +4142,7 @@
       "Sections": [
         {
           "ObjectName": "MovieScene2DTransformSection'WBP_CoreLoadoutMenuPopupWidget_C:GoToPreviousPage_INST.GoToPreviousPage.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.94"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.98"
         }
       ],
       "EvaluationFieldGuid": "F238FFDA-44899F67-A69D6298-750509DB",
@@ -4044,7 +4151,7 @@
           {
             "Section": {
               "ObjectName": "MovieScene2DTransformSection'WBP_CoreLoadoutMenuPopupWidget_C:GoToPreviousPage_INST.GoToPreviousPage.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.94"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.98"
             },
             "Range": {
               "LowerBound": {
@@ -4283,7 +4390,7 @@
             "Key": {
               "EntityOwner": {
                 "ObjectName": "MovieSceneFloatSection'WBP_CoreLoadoutMenuPopupWidget_C:DisplayNewPage_INST.DisplayNewPage.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
-                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.113"
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.117"
               },
               "EntityID": 0
             },
@@ -4293,7 +4400,7 @@
             "Key": {
               "EntityOwner": {
                 "ObjectName": "MovieScene2DTransformSection'WBP_CoreLoadoutMenuPopupWidget_C:DisplayNewPage_INST.DisplayNewPage.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
-                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.92"
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.96"
               },
               "EntityID": 0
             },
@@ -4435,7 +4542,7 @@
             "Key": {
               "EntityOwner": {
                 "ObjectName": "MovieSceneFloatSection'WBP_CoreLoadoutMenuPopupWidget_C:GoToNextPage_INST.GoToNextPage.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
-                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.114"
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.118"
               },
               "EntityID": 0
             },
@@ -4445,7 +4552,7 @@
             "Key": {
               "EntityOwner": {
                 "ObjectName": "MovieScene2DTransformSection'WBP_CoreLoadoutMenuPopupWidget_C:GoToNextPage_INST.GoToNextPage.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
-                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.93"
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.97"
               },
               "EntityID": 0
             },
@@ -4581,7 +4688,7 @@
             "Key": {
               "EntityOwner": {
                 "ObjectName": "MovieSceneFloatSection'WBP_CoreLoadoutMenuPopupWidget_C:GoToPreviousPage_INST.GoToPreviousPage.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
-                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.115"
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.119"
               },
               "EntityID": 0
             },
@@ -4591,7 +4698,7 @@
             "Key": {
               "EntityOwner": {
                 "ObjectName": "MovieScene2DTransformSection'WBP_CoreLoadoutMenuPopupWidget_C:GoToPreviousPage_INST.GoToPreviousPage.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
-                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.94"
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.98"
               },
               "EntityID": 0
             },
@@ -4681,11 +4788,11 @@
       "Easing": {
         "EaseIn": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreLoadoutMenuPopupWidget_C:DisplayNewPage_INST.DisplayNewPage.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.100"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.104"
         },
         "EaseOut": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreLoadoutMenuPopupWidget_C:DisplayNewPage_INST.DisplayNewPage.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.101"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.105"
         }
       },
       "SectionRange": {
@@ -4763,11 +4870,11 @@
       "Easing": {
         "EaseIn": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreLoadoutMenuPopupWidget_C:GoToNextPage_INST.GoToNextPage.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.104"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.108"
         },
         "EaseOut": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreLoadoutMenuPopupWidget_C:GoToNextPage_INST.GoToNextPage.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.105"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.109"
         }
       },
       "SectionRange": {
@@ -4845,11 +4952,11 @@
       "Easing": {
         "EaseIn": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreLoadoutMenuPopupWidget_C:GoToPreviousPage_INST.GoToPreviousPage.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.108"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.112"
         },
         "EaseOut": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreLoadoutMenuPopupWidget_C:GoToPreviousPage_INST.GoToPreviousPage.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.109"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.113"
         }
       },
       "SectionRange": {
@@ -4885,7 +4992,7 @@
       "Sections": [
         {
           "ObjectName": "MovieSceneFloatSection'WBP_CoreLoadoutMenuPopupWidget_C:DisplayNewPage_INST.DisplayNewPage.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.113"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.117"
         }
       ],
       "EvaluationFieldGuid": "64AAD7B5-4EE271B7-28D235B4-6ABB350F",
@@ -4894,7 +5001,7 @@
           {
             "Section": {
               "ObjectName": "MovieSceneFloatSection'WBP_CoreLoadoutMenuPopupWidget_C:DisplayNewPage_INST.DisplayNewPage.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.113"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.117"
             },
             "Range": {
               "LowerBound": {
@@ -4935,7 +5042,7 @@
       "Sections": [
         {
           "ObjectName": "MovieSceneFloatSection'WBP_CoreLoadoutMenuPopupWidget_C:GoToNextPage_INST.GoToNextPage.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.114"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.118"
         }
       ],
       "EvaluationFieldGuid": "9294CFA9-43790163-592EAAB0-2B6EDBD3",
@@ -4944,7 +5051,7 @@
           {
             "Section": {
               "ObjectName": "MovieSceneFloatSection'WBP_CoreLoadoutMenuPopupWidget_C:GoToNextPage_INST.GoToNextPage.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.114"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.118"
             },
             "Range": {
               "LowerBound": {
@@ -4985,7 +5092,7 @@
       "Sections": [
         {
           "ObjectName": "MovieSceneFloatSection'WBP_CoreLoadoutMenuPopupWidget_C:GoToPreviousPage_INST.GoToPreviousPage.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.115"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.119"
         }
       ],
       "EvaluationFieldGuid": "411BC3BE-441B9091-9E75D290-D24A4F11",
@@ -4994,7 +5101,7 @@
           {
             "Section": {
               "ObjectName": "MovieSceneFloatSection'WBP_CoreLoadoutMenuPopupWidget_C:GoToPreviousPage_INST.GoToPreviousPage.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.115"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.119"
             },
             "Range": {
               "LowerBound": {
@@ -5030,24 +5137,24 @@
       "Slots": [
         {
           "ObjectName": "OverlaySlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.CoreContent.OverlaySlot_8'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.126"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.130"
         },
         {
           "ObjectName": "OverlaySlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.CoreContent.OverlaySlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.124"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.128"
         },
         {
           "ObjectName": "OverlaySlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.CoreContent.OverlaySlot_9'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.127"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.131"
         },
         {
           "ObjectName": "OverlaySlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.CoreContent.OverlaySlot_16'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.125"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.129"
         }
       ],
       "Slot": {
         "ObjectName": "ScaleBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.ScaleContainer.ScaleBoxSlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.142"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.146"
       }
     }
   },
@@ -5060,16 +5167,16 @@
       "Slots": [
         {
           "ObjectName": "OverlaySlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HeaderPanel.OverlaySlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.128"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.132"
         },
         {
           "ObjectName": "OverlaySlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HeaderPanel.OverlaySlot_1'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.129"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.133"
         }
       ],
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.CoreContent.OverlaySlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.124"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.128"
       }
     }
   },
@@ -5082,16 +5189,16 @@
       "Slots": [
         {
           "ObjectName": "OverlaySlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.Overlay_1.OverlaySlot_2'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.131"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.135"
         },
         {
           "ObjectName": "OverlaySlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.Overlay_1.OverlaySlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.130"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.134"
         }
       ],
       "Slot": {
         "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.InventoryContainer.GridSlot_5'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.60"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.62"
       }
     }
   },
@@ -5104,23 +5211,23 @@
       "Slots": [
         {
           "ObjectName": "OverlaySlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.Overlay_148.OverlaySlot_7'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.136"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.140"
         },
         {
           "ObjectName": "OverlaySlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.Overlay_148.OverlaySlot_5'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.134"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.138"
         },
         {
           "ObjectName": "OverlaySlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.Overlay_148.OverlaySlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.132"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.136"
         },
         {
           "ObjectName": "OverlaySlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.Overlay_148.OverlaySlot_6'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.135"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.139"
         },
         {
           "ObjectName": "OverlaySlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.Overlay_148.OverlaySlot_1'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.133"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.137"
         }
       ]
     }
@@ -5134,16 +5241,16 @@
       "Slots": [
         {
           "ObjectName": "OverlaySlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.RegressionButtonContainer.OverlaySlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.137"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.141"
         },
         {
           "ObjectName": "OverlaySlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.RegressionButtonContainer.OverlaySlot_1'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.138"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.142"
         }
       ],
       "Slot": {
         "ObjectName": "VerticalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.VerticalBox_141.VerticalBoxSlot_5'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.155"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.159"
       }
     }
   },
@@ -5155,11 +5262,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "Overlay'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.CoreContent'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.119"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.123"
       },
       "Content": {
         "ObjectName": "Overlay'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HeaderPanel'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.120"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.124"
       }
     }
   },
@@ -5175,11 +5282,11 @@
       },
       "Parent": {
         "ObjectName": "Overlay'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.CoreContent'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.119"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.123"
       },
       "Content": {
         "ObjectName": "WBP_DropDownListWidget_C'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.DropDownListWidget'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.172"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.176"
       }
     }
   },
@@ -5192,11 +5299,11 @@
       "HorizontalAlignment": "HAlign_Center",
       "Parent": {
         "ObjectName": "Overlay'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.CoreContent'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.119"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.123"
       },
       "Content": {
         "ObjectName": "Spacer'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.WIDTH_HERE'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.146"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.150"
       }
     }
   },
@@ -5212,11 +5319,11 @@
       "HorizontalAlignment": "HAlign_Fill",
       "Parent": {
         "ObjectName": "Overlay'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.CoreContent'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.119"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.123"
       },
       "Content": {
         "ObjectName": "VerticalBox'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.VerticalBox_141'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.148"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.152"
       }
     }
   },
@@ -5231,11 +5338,11 @@
       },
       "Parent": {
         "ObjectName": "Overlay'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HeaderPanel'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.120"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.124"
       },
       "Content": {
         "ObjectName": "DBDTextBlock'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.BotRoleIndexText'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.50"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.52"
       }
     }
   },
@@ -5246,16 +5353,16 @@
     "Class": "UScriptClass'OverlaySlot'",
     "Properties": {
       "Padding": {
-        "Left": -30.0,
+        "Left": -18.0,
         "Top": 60.0
       },
       "Parent": {
         "ObjectName": "Overlay'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HeaderPanel'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.120"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.124"
       },
       "Content": {
         "ObjectName": "WBP_DropDownListButton_C'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.DropDownListTrigger'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.171"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.175"
       }
     }
   },
@@ -5268,11 +5375,11 @@
       "HorizontalAlignment": "HAlign_Center",
       "Parent": {
         "ObjectName": "Overlay'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.Overlay_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.121"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.125"
       },
       "Content": {
         "ObjectName": "WBP_CorePaginationContainer_C'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PaginationGridContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.166"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.170"
       }
     }
   },
@@ -5285,11 +5392,11 @@
       "HorizontalAlignment": "HAlign_Center",
       "Parent": {
         "ObjectName": "Overlay'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.Overlay_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.121"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.125"
       },
       "Content": {
         "ObjectName": "DBDImage'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PaginationBg'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.38"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.40"
       }
     }
   },
@@ -5305,11 +5412,11 @@
       "HorizontalAlignment": "HAlign_Center",
       "Parent": {
         "ObjectName": "Overlay'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.Overlay_148'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.122"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.126"
       },
       "Content": {
         "ObjectName": "DBDRichTextBlock'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.TitleText'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.49"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.51"
       }
     }
   },
@@ -5323,11 +5430,11 @@
       "VerticalAlignment": "VAlign_Center",
       "Parent": {
         "ObjectName": "Overlay'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.Overlay_148'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.122"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.126"
       },
       "Content": {
         "ObjectName": "ScaleBox'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.ScaleContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.140"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.144"
       }
     }
   },
@@ -5341,11 +5448,11 @@
       "VerticalAlignment": "VAlign_Fill",
       "Parent": {
         "ObjectName": "Overlay'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.Overlay_148'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.122"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.126"
       },
       "Content": {
         "ObjectName": "DBDImage'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.BG'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.34"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.35"
       }
     }
   },
@@ -5361,11 +5468,11 @@
       "HorizontalAlignment": "HAlign_Center",
       "Parent": {
         "ObjectName": "Overlay'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.Overlay_148'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.122"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.126"
       },
       "Content": {
         "ObjectName": "DBDRichTextBlock'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.MessageText'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.48"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.50"
       }
     }
   },
@@ -5379,11 +5486,11 @@
       "VerticalAlignment": "VAlign_Fill",
       "Parent": {
         "ObjectName": "Overlay'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.Overlay_148'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.122"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.126"
       },
       "Content": {
         "ObjectName": "DBDImage'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.BlackOverlay'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.35"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.36"
       }
     }
   },
@@ -5395,11 +5502,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "Overlay'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.RegressionButtonContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.123"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.127"
       },
       "Content": {
         "ObjectName": "WBP_CoreStandardInputSwitcher_C'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.RegressionButton'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.170"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.174"
       }
     }
   },
@@ -5413,11 +5520,11 @@
       "VerticalAlignment": "VAlign_Bottom",
       "Parent": {
         "ObjectName": "Overlay'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.RegressionButtonContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.123"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.127"
       },
       "Content": {
         "ObjectName": "WBP_CoreStandardInputSwitcher_C'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.AlternativeButton'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.169"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.173"
       }
     }
   },
@@ -5432,12 +5539,12 @@
       "Slots": [
         {
           "ObjectName": "ScaleBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.InventoryGridScaler_SmallerInGame.ScaleBoxSlot_1'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.141"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.145"
         }
       ],
       "Slot": {
         "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.InventoryContainer.GridSlot_2'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.57"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.59"
       }
     }
   },
@@ -5451,12 +5558,12 @@
       "Slots": [
         {
           "ObjectName": "ScaleBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.ScaleContainer.ScaleBoxSlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.142"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.146"
         }
       ],
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.Overlay_148.OverlaySlot_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.133"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.137"
       }
     }
   },
@@ -5468,11 +5575,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "ScaleBox'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.InventoryGridScaler_SmallerInGame'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.139"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.143"
       },
       "Content": {
         "ObjectName": "GridPanel'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.InventoryGridContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.52"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.54"
       }
     }
   },
@@ -5484,11 +5591,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "ScaleBox'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.ScaleContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.140"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.144"
       },
       "Content": {
         "ObjectName": "Overlay'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.CoreContent'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.119"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.123"
       }
     }
   },
@@ -5504,7 +5611,7 @@
       },
       "Slot": {
         "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.InventoryContainer.GridSlot_6'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.61"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.63"
       }
     }
   },
@@ -5520,7 +5627,7 @@
       },
       "Slot": {
         "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PowerItemOverlay.GridSlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.65"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.67"
       }
     }
   },
@@ -5536,7 +5643,7 @@
       },
       "Slot": {
         "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PowerItemOverlay.GridSlot_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.66"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.68"
       }
     }
   },
@@ -5552,7 +5659,7 @@
       },
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.CoreContent.OverlaySlot_8'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.126"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.130"
       }
     }
   },
@@ -5565,16 +5672,16 @@
       "Slots": [
         {
           "ObjectName": "VerticalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PresetOverlay.VerticalBoxSlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.149"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.153"
         },
         {
           "ObjectName": "VerticalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PresetOverlay.VerticalBoxSlot_1'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.150"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.154"
         }
       ],
       "Slot": {
         "ObjectName": "VerticalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.VerticalBox_141.VerticalBoxSlot_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.151"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.155"
       }
     }
   },
@@ -5587,28 +5694,28 @@
       "Slots": [
         {
           "ObjectName": "VerticalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.VerticalBox_141.VerticalBoxSlot_1'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.151"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.155"
         },
         {
           "ObjectName": "VerticalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.VerticalBox_141.VerticalBoxSlot_2'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.152"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.156"
         },
         {
           "ObjectName": "VerticalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.VerticalBox_141.VerticalBoxSlot_3'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.153"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.157"
         },
         {
           "ObjectName": "VerticalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.VerticalBox_141.VerticalBoxSlot_4'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.154"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.158"
         },
         {
           "ObjectName": "VerticalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.VerticalBox_141.VerticalBoxSlot_5'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.155"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.159"
         }
       ],
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.CoreContent.OverlaySlot_9'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.127"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.131"
       }
     }
   },
@@ -5620,11 +5727,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "VerticalBox'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PresetOverlay'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.147"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.151"
       },
       "Content": {
         "ObjectName": "DBDRichTextBlock'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.LoadoutMenuPresetRTB'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.46"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.48"
       }
     }
   },
@@ -5639,11 +5746,11 @@
       },
       "Parent": {
         "ObjectName": "VerticalBox'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PresetOverlay'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.147"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.151"
       },
       "Content": {
         "ObjectName": "WBP_CoreLoadoutPresetContainerWidget_C'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PresetContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.156"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.160"
       }
     }
   },
@@ -5657,11 +5764,11 @@
       "VerticalAlignment": "VAlign_Top",
       "Parent": {
         "ObjectName": "VerticalBox'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.VerticalBox_141'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.148"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.152"
       },
       "Content": {
         "ObjectName": "VerticalBox'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PresetOverlay'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.147"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.151"
       }
     }
   },
@@ -5678,11 +5785,11 @@
       "VerticalAlignment": "VAlign_Top",
       "Parent": {
         "ObjectName": "VerticalBox'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.VerticalBox_141'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.148"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.152"
       },
       "Content": {
         "ObjectName": "GridPanel'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PowerItemOverlay'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.54"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.56"
       }
     }
   },
@@ -5696,11 +5803,11 @@
       "VerticalAlignment": "VAlign_Top",
       "Parent": {
         "ObjectName": "VerticalBox'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.VerticalBox_141'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.148"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.152"
       },
       "Content": {
         "ObjectName": "GridPanel'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PerkOverlay'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.53"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.55"
       }
     }
   },
@@ -5717,11 +5824,11 @@
       "VerticalAlignment": "VAlign_Top",
       "Parent": {
         "ObjectName": "VerticalBox'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.VerticalBox_141'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.148"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.152"
       },
       "Content": {
         "ObjectName": "GridPanel'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.InventoryContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.51"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.53"
       }
     }
   },
@@ -5737,11 +5844,11 @@
       "VerticalAlignment": "VAlign_Top",
       "Parent": {
         "ObjectName": "VerticalBox'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.VerticalBox_141'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.148"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.152"
       },
       "Content": {
         "ObjectName": "Overlay'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.RegressionButtonContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.123"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.127"
       }
     }
   },
@@ -5754,7 +5861,7 @@
     "Properties": {
       "Slot": {
         "ObjectName": "VerticalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PresetOverlay.VerticalBoxSlot_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.150"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.154"
       },
       "RenderTransform": {
         "Scale": {
@@ -5774,7 +5881,7 @@
       "VerticalAlignment": "ETooltipVerticalAlignment::Top",
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_3.HorizontalBoxSlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.87"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.90"
       }
     }
   },
@@ -5788,7 +5895,7 @@
       "VerticalAlignment": "ETooltipVerticalAlignment::Top",
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_3.HorizontalBoxSlot_2'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.88"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.92"
       }
     }
   },
@@ -5802,7 +5909,7 @@
       "VerticalAlignment": "ETooltipVerticalAlignment::Top",
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_1.HorizontalBoxSlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.82"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.84"
       }
     }
   },
@@ -5816,7 +5923,7 @@
       "VerticalAlignment": "ETooltipVerticalAlignment::Top",
       "Slot": {
         "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.PowerItemOverlay.GridSlot_15'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.67"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.69"
       }
     }
   },
@@ -5830,7 +5937,7 @@
       "VerticalAlignment": "ETooltipVerticalAlignment::Top",
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.78"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.80"
       }
     }
   },
@@ -5844,7 +5951,7 @@
       "VerticalAlignment": "ETooltipVerticalAlignment::Top",
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.79"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.81"
       }
     }
   },
@@ -5858,7 +5965,7 @@
       "VerticalAlignment": "ETooltipVerticalAlignment::Top",
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_4'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.81"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.83"
       },
       "bIsVariable": false
     }
@@ -5873,7 +5980,7 @@
       "VerticalAlignment": "ETooltipVerticalAlignment::Top",
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_3'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.80"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.82"
       },
       "bIsVariable": false
     }
@@ -5887,7 +5994,7 @@
     "Properties": {
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HorizontalBox_1.HorizontalBoxSlot_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.83"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.85"
       }
     }
   },
@@ -5906,7 +6013,7 @@
       },
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.Overlay_1.OverlaySlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.130"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.134"
       }
     }
   },
@@ -5919,7 +6026,7 @@
     "Properties": {
       "Slot": {
         "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.InventoryContainer.GridSlot_3'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.58"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.60"
       }
     }
   },
@@ -5933,7 +6040,7 @@
       "_alignment": "ETextJustify::Right",
       "Slot": {
         "ObjectName": "GridSlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.InventoryContainer.GridSlot_4'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.59"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.61"
       }
     }
   },
@@ -5946,7 +6053,7 @@
     "Properties": {
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.RegressionButtonContainer.OverlaySlot_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.138"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.142"
       }
     }
   },
@@ -5959,7 +6066,7 @@
     "Properties": {
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.RegressionButtonContainer.OverlaySlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.137"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.141"
       }
     }
   },
@@ -5972,7 +6079,7 @@
     "Properties": {
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.HeaderPanel.OverlaySlot_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.129"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.133"
       }
     }
   },
@@ -5985,7 +6092,7 @@
     "Properties": {
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.CoreContent.OverlaySlot_16'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.125"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.129"
       }
     }
   },
@@ -5997,7 +6104,7 @@
     "Properties": {
       "MovieScene": {
         "ObjectName": "MovieScene'WBP_CoreLoadoutMenuPopupWidget_C:DisplayNewPage_INST.DisplayNewPage'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.89"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.93"
       },
       "AnimationBindings": [
         {
@@ -6010,7 +6117,7 @@
       "DisplayLabel": "DisplayNewPage",
       "CompiledData": {
         "ObjectName": "MovieSceneCompiledData'WBP_CoreLoadoutMenuPopupWidget_C:DisplayNewPage_INST.CompiledData'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.110"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.114"
       },
       "Signature": "E1CED60B-483D2721-E30ABFA6-10EB1164"
     }
@@ -6023,7 +6130,7 @@
     "Properties": {
       "MovieScene": {
         "ObjectName": "MovieScene'WBP_CoreLoadoutMenuPopupWidget_C:GoToNextPage_INST.GoToNextPage'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.90"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.94"
       },
       "AnimationBindings": [
         {
@@ -6036,7 +6143,7 @@
       "DisplayLabel": "GoToNextPage",
       "CompiledData": {
         "ObjectName": "MovieSceneCompiledData'WBP_CoreLoadoutMenuPopupWidget_C:GoToNextPage_INST.CompiledData'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.111"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.115"
       },
       "Signature": "3F0CF73A-4BACC539-CEFC548D-DCCD66FB"
     }
@@ -6049,7 +6156,7 @@
     "Properties": {
       "MovieScene": {
         "ObjectName": "MovieScene'WBP_CoreLoadoutMenuPopupWidget_C:GoToPreviousPage_INST.GoToPreviousPage'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.91"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.95"
       },
       "AnimationBindings": [
         {
@@ -6062,7 +6169,7 @@
       "DisplayLabel": "GoToPreviousPage",
       "CompiledData": {
         "ObjectName": "MovieSceneCompiledData'WBP_CoreLoadoutMenuPopupWidget_C:GoToPreviousPage_INST.CompiledData'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.112"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.116"
       },
       "Signature": "C453AB2D-46C0C985-0BDA979F-56291C9E"
     }
@@ -6075,7 +6182,7 @@
     "Properties": {
       "RootWidget": {
         "ObjectName": "Overlay'WBP_CoreLoadoutMenuPopupWidget_C:WidgetTree.Overlay_148'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.122"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreLoadoutMenuPopupWidget.126"
       }
     }
   }
