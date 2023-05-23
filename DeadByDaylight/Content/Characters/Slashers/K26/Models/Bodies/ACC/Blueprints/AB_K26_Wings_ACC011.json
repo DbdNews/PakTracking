@@ -105,6 +105,18 @@
         "Name": "K2Node_Event_DeltaTimeX",
         "Flags": 1,
         "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
       }
     ],
     "FunctionFlags": 32769
@@ -582,7 +594,7 @@
           "Function": null,
           "ValueHandlerNodeProperty": {
             "Path": [
-              "AnimGraphNode_TransitionResult_4"
+              "AnimGraphNode_CopyPoseFromMesh"
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass'AB_K26_Wings_ACC011_C'",
@@ -601,25 +613,6 @@
           "Function": null,
           "ValueHandlerNodeProperty": {
             "Path": [
-              "AnimGraphNode_CopyPoseFromMesh"
-            ],
-            "ResolvedOwner": {
-              "ObjectName": "AnimBlueprintGeneratedClass'AB_K26_Wings_ACC011_C'",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K26/Models/Bodies/ACC/Blueprints/AB_K26_Wings_ACC011.8"
-            }
-          }
-        },
-        {
-          "BoundFunction": "None",
-          "CopyRecords": [
-            {
-              "CopyIndex": 2,
-              "PostCopyOperation": "EPostCopyOperation::None"
-            }
-          ],
-          "Function": null,
-          "ValueHandlerNodeProperty": {
-            "Path": [
               "AnimGraphNode_BlendListByBool_1"
             ],
             "ResolvedOwner": {
@@ -632,7 +625,7 @@
           "BoundFunction": "None",
           "CopyRecords": [
             {
-              "CopyIndex": 3,
+              "CopyIndex": 2,
               "PostCopyOperation": "EPostCopyOperation::None"
             }
           ],
@@ -668,14 +661,14 @@
           "BoundFunction": "None",
           "CopyRecords": [
             {
-              "CopyIndex": 4,
+              "CopyIndex": 3,
               "PostCopyOperation": "EPostCopyOperation::None"
             }
           ],
           "Function": null,
           "ValueHandlerNodeProperty": {
             "Path": [
-              "AnimGraphNode_TransitionResult_3"
+              "AnimGraphNode_TransitionResult_4"
             ],
             "ResolvedOwner": {
               "ObjectName": "AnimBlueprintGeneratedClass'AB_K26_Wings_ACC011_C'",
@@ -716,61 +709,29 @@
               "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K26/Models/Bodies/ACC/Blueprints/AB_K26_Wings_ACC011.8"
             }
           }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "CopyIndex": 4,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_TransitionResult_3"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "AnimBlueprintGeneratedClass'AB_K26_Wings_ACC011_C'",
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K26/Models/Bodies/ACC/Blueprints/AB_K26_Wings_ACC011.8"
+            }
+          }
         }
       ],
       "PropertyAccessLibrary": {
         "PathSegments": [
-          {
-            "Name": "_isInGame",
-            "Struct": null,
-            "Property": {
-              "Path": [
-                "_isInGame"
-              ],
-              "ResolvedOwner": {
-                "ObjectName": "Class'DynamicAccessoryAnimInstance'",
-                "ObjectPath": "/Script/DBDAnimation"
-              }
-            },
-            "Function": null,
-            "ArrayIndex": -1,
-            "Flags": 2
-          },
-          {
-            "Name": "AnimGraphNode_TransitionResult_4",
-            "Struct": {
-              "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
-              "ObjectPath": "/Script/Engine"
-            },
-            "Property": {
-              "Path": [
-                "AnimGraphNode_TransitionResult_4"
-              ],
-              "ResolvedOwner": {
-                "ObjectName": "AnimBlueprintGeneratedClass'AB_K26_Wings_ACC011_C'",
-                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K26/Models/Bodies/ACC/Blueprints/AB_K26_Wings_ACC011.8"
-              }
-            },
-            "Function": null,
-            "ArrayIndex": -1,
-            "Flags": 1
-          },
-          {
-            "Name": "bCanEnterTransition",
-            "Struct": null,
-            "Property": {
-              "Path": [
-                "bCanEnterTransition"
-              ],
-              "ResolvedOwner": {
-                "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
-                "ObjectPath": "/Script/Engine"
-              }
-            },
-            "Function": null,
-            "ArrayIndex": -1,
-            "Flags": 2
-          },
           {
             "Name": "_masterMesh",
             "Struct": null,
@@ -925,6 +886,57 @@
             "Flags": 2
           },
           {
+            "Name": "_isInGame",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "_isInGame"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'DynamicAccessoryAnimInstance'",
+                "ObjectPath": "/Script/DBDAnimation"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_TransitionResult_4",
+            "Struct": {
+              "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+              "ObjectPath": "/Script/Engine"
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_TransitionResult_4"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'AB_K26_Wings_ACC011_C'",
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K26/Models/Bodies/ACC/Blueprints/AB_K26_Wings_ACC011.8"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bCanEnterTransition",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bCanEnterTransition"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                "ObjectPath": "/Script/Engine"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
             "Name": "_isInMenu",
             "Struct": null,
             "Property": {
@@ -1036,13 +1048,13 @@
               "AccessIndex": 0,
               "DestAccessStartIndex": 0,
               "DestAccessEndIndex": 1,
-              "Type": "EPropertyAccessCopyType::Bool"
+              "Type": "EPropertyAccessCopyType::Object"
             },
             {
               "AccessIndex": 1,
               "DestAccessStartIndex": 1,
               "DestAccessEndIndex": 2,
-              "Type": "EPropertyAccessCopyType::Object"
+              "Type": "EPropertyAccessCopyType::Bool"
             },
             {
               "AccessIndex": 2,

@@ -2,9 +2,10 @@
   {
     "Type": "SkeletalMesh",
     "Name": "K28_W009_REF",
+    "Class": "UScriptClass'SkeletalMesh'",
     "Properties": {
       "Skeleton": {
-        "ObjectName": "Skeleton SlasherMale_REF_Skeleton",
+        "ObjectName": "Skeleton'SlasherMale_REF_Skeleton'",
         "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Models/SlasherMale_REF_Skeleton.444"
       },
       "LODInfo": [
@@ -50,7 +51,7 @@
             "bEnforceBoneBoundaries": false,
             "VolumeImportance": 1.0,
             "bLockEdges": false,
-            "bLockColorBounaries": false,
+            "bLockColorBounaries": true,
             "BaseLOD": 0
           },
           "BonesToRemove": [],
@@ -89,7 +90,7 @@
           },
           "ReductionSettings": {
             "TerminationCriterion": "SMTC_NumOfTriangles",
-            "NumOfTrianglesPercentage": 0.35,
+            "NumOfTrianglesPercentage": 0.5,
             "NumOfVertPercentage": 0.5,
             "MaxNumOfTriangles": 4,
             "MaxNumOfVerts": 6,
@@ -107,12 +108,22 @@
             "bEnforceBoneBoundaries": false,
             "VolumeImportance": 1.0,
             "bLockEdges": false,
-            "bLockColorBounaries": false,
+            "bLockColorBounaries": true,
             "BaseLOD": 0
           },
           "BonesToRemove": [],
-          "BonesToPrioritize": [],
-          "WeightOfPrioritization": 1.0,
+          "BonesToPrioritize": [
+            {
+              "BoneName": "joint_IndexART_01"
+            },
+            {
+              "BoneName": "joint_IndexBRT_01"
+            },
+            {
+              "BoneName": "joint_IndexCRT_01"
+            }
+          ],
+          "WeightOfPrioritization": 5000.0,
           "BakePose": null,
           "BakePoseOverride": null,
           "SourceImportFilename": "",
@@ -146,7 +157,7 @@
           },
           "ReductionSettings": {
             "TerminationCriterion": "SMTC_NumOfTriangles",
-            "NumOfTrianglesPercentage": 0.2,
+            "NumOfTrianglesPercentage": 0.25,
             "NumOfVertPercentage": 0.5,
             "MaxNumOfTriangles": 4,
             "MaxNumOfVerts": 6,
@@ -164,7 +175,7 @@
             "bEnforceBoneBoundaries": false,
             "VolumeImportance": 1.0,
             "bLockEdges": false,
-            "bLockColorBounaries": false,
+            "bLockColorBounaries": true,
             "BaseLOD": 0
           },
           "BonesToRemove": [],
@@ -244,7 +255,7 @@
       },
       "bHasBeenSimplified": true,
       "PhysicsAsset": {
-        "ObjectName": "PhysicsAsset K28_W009_REF_PhysicsAsset",
+        "ObjectName": "PhysicsAsset'K28_W009_REF_PhysicsAsset'",
         "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K28/Models/Weapon/Physics/K28_W009_REF_PhysicsAsset.0"
       },
       "SamplingInfo": {
@@ -297,11 +308,11 @@
     },
     "Materials": [
       {
-        "ObjectName": "MaterialInstanceConstant MI_K28W009",
+        "ObjectName": "MaterialInstanceConstant'MI_K28W009'",
         "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K28/Materials/Outfit009/MI_K28W009.0"
       },
       {
-        "ObjectName": "MaterialInstanceConstant MI_K28ArmsAcc009",
+        "ObjectName": "MaterialInstanceConstant'MI_K28ArmsAcc009'",
         "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K28/Materials/Outfit009/MI_K28ArmsAcc009.0"
       }
     ],
@@ -372,7 +383,7 @@
           {
             "MaterialIndex": 0,
             "BaseIndex": 0,
-            "NumTriangles": 2585,
+            "NumTriangles": 3709,
             "bRecomputeTangent": false,
             "RecomputeTangentsVertexMaskChannel": "Green",
             "bCastShadow": true,
@@ -380,7 +391,7 @@
             "bLegacyClothingSection": false,
             "CorrespondClothSectionIndex": -1,
             "BaseVertexIndex": 0,
-            "NumVertices": 2131,
+            "NumVertices": 2755,
             "MaxBoneInfluences": 4,
             "bUse16BitBoneIndex": false,
             "CorrespondClothAssetIndex": -1,
@@ -391,16 +402,16 @@
           },
           {
             "MaterialIndex": 1,
-            "BaseIndex": 7755,
-            "NumTriangles": 48,
+            "BaseIndex": 11127,
+            "NumTriangles": 52,
             "bRecomputeTangent": false,
             "RecomputeTangentsVertexMaskChannel": "Green",
             "bCastShadow": true,
             "bVisibleInRayTracing": true,
             "bLegacyClothingSection": false,
             "CorrespondClothSectionIndex": -1,
-            "BaseVertexIndex": 2131,
-            "NumVertices": 68,
+            "BaseVertexIndex": 2755,
+            "NumVertices": 72,
             "MaxBoneInfluences": 4,
             "bUse16BitBoneIndex": false,
             "CorrespondClothAssetIndex": -1,
@@ -410,7 +421,7 @@
             "ChunkedParentSectionIndex": -1
           }
         ],
-        "NumVertices": 2199,
+        "NumVertices": 2827,
         "NumTexCoords": 1,
         "VertexBufferGPUSkin": {
           "NumTexCoords": 0,
@@ -433,7 +444,7 @@
           {
             "MaterialIndex": 0,
             "BaseIndex": 0,
-            "NumTriangles": 1466,
+            "NumTriangles": 1840,
             "bRecomputeTangent": false,
             "RecomputeTangentsVertexMaskChannel": "Green",
             "bCastShadow": true,
@@ -441,7 +452,7 @@
             "bLegacyClothingSection": false,
             "CorrespondClothSectionIndex": -1,
             "BaseVertexIndex": 0,
-            "NumVertices": 1324,
+            "NumVertices": 1597,
             "MaxBoneInfluences": 2,
             "bUse16BitBoneIndex": false,
             "CorrespondClothAssetIndex": -1,
@@ -452,16 +463,16 @@
           },
           {
             "MaterialIndex": 1,
-            "BaseIndex": 4398,
-            "NumTriangles": 38,
+            "BaseIndex": 5520,
+            "NumTriangles": 40,
             "bRecomputeTangent": false,
             "RecomputeTangentsVertexMaskChannel": "Green",
             "bCastShadow": true,
             "bVisibleInRayTracing": true,
             "bLegacyClothingSection": false,
             "CorrespondClothSectionIndex": -1,
-            "BaseVertexIndex": 1324,
-            "NumVertices": 58,
+            "BaseVertexIndex": 1597,
+            "NumVertices": 60,
             "MaxBoneInfluences": 2,
             "bUse16BitBoneIndex": false,
             "CorrespondClothAssetIndex": -1,
@@ -471,7 +482,7 @@
             "ChunkedParentSectionIndex": -1
           }
         ],
-        "NumVertices": 1382,
+        "NumVertices": 1657,
         "NumTexCoords": 1,
         "VertexBufferGPUSkin": {
           "NumTexCoords": 0,
@@ -494,7 +505,7 @@
           {
             "MaterialIndex": 0,
             "BaseIndex": 0,
-            "NumTriangles": 162,
+            "NumTriangles": 204,
             "bRecomputeTangent": false,
             "RecomputeTangentsVertexMaskChannel": "Green",
             "bCastShadow": true,
@@ -502,7 +513,7 @@
             "bLegacyClothingSection": false,
             "CorrespondClothSectionIndex": -1,
             "BaseVertexIndex": 0,
-            "NumVertices": 210,
+            "NumVertices": 258,
             "MaxBoneInfluences": 2,
             "bUse16BitBoneIndex": false,
             "CorrespondClothAssetIndex": -1,
@@ -513,7 +524,7 @@
           },
           {
             "MaterialIndex": 1,
-            "BaseIndex": 486,
+            "BaseIndex": 612,
             "NumTriangles": 2,
             "bRecomputeTangent": false,
             "RecomputeTangentsVertexMaskChannel": "Green",
@@ -521,7 +532,7 @@
             "bVisibleInRayTracing": true,
             "bLegacyClothingSection": false,
             "CorrespondClothSectionIndex": -1,
-            "BaseVertexIndex": 210,
+            "BaseVertexIndex": 258,
             "NumVertices": 6,
             "MaxBoneInfluences": 2,
             "bUse16BitBoneIndex": false,
@@ -532,7 +543,7 @@
             "ChunkedParentSectionIndex": -1
           }
         ],
-        "NumVertices": 216,
+        "NumVertices": 264,
         "NumTexCoords": 1,
         "VertexBufferGPUSkin": {
           "NumTexCoords": 0,

@@ -812,6 +812,7 @@ r.D3D11.UseAllowTearing=0
 Slate.EnableRetainedRenderingWithLocalTransform=False
 r.OffsetXOnScreenMessage=300
 r.OffsetYOnScreenMessage=-75
+BP.bEnableSkelReinstUpdate=1
 
 [SystemSettingsEditor]
 r.Streaming.Boost=1 #As part of DBDL-137116 setting this to 1 (default value) instead of 100
@@ -971,6 +972,7 @@ LogDBDPlayerMovement=Log
 LogDBDEasyAntiCheat=Verbose
 LogAnalytics=Verbose
 LogHttp=Log
+LogAnniversary=Verbose
 
 [/Script/Engine.AnimationSettings]
 bTickAnimationOnSkeletalMeshInit=false
@@ -1148,10 +1150,7 @@ DirtyAreasUpdateFreq=60.000000
 +FunctionRedirects=(OldName="CharacterCollection.GetCharacters",NewName="CharacterCollection.GetMainDBDPlayers")
 
 +FunctionRedirects=(OldName="DBDPlayer.Authority_ImposeStatusEffect",NewName="DBDPlayer.Authority_ImposeStatusEffect_DEPRECATED")
-+FunctionRedirects=(OldName="DBDPlayer.Authority_ImposeDynamicStatusEffect",NewName="DBDPlayer.Authority_ImposeDynamicStatusEffect_DEPRECATED")
 +FunctionRedirects=(OldName="PerkManager.Authority_ImposeStatusEffect",NewName="PerkManager.Authority_ImposeStatusEffect_DEPRECATED")
-+FunctionRedirects=(OldName="PerkManager.Authority_ImposeDynamicStatusEffect",NewName="PerkManager.Authority_ImposeDynamicStatusEffect_DEPRECATED")
-+FunctionRedirects=(OldName="PerkManager.Authority_ImposeNewStatusEffectOrChangeLifeTime",NewName="PerkManager.Authority_ImposeNewStatusEffectOrChangeLifeTime_DEPRECATED")
 
 +PropertyRedirects=(OldName="Generator.NativeIsDamaged",NewName="Generator._nativeIsDamaged")
 +PropertyRedirects=(OldName="ExhaustedEffect.RunningCooldownModifier",NewName="ExhaustedEffect.CooldownModifier")
@@ -1287,7 +1286,6 @@ DirtyAreasUpdateFreq=60.000000
 +EnumRedirects=(OldName="EPlatformExclusiveFlag", NewName="EPlatformFlag")
 +EnumRedirects=(OldName="EGameState", NewName="/Script/DBDSharedTypes.EGameState")
 +EnumRedirects=(OldName="EKillerAbilities", NewName="/Script/DBDSharedTypes.EKillerAbilities")
-+EnumRedirects=(OldName="EKillerMoodInfluence", NewName="/Script/DBDSharedTypes.EKillerMoodInfluence")
 +EnumRedirects=(OldName="EAnimNotifyType", NewName="/Script/DBDSharedTypes.EAnimNotifyType")
 +EnumRedirects=(OldName="ECamperState", NewName="/Script/DBDSharedTypes.ECamperState")
 +EnumRedirects=(OldName="EInteractionAnimation", NewName="/Script/DBDSharedTypes.EInteractionAnimation")
@@ -1418,6 +1416,14 @@ DirtyAreasUpdateFreq=60.000000
 +EnumRedirects=(OldName="/Script/Archives.EventCountComparisonOperator",NewName="/Script/Archives.EEventCountComparisonOperator")
 +EnumRedirects=(OldName="/Script/Archives.EventSubject",NewName="/Script/Archives.EEventSubject")
 +FunctionRedirects=(OldName="/Script/DBDGameplay.TerrorRadiusEmitterComponent.SetIsActive",NewName="/Script/DBDGameplay.TerrorRadiusEmitterComponent.SetEmitterActive")
++PropertyRedirects=(OldName="/Script/DeadByDaylight.DBDGameState._numberOfSurvivorsKilled",NewName="/Script/DeadByDaylight.DBDGameState._numberOfSurvivorsKilledOrSacrificed")
++FunctionRedirects=(OldName="/Script/DeadByDaylight.DBDGameState.OnRep_NumberOfSurvivorsKilledSacrificed",NewName="/Script/DeadByDaylight.DBDGameState.OnRep_NumberOfSurvivorsKilledOrSacrificed")
++ClassRedirects=(OldName="/Script/Anniversary2023.ReverseBamboozle",NewName="/Script/Anniversary2023.ReverseBamboozleInteractionDefinition")
++PropertyRedirects=(OldName="/Script/DeadByDaylight.PlayerFinishStats.NumberOfSurvivorsKilled",NewName="/Script/DeadByDaylight.PlayerFinishStats.NumberOfSurvivorsKilledOrSacrificed")
++FunctionRedirects=(OldName="/Script/Anniversary2023.ReverseBamboozleInteractionDefinition.Multicast_ExecuteCosmetic",NewName="/Script/Anniversary2023.ReverseBamboozleInteractionDefinition.Multicast_OnWindowBlockBegin")
++FunctionRedirects=(OldName="/Script/Anniversary2023.InvitationPlayerComponent.Multicast_CosmeticOnInvitationInteraction",NewName="/Script/Anniversary2023.InvitationPlayerComponent.Multicast_CosmeticOnInvitationInteractionActivate")
++FunctionRedirects=(OldName="/Script/Anniversary2023.InvitationPlayerComponent.Cosmetic_OnInvitationInteractionStart",NewName="/Script/Anniversary2023.InvitationPlayerComponent.Cosmetic_OnInvitationInteractionActivate")
++FunctionRedirects=(OldName="/Script/Anniversary2023.FragilePalletTracker.EnableSelectedEffectToLocalPlayer",NewName="/Script/Anniversary2023.FragilePalletTracker.SetIndicatorOutlineVisibility")
 
 [/Script/IOSRuntimeSettings.IOSRuntimeSettings]
 BundleIdentifier=com.bhvr.deadbydaylight
@@ -1754,20 +1760,24 @@ EnableEnvironmentQueryEd=True
 +Stats=STAT_GPU_RenderVelocities
 +Stats=STAT_GPU_STAT_ASMRenderDepth
 +Stats=STAT_GPU_STAT_ASMProjection
++Stats=STAT_GPU_ReflectionEnvironment
 STAT_RHIDrawPrimitiveCalls=1000,2000
 STAT_Decals=0,75
-STAT_ASMNumLightSources=200
+STAT_ASMNumLightSources=50
 STAT_TotalSceneRenderingTime=16.0,16.666;SWI=32.0,33.333
-STAT_GPU_Prepass=0.5,1.5;SWI=1.0,3.0
-STAT_GPU_Basepass=1.5,3.0;SWI=3.0,8.0
-STAT_GPU_ShadowDepths=0.75,3.0;SWI=1.5,6.0
-STAT_GPU_Lights=2.0,4.0;SWI=4.0,8.0
-STAT_GPU_Translucency=0.33,1.5;XB1=0.33,1.5;PS4=0.33,1.5;SWI=0.66,3.0
-STAT_GPU_PostProcessing=1.33,2.0;XB1=1.33,3.0;PS4=1.33,3.0;SWI=2.66,4.5
-STAT_GPU_RenderVelocities=1.0;SWI=0.75,2.0
-STAT_GPU_STAT_ASMProjection=0.66,2.0;SWI=1.33,4.0
-STAT_GPU_STAT_ASMRenderDepth=0.66,1.5;SWI=1.33,3.0
-STAT_GPU_VolumetricFog=0.25,0.34;SWI=0.11,0.66
+STAT_GPU_ShadowDepths=0.75,3.0;XB1=0.3,1.5;PS4=0.75,3.0;SWI=1.5,6.0
+STAT_GPU_ShadowProjection=0.66,2.0;XSX=0.5,1.4;PS5=0.5,1.4;XB1=0.5,1.5;PS4=0.66,1.5;SWI=1.33,4.0
+STAT_GPU_STAT_ASMRenderDepth=0.66,1.5;XSX=0.5,1.4;PS5=0.5,1.4;XB1=0.33,0.66;PS4=0.33,0.66;SWI=1.33,3.0
+STAT_GPU_STAT_ASMProjection=0.66,2.0;XSX=0.5,1.4;PS5=0.5,1.4;XB1=0.5,1.5;PS4=0.66,1.5;SWI=1.33,4.0
+STAT_GPU_VolumetricFog=0.25,0.34;XSX=0.33,0.5;PS5=0.33,0.5;XB1=0.33,0.4;PS4=0.33,0.4;SWI=0.11,0.66
+STAT_GPU_Prepass=0.5,1.5;PS4=0.5,1.5;SWI=1.0,3.0
+STAT_GPU_Basepass=1.5,3.0;XSX=1.5,3.5;PS5=1.5,3.5;PS4=1.5,3.0;SWI=3.0,8.0
+STAT_GPU_RenderVelocities=1.0;PS4=1.0;SWI=0.75,2.0
+STAT_GPU_Lights=2.0,4.0;PS4=2.0,4.0;SWI=4.0,8.0
+STAT_GPU_Translucency=0.33,1.5;XB1=0.33,2.0;PS4=0.33,2.0;SWI=0.66,3.0
+STAT_GPU_ReflectionEnvironment=0.6,1.33;XSX=1.0,2.0;PS5=1.0,2.0;PS4=0.66,1.33;XB1=0.66,1.33
+STAT_GPU_PostProcessing=1.33,2.0;XSX=1.2,2.0;PS5=1.2,2.0;XB1=1.2,2.0;PS4=1.2,2.0;SWI=2.66,4.5
+
 
 [VFX]
 +Stats=STAT_ParticlesOverview_GT
@@ -1869,6 +1879,9 @@ Tangentspace=OrthonormalLeftHanded
 [TextureFormatOodle]
 bForceRDOOff=False
 DefaultRDOLambda=30
+
+[AutomationTestBlacklist]
++BlacklistTest=(Test="Project.Functional Tests./Game/AutomationTests/",Map="",Reason="Avoiding duplicates with GPR",RHIs="",Warn="true")
 
 [/Script/AutomationController.AutomationControllerSettings]
 bTreatLogWarningsAsTestErrors=False

@@ -2,8 +2,10 @@
   {
     "Type": "Material",
     "Name": "M_PP_RadialBlur",
+    "Class": "UScriptClass'Material'",
     "Properties": {
       "EmissiveColor": {
+        "Expression": null,
         "OutputIndex": 0,
         "InputName": "None",
         "Mask": 0,
@@ -24,20 +26,27 @@
       "MaterialDomain": "MD_PostProcess",
       "bCanMaskedBeAssumedOpaque": true,
       "BlendablePriority": 1,
-      "StateId": "7441E6C2-4BB2744A-847827AC-BCBA27BC",
+      "StateId": "09267820-495FB531-574DE38E-1F1EE18E",
       "CachedExpressionData": {
         "Parameters": {
           "RuntimeEntries": {
             "NameHashes": [
               108623330691152955,
               508890559518402168,
+              1038606984128230753,
               2774589308368113069,
+              3792137539844585781,
               4400299659649759135,
               5767408812754654258,
+              5991695277156995565,
               6334229234573253824,
+              6559217380322005632,
               8660731970360697040,
               10700337088751452656,
-              10929843019661107043
+              10929843019661107043,
+              13986844462495797690,
+              18043290272962584445,
+              18439771342529383349
             ],
             "ParameterInfos": [
               {
@@ -51,7 +60,17 @@
                 "Index": -1
               },
               {
+                "Name": "TextureScrollSpeed_Y",
+                "Association": "GlobalParameter",
+                "Index": -1
+              },
+              {
                 "Name": "FadeShift",
+                "Association": "GlobalParameter",
+                "Index": -1
+              },
+              {
+                "Name": "TextureTiling_Y",
                 "Association": "GlobalParameter",
                 "Index": -1
               },
@@ -66,7 +85,17 @@
                 "Index": -1
               },
               {
+                "Name": "TextureStrength",
+                "Association": "GlobalParameter",
+                "Index": -1
+              },
+              {
                 "Name": "FadeFactor",
+                "Association": "GlobalParameter",
+                "Index": -1
+              },
+              {
+                "Name": "TextureRadius",
                 "Association": "GlobalParameter",
                 "Index": -1
               },
@@ -84,32 +113,118 @@
                 "Name": "WeightPower",
                 "Association": "GlobalParameter",
                 "Index": -1
+              },
+              {
+                "Name": "TextureScrollSpeed_X",
+                "Association": "GlobalParameter",
+                "Index": -1
+              },
+              {
+                "Name": "TextureTiling_X",
+                "Association": "GlobalParameter",
+                "Index": -1
+              },
+              {
+                "Name": "TextureDensity",
+                "Association": "GlobalParameter",
+                "Index": -1
               }
             ],
             "ExpressionGuids": [
               "F1A9A306-44C54B0E-8D4AC596-BA8801BF",
               "85D0A339-46D34CE1-CC611596-52FAF61B",
+              "7083949C-428DCC7A-2D0F068D-C5187A4D",
               "8A9249FC-4C2D1FF6-69F3BE9C-25BCD321",
+              "46AEE028-4E456E2D-31DD00A7-A9BDB399",
               "CC7B139E-4329127C-CA495CAD-15424183",
               "4373D98A-44767F26-E444D699-3415C04C",
+              "6498916A-425F066D-8261E999-77A4C22E",
               "D61AE55F-4FAFA944-938AD28D-5DEC29A2",
+              "EC51F7F8-4D98923D-90CE4A96-CFC23B57",
               "893EE4D9-49039825-33F50584-E59AFE69",
               "AC440A09-4A206822-11560DB9-C78BB628",
-              "2B189BCD-4C8C3FF7-A6CC4E9E-F325720A"
+              "2B189BCD-4C8C3FF7-A6CC4E9E-F325720A",
+              "33B0845B-4E441BE6-D5C5A08F-9DFFB16C",
+              "3B7C207E-46416CAB-E2CCA38F-C195E718",
+              "2FCA5FE9-44F563F8-515A8F91-19B5C094"
+            ]
+          },
+          "RuntimeEntries": {
+            "NameHashes": [
+              8370121904344411576
+            ],
+            "ParameterInfos": [
+              {
+                "Name": "Texture",
+                "Association": "GlobalParameter",
+                "Index": -1
+              }
+            ],
+            "ExpressionGuids": [
+              "869196EE-4074364C-2B3250A8-85C23A96"
             ]
           },
           "ScalarValues": [
             70.0,
             0.01,
-            0.0,
+            -1.0,
             0.0,
             1.0,
+            0.0,
             1.0,
+            0.01,
+            1.0,
+            0.5,
             0.05,
             1.0,
-            0.05
+            0.05,
+            0.01,
+            1.0,
+            5.0
+          ],
+          "TextureValues": [
+            {
+              "ObjectName": "Texture2D'T_Tiling_Caustics_06'",
+              "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_Tiling_Caustics_06.0"
+            }
           ]
         },
+        "ReferencedTextures": [
+          {
+            "ObjectName": "Texture2D'T_Tiling_Caustics_06'",
+            "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_Tiling_Caustics_06.0"
+          }
+        ],
+        "FunctionInfos": [
+          {
+            "StateId": "5E28F255-4817E6E7-2D027C9A-2F7126C6",
+            "Function": {
+              "ObjectName": "MaterialFunction'VectorToRadialValue'",
+              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/VectorToRadialValue.0"
+            }
+          },
+          {
+            "StateId": "42FB52C9-4B6E464D-2D6CB2B5-E6A65899",
+            "Function": {
+              "ObjectName": "MaterialFunction'ExponentialDensity'",
+              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Density/ExponentialDensity.0"
+            }
+          },
+          {
+            "StateId": "42FB52C9-4B6E464D-2D6CB2B5-E6A65899",
+            "Function": {
+              "ObjectName": "MaterialFunction'ExponentialDensity'",
+              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Density/ExponentialDensity.0"
+            }
+          },
+          {
+            "StateId": "235C8133-44D704CA-0297108A-59B9F710",
+            "Function": {
+              "ObjectName": "MaterialFunction'RadialGradientExponential'",
+              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/RadialGradientExponential.0"
+            }
+          }
+        ],
         "QualityLevelsUsed": [
           false,
           false,

@@ -30,7 +30,7 @@
         "MaskG": 0,
         "MaskB": 0,
         "MaskA": 0,
-        "ExpressionName": "MaterialExpressionAdd_4",
+        "ExpressionName": "MaterialExpressionLinearInterpolate_3",
         "UseConstant": false,
         "Constant": {
           "B": 0,
@@ -41,7 +41,7 @@
         }
       },
       "bCanMaskedBeAssumedOpaque": true,
-      "StateId": "9A5DC0B2-4E3F788B-BC01EFA5-7BA897BF",
+      "StateId": "A0A51F98-41E88751-14A8CBB2-0BE80784",
       "CachedExpressionData": {
         "Parameters": {
           "RuntimeEntries": {
@@ -60,6 +60,7 @@
               6481856743864356916,
               6755473893949310062,
               7015771330562033947,
+              7378366387873772356,
               7654748081969772940,
               8337916293493064881,
               8409095388928527585,
@@ -67,10 +68,13 @@
               9080496065817028553,
               9586082219006987514,
               10163993054453109635,
+              10164305687011109773,
               10759113028736971490,
               10911257035176316780,
               11277758980243754024,
+              11493746571483921077,
               11662272782455113419,
+              11724881708390394687,
               11804553925493910323,
               12195011920588617277,
               12645167425506718684,
@@ -87,6 +91,7 @@
               15709942672280331209,
               16517126834131980131,
               16797590923809182146,
+              17214915684719366250,
               17421889222824709546
             ],
             "ParameterInfos": [
@@ -161,6 +166,11 @@
                 "Index": -1
               },
               {
+                "Name": "Glitch Panner X",
+                "Association": "GlobalParameter",
+                "Index": -1
+              },
+              {
                 "Name": "BaseTexture_Panner_PingPong_X_Max",
                 "Association": "GlobalParameter",
                 "Index": -1
@@ -196,6 +206,11 @@
                 "Index": -1
               },
               {
+                "Name": "Gaussian Noise on SubUV",
+                "Association": "GlobalParameter",
+                "Index": -1
+              },
+              {
                 "Name": "BaseTexture_Scale_Y",
                 "Association": "GlobalParameter",
                 "Index": -1
@@ -211,7 +226,17 @@
                 "Index": -1
               },
               {
+                "Name": "SubUV Contrast",
+                "Association": "GlobalParameter",
+                "Index": -1
+              },
+              {
                 "Name": "BaseTexture_Mask_Scale",
+                "Association": "GlobalParameter",
+                "Index": -1
+              },
+              {
+                "Name": "Glitch Panner Y",
                 "Association": "GlobalParameter",
                 "Index": -1
               },
@@ -296,6 +321,11 @@
                 "Index": -1
               },
               {
+                "Name": "Use lines",
+                "Association": "GlobalParameter",
+                "Index": -1
+              },
+              {
                 "Name": "GlitchDistortion_Tiling_X",
                 "Association": "GlobalParameter",
                 "Index": -1
@@ -316,6 +346,7 @@
               "E525358E-48AAD581-55C3AEA4-8A0AE713",
               "D47570F9-477C6DD5-3C41A682-8E434567",
               "616F59ED-48E37CD7-02DA3699-DC77AC6E",
+              "52328ABB-401F462D-3310B9B4-5D016F8B",
               "B3EFB343-4C6A63B4-70280BA7-19B52464",
               "6F7000FE-41A7E8B8-B720968F-3DDEE58F",
               "C5A8DC3F-41B1AAB1-768C3F9F-D65686C6",
@@ -323,10 +354,13 @@
               "4AFAA0F8-472358BB-22D345BC-38EE9F9E",
               "77F94C94-44086B8B-AF4F82A6-1DD64A06",
               "72F636A2-465BFF9A-63AED587-B310F025",
+              "1798E29E-4796A5AC-015B7688-BF7F3684",
               "6057E940-4B84AB59-789D32B2-1137CF46",
               "E3A0790E-48CC48FE-1F33FC8C-0DD2DCD7",
               "B9A427CB-497D5BB7-9D8488B1-832F569D",
+              "9A285050-4FF85BCF-2ECB3D82-D04F07CD",
               "D6C364AB-40A57887-12DC009D-FFF07C53",
+              "52068BD6-4AD5C872-B6A25FA2-D832774A",
               "6134E849-409828E6-637E1E8A-974E90CD",
               "790D862F-4B908D84-CBA8799A-435A1D7B",
               "FF7FFCDD-4B897E67-FA179789-6E54BA57",
@@ -343,6 +377,7 @@
               "EC8FB556-4F1C3BDA-6FDA69A6-1CDF81E9",
               "B4A3CF31-4A70293A-DF46A485-689D14E8",
               "D07B801F-4E7B0A80-6BCCEAAB-ED7E5C4D",
+              "8F8AA5D2-4F899954-6BDE5D93-707477F2",
               "D0C0A2B6-456ECC0F-05C843A8-D8DD1B4F"
             ]
           },
@@ -434,16 +469,20 @@
             1.0,
             -0.1,
             1.0,
+            1.0,
             0.0,
             1.0,
             0.15,
             1.0,
             1.0,
             8.0,
+            0.0,
             1.0,
             0.0,
             1.0,
+            0.002,
             1.0,
+            0.0,
             1.0,
             1.0,
             0.5,
@@ -460,6 +499,7 @@
             1.0,
             0.0,
             8.0,
+            0.0,
             1.0
           ],
           "VectorValues": [
@@ -550,6 +590,18 @@
           {
             "ObjectName": "Texture2D'flipbook'",
             "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/ExampleContent/Textures/flipbook.0"
+          },
+          {
+            "ObjectName": "Texture2D'T_Perlin_Noise_M'",
+            "ObjectPath": "DeadByDaylight/Content/StarterContent/Textures/T_Perlin_Noise_M.0"
+          },
+          {
+            "ObjectName": "Texture2D'T_StaticLines_01'",
+            "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_StaticLines_01.0"
+          },
+          {
+            "ObjectName": "Texture2D'T_Tiling_Gaussian_01'",
+            "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_Tiling_Gaussian_01.0"
           }
         ],
         "FunctionInfos": [
@@ -692,6 +744,34 @@
               "ObjectName": "MaterialFunction'FlipBook'",
               "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Texturing/FlipBook.0"
             }
+          },
+          {
+            "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
+            "Function": {
+              "ObjectName": "MaterialFunction'LinearGradient'",
+              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
+            }
+          },
+          {
+            "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
+            "Function": {
+              "ObjectName": "MaterialFunction'CheapContrast'",
+              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
+            }
+          },
+          {
+            "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
+            "Function": {
+              "ObjectName": "MaterialFunction'LinearGradient'",
+              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
+            }
+          },
+          {
+            "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
+            "Function": {
+              "ObjectName": "MaterialFunction'CheapContrast'",
+              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
+            }
           }
         ],
         "QualityLevelsUsed": [
@@ -726,6 +806,11 @@
           "SamplingScale": 1.0,
           "UVChannelIndex": 0,
           "TextureName": "T_StaticGlitch_01"
+        },
+        {
+          "SamplingScale": 0.5,
+          "UVChannelIndex": 0,
+          "TextureName": "T_StaticLines_01"
         }
       ]
     }

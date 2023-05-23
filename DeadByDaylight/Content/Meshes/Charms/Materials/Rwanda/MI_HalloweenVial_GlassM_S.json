@@ -5,8 +5,8 @@
     "Class": "UScriptClass'MaterialInstanceConstant'",
     "Properties": {
       "Parent": {
-        "ObjectName": "MaterialInstanceConstant'MI_Camper_TransCust'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Materials/MI_Camper_TransCust.0"
+        "ObjectName": "MaterialInstanceConstant'MI_Camper_TransCust_Charms'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Materials/MI_Camper_TransCust_Charms.0"
       },
       "bHasStaticPermutationResource": true,
       "ScalarParameterValues": [
@@ -67,18 +67,6 @@
       "TextureParameterValues": [
         {
           "ParameterInfo": {
-            "Name": "Diffuse",
-            "Association": "GlobalParameter",
-            "Index": -1
-          },
-          "ParameterValue": {
-            "ObjectName": "Texture2D'Grey'",
-            "ObjectPath": "DeadByDaylight/Content/Textures/Environment/Tiles/Grey.0"
-          },
-          "ExpressionGUID": "CFE713C8-4B47B97B-BEFC90AD-BB3E6B38"
-        },
-        {
-          "ParameterInfo": {
             "Name": "AORoughnessMetallic",
             "Association": "GlobalParameter",
             "Index": -1
@@ -103,6 +91,18 @@
         },
         {
           "ParameterInfo": {
+            "Name": "Diffuse",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'Grey'",
+            "ObjectPath": "DeadByDaylight/Content/Textures/Environment/Tiles/Grey.0"
+          },
+          "ExpressionGUID": "CFE713C8-4B47B97B-BEFC90AD-BB3E6B38"
+        },
+        {
+          "ParameterInfo": {
             "Name": "Alpha_Mask",
             "Association": "GlobalParameter",
             "Index": -1
@@ -115,12 +115,21 @@
         }
       ],
       "BasePropertyOverrides": {
-        "TwoSided": true,
         "BlendMode": "BLEND_Translucent",
         "OpacityMaskClipValue": 0.3333
       },
       "StaticParameters": {
         "StaticSwitchParameters": [
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Use emissive as base color",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "6D3488AD-46246FC9-3D82BF89-FFA0E822"
+          },
           {
             "Value": true,
             "ParameterInfo": {
@@ -138,15 +147,6 @@
           "ObjectName": "Texture2D'Black'",
           "ObjectPath": "DeadByDaylight/Content/Textures/Environment/Tiles/Black.0"
         },
-        null,
-        {
-          "ObjectName": "Texture2D'FlatNormal'",
-          "ObjectPath": "Engine/Content/EngineMaterials/FlatNormal.0"
-        },
-        {
-          "ObjectName": "Texture2D'Green_Linear'",
-          "ObjectPath": "DeadByDaylight/Content/Textures/Environment/Tiles/Green_Linear.0"
-        },
         {
           "ObjectName": "Texture2D'Grey'",
           "ObjectPath": "DeadByDaylight/Content/Textures/Environment/Tiles/Grey.0"
@@ -154,6 +154,14 @@
         {
           "ObjectName": "Texture2D'DefaultTexture'",
           "ObjectPath": "Engine/Content/EngineResources/DefaultTexture.0"
+        },
+        {
+          "ObjectName": "Texture2D'Green_Linear'",
+          "ObjectPath": "DeadByDaylight/Content/Textures/Environment/Tiles/Green_Linear.0"
+        },
+        {
+          "ObjectName": "Texture2D'FlatNormal'",
+          "ObjectPath": "Engine/Content/EngineMaterials/FlatNormal.0"
         },
         {
           "ObjectName": "Texture2D'T_GS_FrontSign_Flickerama'",
@@ -171,6 +179,7 @@
           "ObjectName": "Texture2D'T_FX_DissolveRamp'",
           "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_FX_DissolveRamp.0"
         },
+        null,
         {
           "ObjectName": "Texture2D'T_Halftone'",
           "ObjectPath": "DeadByDaylight/Content/Effects/Textures/K31/T_Halftone.0"
@@ -190,17 +199,17 @@
         {
           "SamplingScale": 1.0,
           "UVChannelIndex": 0,
-          "TextureName": "Green_Linear"
-        },
-        {
-          "SamplingScale": 1.0,
-          "UVChannelIndex": 0,
           "TextureName": "Grey"
         },
         {
           "SamplingScale": 1.0,
           "UVChannelIndex": 0,
           "TextureName": "Grey"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "Red"
         }
       ]
     }

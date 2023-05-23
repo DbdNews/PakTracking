@@ -1,0 +1,128 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "AlienSpider01_REF_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'AlienSpider01_REF_PhysicsAsset:SkeletalBodySetup_0'",
+          "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/Animals/AlienSpider01/Model/AlienSpider01_REF_PhysicsAsset.2"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'AlienSpider01_REF_PhysicsAsset:SkeletalBodySetup_1'",
+          "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/Animals/AlienSpider01/Model/AlienSpider01_REF_PhysicsAsset.3"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate'AlienSpider01_REF_PhysicsAsset:PhysicsConstraintTemplate_0'",
+          "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/Animals/AlienSpider01/Model/AlienSpider01_REF_PhysicsAsset.1"
+        }
+      ],
+      "ThumbnailInfo": null
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_0",
+    "Outer": "AlienSpider01_REF_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "joint_Head",
+        "ConstraintBone1": "joint_Head",
+        "ConstraintBone2": "joint_Hipmasters01",
+        "Pos2": {
+          "X": 0.0,
+          "Y": -0.9529446,
+          "Z": 9.98135
+        },
+        "PriAxis2": {
+          "X": 5.9604645E-08,
+          "Y": 0.0,
+          "Z": 0.99999994
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "ACM_Limited",
+            "Swing2Motion": "ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "AlienSpider01_REF_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -0.05635047,
+              "Y": -4.414565,
+              "Z": -2.5197177
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": -90.53364,
+              "Roll": -179.58063
+            },
+            "Radius": 18.060144,
+            "Length": 1.6034832,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "joint_Hipmasters01",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "71C55D4E4F8267FEC87E768B51D86BD2"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "AlienSpider01_REF_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 6.598525,
+              "Y": 3.1845121,
+              "Z": -0.0510483
+            },
+            "Rotation": {
+              "Pitch": 0.09474838,
+              "Yaw": -89.99988,
+              "Roll": -90.66274
+            },
+            "Radius": 9.402667,
+            "Length": 5.2554083,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "joint_Head",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "F866FCF8450C91563F10699695C55AA4"
+  }
+]

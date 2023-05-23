@@ -5,8 +5,8 @@
     "Class": "UScriptClass'MaterialInstanceConstant'",
     "Properties": {
       "Parent": {
-        "ObjectName": "MaterialInstanceConstant'MI_Camper_TransCust'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Materials/MI_Camper_TransCust.0"
+        "ObjectName": "MaterialInstanceConstant'MI_Camper_TransCust_Charms'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Materials/MI_Camper_TransCust_Charms.0"
       },
       "bHasStaticPermutationResource": true,
       "ScalarParameterValues": [
@@ -34,7 +34,7 @@
             "Association": "GlobalParameter",
             "Index": -1
           },
-          "ParameterValue": 0.26995,
+          "ParameterValue": 0.35,
           "ExpressionGUID": "B6FFD9A4-47736EEE-1CA3E492-23317AD0"
         },
         {
@@ -104,12 +104,21 @@
       ],
       "BasePropertyOverrides": {
         "bOverride_TwoSided": true,
-        "TwoSided": true,
         "BlendMode": "BLEND_Translucent",
         "OpacityMaskClipValue": 0.3333
       },
       "StaticParameters": {
         "StaticSwitchParameters": [
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Use emissive as base color",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "6D3488AD-46246FC9-3D82BF89-FFA0E822"
+          },
           {
             "Value": true,
             "ParameterInfo": {
@@ -127,15 +136,6 @@
           "ObjectName": "Texture2D'Black'",
           "ObjectPath": "DeadByDaylight/Content/Textures/Environment/Tiles/Black.0"
         },
-        null,
-        {
-          "ObjectName": "Texture2D'FlatNormal'",
-          "ObjectPath": "Engine/Content/EngineMaterials/FlatNormal.0"
-        },
-        {
-          "ObjectName": "Texture2D'Green_Linear'",
-          "ObjectPath": "DeadByDaylight/Content/Textures/Environment/Tiles/Green_Linear.0"
-        },
         {
           "ObjectName": "Texture2D'Grey'",
           "ObjectPath": "DeadByDaylight/Content/Textures/Environment/Tiles/Grey.0"
@@ -143,6 +143,14 @@
         {
           "ObjectName": "Texture2D'DefaultTexture'",
           "ObjectPath": "Engine/Content/EngineResources/DefaultTexture.0"
+        },
+        {
+          "ObjectName": "Texture2D'Green_Linear'",
+          "ObjectPath": "DeadByDaylight/Content/Textures/Environment/Tiles/Green_Linear.0"
+        },
+        {
+          "ObjectName": "Texture2D'FlatNormal'",
+          "ObjectPath": "Engine/Content/EngineMaterials/FlatNormal.0"
         },
         {
           "ObjectName": "Texture2D'T_GS_FrontSign_Flickerama'",
@@ -160,6 +168,7 @@
           "ObjectName": "Texture2D'T_FX_DissolveRamp'",
           "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_FX_DissolveRamp.0"
         },
+        null,
         {
           "ObjectName": "Texture2D'T_Halftone'",
           "ObjectPath": "DeadByDaylight/Content/Effects/Textures/K31/T_Halftone.0"
@@ -179,12 +188,12 @@
         {
           "SamplingScale": 1.0,
           "UVChannelIndex": 0,
-          "TextureName": "Green_Linear"
+          "TextureName": "T_ORGlass_001_BC"
         },
         {
           "SamplingScale": 1.0,
           "UVChannelIndex": 0,
-          "TextureName": "T_ORGlass_001_BC"
+          "TextureName": "T_ORGlass_001_ORM"
         },
         {
           "SamplingScale": 1.0,

@@ -2,8 +2,10 @@
   {
     "Type": "Material",
     "Name": "M_Erosion_TwoChannel_Masked1",
+    "Class": "UScriptClass'Material'",
     "Properties": {
       "Metallic": {
+        "Expression": null,
         "OutputIndex": 0,
         "InputName": "None",
         "Mask": 0,
@@ -11,11 +13,12 @@
         "MaskG": 0,
         "MaskB": 0,
         "MaskA": 0,
-        "ExpressionName": "MaterialExpressionConstant_1",
+        "ExpressionName": "MaterialExpressionScalarParameter_1",
         "UseConstant": false,
         "Constant": 0.0
       },
       "Specular": {
+        "Expression": null,
         "OutputIndex": 0,
         "InputName": "None",
         "Mask": 0,
@@ -23,11 +26,12 @@
         "MaskG": 0,
         "MaskB": 0,
         "MaskA": 0,
-        "ExpressionName": "MaterialExpressionMultiply_0",
+        "ExpressionName": "MaterialExpressionStaticSwitchParameter_0",
         "UseConstant": false,
         "Constant": 0.5
       },
       "Normal": {
+        "Expression": null,
         "OutputIndex": 0,
         "InputName": "None",
         "Mask": 0,
@@ -47,14 +51,51 @@
       "TranslucencyLightingMode": "TLM_SurfacePerPixelLighting",
       "bUsedWithParticleSprites": true,
       "bUsedWithMeshParticles": true,
-      "StateId": "0870476D-47363D31-83BA0FBA-74414A3E",
+      "bUsedWithNiagaraSprites": true,
+      "StateId": "DAE7C89A-4298FC12-7A05AD97-D6FC08B3",
       "CachedExpressionData": {
         "Parameters": {
           "RuntimeEntries": {
             "NameHashes": [
+              440574345582452634,
+              3929274268584483569,
+              8211339930095378870,
+              16850473894133391929
+            ],
+            "ParameterInfos": [
+              {
+                "Name": "Roughness",
+                "Association": "GlobalParameter",
+                "Index": -1
+              },
+              {
+                "Name": "Specular",
+                "Association": "GlobalParameter",
+                "Index": -1
+              },
+              {
+                "Name": "TextureRotation(0-1)",
+                "Association": "GlobalParameter",
+                "Index": -1
+              },
+              {
+                "Name": "Metalic",
+                "Association": "GlobalParameter",
+                "Index": -1
+              }
+            ],
+            "ExpressionGuids": [
+              "57DA476A-432221E9-EFFE20BB-1E368B40",
+              "2D0C55B8-436766B8-D081F998-E59DF3E9",
+              "3316295F-48CF9256-729105A8-8D7AF4E8",
+              "0C01F33B-48B609ED-308C2987-DA78FD6C"
+            ]
+          },
+          "RuntimeEntries": {
+            "NameHashes": [
               4708953410708818575,
               8198569358239374743,
-              8370121904344411576
+              13951334695804087774
             ],
             "ParameterInfos": [
               {
@@ -68,55 +109,75 @@
                 "Index": -1
               },
               {
-                "Name": "Texture",
+                "Name": "SpecularMap",
                 "Association": "GlobalParameter",
                 "Index": -1
               }
             ],
             "ExpressionGuids": [
-              "093394FD-49BC7567-5E3B8696-EB8256F1",
+              "F04FF5EC-485A778E-EA5D66BD-DE5877A4",
               "0ABBC2E1-4A864239-99FE4080-32D7688D",
-              "E44900C4-472AB5A0-D1F338B6-9A3BA7E7"
+              "9B006513-49952B7E-5D84B092-7590B56A"
             ]
           },
+          "ScalarValues": [
+            0.0,
+            0.5,
+            0.0,
+            0.0
+          ],
           "TextureValues": [
             {
-              "ObjectName": "Texture2D T_Blood_Erosion_N",
+              "ObjectName": "Texture2D'T_Blood_Erosion_N'",
               "ObjectPath": "DeadByDaylight/Content/Effects/Textures/Liquid/Blood/T_Blood_Erosion_N.0"
             },
             {
-              "ObjectName": "Texture2D T_Blood_Erosion",
+              "ObjectName": "Texture2D'T_Blood_Erosion'",
               "ObjectPath": "DeadByDaylight/Content/Effects/Textures/Liquid/Blood/T_Blood_Erosion.0"
             },
             {
-              "ObjectName": "Texture2D T_Blood_Erosion",
-              "ObjectPath": "DeadByDaylight/Content/Effects/Textures/Liquid/Blood/T_Blood_Erosion.0"
+              "ObjectName": "Texture2D'T_FSbloodmist'",
+              "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_FSbloodmist.0"
             }
           ]
         },
         "ReferencedTextures": [
           {
-            "ObjectName": "Texture2D T_Blood_Erosion_N",
-            "ObjectPath": "DeadByDaylight/Content/Effects/Textures/Liquid/Blood/T_Blood_Erosion_N.0"
-          },
-          {
-            "ObjectName": "Texture2D T_Blood_Erosion",
+            "ObjectName": "Texture2D'T_Blood_Erosion'",
             "ObjectPath": "DeadByDaylight/Content/Effects/Textures/Liquid/Blood/T_Blood_Erosion.0"
           },
           {
-            "ObjectName": "Texture2D T_Water_N",
+            "ObjectName": "Texture2D'T_Water_N'",
             "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_Water_N.0"
           },
           {
-            "ObjectName": "Texture2D T_FSbloodmist",
+            "ObjectName": "Texture2D'T_FSbloodmist'",
             "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_FSbloodmist.0"
+          },
+          {
+            "ObjectName": "Texture2D'T_Blood_Erosion_N'",
+            "ObjectPath": "DeadByDaylight/Content/Effects/Textures/Liquid/Blood/T_Blood_Erosion_N.0"
           }
         ],
         "FunctionInfos": [
           {
             "StateId": "E572D701-496E6D38-CC53A5BD-C450B0ED",
             "Function": {
-              "ObjectName": "MaterialFunction CustomRotator",
+              "ObjectName": "MaterialFunction'CustomRotator'",
+              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Texturing/CustomRotator.0"
+            }
+          },
+          {
+            "StateId": "E572D701-496E6D38-CC53A5BD-C450B0ED",
+            "Function": {
+              "ObjectName": "MaterialFunction'CustomRotator'",
+              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Texturing/CustomRotator.0"
+            }
+          },
+          {
+            "StateId": "E572D701-496E6D38-CC53A5BD-C450B0ED",
+            "Function": {
+              "ObjectName": "MaterialFunction'CustomRotator'",
               "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Texturing/CustomRotator.0"
             }
           }
@@ -139,6 +200,11 @@
           "SamplingScale": 1.0,
           "UVChannelIndex": 0,
           "TextureName": "T_Blood_Erosion"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_Blood_Erosion_N"
         },
         {
           "SamplingScale": 1.0,

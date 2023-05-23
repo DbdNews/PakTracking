@@ -4,11 +4,19 @@
     "Name": "BS_FK_Land_FPV",
     "Class": "UScriptClass'BlendSpace1D'",
     "Properties": {
-      "InterpolationParam": {
-        "InterpolationTime": 0.5
-      },
-      "TargetWeightInterpolationSpeedPerSec": 2.0,
       "SampleData": [
+        {
+          "Animation": {
+            "ObjectName": "AnimSequence'FK_Fall2RunFT_FPV'",
+            "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Finland/AnimSequences/Locomotion/FK_Fall2RunFT_FPV.0"
+          },
+          "SampleValue": {
+            "X": 1.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "RateScale": 1.0
+        },
         {
           "Animation": {
             "ObjectName": "AnimSequence'FK_LandLight_FPV'",
@@ -20,56 +28,44 @@
             "Z": 0.0
           },
           "RateScale": 1.0
-        },
-        {
-          "Animation": {
-            "ObjectName": "AnimSequence'FK_Fall2RunFT_FPV'",
-            "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Finland/AnimSequences/Locomotion/FK_Fall2RunFT_FPV.0"
-          },
-          "SampleValue": {
-            "X": 275.0,
-            "Y": 0.0,
-            "Z": 0.0
-          },
-          "RateScale": 1.0
         }
       ],
       "GridSamples": [
         {
-          "Indices": 1,
           "Indices": 0,
+          "Indices": 1,
           "Indices": -1,
           "Weights": 0.0,
           "Weights": 1.0,
           "Weights": 0.0
         },
         {
-          "Indices": 1,
           "Indices": 0,
+          "Indices": 1,
+          "Indices": -1,
+          "Weights": 0.25,
+          "Weights": 0.75,
+          "Weights": 0.0
+        },
+        {
+          "Indices": 0,
+          "Indices": 1,
           "Indices": -1,
           "Weights": 0.5,
           "Weights": 0.5,
           "Weights": 0.0
         },
         {
-          "Indices": 1,
           "Indices": 0,
+          "Indices": 1,
           "Indices": -1,
-          "Weights": 1.0,
-          "Weights": 0.0,
+          "Weights": 0.75,
+          "Weights": 0.25,
           "Weights": 0.0
         },
         {
+          "Indices": 0,
           "Indices": 1,
-          "Indices": -1,
-          "Indices": -1,
-          "Weights": 1.0,
-          "Weights": 0.0,
-          "Weights": 0.0
-        },
-        {
-          "Indices": 1,
-          "Indices": -1,
           "Indices": -1,
           "Weights": 1.0,
           "Weights": 0.0,
@@ -77,8 +73,8 @@
         }
       ],
       "BlendParameters": {
-        "DisplayName": "Speed",
-        "Max": 550.0
+        "DisplayName": "Forward",
+        "Max": 1.0
       },
       "Skeleton": {
         "ObjectName": "Skeleton'SlasherMale_REF_Skeleton'",

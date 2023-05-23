@@ -1,0 +1,150 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "DSBT_Camper_UseK32Emp",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence'DSBT_Camper_UseK32Emp:BTComposite_Sequence_1'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/DSBT_Camper_UseK32Emp.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Camper'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BB_Camper.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "DSBT_Camper_UseK32Emp",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ExtMoveTo'DSBT_Camper_UseK32Emp:BTTask_ExtMoveTo_3'",
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/DSBT_Camper_UseK32Emp.4"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'DSBT_Camper_UseK32Emp:BTTask_Wait_0'",
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/DSBT_Camper_UseK32Emp.5"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_PushObjectFocus'DSBT_Camper_UseK32Emp:BTService_PushObjectFocus_13'",
+          "ObjectPath": "DeadByDaylight/Content/AI/Camper/DSBT_Camper_UseK32Emp.2"
+        },
+        {
+          "ObjectName": "BTService_RunSkills'DSBT_Camper_UseK32Emp:BTService_RunSkills_0'",
+          "ObjectPath": "DeadByDaylight/Content/AI/Camper/DSBT_Camper_UseK32Emp.3"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_UseK32Emp'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/DSBT_Camper_UseK32Emp.0"
+      }
+    }
+  },
+  {
+    "Type": "BTService_PushObjectFocus",
+    "Name": "BTService_PushObjectFocus_13",
+    "Outer": "DSBT_Camper_UseK32Emp",
+    "Class": "UScriptClass'BTService_PushObjectFocus'",
+    "Properties": {
+      "BBFocusObj": {
+        "SelectedKeyName": "K32EmpTargetActor"
+      },
+      "NodeName": "Mind Focus On EMP Target",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_UseK32Emp'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/DSBT_Camper_UseK32Emp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'DSBT_Camper_UseK32Emp:BTComposite_Sequence_1'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/DSBT_Camper_UseK32Emp.1"
+      }
+    }
+  },
+  {
+    "Type": "BTService_RunSkills",
+    "Name": "BTService_RunSkills_0",
+    "Outer": "DSBT_Camper_UseK32Emp",
+    "Class": "UScriptClass'BTService_RunSkills'",
+    "Properties": {
+      "Context": {
+        "TagName": "AI.Skills.Contexts.Service.Camper.UseK32Emp"
+      },
+      "NodeName": "Run Use EMP Skills",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_UseK32Emp'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/DSBT_Camper_UseK32Emp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'DSBT_Camper_UseK32Emp:BTComposite_Sequence_1'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/DSBT_Camper_UseK32Emp.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ExtMoveTo",
+    "Name": "BTTask_ExtMoveTo_3",
+    "Outer": "DSBT_Camper_UseK32Emp",
+    "Class": "UScriptClass'BTTask_ExtMoveTo'",
+    "Properties": {
+      "BBStrafeFocus": {
+        "SelectedKeyName": "K32EmpTargetActor"
+      },
+      "StrafeFocus": "EExtMoveToStrafeFocusOptions::Always",
+      "NearGoalModeUnderDistance": 1400.0,
+      "BBIgnoreGroupAvoidance": {},
+      "AcceptableRadius": 700.0,
+      "FilterClass": {
+        "ObjectName": "Class'NavigationQueryFilter_CamperStealth'",
+        "ObjectPath": "/Script/DBDBots"
+      },
+      "bReachTestIncludesAgentRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "K32EmpTargetLocation"
+      },
+      "NodeName": "Move To EMP Target Location",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_UseK32Emp'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/DSBT_Camper_UseK32Emp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'DSBT_Camper_UseK32Emp:BTComposite_Sequence_1'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/DSBT_Camper_UseK32Emp.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "DSBT_Camper_UseK32Emp",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Properties": {
+      "WaitTime": 10.0,
+      "NodeName": "Wait Until EMP Is Used",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_UseK32Emp'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/DSBT_Camper_UseK32Emp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'DSBT_Camper_UseK32Emp:BTComposite_Sequence_1'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/DSBT_Camper_UseK32Emp.1"
+      }
+    }
+  }
+]

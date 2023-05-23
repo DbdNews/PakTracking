@@ -2,8 +2,10 @@
   {
     "Type": "Material",
     "Name": "M_BloodMesh_NOVAT",
+    "Class": "UScriptClass'Material'",
     "Properties": {
       "Metallic": {
+        "Expression": null,
         "OutputIndex": 0,
         "InputName": "None",
         "Mask": 0,
@@ -16,6 +18,7 @@
         "Constant": 0.0
       },
       "Specular": {
+        "Expression": null,
         "OutputIndex": 0,
         "InputName": "None",
         "Mask": 0,
@@ -28,6 +31,7 @@
         "Constant": 0.5
       },
       "Normal": {
+        "Expression": null,
         "OutputIndex": 0,
         "InputName": "None",
         "Mask": 1,
@@ -49,6 +53,7 @@
         "ShadingModelField": 4
       },
       "WorldPositionOffset": {
+        "Expression": null,
         "OutputIndex": 0,
         "InputName": "None",
         "Mask": 0,
@@ -70,7 +75,7 @@
       "bUsedWithMeshParticles": true,
       "bUsedWithNiagaraMeshParticles": true,
       "bCastRayTracedShadows": false,
-      "StateId": "97AA7908-4D3F1E0C-FC7A14A5-8CB2B63D",
+      "StateId": "0FF94810-47FC43BA-A7EA8A88-9936D679",
       "CachedExpressionData": {
         "Parameters": {
           "RuntimeEntries": {
@@ -82,8 +87,10 @@
               6781748865775663372,
               7073791644878388952,
               7947873943242958553,
+              9283451108159329013,
               10100388353821214453,
               10393113215080413205,
+              10645639892079691047,
               13567631061724812187,
               15527151929878579388,
               17605789950325111129
@@ -125,12 +132,22 @@
                 "Index": -1
               },
               {
+                "Name": "NormalPanningSpeedY",
+                "Association": "GlobalParameter",
+                "Index": -1
+              },
+              {
                 "Name": "Scale_noise_WPO",
                 "Association": "GlobalParameter",
                 "Index": -1
               },
               {
                 "Name": "Scale_Normal_Reflection",
+                "Association": "GlobalParameter",
+                "Index": -1
+              },
+              {
+                "Name": "NormalPanningSpeedX",
                 "Association": "GlobalParameter",
                 "Index": -1
               },
@@ -158,8 +175,10 @@
               "C910AC92-490A0581-F4BFFBBB-52B93D87",
               "421167DF-46421529-AE4F96AC-E6D367BE",
               "51BAE629-43EAD45B-E2E0489D-9AE6B880",
+              "255D5E6B-41CCB8CC-9EBDE191-40803290",
               "B568B34C-45BBDD3D-D18EE08D-36825306",
               "96A1EC57-48504CF3-B6883FA1-86B16572",
+              "809ED909-40662F1B-67828195-FA694897",
               "613D0DA6-4B8F1E3E-485842AB-A8B0F817",
               "146A4A86-46810427-B57112BD-0F8C9EC0",
               "A656938A-49DED00A-57B27CB1-F44A7829"
@@ -170,10 +189,9 @@
               1996172005915313067,
               2932558481917301537,
               3811534204201934227,
-              11287402403970568227,
               14403301114156501653,
-              14819046819547088857,
-              14962791022945785783
+              14962791022945785783,
+              17924250616085210336
             ],
             "ParameterInfos": [
               {
@@ -192,22 +210,17 @@
                 "Index": -1
               },
               {
-                "Name": "Spec_Color",
-                "Association": "GlobalParameter",
-                "Index": -1
-              },
-              {
                 "Name": "Color_Blood",
                 "Association": "GlobalParameter",
                 "Index": -1
               },
               {
-                "Name": "Speed_WOP",
+                "Name": "Test_sub",
                 "Association": "GlobalParameter",
                 "Index": -1
               },
               {
-                "Name": "Test_sub",
+                "Name": "Speed_WPO",
                 "Association": "GlobalParameter",
                 "Index": -1
               }
@@ -216,20 +229,32 @@
               "24D5550B-419C205C-80EA38BA-980AD251",
               "701BC19C-4E851EC6-4D74A6A6-06DA3074",
               "6895B78D-47BCBC89-E912BB9A-226880E4",
-              "86AAC684-49FD48FB-53A7E7A3-04CB8BD2",
               "0AA44144-49204A87-25F47C95-4B2181CC",
-              "23B91796-48D1052D-D310B090-A1BDE7E2",
-              "D30351BC-4942B677-BD11FD98-3C67869E"
+              "D30351BC-4942B677-BD11FD98-3C67869E",
+              "23B91796-48D1052D-D310B090-A1BDE7E2"
             ]
           },
           "RuntimeEntries": {
             "NameHashes": [
+              1107422179787307736,
+              2793399648321680069,
               3275151925602463853,
               3827603732862609337,
               7011621569858937958,
-              11359561245611927094
+              10760721725521636814,
+              10869803725162236213
             ],
             "ParameterInfos": [
+              {
+                "Name": "CutoutTexture",
+                "Association": "GlobalParameter",
+                "Index": -1
+              },
+              {
+                "Name": "ORM",
+                "Association": "GlobalParameter",
+                "Index": -1
+              },
               {
                 "Name": "WPO_Noise_texture",
                 "Association": "GlobalParameter",
@@ -246,16 +271,24 @@
                 "Index": -1
               },
               {
-                "Name": "Noise_texture",
+                "Name": "ColorTexture",
+                "Association": "GlobalParameter",
+                "Index": -1
+              },
+              {
+                "Name": "NormalDistortionTexture",
                 "Association": "GlobalParameter",
                 "Index": -1
               }
             ],
             "ExpressionGuids": [
+              "C44E9070-472ED01F-381BFB85-A9004441",
+              "6649BBC7-4BC6DC09-33ED1FA5-DFD05488",
               "767C744F-4B3EBC7C-A8045FA4-3FD29DF5",
               "260C0CCD-407C5352-2E4E2EB4-330FCDD1",
               "7DE4A751-46F43B25-09FD0085-C132EB56",
-              "C44E9070-472ED01F-381BFB85-A9004441"
+              "DD5F9844-4F1AE959-AB0A3394-989415B6",
+              "42B2B9D8-4CC75F25-BF808B8B-332651F2"
             ]
           },
           "ScalarValues": [
@@ -266,8 +299,10 @@
             6.0,
             1.0,
             0.0,
+            0.2,
             0.0,
             1.0,
+            0.2,
             1.0,
             15.0,
             2.0
@@ -295,11 +330,11 @@
               "Hex": "FFBCA8A8"
             },
             {
-              "R": 1.0,
-              "G": 1.0,
-              "B": 1.0,
+              "R": 0.0,
+              "G": 0.0,
+              "B": 0.0,
               "A": 1.0,
-              "Hex": "FFFFFFFF"
+              "Hex": "FF000000"
             },
             {
               "R": 0.0,
@@ -314,89 +349,101 @@
               "B": 0.0,
               "A": 1.0,
               "Hex": "FF595900"
-            },
-            {
-              "R": 0.0,
-              "G": 0.0,
-              "B": 0.0,
-              "A": 1.0,
-              "Hex": "FF000000"
             }
           ],
           "TextureValues": [
             {
-              "ObjectName": "Texture2D T_Dust_Noise_02",
+              "ObjectName": "Texture2D'T_Dust_Noise_02'",
               "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_Dust_Noise_02.0"
             },
             {
-              "ObjectName": "Texture2D T_reflection_map_01",
+              "ObjectName": "Texture2D'T_SplashMeshGround_ORM_01'",
+              "ObjectPath": "DeadByDaylight/Content/Effects/Houdini/BloodSim_01/T_SplashMeshGround_ORM_01.0"
+            },
+            {
+              "ObjectName": "Texture2D'T_Dust_Noise_02'",
+              "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_Dust_Noise_02.0"
+            },
+            {
+              "ObjectName": "Texture2D'T_reflection_map_01'",
               "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_reflection_map_01.0"
             },
             {
-              "ObjectName": "Texture2D T_Mud_N",
+              "ObjectName": "Texture2D'T_Mud_N'",
               "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_Mud_N.0"
             },
             {
-              "ObjectName": "Texture2D T_Dust_Noise_02",
-              "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_Dust_Noise_02.0"
+              "ObjectName": "Texture2D'T_SplashMeshGround_Albedo_01'",
+              "ObjectPath": "DeadByDaylight/Content/Effects/Houdini/BloodSim_01/T_SplashMeshGround_Albedo_01.0"
+            },
+            {
+              "ObjectName": "Texture2D'T_Tilling_Distortion_Map_01'",
+              "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_Tilling_Distortion_Map_01.0"
             }
           ]
         },
         "ReferencedTextures": [
           {
-            "ObjectName": "Texture2D T_SplashMeshGround_ORM_01",
-            "ObjectPath": "DeadByDaylight/Content/Effects/Houdini/BloodSim_01/T_SplashMeshGround_ORM_01.0"
-          },
-          {
-            "ObjectName": "Texture2D T_Mud_N",
+            "ObjectName": "Texture2D'T_Mud_N'",
             "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_Mud_N.0"
           },
           {
-            "ObjectName": "Texture2D T_SmokeTile",
+            "ObjectName": "Texture2D'T_SmokeTile'",
             "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_SmokeTile.0"
           },
           {
-            "ObjectName": "Texture2D T_BurnedAsh",
+            "ObjectName": "Texture2D'T_BurnedAsh'",
             "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_BurnedAsh.0"
           },
           {
-            "ObjectName": "Texture2D T_Dust_Noise_02",
+            "ObjectName": "Texture2D'T_Dust_Noise_02'",
             "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_Dust_Noise_02.0"
           },
           {
-            "ObjectName": "Texture2D T_SplashMeshGround_Albedo_01",
-            "ObjectPath": "DeadByDaylight/Content/Effects/Houdini/BloodSim_01/T_SplashMeshGround_Albedo_01.0"
-          },
-          {
-            "ObjectName": "Texture2D T_reflection_map_01",
+            "ObjectName": "Texture2D'T_reflection_map_01'",
             "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_reflection_map_01.0"
           },
           null,
           {
-            "ObjectName": "Texture2D T_Tilling_Distortion_Map_01",
+            "ObjectName": "Texture2D'T_SplashMeshGround_ORM_01'",
+            "ObjectPath": "DeadByDaylight/Content/Effects/Houdini/BloodSim_01/T_SplashMeshGround_ORM_01.0"
+          },
+          {
+            "ObjectName": "Texture2D'T_Tilling_Distortion_Map_01'",
             "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_Tilling_Distortion_Map_01.0"
+          },
+          {
+            "ObjectName": "Texture2D'T_SplashMeshGround_Albedo_01'",
+            "ObjectPath": "DeadByDaylight/Content/Effects/Houdini/BloodSim_01/T_SplashMeshGround_Albedo_01.0"
           }
         ],
         "FunctionInfos": [
           {
             "StateId": "F5EF088F-4DFC0671-D4D72997-B1FB466E",
             "Function": {
-              "ObjectName": "MaterialFunction MF_Opacity_cutout",
+              "ObjectName": "MaterialFunction'MF_Opacity_cutout'",
               "ObjectPath": "DeadByDaylight/Content/Effects/Materials/Functions/MF_Opacity_cutout.0"
             }
           },
           {
             "StateId": "4536007C-4208E456-984BD2BE-4F6FAFDC",
             "Function": {
-              "ObjectName": "MaterialFunction CustomReflectionVector",
+              "ObjectName": "MaterialFunction'CustomReflectionVector'",
               "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/CustomReflectionVector.0"
             }
           },
           {
             "StateId": "75614F71-46E788AD-56C14F99-F3E1D6A7",
             "Function": {
-              "ObjectName": "MaterialFunction ReflectionVectorSoft",
+              "ObjectName": "MaterialFunction'ReflectionVectorSoft'",
               "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Reflections/ReflectionVectorSoft.0"
+            }
+          },
+          {
+            "StateId": "E6715291-45CBD5A7-9C2DB096-ABFA19DF",
+            "Function": {
+              "ObjectName": "MaterialFunction'AppendMany'",
+              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/AppendMany.0"
             }
           }
         ],
@@ -412,7 +459,19 @@
           false,
           false
         ]
-      }
+      },
+      "TextureStreamingData": [
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_Dust_Noise_02"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_Tilling_Distortion_Map_01"
+        }
+      ]
     }
   }
 ]

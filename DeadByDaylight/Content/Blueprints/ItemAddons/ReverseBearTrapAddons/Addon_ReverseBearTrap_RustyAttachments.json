@@ -3,6 +3,7 @@
     "Type": "Function",
     "Name": "ExecuteUbergraph_Addon_ReverseBearTrap_RustyAttachments",
     "Outer": "Addon_ReverseBearTrap_RustyAttachments_C",
+    "Class": "UScriptClass'Function'",
     "ChildProperties": [
       {
         "Type": "IntProperty",
@@ -12,13 +13,25 @@
         "PropertyFlags": 148
       },
       {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
         "Type": "StructProperty",
         "Name": "K2Node_Event_gameEventType",
         "Flags": 1,
         "ElementSize": 12,
         "PropertyFlags": 2,
         "Struct": {
-          "ObjectName": "ScriptStruct GameplayTag",
+          "ObjectName": "ScriptStruct'GameplayTag'",
           "ObjectPath": "/Script/GameplayTags"
         }
       },
@@ -29,9 +42,21 @@
         "ElementSize": 40,
         "PropertyFlags": 2,
         "Struct": {
-          "ObjectName": "ScriptStruct GameEventData",
+          "ObjectName": "ScriptStruct'GameEventData'",
           "ObjectPath": "/Script/DeadByDaylight"
         }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
       },
       {
         "Type": "ObjectProperty",
@@ -39,7 +64,7 @@
         "Flags": 1,
         "ElementSize": 8,
         "PropertyClass": {
-          "ObjectName": "Class CamperPlayer",
+          "ObjectName": "Class'CamperPlayer'",
           "ObjectPath": "/Script/DeadByDaylight"
         }
       },
@@ -61,7 +86,7 @@
         "Flags": 1,
         "ElementSize": 8,
         "PropertyClass": {
-          "ObjectName": "Class CamperPlayer",
+          "ObjectName": "Class'CamperPlayer'",
           "ObjectPath": "/Script/DeadByDaylight"
         }
       },
@@ -91,7 +116,7 @@
       },
       {
         "Type": "BoolProperty",
-        "Name": "GameplayTagsK2Node_SwitchGameplayTag_CmpSuccess",
+        "Name": "CallFunc_BooleanAND_ReturnValue",
         "Flags": 1,
         "ElementSize": 1,
         "FieldSize": 1,
@@ -102,15 +127,16 @@
         "bIsNativeBool": true
       },
       {
-        "Type": "ObjectProperty",
-        "Name": "CallFunc_GetStatusEffect_ReturnValue",
+        "Type": "BoolProperty",
+        "Name": "GameplayTagsK2Node_SwitchGameplayTag_CmpSuccess",
         "Flags": 1,
-        "ElementSize": 8,
-        "PropertyFlags": 524288,
-        "PropertyClass": {
-          "ObjectName": "Class StatusEffect",
-          "ObjectPath": "/Script/DeadByDaylight"
-        }
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
       },
       {
         "Type": "BoolProperty",
@@ -125,32 +151,50 @@
         "bIsNativeBool": true
       },
       {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_IsValid_ReturnValue",
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayer_ReturnValue",
         "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DBDPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Authority_ImposeStatusEffectOfClass_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "PropertyClass": {
+          "ObjectName": "Class'StatusEffect'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningPlayer_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DBDPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Authority_ImposeStatusEffectOfClass_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "PropertyClass": {
+          "ObjectName": "Class'StatusEffect'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
       },
       {
         "Type": "BoolProperty",
-        "Name": "CallFunc_Not_PreBool_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_BooleanAND_ReturnValue",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
         "Flags": 1,
         "ElementSize": 1,
         "FieldSize": 1,
@@ -167,8 +211,9 @@
     "Type": "Function",
     "Name": "OnGameEventDispatched",
     "Outer": "Addon_ReverseBearTrap_RustyAttachments_C",
+    "Class": "UScriptClass'Function'",
     "SuperStruct": {
-      "ObjectName": "Function GameplayModifierContainer:OnGameEventDispatched",
+      "ObjectName": "Function'GameplayModifierContainer:OnGameEventDispatched'",
       "ObjectPath": "/Script/DeadByDaylight"
     },
     "ChildProperties": [
@@ -179,7 +224,7 @@
         "ElementSize": 12,
         "PropertyFlags": 150,
         "Struct": {
-          "ObjectName": "ScriptStruct GameplayTag",
+          "ObjectName": "ScriptStruct'GameplayTag'",
           "ObjectPath": "/Script/GameplayTags"
         }
       },
@@ -190,7 +235,7 @@
         "ElementSize": 40,
         "PropertyFlags": 134218134,
         "Struct": {
-          "ObjectName": "ScriptStruct GameEventData",
+          "ObjectName": "ScriptStruct'GameEventData'",
           "ObjectPath": "/Script/DeadByDaylight"
         }
       }
@@ -201,8 +246,9 @@
     "Type": "Function",
     "Name": "ReceiveBeginPlay",
     "Outer": "Addon_ReverseBearTrap_RustyAttachments_C",
+    "Class": "UScriptClass'Function'",
     "SuperStruct": {
-      "ObjectName": "Function ActorComponent:ReceiveBeginPlay",
+      "ObjectName": "Function'ActorComponent:ReceiveBeginPlay'",
       "ObjectPath": "/Script/Engine"
     },
     "FunctionFlags": 134350848
@@ -211,6 +257,7 @@
     "Type": "Function",
     "Name": "Apply Mangled",
     "Outer": "Addon_ReverseBearTrap_RustyAttachments_C",
+    "Class": "UScriptClass'Function'",
     "ChildProperties": [
       {
         "Type": "ObjectProperty",
@@ -219,7 +266,7 @@
         "ElementSize": 8,
         "PropertyFlags": 148,
         "PropertyClass": {
-          "ObjectName": "Class CamperPlayer",
+          "ObjectName": "Class'CamperPlayer'",
           "ObjectPath": "/Script/DeadByDaylight"
         }
       },
@@ -229,7 +276,7 @@
         "Flags": 1,
         "ElementSize": 8,
         "PropertyClass": {
-          "ObjectName": "Class DBDPlayer",
+          "ObjectName": "Class'DBDPlayer'",
           "ObjectPath": "/Script/DeadByDaylight"
         }
       },
@@ -240,7 +287,7 @@
         "ElementSize": 8,
         "PropertyFlags": 524288,
         "PropertyClass": {
-          "ObjectName": "Class StatusEffect",
+          "ObjectName": "Class'StatusEffect'",
           "ObjectPath": "/Script/DeadByDaylight"
         }
       }
@@ -251,31 +298,32 @@
     "Type": "BlueprintGeneratedClass",
     "Name": "Addon_ReverseBearTrap_RustyAttachments_C",
     "Super": "BaseReverseBearTrapAddon_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
     "Properties": {
       "UberGraphFunction": {
-        "ObjectName": "Function Addon_ReverseBearTrap_RustyAttachments_C:ExecuteUbergraph_Addon_ReverseBearTrap_RustyAttachments",
+        "ObjectName": "Function'Addon_ReverseBearTrap_RustyAttachments_C:ExecuteUbergraph_Addon_ReverseBearTrap_RustyAttachments'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/ItemAddons/ReverseBearTrapAddons/Addon_ReverseBearTrap_RustyAttachments.0"
       }
     },
     "SuperStruct": {
-      "ObjectName": "BlueprintGeneratedClass BaseReverseBearTrapAddon_C",
+      "ObjectName": "BlueprintGeneratedClass'BaseReverseBearTrapAddon_C'",
       "ObjectPath": "DeadByDaylight/Content/Blueprints/ItemAddons/ReverseBearTrapAddons/BaseReverseBearTrapAddon.2"
     },
     "Children": [
       {
-        "ObjectName": "Function Addon_ReverseBearTrap_RustyAttachments_C:Apply Mangled",
+        "ObjectName": "Function'Addon_ReverseBearTrap_RustyAttachments_C:Apply Mangled'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/ItemAddons/ReverseBearTrapAddons/Addon_ReverseBearTrap_RustyAttachments.3"
       },
       {
-        "ObjectName": "Function Addon_ReverseBearTrap_RustyAttachments_C:ReceiveBeginPlay",
+        "ObjectName": "Function'Addon_ReverseBearTrap_RustyAttachments_C:ReceiveBeginPlay'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/ItemAddons/ReverseBearTrapAddons/Addon_ReverseBearTrap_RustyAttachments.2"
       },
       {
-        "ObjectName": "Function Addon_ReverseBearTrap_RustyAttachments_C:OnGameEventDispatched",
+        "ObjectName": "Function'Addon_ReverseBearTrap_RustyAttachments_C:OnGameEventDispatched'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/ItemAddons/ReverseBearTrapAddons/Addon_ReverseBearTrap_RustyAttachments.1"
       },
       {
-        "ObjectName": "Function Addon_ReverseBearTrap_RustyAttachments_C:ExecuteUbergraph_Addon_ReverseBearTrap_RustyAttachments",
+        "ObjectName": "Function'Addon_ReverseBearTrap_RustyAttachments_C:ExecuteUbergraph_Addon_ReverseBearTrap_RustyAttachments'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/ItemAddons/ReverseBearTrapAddons/Addon_ReverseBearTrap_RustyAttachments.0"
       }
     ],
@@ -287,38 +335,49 @@
         "ElementSize": 16,
         "PropertyFlags": 2105344,
         "Struct": {
-          "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
           "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MangleEffect",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 589829,
+        "PropertyClass": {
+          "ObjectName": "Class'StatusEffect'",
+          "ObjectPath": "/Script/DeadByDaylight"
         }
       }
     ],
     "FuncMap": {
       "ExecuteUbergraph_Addon_ReverseBearTrap_RustyAttachments": {
-        "ObjectName": "Function Addon_ReverseBearTrap_RustyAttachments_C:ExecuteUbergraph_Addon_ReverseBearTrap_RustyAttachments",
+        "ObjectName": "Function'Addon_ReverseBearTrap_RustyAttachments_C:ExecuteUbergraph_Addon_ReverseBearTrap_RustyAttachments'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/ItemAddons/ReverseBearTrapAddons/Addon_ReverseBearTrap_RustyAttachments.0"
       },
       "OnGameEventDispatched": {
-        "ObjectName": "Function Addon_ReverseBearTrap_RustyAttachments_C:OnGameEventDispatched",
+        "ObjectName": "Function'Addon_ReverseBearTrap_RustyAttachments_C:OnGameEventDispatched'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/ItemAddons/ReverseBearTrapAddons/Addon_ReverseBearTrap_RustyAttachments.1"
       },
       "ReceiveBeginPlay": {
-        "ObjectName": "Function Addon_ReverseBearTrap_RustyAttachments_C:ReceiveBeginPlay",
+        "ObjectName": "Function'Addon_ReverseBearTrap_RustyAttachments_C:ReceiveBeginPlay'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/ItemAddons/ReverseBearTrapAddons/Addon_ReverseBearTrap_RustyAttachments.2"
       },
       "Apply Mangled": {
-        "ObjectName": "Function Addon_ReverseBearTrap_RustyAttachments_C:Apply Mangled",
+        "ObjectName": "Function'Addon_ReverseBearTrap_RustyAttachments_C:Apply Mangled'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/ItemAddons/ReverseBearTrapAddons/Addon_ReverseBearTrap_RustyAttachments.3"
       }
     },
     "ClassFlags": 10749972,
     "ClassWithin": {
-      "ObjectName": "Class Object",
+      "ObjectName": "Class'Object'",
       "ObjectPath": "/Script/CoreUObject"
     },
     "ClassConfigName": "Engine",
     "bCooked": true,
     "ClassDefaultObject": {
-      "ObjectName": "Addon_ReverseBearTrap_RustyAttachments_C Default__Addon_ReverseBearTrap_RustyAttachments_C",
+      "ObjectName": "Addon_ReverseBearTrap_RustyAttachments_C'Default__Addon_ReverseBearTrap_RustyAttachments_C'",
       "ObjectPath": "DeadByDaylight/Content/Blueprints/ItemAddons/ReverseBearTrapAddons/Addon_ReverseBearTrap_RustyAttachments.5"
     }
   },
@@ -326,6 +385,7 @@
     "Type": "Addon_ReverseBearTrap_RustyAttachments_C",
     "Name": "Default__Addon_ReverseBearTrap_RustyAttachments_C",
     "Template": "Default__BaseReverseBearTrapAddon_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/ItemAddons/ReverseBearTrapAddons/Addon_ReverseBearTrap_RustyAttachments.Addon_ReverseBearTrap_RustyAttachments_C'",
     "Properties": {
       "UberGraphFrame": {},
       "_id": "MangledEffect"

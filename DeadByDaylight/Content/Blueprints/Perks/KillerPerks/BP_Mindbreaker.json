@@ -1,30 +1,133 @@
 [
   {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Mindbreaker",
+    "Outer": "BP_Mindbreaker_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_CreateAndReceiveConditionForBP_conditionReceiver_CastInput",
+        "Flags": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 1125899906842624,
+        "InterfaceClass": {
+          "ObjectName": "Class'ConditionReceiver'",
+          "ObjectPath": "/Script/Competence"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateAndReceiveConditionForBP_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "PropertyClass": {
+          "ObjectName": "Class'EventDrivenModifierCondition'",
+          "ObjectPath": "/Script/Competence"
+        }
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "Function",
+    "Name": "Authority_OnInstantiateModifierConditions",
+    "Outer": "BP_Mindbreaker_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'BaseModifierContainer:Authority_OnInstantiateModifierConditions'",
+      "ObjectPath": "/Script/Competence"
+    },
+    "FunctionFlags": 134744068
+  },
+  {
     "Type": "BlueprintGeneratedClass",
     "Name": "BP_Mindbreaker_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Mindbreaker_C:ExecuteUbergraph_BP_Mindbreaker'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Perks/KillerPerks/BP_Mindbreaker.0"
+      }
+    },
     "SuperStruct": {
-      "ObjectName": "Class MindBreaker",
+      "ObjectName": "Class'MindBreaker'",
       "ObjectPath": "/Script/DBDCompetence"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Mindbreaker_C:Authority_OnInstantiateModifierConditions'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Perks/KillerPerks/BP_Mindbreaker.1"
+      },
+      {
+        "ObjectName": "Function'BP_Mindbreaker_C:ExecuteUbergraph_BP_Mindbreaker'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Perks/KillerPerks/BP_Mindbreaker.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Mindbreaker": {
+        "ObjectName": "Function'BP_Mindbreaker_C:ExecuteUbergraph_BP_Mindbreaker'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Perks/KillerPerks/BP_Mindbreaker.0"
+      },
+      "Authority_OnInstantiateModifierConditions": {
+        "ObjectName": "Function'BP_Mindbreaker_C:Authority_OnInstantiateModifierConditions'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Perks/KillerPerks/BP_Mindbreaker.1"
+      }
     },
     "ClassFlags": 10749972,
     "ClassWithin": {
-      "ObjectName": "Class Object",
+      "ObjectName": "Class'Object'",
       "ObjectPath": "/Script/CoreUObject"
     },
     "ClassConfigName": "Engine",
     "bCooked": true,
     "ClassDefaultObject": {
-      "ObjectName": "BP_Mindbreaker_C Default__BP_Mindbreaker_C",
-      "ObjectPath": "DeadByDaylight/Content/Blueprints/Perks/KillerPerks/BP_Mindbreaker.1"
+      "ObjectName": "BP_Mindbreaker_C'Default__BP_Mindbreaker_C'",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/Perks/KillerPerks/BP_Mindbreaker.3"
     }
   },
   {
     "Type": "BP_Mindbreaker_C",
     "Name": "Default__BP_Mindbreaker_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/Perks/KillerPerks/BP_Mindbreaker.BP_Mindbreaker_C'",
     "Properties": {
+      "UberGraphFrame": {},
       "_effectDurationAfterRepair": 3.0,
       "_effectDurationAfterRepair": 4.0,
-      "_effectDurationAfterRepair": 5.0
+      "_effectDurationAfterRepair": 5.0,
+      "_blindessEffect": {
+        "ObjectName": "BlueprintGeneratedClass'BP_MindbreakerBlindnessEffect_C'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Perks/StatusEffects/BP_MindbreakerBlindnessEffect.0"
+      },
+      "_exhaustedEffect": {
+        "ObjectName": "BlueprintGeneratedClass'BP_MindbreakerExhaustedEffect_C'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Perks/StatusEffects/BP_MindbreakerExhaustedEffect.0"
+      },
+      "PerkIconStrategyClass": {
+        "ObjectName": "Class'ActiveWhenApplicablePerkIconStrategy'",
+        "ObjectPath": "/Script/DeadByDaylight"
+      }
     }
   }
 ]

@@ -1,0 +1,123 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "SK_UBA_Hook_01_REF_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'SK_UBA_Hook_01_REF_PhysicsAsset:SkeletalBodySetup_0'",
+          "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/HookUmbra/SK_UBA_Hook_01_REF_PhysicsAsset.2"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'SK_UBA_Hook_01_REF_PhysicsAsset:SkeletalBodySetup_1'",
+          "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/HookUmbra/SK_UBA_Hook_01_REF_PhysicsAsset.3"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate'SK_UBA_Hook_01_REF_PhysicsAsset:PhysicsConstraintTemplate_0'",
+          "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/HookUmbra/SK_UBA_Hook_01_REF_PhysicsAsset.1"
+        }
+      ],
+      "ThumbnailInfo": null
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_0",
+    "Outer": "SK_UBA_Hook_01_REF_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "joint_MetalBeam",
+        "ConstraintBone1": "joint_MetalBeam",
+        "ConstraintBone2": "joint_Pelvis",
+        "Pos2": {
+          "X": 0.0,
+          "Y": -262.6271,
+          "Z": 0.0
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "ACM_Limited",
+            "Swing2Motion": "ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "SK_UBA_Hook_01_REF_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -0.30134636,
+              "Y": -123.641975,
+              "Z": 8.864053
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 178.52034,
+              "Roll": -89.516136
+            },
+            "Radius": 31.463062,
+            "Length": 203.57544,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "joint_Pelvis",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "DF08162D4237DA7666330E8F6F52FD73"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "SK_UBA_Hook_01_REF_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 1.0191529,
+              "Y": -24.06106,
+              "Z": 42.79007
+            },
+            "Rotation": {
+              "Pitch": -25.590027,
+              "Yaw": -90.06113,
+              "Roll": 1.2067338
+            },
+            "Radius": 22.99984,
+            "Length": 141.74005,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "joint_MetalBeam",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "6FD45B084BCC0E0AB68DC4920FF67FF5"
+  }
+]

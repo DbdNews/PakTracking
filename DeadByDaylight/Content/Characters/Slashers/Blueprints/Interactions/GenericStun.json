@@ -21,9 +21,68 @@
           "ObjectName": "Class'DBDPlayer'",
           "ObjectPath": "/Script/DeadByDaylight"
         }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_hasInteractionStarted",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_player_1",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DBDPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
       }
     ],
     "FunctionFlags": 32769
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInteractionFinished",
+    "Outer": "GenericStun_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'InteractionDefinition:OnInteractionFinished'",
+      "ObjectPath": "/Script/DeadByDaylight"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "player",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "PropertyClass": {
+          "ObjectName": "Class'DBDPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "hasInteractionStarted",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 134744064
   },
   {
     "Type": "Function",
@@ -270,18 +329,22 @@
     "Children": [
       {
         "ObjectName": "Function'GenericStun_C:DispatchStunEvent'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/GenericStun.4"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/GenericStun.5"
       },
       {
         "ObjectName": "Function'GenericStun_C:CanOverrideInteraction'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/GenericStun.3"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/GenericStun.4"
       },
       {
         "ObjectName": "Function'GenericStun_C:IsInteractionPossibleBP'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/GenericStun.2"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/GenericStun.3"
       },
       {
         "ObjectName": "Function'GenericStun_C:OnInteractionUpdateStart'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/GenericStun.2"
+      },
+      {
+        "ObjectName": "Function'GenericStun_C:OnInteractionFinished'",
         "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/GenericStun.1"
       },
       {
@@ -320,21 +383,25 @@
         "ObjectName": "Function'GenericStun_C:ExecuteUbergraph_GenericStun'",
         "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/GenericStun.0"
       },
+      "OnInteractionFinished": {
+        "ObjectName": "Function'GenericStun_C:OnInteractionFinished'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/GenericStun.1"
+      },
       "OnInteractionUpdateStart": {
         "ObjectName": "Function'GenericStun_C:OnInteractionUpdateStart'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/GenericStun.1"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/GenericStun.2"
       },
       "IsInteractionPossibleBP": {
         "ObjectName": "Function'GenericStun_C:IsInteractionPossibleBP'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/GenericStun.2"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/GenericStun.3"
       },
       "CanOverrideInteraction": {
         "ObjectName": "Function'GenericStun_C:CanOverrideInteraction'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/GenericStun.3"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/GenericStun.4"
       },
       "DispatchStunEvent": {
         "ObjectName": "Function'GenericStun_C:DispatchStunEvent'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/GenericStun.4"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/GenericStun.5"
       }
     },
     "ClassFlags": 10754068,
@@ -346,7 +413,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "GenericStun_C'Default__GenericStun_C'",
-      "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/GenericStun.6"
+      "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/GenericStun.7"
     }
   },
   {
