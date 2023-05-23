@@ -3,6 +3,7 @@
     "Type": "Function",
     "Name": "ExecuteUbergraph_WBP_CoreCharacterReward",
     "Outer": "WBP_CoreCharacterReward_C",
+    "Class": "UScriptClass'Function'",
     "ChildProperties": [
       {
         "Type": "IntProperty",
@@ -10,6 +11,69 @@
         "Flags": 1,
         "ElementSize": 4,
         "PropertyFlags": 148
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_characterRewardViewData",
+        "Flags": 1,
+        "ElementSize": 192,
+        "PropertyFlags": 2,
+        "Struct": {
+          "ObjectName": "ScriptStruct'CharacterRewardViewData'",
+          "ObjectPath": "/Script/DBDUIViewInterfaces"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetPaintSpaceGeometry_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 56,
+        "PropertyFlags": 2,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Geometry'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameInstanceSubsystem_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DBDTooltipManager'",
+          "ObjectPath": "/Script/DBDUIViewsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameInstanceSubsystem_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DBDTooltipManager'",
+          "ObjectPath": "/Script/DBDUIViewsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameInstanceSubsystem_ReturnValue_2",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DBDTooltipManager'",
+          "ObjectPath": "/Script/DBDUIViewsCore"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetPaintSpaceGeometry_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 56,
+        "PropertyFlags": 2,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Geometry'",
+          "ObjectPath": "/Script/SlateCore"
+        }
       },
       {
         "Type": "BoolProperty",
@@ -24,65 +88,12 @@
         "bIsNativeBool": true
       },
       {
-        "Type": "StructProperty",
-        "Name": "K2Node_Event_characterRewardViewData",
-        "Flags": 1,
-        "ElementSize": 160,
-        "PropertyFlags": 2,
-        "Struct": {
-          "ObjectName": "ScriptStruct CharacterRewardViewData",
-          "ObjectPath": "/Script/DBDUIViewInterfaces"
-        }
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "CallFunc_GetPaintSpaceGeometry_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 56,
-        "PropertyFlags": 2,
-        "Struct": {
-          "ObjectName": "ScriptStruct Geometry",
-          "ObjectPath": "/Script/SlateCore"
-        }
-      },
-      {
         "Type": "ObjectProperty",
-        "Name": "CallFunc_GetGameInstanceSubsystem_ReturnValue",
+        "Name": "CallFunc_GetGameInstanceSubsystem_ReturnValue_3",
         "Flags": 1,
         "ElementSize": 8,
         "PropertyClass": {
-          "ObjectName": "Class DBDTooltipManager",
-          "ObjectPath": "/Script/DBDUIViewsCore"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "CallFunc_GetGameInstanceSubsystem_ReturnValue_1",
-        "Flags": 1,
-        "ElementSize": 8,
-        "PropertyClass": {
-          "ObjectName": "Class DBDTooltipManager",
-          "ObjectPath": "/Script/DBDUIViewsCore"
-        }
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "CallFunc_GetPaintSpaceGeometry_ReturnValue_1",
-        "Flags": 1,
-        "ElementSize": 56,
-        "PropertyFlags": 2,
-        "Struct": {
-          "ObjectName": "ScriptStruct Geometry",
-          "ObjectPath": "/Script/SlateCore"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "CallFunc_GetGameInstanceSubsystem_ReturnValue_2",
-        "Flags": 1,
-        "ElementSize": 8,
-        "PropertyClass": {
-          "ObjectName": "Class DBDTooltipManager",
+          "ObjectName": "Class'DBDTooltipManager'",
           "ObjectPath": "/Script/DBDUIViewsCore"
         }
       }
@@ -91,10 +102,35 @@
   },
   {
     "Type": "Function",
+    "Name": "SetCharacterRewardData",
+    "Outer": "WBP_CoreCharacterReward_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'CoreCharacterRewardWidget:SetCharacterRewardData'",
+      "ObjectPath": "/Script/DBDUIViewsCore"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "characterRewardViewData",
+        "Flags": 1,
+        "ElementSize": 192,
+        "PropertyFlags": 134218134,
+        "Struct": {
+          "ObjectName": "ScriptStruct'CharacterRewardViewData'",
+          "ObjectPath": "/Script/DBDUIViewInterfaces"
+        }
+      }
+    ],
+    "FunctionFlags": 205654016
+  },
+  {
+    "Type": "Function",
     "Name": "OnUnhovered",
     "Outer": "WBP_CoreCharacterReward_C",
+    "Class": "UScriptClass'Function'",
     "SuperStruct": {
-      "ObjectName": "Function CoreButtonWidget:OnUnhovered",
+      "ObjectName": "Function'CoreButtonWidget:OnUnhovered'",
       "ObjectPath": "/Script/DBDUIViewsCore"
     },
     "FunctionFlags": 134744064
@@ -103,8 +139,9 @@
     "Type": "Function",
     "Name": "OnHovered",
     "Outer": "WBP_CoreCharacterReward_C",
+    "Class": "UScriptClass'Function'",
     "SuperStruct": {
-      "ObjectName": "Function CoreButtonWidget:OnHovered",
+      "ObjectName": "Function'CoreButtonWidget:OnHovered'",
       "ObjectPath": "/Script/DBDUIViewsCore"
     },
     "FunctionFlags": 134744064
@@ -113,72 +150,51 @@
     "Type": "Function",
     "Name": "Destruct",
     "Outer": "WBP_CoreCharacterReward_C",
+    "Class": "UScriptClass'Function'",
     "SuperStruct": {
-      "ObjectName": "Function UserWidget:Destruct",
+      "ObjectName": "Function'UserWidget:Destruct'",
       "ObjectPath": "/Script/UMG"
     },
     "FunctionFlags": 134350856
   },
   {
-    "Type": "Function",
-    "Name": "SetData",
-    "Outer": "WBP_CoreCharacterReward_C",
-    "SuperStruct": {
-      "ObjectName": "Function CoreCharacterRewardWidget:SetData",
-      "ObjectPath": "/Script/DBDUIViewsCore"
-    },
-    "ChildProperties": [
-      {
-        "Type": "StructProperty",
-        "Name": "characterRewardViewData",
-        "Flags": 1,
-        "ElementSize": 160,
-        "PropertyFlags": 134218134,
-        "Struct": {
-          "ObjectName": "ScriptStruct CharacterRewardViewData",
-          "ObjectPath": "/Script/DBDUIViewInterfaces"
-        }
-      }
-    ],
-    "FunctionFlags": 205654016
-  },
-  {
     "Type": "WidgetBlueprintGeneratedClass",
     "Name": "WBP_CoreCharacterReward_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
     "Properties": {
       "WidgetTree": {
-        "ObjectName": "WidgetTree WBP_CoreCharacterReward_C:WidgetTree",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.40"
+        "ObjectName": "WidgetTree'WBP_CoreCharacterReward_C:WidgetTree'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.44"
       },
       "bClassRequiresNativeTick": true,
       "UberGraphFunction": {
-        "ObjectName": "Function WBP_CoreCharacterReward_C:ExecuteUbergraph_WBP_CoreCharacterReward",
+        "ObjectName": "Function'WBP_CoreCharacterReward_C:ExecuteUbergraph_WBP_CoreCharacterReward'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.0"
       }
     },
     "SuperStruct": {
-      "ObjectName": "Class CoreCharacterRewardWidget",
+      "ObjectName": "Class'CoreCharacterRewardWidget'",
       "ObjectPath": "/Script/DBDUIViewsCore"
     },
     "Children": [
       {
-        "ObjectName": "Function WBP_CoreCharacterReward_C:SetData",
+        "ObjectName": "Function'WBP_CoreCharacterReward_C:Destruct'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.4"
       },
       {
-        "ObjectName": "Function WBP_CoreCharacterReward_C:Destruct",
+        "ObjectName": "Function'WBP_CoreCharacterReward_C:OnHovered'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.3"
       },
       {
-        "ObjectName": "Function WBP_CoreCharacterReward_C:OnHovered",
+        "ObjectName": "Function'WBP_CoreCharacterReward_C:OnUnhovered'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.2"
       },
       {
-        "ObjectName": "Function WBP_CoreCharacterReward_C:OnUnhovered",
+        "ObjectName": "Function'WBP_CoreCharacterReward_C:SetCharacterRewardData'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.1"
       },
       {
-        "ObjectName": "Function WBP_CoreCharacterReward_C:ExecuteUbergraph_WBP_CoreCharacterReward",
+        "ObjectName": "Function'WBP_CoreCharacterReward_C:ExecuteUbergraph_WBP_CoreCharacterReward'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.0"
       }
     ],
@@ -190,7 +206,7 @@
         "ElementSize": 16,
         "PropertyFlags": 2105344,
         "Struct": {
-          "ObjectName": "ScriptStruct PointerToUberGraphFrame",
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
           "ObjectPath": "/Script/Engine"
         }
       },
@@ -201,7 +217,7 @@
         "ElementSize": 8,
         "PropertyFlags": 562952101429260,
         "PropertyClass": {
-          "ObjectName": "Class DBDImage",
+          "ObjectName": "Class'DBDImage'",
           "ObjectPath": "/Script/DBDUIViewsCore"
         }
       },
@@ -212,7 +228,7 @@
         "ElementSize": 8,
         "PropertyFlags": 562952101429260,
         "PropertyClass": {
-          "ObjectName": "Class DBDImage",
+          "ObjectName": "Class'DBDImage'",
           "ObjectPath": "/Script/DBDUIViewsCore"
         }
       },
@@ -223,7 +239,7 @@
         "ElementSize": 8,
         "PropertyFlags": 562952101429260,
         "PropertyClass": {
-          "ObjectName": "Class DBDImage",
+          "ObjectName": "Class'DBDImage'",
           "ObjectPath": "/Script/DBDUIViewsCore"
         }
       },
@@ -234,7 +250,7 @@
         "ElementSize": 8,
         "PropertyFlags": 562952101429260,
         "PropertyClass": {
-          "ObjectName": "Class DBDImage",
+          "ObjectName": "Class'DBDImage'",
           "ObjectPath": "/Script/DBDUIViewsCore"
         }
       },
@@ -245,7 +261,7 @@
         "ElementSize": 8,
         "PropertyFlags": 562952101429260,
         "PropertyClass": {
-          "ObjectName": "Class DBDImage",
+          "ObjectName": "Class'DBDImage'",
           "ObjectPath": "/Script/DBDUIViewsCore"
         }
       },
@@ -256,7 +272,18 @@
         "ElementSize": 8,
         "PropertyFlags": 562952101429260,
         "PropertyClass": {
-          "ObjectName": "Class DBDImage",
+          "ObjectName": "Class'DBDImage'",
+          "ObjectPath": "/Script/DBDUIViewsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "StreamingIcon",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 562952101429260,
+        "PropertyClass": {
+          "ObjectName": "Class'DBDImage'",
           "ObjectPath": "/Script/DBDUIViewsCore"
         }
       },
@@ -267,48 +294,49 @@
         "ElementSize": 8,
         "PropertyFlags": 562952101429260,
         "PropertyClass": {
-          "ObjectName": "Class DBDImage",
+          "ObjectName": "Class'DBDImage'",
           "ObjectPath": "/Script/DBDUIViewsCore"
         }
       }
     ],
     "FuncMap": {
       "ExecuteUbergraph_WBP_CoreCharacterReward": {
-        "ObjectName": "Function WBP_CoreCharacterReward_C:ExecuteUbergraph_WBP_CoreCharacterReward",
+        "ObjectName": "Function'WBP_CoreCharacterReward_C:ExecuteUbergraph_WBP_CoreCharacterReward'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.0"
       },
-      "OnUnhovered": {
-        "ObjectName": "Function WBP_CoreCharacterReward_C:OnUnhovered",
+      "SetCharacterRewardData": {
+        "ObjectName": "Function'WBP_CoreCharacterReward_C:SetCharacterRewardData'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.1"
       },
-      "OnHovered": {
-        "ObjectName": "Function WBP_CoreCharacterReward_C:OnHovered",
+      "OnUnhovered": {
+        "ObjectName": "Function'WBP_CoreCharacterReward_C:OnUnhovered'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.2"
       },
-      "Destruct": {
-        "ObjectName": "Function WBP_CoreCharacterReward_C:Destruct",
+      "OnHovered": {
+        "ObjectName": "Function'WBP_CoreCharacterReward_C:OnHovered'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.3"
       },
-      "SetData": {
-        "ObjectName": "Function WBP_CoreCharacterReward_C:SetData",
+      "Destruct": {
+        "ObjectName": "Function'WBP_CoreCharacterReward_C:Destruct'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.4"
       }
     },
     "ClassFlags": 10754064,
     "ClassWithin": {
-      "ObjectName": "Class Object",
+      "ObjectName": "Class'Object'",
       "ObjectPath": "/Script/CoreUObject"
     },
     "ClassConfigName": "Engine",
     "bCooked": true,
     "ClassDefaultObject": {
-      "ObjectName": "WBP_CoreCharacterReward_C Default__WBP_CoreCharacterReward_C",
+      "ObjectName": "WBP_CoreCharacterReward_C'Default__WBP_CoreCharacterReward_C'",
       "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.6"
     }
   },
   {
     "Type": "WBP_CoreCharacterReward_C",
     "Name": "Default__WBP_CoreCharacterReward_C",
+    "Class": "WidgetBlueprintGeneratedClass'DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.WBP_CoreCharacterReward_C'",
     "Properties": {
       "UberGraphFrame": {},
       "bHasScriptImplementedTick": false,
@@ -319,10 +347,11 @@
     "Type": "DBDButton",
     "Name": "HitZoneButton",
     "Outer": "WidgetTree",
+    "Class": "UScriptClass'DBDButton'",
     "Properties": {
       "Slot": {
-        "ObjectName": "GridSlot WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0.GridSlot_10",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.20"
+        "ObjectName": "GridSlot'WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0.GridSlot_10'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.21"
       }
     }
   },
@@ -330,6 +359,7 @@
     "Type": "DBDImage",
     "Name": "BackgroundImage",
     "Outer": "WidgetTree",
+    "Class": "UScriptClass'DBDImage'",
     "Properties": {
       "Brush": {
         "ImageSize": {
@@ -337,13 +367,13 @@
           "Y": 512.0
         },
         "ResourceObject": {
-          "ObjectName": "Texture2D charSelect_Bg",
+          "ObjectName": "Texture2D'charSelect_Bg'",
           "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Common/CharSelect/charSelect_Bg.0"
         }
       },
       "Slot": {
-        "ObjectName": "OverlaySlot WBP_CoreCharacterReward_C:WidgetTree.NegativePadding.OverlaySlot_1",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.28"
+        "ObjectName": "OverlaySlot'WBP_CoreCharacterReward_C:WidgetTree.NegativePadding.OverlaySlot_1'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.29"
       },
       "Visibility": "ESlateVisibility::SelfHitTestInvisible"
     }
@@ -352,6 +382,7 @@
     "Type": "DBDImage",
     "Name": "Gradient",
     "Outer": "WidgetTree",
+    "Class": "UScriptClass'DBDImage'",
     "Properties": {
       "Brush": {
         "ImageSize": {
@@ -368,13 +399,13 @@
           }
         },
         "ResourceObject": {
-          "ObjectName": "Material M_UI_GradientVertical",
+          "ObjectName": "Material'M_UI_GradientVertical'",
           "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Common/Materials/M_UI_GradientVertical.0"
         }
       },
       "Slot": {
-        "ObjectName": "OverlaySlot WBP_CoreCharacterReward_C:WidgetTree.NegativePadding.OverlaySlot_4",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.31"
+        "ObjectName": "OverlaySlot'WBP_CoreCharacterReward_C:WidgetTree.NegativePadding.OverlaySlot_4'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.32"
       },
       "Visibility": "ESlateVisibility::SelfHitTestInvisible"
     }
@@ -383,16 +414,17 @@
     "Type": "DBDImage",
     "Name": "KillswitchOverlay",
     "Outer": "WidgetTree",
+    "Class": "UScriptClass'DBDImage'",
     "Properties": {
       "Brush": {
         "ResourceObject": {
-          "ObjectName": "MaterialInstanceConstant MI_UI_CharacterRewardKillswitch",
+          "ObjectName": "MaterialInstanceConstant'MI_UI_CharacterRewardKillswitch'",
           "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Common/Overlays/Killswitch/MI_UI_CharacterRewardKillswitch.0"
         }
       },
       "Slot": {
-        "ObjectName": "OverlaySlot WBP_CoreCharacterReward_C:WidgetTree.NegativePadding.OverlaySlot_7",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.33"
+        "ObjectName": "OverlaySlot'WBP_CoreCharacterReward_C:WidgetTree.NegativePadding.OverlaySlot_7'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.35"
       }
     }
   },
@@ -400,6 +432,7 @@
     "Type": "DBDImage",
     "Name": "PrestigeBG",
     "Outer": "WidgetTree",
+    "Class": "UScriptClass'DBDImage'",
     "Properties": {
       "Brush": {
         "ImageSize": {
@@ -407,13 +440,13 @@
           "Y": 256.0
         },
         "ResourceObject": {
-          "ObjectName": "Texture2D prestigeIcon_bg",
+          "ObjectName": "Texture2D'prestigeIcon_bg'",
           "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Common/Icons/prestigeIcon_bg.0"
         }
       },
       "Slot": {
-        "ObjectName": "OverlaySlot WBP_CoreCharacterReward_C:WidgetTree.Prestige.OverlaySlot_0",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.34"
+        "ObjectName": "OverlaySlot'WBP_CoreCharacterReward_C:WidgetTree.Prestige.OverlaySlot_0'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.36"
       }
     }
   },
@@ -421,6 +454,7 @@
     "Type": "DBDImage",
     "Name": "PrestigeIcon",
     "Outer": "WidgetTree",
+    "Class": "UScriptClass'DBDImage'",
     "Properties": {
       "Brush": {
         "ImageSize": {
@@ -437,13 +471,13 @@
           }
         },
         "ResourceObject": {
-          "ObjectName": "Texture2D prestigeIcon_1",
+          "ObjectName": "Texture2D'prestigeIcon_1'",
           "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Common/Icons/prestigeIcon_1.0"
         }
       },
       "Slot": {
-        "ObjectName": "OverlaySlot WBP_CoreCharacterReward_C:WidgetTree.Prestige.OverlaySlot_1",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.35"
+        "ObjectName": "OverlaySlot'WBP_CoreCharacterReward_C:WidgetTree.Prestige.OverlaySlot_1'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.37"
       }
     }
   },
@@ -451,9 +485,10 @@
     "Type": "DBDImage",
     "Name": "RewardIcon",
     "Outer": "WidgetTree",
+    "Class": "UScriptClass'DBDImage'",
     "Properties": {
       "DefaultImage": {
-        "ObjectName": "Texture2D Missing",
+        "ObjectName": "Texture2D'Missing'",
         "ObjectPath": "DeadByDaylight/Content/UI/UMGAssets/Icons/CharPortraits/Missing.0"
       },
       "Brush": {
@@ -462,21 +497,22 @@
           "Y": 512.0
         },
         "ResourceObject": {
-          "ObjectName": "Texture2D HB_charSelect_portrait",
+          "ObjectName": "Texture2D'HB_charSelect_portrait'",
           "ObjectPath": "DeadByDaylight/Content/UI/UMGAssets/Icons/CharPortraits/HB_charSelect_portrait.0"
         }
       },
       "Slot": {
-        "ObjectName": "OverlaySlot WBP_CoreCharacterReward_C:WidgetTree.NegativePadding.OverlaySlot_3",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.30"
+        "ObjectName": "OverlaySlot'WBP_CoreCharacterReward_C:WidgetTree.NegativePadding.OverlaySlot_3'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.31"
       },
-      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+      "Visibility": "ESlateVisibility::HitTestInvisible"
     }
   },
   {
     "Type": "DBDImage",
     "Name": "Shadow",
     "Outer": "WidgetTree",
+    "Class": "UScriptClass'DBDImage'",
     "Properties": {
       "Brush": {
         "ImageSize": {
@@ -484,7 +520,7 @@
           "Y": 512.0
         },
         "ResourceObject": {
-          "ObjectName": "Texture2D charSelect_Bg",
+          "ObjectName": "Texture2D'charSelect_Bg'",
           "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Common/CharSelect/charSelect_Bg.0"
         }
       },
@@ -496,16 +532,40 @@
         "Hex": "4CFFFFFF"
       },
       "Slot": {
-        "ObjectName": "OverlaySlot WBP_CoreCharacterReward_C:WidgetTree.NegativePadding.OverlaySlot_0",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.27"
+        "ObjectName": "OverlaySlot'WBP_CoreCharacterReward_C:WidgetTree.NegativePadding.OverlaySlot_0'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.28"
       },
       "Visibility": "ESlateVisibility::SelfHitTestInvisible"
     }
   },
   {
     "Type": "DBDImage",
+    "Name": "StreamingIcon",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'DBDImage'",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 256.0,
+          "Y": 256.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'loading_entityRing'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Common/Loading/loading_entityRing.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WBP_CoreCharacterReward_C:WidgetTree.NegativePadding.OverlaySlot_5'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.33"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "DBDImage",
     "Name": "Tint",
     "Outer": "WidgetTree",
+    "Class": "UScriptClass'DBDImage'",
     "Properties": {
       "Brush": {
         "ImageSize": {
@@ -513,13 +573,13 @@
           "Y": 512.0
         },
         "ResourceObject": {
-          "ObjectName": "MaterialInstanceConstant M_charSelect_Paint01",
+          "ObjectName": "MaterialInstanceConstant'M_charSelect_Paint01'",
           "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Common/CharSelect/M_charSelect_Paint01.0"
         }
       },
       "Slot": {
-        "ObjectName": "OverlaySlot WBP_CoreCharacterReward_C:WidgetTree.NegativePadding.OverlaySlot_2",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.29"
+        "ObjectName": "OverlaySlot'WBP_CoreCharacterReward_C:WidgetTree.NegativePadding.OverlaySlot_2'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.30"
       },
       "Visibility": "ESlateVisibility::SelfHitTestInvisible"
     }
@@ -528,6 +588,7 @@
     "Type": "DBDTextBlock",
     "Name": "Level",
     "Outer": "WidgetTree",
+    "Class": "UScriptClass'DBDTextBlock'",
     "Properties": {
       "Text": {
         "Namespace": "",
@@ -539,8 +600,8 @@
         "Size": 40
       },
       "Slot": {
-        "ObjectName": "GridSlot WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0.GridSlot_8",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.23"
+        "ObjectName": "GridSlot'WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0.GridSlot_8'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.24"
       },
       "Visibility": "ESlateVisibility::Hidden"
     }
@@ -549,6 +610,7 @@
     "Type": "DBDTextBlock",
     "Name": "Title",
     "Outer": "WidgetTree",
+    "Class": "UScriptClass'DBDTextBlock'",
     "Properties": {
       "Text": {
         "Namespace": "",
@@ -570,8 +632,8 @@
         "Size": 22
       },
       "Slot": {
-        "ObjectName": "GridSlot WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0.GridSlot_9",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.24"
+        "ObjectName": "GridSlot'WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0.GridSlot_9'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.25"
       },
       "Visibility": "ESlateVisibility::Hidden"
     }
@@ -580,39 +642,45 @@
     "Type": "GridPanel",
     "Name": "GridPanel_0",
     "Outer": "WidgetTree",
+    "Class": "UScriptClass'GridPanel'",
     "Properties": {
       "Slots": [
         {
-          "ObjectName": "GridSlot WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0.GridSlot_11",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.21"
-        },
-        {
-          "ObjectName": "GridSlot WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0.GridSlot_6",
+          "ObjectName": "GridSlot'WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0.GridSlot_11'",
           "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.22"
         },
         {
-          "ObjectName": "GridSlot WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0.GridSlot_0",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.19"
-        },
-        {
-          "ObjectName": "GridSlot WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0.GridSlot_8",
+          "ObjectName": "GridSlot'WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0.GridSlot_6'",
           "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.23"
         },
         {
-          "ObjectName": "GridSlot WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0.GridSlot_9",
+          "ObjectName": "GridSlot'WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0.GridSlot_0'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.20"
+        },
+        {
+          "ObjectName": "GridSlot'WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0.GridSlot_8'",
           "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.24"
         },
         {
-          "ObjectName": "GridSlot WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0.GridSlot_10",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.20"
+          "ObjectName": "GridSlot'WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0.GridSlot_9'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.25"
+        },
+        {
+          "ObjectName": "GridSlot'WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0.GridSlot_10'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.21"
         }
-      ]
+      ],
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot'WBP_CoreCharacterReward_C:WidgetTree.LayoutScale.ScaleBoxSlot_0'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.40"
+      }
     }
   },
   {
     "Type": "GridSlot",
     "Name": "GridSlot_0",
     "Outer": "GridPanel_0",
+    "Class": "UScriptClass'GridSlot'",
     "Properties": {
       "Padding": {
         "Left": -80.0,
@@ -620,12 +688,12 @@
       },
       "Layer": 1,
       "Parent": {
-        "ObjectName": "GridPanel WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.18"
+        "ObjectName": "GridPanel'WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.19"
       },
       "Content": {
-        "ObjectName": "WBP_LockedOverlay_C WBP_CoreCharacterReward_C:WidgetTree.LockedOverlay",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.39"
+        "ObjectName": "WBP_LockedOverlay_C'WBP_CoreCharacterReward_C:WidgetTree.LockedOverlay'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.43"
       }
     }
   },
@@ -633,14 +701,15 @@
     "Type": "GridSlot",
     "Name": "GridSlot_10",
     "Outer": "GridPanel_0",
+    "Class": "UScriptClass'GridSlot'",
     "Properties": {
       "Layer": 10,
       "Parent": {
-        "ObjectName": "GridPanel WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.18"
+        "ObjectName": "GridPanel'WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.19"
       },
       "Content": {
-        "ObjectName": "DBDButton WBP_CoreCharacterReward_C:WidgetTree.HitZoneButton",
+        "ObjectName": "DBDButton'WBP_CoreCharacterReward_C:WidgetTree.HitZoneButton'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.7"
       }
     }
@@ -649,18 +718,19 @@
     "Type": "GridSlot",
     "Name": "GridSlot_11",
     "Outer": "GridPanel_0",
+    "Class": "UScriptClass'GridSlot'",
     "Properties": {
       "Padding": {
         "Left": -80.0,
         "Right": -80.0
       },
       "Parent": {
-        "ObjectName": "GridPanel WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.18"
+        "ObjectName": "GridPanel'WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.19"
       },
       "Content": {
-        "ObjectName": "Overlay WBP_CoreCharacterReward_C:WidgetTree.NegativePadding",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.25"
+        "ObjectName": "Overlay'WBP_CoreCharacterReward_C:WidgetTree.NegativePadding'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.26"
       }
     }
   },
@@ -668,6 +738,7 @@
     "Type": "GridSlot",
     "Name": "GridSlot_6",
     "Outer": "GridPanel_0",
+    "Class": "UScriptClass'GridSlot'",
     "Properties": {
       "HorizontalAlignment": "HAlign_Right",
       "VerticalAlignment": "VAlign_Bottom",
@@ -677,12 +748,12 @@
         "Y": -25.0
       },
       "Parent": {
-        "ObjectName": "GridPanel WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.18"
+        "ObjectName": "GridPanel'WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.19"
       },
       "Content": {
-        "ObjectName": "ScaleBox WBP_CoreCharacterReward_C:WidgetTree.PrestigeScale",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.36"
+        "ObjectName": "ScaleBox'WBP_CoreCharacterReward_C:WidgetTree.PrestigeScale'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.39"
       }
     }
   },
@@ -690,6 +761,7 @@
     "Type": "GridSlot",
     "Name": "GridSlot_8",
     "Outer": "GridPanel_0",
+    "Class": "UScriptClass'GridSlot'",
     "Properties": {
       "HorizontalAlignment": "HAlign_Left",
       "VerticalAlignment": "VAlign_Bottom",
@@ -699,12 +771,12 @@
         "Y": -15.0
       },
       "Parent": {
-        "ObjectName": "GridPanel WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.18"
+        "ObjectName": "GridPanel'WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.19"
       },
       "Content": {
-        "ObjectName": "DBDTextBlock WBP_CoreCharacterReward_C:WidgetTree.Level",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.16"
+        "ObjectName": "DBDTextBlock'WBP_CoreCharacterReward_C:WidgetTree.Level'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.17"
       }
     }
   },
@@ -712,6 +784,7 @@
     "Type": "GridSlot",
     "Name": "GridSlot_9",
     "Outer": "GridPanel_0",
+    "Class": "UScriptClass'GridSlot'",
     "Properties": {
       "HorizontalAlignment": "HAlign_Left",
       "VerticalAlignment": "VAlign_Bottom",
@@ -721,12 +794,12 @@
         "Y": -70.0
       },
       "Parent": {
-        "ObjectName": "GridPanel WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.18"
+        "ObjectName": "GridPanel'WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.19"
       },
       "Content": {
-        "ObjectName": "DBDTextBlock WBP_CoreCharacterReward_C:WidgetTree.Title",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.17"
+        "ObjectName": "DBDTextBlock'WBP_CoreCharacterReward_C:WidgetTree.Title'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.18"
       }
     }
   },
@@ -734,40 +807,45 @@
     "Type": "Overlay",
     "Name": "NegativePadding",
     "Outer": "WidgetTree",
+    "Class": "UScriptClass'Overlay'",
     "Properties": {
       "Slots": [
         {
-          "ObjectName": "OverlaySlot WBP_CoreCharacterReward_C:WidgetTree.NegativePadding.OverlaySlot_0",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.27"
-        },
-        {
-          "ObjectName": "OverlaySlot WBP_CoreCharacterReward_C:WidgetTree.NegativePadding.OverlaySlot_1",
+          "ObjectName": "OverlaySlot'WBP_CoreCharacterReward_C:WidgetTree.NegativePadding.OverlaySlot_0'",
           "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.28"
         },
         {
-          "ObjectName": "OverlaySlot WBP_CoreCharacterReward_C:WidgetTree.NegativePadding.OverlaySlot_2",
+          "ObjectName": "OverlaySlot'WBP_CoreCharacterReward_C:WidgetTree.NegativePadding.OverlaySlot_1'",
           "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.29"
         },
         {
-          "ObjectName": "OverlaySlot WBP_CoreCharacterReward_C:WidgetTree.NegativePadding.OverlaySlot_3",
+          "ObjectName": "OverlaySlot'WBP_CoreCharacterReward_C:WidgetTree.NegativePadding.OverlaySlot_2'",
           "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.30"
         },
         {
-          "ObjectName": "OverlaySlot WBP_CoreCharacterReward_C:WidgetTree.NegativePadding.OverlaySlot_4",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.31"
-        },
-        {
-          "ObjectName": "OverlaySlot WBP_CoreCharacterReward_C:WidgetTree.NegativePadding.OverlaySlot_7",
+          "ObjectName": "OverlaySlot'WBP_CoreCharacterReward_C:WidgetTree.NegativePadding.OverlaySlot_5'",
           "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.33"
         },
         {
-          "ObjectName": "OverlaySlot WBP_CoreCharacterReward_C:WidgetTree.NegativePadding.OverlaySlot_6",
+          "ObjectName": "OverlaySlot'WBP_CoreCharacterReward_C:WidgetTree.NegativePadding.OverlaySlot_3'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.31"
+        },
+        {
+          "ObjectName": "OverlaySlot'WBP_CoreCharacterReward_C:WidgetTree.NegativePadding.OverlaySlot_4'",
           "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.32"
+        },
+        {
+          "ObjectName": "OverlaySlot'WBP_CoreCharacterReward_C:WidgetTree.NegativePadding.OverlaySlot_7'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.35"
+        },
+        {
+          "ObjectName": "OverlaySlot'WBP_CoreCharacterReward_C:WidgetTree.NegativePadding.OverlaySlot_6'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.34"
         }
       ],
       "Slot": {
-        "ObjectName": "GridSlot WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0.GridSlot_11",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.21"
+        "ObjectName": "GridSlot'WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0.GridSlot_11'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.22"
       },
       "Visibility": "ESlateVisibility::HitTestInvisible"
     }
@@ -776,20 +854,21 @@
     "Type": "Overlay",
     "Name": "Prestige",
     "Outer": "WidgetTree",
+    "Class": "UScriptClass'Overlay'",
     "Properties": {
       "Slots": [
         {
-          "ObjectName": "OverlaySlot WBP_CoreCharacterReward_C:WidgetTree.Prestige.OverlaySlot_0",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.34"
+          "ObjectName": "OverlaySlot'WBP_CoreCharacterReward_C:WidgetTree.Prestige.OverlaySlot_0'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.36"
         },
         {
-          "ObjectName": "OverlaySlot WBP_CoreCharacterReward_C:WidgetTree.Prestige.OverlaySlot_1",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.35"
+          "ObjectName": "OverlaySlot'WBP_CoreCharacterReward_C:WidgetTree.Prestige.OverlaySlot_1'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.37"
         }
       ],
       "Slot": {
-        "ObjectName": "ScaleBoxSlot WBP_CoreCharacterReward_C:WidgetTree.PrestigeScale.ScaleBoxSlot_0",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.37"
+        "ObjectName": "ScaleBoxSlot'WBP_CoreCharacterReward_C:WidgetTree.PrestigeScale.ScaleBoxSlot_0'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.41"
       },
       "Visibility": "ESlateVisibility::Hidden"
     }
@@ -798,15 +877,16 @@
     "Type": "OverlaySlot",
     "Name": "OverlaySlot_0",
     "Outer": "NegativePadding",
+    "Class": "UScriptClass'OverlaySlot'",
     "Properties": {
       "HorizontalAlignment": "HAlign_Center",
       "VerticalAlignment": "VAlign_Center",
       "Parent": {
-        "ObjectName": "Overlay WBP_CoreCharacterReward_C:WidgetTree.NegativePadding",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.25"
+        "ObjectName": "Overlay'WBP_CoreCharacterReward_C:WidgetTree.NegativePadding'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.26"
       },
       "Content": {
-        "ObjectName": "DBDImage WBP_CoreCharacterReward_C:WidgetTree.Shadow",
+        "ObjectName": "DBDImage'WBP_CoreCharacterReward_C:WidgetTree.Shadow'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.14"
       }
     }
@@ -815,15 +895,16 @@
     "Type": "OverlaySlot",
     "Name": "OverlaySlot_1",
     "Outer": "NegativePadding",
+    "Class": "UScriptClass'OverlaySlot'",
     "Properties": {
       "HorizontalAlignment": "HAlign_Center",
       "VerticalAlignment": "VAlign_Center",
       "Parent": {
-        "ObjectName": "Overlay WBP_CoreCharacterReward_C:WidgetTree.NegativePadding",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.25"
+        "ObjectName": "Overlay'WBP_CoreCharacterReward_C:WidgetTree.NegativePadding'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.26"
       },
       "Content": {
-        "ObjectName": "DBDImage WBP_CoreCharacterReward_C:WidgetTree.BackgroundImage",
+        "ObjectName": "DBDImage'WBP_CoreCharacterReward_C:WidgetTree.BackgroundImage'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.8"
       }
     }
@@ -832,16 +913,17 @@
     "Type": "OverlaySlot",
     "Name": "OverlaySlot_2",
     "Outer": "NegativePadding",
+    "Class": "UScriptClass'OverlaySlot'",
     "Properties": {
       "HorizontalAlignment": "HAlign_Center",
       "VerticalAlignment": "VAlign_Center",
       "Parent": {
-        "ObjectName": "Overlay WBP_CoreCharacterReward_C:WidgetTree.NegativePadding",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.25"
+        "ObjectName": "Overlay'WBP_CoreCharacterReward_C:WidgetTree.NegativePadding'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.26"
       },
       "Content": {
-        "ObjectName": "DBDImage WBP_CoreCharacterReward_C:WidgetTree.Tint",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.15"
+        "ObjectName": "DBDImage'WBP_CoreCharacterReward_C:WidgetTree.Tint'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.16"
       }
     }
   },
@@ -849,15 +931,16 @@
     "Type": "OverlaySlot",
     "Name": "OverlaySlot_3",
     "Outer": "NegativePadding",
+    "Class": "UScriptClass'OverlaySlot'",
     "Properties": {
       "HorizontalAlignment": "HAlign_Center",
       "VerticalAlignment": "VAlign_Center",
       "Parent": {
-        "ObjectName": "Overlay WBP_CoreCharacterReward_C:WidgetTree.NegativePadding",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.25"
+        "ObjectName": "Overlay'WBP_CoreCharacterReward_C:WidgetTree.NegativePadding'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.26"
       },
       "Content": {
-        "ObjectName": "DBDImage WBP_CoreCharacterReward_C:WidgetTree.RewardIcon",
+        "ObjectName": "DBDImage'WBP_CoreCharacterReward_C:WidgetTree.RewardIcon'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.13"
       }
     }
@@ -866,6 +949,7 @@
     "Type": "OverlaySlot",
     "Name": "OverlaySlot_4",
     "Outer": "NegativePadding",
+    "Class": "UScriptClass'OverlaySlot'",
     "Properties": {
       "Padding": {
         "Bottom": 20.0
@@ -873,12 +957,30 @@
       "HorizontalAlignment": "HAlign_Center",
       "VerticalAlignment": "VAlign_Bottom",
       "Parent": {
-        "ObjectName": "Overlay WBP_CoreCharacterReward_C:WidgetTree.NegativePadding",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.25"
+        "ObjectName": "Overlay'WBP_CoreCharacterReward_C:WidgetTree.NegativePadding'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.26"
       },
       "Content": {
-        "ObjectName": "DBDImage WBP_CoreCharacterReward_C:WidgetTree.Gradient",
+        "ObjectName": "DBDImage'WBP_CoreCharacterReward_C:WidgetTree.Gradient'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.9"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_5",
+    "Outer": "NegativePadding",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WBP_CoreCharacterReward_C:WidgetTree.NegativePadding'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.26"
+      },
+      "Content": {
+        "ObjectName": "DBDImage'WBP_CoreCharacterReward_C:WidgetTree.StreamingIcon'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.15"
       }
     }
   },
@@ -886,6 +988,7 @@
     "Type": "OverlaySlot",
     "Name": "OverlaySlot_6",
     "Outer": "NegativePadding",
+    "Class": "UScriptClass'OverlaySlot'",
     "Properties": {
       "Padding": {
         "Left": -2.0,
@@ -895,12 +998,12 @@
       "HorizontalAlignment": "HAlign_Center",
       "VerticalAlignment": "VAlign_Center",
       "Parent": {
-        "ObjectName": "Overlay WBP_CoreCharacterReward_C:WidgetTree.NegativePadding",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.25"
+        "ObjectName": "Overlay'WBP_CoreCharacterReward_C:WidgetTree.NegativePadding'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.26"
       },
       "Content": {
-        "ObjectName": "WBP_CoreOnHoverBorder_C WBP_CoreCharacterReward_C:WidgetTree.OnHoverBorder",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.38"
+        "ObjectName": "WBP_CoreOnHoverBorder_C'WBP_CoreCharacterReward_C:WidgetTree.OnHoverBorder'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.42"
       }
     }
   },
@@ -908,15 +1011,16 @@
     "Type": "OverlaySlot",
     "Name": "OverlaySlot_7",
     "Outer": "NegativePadding",
+    "Class": "UScriptClass'OverlaySlot'",
     "Properties": {
       "HorizontalAlignment": "HAlign_Fill",
       "VerticalAlignment": "VAlign_Fill",
       "Parent": {
-        "ObjectName": "Overlay WBP_CoreCharacterReward_C:WidgetTree.NegativePadding",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.25"
+        "ObjectName": "Overlay'WBP_CoreCharacterReward_C:WidgetTree.NegativePadding'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.26"
       },
       "Content": {
-        "ObjectName": "DBDImage WBP_CoreCharacterReward_C:WidgetTree.KillswitchOverlay",
+        "ObjectName": "DBDImage'WBP_CoreCharacterReward_C:WidgetTree.KillswitchOverlay'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.10"
       }
     }
@@ -925,13 +1029,14 @@
     "Type": "OverlaySlot",
     "Name": "OverlaySlot_0",
     "Outer": "Prestige",
+    "Class": "UScriptClass'OverlaySlot'",
     "Properties": {
       "Parent": {
-        "ObjectName": "Overlay WBP_CoreCharacterReward_C:WidgetTree.Prestige",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.26"
+        "ObjectName": "Overlay'WBP_CoreCharacterReward_C:WidgetTree.Prestige'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.27"
       },
       "Content": {
-        "ObjectName": "DBDImage WBP_CoreCharacterReward_C:WidgetTree.PrestigeBG",
+        "ObjectName": "DBDImage'WBP_CoreCharacterReward_C:WidgetTree.PrestigeBG'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.11"
       }
     }
@@ -940,33 +1045,50 @@
     "Type": "OverlaySlot",
     "Name": "OverlaySlot_1",
     "Outer": "Prestige",
+    "Class": "UScriptClass'OverlaySlot'",
     "Properties": {
       "Parent": {
-        "ObjectName": "Overlay WBP_CoreCharacterReward_C:WidgetTree.Prestige",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.26"
+        "ObjectName": "Overlay'WBP_CoreCharacterReward_C:WidgetTree.Prestige'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.27"
       },
       "Content": {
-        "ObjectName": "DBDImage WBP_CoreCharacterReward_C:WidgetTree.PrestigeIcon",
+        "ObjectName": "DBDImage'WBP_CoreCharacterReward_C:WidgetTree.PrestigeIcon'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.12"
       }
     }
   },
   {
     "Type": "ScaleBox",
+    "Name": "LayoutScale",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'ScaleBox'",
+    "Properties": {
+      "Stretch": "EStretch::UserSpecified",
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot'WBP_CoreCharacterReward_C:WidgetTree.LayoutScale.ScaleBoxSlot_0'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.40"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ScaleBox",
     "Name": "PrestigeScale",
     "Outer": "WidgetTree",
+    "Class": "UScriptClass'ScaleBox'",
     "Properties": {
       "Stretch": "EStretch::UserSpecified",
       "UserSpecifiedScale": 0.4,
       "Slots": [
         {
-          "ObjectName": "ScaleBoxSlot WBP_CoreCharacterReward_C:WidgetTree.PrestigeScale.ScaleBoxSlot_0",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.37"
+          "ObjectName": "ScaleBoxSlot'WBP_CoreCharacterReward_C:WidgetTree.PrestigeScale.ScaleBoxSlot_0'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.41"
         }
       ],
       "Slot": {
-        "ObjectName": "GridSlot WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0.GridSlot_6",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.22"
+        "ObjectName": "GridSlot'WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0.GridSlot_6'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.23"
       },
       "Visibility": "ESlateVisibility::HitTestInvisible"
     }
@@ -974,15 +1096,32 @@
   {
     "Type": "ScaleBoxSlot",
     "Name": "ScaleBoxSlot_0",
-    "Outer": "PrestigeScale",
+    "Outer": "LayoutScale",
+    "Class": "UScriptClass'ScaleBoxSlot'",
     "Properties": {
       "Parent": {
-        "ObjectName": "ScaleBox WBP_CoreCharacterReward_C:WidgetTree.PrestigeScale",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.36"
+        "ObjectName": "ScaleBox'WBP_CoreCharacterReward_C:WidgetTree.LayoutScale'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.38"
       },
       "Content": {
-        "ObjectName": "Overlay WBP_CoreCharacterReward_C:WidgetTree.Prestige",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.26"
+        "ObjectName": "GridPanel'WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.19"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_0",
+    "Outer": "PrestigeScale",
+    "Class": "UScriptClass'ScaleBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "ScaleBox'WBP_CoreCharacterReward_C:WidgetTree.PrestigeScale'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.39"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WBP_CoreCharacterReward_C:WidgetTree.Prestige'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.27"
       }
     }
   },
@@ -991,6 +1130,7 @@
     "Name": "OnHoverBorder",
     "Outer": "WidgetTree",
     "Template": "Default__WBP_CoreOnHoverBorder_C",
+    "Class": "WidgetBlueprintGeneratedClass'DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Borders/WBP_CoreOnHoverBorder.WBP_CoreOnHoverBorder_C'",
     "Properties": {
       "PreviewProgress": 0.4,
       "PreviewThickness": 6,
@@ -1003,8 +1143,8 @@
         "Y": 470.0
       },
       "Slot": {
-        "ObjectName": "OverlaySlot WBP_CoreCharacterReward_C:WidgetTree.NegativePadding.OverlaySlot_6",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.32"
+        "ObjectName": "OverlaySlot'WBP_CoreCharacterReward_C:WidgetTree.NegativePadding.OverlaySlot_6'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.34"
       }
     }
   },
@@ -1013,9 +1153,10 @@
     "Name": "LockedOverlay",
     "Outer": "WidgetTree",
     "Template": "Default__WBP_LockedOverlay_C",
+    "Class": "WidgetBlueprintGeneratedClass'DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Overlays/WBP_LockedOverlay.WBP_LockedOverlay_C'",
     "Properties": {
       "BackgroundTexture": {
-        "ObjectName": "Texture2D charSelect_Bg",
+        "ObjectName": "Texture2D'charSelect_Bg'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Common/CharSelect/charSelect_Bg.0"
       },
       "IconScaleX": 6.5,
@@ -1033,8 +1174,8 @@
         "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
       },
       "Slot": {
-        "ObjectName": "GridSlot WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0.GridSlot_0",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.19"
+        "ObjectName": "GridSlot'WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0.GridSlot_0'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.20"
       },
       "Visibility": "ESlateVisibility::Collapsed"
     }
@@ -1043,10 +1184,11 @@
     "Type": "WidgetTree",
     "Name": "WidgetTree",
     "Outer": "WBP_CoreCharacterReward_C",
+    "Class": "UScriptClass'WidgetTree'",
     "Properties": {
       "RootWidget": {
-        "ObjectName": "GridPanel WBP_CoreCharacterReward_C:WidgetTree.GridPanel_0",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.18"
+        "ObjectName": "ScaleBox'WBP_CoreCharacterReward_C:WidgetTree.LayoutScale'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCharacterReward.38"
       }
     }
   }

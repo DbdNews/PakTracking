@@ -23,17 +23,6 @@
         }
       },
       {
-        "Type": "ObjectProperty",
-        "Name": "CallFunc_SlotAsGridSlot_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 8,
-        "PropertyFlags": 524288,
-        "PropertyClass": {
-          "ObjectName": "Class'GridSlot'",
-          "ObjectPath": "/Script/UMG"
-        }
-      },
-      {
         "Type": "StructProperty",
         "Name": "CallFunc_MakeVector2D_ReturnValue_1",
         "Flags": 1,
@@ -65,7 +54,7 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "CallFunc_SlotAsGridSlot_ReturnValue_1",
+        "Name": "CallFunc_SlotAsGridSlot_ReturnValue",
         "Flags": 1,
         "ElementSize": 8,
         "PropertyFlags": 524288,
@@ -76,7 +65,7 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "CallFunc_SlotAsGridSlot_ReturnValue_2",
+        "Name": "CallFunc_SlotAsGridSlot_ReturnValue_1",
         "Flags": 1,
         "ElementSize": 8,
         "PropertyFlags": 524288,
@@ -106,6 +95,17 @@
         "FieldMask": 255,
         "BoolSize": 1,
         "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SlotAsGridSlot_ReturnValue_2",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "PropertyClass": {
+          "ObjectName": "Class'GridSlot'",
+          "ObjectPath": "/Script/UMG"
+        }
       },
       {
         "Type": "ObjectProperty",
@@ -163,17 +163,6 @@
         }
       },
       {
-        "Type": "ObjectProperty",
-        "Name": "CallFunc_SlotAsGridSlot_ReturnValue_8",
-        "Flags": 1,
-        "ElementSize": 8,
-        "PropertyFlags": 524288,
-        "PropertyClass": {
-          "ObjectName": "Class'GridSlot'",
-          "ObjectPath": "/Script/UMG"
-        }
-      },
-      {
         "Type": "StructProperty",
         "Name": "K2Node_MakeStruct_Margin",
         "Flags": 1,
@@ -195,6 +184,17 @@
       },
       {
         "Type": "ObjectProperty",
+        "Name": "CallFunc_SlotAsGridSlot_ReturnValue_8",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "PropertyClass": {
+          "ObjectName": "Class'GridSlot'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
         "Name": "CallFunc_SlotAsGridSlot_ReturnValue_9",
         "Flags": 1,
         "ElementSize": 8,
@@ -203,9 +203,47 @@
           "ObjectName": "Class'GridSlot'",
           "ObjectPath": "/Script/UMG"
         }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_isEnabled",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
       }
     ],
     "FunctionFlags": 32769
+  },
+  {
+    "Type": "Function",
+    "Name": "OnEnabledChanged",
+    "Outer": "WBP_CoreArchiveButton_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'CoreButtonWidget:OnEnabledChanged'",
+      "ObjectPath": "/Script/DBDUIViewsCore"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "isEnabled",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 134744064
   },
   {
     "Type": "Function",
@@ -260,21 +298,21 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'WBP_CoreArchiveButton_C:WidgetTree'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.42"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.43"
       },
       "bClassRequiresNativeTick": true,
       "Animations": [
         {
           "ObjectName": "WidgetAnimation'WBP_CoreArchiveButton_C:Default_INST'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.39"
-        },
-        {
-          "ObjectName": "WidgetAnimation'WBP_CoreArchiveButton_C:Hover_INST'",
           "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.40"
         },
         {
-          "ObjectName": "WidgetAnimation'WBP_CoreArchiveButton_C:Pressed_INST'",
+          "ObjectName": "WidgetAnimation'WBP_CoreArchiveButton_C:Hover_INST'",
           "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.41"
+        },
+        {
+          "ObjectName": "WidgetAnimation'WBP_CoreArchiveButton_C:Pressed_INST'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.42"
         }
       ],
       "UberGraphFunction": {
@@ -289,14 +327,18 @@
     "Children": [
       {
         "ObjectName": "Function'WBP_CoreArchiveButton_C:OnAlignmentChanged'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.3"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.4"
       },
       {
         "ObjectName": "Function'WBP_CoreArchiveButton_C:OnHovered'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.2"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.3"
       },
       {
         "ObjectName": "Function'WBP_CoreArchiveButton_C:OnUnhovered'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.2"
+      },
+      {
+        "ObjectName": "Function'WBP_CoreArchiveButton_C:OnEnabledChanged'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.1"
       },
       {
@@ -391,17 +433,21 @@
         "ObjectName": "Function'WBP_CoreArchiveButton_C:ExecuteUbergraph_WBP_CoreArchiveButton'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.0"
       },
+      "OnEnabledChanged": {
+        "ObjectName": "Function'WBP_CoreArchiveButton_C:OnEnabledChanged'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.1"
+      },
       "OnUnhovered": {
         "ObjectName": "Function'WBP_CoreArchiveButton_C:OnUnhovered'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.1"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.2"
       },
       "OnHovered": {
         "ObjectName": "Function'WBP_CoreArchiveButton_C:OnHovered'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.2"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.3"
       },
       "OnAlignmentChanged": {
         "ObjectName": "Function'WBP_CoreArchiveButton_C:OnAlignmentChanged'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.3"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.4"
       }
     },
     "ClassFlags": 10754064,
@@ -413,7 +459,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "WBP_CoreArchiveButton_C'Default__WBP_CoreArchiveButton_C'",
-      "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.5"
+      "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.6"
     }
   },
   {
@@ -435,7 +481,7 @@
     "Properties": {
       "Slot": {
         "ObjectName": "GridSlot'WBP_CoreArchiveButton_C:WidgetTree.GridPanel_0.GridSlot_3'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.14"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.15"
       }
     }
   },
@@ -451,13 +497,13 @@
           "Y": 128.0
         },
         "ResourceObject": {
-          "ObjectName": "Material'M_UI_ArchiveButton'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Common/Buttons/M_UI_ArchiveButton.0"
+          "ObjectName": "MaterialInstanceConstant'MI_UI_ArchiveButton'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Common/Buttons/MI_UI_ArchiveButton.0"
         }
       },
       "Slot": {
         "ObjectName": "GridSlot'WBP_CoreArchiveButton_C:WidgetTree.GridPanel_0.GridSlot_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.12"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.13"
       },
       "Visibility": "ESlateVisibility::SelfHitTestInvisible"
     }
@@ -470,17 +516,17 @@
     "Properties": {
       "Brush": {
         "ImageSize": {
-          "X": 125.0,
-          "Y": 125.0
+          "X": 75.0,
+          "Y": 75.0
         },
         "ResourceObject": {
-          "ObjectName": "Texture2D'T_UI_Icon_EventTome_Halloween'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Common/Icons/EventEntry/T_UI_Icon_EventTome_Halloween.0"
+          "ObjectName": "Texture2D'iconHelp_archivesGeneral'",
+          "ObjectPath": "DeadByDaylight/Content/UI/UMGAssets/Icons/Help/iconHelp_archivesGeneral.0"
         }
       },
       "Slot": {
         "ObjectName": "GridSlot'WBP_CoreArchiveButton_C:WidgetTree.TextContainer.GridSlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.15"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.16"
       },
       "Visibility": "ESlateVisibility::SelfHitTestInvisible"
     }
@@ -516,7 +562,7 @@
       "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
       "Slot": {
         "ObjectName": "GridSlot'WBP_CoreArchiveButton_C:WidgetTree.TextContainer.GridSlot_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.16"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.17"
       },
       "bIsVariable": true,
       "Visibility": "ESlateVisibility::SelfHitTestInvisible"
@@ -531,15 +577,15 @@
       "Slots": [
         {
           "ObjectName": "GridSlot'WBP_CoreArchiveButton_C:WidgetTree.GridPanel_0.GridSlot_1'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.12"
-        },
-        {
-          "ObjectName": "GridSlot'WBP_CoreArchiveButton_C:WidgetTree.GridPanel_0.GridSlot_2'",
           "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.13"
         },
         {
-          "ObjectName": "GridSlot'WBP_CoreArchiveButton_C:WidgetTree.GridPanel_0.GridSlot_3'",
+          "ObjectName": "GridSlot'WBP_CoreArchiveButton_C:WidgetTree.GridPanel_0.GridSlot_2'",
           "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.14"
+        },
+        {
+          "ObjectName": "GridSlot'WBP_CoreArchiveButton_C:WidgetTree.GridPanel_0.GridSlot_3'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.15"
         }
       ]
     }
@@ -553,16 +599,16 @@
       "Slots": [
         {
           "ObjectName": "GridSlot'WBP_CoreArchiveButton_C:WidgetTree.TextContainer.GridSlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.15"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.16"
         },
         {
           "ObjectName": "GridSlot'WBP_CoreArchiveButton_C:WidgetTree.TextContainer.GridSlot_1'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.16"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.17"
         }
       ],
       "Slot": {
         "ObjectName": "GridSlot'WBP_CoreArchiveButton_C:WidgetTree.GridPanel_0.GridSlot_2'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.13"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.14"
       },
       "bIsVariable": true
     }
@@ -581,11 +627,11 @@
       "VerticalAlignment": "VAlign_Center",
       "Parent": {
         "ObjectName": "GridPanel'WBP_CoreArchiveButton_C:WidgetTree.GridPanel_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.10"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.11"
       },
       "Content": {
         "ObjectName": "DBDImage'WBP_CoreArchiveButton_C:WidgetTree.BackgroundIMG'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.7"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.8"
       }
     }
   },
@@ -595,15 +641,16 @@
     "Outer": "GridPanel_0",
     "Class": "UScriptClass'GridSlot'",
     "Properties": {
+      "HorizontalAlignment": "HAlign_Left",
       "VerticalAlignment": "VAlign_Center",
       "Layer": 10,
       "Parent": {
         "ObjectName": "GridPanel'WBP_CoreArchiveButton_C:WidgetTree.GridPanel_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.10"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.11"
       },
       "Content": {
         "ObjectName": "GridPanel'WBP_CoreArchiveButton_C:WidgetTree.TextContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.11"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.12"
       }
     }
   },
@@ -622,11 +669,11 @@
       "Layer": 20,
       "Parent": {
         "ObjectName": "GridPanel'WBP_CoreArchiveButton_C:WidgetTree.GridPanel_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.10"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.11"
       },
       "Content": {
         "ObjectName": "DBDButton'WBP_CoreArchiveButton_C:WidgetTree.HitZoneButton'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.6"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.7"
       }
     }
   },
@@ -637,18 +684,17 @@
     "Class": "UScriptClass'GridSlot'",
     "Properties": {
       "Padding": {
-        "Left": -20.0,
-        "Top": -30.0,
-        "Right": -10.0,
-        "Bottom": -30.0
+        "Top": -19.0,
+        "Bottom": -17.0
       },
+      "VerticalAlignment": "VAlign_Center",
       "Parent": {
         "ObjectName": "GridPanel'WBP_CoreArchiveButton_C:WidgetTree.TextContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.11"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.12"
       },
       "Content": {
         "ObjectName": "DBDImage'WBP_CoreArchiveButton_C:WidgetTree.EventIcon'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.8"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.9"
       }
     }
   },
@@ -658,15 +704,16 @@
     "Outer": "TextContainer",
     "Class": "UScriptClass'GridSlot'",
     "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
       "VerticalAlignment": "VAlign_Center",
       "Column": 1,
       "Parent": {
         "ObjectName": "GridPanel'WBP_CoreArchiveButton_C:WidgetTree.TextContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.11"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.12"
       },
       "Content": {
         "ObjectName": "DBDTextBlock'WBP_CoreArchiveButton_C:WidgetTree.LabelTB'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.9"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.10"
       }
     }
   },
@@ -695,7 +742,7 @@
           "Tracks": [
             {
               "ObjectName": "MovieSceneColorTrack'WBP_CoreArchiveButton_C:Default_INST.Default.MovieSceneColorTrack_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.31"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.32"
             }
           ]
         }
@@ -757,7 +804,7 @@
           "Tracks": [
             {
               "ObjectName": "MovieSceneColorTrack'WBP_CoreArchiveButton_C:Hover_INST.Hover.MovieSceneColorTrack_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.32"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.33"
             }
           ]
         },
@@ -767,7 +814,7 @@
           "Tracks": [
             {
               "ObjectName": "MovieSceneWidgetMaterialTrack'WBP_CoreArchiveButton_C:Hover_INST.Hover.MovieSceneWidgetMaterialTrack_2'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.38"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.39"
             }
           ]
         }
@@ -819,7 +866,7 @@
           "Tracks": [
             {
               "ObjectName": "MovieSceneColorTrack'WBP_CoreArchiveButton_C:Pressed_INST.Pressed.MovieSceneColorTrack_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.33"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.34"
             }
           ]
         }
@@ -1027,11 +1074,11 @@
       "Easing": {
         "EaseIn": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreArchiveButton_C:Default_INST.Default.MovieSceneColorTrack_0.MovieSceneColorSection_0.EaseInFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.20"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.21"
         },
         "EaseOut": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreArchiveButton_C:Default_INST.Default.MovieSceneColorTrack_0.MovieSceneColorSection_0.EaseOutFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.21"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.22"
         }
       },
       "SectionRange": {
@@ -1218,11 +1265,11 @@
       "Easing": {
         "EaseIn": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreArchiveButton_C:Hover_INST.Hover.MovieSceneColorTrack_0.MovieSceneColorSection_0.EaseInFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.22"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.23"
         },
         "EaseOut": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreArchiveButton_C:Hover_INST.Hover.MovieSceneColorTrack_0.MovieSceneColorSection_0.EaseOutFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.23"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.24"
         }
       },
       "SectionRange": {
@@ -1377,11 +1424,11 @@
       "Easing": {
         "EaseIn": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreArchiveButton_C:Pressed_INST.Pressed.MovieSceneColorTrack_0.MovieSceneColorSection_0.EaseInFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.26"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.27"
         },
         "EaseOut": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreArchiveButton_C:Pressed_INST.Pressed.MovieSceneColorTrack_0.MovieSceneColorSection_0.EaseOutFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.27"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.28"
         }
       },
       "SectionRange": {
@@ -1417,7 +1464,7 @@
       "Sections": [
         {
           "ObjectName": "MovieSceneColorSection'WBP_CoreArchiveButton_C:Default_INST.Default.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.28"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.29"
         }
       ],
       "EvaluationFieldGuid": "2D2F347D-4CFFA027-6BD29D9C-12C15318",
@@ -1426,7 +1473,7 @@
           {
             "Section": {
               "ObjectName": "MovieSceneColorSection'WBP_CoreArchiveButton_C:Default_INST.Default.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.28"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.29"
             },
             "Range": {
               "LowerBound": {
@@ -1467,7 +1514,7 @@
       "Sections": [
         {
           "ObjectName": "MovieSceneColorSection'WBP_CoreArchiveButton_C:Hover_INST.Hover.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.29"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.30"
         }
       ],
       "EvaluationFieldGuid": "B5706DB1-4C8323DA-3885DB80-AA383967",
@@ -1476,7 +1523,7 @@
           {
             "Section": {
               "ObjectName": "MovieSceneColorSection'WBP_CoreArchiveButton_C:Hover_INST.Hover.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.29"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.30"
             },
             "Range": {
               "LowerBound": {
@@ -1517,7 +1564,7 @@
       "Sections": [
         {
           "ObjectName": "MovieSceneColorSection'WBP_CoreArchiveButton_C:Pressed_INST.Pressed.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.30"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.31"
         }
       ],
       "EvaluationFieldGuid": "1B7CEC83-4EC5DB4E-42C4D8B1-DD0044A6",
@@ -1526,7 +1573,7 @@
           {
             "Section": {
               "ObjectName": "MovieSceneColorSection'WBP_CoreArchiveButton_C:Pressed_INST.Pressed.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.30"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.31"
             },
             "Range": {
               "LowerBound": {
@@ -1651,7 +1698,7 @@
             "Key": {
               "EntityOwner": {
                 "ObjectName": "MovieSceneColorSection'WBP_CoreArchiveButton_C:Default_INST.Default.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
-                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.28"
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.29"
               },
               "EntityID": 0
             },
@@ -1700,7 +1747,7 @@
               "EvaluationMethod": "EEvaluationMethod::Static",
               "SourceTrack": {
                 "ObjectName": "MovieSceneWidgetMaterialTrack'WBP_CoreArchiveButton_C:Hover_INST.Hover.MovieSceneWidgetMaterialTrack_2'",
-                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.38"
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.39"
               },
               "ChildTemplates": [
                 {
@@ -2041,7 +2088,7 @@
                     "CompletionMode": "EMovieSceneCompletionMode::KeepState",
                     "SourceSectionPtr": {
                       "ObjectName": "MovieSceneParameterSection'WBP_CoreArchiveButton_C:Hover_INST.Hover.MovieSceneWidgetMaterialTrack_2.MovieSceneParameterSection_0'",
-                      "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.37"
+                      "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.38"
                     }
                   }
                 }
@@ -2163,7 +2210,7 @@
             "Key": {
               "EntityOwner": {
                 "ObjectName": "MovieSceneColorSection'WBP_CoreArchiveButton_C:Hover_INST.Hover.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
-                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.29"
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.30"
               },
               "EntityID": 0
             },
@@ -2436,7 +2483,7 @@
             "Key": {
               "EntityOwner": {
                 "ObjectName": "MovieSceneColorSection'WBP_CoreArchiveButton_C:Pressed_INST.Pressed.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
-                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.30"
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.31"
               },
               "EntityID": 0
             },
@@ -2801,11 +2848,11 @@
       "Easing": {
         "EaseIn": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreArchiveButton_C:Hover_INST.Hover.MovieSceneWidgetMaterialTrack_2.MovieSceneParameterSection_0.EaseInFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.24"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.25"
         },
         "EaseOut": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreArchiveButton_C:Hover_INST.Hover.MovieSceneWidgetMaterialTrack_2.MovieSceneParameterSection_0.EaseOutFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.25"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.26"
         }
       },
       "SectionRange": {
@@ -2840,7 +2887,7 @@
       "Sections": [
         {
           "ObjectName": "MovieSceneParameterSection'WBP_CoreArchiveButton_C:Hover_INST.Hover.MovieSceneWidgetMaterialTrack_2.MovieSceneParameterSection_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.37"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.38"
         }
       ],
       "EvaluationFieldGuid": "5753A063-4E354E3E-342690A2-B2C4E465",
@@ -2849,7 +2896,7 @@
           {
             "Section": {
               "ObjectName": "MovieSceneParameterSection'WBP_CoreArchiveButton_C:Hover_INST.Hover.MovieSceneWidgetMaterialTrack_2.MovieSceneParameterSection_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.37"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.38"
             },
             "Range": {
               "LowerBound": {
@@ -2884,7 +2931,7 @@
     "Properties": {
       "MovieScene": {
         "ObjectName": "MovieScene'WBP_CoreArchiveButton_C:Default_INST.Default'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.17"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.18"
       },
       "AnimationBindings": [
         {
@@ -2897,7 +2944,7 @@
       "DisplayLabel": "Default",
       "CompiledData": {
         "ObjectName": "MovieSceneCompiledData'WBP_CoreArchiveButton_C:Default_INST.CompiledData'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.34"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.35"
       },
       "Signature": "EB4D2785-453FE424-CE7C6AA6-1F0CD0BF"
     }
@@ -2910,7 +2957,7 @@
     "Properties": {
       "MovieScene": {
         "ObjectName": "MovieScene'WBP_CoreArchiveButton_C:Hover_INST.Hover'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.18"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.19"
       },
       "AnimationBindings": [
         {
@@ -2929,7 +2976,7 @@
       "DisplayLabel": "Hover",
       "CompiledData": {
         "ObjectName": "MovieSceneCompiledData'WBP_CoreArchiveButton_C:Hover_INST.CompiledData'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.35"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.36"
       },
       "Signature": "A6776D1F-43B3C020-8762DFBD-4D29B98F"
     }
@@ -2942,7 +2989,7 @@
     "Properties": {
       "MovieScene": {
         "ObjectName": "MovieScene'WBP_CoreArchiveButton_C:Pressed_INST.Pressed'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.19"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.20"
       },
       "AnimationBindings": [
         {
@@ -2955,7 +3002,7 @@
       "DisplayLabel": "Pressed",
       "CompiledData": {
         "ObjectName": "MovieSceneCompiledData'WBP_CoreArchiveButton_C:Pressed_INST.CompiledData'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.36"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.37"
       },
       "Signature": "25250C3D-4AEAD37D-BF0668AD-2DFB1C0F"
     }
@@ -2968,7 +3015,7 @@
     "Properties": {
       "RootWidget": {
         "ObjectName": "GridPanel'WBP_CoreArchiveButton_C:WidgetTree.GridPanel_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.10"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/Buttons/WBP_CoreArchiveButton.11"
       }
     }
   }

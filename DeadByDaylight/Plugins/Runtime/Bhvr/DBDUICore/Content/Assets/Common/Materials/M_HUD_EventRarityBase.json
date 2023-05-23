@@ -2,8 +2,10 @@
   {
     "Type": "Material",
     "Name": "M_HUD_EventRarityBase",
+    "Class": "UScriptClass'Material'",
     "Properties": {
       "EmissiveColor": {
+        "Expression": null,
         "OutputIndex": 0,
         "InputName": "None",
         "Mask": 0,
@@ -24,7 +26,7 @@
       "MaterialDomain": "MD_UI",
       "BlendMode": "BLEND_Translucent",
       "bCanMaskedBeAssumedOpaque": true,
-      "StateId": "9EE6246B-40A8E72E-4327A3B8-4DE9256A",
+      "StateId": "ABD11D91-488E883E-2B1EDD8F-33EE5450",
       "CachedExpressionData": {
         "Parameters": {
           "RuntimeEntries": {
@@ -36,8 +38,8 @@
               11062236645452022664,
               11339287002670956118,
               11360255096758636255,
-              12282297472979986691,
               14193961954444178996,
+              16312084494114510889,
               17511765790521585474
             ],
             "ParameterInfos": [
@@ -77,12 +79,12 @@
                 "Index": -1
               },
               {
-                "Name": "SheenProgress",
+                "Name": "Pos_1_Color",
                 "Association": "GlobalParameter",
                 "Index": -1
               },
               {
-                "Name": "Pos_1_Color",
+                "Name": "SheenMaskValue",
                 "Association": "GlobalParameter",
                 "Index": -1
               },
@@ -94,21 +96,20 @@
             ],
             "ExpressionGuids": [
               "7804429E-456A92B8-16EFDE89-C6E1F468",
-              "D5E377A3-40062994-45248A9D-117B800F",
+              "FCE9E400-45EC8EEA-7D54DFB6-0C009DA0",
               "53E92BD0-4DFAFC1B-526D97BF-E8A78064",
-              "A25587A5-44FB6F48-EAF71E9D-92D6D123",
-              "123767CF-4295B339-1D6C92A9-0D387D3B",
+              "FBF880B7-4379B3B9-163C6588-4762F31A",
+              "AA2D455E-4B2F541E-799C9C83-B7717186",
               "5FFF8FF5-4D5F113D-FA87DE89-CA7659A1",
               "4E2CD5CC-48D180A8-62AD33AD-8E105D83",
-              "84887521-458E71E4-409741BB-B4DA1A60",
               "8F4271F6-4568620E-EC8C63A8-77AFA26A",
+              "1439DE2A-493A2FE7-470A5898-EE977B7A",
               "00CEDD91-4916EB46-42B0128C-B6EF0192"
             ]
           },
           "RuntimeEntries": {
             "NameHashes": [
               1272377724148814054,
-              3610053333346896823,
               13274994663514383110,
               14058212378966066862,
               14396193359242276581
@@ -116,11 +117,6 @@
             "ParameterInfos": [
               {
                 "Name": "SheenColor",
-                "Association": "GlobalParameter",
-                "Index": -1
-              },
-              {
-                "Name": "Color 3",
                 "Association": "GlobalParameter",
                 "Index": -1
               },
@@ -142,7 +138,6 @@
             ],
             "ExpressionGuids": [
               "283FE5AD-46BD325A-97F12AA9-81C32F15",
-              "8416C075-4F5BC6E5-7E72BCBE-33DACE04",
               "61D8F873-4F72453B-D220999A-E1BAA72F",
               "45BCA4BA-4C997EAB-3023BA80-5939A099",
               "2F554CB6-4AAC487C-016F44A0-5F51246E"
@@ -165,14 +160,14 @@
           },
           "ScalarValues": [
             0.5,
-            0.0,
+            9.0,
             1.5,
-            0.0,
-            3.0,
+            2.5,
+            5.0,
             0.3,
             0.5,
-            0.0,
             0.25,
+            0.0,
             0.75
           ],
           "VectorValues": [
@@ -182,13 +177,6 @@
               "B": 0.163596,
               "A": 1.0,
               "Hex": "FFFFE370"
-            },
-            {
-              "R": 1.0,
-              "G": 1.0,
-              "B": 1.0,
-              "A": 1.0,
-              "Hex": "FFFFFFFF"
             },
             {
               "R": 0.0,
@@ -214,14 +202,14 @@
           ],
           "TextureValues": [
             {
-              "ObjectName": "Texture2D itemsRarityTint",
+              "ObjectName": "Texture2D'itemsRarityTint'",
               "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Common/loadout/inventory/itemsRarityTint.0"
             }
           ]
         },
         "ReferencedTextures": [
           {
-            "ObjectName": "Texture2D itemsRarityTint",
+            "ObjectName": "Texture2D'itemsRarityTint'",
             "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Common/loadout/inventory/itemsRarityTint.0"
           }
         ],
@@ -229,42 +217,35 @@
           {
             "StateId": "032BFAE1-441ADE79-1518D0AC-D7D526D9",
             "Function": {
-              "ObjectName": "MaterialFunction M_UI_blend2Color",
+              "ObjectName": "MaterialFunction'M_UI_blend2Color'",
               "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Common/Materials/M_UI_blend2Color.0"
             }
           },
           {
             "StateId": "032BFAE1-441ADE79-1518D0AC-D7D526D9",
             "Function": {
-              "ObjectName": "MaterialFunction M_UI_blend2Color",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Common/Materials/M_UI_blend2Color.0"
-            }
-          },
-          {
-            "StateId": "032BFAE1-441ADE79-1518D0AC-D7D526D9",
-            "Function": {
-              "ObjectName": "MaterialFunction M_UI_blend2Color",
+              "ObjectName": "MaterialFunction'M_UI_blend2Color'",
               "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Common/Materials/M_UI_blend2Color.0"
             }
           },
           {
             "StateId": "AB126D3E-46D0D8F7-A271B2BC-7BC932DA",
             "Function": {
-              "ObjectName": "MaterialFunction SmoothStep",
+              "ObjectName": "MaterialFunction'SmoothStep'",
               "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/SmoothStep.0"
             }
           },
           {
             "StateId": "BF4C35A2-41694269-CB7E7AB8-38AC31E3",
             "Function": {
-              "ObjectName": "MaterialFunction RemapValueRange",
+              "ObjectName": "MaterialFunction'RemapValueRange'",
               "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions03/Math/RemapValueRange.0"
             }
           },
           {
-            "StateId": "7DBAC27E-4D4A1624-B20B71AD-73877CFA",
+            "StateId": "9DA795CE-42670890-C1D0788A-3E4F3687",
             "Function": {
-              "ObjectName": "MaterialFunction MF_UI_Sheen",
+              "ObjectName": "MaterialFunction'MF_UI_Sheen'",
               "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Common/MaterialFunctions/MF_UI_Sheen.0"
             }
           }

@@ -948,6 +948,12 @@
         "ElementSize": 4
       },
       {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Conv_BoolToFloat_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
         "Type": "BoolProperty",
         "Name": "CallFunc_ShouldUseAtlantaLighting_ReturnValue",
         "Flags": 1,
@@ -2101,6 +2107,13 @@
       },
       {
         "Type": "FloatProperty",
+        "Name": "Pole to Pole Movement",
+        "Flags": 2097153,
+        "ElementSize": 4,
+        "PropertyFlags": 5
+      },
+      {
+        "Type": "FloatProperty",
         "Name": "Horizon Move amount",
         "Flags": 2097153,
         "ElementSize": 4,
@@ -2309,6 +2322,37 @@
         "Flags": 2097153,
         "ElementSize": 4,
         "PropertyFlags": 65541
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Use Additive Flowmap",
+        "Flags": 2097153,
+        "ElementSize": 1,
+        "PropertyFlags": 5,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Flowmap Strenght",
+        "Flags": 2097153,
+        "ElementSize": 4,
+        "PropertyFlags": 5
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Custom vector flowmap",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 5,
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
       }
     ],
     "FuncMap": {
@@ -2494,12 +2538,14 @@
       "Direction distance": 0.5,
       "Directional speed": 0.02,
       "Horizon move falloff curve": 2.0,
+      "Pole to Pole Movement": 1.0,
       "Sky saturation": 1.0,
       "Sky contrast": 1.0,
       "HDR tint": 1.0,
       "HDR Power": 1.0,
       "HDR intensity": 1.0,
       "Sun/Moon radius": 0.1,
+      "Horizon Tint Falloff": 3.0,
       "Moon contrast": 0.5,
       "Sky texture": {
         "ObjectName": "Texture2D'Sunset_Clouds_TX'",
@@ -2532,6 +2578,10 @@
       },
       "Should sky receive fog": true,
       "CondemnedStatusVignetteIntensity": 1.0,
+      "Custom vector flowmap": {
+        "ObjectName": "Texture2D'T_COM_SKY_Flowmap'",
+        "ObjectPath": "DeadByDaylight/Content/Textures/Lighting/T_COM_SKY_Flowmap.0"
+      },
       "ASMDepthBias": {
         "PerDetailModeValue": [
           {
