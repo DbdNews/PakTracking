@@ -9,8 +9,8 @@
         "ObjectPath": "DeadByDaylight/Content/Materials/PhysicalMaterials/PM_Glass.0"
       },
       "Parent": {
-        "ObjectName": "MaterialInstanceConstant'MIM_OpacityDithering'",
-        "ObjectPath": "DeadByDaylight/Content/Materials/Master_Instances/Environment/MIM_OpacityDithering.0"
+        "ObjectName": "MaterialInstanceConstant'MI_COM_Glass01'",
+        "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Tilable/Simple/Glass/MI_COM_Glass01.0"
       },
       "bHasStaticPermutationResource": true,
       "ScalarParameterValues": [
@@ -20,7 +20,7 @@
             "Association": "GlobalParameter",
             "Index": -1
           },
-          "ParameterValue": 0.275,
+          "ParameterValue": 0.4,
           "ExpressionGUID": "0448F67D-4196CF7D-8B665398-51D6B98C"
         },
         {
@@ -29,7 +29,7 @@
             "Association": "GlobalParameter",
             "Index": -1
           },
-          "ParameterValue": 0.014286,
+          "ParameterValue": 0.2,
           "ExpressionGUID": "328DA3AB-4F03077B-0F2D089B-488CDE27"
         },
         {
@@ -47,7 +47,7 @@
             "Association": "GlobalParameter",
             "Index": -1
           },
-          "ParameterValue": 5.387118,
+          "ParameterValue": 4.0,
           "ExpressionGUID": "B0C5C4D4-48EFDCD9-D1835D9F-7691ABDA"
         },
         {
@@ -56,7 +56,7 @@
             "Association": "GlobalParameter",
             "Index": -1
           },
-          "ParameterValue": 4.678321,
+          "ParameterValue": 2.737286,
           "ExpressionGUID": "E9283AB3-450019C4-DBBE91A6-BA87A3D5"
         },
         {
@@ -70,11 +70,20 @@
         },
         {
           "ParameterInfo": {
+            "Name": "|     Roughness Map Tiling",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 2.0,
+          "ExpressionGUID": "862232BD-4692ECE7-CEF418B8-EA0F24D6"
+        },
+        {
+          "ParameterInfo": {
             "Name": "UV Tiling Master",
             "Association": "GlobalParameter",
             "Index": -1
           },
-          "ParameterValue": 1.210145,
+          "ParameterValue": 1.0,
           "ExpressionGUID": "44F334F6-4F5C5249-70C60B83-BB8E6F56"
         },
         {
@@ -83,7 +92,7 @@
             "Association": "GlobalParameter",
             "Index": -1
           },
-          "ParameterValue": 3.0,
+          "ParameterValue": 1.2,
           "ExpressionGUID": "1EA891C2-4A65C4BB-054BB0AB-B476674F"
         },
         {
@@ -104,11 +113,11 @@
             "Index": -1
           },
           "ParameterValue": {
-            "R": 0.0,
-            "G": 0.010417,
-            "B": 0.001298,
+            "R": 0.171875,
+            "G": 1.0,
+            "B": 0.275063,
             "A": 1.0,
-            "Hex": "FF001A04"
+            "Hex": "FF73FF8F"
           },
           "ExpressionGUID": "844A9249-49ECD570-BEAC00B5-AF5938DC"
         }
@@ -128,7 +137,10 @@
         }
       ],
       "BasePropertyOverrides": {
-        "BlendMode": "BLEND_Masked",
+        "bOverride_BlendMode": true,
+        "TwoSided": true,
+        "bCastTranslucentShadowsAsOpaque": true,
+        "BlendMode": "BLEND_Translucent",
         "OpacityMaskClipValue": 0.3333
       },
       "StaticParameters": {
@@ -223,8 +235,8 @@
       ],
       "TextureStreamingData": [
         {
-          "SamplingScale": 1.203125,
-          "UVChannelIndex": 2,
+          "SamplingScale": 2.0,
+          "UVChannelIndex": 0,
           "TextureName": "T_Com_Asphalt_A_HRM"
         }
       ]

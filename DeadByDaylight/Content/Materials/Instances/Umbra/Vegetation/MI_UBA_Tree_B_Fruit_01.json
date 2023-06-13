@@ -9,11 +9,47 @@
         "ObjectPath": "DeadByDaylight/Content/Materials/PhysicalMaterials/PM_FleshDry.0"
       },
       "Parent": {
-        "ObjectName": "MaterialInstanceConstant'MIM_BlendMapRgb_01'",
-        "ObjectPath": "DeadByDaylight/Content/Materials/Master_Instances/Environment/MIM_BlendMapRgb_01.0"
+        "ObjectName": "MaterialInstanceConstant'MV_Simple_Dissolve'",
+        "ObjectPath": "DeadByDaylight/Content/Materials/Master_Instances/Environment/MV_Simple_Dissolve.0"
       },
       "bHasStaticPermutationResource": true,
       "ScalarParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "SphDis_emissive_border_level",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.3,
+          "ExpressionGUID": "12357CF5-44D9007C-593AF7B7-D7D81796"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "border_brightness (rb)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 3.0,
+          "ExpressionGUID": "3A315F4D-4D999513-C01EE187-136584B8"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Emissive Border Level (rb)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.5,
+          "ExpressionGUID": "4EB91120-4B305E3E-292896A8-E01CFAA4"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Emissive Threshold (rb)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.5,
+          "ExpressionGUID": "F839A84A-487A619B-0CDC3C8D-65754810"
+        },
         {
           "ParameterInfo": {
             "Name": "|     Normal Map Intensity",
@@ -40,42 +76,6 @@
           },
           "ParameterValue": 0.980952,
           "ExpressionGUID": "1EA891C2-4A65C4BB-054BB0AB-B476674F"
-        },
-        {
-          "ParameterInfo": {
-            "Name": "|     BaseColor Opacity .",
-            "Association": "GlobalParameter",
-            "Index": -1
-          },
-          "ParameterValue": 0.4,
-          "ExpressionGUID": "54C5F89C-461E27D6-AFC177AA-CE7FCE47"
-        },
-        {
-          "ParameterInfo": {
-            "Name": "|     Roughness Intensity .",
-            "Association": "GlobalParameter",
-            "Index": -1
-          },
-          "ParameterValue": 0.65,
-          "ExpressionGUID": "FF0FF6B4-4AEFCB33-A74DAB89-C43FAE9D"
-        },
-        {
-          "ParameterInfo": {
-            "Name": "UV Channel .",
-            "Association": "GlobalParameter",
-            "Index": -1
-          },
-          "ParameterValue": 0.0,
-          "ExpressionGUID": "00D31AB3-4D30BF94-5D602991-CCEE089B"
-        },
-        {
-          "ParameterInfo": {
-            "Name": "|     VertexPaint Transition",
-            "Association": "GlobalParameter",
-            "Index": -1
-          },
-          "ParameterValue": 0.321664,
-          "ExpressionGUID": "5E017238-4B9E1E60-F9C445BB-D35AADAD"
         },
         {
           "ParameterInfo": {
@@ -153,21 +153,6 @@
             "Hex": "FF909069"
           },
           "ExpressionGUID": "844A9249-49ECD570-BEAC00B5-AF5938DC"
-        },
-        {
-          "ParameterInfo": {
-            "Name": "BaseColor .",
-            "Association": "GlobalParameter",
-            "Index": -1
-          },
-          "ParameterValue": {
-            "R": 0.0,
-            "G": 0.0,
-            "B": 0.0,
-            "A": 1.0,
-            "Hex": "FF000000"
-          },
-          "ExpressionGUID": "DE7F976E-4B7FD6C2-964C9896-58BEB1FC"
         }
       ],
       "TextureParameterValues": [
@@ -245,6 +230,7 @@
         }
       ],
       "BasePropertyOverrides": {
+        "BlendMode": "BLEND_Masked",
         "OpacityMaskClipValue": 0.3333
       },
       "StaticParameters": {
@@ -267,7 +253,27 @@
               "Index": -1
             },
             "bOverride": true,
-            "ExpressionGUID": "2DBA0F77-44EBBCD8-127130A3-37AB6D5A"
+            "ExpressionGUID": "75384918-467FC47B-D4250DB8-F95DD50F"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "EnableDissolve",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "950D88BA-40C2C85D-AE7BBB97-77B80F42"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Use Specular",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "96D62CE5-4CFFD6B2-F5F6DF85-C0CF6998"
           },
           {
             "Value": true,
@@ -342,26 +348,6 @@
           {
             "Value": true,
             "ParameterInfo": {
-              "Name": "Use BaseColor .",
-              "Association": "GlobalParameter",
-              "Index": -1
-            },
-            "bOverride": true,
-            "ExpressionGUID": "A5F937E1-40C96A84-3720D7A2-2E6322ED"
-          },
-          {
-            "Value": true,
-            "ParameterInfo": {
-              "Name": "Use VertexPaint Options .",
-              "Association": "GlobalParameter",
-              "Index": -1
-            },
-            "bOverride": true,
-            "ExpressionGUID": "F0C2315D-403C30BD-223A999C-0F3A4F34"
-          },
-          {
-            "Value": true,
-            "ParameterInfo": {
               "Name": "Use Normal Map ..",
               "Association": "GlobalParameter",
               "Index": -1
@@ -373,6 +359,18 @@
       },
       "CachedReferencedTextures": [
         {
+          "ObjectName": "Texture2D'T_Diffuse_Default'",
+          "ObjectPath": "DeadByDaylight/Content/Textures/Environment/_Common/Defaults/T_Diffuse_Default.0"
+        },
+        {
+          "ObjectName": "Texture2D'T_NormalMap_Default'",
+          "ObjectPath": "DeadByDaylight/Content/Textures/Environment/_Common/Defaults/T_NormalMap_Default.0"
+        },
+        {
+          "ObjectName": "Texture2D'T_MRH_Default'",
+          "ObjectPath": "DeadByDaylight/Content/Textures/Environment/_Common/Defaults/T_MRH_Default.0"
+        },
+        {
           "ObjectName": "Texture2D'BlendFunc_DefBlend'",
           "ObjectPath": "Engine/Content/EngineMaterials/BlendFunc_DefBlend.0"
         },
@@ -381,16 +379,8 @@
           "ObjectPath": "Engine/Content/EngineMaterials/BlendFunc_DefBase.0"
         },
         {
-          "ObjectName": "Texture2D'T_MRH_Default'",
-          "ObjectPath": "DeadByDaylight/Content/Textures/Environment/_Common/Defaults/T_MRH_Default.0"
-        },
-        {
           "ObjectName": "Texture2D'T_DiffuseWithAlpha_Default'",
           "ObjectPath": "DeadByDaylight/Content/Textures/Environment/_Common/Defaults/T_DiffuseWithAlpha_Default.0"
-        },
-        {
-          "ObjectName": "Texture2D'T_NormalMap_Default'",
-          "ObjectPath": "DeadByDaylight/Content/Textures/Environment/_Common/Defaults/T_NormalMap_Default.0"
         },
         {
           "ObjectName": "Texture2D'T_RgbMask_Default'",
@@ -399,14 +389,6 @@
         {
           "ObjectName": "Texture2D'T_RgbMaskWithAlpha_Default'",
           "ObjectPath": "DeadByDaylight/Content/Textures/Environment/_Common/Defaults/T_RgbMaskWithAlpha_Default.0"
-        },
-        {
-          "ObjectName": "Texture2D'T_Diffuse_Default'",
-          "ObjectPath": "DeadByDaylight/Content/Textures/Environment/_Common/Defaults/T_Diffuse_Default.0"
-        },
-        {
-          "ObjectName": "Texture2D'Good64x64TilingNoiseHighFreq'",
-          "ObjectPath": "Engine/Content/EngineMaterials/Good64x64TilingNoiseHighFreq.0"
         },
         null,
         {
@@ -432,6 +414,10 @@
         {
           "ObjectName": "Texture2D'T_SmokeTile'",
           "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_SmokeTile.0"
+        },
+        {
+          "ObjectName": "Texture2D'Good64x64TilingNoiseHighFreq'",
+          "ObjectPath": "Engine/Content/EngineMaterials/Good64x64TilingNoiseHighFreq.0"
         },
         {
           "ObjectName": "Texture2D'T_Rain_Drops_A'",
@@ -473,13 +459,18 @@
       "TextureStreamingData": [
         {
           "SamplingScale": 1.0,
-          "UVChannelIndex": 2,
-          "TextureName": "T_UBA_Tree_B_Fruit_N"
+          "UVChannelIndex": 0,
+          "TextureName": "T_TilingNoise03"
         },
         {
           "SamplingScale": 1.0,
-          "UVChannelIndex": 2,
+          "UVChannelIndex": 0,
           "TextureName": "T_WeirdTreeBark01_BC"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_WeirdTreeBark01_ORM"
         }
       ]
     }

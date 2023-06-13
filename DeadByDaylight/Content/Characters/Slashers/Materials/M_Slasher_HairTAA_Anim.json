@@ -104,7 +104,7 @@
       "TranslucencyDirectionalLightingIntensity": 6.0,
       "bUsedWithSkeletalMesh": true,
       "bUsedWithClothing": true,
-      "StateId": "AE4F00B3-413A5BC1-EB11ECB7-42B14D66",
+      "StateId": "CD3C58EB-4936493B-45A4FAB0-DD844CA0",
       "CachedExpressionData": {
         "Parameters": {
           "RuntimeEntries": {
@@ -145,6 +145,7 @@
               9210914208149213253,
               9627595397757473594,
               9743834059661406204,
+              9883386022134526146,
               9888030800003520264,
               10146803584664508939,
               10258923844658405196,
@@ -178,6 +179,7 @@
               17003790970301418264,
               17149770000495961825,
               17494466534949250466,
+              17757623658159621022,
               17995969254348101673,
               18001047826823800727,
               18083117564164288658,
@@ -365,6 +367,11 @@
                 "Index": -1
               },
               {
+                "Name": "Highlight Far",
+                "Association": "GlobalParameter",
+                "Index": -1
+              },
+              {
                 "Name": "DissolveTexture_PanSpeed_X",
                 "Association": "GlobalParameter",
                 "Index": -1
@@ -530,6 +537,11 @@
                 "Index": -1
               },
               {
+                "Name": "Highlight Near",
+                "Association": "GlobalParameter",
+                "Index": -1
+              },
+              {
                 "Name": "ScatterValue",
                 "Association": "GlobalParameter",
                 "Index": -1
@@ -587,6 +599,7 @@
               "6DB784EB-41CF82D8-5EC3F0A2-4ECB9BA9",
               "29C8BC60-44CA2FFD-38270690-8705B4BF",
               "ED2F9257-4BD765E4-41A30D82-7023339B",
+              "59A823BB-49C20D41-9B850EB3-E7F41D8B",
               "327AEA31-418B9624-22940BA3-1AF5054E",
               "2AA94E52-4285589A-B7617C8B-CBA13DA6",
               "0F58EA37-405E90E5-D4BCBF9E-5AA7F1E4",
@@ -620,6 +633,7 @@
               "E3130DDA-495F9319-6C7B5F84-B4177F4C",
               "BDD74210-4D1B95D7-774CB4BD-16E927D3",
               "4B1CF281-46D74AE8-94C74489-BD0BF49B",
+              "46AE0ABC-40276DFD-42284987-050242FD",
               "E2FB6316-4DA5C397-4DABB5AB-0184791F",
               "63155A3E-4E898E97-CB89A5A5-99C25949",
               "9ECB60AD-4B61A772-081EA9BD-8084CAE7",
@@ -633,6 +647,7 @@
               2300660822127776369,
               4359794668474716310,
               5171440335055930250,
+              5263666340584435971,
               6441924656170152077,
               6547064986227616841,
               8404731605326979051,
@@ -664,6 +679,11 @@
               },
               {
                 "Name": "EM Color",
+                "Association": "GlobalParameter",
+                "Index": -1
+              },
+              {
+                "Name": "HighlightColor",
                 "Association": "GlobalParameter",
                 "Index": -1
               },
@@ -709,6 +729,7 @@
               "5A4339E8-45F3214F-CF096A85-2B6C74C8",
               "8947B65F-475ECA96-4293149B-C9A54C63",
               "2FC6B6FB-4D6D72D4-A6FB7B84-0CB5B8E3",
+              "F8FA15B9-48F68B80-09FABC84-8F316713",
               "BFA338FA-41D4689D-75F69CAE-85CD55DA",
               "C55B5DFA-4A365A56-A2D394BA-18DAADEE",
               "18F2C5EF-4AC5FF26-B982BE83-8DDDEEF0",
@@ -854,6 +875,7 @@
             0.0,
             400.0,
             1.0,
+            1.0,
             0.0,
             64.0,
             10.0,
@@ -887,6 +909,7 @@
             750.0,
             0.8,
             10.0,
+            7.0,
             0.2,
             2.5,
             0.0,
@@ -927,6 +950,13 @@
               "B": 0.937255,
               "A": 1.0,
               "Hex": "FFFFD9F8"
+            },
+            {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 1.0,
+              "Hex": "FFFFFFFF"
             },
             {
               "R": 0.239583,
@@ -1251,6 +1281,20 @@
               "ObjectName": "MaterialFunction'MFN_Char_Dissolve'",
               "ObjectPath": "DeadByDaylight/Content/Effects/Materials/Functions/Dissolve/MFN_Char_Dissolve.0"
             }
+          },
+          {
+            "StateId": "50EBF8C6-4FF5F3EF-E9520A92-C416A78F",
+            "Function": {
+              "ObjectName": "MaterialFunction'CameraDirectionVector'",
+              "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/CameraDirectionVector.0"
+            }
+          },
+          {
+            "StateId": "8B61CA9B-4A2BDDDA-8B338392-B6F7B171",
+            "Function": {
+              "ObjectName": "MaterialFunction'MF_MeyersOutline'",
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Materials/MF_MeyersOutline.0"
+            }
           }
         ],
         "QualityLevelsUsed": [
@@ -1259,7 +1303,34 @@
           false,
           false
         ]
-      }
+      },
+      "TextureStreamingData": [
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "Black"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 1,
+          "TextureName": "Fxt_verticalGradient"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_HKHair01_M"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 1,
+          "TextureName": "T_HKHair01_Mask"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_HKHair01_N"
+        }
+      ]
     }
   }
 ]

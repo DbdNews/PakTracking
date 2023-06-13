@@ -9,18 +9,45 @@
         "ObjectPath": "DeadByDaylight/Content/Materials/PhysicalMaterials/PM_FleshJuicy.0"
       },
       "Parent": {
-        "ObjectName": "MaterialInstanceConstant'MIM_Simple_01'",
-        "ObjectPath": "DeadByDaylight/Content/Materials/Master_Instances/Environment/MIM_Simple_01.0"
+        "ObjectName": "MaterialInstanceConstant'MV_Simple_Dissolve'",
+        "ObjectPath": "DeadByDaylight/Content/Materials/Master_Instances/Environment/MV_Simple_Dissolve.0"
       },
       "bHasStaticPermutationResource": true,
       "ScalarParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "SphDis_emissive_border_level",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.1,
+          "ExpressionGUID": "12357CF5-44D9007C-593AF7B7-D7D81796"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Emissive Threshold (rb)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.07,
+          "ExpressionGUID": "F839A84A-487A619B-0CDC3C8D-65754810"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Atl_EmissiveMultiplier",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.05,
+          "ExpressionGUID": "6A71022E-473EC3ED-E6D2C7B0-3D6188D4"
+        },
         {
           "ParameterInfo": {
             "Name": "|     BaseColor Hue",
             "Association": "GlobalParameter",
             "Index": -1
           },
-          "ParameterValue": 2.575507,
+          "ParameterValue": 0.59,
           "ExpressionGUID": "C49A3F7F-4B462356-09F0DBA7-B985FB6E"
         },
         {
@@ -29,7 +56,7 @@
             "Association": "GlobalParameter",
             "Index": -1
           },
-          "ParameterValue": 0.570862,
+          "ParameterValue": 0.587159,
           "ExpressionGUID": "4990602E-4BA45A0E-DFE22FB4-A0760FAC"
         },
         {
@@ -119,7 +146,7 @@
             "Association": "GlobalParameter",
             "Index": -1
           },
-          "ParameterValue": 0.6,
+          "ParameterValue": 0.01,
           "ExpressionGUID": "E04635F8-4232B05E-B4FDF8A5-67363EBB"
         },
         {
@@ -128,7 +155,7 @@
             "Association": "GlobalParameter",
             "Index": -1
           },
-          "ParameterValue": 1.3,
+          "ParameterValue": 0.01,
           "ExpressionGUID": "B10CEB0D-485EE49D-CB8FA79C-D864C3ED"
         },
         {
@@ -260,10 +287,31 @@
         }
       ],
       "BasePropertyOverrides": {
+        "BlendMode": "BLEND_Masked",
         "OpacityMaskClipValue": 0.3333
       },
       "StaticParameters": {
         "StaticSwitchParameters": [
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "EnableDissolve",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "950D88BA-40C2C85D-AE7BBB97-77B80F42"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Use Specular",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "96D62CE5-4CFFD6B2-F5F6DF85-C0CF6998"
+          },
           {
             "Value": true,
             "ParameterInfo": {
@@ -519,7 +567,16 @@
           "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_TilingNoise03.0"
         }
       ],
+      "LightmassSettings": {
+        "EmissiveBoost": 0.01,
+        "bOverrideEmissiveBoost": true
+      },
       "TextureStreamingData": [
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_TilingNoise03"
+        },
         {
           "SamplingScale": 1.0,
           "UVChannelIndex": 0,
@@ -532,11 +589,6 @@
         },
         {
           "SamplingScale": 1.0,
-          "UVChannelIndex": 0,
-          "TextureName": "T_UBA_YellowBubble_01_BC"
-        },
-        {
-          "SamplingScale": 1.296875,
           "UVChannelIndex": 0,
           "TextureName": "T_UBA_YellowBubble_01_BC"
         }

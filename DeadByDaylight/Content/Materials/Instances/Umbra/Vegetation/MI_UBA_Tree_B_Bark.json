@@ -9,11 +9,47 @@
         "ObjectPath": "DeadByDaylight/Content/Materials/PhysicalMaterials/PM_Tree.0"
       },
       "Parent": {
-        "ObjectName": "MaterialInstanceConstant'MIM_Simple_01'",
-        "ObjectPath": "DeadByDaylight/Content/Materials/Master_Instances/Environment/MIM_Simple_01.0"
+        "ObjectName": "MaterialInstanceConstant'MV_Simple_Dissolve'",
+        "ObjectPath": "DeadByDaylight/Content/Materials/Master_Instances/Environment/MV_Simple_Dissolve.0"
       },
       "bHasStaticPermutationResource": true,
       "ScalarParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "SphDis_emissive_border_level",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.3,
+          "ExpressionGUID": "12357CF5-44D9007C-593AF7B7-D7D81796"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "border_brightness (rb)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 3.0,
+          "ExpressionGUID": "3A315F4D-4D999513-C01EE187-136584B8"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Emissive Border Level (rb)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.5,
+          "ExpressionGUID": "4EB91120-4B305E3E-292896A8-E01CFAA4"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Emissive Threshold (rb)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.5,
+          "ExpressionGUID": "F839A84A-487A619B-0CDC3C8D-65754810"
+        },
         {
           "ParameterInfo": {
             "Name": "|     Normal Map Intensity",
@@ -230,6 +266,7 @@
         }
       ],
       "BasePropertyOverrides": {
+        "BlendMode": "BLEND_Masked",
         "OpacityMaskClipValue": 0.3333
       },
       "StaticParameters": {
@@ -243,6 +280,26 @@
             },
             "bOverride": true,
             "ExpressionGUID": "B6C4EE83-409DEE8F-EF094C8C-D23EE103"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "EnableDissolve",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "950D88BA-40C2C85D-AE7BBB97-77B80F42"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Use Specular",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "96D62CE5-4CFFD6B2-F5F6DF85-C0CF6998"
           },
           {
             "Value": true,
@@ -475,6 +532,11 @@
           "SamplingScale": 2.0,
           "UVChannelIndex": 0,
           "TextureName": "T_Grunge_Mask01"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_TilingNoise03"
         },
         {
           "SamplingScale": 1.0,
