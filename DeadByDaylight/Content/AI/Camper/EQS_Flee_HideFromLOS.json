@@ -65,7 +65,7 @@
           "ObjectPath": "DeadByDaylight/Content/AI/Camper/EQS_Flee_HideFromLOS.3"
         },
         {
-          "ObjectName": "EnvQueryTest_PathfindingBatch'EQS_Flee_HideFromLOS:EnvQueryTest_PathfindingBatch_0'",
+          "ObjectName": "EnvQueryTest_PathfindingBatchExt'EQS_Flee_HideFromLOS:EnvQueryTest_PathfindingBatchExt_0'",
           "ObjectPath": "DeadByDaylight/Content/AI/Camper/EQS_Flee_HideFromLOS.8"
         }
       ]
@@ -150,17 +150,37 @@
     }
   },
   {
-    "Type": "EnvQueryTest_PathfindingBatch",
-    "Name": "EnvQueryTest_PathfindingBatch_0",
+    "Type": "EnvQueryTest_PathfindingBatchExt",
+    "Name": "EnvQueryTest_PathfindingBatchExt_0",
     "Outer": "EQS_Flee_HideFromLOS",
-    "Class": "UScriptClass'EnvQueryTest_PathfindingBatch'",
+    "Class": "UScriptClass'EnvQueryTest_PathfindingBatchExt'",
     "Properties": {
+      "BadPathingPenaltyMultiplier": {
+        "DefaultValue": 0.3
+      },
+      "MaxPenaltyAngle": {
+        "DefaultValue": 20.0
+      },
+      "MinPenaltyAngle": {
+        "DefaultValue": 50.0
+      },
+      "TargetContext": {
+        "ObjectName": "Class'EnvQueryContext_TerrorRadius'",
+        "ObjectPath": "/Script/DBDBots"
+      },
       "FilterClass": {
         "ObjectName": "Class'NavigationQueryFilter_Camper_Cheap'",
         "ObjectPath": "/Script/DBDBots"
       },
       "TestOrder": 5,
-      "TestPurpose": "EEnvTestPurpose::Filter",
+      "FilterType": "EEnvTestFilterType::Minimum",
+      "BoolValue": {
+        "DefaultValue": false
+      },
+      "FloatValueMin": {
+        "DefaultValue": 200.0
+      },
+      "ScoringEquation": "EEnvTestScoreEquation::Linear",
       "VerNum": 1
     }
   }

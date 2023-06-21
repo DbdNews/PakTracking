@@ -11754,12 +11754,17 @@
       "GoalWeightBonusWhileInteracting": {
         "DefaultValue": 15.0
       },
+      "InteractionSpeedStatusEffectID": "ModifyRepairSpeedEffect",
       "BBUnsafeActionID": {},
       "BBUnsafeActionUsesItemAddons": {
         "SelectedKeyName": "IsInWaitExitZone"
       },
-      "BBUnsafeActionIsSelfInteraction": {},
-      "BBUnsafeActionRange": {},
+      "BBUnsafeActionIsSelfInteraction": {
+        "SelectedKeyName": "IsInWaitExitZone"
+      },
+      "BBUnsafeActionRange": {
+        "SelectedKeyName": "ItemCharge"
+      },
       "NodeName": "Goal: Repair Generator",
       "TreeAsset": {
         "ObjectName": "BehaviorTree'BT_Camper'",
@@ -11783,8 +11788,8 @@
             "RowValue": "S27P02"
           },
           "PerkNeedToBeFullyCharged": true,
-          "NeedToHoldItem": false,
-          "NeedToBeEmptyHanded": true,
+          "RequiredHeldItemSlots": "EInLockerPerkEmptyHandType::None",
+          "RequiredEmptyHandedSlots": "EInLockerPerkEmptyHandType::SpecialItem",
           "NeedToBeInjured": false,
           "NeedPerkSkillToBeRunnableAtLocation": false,
           "MustBeFarFromLinkedObject": false,
@@ -11806,8 +11811,8 @@
             "RowValue": "RedHerring"
           },
           "PerkNeedToBeFullyCharged": true,
-          "NeedToHoldItem": false,
-          "NeedToBeEmptyHanded": false,
+          "RequiredHeldItemSlots": "EInLockerPerkEmptyHandType::None",
+          "RequiredEmptyHandedSlots": "EInLockerPerkEmptyHandType::None",
           "NeedToBeInjured": false,
           "NeedPerkSkillToBeRunnableAtLocation": false,
           "MustBeFarFromLinkedObject": true,
@@ -11832,8 +11837,8 @@
             "RowValue": "InnerStrength"
           },
           "PerkNeedToBeFullyCharged": true,
-          "NeedToHoldItem": false,
-          "NeedToBeEmptyHanded": false,
+          "RequiredHeldItemSlots": "EInLockerPerkEmptyHandType::None",
+          "RequiredEmptyHandedSlots": "EInLockerPerkEmptyHandType::None",
           "NeedToBeInjured": true,
           "NeedPerkSkillToBeRunnableAtLocation": false,
           "MustBeFarFromLinkedObject": false,
@@ -11855,8 +11860,8 @@
             "RowValue": "BuiltToLast"
           },
           "PerkNeedToBeFullyCharged": true,
-          "NeedToHoldItem": false,
-          "NeedToBeEmptyHanded": false,
+          "RequiredHeldItemSlots": "EInLockerPerkEmptyHandType::SurvivorItem",
+          "RequiredEmptyHandedSlots": "EInLockerPerkEmptyHandType::None",
           "NeedToBeInjured": false,
           "NeedPerkSkillToBeRunnableAtLocation": true,
           "MustBeFarFromLinkedObject": false,
@@ -11892,8 +11897,12 @@
       "BBUnsafeActionUsesItemAddons": {
         "SelectedKeyName": "IsInWaitExitZone"
       },
-      "BBUnsafeActionIsSelfInteraction": {},
-      "BBUnsafeActionRange": {},
+      "BBUnsafeActionIsSelfInteraction": {
+        "SelectedKeyName": "IsInWaitExitZone"
+      },
+      "BBUnsafeActionRange": {
+        "SelectedKeyName": "ItemCharge"
+      },
       "NodeName": "Goal: Run Perk In Locker",
       "TreeAsset": {
         "ObjectName": "BehaviorTree'BT_Camper'",
@@ -12579,6 +12588,9 @@
     "Properties": {
       "GoalChangeWeightBuffer": {
         "DefaultValue": 5.0
+      },
+      "BBLockedIntoGoal": {
+        "SelectedKeyName": "LockedIntoGoal"
       },
       "TreeAsset": {
         "ObjectName": "BehaviorTree'BT_Camper'",

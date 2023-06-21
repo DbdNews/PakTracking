@@ -79,7 +79,7 @@
           "ChildComposite": null,
           "ChildTask": {
             "ObjectName": "BTTask_Interact'DSBT_Camper_KillerItemSupplier:BTTask_Interact_6'",
-            "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_KillerItemSupplier.17"
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_KillerItemSupplier.19"
           },
           "Decorators": [
             {
@@ -93,7 +93,7 @@
           "ChildComposite": null,
           "ChildTask": {
             "ObjectName": "BTTask_StealthMoveTo'DSBT_Camper_KillerItemSupplier:BTTask_StealthMoveTo_4'",
-            "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_KillerItemSupplier.19"
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_KillerItemSupplier.21"
           },
           "Decorators": [],
           "DecoratorOps": []
@@ -120,7 +120,7 @@
           "ChildComposite": null,
           "ChildTask": {
             "ObjectName": "BTTask_InputPress'DSBT_Camper_KillerItemSupplier:BTTask_InputPress_0'",
-            "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_KillerItemSupplier.16"
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_KillerItemSupplier.18"
           },
           "Decorators": [
             {
@@ -149,6 +149,16 @@
           "DecoratorOps": []
         }
       ],
+      "Services": [
+        {
+          "ObjectName": "BTService_SetBBEntry'DSBT_Camper_KillerItemSupplier:BTService_SetBBEntry_0'",
+          "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_KillerItemSupplier.15"
+        },
+        {
+          "ObjectName": "BTService_ClearBBEntry'DSBT_Camper_KillerItemSupplier:BTService_ClearBBEntry_0'",
+          "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_KillerItemSupplier.14"
+        }
+      ],
       "NodeName": "Drop Special Item",
       "TreeAsset": {
         "ObjectName": "BehaviorTree'DSBT_Camper_KillerItemSupplier'",
@@ -171,7 +181,7 @@
           "ChildComposite": null,
           "ChildTask": {
             "ObjectName": "BTTask_SetRandomNavPoint'DSBT_Camper_KillerItemSupplier:BTTask_SetRandomNavPoint_0'",
-            "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_KillerItemSupplier.18"
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_KillerItemSupplier.20"
           },
           "Decorators": [],
           "DecoratorOps": []
@@ -180,7 +190,7 @@
           "ChildComposite": null,
           "ChildTask": {
             "ObjectName": "BTTask_ExtMoveTo'DSBT_Camper_KillerItemSupplier:BTTask_ExtMoveTo_0'",
-            "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_KillerItemSupplier.15"
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_KillerItemSupplier.17"
           },
           "Decorators": [],
           "DecoratorOps": []
@@ -189,7 +199,7 @@
       "Services": [
         {
           "ObjectName": "BTService_SetTagCooldown'DSBT_Camper_KillerItemSupplier:BTService_SetTagCooldown_0'",
-          "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_KillerItemSupplier.14"
+          "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_KillerItemSupplier.16"
         }
       ],
       "NodeName": "Move Until Drop Available",
@@ -338,7 +348,7 @@
         "DefaultValue": 200.0
       },
       "FlowAbortMode": "EBTFlowAbortMode::Both",
-      "NodeName": "Is Close To The Television",
+      "NodeName": "Is Close To The Interactor",
       "TreeAsset": {
         "ObjectName": "BehaviorTree'DSBT_Camper_KillerItemSupplier'",
         "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_KillerItemSupplier.0"
@@ -398,6 +408,46 @@
       "bActivatesCooldown": false,
       "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
       "NodeName": "DropItem Tag Cooldown",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_KillerItemSupplier'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_KillerItemSupplier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_Camper_KillerItemSupplier:BTComposite_Selector_3'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_KillerItemSupplier.3"
+      }
+    }
+  },
+  {
+    "Type": "BTService_ClearBBEntry",
+    "Name": "BTService_ClearBBEntry_0",
+    "Outer": "DSBT_Camper_KillerItemSupplier",
+    "Class": "UScriptClass'BTService_ClearBBEntry'",
+    "Properties": {
+      "BBToResetKey": {
+        "SelectedKeyName": "LockedIntoGoal"
+      },
+      "When": "EAINodeRelevancyOptions::OnExit",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_KillerItemSupplier'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_KillerItemSupplier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_Camper_KillerItemSupplier:BTComposite_Selector_3'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_KillerItemSupplier.3"
+      }
+    }
+  },
+  {
+    "Type": "BTService_SetBBEntry",
+    "Name": "BTService_SetBBEntry_0",
+    "Outer": "DSBT_Camper_KillerItemSupplier",
+    "Class": "UScriptClass'BTService_SetBBEntry'",
+    "Properties": {
+      "BBToSetKey": {
+        "SelectedKeyName": "LockedIntoGoal"
+      },
+      "ToSetValue": "True",
       "TreeAsset": {
         "ObjectName": "BehaviorTree'DSBT_Camper_KillerItemSupplier'",
         "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_KillerItemSupplier.0"

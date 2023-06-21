@@ -13,9 +13,9 @@
       {
         "Type": "ByteProperty",
         "Name": "BP Type",
-        "Flags": 1,
+        "Flags": "RF_Public",
         "ElementSize": 1,
-        "PropertyFlags": 384,
+        "PropertyFlags": "Parm | OutParm",
         "Enum": {
           "ObjectName": "UserDefinedEnum'LightingInterfaceEnum'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Lighting/LightingInterfaceEnum.0"
@@ -24,9 +24,9 @@
       {
         "Type": "FloatProperty",
         "Name": "CondemnedStatusIntensityOverride",
-        "Flags": 1,
+        "Flags": "RF_Public",
         "ElementSize": 4,
-        "PropertyFlags": 384
+        "PropertyFlags": "Parm | OutParm"
       }
     ],
     "FunctionFlags": 205651968
@@ -198,12 +198,12 @@
         "A": 255,
         "Hex": "FFFFDDF4"
       },
-      "VolumetricScatteringIntensity": 0.871428,
+      "VolumetricScatteringIntensity": 0.65,
       "AmbientOcclusionContribution": 1.0,
       "RelativeLocation": {
-        "X": 4756.9414,
-        "Y": 5647.506,
-        "Z": 1914.842
+        "X": 6447.506,
+        "Y": 3956.9429,
+        "Z": 1845.3647
       },
       "RelativeRotation": {
         "Pitch": -73.71494,
@@ -219,10 +219,10 @@
     "Template": "HeightFog_GEN_VARIABLE",
     "Class": "UScriptClass'ExponentialHeightFogComponent'",
     "Properties": {
-      "FogDensity": 0.1,
-      "FogHeightFalloff": 2.0,
+      "FogDensity": 0.25,
+      "FogHeightFalloff": 4.0,
       "SecondFogData": {
-        "FogHeightFalloff": 0.961867
+        "FogHeightFalloff": 0.001
       },
       "FogInscatteringColor": {
         "R": 0.193359,
@@ -247,11 +247,11 @@
         "A": 1.0,
         "Hex": "FF000000"
       },
-      "StartDistance": 300.0,
+      "StartDistance": 1700.0,
       "bEnableVolumetricFog": true,
-      "VolumetricFogScatteringDistribution": 0.6,
+      "VolumetricFogExtinctionScale": 1.1,
       "VolumetricFogDistance": 1000.0,
-      "FogGradientZOffset": -206.20201,
+      "FogGradientZOffset": -482.35077,
       "FogGradient": [
         {
           "Colour": {
@@ -261,17 +261,27 @@
             "A": 1.0,
             "Hex": "FF000000"
           },
-          "GradientHeight": 28.426853
+          "GradientHeight": 0.001
         },
         {
           "Colour": {
-            "R": 0.239664,
-            "G": 0.513199,
-            "B": 0.807292,
+            "R": 0.267496,
+            "G": 0.572796,
+            "B": 0.901042,
             "A": 17.157011,
-            "Hex": "FF86BEE8"
+            "Hex": "FF8DC8F4"
           },
-          "GradientHeight": 179.84715
+          "GradientHeight": 99.33958
+        },
+        {
+          "Colour": {
+            "R": 0.326562,
+            "G": 0.699273,
+            "B": 1.1,
+            "A": 17.157011,
+            "Hex": "FF9BDAFF"
+          },
+          "GradientHeight": 167.53331
         },
         {
           "Colour": {
@@ -281,7 +291,7 @@
             "A": 7.513479,
             "Hex": "FFB0A1C9"
           },
-          "GradientHeight": 313.75714
+          "GradientHeight": 390.15085
         },
         {
           "Colour": {
@@ -291,7 +301,7 @@
             "A": 3.809,
             "Hex": "FF978BAD"
           },
-          "GradientHeight": 199.58313
+          "GradientHeight": 295.79663
         },
         {
           "Colour": {
@@ -301,7 +311,7 @@
             "A": 23.673943,
             "Hex": "FFBF7492"
           },
-          "GradientHeight": 777.6947
+          "GradientHeight": 565.40936
         },
         {
           "Colour": {
@@ -336,9 +346,9 @@
     "Template": "AdaptiveShadowMapSource_GEN_VARIABLE",
     "Class": "UScriptClass'GMAdaptiveShadowMapSourceComponent'",
     "Properties": {
-      "Radius": 9917.893,
-      "DepthMin": -9917.895,
-      "DepthMax": 9917.895,
+      "Radius": 9932.13,
+      "DepthMin": -9932.133,
+      "DepthMax": 9932.133,
       "Levels": 3,
       "PreGeneratedLevels": 3
     }
@@ -566,6 +576,7 @@
         "bOverride_ColorSaturationHighlights": true,
         "bOverride_ColorCorrectionHighlightsMin": true,
         "bOverride_AmbientCubemapTint": true,
+        "bOverride_BloomMethod": true,
         "bOverride_BloomThreshold": true,
         "bOverride_Bloom1Size": true,
         "bOverride_AmbientOcclusionRadiusInWS": true,
