@@ -258,11 +258,11 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.110"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.113"
       },
       "InheritableComponentHandler": {
         "ObjectName": "InheritableComponentHandler'BP_TL_Fr_HD_202_B2_C:InheritableComponentHandler'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.33"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.34"
       },
       "UberGraphFunction": {
         "ObjectName": "Function'BP_TL_Fr_HD_202_B2_C:ExecuteUbergraph_BP_TL_Fr_HD_202_B2'",
@@ -297,6 +297,39 @@
         "Struct": {
           "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
           "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_UBA_RockBlocker_9",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Closet02",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ActorSpawner'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Closet01",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ActorSpawner'",
+          "ObjectPath": "/Script/DeadByDaylight"
         }
       },
       {
@@ -895,17 +928,6 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "ActorSpawner21",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-        "PropertyClass": {
-          "ObjectName": "Class'ActorSpawner'",
-          "ObjectPath": "/Script/DeadByDaylight"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
         "Name": "AudioAmbBox_Biome_Rocky",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
@@ -1070,34 +1092,6 @@
   },
   {
     "Type": "ActorSpawner",
-    "Name": "ActorSpawner21_GEN_VARIABLE",
-    "Outer": "BP_TL_Fr_HD_202_B2_C",
-    "Class": "UScriptClass'ActorSpawner'",
-    "Properties": {
-      "Type": "EGameplayElementType::EdgeObjects",
-      "Visualization": {
-        "AssetPathName": "/Game/Meshes/Environment/Umbra/Vegetation/BP_UBA_EdgeObject_03.BP_UBA_EdgeObject_03_C",
-        "SubPathString": ""
-      },
-      "ActivatedSceneElement": [
-        {
-          "SceneElement": {
-            "AssetPathName": "/Game/Meshes/Environment/Umbra/Vegetation/BP_UBA_EdgeObject_03.BP_UBA_EdgeObject_03_C",
-            "SubPathString": ""
-          },
-          "Weight": 1.0
-        }
-      ],
-      "RelativeLocation": {
-        "X": 727.0,
-        "Y": 722.0,
-        "Z": 0.0
-      },
-      "Mobility": "EComponentMobility::Static"
-    }
-  },
-  {
-    "Type": "ActorSpawner",
     "Name": "ActorSpawner22_GEN_VARIABLE",
     "Outer": "BP_TL_Fr_HD_202_B2_C",
     "Class": "UScriptClass'ActorSpawner'",
@@ -1173,8 +1167,8 @@
         }
       ],
       "RelativeLocation": {
-        "X": 486.86685,
-        "Y": 423.51514,
+        "X": 473.87643,
+        "Y": 431.01514,
         "Z": 117.0
       },
       "Mobility": "EComponentMobility::Static"
@@ -1268,8 +1262,8 @@
     "Class": "UScriptClass'ActorSpawner'",
     "Properties": {
       "RelativeLocation": {
-        "X": 398.915,
-        "Y": 359.19568,
+        "X": 390.55872,
+        "Y": 349.237,
         "Z": 3.355165
       },
       "RelativeRotation": {
@@ -1297,6 +1291,70 @@
         "Yaw": -379.99994,
         "Roll": 0.0
       }
+    }
+  },
+  {
+    "Type": "ActorSpawner",
+    "Name": "Closet01_GEN_VARIABLE",
+    "Outer": "BP_TL_Fr_HD_202_B2_C",
+    "Class": "UScriptClass'ActorSpawner'",
+    "Properties": {
+      "Visualization": {
+        "AssetPathName": "/Game/Blueprints/GameplayElements/Interactable/Closet/ClosetStandard.ClosetStandard_C",
+        "SubPathString": ""
+      },
+      "ActivatedSceneElement": [
+        {
+          "SceneElement": {
+            "AssetPathName": "/Game/Blueprints/GameplayElements/Interactable/Closet/ClosetStandard.ClosetStandard_C",
+            "SubPathString": ""
+          },
+          "Weight": 1.0
+        }
+      ],
+      "RelativeLocation": {
+        "X": 589.9331,
+        "Y": 477.76892,
+        "Z": 4.822235
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 139.99986,
+        "Roll": 0.0
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "ActorSpawner",
+    "Name": "Closet02_GEN_VARIABLE",
+    "Outer": "BP_TL_Fr_HD_202_B2_C",
+    "Class": "UScriptClass'ActorSpawner'",
+    "Properties": {
+      "Visualization": {
+        "AssetPathName": "/Game/Blueprints/GameplayElements/Interactable/Closet/ClosetStandard.ClosetStandard_C",
+        "SubPathString": ""
+      },
+      "ActivatedSceneElement": [
+        {
+          "SceneElement": {
+            "AssetPathName": "/Game/Blueprints/GameplayElements/Interactable/Closet/ClosetStandard.ClosetStandard_C",
+            "SubPathString": ""
+          },
+          "Weight": 1.0
+        }
+      ],
+      "RelativeLocation": {
+        "X": 483.45312,
+        "Y": 567.1167,
+        "Z": 4.822235
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 139.99986,
+        "Roll": 0.0
+      },
+      "Mobility": "EComponentMobility::Static"
     }
   },
   {
@@ -1465,7 +1523,7 @@
     "Properties": {
       "ChildActorTemplate": {
         "ObjectName": "BP_Effect_Mist_C'BP_TL_Fr_HD_202_B2_C:BP_Effect_MistC0C70A5241ED67C308EE5CBBA64F9AF0.BP_Effect_MistC0C70A5241ED67C308EE5CBBA64F9AF0_BP_Effect_Mist_C_CAT'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.18"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.19"
       },
       "ComponentTags": [
         "BorderObject"
@@ -1481,7 +1539,7 @@
     "Properties": {
       "ChildActorTemplate": {
         "ObjectName": "BP_Effect_Mist_C'BP_TL_Fr_HD_202_B2_C:ChildActor23BD091E460EC1DDE3D925A74625A6B9.ChildActor23BD091E460EC1DDE3D925A74625A6B9_BP_Effect_Mist_C_CAT'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.19"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.20"
       }
     }
   },
@@ -1497,7 +1555,7 @@
       },
       "ChildActorTemplate": {
         "ObjectName": "BP_UBA_GlowingPlant_01_C'BP_TL_Fr_HD_202_B2_C:ChildActor6_GEN_VARIABLE.ChildActor6_GEN_VARIABLE_BP_UBA_GlowingPlant_01_C_CAT'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.22"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.23"
       },
       "RelativeLocation": {
         "X": -176.44464,
@@ -1521,7 +1579,7 @@
     "Properties": {
       "ChildActorTemplate": {
         "ObjectName": "BP_Effect_Mist_C'BP_TL_Fr_HD_202_B2_C:ChildActor6A6657D944AA8C9BF8BFDC906DBACF23.ChildActor6A6657D944AA8C9BF8BFDC906DBACF23_BP_Effect_Mist_C_CAT'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.20"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.21"
       }
     }
   },
@@ -1534,7 +1592,7 @@
     "Properties": {
       "ChildActorTemplate": {
         "ObjectName": "BP_Effect_Mist_C'BP_TL_Fr_HD_202_B2_C:ChildActor7870C468478CD22B85EA62ABDE6B8721.ChildActor7870C468478CD22B85EA62ABDE6B8721_BP_Effect_Mist_C_CAT'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.21"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.22"
       }
     }
   },
@@ -1550,7 +1608,7 @@
       },
       "ChildActorTemplate": {
         "ObjectName": "BP_UBA_GlowingPlant_01_C'BP_TL_Fr_HD_202_B2_C:ChildActor7_GEN_VARIABLE.ChildActor7_GEN_VARIABLE_BP_UBA_GlowingPlant_01_C_CAT'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.23"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.24"
       },
       "RelativeLocation": {
         "X": 38.231377,
@@ -1581,7 +1639,7 @@
         {
           "65": {
             "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:Ground_GEN_VARIABLE'",
-            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.114"
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.117"
           }
         }
       ],
@@ -1589,7 +1647,7 @@
         {
           "foliageType": {
             "ObjectName": "FoliageType_InstancedStaticMesh'BP_TL_Fr_HD_202_B2_C:InstancedFoliageActor_GEN_VARIABLE.FoliageType_InstancedStaticMesh_0'",
-            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.32"
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.33"
           },
           "instances": [
             {
@@ -2612,7 +2670,7 @@
           },
           "ComponentTemplate": {
             "ObjectName": "TileSpawnPoint'BP_TL_Fr_HD_202_B2_C:TileSpawnPoint_13'",
-            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.159"
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.163"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -2634,7 +2692,7 @@
           },
           "ComponentTemplate": {
             "ObjectName": "TileSpawnPoint'BP_TL_Fr_HD_202_B2_C:TileSpawnPoint_22'",
-            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.162"
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.166"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -2656,7 +2714,7 @@
           },
           "ComponentTemplate": {
             "ObjectName": "TileSpawnPoint'BP_TL_Fr_HD_202_B2_C:TileSpawnPoint_19'",
-            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.161"
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.165"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -2678,7 +2736,7 @@
           },
           "ComponentTemplate": {
             "ObjectName": "TileSpawnPoint'BP_TL_Fr_HD_202_B2_C:TileSpawnPoint_0'",
-            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.157"
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.161"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -2700,7 +2758,7 @@
           },
           "ComponentTemplate": {
             "ObjectName": "TileSpawnPoint'BP_TL_Fr_HD_202_B2_C:TileSpawnPoint_7'",
-            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.164"
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.168"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -2722,7 +2780,7 @@
           },
           "ComponentTemplate": {
             "ObjectName": "TileSpawnPoint'BP_TL_Fr_HD_202_B2_C:TileSpawnPoint_4'",
-            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.163"
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.167"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -2744,7 +2802,7 @@
           },
           "ComponentTemplate": {
             "ObjectName": "TileSpawnPoint'BP_TL_Fr_HD_202_B2_C:TileSpawnPoint_16'",
-            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.160"
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.164"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -2766,7 +2824,7 @@
           },
           "ComponentTemplate": {
             "ObjectName": "ActorSpawner'BP_TL_Fr_HD_202_B2_C:ActorSpawner_18'",
-            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.13"
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.12"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -2788,7 +2846,7 @@
           },
           "ComponentTemplate": {
             "ObjectName": "TileSpawnPoint'BP_TL_Fr_HD_202_B2_C:TileSpawnPoint_10'",
-            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.158"
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.162"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -2810,7 +2868,7 @@
           },
           "ComponentTemplate": {
             "ObjectName": "ActorSpawner'BP_TL_Fr_HD_202_B2_C:ActorSpawner_0'",
-            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.12"
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.11"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -2832,7 +2890,7 @@
           },
           "ComponentTemplate": {
             "ObjectName": "ActorSpawner'BP_TL_Fr_HD_202_B2_C:ActorSpawner836F088848C74DFA83D97DA0FDF090B1'",
-            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.11"
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.10"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -2854,7 +2912,7 @@
           },
           "ComponentTemplate": {
             "ObjectName": "ActorSpawner'BP_TL_Fr_HD_202_B2_C:HexSpawnerAB0214EB470864319DD5DFAECFD7ACDE'",
-            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.16"
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.17"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -2876,7 +2934,7 @@
           },
           "ComponentTemplate": {
             "ObjectName": "ChildActorComponent'BP_TL_Fr_HD_202_B2_C:BP_Effect_MistC0C70A5241ED67C308EE5CBBA64F9AF0'",
-            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.24"
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.25"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -2898,7 +2956,7 @@
           },
           "ComponentTemplate": {
             "ObjectName": "SceneComponent'BP_TL_Fr_HD_202_B2_C:SceneB7B5B2F649E1FB3109D1F8AC54172147'",
-            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.40"
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.41"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -2920,7 +2978,7 @@
           },
           "ComponentTemplate": {
             "ObjectName": "ChildActorComponent'BP_TL_Fr_HD_202_B2_C:ChildActor7870C468478CD22B85EA62ABDE6B8721'",
-            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.28"
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.29"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -2942,7 +3000,7 @@
           },
           "ComponentTemplate": {
             "ObjectName": "ChildActorComponent'BP_TL_Fr_HD_202_B2_C:ChildActor6A6657D944AA8C9BF8BFDC906DBACF23'",
-            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.27"
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.28"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -2964,7 +3022,7 @@
           },
           "ComponentTemplate": {
             "ObjectName": "ChildActorComponent'BP_TL_Fr_HD_202_B2_C:ChildActor23BD091E460EC1DDE3D925A74625A6B9'",
-            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.25"
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.26"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -3116,32 +3174,6 @@
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_0",
-    "Outer": "SimpleConstructionScript_1",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'ActorSpawner'",
-        "ObjectPath": "/Script/DeadByDaylight"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "ActorSpawner'BP_TL_Fr_HD_202_B2_C:ActorSpawner21_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.5"
-      },
-      "ParentComponentOrVariableName": "Deco",
-      "ParentComponentOwnerClassName": "TileBase01_C",
-      "ChildNodes": [
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_2'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.50"
-        }
-      ],
-      "VariableGuid": "C2CB584C-4765F10E-28ED56BB-5983F5A1",
-      "InternalVariableName": "ActorSpawner21"
-    }
-  },
-  {
-    "Type": "SCS_Node",
     "Name": "SCS_Node_1",
     "Outer": "SimpleConstructionScript_1",
     "Class": "UScriptClass'SCS_Node'",
@@ -3152,12 +3184,70 @@
       },
       "ComponentTemplate": {
         "ObjectName": "DBDSphereReflectionCaptureSpawnerComponent'BP_TL_Fr_HD_202_B2_C:SphereReflectionCapture_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.31"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.32"
       },
       "ParentComponentOrVariableName": "Lights",
       "ParentComponentOwnerClassName": "TileBase01_C",
       "VariableGuid": "B9BF01DA-430F9EE0-ED93DB9C-64673370",
       "InternalVariableName": "SphereReflectionCapture"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_10",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ActorSpawner'",
+        "ObjectPath": "/Script/DeadByDaylight"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ActorSpawner'BP_TL_Fr_HD_202_B2_C:Closet01_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.13"
+      },
+      "ParentComponentOrVariableName": "Lockers",
+      "ParentComponentOwnerClassName": "TileBase01_C",
+      "VariableGuid": "75377E33-42B08E37-5940458A-21EFD7B8",
+      "InternalVariableName": "Closet01"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_11",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ActorSpawner'",
+        "ObjectPath": "/Script/DeadByDaylight"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ActorSpawner'BP_TL_Fr_HD_202_B2_C:Closet02_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.14"
+      },
+      "ParentComponentOrVariableName": "Lockers",
+      "ParentComponentOwnerClassName": "TileBase01_C",
+      "VariableGuid": "45120ECD-42D53621-6B9531BB-A584BB72",
+      "InternalVariableName": "Closet02"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_13",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_RockBlocker_9_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.158"
+      },
+      "VariableGuid": "5C1E6091-4532EE52-4C3F92B7-39BBF999",
+      "InternalVariableName": "SM_UBA_RockBlocker_9"
     }
   },
   {
@@ -3172,7 +3262,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_Rock_10_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.125"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.128"
       },
       "VariableGuid": "AE360784-4C352580-F06EBC8A-EF928F99",
       "InternalVariableName": "SM_UBA_Rock_10"
@@ -3190,12 +3280,12 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_Rock_11_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.126"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.129"
       },
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_54'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.72"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.75"
         }
       ],
       "VariableGuid": "D0F54D15-4A1350E8-79C8339C-F6E3C98B",
@@ -3214,112 +3304,116 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:Ground_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.114"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.117"
       },
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_47'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.67"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.70"
         },
         {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_14'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.45"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_16'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.46"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_31'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.58"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_33'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.60"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_38'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.64"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_18'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.48"
         },
         {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_16'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.49"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_31'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.61"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_33'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.63"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_38'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.67"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_18'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.51"
+        },
+        {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_25'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.54"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.57"
         },
         {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_28'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.56"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.59"
         },
         {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_67'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.83"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.86"
         },
         {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_21'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.52"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_9'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.107"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_26'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.55"
         },
         {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_9'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.110"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_26'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.58"
+        },
+        {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_63'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.79"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_65'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.81"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_66'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.82"
         },
         {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_69'",
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_65'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.84"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_66'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.85"
         },
         {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_70'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.87"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_71'",
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_69'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.88"
         },
         {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_72'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.89"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_73'",
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_70'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.90"
         },
         {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_74'",
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_71'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.91"
         },
         {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_75'",
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_72'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.92"
         },
         {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_76'",
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_73'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.93"
         },
         {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_78'",
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_74'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.94"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_75'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.95"
         },
         {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_76'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.96"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_78'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.98"
+        },
+        {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_23'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.53"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.56"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_13'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.47"
         }
       ],
       "VariableGuid": "D9A7E21D-44C854E8-30DAECAD-CD313367",
@@ -3338,7 +3432,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_Rock_17_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.131"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.134"
       },
       "VariableGuid": "07D3802C-4C052B26-22726488-E12CC979",
       "InternalVariableName": "SM_UBA_Rock_17"
@@ -3356,7 +3450,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BP_TL_Fr_HD_202_B2_C:SceneComponent_29'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.41"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.42"
       },
       "VariableGuid": "56BC9799-C494E6E6-321D4295-7D5EB316",
       "InternalVariableName": "DefaultSceneRoot"
@@ -3374,8 +3468,10 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BP_TL_Fr_HD_202_B2_C:BP_UBA_EdgeObject_03_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.39"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.40"
       },
+      "ParentComponentOrVariableName": "Deco",
+      "ParentComponentOwnerClassName": "TileBase01_C",
       "VariableGuid": "77671758-4E196F95-6736A59D-7618EB01",
       "InternalVariableName": "BP_UBA_EdgeObject_03"
     }
@@ -3392,14 +3488,14 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BP_TL_Fr_HD_202_B2_C:SceneComponent_30'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.42"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.43"
       },
       "ParentComponentOrVariableName": "Root",
       "ParentComponentOwnerClassName": "TileBase01_C",
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_17'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.47"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.50"
         }
       ],
       "VariableGuid": "AB2F3414-DE8DE1EA-4898826F-D14390BE",
@@ -3418,7 +3514,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_Bush_31_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.119"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.122"
       },
       "VariableGuid": "1427F273-491A0085-B86CF089-F13413F3",
       "InternalVariableName": "SM_UBA_Bush_31"
@@ -3436,7 +3532,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_RockBlocker_3_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.149"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.152"
       },
       "VariableGuid": "2F36E4FD-42AF5E5C-0A0A1CB8-B11E3588",
       "InternalVariableName": "SM_UBA_RockBlocker_3"
@@ -3454,7 +3550,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_Rock_18_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.132"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.135"
       },
       "VariableGuid": "80A3CDEF-4A972881-FC7A30A8-A8C50E09",
       "InternalVariableName": "SM_UBA_Rock_18"
@@ -3472,7 +3568,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_Rock_Debris_Small_01_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.133"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.136"
       },
       "VariableGuid": "1A399487-453A0AB5-1FB733A5-3B06720C",
       "InternalVariableName": "SM_UBA_Rock_Debris_Small_01"
@@ -3490,12 +3586,12 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_RockBlocker_01_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.146"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.149"
       },
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_57'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.74"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.77"
         }
       ],
       "VariableGuid": "AB8E9D91-4A750DF3-8080AC9C-F141C388",
@@ -3514,7 +3610,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SpotLightComponent'BP_TL_Fr_HD_202_B2_C:SpotLight9_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.113"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.116"
       },
       "ParentComponentOrVariableName": "Lights",
       "ParentComponentOwnerClassName": "TileBase01_C",
@@ -3534,16 +3630,16 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_Rock_12_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.127"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.130"
       },
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_52'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.70"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.73"
         },
         {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_53'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.71"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.74"
         }
       ],
       "VariableGuid": "DE7690B5-4D64004D-DFCC17AC-530A1B9E",
@@ -3562,7 +3658,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ActorSpawner'BP_TL_Fr_HD_202_B2_C:ActorSpawner2_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.8"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.7"
       },
       "ParentComponentOrVariableName": "Crows",
       "ParentComponentOwnerClassName": "TileBase01_C",
@@ -3582,7 +3678,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_Rock_13_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.128"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.131"
       },
       "VariableGuid": "16D2D58A-4804002E-26BF28BE-20C40361",
       "InternalVariableName": "SM_UBA_Rock_13"
@@ -3600,7 +3696,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ActorSpawner'BP_TL_Fr_HD_202_B2_C:ActorSpawner3_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.9"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.8"
       },
       "ParentComponentOrVariableName": "Crows",
       "ParentComponentOwnerClassName": "TileBase01_C",
@@ -3620,7 +3716,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ActorSpawner'BP_TL_Fr_HD_202_B2_C:ActorSpawner5_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.10"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.9"
       },
       "ParentComponentOrVariableName": "Crows",
       "ParentComponentOwnerClassName": "TileBase01_C",
@@ -3640,12 +3736,12 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_MushroomCluster_02_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.120"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.123"
       },
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_77'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.94"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.97"
         }
       ],
       "VariableGuid": "DB2849E1-421B3F32-084269A5-72A91198",
@@ -3664,12 +3760,12 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_Rock_15_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.130"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.133"
       },
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_37'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.63"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.66"
         }
       ],
       "VariableGuid": "017BD8F8-401251EB-0E53B697-216E008A",
@@ -3688,7 +3784,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SpotLightComponent'BP_TL_Fr_HD_202_B2_C:SpotLight10_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.111"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.114"
       },
       "ParentComponentOrVariableName": "Lights",
       "ParentComponentOwnerClassName": "TileBase01_C",
@@ -3708,7 +3804,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ActorSpawner'BP_TL_Fr_HD_202_B2_C:Pull01_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.17"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.18"
       },
       "ParentComponentOrVariableName": "PullObjects",
       "ParentComponentOwnerClassName": "TileBase01_C",
@@ -3728,7 +3824,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "NiagaraComponent'BP_TL_Fr_HD_202_B2_C:NS_Umbra_Mushroom_Spores_01_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.35"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.36"
       },
       "VariableGuid": "074E3404-475AFB06-B0559F8D-F1EE2343",
       "InternalVariableName": "NS_Umbra_Mushroom_Spores_01"
@@ -3746,7 +3842,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "DBDInstancedFoliageComponent'BP_TL_Fr_HD_202_B2_C:InstancedFoliageActor_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.30"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.31"
       },
       "VariableGuid": "64F63516-4D9FFF6E-8729C7AE-98155D75",
       "InternalVariableName": "InstancedFoliageActor"
@@ -3764,7 +3860,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "NatAudioAmbienceBox'BP_TL_Fr_HD_202_B2_C:AudioAmbBox_Biome_Rocky_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.34"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.35"
       },
       "ParentComponentOrVariableName": "Audio",
       "ParentComponentOwnerClassName": "TileBase01_C",
@@ -3784,12 +3880,12 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_MushroomCluster_03_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.121"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.124"
       },
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_80'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.97"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.100"
         }
       ],
       "VariableGuid": "D0A16784-45FE9FC7-B3CD368A-EE5749D3",
@@ -3808,7 +3904,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_MushroomCluster_3_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.122"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.125"
       },
       "VariableGuid": "FF631223-429DD962-EAE39B83-6DD78239",
       "InternalVariableName": "SM_UBA_MushroomCluster_3"
@@ -3826,12 +3922,12 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_MushroomCluster_4_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.123"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.126"
       },
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_56'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.73"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.76"
         }
       ],
       "VariableGuid": "B1C85888-4420EA55-B387BD93-74F59F40",
@@ -3850,7 +3946,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "NiagaraComponent'BP_TL_Fr_HD_202_B2_C:NS_Umbra_Mushroom_Spores_03_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.36"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.37"
       },
       "VariableGuid": "CA3B0E3F-47A60A22-50BE62AE-006C020B",
       "InternalVariableName": "NS_Umbra_Mushroom_Spores_03"
@@ -3868,7 +3964,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_VegetationAddon_03_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.156"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.160"
       },
       "VariableGuid": "8CAB28CA-429961A3-0AEEA48C-EC72D5DD",
       "InternalVariableName": "SM_UBA_VegetationAddon_03"
@@ -3886,7 +3982,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ActorSpawner'BP_TL_Fr_HD_202_B2_C:ActorSpawner22_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.6"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.5"
       },
       "ParentComponentOrVariableName": "Deco",
       "ParentComponentOwnerClassName": "TileBase01_C",
@@ -3906,7 +4002,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_Rock_Debris_Small_2_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.138"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.141"
       },
       "VariableGuid": "B4CF7F5F-494654F5-48C22AAB-7D819BA6",
       "InternalVariableName": "SM_UBA_Rock_Debris_Small_2"
@@ -3924,7 +4020,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ChildActorComponent'BP_TL_Fr_HD_202_B2_C:ChildActor6_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.26"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.27"
       },
       "ParentComponentOrVariableName": "FX",
       "ParentComponentOwnerClassName": "TileBase01_C",
@@ -3944,7 +4040,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ChildActorComponent'BP_TL_Fr_HD_202_B2_C:ChildActor7_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.29"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.30"
       },
       "ParentComponentOrVariableName": "FX",
       "ParentComponentOwnerClassName": "TileBase01_C",
@@ -3964,7 +4060,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_Rock_Debris_Small_3_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.139"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.142"
       },
       "VariableGuid": "5429F887-42E7CEAA-746504BF-D4070049",
       "InternalVariableName": "SM_UBA_Rock_Debris_Small_3"
@@ -3982,7 +4078,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ActorSpawner'BP_TL_Fr_HD_202_B2_C:DBDActorSpawnerActor2_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.14"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.15"
       },
       "ParentComponentOrVariableName": "Deco",
       "ParentComponentOwnerClassName": "TileBase01_C",
@@ -4002,7 +4098,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_Rock_Debris_Small_4_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.140"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.143"
       },
       "VariableGuid": "34F4210A-4E4BAEAF-7A4E10A4-1ED8E19F",
       "InternalVariableName": "SM_UBA_Rock_Debris_Small_4"
@@ -4020,7 +4116,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_Rock_Debris_Small_5_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.141"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.144"
       },
       "VariableGuid": "7EC9560B-43640F45-E869ECA9-BD2D24CD",
       "InternalVariableName": "SM_UBA_Rock_Debris_Small_5"
@@ -4038,7 +4134,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_Bush_11_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.117"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.120"
       },
       "VariableGuid": "FFBA8082-46327375-D58B1881-08ED5544",
       "InternalVariableName": "SM_UBA_Bush_11"
@@ -4056,7 +4152,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_RockBlocker_02_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.147"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.150"
       },
       "ParentComponentOrVariableName": "Root",
       "ParentComponentOwnerClassName": "TileBase01_C",
@@ -4076,7 +4172,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_Rock_Debris_Small_6_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.142"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.145"
       },
       "VariableGuid": "D53BFFB8-430E54A2-15266CBF-AB3C4814",
       "InternalVariableName": "SM_UBA_Rock_Debris_Small_6"
@@ -4094,7 +4190,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SpotLightComponent'BP_TL_Fr_HD_202_B2_C:SpotLight11_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.112"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.115"
       },
       "ParentComponentOrVariableName": "Lights",
       "ParentComponentOwnerClassName": "TileBase01_C",
@@ -4114,7 +4210,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_Rock_Debris_Small_7_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.143"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.146"
       },
       "VariableGuid": "AE67BB2D-4ECD33C3-63FA62B2-D8EAD5F7",
       "InternalVariableName": "SM_UBA_Rock_Debris_Small_7"
@@ -4132,7 +4228,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_Rock_Debris_Small_8_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.144"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.147"
       },
       "VariableGuid": "996800A0-4A3686D9-4F010CAA-EADCB84B",
       "InternalVariableName": "SM_UBA_Rock_Debris_Small_8"
@@ -4150,7 +4246,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_Rock_Debris_Small_9_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.145"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.148"
       },
       "VariableGuid": "88A14623-489A114C-15FE3BA0-99C53C4E",
       "InternalVariableName": "SM_UBA_Rock_Debris_Small_9"
@@ -4168,7 +4264,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_Rock_Debris_Small_10_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.134"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.137"
       },
       "VariableGuid": "26CCBBA2-4E945BC6-167990B5-0E41A5F7",
       "InternalVariableName": "SM_UBA_Rock_Debris_Small_10"
@@ -4186,7 +4282,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_Rock_Debris_Small_11_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.135"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.138"
       },
       "VariableGuid": "340395EA-4DA7C671-FE86E2A9-65847C9E",
       "InternalVariableName": "SM_UBA_Rock_Debris_Small_11"
@@ -4204,7 +4300,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_Rock_Debris_Small_12_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.136"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.139"
       },
       "VariableGuid": "40DA427B-4D4C4858-BCB3B087-688C724B",
       "InternalVariableName": "SM_UBA_Rock_Debris_Small_12"
@@ -4222,7 +4318,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_Rock_Debris_Small_13_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.137"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.140"
       },
       "VariableGuid": "3C08E361-4F7F21C4-1BE04DA2-81552D6B",
       "InternalVariableName": "SM_UBA_Rock_Debris_Small_13"
@@ -4240,7 +4336,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "NiagaraComponent'BP_TL_Fr_HD_202_B2_C:NS_Umbra_Mushroom_Spores_04_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.37"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.38"
       },
       "VariableGuid": "DD9C23D9-4BDFA2BC-5E3CE3B3-2467F604",
       "InternalVariableName": "NS_Umbra_Mushroom_Spores_04"
@@ -4258,7 +4354,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_RockBlocker_2_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.148"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.151"
       },
       "VariableGuid": "68D82398-445335CE-47B3C383-CA4A73B6",
       "InternalVariableName": "SM_UBA_RockBlocker_2"
@@ -4276,7 +4372,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ActorSpawner'BP_TL_Fr_HD_202_B2_C:ActorSpawner23_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.7"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.6"
       },
       "ParentComponentOrVariableName": "Deco",
       "ParentComponentOwnerClassName": "TileBase01_C",
@@ -4296,7 +4392,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "NiagaraComponent'BP_TL_Fr_HD_202_B2_C:NS_Umbra_Mushroom_Spores_05_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.38"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.39"
       },
       "VariableGuid": "5F72F652-45E55C47-3E178DA7-038B6C63",
       "InternalVariableName": "NS_Umbra_Mushroom_Spores_05"
@@ -4314,7 +4410,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_Rock_14_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.129"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.132"
       },
       "ParentComponentOrVariableName": "Root",
       "ParentComponentOwnerClassName": "TileBase01_C",
@@ -4334,7 +4430,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_RockBlocker_4_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.150"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.153"
       },
       "ParentComponentOrVariableName": "Root",
       "ParentComponentOwnerClassName": "TileBase01_C",
@@ -4354,7 +4450,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_RockBlocker_5_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.151"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.154"
       },
       "ParentComponentOrVariableName": "Root",
       "ParentComponentOwnerClassName": "TileBase01_C",
@@ -4374,14 +4470,14 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_RockBlocker_6_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.152"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.155"
       },
       "ParentComponentOrVariableName": "Root",
       "ParentComponentOwnerClassName": "TileBase01_C",
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_85'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.102"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.105"
         }
       ],
       "VariableGuid": "D0AA9B72-463FACC6-970834B4-B9F27DC9",
@@ -4400,7 +4496,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_Rock_02_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.124"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.127"
       },
       "VariableGuid": "8723D2D0-4C9DCC0D-DBAA2087-B832B60F",
       "InternalVariableName": "SM_UBA_Rock_02"
@@ -4418,18 +4514,18 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_Tree_A_01_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.155"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.159"
       },
       "ParentComponentOrVariableName": "Root",
       "ParentComponentOwnerClassName": "TileBase01_C",
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_87'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.104"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.107"
         },
         {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_88'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.105"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.108"
         }
       ],
       "VariableGuid": "7A1A92E8-48E28C27-8EEDBEBD-40AB0941",
@@ -4448,7 +4544,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_Bush_02_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.116"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.119"
       },
       "VariableGuid": "8F96E3D9-4BA55601-B1BC0EB9-A4F54774",
       "InternalVariableName": "SM_UBA_Bush_02"
@@ -4466,7 +4562,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_Bush_01_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.115"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.118"
       },
       "VariableGuid": "6BEAED6D-497FEE0B-8B221AA1-96D8346E",
       "InternalVariableName": "SM_UBA_Bush_01"
@@ -4484,7 +4580,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_RockBlocker_7_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.153"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.156"
       },
       "ParentComponentOrVariableName": "Root",
       "ParentComponentOwnerClassName": "TileBase01_C",
@@ -4504,12 +4600,12 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ActorSpawner'BP_TL_Fr_HD_202_B2_C:DBDActorSpawnerActor_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.15"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.16"
       },
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_60'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.76"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.79"
         }
       ],
       "VariableGuid": "54F5DD71-49C355FD-04A561A8-2F0B553B",
@@ -4528,7 +4624,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_RockBlocker_8_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.154"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.157"
       },
       "ParentComponentOrVariableName": "Root",
       "ParentComponentOwnerClassName": "TileBase01_C",
@@ -4548,7 +4644,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_TL_Fr_HD_202_B2_C:SM_UBA_Bush_12_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.118"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.121"
       },
       "ParentComponentOrVariableName": "Root",
       "ParentComponentOwnerClassName": "TileBase01_C",
@@ -4565,35 +4661,31 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_20'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.51"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.54"
         },
         {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_32'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.59"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_34'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.61"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_35'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.62"
         },
         {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_5'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.69"
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_34'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.64"
         },
         {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_0'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.43"
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_35'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.65"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_5'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.72"
         },
         {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_6'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.75"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.78"
         },
         {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_8'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.96"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.99"
         },
         {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_1'",
@@ -4601,149 +4693,157 @@
         },
         {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_3'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.57"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.60"
         },
         {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_4'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.65"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_7'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.86"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_61'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.77"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_62'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.78"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_64'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.80"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_46'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.66"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_48'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.68"
         },
         {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_7'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.89"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_61'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.80"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_62'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.81"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_64'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.83"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_46'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.69"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_48'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.71"
+        },
+        {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_68'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.84"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.87"
         },
         {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_81'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.98"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_82'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.99"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_83'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.100"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_84'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.101"
         },
         {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_86'",
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_82'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.102"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_83'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.103"
         },
         {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_89'",
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_84'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.104"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_86'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.106"
         },
         {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_89'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.109"
+        },
+        {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_90'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.108"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.111"
         },
         {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_93'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.109"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.112"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_2'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.53"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_10'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.45"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_11'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.46"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_20'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.51"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_32'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.59"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_34'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.61"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_35'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.62"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_17'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.47"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_14'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.45"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_16'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.46"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_31'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.58"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_33'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.60"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_38'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.64"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_5'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.69"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_0'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.43"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_2'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.50"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_6'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.75"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_8'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.96"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_18'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.48"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_25'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.54"
         },
         {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_32'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.62"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_34'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.64"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_35'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.65"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_17'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.50"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_14'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.48"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_16'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.49"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_31'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.61"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_33'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.63"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_38'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.67"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_5'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.72"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_2'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.53"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_6'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.78"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_8'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.99"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_18'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.51"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_25'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.57"
+        },
+        {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_28'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.56"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.59"
         },
         {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_67'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.83"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.86"
         },
         {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_1'",
@@ -4751,192 +4851,204 @@
         },
         {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_3'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.57"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.60"
         },
         {
           "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_4'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.65"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_7'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.86"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_21'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.52"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_37'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.63"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_52'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.70"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_53'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.71"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_54'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.72"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_57'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.74"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_61'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.77"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_62'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.78"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_64'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.80"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_9'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.107"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_26'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.55"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_60'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.76"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_63'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.79"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_65'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.81"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_66'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.82"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_69'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.85"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_70'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.87"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_71'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.88"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_72'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.89"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_73'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.90"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_74'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.91"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_75'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.92"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_76'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.93"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_78'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.95"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_23'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.53"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_46'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.66"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_48'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.68"
         },
         {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_47'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.67"
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_7'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.89"
         },
         {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_56'",
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_21'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.55"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_37'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.66"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_52'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.73"
         },
         {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_77'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.94"
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_53'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.74"
         },
         {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_80'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.97"
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_54'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.75"
         },
         {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_68'",
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_57'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.77"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_61'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.80"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_62'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.81"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_64'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.83"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_9'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.110"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_26'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.58"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_60'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.79"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_63'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.82"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_65'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.84"
         },
         {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_81'",
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_66'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.85"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_69'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.88"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_70'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.90"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_71'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.91"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_72'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.92"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_73'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.93"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_74'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.94"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_75'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.95"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_76'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.96"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_78'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.98"
         },
         {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_82'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.99"
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_23'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.56"
         },
         {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_83'",
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_46'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.69"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_48'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.71"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_47'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.70"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_56'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.76"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_77'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.97"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_80'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.100"
         },
         {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_84'",
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_68'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.87"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_81'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.101"
         },
         {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_85'",
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_82'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.102"
         },
         {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_86'",
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_83'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.103"
         },
         {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_87'",
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_84'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.104"
         },
         {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_88'",
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_85'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.105"
         },
         {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_89'",
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_86'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.106"
         },
         {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_90'",
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_87'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.107"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_88'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.108"
         },
         {
-          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_93'",
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_89'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.109"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_90'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.111"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_93'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.112"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_10'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.45"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_11'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.46"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_13'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.47"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BP_TL_Fr_HD_202_B2_C:SimpleConstructionScript_1.SCS_Node_19'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.49"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Tiles/21-Umbra/BP_TL_Fr_HD_202_B2.52"
       }
     }
   },
@@ -5594,8 +5706,8 @@
         "CollisionProfileName": "BlockAll"
       },
       "RelativeLocation": {
-        "X": 483.35904,
-        "Y": 430.0,
+        "X": 470.36862,
+        "Y": 437.5,
         "Z": 6.0
       },
       "RelativeRotation": {
@@ -6226,8 +6338,8 @@
         "CollisionProfileName": "BlockAll"
       },
       "RelativeLocation": {
-        "X": 382.642,
-        "Y": 542.087,
+        "X": 366.18747,
+        "Y": 532.587,
         "Z": 6.0
       },
       "RelativeRotation": {
@@ -6373,6 +6485,34 @@
       "RelativeRotation": {
         "Pitch": 0.0,
         "Yaw": -65.00025,
+        "Roll": 0.0
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_UBA_RockBlocker_9_GEN_VARIABLE",
+    "Outer": "BP_TL_Fr_HD_202_B2_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_UBA_RockBlocker_01'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Umbra/Blockers/SM_UBA_RockBlocker_01.2"
+      },
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll"
+      },
+      "RelativeLocation": {
+        "X": 491.4575,
+        "Y": 411.92563,
+        "Z": -36.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 49.99998,
         "Roll": 0.0
       },
       "Mobility": "EComponentMobility::Static"

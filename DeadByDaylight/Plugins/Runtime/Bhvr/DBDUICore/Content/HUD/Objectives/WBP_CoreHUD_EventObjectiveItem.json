@@ -13,16 +13,28 @@
         "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
       },
       {
-        "Type": "BoolProperty",
-        "Name": "Temp_bool_Variable",
+        "Type": "IntProperty",
+        "Name": "K2Node_Event_charges",
         "Flags": "RF_Public",
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
+        "ElementSize": 4,
+        "PropertyFlags": "ConstParm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_Event_maxCharges",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "ConstParm"
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'WidgetAnimationResult__DelegateSignature'",
+          "ObjectPath": "/Script/UMG"
+        }
       },
       {
         "Type": "StructProperty",
@@ -34,18 +46,6 @@
           "ObjectName": "ScriptStruct'Key'",
           "ObjectPath": "/Script/InputCore"
         }
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "K2Node_SwitchEnum_CmpSuccess",
-        "Flags": "RF_Public",
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
       },
       {
         "Type": "EnumProperty",
@@ -127,7 +127,7 @@
       },
       {
         "Type": "DelegateProperty",
-        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
         "Flags": "RF_Public",
         "ElementSize": 20,
         "SignatureFunction": {
@@ -206,28 +206,8 @@
         }
       },
       {
-        "Type": "ObjectProperty",
-        "Name": "CallFunc_CreatePlayAnimationProxyObject_Result",
-        "Flags": "RF_Public",
-        "ElementSize": 8,
-        "PropertyClass": {
-          "ObjectName": "Class'UMGSequencePlayer'",
-          "ObjectPath": "/Script/UMG"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "CallFunc_CreatePlayAnimationProxyObject_ReturnValue",
-        "Flags": "RF_Public",
-        "ElementSize": 8,
-        "PropertyClass": {
-          "ObjectName": "Class'WidgetAnimationPlayCallbackProxy'",
-          "ObjectPath": "/Script/UMG"
-        }
-      },
-      {
         "Type": "BoolProperty",
-        "Name": "CallFunc_IsValid_ReturnValue",
+        "Name": "K2Node_SwitchEnum_CmpSuccess",
         "Flags": "RF_Public",
         "ElementSize": 1,
         "FieldSize": 1,
@@ -249,13 +229,6 @@
       },
       {
         "Type": "FloatProperty",
-        "Name": "K2Node_Event_cooldownPercent",
-        "Flags": "RF_Public",
-        "ElementSize": 4,
-        "PropertyFlags": "ConstParm"
-      },
-      {
-        "Type": "FloatProperty",
         "Name": "K2Node_Event_chargePercent_1",
         "Flags": "RF_Public",
         "ElementSize": 4,
@@ -263,9 +236,10 @@
       },
       {
         "Type": "FloatProperty",
-        "Name": "CallFunc_Subtract_FloatFloat_ReturnValue",
+        "Name": "K2Node_Event_cooldownPercent",
         "Flags": "RF_Public",
-        "ElementSize": 4
+        "ElementSize": 4,
+        "PropertyFlags": "ConstParm"
       },
       {
         "Type": "EnumProperty",
@@ -307,6 +281,12 @@
         "PropertyFlags": "ConstParm"
       },
       {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Subtract_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
         "Type": "BoolProperty",
         "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_3",
         "Flags": "RF_Public",
@@ -343,20 +323,6 @@
         "bIsNativeBool": true
       },
       {
-        "Type": "IntProperty",
-        "Name": "K2Node_Event_charges",
-        "Flags": "RF_Public",
-        "ElementSize": 4,
-        "PropertyFlags": "ConstParm"
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "K2Node_Event_maxCharges",
-        "Flags": "RF_Public",
-        "ElementSize": 4,
-        "PropertyFlags": "ConstParm"
-      },
-      {
         "Type": "ObjectProperty",
         "Name": "CallFunc_GetDynamicMaterial_ReturnValue_4",
         "Flags": "RF_Public",
@@ -365,6 +331,18 @@
           "ObjectName": "Class'MaterialInstanceDynamic'",
           "ObjectPath": "/Script/Engine"
         }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_ShouldResetGaugePercentage_ShouldResetGauge",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
       },
       {
         "Type": "EnumProperty",
@@ -384,18 +362,6 @@
         }
       },
       {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_ShouldResetGaugePercentage_ShouldResetGauge",
-        "Flags": "RF_Public",
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
         "Type": "EnumProperty",
         "Name": "Temp_byte_Variable_1",
         "Flags": "RF_Public",
@@ -413,6 +379,18 @@
         }
       },
       {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
         "Type": "EnumProperty",
         "Name": "K2Node_Select_Default",
         "Flags": "RF_Public",
@@ -428,6 +406,94 @@
           "ElementSize": 1,
           "Enum": null
         }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetStartTime_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreatePlayAnimationProxyObject_Result",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'UMGSequencePlayer'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreatePlayAnimationProxyObject_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimationPlayCallbackProxy'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreatePlayAnimationProxyObject_Result_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'UMGSequencePlayer'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreatePlayAnimationProxyObject_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimationPlayCallbackProxy'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetEndTime_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Subtract_FloatFloat_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Divide_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
       }
     ],
     "FunctionFlags": 8421377
@@ -524,26 +590,6 @@
   },
   {
     "Type": "Function",
-    "Name": "SetChargePercentage",
-    "Outer": "WBP_CoreHUD_EventObjectiveItem_C",
-    "Class": "UScriptClass'Function'",
-    "SuperStruct": {
-      "ObjectName": "Function'HudEventObjectiveItemViewInterface:SetChargePercentage'",
-      "ObjectPath": "/Script/DBDUIViewInterfaces"
-    },
-    "ChildProperties": [
-      {
-        "Type": "FloatProperty",
-        "Name": "chargePercent",
-        "Flags": "RF_Public",
-        "ElementSize": 4,
-        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm"
-      }
-    ],
-    "FunctionFlags": 201459712
-  },
-  {
-    "Type": "Function",
     "Name": "SetCooldownPercentage",
     "Outer": "WBP_CoreHUD_EventObjectiveItem_C",
     "Class": "UScriptClass'Function'",
@@ -555,6 +601,26 @@
       {
         "Type": "FloatProperty",
         "Name": "cooldownPercent",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": 201459712
+  },
+  {
+    "Type": "Function",
+    "Name": "SetChargePercentage",
+    "Outer": "WBP_CoreHUD_EventObjectiveItem_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'HudEventObjectiveItemViewInterface:SetChargePercentage'",
+      "ObjectPath": "/Script/DBDUIViewInterfaces"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "chargePercent",
         "Flags": "RF_Public",
         "ElementSize": 4,
         "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm"
@@ -638,6 +704,13 @@
       "ObjectPath": "/Script/DBDUIViewInterfaces"
     },
     "FunctionFlags": 201459712
+  },
+  {
+    "Type": "Function",
+    "Name": "Finished_A44075EA40548DBAE9B9AE857CF5C5C6",
+    "Outer": "WBP_CoreHUD_EventObjectiveItem_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": 201326592
   },
   {
     "Type": "Function",
@@ -1144,18 +1217,6 @@
       },
       {
         "Type": "BoolProperty",
-        "Name": "CallFunc_EqualEqual_IntInt_ReturnValue",
-        "Flags": "RF_Public",
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "BoolProperty",
         "Name": "CallFunc_Less_IntInt_ReturnValue",
         "Flags": "RF_Public",
         "ElementSize": 1,
@@ -1169,6 +1230,18 @@
       {
         "Type": "BoolProperty",
         "Name": "CallFunc_NotEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_IntInt_ReturnValue",
         "Flags": "RF_Public",
         "ElementSize": 1,
         "FieldSize": 1,
@@ -1212,21 +1285,21 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.117"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.118"
       },
       "bClassRequiresNativeTick": true,
       "Animations": [
         {
           "ObjectName": "WidgetAnimation'WBP_CoreHUD_EventObjectiveItem_C:ChargeMax_INST'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.115"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.116"
         },
         {
           "ObjectName": "WidgetAnimation'WBP_CoreHUD_EventObjectiveItem_C:ChargeInProgress_INST'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.114"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.115"
         },
         {
           "ObjectName": "WidgetAnimation'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.116"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.117"
         }
       ],
       "UberGraphFunction": {
@@ -1241,30 +1314,34 @@
     "Children": [
       {
         "ObjectName": "Function'WBP_CoreHUD_EventObjectiveItem_C:ShouldResetGaugePercentage'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.16"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.17"
       },
       {
         "ObjectName": "Function'WBP_CoreHUD_EventObjectiveItem_C:SetIconState'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.15"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.16"
       },
       {
         "ObjectName": "Function'WBP_CoreHUD_EventObjectiveItem_C:UpdateCharges'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.14"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.15"
       },
       {
         "ObjectName": "Function'WBP_CoreHUD_EventObjectiveItem_C:SetCooldown'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.13"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.14"
       },
       {
         "ObjectName": "Function'WBP_CoreHUD_EventObjectiveItem_C:SetUsable'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.12"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.13"
       },
       {
         "ObjectName": "Function'WBP_CoreHUD_EventObjectiveItem_C:SetActive'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.11"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.12"
       },
       {
         "ObjectName": "Function'WBP_CoreHUD_EventObjectiveItem_C:Finished_4D3DAE0F4B14A2A4CA8C5FAF3D35D320'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.11"
+      },
+      {
+        "ObjectName": "Function'WBP_CoreHUD_EventObjectiveItem_C:Finished_A44075EA40548DBAE9B9AE857CF5C5C6'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.10"
       },
       {
@@ -1284,11 +1361,11 @@
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.6"
       },
       {
-        "ObjectName": "Function'WBP_CoreHUD_EventObjectiveItem_C:SetCooldownPercentage'",
+        "ObjectName": "Function'WBP_CoreHUD_EventObjectiveItem_C:SetChargePercentage'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.5"
       },
       {
-        "ObjectName": "Function'WBP_CoreHUD_EventObjectiveItem_C:SetChargePercentage'",
+        "ObjectName": "Function'WBP_CoreHUD_EventObjectiveItem_C:SetCooldownPercentage'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.4"
       },
       {
@@ -1580,12 +1657,12 @@
         "ObjectName": "Function'WBP_CoreHUD_EventObjectiveItem_C:SetWidgetData'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.3"
       },
-      "SetChargePercentage": {
-        "ObjectName": "Function'WBP_CoreHUD_EventObjectiveItem_C:SetChargePercentage'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.4"
-      },
       "SetCooldownPercentage": {
         "ObjectName": "Function'WBP_CoreHUD_EventObjectiveItem_C:SetCooldownPercentage'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.4"
+      },
+      "SetChargePercentage": {
+        "ObjectName": "Function'WBP_CoreHUD_EventObjectiveItem_C:SetChargePercentage'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.5"
       },
       "Construct": {
@@ -1604,33 +1681,37 @@
         "ObjectName": "Function'WBP_CoreHUD_EventObjectiveItem_C:ClearData'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.9"
       },
+      "Finished_A44075EA40548DBAE9B9AE857CF5C5C6": {
+        "ObjectName": "Function'WBP_CoreHUD_EventObjectiveItem_C:Finished_A44075EA40548DBAE9B9AE857CF5C5C6'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.10"
+      },
       "Finished_4D3DAE0F4B14A2A4CA8C5FAF3D35D320": {
         "ObjectName": "Function'WBP_CoreHUD_EventObjectiveItem_C:Finished_4D3DAE0F4B14A2A4CA8C5FAF3D35D320'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.10"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.11"
       },
       "SetActive": {
         "ObjectName": "Function'WBP_CoreHUD_EventObjectiveItem_C:SetActive'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.11"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.12"
       },
       "SetUsable": {
         "ObjectName": "Function'WBP_CoreHUD_EventObjectiveItem_C:SetUsable'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.12"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.13"
       },
       "SetCooldown": {
         "ObjectName": "Function'WBP_CoreHUD_EventObjectiveItem_C:SetCooldown'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.13"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.14"
       },
       "UpdateCharges": {
         "ObjectName": "Function'WBP_CoreHUD_EventObjectiveItem_C:UpdateCharges'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.14"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.15"
       },
       "SetIconState": {
         "ObjectName": "Function'WBP_CoreHUD_EventObjectiveItem_C:SetIconState'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.15"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.16"
       },
       "ShouldResetGaugePercentage": {
         "ObjectName": "Function'WBP_CoreHUD_EventObjectiveItem_C:ShouldResetGaugePercentage'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.16"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.17"
       }
     },
     "ClassFlags": 10754064,
@@ -1642,7 +1723,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "WBP_CoreHUD_EventObjectiveItem_C'Default__WBP_CoreHUD_EventObjectiveItem_C'",
-      "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.18"
+      "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.19"
     }
   },
   {
@@ -1703,7 +1784,7 @@
       },
       "Slot": {
         "ObjectName": "GridSlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid.GridSlot_8'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.39"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.40"
       },
       "Visibility": "ESlateVisibility::SelfHitTestInvisible"
     }
@@ -1733,7 +1814,7 @@
       },
       "Slot": {
         "ObjectName": "GridSlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid.GridSlot_11'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.32"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.33"
       },
       "Visibility": "ESlateVisibility::SelfHitTestInvisible"
     }
@@ -1756,7 +1837,7 @@
       },
       "Slot": {
         "ObjectName": "GridSlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid.GridSlot_5'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.36"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.37"
       },
       "Visibility": "ESlateVisibility::SelfHitTestInvisible"
     }
@@ -1795,7 +1876,7 @@
       },
       "Slot": {
         "ObjectName": "GridSlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid.GridSlot_6'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.37"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.38"
       },
       "Visibility": "ESlateVisibility::SelfHitTestInvisible"
     }
@@ -1814,7 +1895,7 @@
       },
       "Slot": {
         "ObjectName": "GridSlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid.GridSlot_10'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.31"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.32"
       },
       "RenderTransform": {
         "Scale": {
@@ -1847,7 +1928,7 @@
       },
       "Slot": {
         "ObjectName": "GridSlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid.GridSlot_9'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.40"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.41"
       },
       "Visibility": "ESlateVisibility::SelfHitTestInvisible"
     }
@@ -1879,7 +1960,7 @@
       },
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.ChargesContainer.OverlaySlot_4'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.112"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.113"
       },
       "Visibility": "ESlateVisibility::HitTestInvisible"
     }
@@ -1909,7 +1990,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_2'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.43"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.44"
       },
       "RenderTransform": {
         "Angle": 90.0
@@ -1943,7 +2024,7 @@
       },
       "Slot": {
         "ObjectName": "GridSlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid.GridSlot_3'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.34"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.35"
       }
     }
   },
@@ -1978,7 +2059,7 @@
       },
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.ChargesContainer.OverlaySlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.111"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.112"
       },
       "bIsVariable": true,
       "Visibility": "ESlateVisibility::SelfHitTestInvisible"
@@ -2007,7 +2088,7 @@
       },
       "Slot": {
         "ObjectName": "GridSlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid.GridSlot_7'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.38"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.39"
       },
       "Visibility": "ESlateVisibility::Collapsed"
     }
@@ -2021,48 +2102,48 @@
       "Slots": [
         {
           "ObjectName": "GridSlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid.GridSlot_8'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.39"
-        },
-        {
-          "ObjectName": "GridSlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid.GridSlot_3'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.34"
-        },
-        {
-          "ObjectName": "GridSlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid.GridSlot_9'",
           "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.40"
         },
         {
-          "ObjectName": "GridSlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid.GridSlot_11'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.32"
-        },
-        {
-          "ObjectName": "GridSlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid.GridSlot_5'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.36"
-        },
-        {
-          "ObjectName": "GridSlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid.GridSlot_6'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.37"
-        },
-        {
-          "ObjectName": "GridSlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid.GridSlot_10'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.31"
-        },
-        {
-          "ObjectName": "GridSlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid.GridSlot_2'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.33"
-        },
-        {
-          "ObjectName": "GridSlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid.GridSlot_4'",
+          "ObjectName": "GridSlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid.GridSlot_3'",
           "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.35"
         },
         {
-          "ObjectName": "GridSlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid.GridSlot_7'",
+          "ObjectName": "GridSlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid.GridSlot_9'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.41"
+        },
+        {
+          "ObjectName": "GridSlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid.GridSlot_11'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.33"
+        },
+        {
+          "ObjectName": "GridSlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid.GridSlot_5'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.37"
+        },
+        {
+          "ObjectName": "GridSlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid.GridSlot_6'",
           "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.38"
+        },
+        {
+          "ObjectName": "GridSlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid.GridSlot_10'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.32"
+        },
+        {
+          "ObjectName": "GridSlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid.GridSlot_2'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.34"
+        },
+        {
+          "ObjectName": "GridSlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid.GridSlot_4'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.36"
+        },
+        {
+          "ObjectName": "GridSlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid.GridSlot_7'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.39"
         }
       ],
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.42"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.43"
       },
       "RenderTransform": {
         "Scale": {
@@ -2081,11 +2162,11 @@
       "Layer": 15,
       "Parent": {
         "ObjectName": "GridPanel'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.30"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.31"
       },
       "Content": {
         "ObjectName": "DBDImage'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.EndGameAnim'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.23"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.24"
       }
     }
   },
@@ -2098,11 +2179,11 @@
       "Layer": 2,
       "Parent": {
         "ObjectName": "GridPanel'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.30"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.31"
       },
       "Content": {
         "ObjectName": "DBDImage'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.Border'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.20"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.21"
       }
     }
   },
@@ -2121,11 +2202,11 @@
       },
       "Parent": {
         "ObjectName": "GridPanel'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.30"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.31"
       },
       "Content": {
         "ObjectName": "Overlay'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.ChargesContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.110"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.111"
       }
     }
   },
@@ -2143,11 +2224,11 @@
       },
       "Parent": {
         "ObjectName": "GridPanel'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.30"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.31"
       },
       "Content": {
         "ObjectName": "DBDImage'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.Vignette'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.27"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.28"
       }
     }
   },
@@ -2166,11 +2247,11 @@
       },
       "Parent": {
         "ObjectName": "GridPanel'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.30"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.31"
       },
       "Content": {
         "ObjectName": "WBP_CoreInputPrompt_C'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.InputPrompt'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.113"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.114"
       }
     }
   },
@@ -2189,11 +2270,11 @@
       "Layer": 3,
       "Parent": {
         "ObjectName": "GridPanel'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.30"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.31"
       },
       "Content": {
         "ObjectName": "DBDImage'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.ChargeGauge'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.21"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.22"
       }
     }
   },
@@ -2206,11 +2287,11 @@
       "Layer": 4,
       "Parent": {
         "ObjectName": "GridPanel'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.30"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.31"
       },
       "Content": {
         "ObjectName": "DBDImage'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.CooldownGauge'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.22"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.23"
       }
     }
   },
@@ -2229,11 +2310,11 @@
       "Layer": 10,
       "Parent": {
         "ObjectName": "GridPanel'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.30"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.31"
       },
       "Content": {
         "ObjectName": "FXWidget_C'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.EndGameVFX'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.29"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.30"
       }
     }
   },
@@ -2245,11 +2326,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "GridPanel'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.30"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.31"
       },
       "Content": {
         "ObjectName": "DBDImage'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.Background'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.19"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.20"
       }
     }
   },
@@ -2268,11 +2349,11 @@
       "Layer": 1,
       "Parent": {
         "ObjectName": "GridPanel'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.30"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.31"
       },
       "Content": {
         "ObjectName": "DBDImage'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.Icon'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.24"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.25"
       }
     }
   },
@@ -2285,11 +2366,11 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_2'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.43"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.44"
         },
         {
           "ObjectName": "HorizontalBoxSlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.42"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.43"
         }
       ]
     }
@@ -2302,11 +2383,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "HorizontalBox'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.HorizontalBox_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.41"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.42"
       },
       "Content": {
         "ObjectName": "GridPanel'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.30"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.31"
       }
     }
   },
@@ -2323,11 +2404,11 @@
       "VerticalAlignment": "VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.HorizontalBox_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.41"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.42"
       },
       "Content": {
         "ObjectName": "DBDImage'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.ObjectiveSeparator'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.26"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.27"
       }
     }
   },
@@ -2376,7 +2457,7 @@
           "Tracks": [
             {
               "ObjectName": "MovieSceneWidgetMaterialTrack'WBP_CoreHUD_EventObjectiveItem_C:ChargeInProgress_INST.ChargeInProgress.MovieSceneWidgetMaterialTrack_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.105"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.106"
             }
           ]
         },
@@ -2386,7 +2467,7 @@
           "Tracks": [
             {
               "ObjectName": "MovieSceneWidgetMaterialTrack'WBP_CoreHUD_EventObjectiveItem_C:ChargeInProgress_INST.ChargeInProgress.MovieSceneWidgetMaterialTrack_1'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.106"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.107"
             }
           ]
         },
@@ -2396,7 +2477,7 @@
           "Tracks": [
             {
               "ObjectName": "MovieSceneColorTrack'WBP_CoreHUD_EventObjectiveItem_C:ChargeInProgress_INST.ChargeInProgress.MovieSceneColorTrack_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.81"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.82"
             }
           ]
         }
@@ -2420,7 +2501,7 @@
       "DisplayRate": {
         "Numerator": 20
       },
-      "Signature": "FDFAC8DF-4BB0EDBF-CDE46C84-A5DAE8C3"
+      "Signature": "485A5EC8-456688B8-82E3B5BE-2C1CA681"
     }
   },
   {
@@ -2468,7 +2549,7 @@
           "Tracks": [
             {
               "ObjectName": "MovieSceneWidgetMaterialTrack'WBP_CoreHUD_EventObjectiveItem_C:ChargeMax_INST.ChargeMax.MovieSceneWidgetMaterialTrack_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.107"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.108"
             }
           ]
         },
@@ -2478,7 +2559,7 @@
           "Tracks": [
             {
               "ObjectName": "MovieSceneWidgetMaterialTrack'WBP_CoreHUD_EventObjectiveItem_C:ChargeMax_INST.ChargeMax.MovieSceneWidgetMaterialTrack_1'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.108"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.109"
             }
           ]
         },
@@ -2488,7 +2569,7 @@
           "Tracks": [
             {
               "ObjectName": "MovieSceneColorTrack'WBP_CoreHUD_EventObjectiveItem_C:ChargeMax_INST.ChargeMax.MovieSceneColorTrack_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.82"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.83"
             }
           ]
         }
@@ -2512,7 +2593,7 @@
       "DisplayRate": {
         "Numerator": 20
       },
-      "Signature": "2285E548-44595BBD-573162AF-9E2CFA53"
+      "Signature": "ACB07964-4D500632-4E7809A3-E36D8956"
     }
   },
   {
@@ -2610,7 +2691,7 @@
           "Tracks": [
             {
               "ObjectName": "MovieSceneFloatTrack'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.93"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.94"
             }
           ]
         },
@@ -2620,7 +2701,7 @@
           "Tracks": [
             {
               "ObjectName": "MovieSceneFloatTrack'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_1'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.94"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.95"
             }
           ]
         },
@@ -2630,7 +2711,7 @@
           "Tracks": [
             {
               "ObjectName": "MovieSceneFloatTrack'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_2'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.95"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.96"
             }
           ]
         },
@@ -2640,7 +2721,7 @@
           "Tracks": [
             {
               "ObjectName": "MovieSceneFloatTrack'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_3'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.96"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.97"
             }
           ]
         },
@@ -2650,7 +2731,7 @@
           "Tracks": [
             {
               "ObjectName": "MovieSceneFloatTrack'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_4'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.97"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.98"
             }
           ]
         },
@@ -2660,7 +2741,7 @@
           "Tracks": [
             {
               "ObjectName": "MovieSceneFloatTrack'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_5'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.98"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.99"
             }
           ]
         },
@@ -2670,7 +2751,7 @@
           "Tracks": [
             {
               "ObjectName": "MovieSceneFloatTrack'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_6'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.99"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.100"
             }
           ]
         },
@@ -2680,11 +2761,11 @@
           "Tracks": [
             {
               "ObjectName": "MovieSceneWidgetMaterialTrack'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneWidgetMaterialTrack_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.109"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.110"
             },
             {
               "ObjectName": "MovieSceneByteTrack'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneByteTrack_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.78"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.79"
             }
           ]
         }
@@ -2708,7 +2789,7 @@
       "DisplayRate": {
         "Numerator": 20
       },
-      "Signature": "75754A48-4A40051B-5ECB0787-8BCC7124"
+      "Signature": "752AE843-45FB814F-A4579D81-76D69E34"
     }
   },
   {
@@ -2918,11 +2999,11 @@
       "Easing": {
         "EaseIn": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneByteTrack_0.MovieSceneByteSection_0.EaseInFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.59"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.60"
         },
         "EaseOut": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneByteTrack_0.MovieSceneByteSection_0.EaseOutFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.60"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.61"
         }
       },
       "SectionRange": {
@@ -2941,7 +3022,7 @@
           }
         }
       },
-      "Signature": "5E32666D-48B9810E-912371AA-A1652099"
+      "Signature": "4BD4831E-4C9EF085-6B7F129C-A0653BA7"
     }
   },
   {
@@ -2962,16 +3043,16 @@
       "Sections": [
         {
           "ObjectName": "MovieSceneByteSection'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneByteTrack_0.MovieSceneByteSection_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.77"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.78"
         }
       ],
-      "EvaluationFieldGuid": "B56F200B-49057889-C4FF839C-A702E641",
+      "EvaluationFieldGuid": "457A2A05-4EB36D49-A45024B3-7201788A",
       "EvaluationField": {
         "Entries": [
           {
             "Section": {
               "ObjectName": "MovieSceneByteSection'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneByteTrack_0.MovieSceneByteSection_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.77"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.78"
             },
             "Range": {
               "LowerBound": {
@@ -2995,7 +3076,7 @@
           }
         ]
       },
-      "Signature": "B56F200B-49057889-C4FF839C-A702E641"
+      "Signature": "457A2A05-4EB36D49-A45024B3-7201788A"
     }
   },
   {
@@ -3131,11 +3212,11 @@
       "Easing": {
         "EaseIn": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreHUD_EventObjectiveItem_C:ChargeInProgress_INST.ChargeInProgress.MovieSceneColorTrack_0.MovieSceneColorSection_0.EaseInFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.47"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.48"
         },
         "EaseOut": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreHUD_EventObjectiveItem_C:ChargeInProgress_INST.ChargeInProgress.MovieSceneColorTrack_0.MovieSceneColorSection_0.EaseOutFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.48"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.49"
         }
       },
       "SectionRange": {
@@ -3154,7 +3235,7 @@
           }
         }
       },
-      "Signature": "8A9734D3-441B2D20-E34D8383-2896433C"
+      "Signature": "44645A27-46A053EB-05BB07B5-D8DBD48D"
     }
   },
   {
@@ -3338,11 +3419,11 @@
       "Easing": {
         "EaseIn": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreHUD_EventObjectiveItem_C:ChargeMax_INST.ChargeMax.MovieSceneColorTrack_0.MovieSceneColorSection_0.EaseInFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.53"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.54"
         },
         "EaseOut": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreHUD_EventObjectiveItem_C:ChargeMax_INST.ChargeMax.MovieSceneColorTrack_0.MovieSceneColorSection_0.EaseOutFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.54"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.55"
         }
       },
       "SectionRange": {
@@ -3361,7 +3442,7 @@
           }
         }
       },
-      "Signature": "1131132C-4B0C1F40-EC1C68B5-F48AF242"
+      "Signature": "1CF39069-4C810AEA-19A4CEA9-72B04FE9"
     }
   },
   {
@@ -3378,16 +3459,16 @@
       "Sections": [
         {
           "ObjectName": "MovieSceneColorSection'WBP_CoreHUD_EventObjectiveItem_C:ChargeInProgress_INST.ChargeInProgress.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.79"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.80"
         }
       ],
-      "EvaluationFieldGuid": "D39BC7D6-4B81A71E-47DFEA95-D512F862",
+      "EvaluationFieldGuid": "B5B676C8-4EAEF6BD-751EAEBC-AFA14A64",
       "EvaluationField": {
         "Entries": [
           {
             "Section": {
               "ObjectName": "MovieSceneColorSection'WBP_CoreHUD_EventObjectiveItem_C:ChargeInProgress_INST.ChargeInProgress.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.79"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.80"
             },
             "Range": {
               "LowerBound": {
@@ -3411,7 +3492,7 @@
           }
         ]
       },
-      "Signature": "D39BC7D6-4B81A71E-47DFEA95-D512F862"
+      "Signature": "B5B676C8-4EAEF6BD-751EAEBC-AFA14A64"
     }
   },
   {
@@ -3428,16 +3509,16 @@
       "Sections": [
         {
           "ObjectName": "MovieSceneColorSection'WBP_CoreHUD_EventObjectiveItem_C:ChargeMax_INST.ChargeMax.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.80"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.81"
         }
       ],
-      "EvaluationFieldGuid": "BA94AF38-4D0EEE9D-3A9719A6-516F312A",
+      "EvaluationFieldGuid": "3474E34B-4F4B590D-873714AB-F934C2C3",
       "EvaluationField": {
         "Entries": [
           {
             "Section": {
               "ObjectName": "MovieSceneColorSection'WBP_CoreHUD_EventObjectiveItem_C:ChargeMax_INST.ChargeMax.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.80"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.81"
             },
             "Range": {
               "LowerBound": {
@@ -3461,7 +3542,7 @@
           }
         ]
       },
-      "Signature": "BA94AF38-4D0EEE9D-3A9719A6-516F312A"
+      "Signature": "3474E34B-4F4B590D-873714AB-F934C2C3"
     }
   },
   {
@@ -3482,7 +3563,7 @@
               "EvaluationMethod": "EEvaluationMethod::Static",
               "SourceTrack": {
                 "ObjectName": "MovieSceneWidgetMaterialTrack'WBP_CoreHUD_EventObjectiveItem_C:ChargeInProgress_INST.ChargeInProgress.MovieSceneWidgetMaterialTrack_0'",
-                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.105"
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.106"
               },
               "ChildTemplates": [
                 {
@@ -3701,7 +3782,7 @@
                     "CompletionMode": "EMovieSceneCompletionMode::KeepState",
                     "SourceSectionPtr": {
                       "ObjectName": "MovieSceneParameterSection'WBP_CoreHUD_EventObjectiveItem_C:ChargeInProgress_INST.ChargeInProgress.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0'",
-                      "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.100"
+                      "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.101"
                     }
                   }
                 }
@@ -3726,7 +3807,7 @@
               "EvaluationMethod": "EEvaluationMethod::Static",
               "SourceTrack": {
                 "ObjectName": "MovieSceneWidgetMaterialTrack'WBP_CoreHUD_EventObjectiveItem_C:ChargeInProgress_INST.ChargeInProgress.MovieSceneWidgetMaterialTrack_1'",
-                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.106"
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.107"
               },
               "ChildTemplates": [
                 {
@@ -3907,7 +3988,7 @@
                     "CompletionMode": "EMovieSceneCompletionMode::KeepState",
                     "SourceSectionPtr": {
                       "ObjectName": "MovieSceneParameterSection'WBP_CoreHUD_EventObjectiveItem_C:ChargeInProgress_INST.ChargeInProgress.MovieSceneWidgetMaterialTrack_1.MovieSceneParameterSection_0'",
-                      "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.101"
+                      "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.102"
                     }
                   }
                 }
@@ -3929,13 +4010,13 @@
           },
           "TrackSignatureToTrackIdentifier": [
             {
-              "Key": "D5588D33-457A689D-FD8B1983-C087DC6C",
+              "Key": "C3A75847-46A543B8-7A5783AF-7FC97309",
               "Value": {
                 "Value": 0
               }
             },
             {
-              "Key": "7EEA3145-4AE3D617-E9FE9382-D3084F65",
+              "Key": "A75F1ACC-40B3E4D2-276E9BA3-25A0D4CC",
               "Value": {
                 "Value": 1
               }
@@ -4035,7 +4116,7 @@
             "Key": {
               "EntityOwner": {
                 "ObjectName": "MovieSceneColorSection'WBP_CoreHUD_EventObjectiveItem_C:ChargeInProgress_INST.ChargeInProgress.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
-                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.79"
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.80"
               },
               "EntityID": 0
             },
@@ -4221,7 +4302,7 @@
           "SubFrame": 0.0
         }
       ],
-      "CompiledSignature": "E7D6A83E-49599657-9413DB92-561C0307",
+      "CompiledSignature": "5157F93B-4AEBC3BA-ACD310BB-9C1E0D85",
       "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
       "AccumulatedMask": {
         "bEvaluationTemplate": true,
@@ -4253,7 +4334,7 @@
               "EvaluationMethod": "EEvaluationMethod::Static",
               "SourceTrack": {
                 "ObjectName": "MovieSceneWidgetMaterialTrack'WBP_CoreHUD_EventObjectiveItem_C:ChargeMax_INST.ChargeMax.MovieSceneWidgetMaterialTrack_0'",
-                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.107"
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.108"
               },
               "ChildTemplates": [
                 {
@@ -4622,7 +4703,7 @@
                     "CompletionMode": "EMovieSceneCompletionMode::KeepState",
                     "SourceSectionPtr": {
                       "ObjectName": "MovieSceneParameterSection'WBP_CoreHUD_EventObjectiveItem_C:ChargeMax_INST.ChargeMax.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0'",
-                      "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.102"
+                      "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.103"
                     }
                   }
                 }
@@ -4647,7 +4728,7 @@
               "EvaluationMethod": "EEvaluationMethod::Static",
               "SourceTrack": {
                 "ObjectName": "MovieSceneWidgetMaterialTrack'WBP_CoreHUD_EventObjectiveItem_C:ChargeMax_INST.ChargeMax.MovieSceneWidgetMaterialTrack_1'",
-                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.108"
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.109"
               },
               "ChildTemplates": [
                 {
@@ -4876,7 +4957,7 @@
                     "CompletionMode": "EMovieSceneCompletionMode::KeepState",
                     "SourceSectionPtr": {
                       "ObjectName": "MovieSceneParameterSection'WBP_CoreHUD_EventObjectiveItem_C:ChargeMax_INST.ChargeMax.MovieSceneWidgetMaterialTrack_1.MovieSceneParameterSection_0'",
-                      "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.103"
+                      "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.104"
                     }
                   }
                 }
@@ -4898,13 +4979,13 @@
           },
           "TrackSignatureToTrackIdentifier": [
             {
-              "Key": "AB663C00-4EE52B26-3154938A-F123F819",
+              "Key": "8714E718-44E7233B-7061C1AD-63C791A6",
               "Value": {
                 "Value": 0
               }
             },
             {
-              "Key": "A9711C93-48A53DA5-7B3DB7AD-E90EF926",
+              "Key": "C4188AEE-4EB203F6-3A42809C-7BC21AD5",
               "Value": {
                 "Value": 1
               }
@@ -5004,7 +5085,7 @@
             "Key": {
               "EntityOwner": {
                 "ObjectName": "MovieSceneColorSection'WBP_CoreHUD_EventObjectiveItem_C:ChargeMax_INST.ChargeMax.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
-                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.80"
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.81"
               },
               "EntityID": 0
             },
@@ -5196,7 +5277,7 @@
           "SubFrame": 0.0
         }
       ],
-      "CompiledSignature": "038E908E-455289B4-29B56FBE-F7E3E9E0",
+      "CompiledSignature": "767E2DD0-4E600992-118C65AB-FD71FD89",
       "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
       "AccumulatedMask": {
         "bEvaluationTemplate": true,
@@ -5228,7 +5309,7 @@
               "EvaluationMethod": "EEvaluationMethod::Static",
               "SourceTrack": {
                 "ObjectName": "MovieSceneWidgetMaterialTrack'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneWidgetMaterialTrack_0'",
-                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.109"
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.110"
               },
               "ChildTemplates": [
                 {
@@ -5543,7 +5624,7 @@
                     "CompletionMode": "EMovieSceneCompletionMode::KeepState",
                     "SourceSectionPtr": {
                       "ObjectName": "MovieSceneParameterSection'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0'",
-                      "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.104"
+                      "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.105"
                     }
                   }
                 }
@@ -5565,7 +5646,7 @@
           },
           "TrackSignatureToTrackIdentifier": [
             {
-              "Key": "AF136059-41B0FC09-E22325A4-FDA76A39",
+              "Key": "141C1453-41DA998B-88BC0897-1C071C93",
               "Value": {
                 "Value": 0
               }
@@ -5775,7 +5856,7 @@
             "Key": {
               "EntityOwner": {
                 "ObjectName": "MovieSceneFloatSection'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
-                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.86"
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.87"
               },
               "EntityID": 0
             },
@@ -5785,7 +5866,7 @@
             "Key": {
               "EntityOwner": {
                 "ObjectName": "MovieSceneFloatSection'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
-                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.87"
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.88"
               },
               "EntityID": 0
             },
@@ -5795,7 +5876,7 @@
             "Key": {
               "EntityOwner": {
                 "ObjectName": "MovieSceneFloatSection'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
-                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.88"
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.89"
               },
               "EntityID": 0
             },
@@ -5805,7 +5886,7 @@
             "Key": {
               "EntityOwner": {
                 "ObjectName": "MovieSceneFloatSection'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_3.MovieSceneFloatSection_0'",
-                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.89"
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.90"
               },
               "EntityID": 0
             },
@@ -5815,7 +5896,7 @@
             "Key": {
               "EntityOwner": {
                 "ObjectName": "MovieSceneFloatSection'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_4.MovieSceneFloatSection_0'",
-                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.90"
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.91"
               },
               "EntityID": 0
             },
@@ -5825,7 +5906,7 @@
             "Key": {
               "EntityOwner": {
                 "ObjectName": "MovieSceneFloatSection'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_5.MovieSceneFloatSection_0'",
-                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.91"
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.92"
               },
               "EntityID": 0
             },
@@ -5835,7 +5916,7 @@
             "Key": {
               "EntityOwner": {
                 "ObjectName": "MovieSceneFloatSection'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_6.MovieSceneFloatSection_0'",
-                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.92"
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.93"
               },
               "EntityID": 0
             },
@@ -5845,7 +5926,7 @@
             "Key": {
               "EntityOwner": {
                 "ObjectName": "MovieSceneByteSection'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneByteTrack_0.MovieSceneByteSection_0'",
-                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.77"
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.78"
               },
               "EntityID": 0
             },
@@ -6033,7 +6114,7 @@
           "SubFrame": 0.0
         }
       ],
-      "CompiledSignature": "6C690C16-43C121C1-486BC8A0-36216D1B",
+      "CompiledSignature": "30A2AF18-4AE56063-2EF76F88-FB209206",
       "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
       "AccumulatedMask": {
         "bEvaluationTemplate": true,
@@ -6103,11 +6184,11 @@
       "Easing": {
         "EaseIn": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.61"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.62"
         },
         "EaseOut": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.62"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.63"
         }
       },
       "SectionRange": {
@@ -6126,7 +6207,7 @@
           }
         }
       },
-      "Signature": "48163946-410300E1-C8479480-FFDE73C9"
+      "Signature": "B3167537-462F4289-50B5FB87-EB973B35"
     }
   },
   {
@@ -6185,11 +6266,11 @@
       "Easing": {
         "EaseIn": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_1.MovieSceneFloatSection_0.EaseInFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.63"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.64"
         },
         "EaseOut": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_1.MovieSceneFloatSection_0.EaseOutFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.64"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.65"
         }
       },
       "SectionRange": {
@@ -6208,7 +6289,7 @@
           }
         }
       },
-      "Signature": "442836DF-446C3D34-44C1F289-5E048DCD"
+      "Signature": "386BF4F9-480DAE66-6F55FD90-504D727B"
     }
   },
   {
@@ -6267,11 +6348,11 @@
       "Easing": {
         "EaseIn": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_2.MovieSceneFloatSection_0.EaseInFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.65"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.66"
         },
         "EaseOut": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_2.MovieSceneFloatSection_0.EaseOutFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.66"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.67"
         }
       },
       "SectionRange": {
@@ -6290,7 +6371,7 @@
           }
         }
       },
-      "Signature": "11353395-4057F568-C462D293-2D09354B"
+      "Signature": "2C1224D9-43FC1A36-3E5CA7A8-308F41E7"
     }
   },
   {
@@ -6349,11 +6430,11 @@
       "Easing": {
         "EaseIn": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_3.MovieSceneFloatSection_0.EaseInFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.67"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.68"
         },
         "EaseOut": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_3.MovieSceneFloatSection_0.EaseOutFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.68"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.69"
         }
       },
       "SectionRange": {
@@ -6372,7 +6453,7 @@
           }
         }
       },
-      "Signature": "61EFF998-4240973B-82105589-B6F0D12C"
+      "Signature": "F872819C-4A4A9FC1-F3E4079E-5D46BB13"
     }
   },
   {
@@ -6431,11 +6512,11 @@
       "Easing": {
         "EaseIn": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_4.MovieSceneFloatSection_0.EaseInFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.69"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.70"
         },
         "EaseOut": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_4.MovieSceneFloatSection_0.EaseOutFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.70"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.71"
         }
       },
       "SectionRange": {
@@ -6454,7 +6535,7 @@
           }
         }
       },
-      "Signature": "44243593-4BCC099F-DD70DB8C-3259764A"
+      "Signature": "81EA1E6D-47BED793-1218E0B3-7625C278"
     }
   },
   {
@@ -6513,11 +6594,11 @@
       "Easing": {
         "EaseIn": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_5.MovieSceneFloatSection_0.EaseInFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.71"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.72"
         },
         "EaseOut": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_5.MovieSceneFloatSection_0.EaseOutFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.72"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.73"
         }
       },
       "SectionRange": {
@@ -6536,7 +6617,7 @@
           }
         }
       },
-      "Signature": "F6AE3138-4C63FE5B-BA47C0A4-1712396F"
+      "Signature": "5FE07C00-47904DA3-7FC69793-54BB352A"
     }
   },
   {
@@ -6595,11 +6676,11 @@
       "Easing": {
         "EaseIn": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_6.MovieSceneFloatSection_0.EaseInFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.73"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.74"
         },
         "EaseOut": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_6.MovieSceneFloatSection_0.EaseOutFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.74"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.75"
         }
       },
       "SectionRange": {
@@ -6618,7 +6699,7 @@
           }
         }
       },
-      "Signature": "0471834D-47A86DCA-7013E493-5E765B70"
+      "Signature": "1C4EC749-40A393EA-D111D59F-442B84C9"
     }
   },
   {
@@ -6635,16 +6716,16 @@
       "Sections": [
         {
           "ObjectName": "MovieSceneFloatSection'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.86"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.87"
         }
       ],
-      "EvaluationFieldGuid": "2501B8FD-4DCEBB63-43E3C9B1-713DB438",
+      "EvaluationFieldGuid": "330F3AF7-4FB8E589-C7F09A8A-B77FA1BE",
       "EvaluationField": {
         "Entries": [
           {
             "Section": {
               "ObjectName": "MovieSceneFloatSection'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.86"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.87"
             },
             "Range": {
               "LowerBound": {
@@ -6668,7 +6749,7 @@
           }
         ]
       },
-      "Signature": "2501B8FD-4DCEBB63-43E3C9B1-713DB438"
+      "Signature": "330F3AF7-4FB8E589-C7F09A8A-B77FA1BE"
     }
   },
   {
@@ -6685,16 +6766,16 @@
       "Sections": [
         {
           "ObjectName": "MovieSceneFloatSection'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.87"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.88"
         }
       ],
-      "EvaluationFieldGuid": "D23EAE2B-44038BB4-0B10E1AE-E8081015",
+      "EvaluationFieldGuid": "FE9ACAB7-492B0FC9-C5C985AD-203AE71C",
       "EvaluationField": {
         "Entries": [
           {
             "Section": {
               "ObjectName": "MovieSceneFloatSection'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.87"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.88"
             },
             "Range": {
               "LowerBound": {
@@ -6718,7 +6799,7 @@
           }
         ]
       },
-      "Signature": "D23EAE2B-44038BB4-0B10E1AE-E8081015"
+      "Signature": "FE9ACAB7-492B0FC9-C5C985AD-203AE71C"
     }
   },
   {
@@ -6735,65 +6816,15 @@
       "Sections": [
         {
           "ObjectName": "MovieSceneFloatSection'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.88"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.89"
         }
       ],
-      "EvaluationFieldGuid": "D3D4BAAD-469F8A76-FD4C759C-DD6B2F2B",
+      "EvaluationFieldGuid": "0F8C8E44-47849A8F-78B91BB3-42C8D064",
       "EvaluationField": {
         "Entries": [
           {
             "Section": {
               "ObjectName": "MovieSceneFloatSection'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.88"
-            },
-            "Range": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": {
-                  "Value": 0
-                }
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": {
-                  "Value": 30002
-                }
-              }
-            },
-            "ForcedTime": {
-              "Value": -2147483648
-            },
-            "Flags": "ESectionEvaluationFlags::None",
-            "LegacySortOrder": 0
-          }
-        ]
-      },
-      "Signature": "D3D4BAAD-469F8A76-FD4C759C-DD6B2F2B"
-    }
-  },
-  {
-    "Type": "MovieSceneFloatTrack",
-    "Name": "MovieSceneFloatTrack_3",
-    "Outer": "EndGameReward",
-    "Class": "UScriptClass'MovieSceneFloatTrack'",
-    "Properties": {
-      "PropertyBinding": {
-        "PropertyName": "RenderOpacity",
-        "PropertyPath": "RenderOpacity",
-        "bCanUseClassLookup": true
-      },
-      "Sections": [
-        {
-          "ObjectName": "MovieSceneFloatSection'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_3.MovieSceneFloatSection_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.89"
-        }
-      ],
-      "EvaluationFieldGuid": "AB6BB1EE-44D5D04F-D9493EBB-966F31ED",
-      "EvaluationField": {
-        "Entries": [
-          {
-            "Section": {
-              "ObjectName": "MovieSceneFloatSection'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_3.MovieSceneFloatSection_0'",
               "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.89"
             },
             "Range": {
@@ -6818,12 +6849,12 @@
           }
         ]
       },
-      "Signature": "AB6BB1EE-44D5D04F-D9493EBB-966F31ED"
+      "Signature": "0F8C8E44-47849A8F-78B91BB3-42C8D064"
     }
   },
   {
     "Type": "MovieSceneFloatTrack",
-    "Name": "MovieSceneFloatTrack_4",
+    "Name": "MovieSceneFloatTrack_3",
     "Outer": "EndGameReward",
     "Class": "UScriptClass'MovieSceneFloatTrack'",
     "Properties": {
@@ -6834,16 +6865,16 @@
       },
       "Sections": [
         {
-          "ObjectName": "MovieSceneFloatSection'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_4.MovieSceneFloatSection_0'",
+          "ObjectName": "MovieSceneFloatSection'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_3.MovieSceneFloatSection_0'",
           "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.90"
         }
       ],
-      "EvaluationFieldGuid": "FC73A2C4-4F0C8EAC-2F15C386-E8B26BE8",
+      "EvaluationFieldGuid": "8FF898C4-4E2BEF67-CD3B10A9-366E0660",
       "EvaluationField": {
         "Entries": [
           {
             "Section": {
-              "ObjectName": "MovieSceneFloatSection'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_4.MovieSceneFloatSection_0'",
+              "ObjectName": "MovieSceneFloatSection'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_3.MovieSceneFloatSection_0'",
               "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.90"
             },
             "Range": {
@@ -6868,12 +6899,12 @@
           }
         ]
       },
-      "Signature": "FC73A2C4-4F0C8EAC-2F15C386-E8B26BE8"
+      "Signature": "8FF898C4-4E2BEF67-CD3B10A9-366E0660"
     }
   },
   {
     "Type": "MovieSceneFloatTrack",
-    "Name": "MovieSceneFloatTrack_5",
+    "Name": "MovieSceneFloatTrack_4",
     "Outer": "EndGameReward",
     "Class": "UScriptClass'MovieSceneFloatTrack'",
     "Properties": {
@@ -6884,16 +6915,16 @@
       },
       "Sections": [
         {
-          "ObjectName": "MovieSceneFloatSection'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_5.MovieSceneFloatSection_0'",
+          "ObjectName": "MovieSceneFloatSection'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_4.MovieSceneFloatSection_0'",
           "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.91"
         }
       ],
-      "EvaluationFieldGuid": "B67AE347-45C4BE1B-80459184-4E23057A",
+      "EvaluationFieldGuid": "A5E41AA1-497EDE40-7D612AB8-7D5AE518",
       "EvaluationField": {
         "Entries": [
           {
             "Section": {
-              "ObjectName": "MovieSceneFloatSection'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_5.MovieSceneFloatSection_0'",
+              "ObjectName": "MovieSceneFloatSection'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_4.MovieSceneFloatSection_0'",
               "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.91"
             },
             "Range": {
@@ -6918,7 +6949,57 @@
           }
         ]
       },
-      "Signature": "B67AE347-45C4BE1B-80459184-4E23057A"
+      "Signature": "A5E41AA1-497EDE40-7D612AB8-7D5AE518"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_5",
+    "Outer": "EndGameReward",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_5.MovieSceneFloatSection_0'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.92"
+        }
+      ],
+      "EvaluationFieldGuid": "587E5A6F-48764C3A-0BC45BA7-BBA3BD5E",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_5.MovieSceneFloatSection_0'",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.92"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 30002
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "587E5A6F-48764C3A-0BC45BA7-BBA3BD5E"
     }
   },
   {
@@ -6935,16 +7016,16 @@
       "Sections": [
         {
           "ObjectName": "MovieSceneFloatSection'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_6.MovieSceneFloatSection_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.92"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.93"
         }
       ],
-      "EvaluationFieldGuid": "EBBC0469-4A26AC42-D3195E81-83927B75",
+      "EvaluationFieldGuid": "F29201B3-40DFC15F-E2C522A4-F2A2DF8E",
       "EvaluationField": {
         "Entries": [
           {
             "Section": {
               "ObjectName": "MovieSceneFloatSection'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneFloatTrack_6.MovieSceneFloatSection_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.92"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.93"
             },
             "Range": {
               "LowerBound": {
@@ -6968,7 +7049,7 @@
           }
         ]
       },
-      "Signature": "EBBC0469-4A26AC42-D3195E81-83927B75"
+      "Signature": "F29201B3-40DFC15F-E2C522A4-F2A2DF8E"
     }
   },
   {
@@ -7182,11 +7263,11 @@
       "Easing": {
         "EaseIn": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreHUD_EventObjectiveItem_C:ChargeInProgress_INST.ChargeInProgress.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0.EaseInFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.49"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.50"
         },
         "EaseOut": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreHUD_EventObjectiveItem_C:ChargeInProgress_INST.ChargeInProgress.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0.EaseOutFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.50"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.51"
         }
       },
       "SectionRange": {
@@ -7205,7 +7286,7 @@
           }
         }
       },
-      "Signature": "0B00AE05-44E9265B-1E8C8DBE-7E3FE5C9"
+      "Signature": "70E3971A-4ADCEBC5-C22F519F-8E3BE1AE"
     }
   },
   {
@@ -7382,11 +7463,11 @@
       "Easing": {
         "EaseIn": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreHUD_EventObjectiveItem_C:ChargeInProgress_INST.ChargeInProgress.MovieSceneWidgetMaterialTrack_1.MovieSceneParameterSection_0.EaseInFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.51"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.52"
         },
         "EaseOut": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreHUD_EventObjectiveItem_C:ChargeInProgress_INST.ChargeInProgress.MovieSceneWidgetMaterialTrack_1.MovieSceneParameterSection_0.EaseOutFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.52"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.53"
         }
       },
       "SectionRange": {
@@ -7405,7 +7486,7 @@
           }
         }
       },
-      "Signature": "C6903342-4B56FA5C-1E3D1196-DDBAE660"
+      "Signature": "72547569-40C99BEA-292FA7AF-9CB56BDD"
     }
   },
   {
@@ -7769,11 +7850,11 @@
       "Easing": {
         "EaseIn": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreHUD_EventObjectiveItem_C:ChargeMax_INST.ChargeMax.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0.EaseInFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.55"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.56"
         },
         "EaseOut": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreHUD_EventObjectiveItem_C:ChargeMax_INST.ChargeMax.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0.EaseOutFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.56"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.57"
         }
       },
       "SectionRange": {
@@ -7792,7 +7873,7 @@
           }
         }
       },
-      "Signature": "ECD00468-49AB2A64-902E9DA3-BA3BAC2D"
+      "Signature": "6975F4A8-461032A3-543C77AC-84B623CF"
     }
   },
   {
@@ -8017,11 +8098,11 @@
       "Easing": {
         "EaseIn": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreHUD_EventObjectiveItem_C:ChargeMax_INST.ChargeMax.MovieSceneWidgetMaterialTrack_1.MovieSceneParameterSection_0.EaseInFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.57"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.58"
         },
         "EaseOut": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreHUD_EventObjectiveItem_C:ChargeMax_INST.ChargeMax.MovieSceneWidgetMaterialTrack_1.MovieSceneParameterSection_0.EaseOutFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.58"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.59"
         }
       },
       "SectionRange": {
@@ -8040,7 +8121,7 @@
           }
         }
       },
-      "Signature": "5C330E91-404542A7-2FFAE080-632C8DCC"
+      "Signature": "3AF14331-49A02237-9F3069B2-97C8B4B6"
     }
   },
   {
@@ -8350,11 +8431,11 @@
       "Easing": {
         "EaseIn": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0.EaseInFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.75"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.76"
         },
         "EaseOut": {
           "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0.EaseOutFunction'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.76"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.77"
         }
       },
       "SectionRange": {
@@ -8373,7 +8454,7 @@
           }
         }
       },
-      "Signature": "DBAD1233-4F93BE09-AF97BB93-54FA71D1"
+      "Signature": "9E8F7326-451BFAF4-65D6559B-133ACAE5"
     }
   },
   {
@@ -8389,64 +8470,15 @@
       "Sections": [
         {
           "ObjectName": "MovieSceneParameterSection'WBP_CoreHUD_EventObjectiveItem_C:ChargeInProgress_INST.ChargeInProgress.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.100"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.101"
         }
       ],
-      "EvaluationFieldGuid": "D5588D33-457A689D-FD8B1983-C087DC6C",
+      "EvaluationFieldGuid": "C3A75847-46A543B8-7A5783AF-7FC97309",
       "EvaluationField": {
         "Entries": [
           {
             "Section": {
               "ObjectName": "MovieSceneParameterSection'WBP_CoreHUD_EventObjectiveItem_C:ChargeInProgress_INST.ChargeInProgress.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.100"
-            },
-            "Range": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": {
-                  "Value": 0
-                }
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Exclusive",
-                "Value": {
-                  "Value": 15000
-                }
-              }
-            },
-            "ForcedTime": {
-              "Value": -2147483648
-            },
-            "Flags": "ESectionEvaluationFlags::None",
-            "LegacySortOrder": 0
-          }
-        ]
-      },
-      "Signature": "D5588D33-457A689D-FD8B1983-C087DC6C"
-    }
-  },
-  {
-    "Type": "MovieSceneWidgetMaterialTrack",
-    "Name": "MovieSceneWidgetMaterialTrack_1",
-    "Outer": "ChargeInProgress",
-    "Class": "UScriptClass'MovieSceneWidgetMaterialTrack'",
-    "Properties": {
-      "BrushPropertyNamePath": [
-        "Brush"
-      ],
-      "TrackName": "Brush",
-      "Sections": [
-        {
-          "ObjectName": "MovieSceneParameterSection'WBP_CoreHUD_EventObjectiveItem_C:ChargeInProgress_INST.ChargeInProgress.MovieSceneWidgetMaterialTrack_1.MovieSceneParameterSection_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.101"
-        }
-      ],
-      "EvaluationFieldGuid": "7EEA3145-4AE3D617-E9FE9382-D3084F65",
-      "EvaluationField": {
-        "Entries": [
-          {
-            "Section": {
-              "ObjectName": "MovieSceneParameterSection'WBP_CoreHUD_EventObjectiveItem_C:ChargeInProgress_INST.ChargeInProgress.MovieSceneWidgetMaterialTrack_1.MovieSceneParameterSection_0'",
               "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.101"
             },
             "Range": {
@@ -8471,7 +8503,56 @@
           }
         ]
       },
-      "Signature": "7EEA3145-4AE3D617-E9FE9382-D3084F65"
+      "Signature": "C3A75847-46A543B8-7A5783AF-7FC97309"
+    }
+  },
+  {
+    "Type": "MovieSceneWidgetMaterialTrack",
+    "Name": "MovieSceneWidgetMaterialTrack_1",
+    "Outer": "ChargeInProgress",
+    "Class": "UScriptClass'MovieSceneWidgetMaterialTrack'",
+    "Properties": {
+      "BrushPropertyNamePath": [
+        "Brush"
+      ],
+      "TrackName": "Brush",
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneParameterSection'WBP_CoreHUD_EventObjectiveItem_C:ChargeInProgress_INST.ChargeInProgress.MovieSceneWidgetMaterialTrack_1.MovieSceneParameterSection_0'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.102"
+        }
+      ],
+      "EvaluationFieldGuid": "A75F1ACC-40B3E4D2-276E9BA3-25A0D4CC",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneParameterSection'WBP_CoreHUD_EventObjectiveItem_C:ChargeInProgress_INST.ChargeInProgress.MovieSceneWidgetMaterialTrack_1.MovieSceneParameterSection_0'",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.102"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 15000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "A75F1ACC-40B3E4D2-276E9BA3-25A0D4CC"
     }
   },
   {
@@ -8487,64 +8568,15 @@
       "Sections": [
         {
           "ObjectName": "MovieSceneParameterSection'WBP_CoreHUD_EventObjectiveItem_C:ChargeMax_INST.ChargeMax.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.102"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.103"
         }
       ],
-      "EvaluationFieldGuid": "AB663C00-4EE52B26-3154938A-F123F819",
+      "EvaluationFieldGuid": "8714E718-44E7233B-7061C1AD-63C791A6",
       "EvaluationField": {
         "Entries": [
           {
             "Section": {
               "ObjectName": "MovieSceneParameterSection'WBP_CoreHUD_EventObjectiveItem_C:ChargeMax_INST.ChargeMax.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.102"
-            },
-            "Range": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": {
-                  "Value": 0
-                }
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": {
-                  "Value": 45000
-                }
-              }
-            },
-            "ForcedTime": {
-              "Value": -2147483648
-            },
-            "Flags": "ESectionEvaluationFlags::None",
-            "LegacySortOrder": 0
-          }
-        ]
-      },
-      "Signature": "AB663C00-4EE52B26-3154938A-F123F819"
-    }
-  },
-  {
-    "Type": "MovieSceneWidgetMaterialTrack",
-    "Name": "MovieSceneWidgetMaterialTrack_1",
-    "Outer": "ChargeMax",
-    "Class": "UScriptClass'MovieSceneWidgetMaterialTrack'",
-    "Properties": {
-      "BrushPropertyNamePath": [
-        "Brush"
-      ],
-      "TrackName": "Brush",
-      "Sections": [
-        {
-          "ObjectName": "MovieSceneParameterSection'WBP_CoreHUD_EventObjectiveItem_C:ChargeMax_INST.ChargeMax.MovieSceneWidgetMaterialTrack_1.MovieSceneParameterSection_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.103"
-        }
-      ],
-      "EvaluationFieldGuid": "A9711C93-48A53DA5-7B3DB7AD-E90EF926",
-      "EvaluationField": {
-        "Entries": [
-          {
-            "Section": {
-              "ObjectName": "MovieSceneParameterSection'WBP_CoreHUD_EventObjectiveItem_C:ChargeMax_INST.ChargeMax.MovieSceneWidgetMaterialTrack_1.MovieSceneParameterSection_0'",
               "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.103"
             },
             "Range": {
@@ -8569,7 +8601,56 @@
           }
         ]
       },
-      "Signature": "A9711C93-48A53DA5-7B3DB7AD-E90EF926"
+      "Signature": "8714E718-44E7233B-7061C1AD-63C791A6"
+    }
+  },
+  {
+    "Type": "MovieSceneWidgetMaterialTrack",
+    "Name": "MovieSceneWidgetMaterialTrack_1",
+    "Outer": "ChargeMax",
+    "Class": "UScriptClass'MovieSceneWidgetMaterialTrack'",
+    "Properties": {
+      "BrushPropertyNamePath": [
+        "Brush"
+      ],
+      "TrackName": "Brush",
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneParameterSection'WBP_CoreHUD_EventObjectiveItem_C:ChargeMax_INST.ChargeMax.MovieSceneWidgetMaterialTrack_1.MovieSceneParameterSection_0'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.104"
+        }
+      ],
+      "EvaluationFieldGuid": "C4188AEE-4EB203F6-3A42809C-7BC21AD5",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneParameterSection'WBP_CoreHUD_EventObjectiveItem_C:ChargeMax_INST.ChargeMax.MovieSceneWidgetMaterialTrack_1.MovieSceneParameterSection_0'",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.104"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 45000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "C4188AEE-4EB203F6-3A42809C-7BC21AD5"
     }
   },
   {
@@ -8585,16 +8666,16 @@
       "Sections": [
         {
           "ObjectName": "MovieSceneParameterSection'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.104"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.105"
         }
       ],
-      "EvaluationFieldGuid": "AF136059-41B0FC09-E22325A4-FDA76A39",
+      "EvaluationFieldGuid": "141C1453-41DA998B-88BC0897-1C071C93",
       "EvaluationField": {
         "Entries": [
           {
             "Section": {
               "ObjectName": "MovieSceneParameterSection'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0'",
-              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.104"
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.105"
             },
             "Range": {
               "LowerBound": {
@@ -8618,7 +8699,7 @@
           }
         ]
       },
-      "Signature": "AF136059-41B0FC09-E22325A4-FDA76A39"
+      "Signature": "141C1453-41DA998B-88BC0897-1C071C93"
     }
   },
   {
@@ -8630,16 +8711,16 @@
       "Slots": [
         {
           "ObjectName": "OverlaySlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.ChargesContainer.OverlaySlot_4'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.112"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.113"
         },
         {
           "ObjectName": "OverlaySlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.ChargesContainer.OverlaySlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.111"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.112"
         }
       ],
       "Slot": {
         "ObjectName": "GridSlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid.GridSlot_2'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.33"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.34"
       },
       "bIsVariable": true
     }
@@ -8654,11 +8735,11 @@
       "VerticalAlignment": "VAlign_Center",
       "Parent": {
         "ObjectName": "Overlay'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.ChargesContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.110"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.111"
       },
       "Content": {
         "ObjectName": "DBDTextBlock'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.TextChargeCount'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.28"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.29"
       }
     }
   },
@@ -8671,11 +8752,11 @@
       "HorizontalAlignment": "HAlign_Right",
       "Parent": {
         "ObjectName": "Overlay'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.ChargesContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.110"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.111"
       },
       "Content": {
         "ObjectName": "DBDImage'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.ImageChargesBG'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.25"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.26"
       }
     }
   },
@@ -8689,7 +8770,7 @@
       "IsPromptFound": true,
       "Slot": {
         "ObjectName": "GridSlot'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.coreItemGrid.GridSlot_4'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.35"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.36"
       }
     }
   },
@@ -8701,7 +8782,7 @@
     "Properties": {
       "MovieScene": {
         "ObjectName": "MovieScene'WBP_CoreHUD_EventObjectiveItem_C:ChargeInProgress_INST.ChargeInProgress'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.44"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.45"
       },
       "AnimationBindings": [
         {
@@ -8726,9 +8807,9 @@
       "DisplayLabel": "ChargeInProgress",
       "CompiledData": {
         "ObjectName": "MovieSceneCompiledData'WBP_CoreHUD_EventObjectiveItem_C:ChargeInProgress_INST.CompiledData'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.83"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.84"
       },
-      "Signature": "E7D6A83E-49599657-9413DB92-561C0307"
+      "Signature": "5157F93B-4AEBC3BA-ACD310BB-9C1E0D85"
     }
   },
   {
@@ -8739,7 +8820,7 @@
     "Properties": {
       "MovieScene": {
         "ObjectName": "MovieScene'WBP_CoreHUD_EventObjectiveItem_C:ChargeMax_INST.ChargeMax'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.45"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.46"
       },
       "AnimationBindings": [
         {
@@ -8764,9 +8845,9 @@
       "DisplayLabel": "ChargeMax",
       "CompiledData": {
         "ObjectName": "MovieSceneCompiledData'WBP_CoreHUD_EventObjectiveItem_C:ChargeMax_INST.CompiledData'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.84"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.85"
       },
-      "Signature": "038E908E-455289B4-29B56FBE-F7E3E9E0"
+      "Signature": "767E2DD0-4E600992-118C65AB-FD71FD89"
     }
   },
   {
@@ -8777,7 +8858,7 @@
     "Properties": {
       "MovieScene": {
         "ObjectName": "MovieScene'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.EndGameReward'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.46"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.47"
       },
       "AnimationBindings": [
         {
@@ -8832,9 +8913,9 @@
       "DisplayLabel": "EndGameReward",
       "CompiledData": {
         "ObjectName": "MovieSceneCompiledData'WBP_CoreHUD_EventObjectiveItem_C:EndGameReward_INST.CompiledData'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.85"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.86"
       },
-      "Signature": "6C690C16-43C121C1-486BC8A0-36216D1B"
+      "Signature": "30A2AF18-4AE56063-2EF76F88-FB209206"
     }
   },
   {
@@ -8845,7 +8926,7 @@
     "Properties": {
       "RootWidget": {
         "ObjectName": "HorizontalBox'WBP_CoreHUD_EventObjectiveItem_C:WidgetTree.HorizontalBox_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.41"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/HUD/Objectives/WBP_CoreHUD_EventObjectiveItem.42"
       }
     }
   }
