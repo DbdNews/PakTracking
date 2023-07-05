@@ -1,25 +1,180 @@
 [
   {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_HOS_Window_A_Moving_01",
+    "Outer": "BP_HOS_Window_A_Moving_01_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "Temp_struct_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "Temp_struct_Variable",
+          "Flags": "RF_Public",
+          "ElementSize": 56,
+          "Struct": {
+            "ObjectName": "ScriptStruct'AkExternalSourceInfo'",
+            "ObjectPath": "/Script/AkAudio"
+          }
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'OnAkBankCallback__DelegateSignature'",
+          "ObjectPath": "/Script/AkAudio"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "Temp_delegate_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "PropertyFlags": "ConstParm",
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'OnAkPostEventCallback__DelegateSignature'",
+          "ObjectPath": "/Script/AkAudio"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_PostAssociatedAkEvent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_CustomEvent_Result",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'EAkResult'",
+          "ObjectPath": "/Script/AkAudio"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": 8421377
+  },
+  {
+    "Type": "Function",
+    "Name": "Start Sound",
+    "Outer": "BP_HOS_Window_A_Moving_01_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "Result",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Enum'EAkResult'",
+          "ObjectPath": "/Script/AkAudio"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BP_HOS_Window_A_Moving_01_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": 134744064
+  },
+  {
     "Type": "BlueprintGeneratedClass",
     "Name": "BP_HOS_Window_A_Moving_01_C",
     "Class": "UScriptClass'BlueprintGeneratedClass'",
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BP_HOS_Window_A_Moving_01_C:SimpleConstructionScript_0'",
-        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.15"
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.17"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_HOS_Window_A_Moving_01_C:ExecuteUbergraph_BP_HOS_Window_A_Moving_01'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.0"
       }
     },
     "SuperStruct": {
       "ObjectName": "Class'Actor'",
       "ObjectPath": "/Script/Engine"
     },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_HOS_Window_A_Moving_01_C:ReceiveBeginPlay'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.2"
+      },
+      {
+        "ObjectName": "Function'BP_HOS_Window_A_Moving_01_C:Start Sound'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.1"
+      },
+      {
+        "ObjectName": "Function'BP_HOS_Window_A_Moving_01_C:ExecuteUbergraph_BP_HOS_Window_A_Moving_01'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.0"
+      }
+    ],
     "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Ak_Audio_Emt_Window",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'AkComponent'",
+          "ObjectPath": "/Script/AkAudio"
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "SkeletalMeshComponent",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
-        "PropertyFlags": 17180393476,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
         "PropertyClass": {
           "ObjectName": "Class'DBDSkeletalMeshComponentBudgeted'",
           "ObjectPath": "/Script/DBDAnimationBudgetAllocator"
@@ -27,21 +182,10 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "Audio_T07_OBJ_Window",
-        "Flags": 2097153,
-        "ElementSize": 8,
-        "PropertyFlags": 17180393476,
-        "PropertyClass": {
-          "ObjectName": "Class'ChildActorComponent'",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
         "Name": "SleepingSkinnedMeshRegisterer",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
-        "PropertyFlags": 17180393476,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
         "PropertyClass": {
           "ObjectName": "Class'SleepingSkinnedMeshRegisterer'",
           "ObjectPath": "/Script/AnimationUtilities"
@@ -50,9 +194,9 @@
       {
         "Type": "ObjectProperty",
         "Name": "Hos_Window01_ShadowCaster",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
-        "PropertyFlags": 17180393476,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
         "PropertyClass": {
           "ObjectName": "Class'StaticMeshComponent'",
           "ObjectPath": "/Script/Engine"
@@ -61,9 +205,9 @@
       {
         "Type": "ObjectProperty",
         "Name": "SM_HOS_Window01_WPOVertClr",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
-        "PropertyFlags": 17180393476,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
         "PropertyClass": {
           "ObjectName": "Class'StaticMeshComponent'",
           "ObjectPath": "/Script/Engine"
@@ -72,9 +216,9 @@
       {
         "Type": "ObjectProperty",
         "Name": "Frame",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
-        "PropertyFlags": 17180393476,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
         "PropertyClass": {
           "ObjectName": "Class'StaticMeshComponent'",
           "ObjectPath": "/Script/Engine"
@@ -83,15 +227,29 @@
       {
         "Type": "ObjectProperty",
         "Name": "DefaultSceneRoot",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
-        "PropertyFlags": 17180393476,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
         "PropertyClass": {
           "ObjectName": "Class'SceneComponent'",
           "ObjectPath": "/Script/Engine"
         }
       }
     ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_HOS_Window_A_Moving_01": {
+        "ObjectName": "Function'BP_HOS_Window_A_Moving_01_C:ExecuteUbergraph_BP_HOS_Window_A_Moving_01'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.0"
+      },
+      "Start Sound": {
+        "ObjectName": "Function'BP_HOS_Window_A_Moving_01_C:Start Sound'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.1"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_HOS_Window_A_Moving_01_C:ReceiveBeginPlay'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.2"
+      }
+    },
     "ClassFlags": 8652820,
     "ClassWithin": {
       "ObjectName": "Class'Object'",
@@ -101,7 +259,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BP_HOS_Window_A_Moving_01_C'Default__BP_HOS_Window_A_Moving_01_C'",
-      "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.1"
+      "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.4"
     }
   },
   {
@@ -109,40 +267,32 @@
     "Name": "Default__BP_HOS_Window_A_Moving_01_C",
     "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.BP_HOS_Window_A_Moving_01_C'",
     "Properties": {
+      "UberGraphFrame": {},
       "PrimaryActorTick": {
         "bStartWithTickEnabled": false
       }
     }
   },
   {
-    "Type": "Audio_T07_OBJ_Window_C",
-    "Name": "Audio_T07_OBJ_Window_GEN_VARIABLE_Audio_T07_OBJ_Window_C_CAT",
-    "Outer": "Audio_T07_OBJ_Window_GEN_VARIABLE",
-    "Template": "Default__Audio_T07_OBJ_Window_C",
-    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Audio/AudioEmittersBPs/T07_Hospital/Audio_T07_OBJ_Window.Audio_T07_OBJ_Window_C'"
-  },
-  {
-    "Type": "ChildActorComponent",
-    "Name": "Audio_T07_OBJ_Window_GEN_VARIABLE",
+    "Type": "AkComponent",
+    "Name": "Ak_Audio_Emt_Window_GEN_VARIABLE",
     "Outer": "BP_HOS_Window_A_Moving_01_C",
-    "Class": "UScriptClass'ChildActorComponent'",
+    "Class": "UScriptClass'AkComponent'",
     "Properties": {
-      "ChildActorClass": {
-        "ObjectName": "BlueprintGeneratedClass'Audio_T07_OBJ_Window_C'",
-        "ObjectPath": "DeadByDaylight/Content/Audio/AudioEmittersBPs/T07_Hospital/Audio_T07_OBJ_Window.5"
-      },
-      "ChildActorTemplate": {
-        "ObjectName": "Audio_T07_OBJ_Window_C'BP_HOS_Window_A_Moving_01_C:Audio_T07_OBJ_Window_GEN_VARIABLE.Audio_T07_OBJ_Window_GEN_VARIABLE_Audio_T07_OBJ_Window_C_CAT'",
-        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.2"
+      "MaxDistance": 1700.0,
+      "StaticAmbientEmitter": true,
+      "AkAudioEvent": {
+        "ObjectName": "AkAudioEvent'AudioEvent_Windows_Wind_Play'",
+        "ObjectPath": "DeadByDaylight/Content/Audio/AudioEvents/Objects/AudioEvent_Windows_Wind_Play.0"
       },
       "RelativeLocation": {
-        "X": 1.4039538E-06,
+        "X": 1E-06,
         "Y": -30.0,
         "Z": 40.0
       },
       "RelativeRotation": {
-        "Pitch": 90.0,
-        "Yaw": 0.0,
+        "Pitch": 0.0,
+        "Yaw": 90.00026,
         "Roll": 0.0
       }
     }
@@ -155,11 +305,11 @@
     "Properties": {
       "_significanceStrategy": {
         "ObjectName": "LinearSignificanceStrategy'BP_HOS_Window_A_Moving_01_C:SkeletalMeshComponent_GEN_VARIABLE.LinearSignificanceStrategy_0'",
-        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.5"
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.7"
       },
       "_animBudgeterSignificanceStrategy": {
         "ObjectName": "SimpleAnimBudgeterSignificanceStrategy'BP_HOS_Window_A_Moving_01_C:SkeletalMeshComponent_GEN_VARIABLE.SimpleAnimBudgeterSignificanceStrategy_0'",
-        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.14"
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.16"
       },
       "AnimClass": {
         "ObjectName": "AnimBlueprintGeneratedClass'AB_HOS_Window01_C'",
@@ -226,28 +376,28 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BP_HOS_Window_A_Moving_01_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.6"
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.8"
       },
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BP_HOS_Window_A_Moving_01_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.8"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_HOS_Window_A_Moving_01_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.10"
         },
         {
-          "ObjectName": "SCS_Node'BP_HOS_Window_A_Moving_01_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.11"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_HOS_Window_A_Moving_01_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectName": "SCS_Node'BP_HOS_Window_A_Moving_01_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.13"
         },
         {
+          "ObjectName": "SCS_Node'BP_HOS_Window_A_Moving_01_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.14"
+        },
+        {
           "ObjectName": "SCS_Node'BP_HOS_Window_A_Moving_01_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.9"
+          "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_HOS_Window_A_Moving_01_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.11"
         }
       ],
       "VariableGuid": "11F3387A-45891546-7A307FBA-31294A85",
@@ -266,10 +416,28 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_HOS_Window_A_Moving_01_C:Frame_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.17"
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.19"
       },
       "VariableGuid": "810DC286-4F5F10C9-D763E1B9-96BE531E",
       "InternalVariableName": "Frame"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'AkComponent'",
+        "ObjectPath": "/Script/AkAudio"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "AkComponent'BP_HOS_Window_A_Moving_01_C:Ak_Audio_Emt_Window_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.5"
+      },
+      "VariableGuid": "4342562A-4DBC1C0C-4067759D-2C01D9D2",
+      "InternalVariableName": "Ak_Audio_Emt_Window"
     }
   },
   {
@@ -284,7 +452,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "DBDSkeletalMeshComponentBudgeted'BP_HOS_Window_A_Moving_01_C:SkeletalMeshComponent_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.4"
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.6"
       },
       "VariableGuid": "691F7442-4066A216-D76F0CA2-9235C73A",
       "InternalVariableName": "SkeletalMeshComponent"
@@ -302,7 +470,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BP_HOS_Window_A_Moving_01_C:SM_HOS_Window01_WPOVertClr_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.18"
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.20"
       },
       "VariableGuid": "13140582-43501254-ED53C39C-CA32E140",
       "InternalVariableName": "SM_HOS_Window01_WPOVertClr"
@@ -335,28 +503,10 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SleepingSkinnedMeshRegisterer'BP_HOS_Window_A_Moving_01_C:SleepingSkinnedMeshRegisterer_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.16"
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.18"
       },
       "VariableGuid": "60BDA0E8-4B18C5A4-962B569B-CB56B749",
       "InternalVariableName": "SleepingSkinnedMeshRegisterer"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_7",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'ChildActorComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "ChildActorComponent'BP_HOS_Window_A_Moving_01_C:Audio_T07_OBJ_Window_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.3"
-      },
-      "VariableGuid": "238529EE-42597329-50B13FA5-9EE1AB2B",
-      "InternalVariableName": "Audio_T07_OBJ_Window"
     }
   },
   {
@@ -374,46 +524,46 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BP_HOS_Window_A_Moving_01_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.7"
+          "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.9"
         },
         {
           "ObjectName": "SCS_Node'BP_HOS_Window_A_Moving_01_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.12"
+          "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.15"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BP_HOS_Window_A_Moving_01_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.7"
+          "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.9"
         },
         {
           "ObjectName": "SCS_Node'BP_HOS_Window_A_Moving_01_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.8"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_HOS_Window_A_Moving_01_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.10"
         },
         {
-          "ObjectName": "SCS_Node'BP_HOS_Window_A_Moving_01_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.11"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_HOS_Window_A_Moving_01_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.12"
-        },
-        {
-          "ObjectName": "SCS_Node'BP_HOS_Window_A_Moving_01_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectName": "SCS_Node'BP_HOS_Window_A_Moving_01_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.13"
         },
         {
+          "ObjectName": "SCS_Node'BP_HOS_Window_A_Moving_01_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_HOS_Window_A_Moving_01_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.15"
+        },
+        {
           "ObjectName": "SCS_Node'BP_HOS_Window_A_Moving_01_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.9"
+          "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_HOS_Window_A_Moving_01_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.11"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BP_HOS_Window_A_Moving_01_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.7"
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/Window/Blueprints/BP_HOS_Window_A_Moving_01.9"
       }
     }
   },

@@ -8,14 +8,14 @@
       {
         "Type": "IntProperty",
         "Name": "EntryPoint",
-        "Flags": 1,
+        "Flags": "RF_Public",
         "ElementSize": 4,
-        "PropertyFlags": 148
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
       },
       {
         "Type": "DelegateProperty",
         "Name": "K2Node_CreateDelegate_OutputDelegate",
-        "Flags": 1,
+        "Flags": "RF_Public",
         "ElementSize": 20,
         "SignatureFunction": {
           "ObjectName": "DelegateFunction'OnItemEquipped__DelegateSignature'",
@@ -25,7 +25,7 @@
       {
         "Type": "BoolProperty",
         "Name": "CallFunc_K2_AttachToComponent_ReturnValue",
-        "Flags": 1,
+        "Flags": "RF_Public",
         "ElementSize": 1,
         "FieldSize": 1,
         "ByteOffset": 0,
@@ -66,7 +66,7 @@
     "Class": "UScriptClass'Function'",
     "SuperStruct": {
       "ObjectName": "Function'BP_Menu_Base_Camper_C:ReceiveBeginPlay'",
-      "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_Base_Camper.12"
+      "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_Base_Camper.13"
     },
     "FunctionFlags": 134744064
   },
@@ -106,11 +106,11 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BP_Menu_CamperMale15_C:SimpleConstructionScript_0'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperMale15.22"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperMale15.23"
       },
       "InheritableComponentHandler": {
         "ObjectName": "InheritableComponentHandler'BP_Menu_CamperMale15_C:InheritableComponentHandler'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperMale15.16"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperMale15.17"
       },
       "UberGraphFunction": {
         "ObjectName": "Function'BP_Menu_CamperMale15_C:ExecuteUbergraph_BP_Menu_CamperMale15'",
@@ -119,7 +119,7 @@
     },
     "SuperStruct": {
       "ObjectName": "BlueprintGeneratedClass'BP_Menu_Base_Camper_C'",
-      "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_Base_Camper.20"
+      "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_Base_Camper.21"
     },
     "Children": [
       {
@@ -163,9 +163,9 @@
       {
         "Type": "StructProperty",
         "Name": "UberGraphFrame",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 16,
-        "PropertyFlags": 2105344,
+        "PropertyFlags": "Transient | DuplicateTransient",
         "Struct": {
           "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
           "ObjectPath": "/Script/Engine"
@@ -174,9 +174,9 @@
       {
         "Type": "ObjectProperty",
         "Name": "TapeMesh",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
-        "PropertyFlags": 17180393476,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
         "PropertyClass": {
           "ObjectName": "Class'SkeletalMeshComponent'",
           "ObjectPath": "/Script/Engine"
@@ -251,12 +251,12 @@
     "Properties": {
       "UberGraphFrame": {},
       "ItemMesh": {
-        "ObjectName": "SkeletalMeshComponent'Default__BP_Menu_CamperMale15_C:ItemMesh'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperMale15.24"
+        "ObjectName": "DBDSkeletalMeshComponentBudgeted'Default__BP_Menu_CamperMale15_C:ItemMesh'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperMale15.16"
       },
       "MaterialHelper": {
         "ObjectName": "MaterialHelper'Default__BP_Menu_CamperMale15_C:MaterialHelper'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperMale15.17"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperMale15.18"
       },
       "_customizedSkeletalMeshComponent": {
         "ObjectName": "CustomizedSkeletalMesh'Default__BP_Menu_CamperMale15_C:CustomizedSkeletalMeshComponent'",
@@ -265,7 +265,7 @@
       "_characterIndex": 29,
       "Mesh": {
         "ObjectName": "PlayerSkeletalMeshComponentBudgeted'Default__BP_Menu_CamperMale15_C:CharacterMesh0'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperMale15.18"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperMale15.19"
       },
       "CharacterMovement": {
         "ObjectName": "CharacterMovementComponent'Default__BP_Menu_CamperMale15_C:CharMoveComp'",
@@ -455,6 +455,19 @@
     "Class": "UScriptClass'CustomizedSkeletalMesh'"
   },
   {
+    "Type": "DBDSkeletalMeshComponentBudgeted",
+    "Name": "ItemMesh",
+    "Outer": "Default__BP_Menu_CamperMale15_C",
+    "Template": "ItemMesh",
+    "Class": "UScriptClass'DBDSkeletalMeshComponentBudgeted'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "PlayerSkeletalMeshComponentBudgeted'Default__BP_Menu_CamperMale15_C:CharacterMesh0'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperMale15.19"
+      }
+    }
+  },
+  {
     "Type": "InheritableComponentHandler",
     "Name": "InheritableComponentHandler",
     "Outer": "BP_Menu_CamperMale15_C",
@@ -473,7 +486,7 @@
           "ComponentKey": {
             "OwnerClass": {
               "ObjectName": "BlueprintGeneratedClass'BP_Menu_Base_Camper_C'",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_Base_Camper.20"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_Base_Camper.21"
             },
             "SCSVariableName": "CharmSpawner",
             "AssociatedGuid": "9673BB35-4F8FF865-5BD4FCB4-B0E27D1B"
@@ -495,7 +508,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "PlayerSkeletalMeshComponentBudgeted'Default__BP_Menu_CamperMale15_C:CharacterMesh0'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperMale15.18"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperMale15.19"
       }
     }
   },
@@ -542,7 +555,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BP_Menu_CamperMale15_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperMale15.19"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperMale15.20"
       },
       "VariableGuid": "10F924C9-4C572826-0A6ADEBD-7DF18ED0",
       "InternalVariableName": "DefaultSceneRoot"
@@ -560,7 +573,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SkeletalMeshComponent'BP_Menu_CamperMale15_C:TapeMesh_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperMale15.23"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperMale15.24"
       },
       "ParentComponentOrVariableName": "CharacterMesh0",
       "bIsParentComponentNative": true,
@@ -577,18 +590,18 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BP_Menu_CamperMale15_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperMale15.21"
+          "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperMale15.22"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BP_Menu_CamperMale15_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperMale15.21"
+          "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperMale15.22"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BP_Menu_CamperMale15_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperMale15.20"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperMale15.21"
       }
     }
   },
@@ -618,19 +631,6 @@
         "Roll": 0.0
       },
       "bVisible": false
-    }
-  },
-  {
-    "Type": "SkeletalMeshComponent",
-    "Name": "ItemMesh",
-    "Outer": "Default__BP_Menu_CamperMale15_C",
-    "Template": "ItemMesh",
-    "Class": "UScriptClass'SkeletalMeshComponent'",
-    "Properties": {
-      "AttachParent": {
-        "ObjectName": "PlayerSkeletalMeshComponentBudgeted'Default__BP_Menu_CamperMale15_C:CharacterMesh0'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperMale15.18"
-      }
     }
   }
 ]

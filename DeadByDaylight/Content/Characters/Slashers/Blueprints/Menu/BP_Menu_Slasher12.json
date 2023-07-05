@@ -7,24 +7,24 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BP_Menu_Slasher12_C:SimpleConstructionScript_0'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Menu/BP_Menu_Slasher12.16"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Menu/BP_Menu_Slasher12.17"
       },
       "InheritableComponentHandler": {
         "ObjectName": "InheritableComponentHandler'BP_Menu_Slasher12_C:InheritableComponentHandler'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Menu/BP_Menu_Slasher12.9"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Menu/BP_Menu_Slasher12.10"
       }
     },
     "SuperStruct": {
       "ObjectName": "BlueprintGeneratedClass'BP_Menu_BaseSlasher_C'",
-      "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Menu/BP_Menu_BaseSlasher.17"
+      "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Menu/BP_Menu_BaseSlasher.19"
     },
     "ChildProperties": [
       {
         "Type": "ObjectProperty",
         "Name": "BP_Audio_KLR_12",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
-        "PropertyFlags": 17180393476,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
         "PropertyClass": {
           "ObjectName": "BlueprintGeneratedClass'BP_Audio_KLR_12_C'",
           "ObjectPath": "DeadByDaylight/Content/Audio/AudioBlueprints/Killer/BP_Audio_KLR_12.3"
@@ -33,9 +33,9 @@
       {
         "Type": "ObjectProperty",
         "Name": "Arrow1",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
-        "PropertyFlags": 17180393476,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
         "PropertyClass": {
           "ObjectName": "Class'ArrowComponent'",
           "ObjectPath": "/Script/Engine"
@@ -61,12 +61,12 @@
     "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Characters/Slashers/Blueprints/Menu/BP_Menu_Slasher12.BP_Menu_Slasher12_C'",
     "Properties": {
       "ItemMesh": {
-        "ObjectName": "SkeletalMeshComponent'Default__BP_Menu_Slasher12_C:ItemMesh'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Menu/BP_Menu_Slasher12.17"
+        "ObjectName": "DBDSkeletalMeshComponentBudgeted'Default__BP_Menu_Slasher12_C:ItemMesh'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Menu/BP_Menu_Slasher12.9"
       },
       "MaterialHelper": {
         "ObjectName": "MaterialHelper'Default__BP_Menu_Slasher12_C:MaterialHelper'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Menu/BP_Menu_Slasher12.10"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Menu/BP_Menu_Slasher12.11"
       },
       "_customizedSkeletalMeshComponent": {
         "ObjectName": "CustomizedSkeletalMesh'Default__BP_Menu_Slasher12_C:CustomizedSkeletalMeshComponent'",
@@ -75,7 +75,7 @@
       "_characterIndex": 268435467,
       "Mesh": {
         "ObjectName": "PlayerSkeletalMeshComponentBudgeted'Default__BP_Menu_Slasher12_C:CharacterMesh0'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Menu/BP_Menu_Slasher12.11"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Menu/BP_Menu_Slasher12.12"
       },
       "CharacterMovement": {
         "ObjectName": "CharacterMovementComponent'Default__BP_Menu_Slasher12_C:CharMoveComp'",
@@ -166,6 +166,19 @@
     "Class": "UScriptClass'CustomizedSkeletalMesh'"
   },
   {
+    "Type": "DBDSkeletalMeshComponentBudgeted",
+    "Name": "ItemMesh",
+    "Outer": "Default__BP_Menu_Slasher12_C",
+    "Template": "ItemMesh",
+    "Class": "UScriptClass'DBDSkeletalMeshComponentBudgeted'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "PlayerSkeletalMeshComponentBudgeted'Default__BP_Menu_Slasher12_C:CharacterMesh0'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Menu/BP_Menu_Slasher12.12"
+      }
+    }
+  },
+  {
     "Type": "InheritableComponentHandler",
     "Name": "InheritableComponentHandler",
     "Outer": "BP_Menu_Slasher12_C",
@@ -184,7 +197,7 @@
           "ComponentKey": {
             "OwnerClass": {
               "ObjectName": "BlueprintGeneratedClass'BP_Menu_BaseSlasher_C'",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Menu/BP_Menu_BaseSlasher.17"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Menu/BP_Menu_BaseSlasher.19"
             },
             "SCSVariableName": "CustomizedAudio",
             "AssociatedGuid": "633E9892-40532019-F31423B2-40C3D5BF"
@@ -206,7 +219,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "PlayerSkeletalMeshComponentBudgeted'Default__BP_Menu_Slasher12_C:CharacterMesh0'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Menu/BP_Menu_Slasher12.11"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Menu/BP_Menu_Slasher12.12"
       }
     }
   },
@@ -249,7 +262,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BP_Menu_Slasher12_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Menu/BP_Menu_Slasher12.12"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Menu/BP_Menu_Slasher12.13"
       },
       "VariableGuid": "4414B4B2-41379E5C-17F52E95-DDE449D4",
       "InternalVariableName": "DefaultSceneRoot"
@@ -302,39 +315,26 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BP_Menu_Slasher12_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Menu/BP_Menu_Slasher12.14"
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Menu/BP_Menu_Slasher12.15"
         },
         {
           "ObjectName": "SCS_Node'BP_Menu_Slasher12_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Menu/BP_Menu_Slasher12.15"
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Menu/BP_Menu_Slasher12.16"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BP_Menu_Slasher12_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Menu/BP_Menu_Slasher12.14"
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Menu/BP_Menu_Slasher12.15"
         },
         {
           "ObjectName": "SCS_Node'BP_Menu_Slasher12_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Menu/BP_Menu_Slasher12.15"
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Menu/BP_Menu_Slasher12.16"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BP_Menu_Slasher12_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Menu/BP_Menu_Slasher12.13"
-      }
-    }
-  },
-  {
-    "Type": "SkeletalMeshComponent",
-    "Name": "ItemMesh",
-    "Outer": "Default__BP_Menu_Slasher12_C",
-    "Template": "ItemMesh",
-    "Class": "UScriptClass'SkeletalMeshComponent'",
-    "Properties": {
-      "AttachParent": {
-        "ObjectName": "PlayerSkeletalMeshComponentBudgeted'Default__BP_Menu_Slasher12_C:CharacterMesh0'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Menu/BP_Menu_Slasher12.11"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Menu/BP_Menu_Slasher12.14"
       }
     }
   }

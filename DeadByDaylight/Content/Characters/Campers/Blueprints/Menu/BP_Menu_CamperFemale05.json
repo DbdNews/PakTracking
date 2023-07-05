@@ -8,9 +8,9 @@
       {
         "Type": "IntProperty",
         "Name": "EntryPoint",
-        "Flags": 1,
+        "Flags": "RF_Public",
         "ElementSize": 4,
-        "PropertyFlags": 148
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
       }
     ],
     "FunctionFlags": 32769
@@ -23,11 +23,11 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BP_Menu_CamperFemale05_C:SimpleConstructionScript_2'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperFemale05.14"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperFemale05.15"
       },
       "InheritableComponentHandler": {
         "ObjectName": "InheritableComponentHandler'BP_Menu_CamperFemale05_C:InheritableComponentHandler'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperFemale05.9"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperFemale05.10"
       },
       "UberGraphFunction": {
         "ObjectName": "Function'BP_Menu_CamperFemale05_C:ExecuteUbergraph_BP_Menu_CamperFemale05'",
@@ -36,7 +36,7 @@
     },
     "SuperStruct": {
       "ObjectName": "BlueprintGeneratedClass'BP_Menu_Base_Camper_C'",
-      "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_Base_Camper.20"
+      "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_Base_Camper.21"
     },
     "Children": [
       {
@@ -48,9 +48,9 @@
       {
         "Type": "StructProperty",
         "Name": "UberGraphFrame",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 16,
-        "PropertyFlags": 2105344,
+        "PropertyFlags": "Transient | DuplicateTransient",
         "Struct": {
           "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
           "ObjectPath": "/Script/Engine"
@@ -83,12 +83,12 @@
     "Properties": {
       "UberGraphFrame": {},
       "ItemMesh": {
-        "ObjectName": "SkeletalMeshComponent'Default__BP_Menu_CamperFemale05_C:ItemMesh'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperFemale05.15"
+        "ObjectName": "DBDSkeletalMeshComponentBudgeted'Default__BP_Menu_CamperFemale05_C:ItemMesh'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperFemale05.9"
       },
       "MaterialHelper": {
         "ObjectName": "MaterialHelper'Default__BP_Menu_CamperFemale05_C:MaterialHelper'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperFemale05.10"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperFemale05.11"
       },
       "_customizedSkeletalMeshComponent": {
         "ObjectName": "CustomizedSkeletalMesh'Default__BP_Menu_CamperFemale05_C:CustomizedSkeletalMeshComponent'",
@@ -100,7 +100,7 @@
       "_characterIndex": 8,
       "Mesh": {
         "ObjectName": "PlayerSkeletalMeshComponentBudgeted'Default__BP_Menu_CamperFemale05_C:CharacterMesh0'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperFemale05.11"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperFemale05.12"
       },
       "CharacterMovement": {
         "ObjectName": "CharacterMovementComponent'Default__BP_Menu_CamperFemale05_C:CharMoveComp'",
@@ -504,6 +504,19 @@
     "Class": "UScriptClass'CustomizedSkeletalMesh'"
   },
   {
+    "Type": "DBDSkeletalMeshComponentBudgeted",
+    "Name": "ItemMesh",
+    "Outer": "Default__BP_Menu_CamperFemale05_C",
+    "Template": "ItemMesh",
+    "Class": "UScriptClass'DBDSkeletalMeshComponentBudgeted'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "PlayerSkeletalMeshComponentBudgeted'Default__BP_Menu_CamperFemale05_C:CharacterMesh0'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperFemale05.12"
+      }
+    }
+  },
+  {
     "Type": "InheritableComponentHandler",
     "Name": "InheritableComponentHandler",
     "Outer": "BP_Menu_CamperFemale05_C",
@@ -522,7 +535,7 @@
           "ComponentKey": {
             "OwnerClass": {
               "ObjectName": "BlueprintGeneratedClass'BP_Menu_Base_Camper_C'",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_Base_Camper.20"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_Base_Camper.21"
             },
             "SCSVariableName": "CustomizedAudio",
             "AssociatedGuid": "C713093D-475B79A1-43993385-61C28E07"
@@ -544,7 +557,7 @@
           "ComponentKey": {
             "OwnerClass": {
               "ObjectName": "BlueprintGeneratedClass'BP_Menu_Base_Camper_C'",
-              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_Base_Camper.20"
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_Base_Camper.21"
             },
             "SCSVariableName": "CharmSpawner",
             "AssociatedGuid": "9673BB35-4F8FF865-5BD4FCB4-B0E27D1B"
@@ -566,7 +579,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "PlayerSkeletalMeshComponentBudgeted'Default__BP_Menu_CamperFemale05_C:CharacterMesh0'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperFemale05.11"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperFemale05.12"
       }
     }
   },
@@ -617,7 +630,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BP_Menu_CamperFemale05_C:DefaultSceneRoot622AB42E45471CB743F182A3F1936730'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperFemale05.12"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperFemale05.13"
       },
       "VariableGuid": "C2384E21-485889CF-2CE7DD96-7A1952DF",
       "InternalVariableName": "DefaultSceneRoot"
@@ -631,20 +644,7 @@
     "Properties": {
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BP_Menu_CamperFemale05_C:SimpleConstructionScript_2.SCS_Node_2'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperFemale05.13"
-      }
-    }
-  },
-  {
-    "Type": "SkeletalMeshComponent",
-    "Name": "ItemMesh",
-    "Outer": "Default__BP_Menu_CamperFemale05_C",
-    "Template": "ItemMesh",
-    "Class": "UScriptClass'SkeletalMeshComponent'",
-    "Properties": {
-      "AttachParent": {
-        "ObjectName": "PlayerSkeletalMeshComponentBudgeted'Default__BP_Menu_CamperFemale05_C:CharacterMesh0'",
-        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperFemale05.11"
+        "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/Menu/BP_Menu_CamperFemale05.14"
       }
     }
   }

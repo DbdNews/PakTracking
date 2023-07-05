@@ -2,8 +2,10 @@
   {
     "Type": "Material",
     "Name": "M_Light_Beam",
+    "Class": "UScriptClass'Material'",
     "Properties": {
       "EmissiveColor": {
+        "Expression": null,
         "OutputIndex": 0,
         "InputName": "None",
         "Mask": 0,
@@ -29,7 +31,7 @@
       "TwoSided": true,
       "bUsedWithNiagaraSprites": true,
       "bUsedWithNiagaraMeshParticles": true,
-      "StateId": "B9E52D50-4CD2365B-E44A15AB-5B20935E",
+      "StateId": "E1F49C60-44EF0EBB-5D9A2384-A1AAC2D5",
       "CachedExpressionData": {
         "Parameters": {
           "RuntimeEntries": {
@@ -37,8 +39,10 @@
               1033497708998508726,
               1534580092854434212,
               3346891283968469449,
+              4524772048041913685,
               4788805227935442984,
               6135206927011143195,
+              6457761429531034258,
               10365776952601423206,
               16363614473374996727,
               17513884114174678492,
@@ -61,12 +65,22 @@
                 "Index": -1
               },
               {
+                "Name": "OpacityBasedFade_DistanceB",
+                "Association": "GlobalParameter",
+                "Index": -1
+              },
+              {
                 "Name": "Intensity",
                 "Association": "GlobalParameter",
                 "Index": -1
               },
               {
                 "Name": "FadeLerp",
+                "Association": "GlobalParameter",
+                "Index": -1
+              },
+              {
+                "Name": "OpacityBasedFade_DistanceA",
                 "Association": "GlobalParameter",
                 "Index": -1
               },
@@ -95,8 +109,10 @@
               "AB24B98D-442C4188-FBA811AB-AC7C3980",
               "854E659C-44F8AEDC-2F9CC6BF-986316F1",
               "E6F6EBA8-45119BB5-1BCEF09E-092DF136",
+              "A42EFD6B-402B2986-2703D68B-8E5D5FE1",
               "080AE44E-42C21A97-6D5A0FB5-7C78D8D7",
               "B4731DD7-49A6C806-94923A9A-30E5954F",
+              "3FBF1A3D-47664FD6-134CED9D-484BE254",
               "A62F0C66-48F29A68-B080848B-2FA02908",
               "FCBC1BE4-462B577E-DE7CB2AC-5A623ADC",
               "7A38AA02-493416C0-5F411EB9-22B3E35B",
@@ -172,8 +188,10 @@
             0.0,
             0.0,
             0.55,
+            10.0,
             0.1,
             0.5,
+            50.0,
             0.0,
             -1.0,
             256.0,
@@ -204,34 +222,34 @@
           ],
           "TextureValues": [
             {
-              "ObjectName": "Texture2D T_SmokeTile",
+              "ObjectName": "Texture2D'T_SmokeTile'",
               "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_SmokeTile.0"
             },
             {
-              "ObjectName": "Texture2D T_SmokeTile",
+              "ObjectName": "Texture2D'T_SmokeTile'",
               "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_SmokeTile.0"
             },
             {
-              "ObjectName": "Texture2D T_Volumelight",
+              "ObjectName": "Texture2D'T_Volumelight'",
               "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_Volumelight.0"
             },
             {
-              "ObjectName": "Texture2D T_Noise01",
+              "ObjectName": "Texture2D'T_Noise01'",
               "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_Noise01.0"
             }
           ]
         },
         "ReferencedTextures": [
           {
-            "ObjectName": "Texture2D T_SmokeTile",
+            "ObjectName": "Texture2D'T_SmokeTile'",
             "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_SmokeTile.0"
           },
           {
-            "ObjectName": "Texture2D T_Noise01",
+            "ObjectName": "Texture2D'T_Noise01'",
             "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_Noise01.0"
           },
           {
-            "ObjectName": "Texture2D T_Volumelight",
+            "ObjectName": "Texture2D'T_Volumelight'",
             "ObjectPath": "DeadByDaylight/Content/Effects/Textures/T_Volumelight.0"
           }
         ],
@@ -239,36 +257,43 @@
           {
             "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
             "Function": {
-              "ObjectName": "MaterialFunction LinearGradient",
+              "ObjectName": "MaterialFunction'LinearGradient'",
               "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
             }
           },
           {
             "StateId": "7560E2DA-4356343C-18E6818A-A015BAC5",
             "Function": {
-              "ObjectName": "MaterialFunction MakeFloat2",
+              "ObjectName": "MaterialFunction'MakeFloat2'",
               "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat2.0"
             }
           },
           {
             "StateId": "7560E2DA-4356343C-18E6818A-A015BAC5",
             "Function": {
-              "ObjectName": "MaterialFunction MakeFloat2",
+              "ObjectName": "MaterialFunction'MakeFloat2'",
               "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat2.0"
             }
           },
           {
             "StateId": "7560E2DA-4356343C-18E6818A-A015BAC5",
             "Function": {
-              "ObjectName": "MaterialFunction MakeFloat2",
+              "ObjectName": "MaterialFunction'MakeFloat2'",
               "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat2.0"
             }
           },
           {
             "StateId": "7560E2DA-4356343C-18E6818A-A015BAC5",
             "Function": {
-              "ObjectName": "MaterialFunction MakeFloat2",
+              "ObjectName": "MaterialFunction'MakeFloat2'",
               "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat2.0"
+            }
+          },
+          {
+            "StateId": "4D9CD233-440AFDF3-9FBCAFAA-273643EA",
+            "Function": {
+              "ObjectName": "MaterialFunction'MF_BetterDepthFade'",
+              "ObjectPath": "DeadByDaylight/Content/Effects/Materials/Functions/MF_BetterDepthFade.0"
             }
           }
         ],
