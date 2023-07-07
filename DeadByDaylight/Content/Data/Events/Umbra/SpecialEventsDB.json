@@ -35,14 +35,26 @@
         "ShopName": "Shop_Static",
         "AdditionalLobbyNames": [],
         "AudioStateSpecialEvent": "Anniversary",
-        "GameplayPlayerComponent": {
-          "AssetPathName": "/Game/Blueprints/Events/Anniversary2023/BP_Anniversary2023PlayerComponent.BP_Anniversary2023PlayerComponent_C",
-          "SubPathString": ""
-        },
-        "GameplayStateComponent": {
-          "AssetPathName": "/Game/Blueprints/Events/Anniversary2023/BP_Anniversary2023EventComponent.BP_Anniversary2023EventComponent_C",
-          "SubPathString": ""
-        },
+        "SpawnableComponents": [
+          {
+            "Component": {
+              "AssetPathName": "/Game/Blueprints/Events/Anniversary2023/BP_Anniversary2023EventComponent.BP_Anniversary2023EventComponent_C",
+              "SubPathString": ""
+            },
+            "ShouldSpawnOnSurvivor": false,
+            "ShouldSpawnOnKiller": false,
+            "ShouldSpawnOnGameState": true
+          },
+          {
+            "Component": {
+              "AssetPathName": "/Game/Blueprints/Events/Anniversary2023/BP_Anniversary2023PlayerComponent.BP_Anniversary2023PlayerComponent_C",
+              "SubPathString": ""
+            },
+            "ShouldSpawnOnSurvivor": true,
+            "ShouldSpawnOnKiller": true,
+            "ShouldSpawnOnGameState": false
+          }
+        ],
         "GameMode": "ESpecialEventGameMode::Collection",
         "UseEventEntryScreen": true,
         "EventEntryData": {

@@ -32,14 +32,26 @@
         "ShopName": "Shop_Static",
         "AdditionalLobbyNames": [],
         "AudioStateSpecialEvent": "None",
-        "GameplayPlayerComponent": {
-          "AssetPathName": "/Game/Blueprints/GameplayElements/Interactable/Barrel/BP_BarrelPlayerComponent.BP_BarrelPlayerComponent_C",
-          "SubPathString": ""
-        },
-        "GameplayStateComponent": {
-          "AssetPathName": "/Game/Blueprints/GameplayElements/Interactable/Barrel/BP_BarrelEventComponent.BP_BarrelEventComponent_C",
-          "SubPathString": ""
-        },
+        "SpawnableComponents": [
+          {
+            "Component": {
+              "AssetPathName": "/Game/Blueprints/GameplayElements/Interactable/Barrel/BP_BarrelEventComponent.BP_BarrelEventComponent_C",
+              "SubPathString": ""
+            },
+            "ShouldSpawnOnSurvivor": false,
+            "ShouldSpawnOnKiller": false,
+            "ShouldSpawnOnGameState": true
+          },
+          {
+            "Component": {
+              "AssetPathName": "/Game/Blueprints/GameplayElements/Interactable/Barrel/BP_BarrelPlayerComponent.BP_BarrelPlayerComponent_C",
+              "SubPathString": ""
+            },
+            "ShouldSpawnOnSurvivor": true,
+            "ShouldSpawnOnKiller": true,
+            "ShouldSpawnOnGameState": false
+          }
+        ],
         "GameMode": "ESpecialEventGameMode::Progression",
         "UseEventEntryScreen": false,
         "EventEntryData": {

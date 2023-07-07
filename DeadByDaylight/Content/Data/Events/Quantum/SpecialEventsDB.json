@@ -60,14 +60,26 @@
         "ShopName": "Shop_Static_Snow",
         "AdditionalLobbyNames": [],
         "AudioStateSpecialEvent": "Winter",
-        "GameplayPlayerComponent": {
-          "AssetPathName": "/Game/Blueprints/GameplayElements/Interactable/Snowman/BP_SnowmanWinterEventPlayerComponent.BP_SnowmanWinterEventPlayerComponent_C",
-          "SubPathString": ""
-        },
-        "GameplayStateComponent": {
-          "AssetPathName": "/Game/Blueprints/GameplayElements/Interactable/Snowman/BP_SnowmanWinterEventComponent.BP_SnowmanWinterEventComponent_C",
-          "SubPathString": ""
-        },
+        "SpawnableComponents": [
+          {
+            "Component": {
+              "AssetPathName": "/Game/Blueprints/GameplayElements/Interactable/Snowman/BP_SnowmanWinterEventPlayerComponent.BP_SnowmanWinterEventPlayerComponent_C",
+              "SubPathString": ""
+            },
+            "ShouldSpawnOnSurvivor": true,
+            "ShouldSpawnOnKiller": true,
+            "ShouldSpawnOnGameState": false
+          },
+          {
+            "Component": {
+              "AssetPathName": "/Game/Blueprints/GameplayElements/Interactable/Snowman/BP_SnowmanWinterEventComponent.BP_SnowmanWinterEventComponent_C",
+              "SubPathString": ""
+            },
+            "ShouldSpawnOnSurvivor": false,
+            "ShouldSpawnOnKiller": false,
+            "ShouldSpawnOnGameState": true
+          }
+        ],
         "GameMode": "ESpecialEventGameMode::Counter",
         "UseEventEntryScreen": true,
         "EventEntryData": {
@@ -143,14 +155,7 @@
         "ShopName": "Shop_Static",
         "AdditionalLobbyNames": [],
         "AudioStateSpecialEvent": "LunarEvent",
-        "GameplayPlayerComponent": {
-          "AssetPathName": "None",
-          "SubPathString": ""
-        },
-        "GameplayStateComponent": {
-          "AssetPathName": "None",
-          "SubPathString": ""
-        },
+        "SpawnableComponents": [],
         "GameMode": "ESpecialEventGameMode::Progression",
         "UseEventEntryScreen": false,
         "EventEntryData": {

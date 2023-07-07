@@ -1476,7 +1476,7 @@
           }
         ],
         "QuestEventEvaluator": {
-          "AssetPathName": "/Script/Archives.NearPalletVaultWallQEEvaluator",
+          "AssetPathName": "/Game/Blueprints/Archives/Quests/NearPalletOrWindowOrWallQuestEvaluator.NearPalletOrWindowOrWallQuestEvaluator_C",
           "SubPathString": ""
         },
         "Id": "QuestEvent.HitGrabNearPalletsVaultsWalls"
@@ -1911,9 +1911,13 @@
         "Id": "QuestEvent.MissInRangeAndVault"
       },
       "QuestEvent.MissInRangeDuringDeadHard": {
-        "TrackedGameEvents": [],
+        "TrackedGameEvents": [
+          {
+            "TagName": "GameEvent.ScoreEvent.Slasher.AttackSuccess"
+          }
+        ],
         "QuestEventEvaluator": {
-          "AssetPathName": "/Game/Blueprints/Archives/Quests/HasCamperDodgedABasicAttackAndDeadHard.HasCamperDodgedABasicAttackAndDeadHard_C",
+          "AssetPathName": "/Game/Blueprints/Archives/Quests/TargetHasEnduranceEffectEvaluator.TargetHasEnduranceEffectEvaluator_C",
           "SubPathString": ""
         },
         "Id": "QuestEvent.MissInRangeDuringDeadHard"
@@ -2192,7 +2196,7 @@
           }
         ],
         "QuestEventEvaluator": {
-          "AssetPathName": "/Game/Blueprints/Archives/Quests/PigAmbushNearGeneratorQuestEvaluator.PigAmbushNearGeneratorQuestEvaluator_C",
+          "AssetPathName": "/Game/Blueprints/Archives/Quests/NearGeneratorQuestEvaluator.NearGeneratorQuestEvaluator_C",
           "SubPathString": ""
         },
         "Id": "QuestEvent.PigAmbushNearGenerator"
@@ -2872,7 +2876,7 @@
           }
         ],
         "QuestEventEvaluator": {
-          "AssetPathName": "/Script/Archives.TargetNearPalletVaultWallQEEvaluator",
+          "AssetPathName": "/Game/Blueprints/Archives/Quests/TargetNearPalletOrWindowOrWallQuestEvaluator.TargetNearPalletOrWindowOrWallQuestEvaluator_C",
           "SubPathString": ""
         },
         "Id": "QuestEvent.TrapperCatchTrapNearPalletsVaultsWalls"
@@ -3305,6 +3309,21 @@
           "SubPathString": ""
         },
         "Id": "QuestEvent.HookedOnEventHook"
+      },
+      "QuestEvent.CoreMemory": {
+        "TrackedGameEvents": [
+          {
+            "TagName": "GameEvent.ScoreEvent.CoreMemory.EscapeWithMemory"
+          },
+          {
+            "TagName": "GameEvent.ScoreEvent.CoreMemory.MemorySynchronized"
+          }
+        ],
+        "QuestEventEvaluator": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        },
+        "Id": "QuestEvent.CoreMemory"
       }
     }
   }

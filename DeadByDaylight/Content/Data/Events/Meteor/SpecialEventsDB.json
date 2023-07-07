@@ -37,14 +37,26 @@
           "Lobby6thAnniversary"
         ],
         "AudioStateSpecialEvent": "Anniversary",
-        "GameplayPlayerComponent": {
-          "AssetPathName": "/Game/Blueprints/GameplayElements/Item/Crown/CrownPlayerComponent.CrownPlayerComponent_C",
-          "SubPathString": ""
-        },
-        "GameplayStateComponent": {
-          "AssetPathName": "/Script/Anniversary2021.Anniversary2021EventComponent",
-          "SubPathString": ""
-        },
+        "SpawnableComponents": [
+          {
+            "Component": {
+              "AssetPathName": "/Game/Blueprints/GameplayElements/Item/Crown/CrownPlayerComponent.CrownPlayerComponent_C",
+              "SubPathString": ""
+            },
+            "ShouldSpawnOnSurvivor": true,
+            "ShouldSpawnOnKiller": true,
+            "ShouldSpawnOnGameState": false
+          },
+          {
+            "Component": {
+              "AssetPathName": "/Script/Anniversary2021.Anniversary2021EventComponent",
+              "SubPathString": ""
+            },
+            "ShouldSpawnOnSurvivor": false,
+            "ShouldSpawnOnKiller": false,
+            "ShouldSpawnOnGameState": true
+          }
+        ],
         "GameMode": "ESpecialEventGameMode::Collection",
         "UseEventEntryScreen": true,
         "EventEntryData": {

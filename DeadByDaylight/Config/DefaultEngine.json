@@ -414,8 +414,6 @@ DefaultPhysMaterialName=/Game/Materials/PhysicalMaterials/PM_Default.PM_Default
 +ActiveClassRedirects=(OldClassName="KillerLocomotionSubAnimInstance",NewClassName="/Script/DBDAnimation.KillerLocomotionSubAnimInstance")
 +ActiveClassRedirects=(OldClassName="/Script/TheHuntress.DeadHardDashInteraction", NewClassName="/Script/TheHuntress.DeadHardInteraction")
 +ActiveClassRedirects=(OldClassName="/Script/DBDAnimation.RBTSurvivorSubAnimInstance", NewClassName="/Script/ThePig.RBTSurvivorSubAnimInstance")
-+ActiveClassRedirects=(OldClassName="/Script/DeadByDaylight.ItemBlueprint", NewClassName="/Script/DeadByDaylight.EnvironmentAnimatedObject")
-+ActiveClassRedirects=(OldClassName="/Script/AnimationUtilities.SkeletalMeshActorBudgeted", NewClassName="/Script/DBDAnimationBudgetAllocator.SkeletalMeshActorBudgeted")
 
 +ActiveStructRedirects=(OldStructName="AnimationMontageDescriptor",NewStructName="/Script/AnimationUtilities.AnimationMontageDescriptor")
 +ActiveStructRedirects=(OldStructName="MontagePlaybackDefinition",NewStructName="/Script/AnimationUtilities.MontagePlaybackDefinition")
@@ -730,7 +728,7 @@ PreIntegratedSkinBRDFTextureName=/Engine/EngineMaterials/PreintegratedSkinBRDF.P
 MiniFontTextureName=/Engine/EngineMaterials/MiniFont.MiniFont
 WeightMapPlaceholderTextureName=/Engine/EngineMaterials/WeightMapPlaceholderTexture.WeightMapPlaceholderTexture
 LightMapDensityTextureName=/Engine/EngineMaterials/DefaultWhiteGrid.DefaultWhiteGrid
-NearClipPlane=10.000000
+NearClipPlane=1.000000
 bHardwareSurveyEnabled=True
 bSubtitlesEnabled=True
 bSubtitlesForcedOff=False
@@ -902,6 +900,7 @@ CustomScalingRuleClass=None
 UIScaleCurve=(EditorCurveData=(Keys=((Time=480.000000,Value=0.133300),(Time=639.000000,Value=0.200000),(Time=1080.000000,Value=0.400000),(Time=2160.000000,Value=0.900000),(Time=8640.000000,Value=7.900000)),DefaultValue=340282346638528859811704183484516925440.000000,PreInfinityExtrap=RCCE_Constant,PostInfinityExtrap=RCCE_Constant),ExternalCurve=None)
 HandCursor=/Game/UI/Cursor/BP_HandCursor.BP_HandCursor_C
 DesignScreenSize=(X=3840,Y=2160)
+bAllowHighDPIInGameMode=True
 
 [/Script/AIModule.AISystem]
 PerceptionSystemClassName=/Script/AIModule.AIPerceptionSystem
@@ -1044,7 +1043,6 @@ r.DefaultFeature.MotionBlur=True
 r.DefaultFeature.LensFlare=True
 r.DefaultFeature.AntiAliasing=2
 r.StencilForLODDither=False
-r.EarlyZPass=3
 r.EarlyZPassMovable=False
 r.DBuffer=False
 r.ClearSceneMethod=1
@@ -1240,6 +1238,8 @@ DirtyAreasUpdateFreq=60.000000
 +ClassRedirects=(OldName="/Script/DeadByDaylight.ClosetAnalytics", NewName="/Script/DBDAnalytics.ClosetAnalytics")
 +ClassRedirects=(OldName="/Script/DeadByDaylight.PigAnalytics", NewName="/Script/DBDAnalytics.PigAnalytics")
 +ClassRedirects=(OldName="/Script/DeadByDaylight.PulldownAnalytics", NewName="/Script/DBDAnalytics.PulldownAnalytics")
++ClassRedirects=(OldName="/Script/DeadByDaylight.DBDSlasherData", NewName="/Script/DeadByDaylight.DBDPlayerData")
++ClassRedirects=(OldName="/Script/DeadByDaylight.DBDCamperData", NewName="/Script/DeadByDaylight.DBDPlayerData")
 +ClassRedirects=(OldName="/Script/DeadByDaylight.SurvivorInteractionAnalytics", NewName="/Script/DBDAnalytics.SurvivorInteractionAnalytics")
 +ClassRedirects=(OldName="DarkRitualTotemVisual", NewName="DarkRitualTotem")
 +ClassRedirects=(OldName="DarkRitualTotem", NewName="RekindledTotem")
@@ -1306,6 +1306,8 @@ DirtyAreasUpdateFreq=60.000000
 +EnumRedirects=(OldName="ELeanState", NewName="/Script/DBDSharedTypes.ELeanState")
 +EnumRedirects=(OldName="ECurrencyType", NewName="/Script/DBDSharedTypes.ECurrencyType")
 +EnumRedirects=(OldName="EInventoryItemType", NewName="/Script/DBDSharedTypes.EInventoryItemType")
++EnumRedirects=(OldName="ECamperImmobilizeState", NewName="/Script/DeadByDaylight.EImmobilizedState")
++EnumRedirects=(OldName="ECamperGuidedAction", NewName="/Script/DeadByDaylight.EGuidedState")
 +EnumRedirects=(OldName="TextureGroup",ValueChanges=(("TEXTUREGROUP_Project01","TEXTUREGROUP_SkyboxReflections")))
 +EnumRedirects=(OldName="TextureGroup",ValueChanges=(("TEXTUREGROUP_Project02","TEXTUREGROUP_LightFunctions")))
 +EnumRedirects=(OldName="TextureGroup",ValueChanges=(("TEXTUREGROUP_Project03","TEXTUREGROUP_Foliage")))
@@ -1915,3 +1917,4 @@ r.SkeletalMeshReductionModule=SkeletalMeshReduction
 
 [/Script/Engine.DataDrivenConsoleVariableSettings]
 +CVarsArray=(Type=CVarInt,Name="dbd.SelectCharacterMenuIdleAnimation",ToolTip="Select between all idle menu animation (0=Main, 1=interrupt01, 2=interrupt02..etc...)",DefaultValueFloat=0.000000,DefaultValueInt=0,DefaultValueBool=False)
+
