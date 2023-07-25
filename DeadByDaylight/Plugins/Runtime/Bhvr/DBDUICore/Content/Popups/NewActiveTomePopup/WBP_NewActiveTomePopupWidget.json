@@ -13,6 +13,12 @@
         "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
       },
       {
+        "Type": "StrProperty",
+        "Name": "K2Node_Event_remainingTime",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
         "Type": "BoolProperty",
         "Name": "K2Node_Event_isEnabled",
         "Flags": "RF_Public",
@@ -26,13 +32,96 @@
         "bIsNativeBool": true
       },
       {
-        "Type": "StrProperty",
-        "Name": "K2Node_Event_remainingTime",
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetViewportSize_ReturnValue",
         "Flags": "RF_Public",
-        "ElementSize": 16
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector2D'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayAnimation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'UMGSequencePlayer'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector2D_X",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector2D_Y",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Divide_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetDynamicMaterial_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector2D_X_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector2D_Y_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Divide_FloatFloat_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GreaterEqual_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
       }
     ],
     "FunctionFlags": 32769
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInitialized",
+    "Outer": "WBP_NewActiveTomePopupWidget_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'UserWidget:OnInitialized'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "FunctionFlags": 134350856
   },
   {
     "Type": "Function",
@@ -131,9 +220,15 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'WBP_NewActiveTomePopupWidget_C:WidgetTree'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.68"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.76"
       },
       "bClassRequiresNativeTick": true,
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'WBP_NewActiveTomePopupWidget_C:Fade-in_INST'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.75"
+        }
+      ],
       "UberGraphFunction": {
         "ObjectName": "Function'WBP_NewActiveTomePopupWidget_C:ExecuteUbergraph_WBP_NewActiveTomePopupWidget'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.0"
@@ -146,18 +241,22 @@
     "Children": [
       {
         "ObjectName": "Function'WBP_NewActiveTomePopupWidget_C:SetRiftVisibility'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.4"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.5"
       },
       {
         "ObjectName": "Function'WBP_NewActiveTomePopupWidget_C:SetRiftRemainingTime'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.3"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.4"
       },
       {
         "ObjectName": "Function'WBP_NewActiveTomePopupWidget_C:SetRemainingTime'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.2"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.3"
       },
       {
         "ObjectName": "Function'WBP_NewActiveTomePopupWidget_C:SetRiftEnabled'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.2"
+      },
+      {
+        "ObjectName": "Function'WBP_NewActiveTomePopupWidget_C:OnInitialized'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.1"
       },
       {
@@ -175,6 +274,17 @@
         "Struct": {
           "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
           "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Fade-in",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
         }
       },
       {
@@ -264,6 +374,41 @@
           "ObjectName": "Class'DBDImage'",
           "ObjectPath": "/Script/DBDUIViewsCore"
         }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BgContainerDynamicMaterial",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Res21_9",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector2D'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "NewVar_0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
       }
     ],
     "FuncMap": {
@@ -271,21 +416,25 @@
         "ObjectName": "Function'WBP_NewActiveTomePopupWidget_C:ExecuteUbergraph_WBP_NewActiveTomePopupWidget'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.0"
       },
+      "OnInitialized": {
+        "ObjectName": "Function'WBP_NewActiveTomePopupWidget_C:OnInitialized'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.1"
+      },
       "SetRiftEnabled": {
         "ObjectName": "Function'WBP_NewActiveTomePopupWidget_C:SetRiftEnabled'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.1"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.2"
       },
       "SetRemainingTime": {
         "ObjectName": "Function'WBP_NewActiveTomePopupWidget_C:SetRemainingTime'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.2"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.3"
       },
       "SetRiftRemainingTime": {
         "ObjectName": "Function'WBP_NewActiveTomePopupWidget_C:SetRiftRemainingTime'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.3"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.4"
       },
       "SetRiftVisibility": {
         "ObjectName": "Function'WBP_NewActiveTomePopupWidget_C:SetRiftVisibility'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.4"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.5"
       }
     },
     "ClassFlags": 10754064,
@@ -297,7 +446,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "WBP_NewActiveTomePopupWidget_C'Default__WBP_NewActiveTomePopupWidget_C'",
-      "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.6"
+      "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.7"
     }
   },
   {
@@ -306,6 +455,10 @@
     "Class": "WidgetBlueprintGeneratedClass'DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.WBP_NewActiveTomePopupWidget_C'",
     "Properties": {
       "UberGraphFrame": {},
+      "Res21_9": {
+        "X": 21.0,
+        "Y": 9.0
+      },
       "bHasScriptImplementedTick": false,
       "bHasScriptImplementedPaint": false
     }
@@ -319,7 +472,7 @@
       "Slots": [
         {
           "ObjectName": "CanvasPanelSlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_3'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.8"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.9"
         }
       ]
     }
@@ -344,11 +497,11 @@
       },
       "Parent": {
         "ObjectName": "CanvasPanel'WBP_NewActiveTomePopupWidget_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.7"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.8"
       },
       "Content": {
         "ObjectName": "ScaleBox'WBP_NewActiveTomePopupWidget_C:WidgetTree.ScaleBox_38'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.50"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.57"
       }
     }
   },
@@ -362,11 +515,15 @@
         "ImageSize": {
           "X": 3840.0,
           "Y": 2160.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Material'M_UI_CropToFit'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Common/Materials/M_UI_CropToFit.0"
         }
       },
       "Slot": {
-        "ObjectName": "OverlaySlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_43.OverlaySlot_2'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.46"
+        "ObjectName": "OverlaySlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_43.OverlaySlot_4'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.54"
       }
     }
   },
@@ -388,7 +545,7 @@
       },
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.BottomContainer.OverlaySlot_3'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.35"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.42"
       }
     }
   },
@@ -410,7 +567,7 @@
       },
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.NewTome.OverlaySlot_12'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.39"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.46"
       }
     }
   },
@@ -432,7 +589,7 @@
       },
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.NewRift.OverlaySlot_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.37"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.44"
       },
       "RenderTransform": {
         "Scale": {
@@ -460,7 +617,7 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.RiftContent.VerticalBoxSlot_14'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.59"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.66"
       }
     }
   },
@@ -482,7 +639,7 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.TomeContent.VerticalBoxSlot_14'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.62"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.69"
       }
     }
   },
@@ -519,7 +676,7 @@
       "Justification": "ETextJustify::Center",
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_43.OverlaySlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.44"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.51"
       },
       "RenderOpacity": 0.0
     }
@@ -538,7 +695,7 @@
       "AutoWrapText": true,
       "Slot": {
         "ObjectName": "VerticalBoxSlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.RiftContent.VerticalBoxSlot_16'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.61"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.68"
       },
       "bIsVariable": true
     }
@@ -565,7 +722,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.RiftContainer.HorizontalBoxSlot_5'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.27"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.28"
       },
       "bIsVariable": true,
       "RenderOpacity": 0.75
@@ -592,7 +749,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.RiftContainer.HorizontalBoxSlot_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.26"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.27"
       },
       "bIsVariable": true,
       "RenderOpacity": 0.8
@@ -611,7 +768,7 @@
       "Justification": "ETextJustify::Right",
       "Slot": {
         "ObjectName": "VerticalBoxSlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.RiftContent.VerticalBoxSlot_15'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.60"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.67"
       },
       "bIsVariable": true
     }
@@ -629,7 +786,7 @@
       "AutoWrapText": true,
       "Slot": {
         "ObjectName": "VerticalBoxSlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.TomeContent.VerticalBoxSlot_16'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.64"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.71"
       },
       "bIsVariable": true
     }
@@ -646,7 +803,7 @@
       },
       "Slot": {
         "ObjectName": "VerticalBoxSlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.TomeContent.VerticalBoxSlot_15'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.63"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.70"
       },
       "bIsVariable": true
     }
@@ -660,16 +817,16 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.Footer.HorizontalBoxSlot_8'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.25"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.26"
         },
         {
           "ObjectName": "HorizontalBoxSlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.Footer.HorizontalBoxSlot_1'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.24"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.25"
         }
       ],
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.BottomContainer.OverlaySlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.34"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.41"
       },
       "RenderTransformPivot": {
         "X": 0.0,
@@ -686,16 +843,16 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.RiftContainer.HorizontalBoxSlot_5'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.27"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.28"
         },
         {
           "ObjectName": "HorizontalBoxSlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.RiftContainer.HorizontalBoxSlot_1'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.26"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.27"
         }
       ],
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_43.OverlaySlot_7'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.48"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.55"
       },
       "bIsVariable": true
     }
@@ -710,11 +867,11 @@
       "VerticalAlignment": "VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'WBP_NewActiveTomePopupWidget_C:WidgetTree.Footer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.22"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.23"
       },
       "Content": {
         "ObjectName": "WBP_CoreBackInputSwitcher_C'WBP_NewActiveTomePopupWidget_C:WidgetTree.RegressionButton'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.65"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.72"
       }
     }
   },
@@ -728,11 +885,11 @@
       "VerticalAlignment": "VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'WBP_NewActiveTomePopupWidget_C:WidgetTree.Footer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.22"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.23"
       },
       "Content": {
         "ObjectName": "Spacer'WBP_NewActiveTomePopupWidget_C:WidgetTree.HEIGHT_SPACER'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.56"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.63"
       }
     }
   },
@@ -750,11 +907,11 @@
       "HorizontalAlignment": "HAlign_Left",
       "Parent": {
         "ObjectName": "HorizontalBox'WBP_NewActiveTomePopupWidget_C:WidgetTree.RiftContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.23"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.24"
       },
       "Content": {
         "ObjectName": "DBDTextBlock'WBP_NewActiveTomePopupWidget_C:WidgetTree.RiftTimeValue'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.18"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.19"
       }
     }
   },
@@ -775,11 +932,430 @@
       "HorizontalAlignment": "HAlign_Left",
       "Parent": {
         "ObjectName": "HorizontalBox'WBP_NewActiveTomePopupWidget_C:WidgetTree.RiftContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.23"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.24"
       },
       "Content": {
         "ObjectName": "DBDTextBlock'WBP_NewActiveTomePopupWidget_C:WidgetTree.RiftTimeLabel'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.17"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.18"
+      }
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Fade-in",
+    "Outer": "Fade-in_INST",
+    "Class": "UScriptClass'MovieScene'",
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "D005B1A1-4F6D2CAD-99852DBB-6582731B",
+          "Name": "BgImageContainer",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'DBDImage'",
+            "ObjectPath": "/Script/DBDUIViewsCore"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "D005B1A1-4F6D2CAD-99852DBB-6582731B",
+          "BindingName": "BgImageContainer",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneColorTrack'WBP_NewActiveTomePopupWidget_C:Fade-in_INST.Fade-in.MovieSceneColorTrack_0'",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.33"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 63001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "CC99198F-44ACFABE-54498F8F-B5E9B11F"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneColorSection_0",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneColorSection_0",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'"
+  },
+  {
+    "Type": "MovieSceneColorSection",
+    "Name": "MovieSceneColorSection_0",
+    "Outer": "MovieSceneColorTrack_0",
+    "Class": "UScriptClass'MovieSceneColorSection'",
+    "Properties": {
+      "RedCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 60000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false
+      },
+      "GreenCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 60000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false
+      },
+      "BlueCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 60000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0,
+            "PaddingByte": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_NewActiveTomePopupWidget_C:Fade-in_INST.Fade-in.MovieSceneColorTrack_0.MovieSceneColorSection_0.EaseInFunction'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.30"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'WBP_NewActiveTomePopupWidget_C:Fade-in_INST.Fade-in.MovieSceneColorTrack_0.MovieSceneColorSection_0.EaseOutFunction'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.31"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 63000
+            }
+          }
+        }
+      },
+      "Signature": "897BFCC9-49F48E90-09B9F48D-F133F695"
+    }
+  },
+  {
+    "Type": "MovieSceneColorTrack",
+    "Name": "MovieSceneColorTrack_0",
+    "Outer": "Fade-in",
+    "Class": "UScriptClass'MovieSceneColorTrack'",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "ColorAndOpacity",
+        "PropertyPath": "ColorAndOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneColorSection'WBP_NewActiveTomePopupWidget_C:Fade-in_INST.Fade-in.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.32"
+        }
+      ],
+      "EvaluationFieldGuid": "B4FCB4E2-4E64B21F-38C6E18D-5A7F74D2",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneColorSection'WBP_NewActiveTomePopupWidget_C:Fade-in_INST.Fade-in.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.32"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 63000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "B4FCB4E2-4E64B21F-38C6E18D-5A7F74D2"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Outer": "Fade-in_INST",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 63000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneColorSection'WBP_NewActiveTomePopupWidget_C:Fade-in_INST.Fade-in.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.32"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "D005B1A1-4F6D2CAD-99852DBB-6582731B"
+          }
+        ]
+      },
+      "DeterminismFences": [
+        {
+          "FrameNumber": {
+            "Value": 63000
+          },
+          "SubFrame": 0.0
+        }
+      ],
+      "CompiledSignature": "974CFF92-4AB31C4D-40D01DBA-62592BCF",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
       }
     }
   },
@@ -792,16 +1368,16 @@
       "Slots": [
         {
           "ObjectName": "OverlaySlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.BottomContainer.OverlaySlot_3'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.35"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.42"
         },
         {
           "ObjectName": "OverlaySlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.BottomContainer.OverlaySlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.34"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.41"
         }
       ],
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_43.OverlaySlot_9'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.49"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.56"
       }
     }
   },
@@ -814,16 +1390,16 @@
       "Slots": [
         {
           "ObjectName": "OverlaySlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.NewRift.OverlaySlot_1'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.37"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.44"
         },
         {
           "ObjectName": "OverlaySlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.NewRift.OverlaySlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.36"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.43"
         }
       ],
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_43.OverlaySlot_3'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.47"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.53"
       },
       "bIsVariable": true
     }
@@ -837,16 +1413,16 @@
       "Slots": [
         {
           "ObjectName": "OverlaySlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.NewTome.OverlaySlot_12'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.39"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.46"
         },
         {
           "ObjectName": "OverlaySlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.NewTome.OverlaySlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.38"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.45"
         }
       ],
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_43.OverlaySlot_12'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.45"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.52"
       }
     }
   },
@@ -859,16 +1435,16 @@
       "Slots": [
         {
           "ObjectName": "OverlaySlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_156.OverlaySlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.40"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.47"
         },
         {
           "ObjectName": "OverlaySlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_156.OverlaySlot_1'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.41"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.48"
         }
       ],
       "Slot": {
         "ObjectName": "SizeBoxSlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.SizeBox_375.SizeBoxSlot_2'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.55"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.62"
       }
     }
   },
@@ -881,16 +1457,16 @@
       "Slots": [
         {
           "ObjectName": "OverlaySlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_158.OverlaySlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.42"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.49"
         },
         {
           "ObjectName": "OverlaySlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_158.OverlaySlot_1'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.43"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.50"
         }
       ],
       "Slot": {
         "ObjectName": "SizeBoxSlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.SizeBox.SizeBoxSlot_2'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.54"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.61"
       }
     }
   },
@@ -903,32 +1479,32 @@
       "Slots": [
         {
           "ObjectName": "OverlaySlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_43.OverlaySlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.44"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.51"
         },
         {
-          "ObjectName": "OverlaySlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_43.OverlaySlot_2'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.46"
+          "ObjectName": "OverlaySlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_43.OverlaySlot_4'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.54"
         },
         {
           "ObjectName": "OverlaySlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_43.OverlaySlot_12'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.45"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.52"
         },
         {
           "ObjectName": "OverlaySlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_43.OverlaySlot_3'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.47"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.53"
         },
         {
           "ObjectName": "OverlaySlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_43.OverlaySlot_9'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.49"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.56"
         },
         {
           "ObjectName": "OverlaySlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_43.OverlaySlot_7'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.48"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.55"
         }
       ],
       "Slot": {
         "ObjectName": "ScaleBoxSlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.ScaleBox_38.ScaleBoxSlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.51"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.58"
       },
       "RenderTransformPivot": {
         "X": 0.5,
@@ -949,11 +1525,11 @@
       "VerticalAlignment": "VAlign_Bottom",
       "Parent": {
         "ObjectName": "Overlay'WBP_NewActiveTomePopupWidget_C:WidgetTree.BottomContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.28"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.35"
       },
       "Content": {
         "ObjectName": "HorizontalBox'WBP_NewActiveTomePopupWidget_C:WidgetTree.Footer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.22"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.23"
       }
     }
   },
@@ -963,14 +1539,15 @@
     "Outer": "BottomContainer",
     "Class": "UScriptClass'OverlaySlot'",
     "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
       "VerticalAlignment": "VAlign_Bottom",
       "Parent": {
         "ObjectName": "Overlay'WBP_NewActiveTomePopupWidget_C:WidgetTree.BottomContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.28"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.35"
       },
       "Content": {
         "ObjectName": "DBDImage'WBP_NewActiveTomePopupWidget_C:WidgetTree.BottomSmokeFX_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.10"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.11"
       }
     }
   },
@@ -986,11 +1563,11 @@
       "HorizontalAlignment": "HAlign_Right",
       "Parent": {
         "ObjectName": "Overlay'WBP_NewActiveTomePopupWidget_C:WidgetTree.NewRift'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.29"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.36"
       },
       "Content": {
         "ObjectName": "SizeBox'WBP_NewActiveTomePopupWidget_C:WidgetTree.SizeBox'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.52"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.59"
       }
     }
   },
@@ -1003,11 +1580,11 @@
       "HorizontalAlignment": "HAlign_Right",
       "Parent": {
         "ObjectName": "Overlay'WBP_NewActiveTomePopupWidget_C:WidgetTree.NewRift'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.29"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.36"
       },
       "Content": {
         "ObjectName": "DBDImage'WBP_NewActiveTomePopupWidget_C:WidgetTree.DBDImage_SmokeRight'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.12"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.13"
       }
     }
   },
@@ -1022,11 +1599,11 @@
       },
       "Parent": {
         "ObjectName": "Overlay'WBP_NewActiveTomePopupWidget_C:WidgetTree.NewTome'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.30"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.37"
       },
       "Content": {
         "ObjectName": "SizeBox'WBP_NewActiveTomePopupWidget_C:WidgetTree.SizeBox_375'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.53"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.60"
       }
     }
   },
@@ -1038,11 +1615,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "Overlay'WBP_NewActiveTomePopupWidget_C:WidgetTree.NewTome'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.30"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.37"
       },
       "Content": {
         "ObjectName": "DBDImage'WBP_NewActiveTomePopupWidget_C:WidgetTree.DBDImage_LeftSmoke'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.11"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.12"
       }
     }
   },
@@ -1055,11 +1632,11 @@
       "HorizontalAlignment": "HAlign_Fill",
       "Parent": {
         "ObjectName": "Overlay'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_156'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.31"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.38"
       },
       "Content": {
         "ObjectName": "VerticalBox'WBP_NewActiveTomePopupWidget_C:WidgetTree.TomeContent'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.58"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.65"
       }
     }
   },
@@ -1075,11 +1652,11 @@
       "VerticalAlignment": "VAlign_Bottom",
       "Parent": {
         "ObjectName": "Overlay'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_156'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.31"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.38"
       },
       "Content": {
         "ObjectName": "WBP_CoreStandardInputSwitcher_C'WBP_NewActiveTomePopupWidget_C:WidgetTree.TomeButton'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.67"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.74"
       }
     }
   },
@@ -1092,11 +1669,11 @@
       "HorizontalAlignment": "HAlign_Fill",
       "Parent": {
         "ObjectName": "Overlay'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_158'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.32"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.39"
       },
       "Content": {
         "ObjectName": "VerticalBox'WBP_NewActiveTomePopupWidget_C:WidgetTree.RiftContent'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.57"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.64"
       }
     }
   },
@@ -1113,11 +1690,11 @@
       "VerticalAlignment": "VAlign_Bottom",
       "Parent": {
         "ObjectName": "Overlay'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_158'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.32"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.39"
       },
       "Content": {
         "ObjectName": "WBP_CoreStandardInputSwitcher_C'WBP_NewActiveTomePopupWidget_C:WidgetTree.RiftButton'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.66"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.73"
       }
     }
   },
@@ -1133,11 +1710,11 @@
       "HorizontalAlignment": "HAlign_Center",
       "Parent": {
         "ObjectName": "Overlay'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_43'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.33"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.40"
       },
       "Content": {
         "ObjectName": "DBDRichTextBlock'WBP_NewActiveTomePopupWidget_C:WidgetTree.TitleText'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.15"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.16"
       }
     }
   },
@@ -1149,29 +1726,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "Overlay'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_43'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.33"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.40"
       },
       "Content": {
         "ObjectName": "Overlay'WBP_NewActiveTomePopupWidget_C:WidgetTree.NewTome'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.30"
-      }
-    }
-  },
-  {
-    "Type": "OverlaySlot",
-    "Name": "OverlaySlot_2",
-    "Outer": "Overlay_43",
-    "Class": "UScriptClass'OverlaySlot'",
-    "Properties": {
-      "HorizontalAlignment": "HAlign_Fill",
-      "VerticalAlignment": "VAlign_Fill",
-      "Parent": {
-        "ObjectName": "Overlay'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_43'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.33"
-      },
-      "Content": {
-        "ObjectName": "DBDImage'WBP_NewActiveTomePopupWidget_C:WidgetTree.BgImageContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.9"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.37"
       }
     }
   },
@@ -1184,11 +1743,29 @@
       "HorizontalAlignment": "HAlign_Right",
       "Parent": {
         "ObjectName": "Overlay'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_43'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.33"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.40"
       },
       "Content": {
         "ObjectName": "Overlay'WBP_NewActiveTomePopupWidget_C:WidgetTree.NewRift'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.29"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.36"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_4",
+    "Outer": "Overlay_43",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_43'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.40"
+      },
+      "Content": {
+        "ObjectName": "DBDImage'WBP_NewActiveTomePopupWidget_C:WidgetTree.BgImageContainer'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.10"
       }
     }
   },
@@ -1205,11 +1782,11 @@
       "VerticalAlignment": "VAlign_Bottom",
       "Parent": {
         "ObjectName": "Overlay'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_43'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.33"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.40"
       },
       "Content": {
         "ObjectName": "HorizontalBox'WBP_NewActiveTomePopupWidget_C:WidgetTree.RiftContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.23"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.24"
       }
     }
   },
@@ -1219,14 +1796,15 @@
     "Outer": "Overlay_43",
     "Class": "UScriptClass'OverlaySlot'",
     "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
       "VerticalAlignment": "VAlign_Bottom",
       "Parent": {
         "ObjectName": "Overlay'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_43'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.33"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.40"
       },
       "Content": {
         "ObjectName": "Overlay'WBP_NewActiveTomePopupWidget_C:WidgetTree.BottomContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.28"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.35"
       }
     }
   },
@@ -1240,12 +1818,12 @@
       "Slots": [
         {
           "ObjectName": "ScaleBoxSlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.ScaleBox_38.ScaleBoxSlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.51"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.58"
         }
       ],
       "Slot": {
         "ObjectName": "CanvasPanelSlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_3'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.8"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.9"
       }
     }
   },
@@ -1259,11 +1837,11 @@
       "VerticalAlignment": "VAlign_Fill",
       "Parent": {
         "ObjectName": "ScaleBox'WBP_NewActiveTomePopupWidget_C:WidgetTree.ScaleBox_38'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.50"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.57"
       },
       "Content": {
         "ObjectName": "Overlay'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_43'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.33"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.40"
       }
     }
   },
@@ -1280,12 +1858,12 @@
       "Slots": [
         {
           "ObjectName": "SizeBoxSlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.SizeBox.SizeBoxSlot_2'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.54"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.61"
         }
       ],
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.NewRift.OverlaySlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.36"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.43"
       }
     }
   },
@@ -1302,12 +1880,12 @@
       "Slots": [
         {
           "ObjectName": "SizeBoxSlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.SizeBox_375.SizeBoxSlot_2'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.55"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.62"
         }
       ],
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.NewTome.OverlaySlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.38"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.45"
       }
     }
   },
@@ -1322,11 +1900,11 @@
       },
       "Parent": {
         "ObjectName": "SizeBox'WBP_NewActiveTomePopupWidget_C:WidgetTree.SizeBox'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.52"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.59"
       },
       "Content": {
         "ObjectName": "Overlay'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_158'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.32"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.39"
       }
     }
   },
@@ -1341,11 +1919,11 @@
       },
       "Parent": {
         "ObjectName": "SizeBox'WBP_NewActiveTomePopupWidget_C:WidgetTree.SizeBox_375'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.53"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.60"
       },
       "Content": {
         "ObjectName": "Overlay'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_156'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.31"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.38"
       }
     }
   },
@@ -1361,7 +1939,7 @@
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.Footer.HorizontalBoxSlot_8'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.25"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.26"
       }
     }
   },
@@ -1374,20 +1952,20 @@
       "Slots": [
         {
           "ObjectName": "VerticalBoxSlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.RiftContent.VerticalBoxSlot_14'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.59"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.66"
         },
         {
           "ObjectName": "VerticalBoxSlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.RiftContent.VerticalBoxSlot_15'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.60"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.67"
         },
         {
           "ObjectName": "VerticalBoxSlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.RiftContent.VerticalBoxSlot_16'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.61"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.68"
         }
       ],
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_158.OverlaySlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.42"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.49"
       }
     }
   },
@@ -1400,20 +1978,20 @@
       "Slots": [
         {
           "ObjectName": "VerticalBoxSlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.TomeContent.VerticalBoxSlot_14'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.62"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.69"
         },
         {
           "ObjectName": "VerticalBoxSlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.TomeContent.VerticalBoxSlot_15'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.63"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.70"
         },
         {
           "ObjectName": "VerticalBoxSlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.TomeContent.VerticalBoxSlot_16'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.64"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.71"
         }
       ],
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_156.OverlaySlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.40"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.47"
       }
     }
   },
@@ -1430,11 +2008,11 @@
       "VerticalAlignment": "VAlign_Top",
       "Parent": {
         "ObjectName": "VerticalBox'WBP_NewActiveTomePopupWidget_C:WidgetTree.RiftContent'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.57"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.64"
       },
       "Content": {
         "ObjectName": "DBDImage'WBP_NewActiveTomePopupWidget_C:WidgetTree.RiftIcon'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.13"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.14"
       }
     }
   },
@@ -1450,11 +2028,11 @@
       "VerticalAlignment": "VAlign_Top",
       "Parent": {
         "ObjectName": "VerticalBox'WBP_NewActiveTomePopupWidget_C:WidgetTree.RiftContent'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.57"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.64"
       },
       "Content": {
         "ObjectName": "DBDTextBlock'WBP_NewActiveTomePopupWidget_C:WidgetTree.RiftTitle'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.19"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.20"
       }
     }
   },
@@ -1470,11 +2048,11 @@
       "VerticalAlignment": "VAlign_Top",
       "Parent": {
         "ObjectName": "VerticalBox'WBP_NewActiveTomePopupWidget_C:WidgetTree.RiftContent'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.57"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.64"
       },
       "Content": {
         "ObjectName": "DBDTextBlock'WBP_NewActiveTomePopupWidget_C:WidgetTree.RiftDescription'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.16"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.17"
       }
     }
   },
@@ -1491,11 +2069,11 @@
       "VerticalAlignment": "VAlign_Top",
       "Parent": {
         "ObjectName": "VerticalBox'WBP_NewActiveTomePopupWidget_C:WidgetTree.TomeContent'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.58"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.65"
       },
       "Content": {
         "ObjectName": "DBDImage'WBP_NewActiveTomePopupWidget_C:WidgetTree.TomeIcon'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.14"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.15"
       }
     }
   },
@@ -1511,11 +2089,11 @@
       "VerticalAlignment": "VAlign_Top",
       "Parent": {
         "ObjectName": "VerticalBox'WBP_NewActiveTomePopupWidget_C:WidgetTree.TomeContent'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.58"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.65"
       },
       "Content": {
         "ObjectName": "DBDTextBlock'WBP_NewActiveTomePopupWidget_C:WidgetTree.TomeTitle'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.21"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.22"
       }
     }
   },
@@ -1531,11 +2109,11 @@
       "VerticalAlignment": "VAlign_Top",
       "Parent": {
         "ObjectName": "VerticalBox'WBP_NewActiveTomePopupWidget_C:WidgetTree.TomeContent'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.58"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.65"
       },
       "Content": {
         "ObjectName": "DBDTextBlock'WBP_NewActiveTomePopupWidget_C:WidgetTree.TomeDescription'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.20"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.21"
       }
     }
   },
@@ -1548,7 +2126,7 @@
     "Properties": {
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.Footer.HorizontalBoxSlot_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.24"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.25"
       }
     }
   },
@@ -1562,7 +2140,7 @@
       "_alignment": "ETextJustify::Right",
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_158.OverlaySlot_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.43"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.50"
       }
     }
   },
@@ -1575,8 +2153,34 @@
     "Properties": {
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_NewActiveTomePopupWidget_C:WidgetTree.Overlay_156.OverlaySlot_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.41"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.48"
       }
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Fade-in_INST",
+    "Outer": "WBP_NewActiveTomePopupWidget_C",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'WBP_NewActiveTomePopupWidget_C:Fade-in_INST.Fade-in'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.29"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "BgImageContainer",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "D005B1A1-4F6D2CAD-99852DBB-6582731B",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "Fade-in",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'WBP_NewActiveTomePopupWidget_C:Fade-in_INST.CompiledData'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.34"
+      },
+      "Signature": "974CFF92-4AB31C4D-40D01DBA-62592BCF"
     }
   },
   {
@@ -1587,7 +2191,7 @@
     "Properties": {
       "RootWidget": {
         "ObjectName": "CanvasPanel'WBP_NewActiveTomePopupWidget_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.7"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/NewActiveTomePopup/WBP_NewActiveTomePopupWidget.8"
       }
     }
   }

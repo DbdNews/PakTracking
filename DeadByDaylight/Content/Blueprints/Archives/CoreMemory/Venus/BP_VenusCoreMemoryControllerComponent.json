@@ -1,0 +1,137 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_VenusCoreMemoryControllerComponent_C",
+    "Super": "BP_CoreMemoryControllerComponentBase_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_CoreMemoryControllerComponentBase_C'",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/CoreMemory/BP_CoreMemoryControllerComponentBase.0"
+    },
+    "ClassFlags": 10749972,
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_VenusCoreMemoryControllerComponent_C'Default__BP_VenusCoreMemoryControllerComponent_C'",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/CoreMemory/Venus/BP_VenusCoreMemoryControllerComponent.1"
+    }
+  },
+  {
+    "Type": "BP_VenusCoreMemoryControllerComponent_C",
+    "Name": "Default__BP_VenusCoreMemoryControllerComponent_C",
+    "Template": "Default__BP_CoreMemoryControllerComponentBase_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/Archives/CoreMemory/Venus/BP_VenusCoreMemoryControllerComponent.BP_VenusCoreMemoryControllerComponent_C'",
+    "Properties": {
+      "_behaviours": [
+        {
+          "ObjectName": "CoreMemoryPortalDefaultBehaviour'Default__BP_VenusCoreMemoryControllerComponent_C:CoreMemoryPortalDefaultBehaviour_0'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/CoreMemory/Venus/BP_VenusCoreMemoryControllerComponent.5"
+        },
+        {
+          "ObjectName": "CoreMemoryDefaultQuestProgressBehaviour'Default__BP_VenusCoreMemoryControllerComponent_C:CoreMemoryDefaultQuestProgressBehaviour_0'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/CoreMemory/Venus/BP_VenusCoreMemoryControllerComponent.3"
+        },
+        {
+          "ObjectName": "CoreMemorySpawnFragmentsOnCollectBehaviour'Default__BP_VenusCoreMemoryControllerComponent_C:CoreMemorySpawnFragmentsOnCollectBehaviour_0'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/CoreMemory/Venus/BP_VenusCoreMemoryControllerComponent.7"
+        },
+        {
+          "ObjectName": "BP_CoreMemoryScreamBehaviour_C'Default__BP_VenusCoreMemoryControllerComponent_C:BP_CoreMemoryScreamBehaviour_C_0'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/CoreMemory/Venus/BP_VenusCoreMemoryControllerComponent.2"
+        },
+        {
+          "ObjectName": "CoreMemoryImposeStatusEffectBehaviour'Default__BP_VenusCoreMemoryControllerComponent_C:CoreMemoryImposeStatusEffectBehaviour_0'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/CoreMemory/Venus/BP_VenusCoreMemoryControllerComponent.4"
+        },
+        {
+          "ObjectName": "CoreMemoryRemoveStatusEffectBehaviour'Default__BP_VenusCoreMemoryControllerComponent_C:CoreMemoryRemoveStatusEffectBehaviour_0'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/CoreMemory/Venus/BP_VenusCoreMemoryControllerComponent.6"
+        }
+      ],
+      "_archiveSpecialBehaviourId": "VenusCoreMemory"
+    }
+  },
+  {
+    "Type": "BP_CoreMemoryScreamBehaviour_C",
+    "Name": "BP_CoreMemoryScreamBehaviour_C_0",
+    "Outer": "Default__BP_VenusCoreMemoryControllerComponent_C",
+    "Template": "Default__BP_CoreMemoryScreamBehaviour_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/Archives/CoreMemory/Behaviours/BP_CoreMemoryScreamBehaviour.BP_CoreMemoryScreamBehaviour_C'",
+    "Properties": {
+      "_shouldScreamOnCollect": true
+    }
+  },
+  {
+    "Type": "CoreMemoryDefaultQuestProgressBehaviour",
+    "Name": "CoreMemoryDefaultQuestProgressBehaviour_0",
+    "Outer": "Default__BP_VenusCoreMemoryControllerComponent_C",
+    "Class": "UScriptClass'CoreMemoryDefaultQuestProgressBehaviour'",
+    "Properties": {
+      "_onPlayerExitWithMemoryAcquiredScoreTag": {
+        "TagName": "GameEvent.ScoreEvent.CoreMemory.EscapeWithMemory"
+      },
+      "_onFragmentCollectedScoreTag": {
+        "TagName": "GameEvent.ScoreEvent.CoreMemory.FragmentCollected"
+      },
+      "_onMemoryAcquiredScoreTag": {
+        "TagName": "GameEvent.ScoreEvent.CoreMemory.MemoryAcquired"
+      },
+      "_onMemorySynchronizedScoreTag": {
+        "TagName": "GameEvent.ScoreEvent.CoreMemory.MemorySynchronized"
+      }
+    }
+  },
+  {
+    "Type": "CoreMemoryImposeStatusEffectBehaviour",
+    "Name": "CoreMemoryImposeStatusEffectBehaviour_0",
+    "Outer": "Default__BP_VenusCoreMemoryControllerComponent_C",
+    "Class": "UScriptClass'CoreMemoryImposeStatusEffectBehaviour'",
+    "Properties": {
+      "_statusEffectToImposeOnMemoryAcquired": {
+        "_statusEffect": {
+          "ObjectName": "BlueprintGeneratedClass'BlindnessEffect_C'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Perks/StatusEffects/BlindnessEffect.2"
+        },
+        "_effectDurationParamKey": "lastFragmentEffectDuration"
+      }
+    }
+  },
+  {
+    "Type": "CoreMemoryPortalDefaultBehaviour",
+    "Name": "CoreMemoryPortalDefaultBehaviour_0",
+    "Outer": "Default__BP_VenusCoreMemoryControllerComponent_C",
+    "Class": "UScriptClass'CoreMemoryPortalDefaultBehaviour'"
+  },
+  {
+    "Type": "CoreMemoryRemoveStatusEffectBehaviour",
+    "Name": "CoreMemoryRemoveStatusEffectBehaviour_0",
+    "Outer": "Default__BP_VenusCoreMemoryControllerComponent_C",
+    "Class": "UScriptClass'CoreMemoryRemoveStatusEffectBehaviour'",
+    "Properties": {
+      "_statusEffectToRemoveOnMemorySynchronized": {
+        "ObjectName": "BlueprintGeneratedClass'BlindnessEffect_C'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Perks/StatusEffects/BlindnessEffect.2"
+      }
+    }
+  },
+  {
+    "Type": "CoreMemorySpawnFragmentsOnCollectBehaviour",
+    "Name": "CoreMemorySpawnFragmentsOnCollectBehaviour_0",
+    "Outer": "Default__BP_VenusCoreMemoryControllerComponent_C",
+    "Class": "UScriptClass'CoreMemorySpawnFragmentsOnCollectBehaviour'",
+    "Properties": {
+      "_fragmentSpawnData": {
+        "FragmentClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_VenusCoreMemoryFragment_C'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Archives/CoreMemory/Venus/BP_VenusCoreMemoryFragment.11"
+        },
+        "SpawnDistanceFromPlayer": 1600.0,
+        "SpawnDistanceFromOtherFragments": 2000.0
+      }
+    }
+  }
+]

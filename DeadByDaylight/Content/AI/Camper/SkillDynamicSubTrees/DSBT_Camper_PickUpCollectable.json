@@ -1,0 +1,752 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "DSBT_Camper_PickUpCollectable",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_Camper_PickUpCollectable:BTComposite_Selector_13'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.2"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Camper'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BB_Camper.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "DSBT_Camper_PickUpCollectable",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'DSBT_Camper_PickUpCollectable:BTComposite_Selector_2'",
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'DSBT_Camper_PickUpCollectable:BTDecorator_Blackboard_1'",
+              "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.8"
+            },
+            {
+              "ObjectName": "BTDecorator_ItemType'DSBT_Camper_PickUpCollectable:BTDecorator_ItemType_0'",
+              "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.14"
+            },
+            {
+              "ObjectName": "BTDecorator_ExtIsAtLocation'DSBT_Camper_PickUpCollectable:BTDecorator_ExtIsAtLocation_3'",
+              "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.12"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_SimpleParallel'DSBT_Camper_PickUpCollectable:BTComposite_SimpleParallel_0'",
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.7"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_SetBBEntry'DSBT_Camper_PickUpCollectable:BTService_SetBBEntry_1'",
+          "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.18"
+        },
+        {
+          "ObjectName": "BTService_ClearBBEntry'DSBT_Camper_PickUpCollectable:BTService_ClearBBEntry_1'",
+          "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.17"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_PickUpCollectable'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_Camper_PickUpCollectable:BTComposite_Selector_14'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_13",
+    "Outer": "DSBT_Camper_PickUpCollectable",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'DSBT_Camper_PickUpCollectable:BTComposite_Selector_14'",
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ContainsInteraction'DSBT_Camper_PickUpCollectable:BTDecorator_ContainsInteraction_7'",
+              "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.9"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_PickUpCollectable'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_14",
+    "Outer": "DSBT_Camper_PickUpCollectable",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_StealthMoveTo'DSBT_Camper_PickUpCollectable:BTTask_StealthMoveTo_0'",
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.24"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ExtIsAtLocation'DSBT_Camper_PickUpCollectable:BTDecorator_ExtIsAtLocation_0'",
+              "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.10"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'DSBT_Camper_PickUpCollectable:BTComposite_Selector_1'",
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.1"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_PickUpCollectable'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_Camper_PickUpCollectable:BTComposite_Selector_13'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_2",
+    "Outer": "DSBT_Camper_PickUpCollectable",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'DSBT_Camper_PickUpCollectable:BTComposite_Sequence_0'",
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.5"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsInteractionAvailable'DSBT_Camper_PickUpCollectable:BTDecorator_IsInteractionAvailable_0'",
+              "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.13"
+            },
+            {
+              "ObjectName": "BTDecorator_TagCooldown'DSBT_Camper_PickUpCollectable:BTDecorator_TagCooldown_0'",
+              "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.16"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'DSBT_Camper_PickUpCollectable:BTComposite_Sequence_1'",
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.6"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Loop'DSBT_Camper_PickUpCollectable:BTDecorator_Loop_0'",
+              "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.15"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Drop Special Item",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_PickUpCollectable'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_Camper_PickUpCollectable:BTComposite_Selector_1'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "DSBT_Camper_PickUpCollectable",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_InputPress'DSBT_Camper_PickUpCollectable:BTTask_InputPress_0'",
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.21"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'DSBT_Camper_PickUpCollectable:BTTask_Wait_0'",
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.26"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_PickUpCollectable'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_Camper_PickUpCollectable:BTComposite_Selector_2'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "DSBT_Camper_PickUpCollectable",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetRandomNavPoint'DSBT_Camper_PickUpCollectable:BTTask_SetRandomNavPoint_0'",
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.23"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ExtMoveTo'DSBT_Camper_PickUpCollectable:BTTask_ExtMoveTo_0'",
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.20"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_SetTagCooldown'DSBT_Camper_PickUpCollectable:BTService_SetTagCooldown_0'",
+          "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.19"
+        }
+      ],
+      "NodeName": "Move Until Drop Available",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_PickUpCollectable'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_Camper_PickUpCollectable:BTComposite_Selector_2'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_0",
+    "Outer": "DSBT_Camper_PickUpCollectable",
+    "Class": "UScriptClass'BTComposite_SimpleParallel'",
+    "Properties": {
+      "FinishMode": "EBTParallelMode::WaitForBackground",
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_StealthMoveTo'DSBT_Camper_PickUpCollectable:BTTask_StealthMoveTo_1'",
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.25"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Interact'DSBT_Camper_PickUpCollectable:BTTask_Interact_0'",
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.22"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ExtIsAtLocation'DSBT_Camper_PickUpCollectable:BTDecorator_ExtIsAtLocation_1'",
+              "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.11"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_PickUpCollectable'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_Camper_PickUpCollectable:BTComposite_Selector_1'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "DSBT_Camper_PickUpCollectable",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Properties": {
+      "StringValue": "None",
+      "CachedDescription": "SpecialItemID Is Not Equal To [None]",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "SpecialItemID"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "If Has Special Item",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_PickUpCollectable'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_Camper_PickUpCollectable:BTComposite_Selector_1'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ContainsInteraction",
+    "Name": "BTDecorator_ContainsInteraction_7",
+    "Outer": "DSBT_Camper_PickUpCollectable",
+    "Class": "UScriptClass'BTDecorator_ContainsInteraction'",
+    "Properties": {
+      "BBInteractorObj": {
+        "SelectedKeyName": "WishedInteractor"
+      },
+      "InteractionIds": [
+        "Collect"
+      ],
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "If Wished Interactor Gives Killer Item",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_PickUpCollectable'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_Camper_PickUpCollectable:BTComposite_Selector_13'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ExtIsAtLocation",
+    "Name": "BTDecorator_ExtIsAtLocation_0",
+    "Outer": "DSBT_Camper_PickUpCollectable",
+    "Class": "UScriptClass'BTDecorator_ExtIsAtLocation'",
+    "Properties": {
+      "BBLoc": {
+        "SelectedKeyName": "WishedInteractor"
+      },
+      "UseAlternativeLoc": true,
+      "AcceptableRadius": {
+        "DefaultValue": 300.0
+      },
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "If Is Far Away",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_PickUpCollectable'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_Camper_PickUpCollectable:BTComposite_Selector_14'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ExtIsAtLocation",
+    "Name": "BTDecorator_ExtIsAtLocation_1",
+    "Outer": "DSBT_Camper_PickUpCollectable",
+    "Class": "UScriptClass'BTDecorator_ExtIsAtLocation'",
+    "Properties": {
+      "BBLoc": {
+        "SelectedKeyName": "WishedInteractor"
+      },
+      "UseAlternativeLoc": true,
+      "AcceptableRadius": {
+        "DefaultValue": 90.0
+      },
+      "NodeName": "Is At Interaction Range",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_PickUpCollectable'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'DSBT_Camper_PickUpCollectable:BTComposite_SimpleParallel_0'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ExtIsAtLocation",
+    "Name": "BTDecorator_ExtIsAtLocation_3",
+    "Outer": "DSBT_Camper_PickUpCollectable",
+    "Class": "UScriptClass'BTDecorator_ExtIsAtLocation'",
+    "Properties": {
+      "BBLoc": {
+        "SelectedKeyName": "WishedInteractorLocation"
+      },
+      "AcceptableRadius": {
+        "DefaultValue": 200.0
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "Is Close To The Interactor",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_PickUpCollectable'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_Camper_PickUpCollectable:BTComposite_Selector_1'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsInteractionAvailable",
+    "Name": "BTDecorator_IsInteractionAvailable_0",
+    "Outer": "DSBT_Camper_PickUpCollectable",
+    "Class": "UScriptClass'BTDecorator_IsInteractionAvailable'",
+    "Properties": {
+      "InteractionCheckType": "EInteractionCheckType::InputType",
+      "InputType": "EInputInteractionType::VE_ItemDrop",
+      "BBInteractor": {},
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "Is Drop Item Available",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_PickUpCollectable'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_Camper_PickUpCollectable:BTComposite_Selector_2'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ItemType",
+    "Name": "BTDecorator_ItemType_0",
+    "Outer": "DSBT_Camper_PickUpCollectable",
+    "Class": "UScriptClass'BTDecorator_ItemType'",
+    "Properties": {
+      "BBTargetObject": {
+        "SelectedKeyName": "WishedInteractor"
+      },
+      "ItemType": "EItemType::SpecialItem",
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "If Interactor Is Special Item",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_PickUpCollectable'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_Camper_PickUpCollectable:BTComposite_Selector_1'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Loop",
+    "Name": "BTDecorator_Loop_0",
+    "Outer": "DSBT_Camper_PickUpCollectable",
+    "Class": "UScriptClass'BTDecorator_Loop'",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_PickUpCollectable'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_Camper_PickUpCollectable:BTComposite_Selector_2'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TagCooldown",
+    "Name": "BTDecorator_TagCooldown_0",
+    "Outer": "DSBT_Camper_PickUpCollectable",
+    "Class": "UScriptClass'BTDecorator_TagCooldown'",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Skills.Contexts.Task.Camper.DropItem"
+      },
+      "bActivatesCooldown": false,
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "DropItem Tag Cooldown",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_PickUpCollectable'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_Camper_PickUpCollectable:BTComposite_Selector_2'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.4"
+      }
+    }
+  },
+  {
+    "Type": "BTService_ClearBBEntry",
+    "Name": "BTService_ClearBBEntry_1",
+    "Outer": "DSBT_Camper_PickUpCollectable",
+    "Class": "UScriptClass'BTService_ClearBBEntry'",
+    "Properties": {
+      "BBToResetKey": {
+        "SelectedKeyName": "LockedIntoGoal"
+      },
+      "When": "EAINodeRelevancyOptions::OnExit",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_PickUpCollectable'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_Camper_PickUpCollectable:BTComposite_Selector_1'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.1"
+      }
+    }
+  },
+  {
+    "Type": "BTService_SetBBEntry",
+    "Name": "BTService_SetBBEntry_1",
+    "Outer": "DSBT_Camper_PickUpCollectable",
+    "Class": "UScriptClass'BTService_SetBBEntry'",
+    "Properties": {
+      "BBToSetKey": {
+        "SelectedKeyName": "LockedIntoGoal"
+      },
+      "ToSetValue": "True",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_PickUpCollectable'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_Camper_PickUpCollectable:BTComposite_Selector_1'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.1"
+      }
+    }
+  },
+  {
+    "Type": "BTService_SetTagCooldown",
+    "Name": "BTService_SetTagCooldown_0",
+    "Outer": "DSBT_Camper_PickUpCollectable",
+    "Class": "UScriptClass'BTService_SetTagCooldown'",
+    "Properties": {
+      "CooldownTag": {
+        "TagName": "AI.Skills.Contexts.Task.Camper.DropItem"
+      },
+      "CooldownDuration": 0.4,
+      "NodeName": "Set DropItem Tag Cooldown",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_PickUpCollectable'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'DSBT_Camper_PickUpCollectable:BTComposite_Sequence_1'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ExtMoveTo",
+    "Name": "BTTask_ExtMoveTo_0",
+    "Outer": "DSBT_Camper_PickUpCollectable",
+    "Class": "UScriptClass'BTTask_ExtMoveTo'",
+    "Properties": {
+      "BBStrafeFocus": {},
+      "ToGoalMovementMode": "ECharacterMovementTypes::Normal",
+      "NearGoalMovementMode": "ECharacterMovementTypes::Normal",
+      "BBIgnoreGroupAvoidance": {},
+      "AcceptableRadius": 10.0,
+      "FilterClass": {
+        "ObjectName": "BlueprintGeneratedClass'NavQuery_Camper_Limited_C'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/NavQuery_Camper_Limited.0"
+      },
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "ToLocation"
+      },
+      "NodeName": "Move To Random Location",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_PickUpCollectable'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'DSBT_Camper_PickUpCollectable:BTComposite_Sequence_1'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_InputPress",
+    "Name": "BTTask_InputPress_0",
+    "Outer": "DSBT_Camper_PickUpCollectable",
+    "Class": "UScriptClass'BTTask_InputPress'",
+    "Properties": {
+      "Input": "EPawnInputPressTypes::DropItem",
+      "NodeName": "Press Input To Drop",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_PickUpCollectable'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'DSBT_Camper_PickUpCollectable:BTComposite_Sequence_0'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Interact",
+    "Name": "BTTask_Interact_0",
+    "Outer": "DSBT_Camper_PickUpCollectable",
+    "Class": "UScriptClass'BTTask_Interact'",
+    "Properties": {
+      "BBInteractorObj": {
+        "SelectedKeyName": "WishedInteractor"
+      },
+      "NodeName": "Interact with Wished Interactor",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_PickUpCollectable'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'DSBT_Camper_PickUpCollectable:BTComposite_SimpleParallel_0'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetRandomNavPoint",
+    "Name": "BTTask_SetRandomNavPoint_0",
+    "Outer": "DSBT_Camper_PickUpCollectable",
+    "Class": "UScriptClass'BTTask_SetRandomNavPoint'",
+    "Properties": {
+      "BBFromLocation": {
+        "SelectedKeyName": "SelfActor"
+      },
+      "BBToLocation": {
+        "SelectedKeyName": "ToLocation"
+      },
+      "MinAroundRadius": 150.0,
+      "MaxAroundRadius": 400.0,
+      "FilterClass": {
+        "ObjectName": "BlueprintGeneratedClass'NavQuery_Camper_Limited_C'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/NavQuery_Camper_Limited.0"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_PickUpCollectable'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'DSBT_Camper_PickUpCollectable:BTComposite_Sequence_1'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_StealthMoveTo",
+    "Name": "BTTask_StealthMoveTo_0",
+    "Outer": "DSBT_Camper_PickUpCollectable",
+    "Class": "UScriptClass'BTTask_StealthMoveTo'",
+    "Properties": {
+      "BBStrafeFocus": {
+        "SelectedKeyName": "HostileStimulusOriginLocation"
+      },
+      "BBIgnoreGroupAvoidance": {
+        "SelectedKeyName": "MoveToGoalObj"
+      },
+      "PathReachedPointRadius": 5.0,
+      "bReachTestIncludesAgentRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "MoveToGoalLocation"
+      },
+      "NodeName": "Stealth Move To Wished Interactor",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_PickUpCollectable'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_Camper_PickUpCollectable:BTComposite_Selector_14'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_StealthMoveTo",
+    "Name": "BTTask_StealthMoveTo_1",
+    "Outer": "DSBT_Camper_PickUpCollectable",
+    "Class": "UScriptClass'BTTask_StealthMoveTo'",
+    "Properties": {
+      "BBStrafeFocus": {
+        "SelectedKeyName": "HostileStimulusOriginLocation"
+      },
+      "BBIgnoreGroupAvoidance": {
+        "SelectedKeyName": "MoveToGoalObj"
+      },
+      "PathReachedPointRadius": 5.0,
+      "bReachTestIncludesAgentRadius": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "MoveToGoalLocation"
+      },
+      "NodeName": "Stealth Move To Wished Interactor",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_PickUpCollectable'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'DSBT_Camper_PickUpCollectable:BTComposite_SimpleParallel_0'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "DSBT_Camper_PickUpCollectable",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_PickUpCollectable'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'DSBT_Camper_PickUpCollectable:BTComposite_Sequence_0'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_PickUpCollectable.5"
+      }
+    }
+  }
+]
