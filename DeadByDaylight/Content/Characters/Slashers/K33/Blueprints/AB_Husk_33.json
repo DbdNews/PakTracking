@@ -1,0 +1,919 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_AB_Husk_33",
+    "Outer": "AB_Husk_33_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetCopiedSkeletalMesh_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "ConstParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'SkeletalMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetLinkedAnimGraphInstanceByTag_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AnimInstance'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "K2Node_DynamicCast_AsBPI_AB_Slasher_Sub_Graph_Look_At",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "InterfaceClass": {
+          "ObjectName": "BlueprintGeneratedClass'BPI_AB_Slasher_SubGraph_LookAt_C'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Anim_SubGraph/BPI_AB_Slasher_SubGraph_LookAt.1"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintInitializeAnimation",
+    "Outer": "AB_Husk_33_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'AnimInstance:BlueprintInitializeAnimation'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": 134350848
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintLinkedAnimationLayersInitialized",
+    "Outer": "AB_Husk_33_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'AnimInstance:BlueprintLinkedAnimationLayersInitialized'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": 134350848
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "AB_Husk_33_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraph",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Parm | OutParm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PoseLink'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": 205520896
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "AB_Husk_33_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "SM_Husk_FPV",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "EnterTunnel",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 8,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": true,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 4,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                5
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Dig",
+              "Transitions": [],
+              "StateRootNodeIndex": 6,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                7
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'SlasherMale_REF_Skeleton'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Models/SlasherMale_REF_Skeleton.450"
+      },
+      "OrderedSavedPoseIndicesMap": [
+        {
+          "AnimGraph": {
+            "OrderedSavedPoseNodeIndices": []
+          }
+        }
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "CopyIndex": 0,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_CopyPoseFromMesh"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "AnimBlueprintGeneratedClass'AB_Husk_33_C'",
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K33/Blueprints/AB_Husk_33.4"
+            }
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "CopyIndex": 1,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_RotationOffsetBlendSpace"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "AnimBlueprintGeneratedClass'AB_Husk_33_C'",
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K33/Blueprints/AB_Husk_33.4"
+            }
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "CopyIndex": 2,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_BlendListByBool"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "AnimBlueprintGeneratedClass'AB_Husk_33_C'",
+              "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K33/Blueprints/AB_Husk_33.4"
+            }
+          }
+        }
+      ],
+      "PropertyAccessLibrary": {
+        "PathSegments": [
+          {
+            "Name": "CopiedSkeletalMesh",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "CopiedSkeletalMesh"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'AB_Husk_33_C'",
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K33/Blueprints/AB_Husk_33.4"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_CopyPoseFromMesh",
+            "Struct": {
+              "ObjectName": "ScriptStruct'AnimNode_CopyPoseFromMesh'",
+              "ObjectPath": "/Script/AnimGraphRuntime"
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_CopyPoseFromMesh"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'AB_Husk_33_C'",
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K33/Blueprints/AB_Husk_33.4"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "SourceMeshComponent",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "SourceMeshComponent"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "ScriptStruct'AnimNode_CopyPoseFromMesh'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "Anim Pitch",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "Anim Pitch"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'AB_Husk_33_C'",
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K33/Blueprints/AB_Husk_33.4"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_RotationOffsetBlendSpace",
+            "Struct": {
+              "ObjectName": "ScriptStruct'AnimNode_RotationOffsetBlendSpace'",
+              "ObjectPath": "/Script/AnimGraphRuntime"
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_RotationOffsetBlendSpace"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'AB_Husk_33_C'",
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K33/Blueprints/AB_Husk_33.4"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "Y",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "Y"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "isFirstPersonView",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "isFirstPersonView"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'AB_Husk_33_C'",
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K33/Blueprints/AB_Husk_33.4"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_BlendListByBool",
+            "Struct": {
+              "ObjectName": "ScriptStruct'AnimNode_BlendListByBool'",
+              "ObjectPath": "/Script/AnimGraphRuntime"
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_BlendListByBool"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'AB_Husk_33_C'",
+                "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K33/Blueprints/AB_Husk_33.4"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bActiveValue",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bActiveValue"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "ScriptStruct'AnimNode_BlendListByBool'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          }
+        ],
+        "SrcPaths": [
+          {
+            "PathSegmentStartIndex": 0,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 3,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 6,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          }
+        ],
+        "DestPaths": [
+          {
+            "PathSegmentStartIndex": 1,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 4,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 7,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          }
+        ],
+        "CopyBatches": {
+          "Copies": [
+            {
+              "AccessIndex": 0,
+              "DestAccessStartIndex": 0,
+              "DestAccessEndIndex": 1,
+              "Type": "EPropertyAccessCopyType::Object"
+            },
+            {
+              "AccessIndex": 1,
+              "DestAccessStartIndex": 1,
+              "DestAccessEndIndex": 2,
+              "Type": "EPropertyAccessCopyType::Plain"
+            },
+            {
+              "AccessIndex": 2,
+              "DestAccessStartIndex": 2,
+              "DestAccessEndIndex": 3,
+              "Type": "EPropertyAccessCopyType::Bool"
+            }
+          ]
+        }
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'AB_Husk_33_C:ExecuteUbergraph_AB_Husk_33'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K33/Blueprints/AB_Husk_33.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'K33HuskAnimInstance'",
+      "ObjectPath": "/Script/TheK33"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'AB_Husk_33_C:AnimGraph'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K33/Blueprints/AB_Husk_33.3"
+      },
+      {
+        "ObjectName": "Function'AB_Husk_33_C:BlueprintLinkedAnimationLayersInitialized'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K33/Blueprints/AB_Husk_33.2"
+      },
+      {
+        "ObjectName": "Function'AB_Husk_33_C:BlueprintInitializeAnimation'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K33/Blueprints/AB_Husk_33.1"
+      },
+      {
+        "ObjectName": "Function'AB_Husk_33_C:ExecuteUbergraph_AB_Husk_33'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K33/Blueprints/AB_Husk_33.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Root",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 64,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_Root'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Slot_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 88,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_Slot'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_BlendListByBool",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_BlendListByBool'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 136,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 64,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 136,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 64,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateMachine",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 176,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_RotationOffsetBlendSpace",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 424,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_RotationOffsetBlendSpace'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_CopyPoseFromMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 472,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_CopyPoseFromMesh'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Slot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 88,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_Slot'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "isFirstPersonView",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Anim Pitch",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ASet_Husk_LookAt",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "UserDefinedStruct'Aset_Slasher_LookAT'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Animations/AnimSets/Aset_Slasher_LookAT.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CopiedSkeletalMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'SkeletalMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_AB_Husk_33": {
+        "ObjectName": "Function'AB_Husk_33_C:ExecuteUbergraph_AB_Husk_33'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K33/Blueprints/AB_Husk_33.0"
+      },
+      "BlueprintInitializeAnimation": {
+        "ObjectName": "Function'AB_Husk_33_C:BlueprintInitializeAnimation'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K33/Blueprints/AB_Husk_33.1"
+      },
+      "BlueprintLinkedAnimationLayersInitialized": {
+        "ObjectName": "Function'AB_Husk_33_C:BlueprintLinkedAnimationLayersInitialized'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K33/Blueprints/AB_Husk_33.2"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'AB_Husk_33_C:AnimGraph'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K33/Blueprints/AB_Husk_33.3"
+      }
+    },
+    "ClassFlags": 8652824,
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "AB_Husk_33_C'Default__AB_Husk_33_C'",
+      "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K33/Blueprints/AB_Husk_33.5"
+    }
+  },
+  {
+    "Type": "AB_Husk_33_C",
+    "Name": "Default__AB_Husk_33_C",
+    "Class": "AnimBlueprintGeneratedClass'DeadByDaylight/Content/Characters/Slashers/K33/Blueprints/AB_Husk_33.AB_Husk_33_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root": {
+        "Result": {
+          "LinkID": 1
+        },
+        "Name": "AnimGraph",
+        "Group": "None"
+      },
+      "AnimGraphNode_Slot_1": {
+        "Source": {
+          "LinkID": 11
+        },
+        "SlotName": "MontageFullOverride",
+        "bAlwaysUpdateSourcePose": false
+      },
+      "AnimGraphNode_BlendListByBool": {
+        "bActiveValue": false,
+        "BlendPose": [
+          {
+            "LinkID": 9
+          },
+          {
+            "LinkID": 10
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.1
+        ],
+        "TransitionType": "EBlendListTransitionType::StandardBlend",
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      },
+      "AnimGraphNode_TransitionResult": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_1": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'K33_RunFT_FPV'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K33/Animation/Locomotion/Biped/K33_RunFT_FPV.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupName": "None",
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "GroupScope": "EAnimSyncGroupScope::Local",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_1": {
+        "Result": {
+          "LinkID": 4
+        },
+        "Name": "Dig",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'K33_EnterVent_GoingIN_FPV'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K33/Animation/Power/K33_EnterVent_GoingIN_FPV.2"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupName": "None",
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "GroupScope": "EAnimSyncGroupScope::Local",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult": {
+        "Result": {
+          "LinkID": 6
+        },
+        "Name": "EnterTunnel",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_RotationOffsetBlendSpace": {
+        "BasePose": {
+          "LinkID": 8
+        },
+        "LODThreshold": -1,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::Linear"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": false,
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "AimOffsetBlendSpace'AO_K33_LookAt_FPV'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K33/AimOffset/AO_K33_LookAt_FPV.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupName": "None",
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "GroupScope": "EAnimSyncGroupScope::Local",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_CopyPoseFromMesh": {
+        "SourceMeshComponent": null,
+        "bUseAttachedParent": false,
+        "bCopyCurves": false,
+        "bCopyCustomAttributes": false,
+        "bUseMeshPose": false,
+        "RootBoneToCopy": "None"
+      },
+      "AnimGraphNode_Slot": {
+        "Source": {
+          "LinkID": 2
+        },
+        "SlotName": "Power",
+        "bAlwaysUpdateSourcePose": false
+      },
+      "ASet_Husk_LookAt": {
+        "Aim_Offset_FPV_2_0D30D7AF43A97DEF2CB33C825855C394": {
+          "ObjectName": "AimOffsetBlendSpace'AO_K33_LookAt_FPV'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K33/AimOffset/AO_K33_LookAt_FPV.0"
+        },
+        "Aim_Offset_4_1C4638084F5FD3A1FEE14D988B989559": {
+          "ObjectName": "AimOffsetBlendSpace'AO_K33_LookAt'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/K33/AimOffset/AO_K33_LookAt.0"
+        },
+        "Aim_Offset_Carry_17_4BC537B540DC2FF18DB12B9DB37C42E9": null,
+        "TurnLeftSequence_7_FFD6BA49453CFEA6D8A893B6109C431F": null,
+        "TurnRightSequence_9_31F0358C4D2070DFC9142F820362D54F": null,
+        "CarryTurnLeftSequence_11_70DF6335436CE446A4DE3F8C8BB1C1F1": null,
+        "CarryTurnRightSequence_14_C3347F184D63EDAEB91FDDBF844D04AD": null
+      },
+      "_animEffectHandlerClassForSFX": {
+        "ObjectName": "BlueprintGeneratedClass'BP_Audio_Killer_AnimNotifies_Handler_C'",
+        "ObjectPath": "DeadByDaylight/Content/Audio/BP_Audio_Killer_AnimNotifies_Handler.1"
+      },
+      "bUsingCopyPoseFromMesh": true
+    }
+  }
+]

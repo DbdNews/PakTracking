@@ -1,0 +1,545 @@
+[
+  {
+    "Type": "Function",
+    "Name": "GetTailAttackInteraction",
+    "Outer": "BP_K33Power_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'K33Power:GetTailAttackInteraction'",
+      "ObjectPath": "/Script/TheK33"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'K33TailAttackInteraction'",
+          "ObjectPath": "/Script/TheK33"
+        }
+      }
+    ],
+    "FunctionFlags": 474089472
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_K33Power_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_K33Power_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.27"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'K33Power'",
+      "ObjectPath": "/Script/TheK33"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_K33Power_C:GetTailAttackInteraction'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "BP_K33selectControlStationInteraction",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_K33selectControlStationInteraction_C'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/Interactions/KillerInteractions/BP_K33selectControlStationInteraction.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SpecialModeComponent",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_SpecialModeComponent_C'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/Components/BP_SpecialModeComponent.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BP_K33TailAttackInteraction",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_K33TailAttackInteraction_C'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/Interactions/KillerInteractions/BP_K33TailAttackInteraction.0"
+        }
+      }
+    ],
+    "FuncMap": {
+      "GetTailAttackInteraction": {
+        "ObjectName": "Function'BP_K33Power_C:GetTailAttackInteraction'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.0"
+      }
+    },
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_K33Power_C'Default__BP_K33Power_C'",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.2"
+    }
+  },
+  {
+    "Type": "BP_K33Power_C",
+    "Name": "Default__BP_K33Power_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.BP_K33Power_C'",
+    "Properties": {
+      "_tailAttackChargeableComponent": {
+        "ObjectName": "ChargeableComponent'Default__BP_K33Power_C:Tail Attack Chargeable'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.10"
+      },
+      "_interactor": {
+        "ObjectName": "Interactor'Default__BP_K33Power_C:Interactor'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.15"
+      },
+      "_interactionVolume": {
+        "ObjectName": "BoxPlayerOverlapComponent'Default__BP_K33Power_C:Interaction Volume'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.6"
+      },
+      "_tailAttackChargeTime": {
+        "_baseValue": {
+          "_dataTableRowHandle": {
+            "DataTable": {
+              "ObjectName": "DataTable'K33_TunableValue'",
+              "ObjectPath": "DeadByDaylight/Content/Data/Dlc/Wormhole/K33_TunableValue.0"
+            },
+            "RowName": "TailAttack_SecondsToCharge"
+          }
+        }
+      },
+      "_powerChargePresentationItemProgress": {
+        "ObjectName": "K33PowerChargePresentationItemProgressComponent'Default__BP_K33Power_C:PowerChargePresentationItemProgress'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.19"
+      },
+      "_k33PowerCharge": {
+        "ObjectName": "PowerChargeComponent'Default__BP_K33Power_C:K33PowerCharge'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.20"
+      },
+      "_killerStatusEffects": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'BP_K33KillerInTunnelStatusEffect_C'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/StatusEffects/KillerStatusEffects/BP_K33KillerInTunnelStatusEffect.2"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'BP_K33KillerAttackedByTurretStatusEffect_C'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/StatusEffects/KillerStatusEffects/BP_K33KillerAttackedByTurretStatusEffect.2"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'BP_K33KillerPerformingTunnelTransitionStatusEffect_C'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/StatusEffects/KillerStatusEffects/BP_K33KillerPerformingTunnelTransitionStatusEffect.2"
+        }
+      ],
+      "_survivorStatusEffects": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'CarryingK33TurretHinderedStatusEffect_C'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/StatusEffects/SurvivorsStatusEffects/CarryingK33TurretHinderedStatusEffect.3"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'CarryingK33TurretIncapacitatedStatusEffect_C'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/StatusEffects/SurvivorsStatusEffects/CarryingK33TurretIncapacitatedStatusEffect.2"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'CarryingK33TurretExhaustedStatusEffect_C'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/StatusEffects/SurvivorsStatusEffects/CarryingK33TurretExhaustedStatusEffect.2"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'BP_K33RevealTurretAurasToSurvivorStatusEffect_C'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/StatusEffects/SurvivorsStatusEffects/BP_K33RevealTurretAurasToSurvivorStatusEffect.2"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'BP_K33_SurvivorAuraRevealWhenCarryingTurretStatusEffect_C'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/StatusEffects/SurvivorsStatusEffects/BP_K33_SurvivorAuraRevealWhenCarryingTurretStatusEffect.2"
+        }
+      ],
+      "_killerTunnelComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_K33KillerTunnelStateComponent_C'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/Components/KillerComponents/BP_K33KillerTunnelStateComponent.0"
+      },
+      "_quadrupedComponentClass": {
+        "ObjectName": "Class'K33QuadrupedComponent'",
+        "ObjectPath": "/Script/TheK33"
+      },
+      "_controlStationSelectorComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_K33KillerControlStationSelectorComponent_C'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/Components/KillerComponents/BP_K33KillerControlStationSelectorComponent.0"
+      },
+      "_survivorDetectionComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_K33SurvivorDetectionComponent_C'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/Components/KillerComponents/BP_K33SurvivorDetectionComponent.0"
+      },
+      "_turretDamageComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_K33TurretDamageComponent_C'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/Components/KillerComponents/BP_K33TurretDamageComponent.0"
+      },
+      "_turretPlacerComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_K33TurretPlacer_C'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/Components/KillerComponents/BP_K33TurretPlacer.0"
+      },
+      "_k33HuskClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_K33Husk_C'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/Actors/BP_K33Husk.0"
+      },
+      "_feetActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_K33FeetVFX_C'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/Actors/BP_K33FeetVFX.4"
+      },
+      "_turretPoolInitializer": {
+        "ObjectName": "ActorPoolInitializer'Default__BP_K33Power_C:TurretPoolInitializer'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.4"
+      },
+      "_turretPool": {
+        "ObjectName": "AuthoritativeActorPoolComponent'Default__BP_K33Power_C:TurretPool'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.5"
+      },
+      "ItemID": "Item_Slasher_K33Power",
+      "BaseItemModifier": {
+        "ObjectName": "ItemModifier'Default__BP_K33Power_C:ItemModifier'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.16"
+      },
+      "ItemModifier1": {
+        "ObjectName": "ItemModifier'Default__BP_K33Power_C:ItemModifier1'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.17"
+      },
+      "ItemModifier2": {
+        "ObjectName": "ItemModifier'Default__BP_K33Power_C:ItemModifier2'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.18"
+      },
+      "_itemInteractor": {
+        "ObjectName": "Interactor'Default__BP_K33Power_C:Interactor'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.15"
+      },
+      "_mesh": {
+        "ObjectName": "DBDSkeletalMeshComponentBudgeted'Default__BP_K33Power_C:ItemMesh'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.12"
+      },
+      "_placementOrigin": {
+        "ObjectName": "SceneComponent'Default__BP_K33Power_C:PlacementOrigin'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.22"
+      },
+      "_itemModifiers": [
+        {
+          "ObjectName": "ItemModifier'Default__BP_K33Power_C:ItemModifier'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.16"
+        },
+        {
+          "ObjectName": "ItemModifier'Default__BP_K33Power_C:ItemModifier1'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.17"
+        },
+        {
+          "ObjectName": "ItemModifier'Default__BP_K33Power_C:ItemModifier2'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.18"
+        }
+      ],
+      "_attachToSocketName": "EAttachToSocketNameEnum::Weapon_SocketLT",
+      "_transformOptimizer": {
+        "ObjectName": "InteractableTransformOptimizer'Default__BP_K33Power_C:InteractableOptimizer'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.14"
+      },
+      "_interactableObjectState": {
+        "ObjectName": "GameplayTagContainerComponent'Default__BP_K33Power_C:InteractableObjectState'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.13"
+      },
+      "RootComponent": {
+        "ObjectName": "DBDSkeletalMeshComponentBudgeted'Default__BP_K33Power_C:ItemMesh'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.12"
+      }
+    }
+  },
+  {
+    "Type": "ActivatorComponent",
+    "Name": "Activator",
+    "Outer": "Default__BP_K33Power_C",
+    "Class": "UScriptClass'ActivatorComponent'"
+  },
+  {
+    "Type": "ActorPoolInitializer",
+    "Name": "TurretPoolInitializer",
+    "Outer": "Default__BP_K33Power_C",
+    "Class": "UScriptClass'ActorPoolInitializer'",
+    "Properties": {
+      "_poolSize": {
+        "_dataTableRowHandle": {
+          "DataTable": {
+            "ObjectName": "DataTable'K33_TunableValue'",
+            "ObjectPath": "DeadByDaylight/Content/Data/Dlc/Wormhole/K33_TunableValue.0"
+          },
+          "RowName": "TurretCount"
+        },
+        "_defaultValue": 3.0
+      }
+    }
+  },
+  {
+    "Type": "AuthoritativeActorPoolComponent",
+    "Name": "TurretPool",
+    "Outer": "Default__BP_K33Power_C",
+    "Class": "UScriptClass'AuthoritativeActorPoolComponent'",
+    "Properties": {
+      "_actorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_K33Turret_C'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/Actors/Interactables/BP_K33Turret.17"
+      },
+      "_size": 0
+    }
+  },
+  {
+    "Type": "BoxPlayerOverlapComponent",
+    "Name": "Interaction Volume",
+    "Outer": "Default__BP_K33Power_C",
+    "Class": "UScriptClass'BoxPlayerOverlapComponent'",
+    "Properties": {
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "AttachParent": {
+        "ObjectName": "DBDSkeletalMeshComponentBudgeted'Default__BP_K33Power_C:ItemMesh'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.12"
+      }
+    }
+  },
+  {
+    "Type": "BP_K33selectControlStationInteraction_C",
+    "Name": "BP_K33selectControlStationInteraction_GEN_VARIABLE",
+    "Outer": "BP_K33Power_C",
+    "Template": "Default__BP_K33selectControlStationInteraction_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/Interactions/KillerInteractions/BP_K33selectControlStationInteraction.BP_K33selectControlStationInteraction_C'"
+  },
+  {
+    "Type": "BP_K33TailAttackInteraction_C",
+    "Name": "BP_K33TailAttackInteraction_GEN_VARIABLE",
+    "Outer": "BP_K33Power_C",
+    "Template": "Default__BP_K33TailAttackInteraction_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/Interactions/KillerInteractions/BP_K33TailAttackInteraction.BP_K33TailAttackInteraction_C'"
+  },
+  {
+    "Type": "BP_SpecialModeComponent_C",
+    "Name": "SpecialModeComponent_GEN_VARIABLE",
+    "Outer": "BP_K33Power_C",
+    "Template": "Default__BP_SpecialModeComponent_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/Components/BP_SpecialModeComponent.BP_SpecialModeComponent_C'"
+  },
+  {
+    "Type": "ChargeableComponent",
+    "Name": "Tail Attack Chargeable",
+    "Outer": "Default__BP_K33Power_C",
+    "Class": "UScriptClass'ChargeableComponent'"
+  },
+  {
+    "Type": "CollectableAudioComponent",
+    "Name": "CollectableAudioComponent",
+    "Outer": "Default__BP_K33Power_C",
+    "Class": "UScriptClass'CollectableAudioComponent'"
+  },
+  {
+    "Type": "DBDSkeletalMeshComponentBudgeted",
+    "Name": "ItemMesh",
+    "Outer": "Default__BP_K33Power_C",
+    "Class": "UScriptClass'DBDSkeletalMeshComponentBudgeted'",
+    "Properties": {
+      "DetailLevelBeforeCastShadows": "DM_MAX"
+    }
+  },
+  {
+    "Type": "GameplayTagContainerComponent",
+    "Name": "InteractableObjectState",
+    "Outer": "Default__BP_K33Power_C",
+    "Class": "UScriptClass'GameplayTagContainerComponent'"
+  },
+  {
+    "Type": "InteractableTransformOptimizer",
+    "Name": "InteractableOptimizer",
+    "Outer": "Default__BP_K33Power_C",
+    "Class": "UScriptClass'InteractableTransformOptimizer'"
+  },
+  {
+    "Type": "Interactor",
+    "Name": "Interactor",
+    "Outer": "Default__BP_K33Power_C",
+    "Class": "UScriptClass'Interactor'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxPlayerOverlapComponent'Default__BP_K33Power_C:Interaction Volume'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.6"
+      }
+    }
+  },
+  {
+    "Type": "ItemModifier",
+    "Name": "ItemModifier",
+    "Outer": "Default__BP_K33Power_C",
+    "Class": "UScriptClass'ItemModifier'"
+  },
+  {
+    "Type": "ItemModifier",
+    "Name": "ItemModifier1",
+    "Outer": "Default__BP_K33Power_C",
+    "Class": "UScriptClass'ItemModifier'"
+  },
+  {
+    "Type": "ItemModifier",
+    "Name": "ItemModifier2",
+    "Outer": "Default__BP_K33Power_C",
+    "Class": "UScriptClass'ItemModifier'"
+  },
+  {
+    "Type": "K33PowerChargePresentationItemProgressComponent",
+    "Name": "PowerChargePresentationItemProgress",
+    "Outer": "Default__BP_K33Power_C",
+    "Class": "UScriptClass'K33PowerChargePresentationItemProgressComponent'"
+  },
+  {
+    "Type": "PowerChargeComponent",
+    "Name": "K33PowerCharge",
+    "Outer": "Default__BP_K33Power_C",
+    "Class": "UScriptClass'PowerChargeComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_K33Power_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "PlacementOrigin",
+    "Outer": "Default__BP_K33Power_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "DBDSkeletalMeshComponentBudgeted'Default__BP_K33Power_C:ItemMesh'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.12"
+      }
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_K33Power_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.21"
+      },
+      "VariableGuid": "0B653A17-4CBCE16C-1990A294-923C8BAC",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_K33TailAttackInteraction_C'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/Interactions/KillerInteractions/BP_K33TailAttackInteraction.0"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_K33TailAttackInteraction_C'BP_K33Power_C:BP_K33TailAttackInteraction_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.8"
+      },
+      "ParentComponentOrVariableName": "Interactor",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "BB5AA653-4D8D72AA-EAF37CBD-7488FE6B",
+      "InternalVariableName": "BP_K33TailAttackInteraction"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_SpecialModeComponent_C'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/Components/BP_SpecialModeComponent.0"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_SpecialModeComponent_C'BP_K33Power_C:SpecialModeComponent_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.9"
+      },
+      "VariableGuid": "BB3DD7AF-4A1A10A4-F3104FBF-547228ED",
+      "InternalVariableName": "SpecialModeComponent"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_K33selectControlStationInteraction_C'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/Interactions/KillerInteractions/BP_K33selectControlStationInteraction.0"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_K33selectControlStationInteraction_C'BP_K33Power_C:BP_K33selectControlStationInteraction_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.7"
+      },
+      "ParentComponentOrVariableName": "Interactor",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "9AFC24FC-4D71F266-E012789A-2D575EB4",
+      "InternalVariableName": "BP_K33selectControlStationInteraction"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_K33Power_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_K33Power_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.24"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_K33Power_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_K33Power_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.26"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_K33Power_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.24"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_K33Power_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_K33Power_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.26"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_K33Power_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.23"
+      }
+    }
+  }
+]

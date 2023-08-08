@@ -1,0 +1,466 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_TrapPalletInteraction",
+    "Outer": "TrapPalletInteraction_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'EPalletSide'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Temp_name_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Temp_name_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Temp_name_Variable_2",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_player_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DBDPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_hasInteractionStarted",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DBDPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_actualSnapTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Camper_Character",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Camper_Character_C'",
+          "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Blueprints/BP_Camper_Character.282"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetSocketTransform_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Transform'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPerkTrappable_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PerkTrappableComponent'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "Temp_delegate_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "PropertyFlags": "ConstParm",
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'OnAkPostEventCallback__DelegateSignature'",
+          "ObjectPath": "/Script/AkAudio"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetTrapModel_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetActorTransform_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_K2_SetActorTransform_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "Temp_struct_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "Temp_struct_Variable",
+          "Flags": "RF_Public",
+          "ElementSize": 56,
+          "Struct": {
+            "ObjectName": "ScriptStruct'AkExternalSourceInfo'",
+            "ObjectPath": "/Script/AkAudio"
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwner_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Pallet",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Pallet_C'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/BP_Pallet.48"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_PostEvent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": 8421377
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInteractionEnterStart",
+    "Outer": "TrapPalletInteraction_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'InteractionDefinition:OnInteractionEnterStart'",
+      "ObjectPath": "/Script/DeadByDaylight"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'DBDPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "actualSnapTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInteractionFinished",
+    "Outer": "TrapPalletInteraction_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'InteractionDefinition:OnInteractionFinished'",
+      "ObjectPath": "/Script/DeadByDaylight"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'DBDPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "hasInteractionStarted",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "Function",
+    "Name": "TrapPalletInteraction_AutoGenFunc",
+    "Outer": "TrapPalletInteraction_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Montage",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'AnimMontage'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": 201457664
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "TrapPalletInteraction_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'TrapPalletInteraction_C:ExecuteUbergraph_TrapPalletInteraction'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/TrapPalletInteraction.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'TrapPalletInteraction'",
+      "ObjectPath": "/Script/DBDInteraction"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'TrapPalletInteraction_C:TrapPalletInteraction_AutoGenFunc'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/TrapPalletInteraction.3"
+      },
+      {
+        "ObjectName": "Function'TrapPalletInteraction_C:OnInteractionFinished'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/TrapPalletInteraction.2"
+      },
+      {
+        "ObjectName": "Function'TrapPalletInteraction_C:OnInteractionEnterStart'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/TrapPalletInteraction.1"
+      },
+      {
+        "ObjectName": "Function'TrapPalletInteraction_C:ExecuteUbergraph_TrapPalletInteraction'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/TrapPalletInteraction.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BP_Bomb",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_TrapPalletInteraction": {
+        "ObjectName": "Function'TrapPalletInteraction_C:ExecuteUbergraph_TrapPalletInteraction'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/TrapPalletInteraction.0"
+      },
+      "OnInteractionEnterStart": {
+        "ObjectName": "Function'TrapPalletInteraction_C:OnInteractionEnterStart'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/TrapPalletInteraction.1"
+      },
+      "OnInteractionFinished": {
+        "ObjectName": "Function'TrapPalletInteraction_C:OnInteractionFinished'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/TrapPalletInteraction.2"
+      },
+      "TrapPalletInteraction_AutoGenFunc": {
+        "ObjectName": "Function'TrapPalletInteraction_C:TrapPalletInteraction_AutoGenFunc'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/TrapPalletInteraction.3"
+      }
+    },
+    "ClassFlags": 10754068,
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "TrapPalletInteraction_C'Default__TrapPalletInteraction_C'",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/TrapPalletInteraction.5"
+    }
+  },
+  {
+    "Type": "TrapPalletInteraction_C",
+    "Name": "Default__TrapPalletInteraction_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Bookshelf/TrapPalletInteraction.TrapPalletInteraction_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "InteractionID": "TrapInteractable",
+      "StopInteractionOnMontageComplete": true,
+      "StopInteractionOnMontageBlendingOut": true,
+      "StopInteractionOnTimerExpire": true,
+      "CamperCanInteract": true,
+      "SnapPosition": true,
+      "SnapRotation": true,
+      "InteractionTime": 0.5,
+      "InteractionInputType": "EInputInteractionType::VE_AbilityTwo",
+      "InteractionDescriptionText": {
+        "Namespace": "",
+        "Key": "89B24D24497FE07D3A0D76873F8705D7",
+        "SourceString": "INTERACTION_TrapInteractable_DESC",
+        "LocalizedString": "Install Trap"
+      },
+      "UpdateMontage": {
+        "MontageID": "TrapPallet"
+      },
+      "_preventingTags": [
+        "GameplayModifierFlag.IsIncapacitated"
+      ]
+    }
+  }
+]

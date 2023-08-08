@@ -1,0 +1,291 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "PA_Turret_REF",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'PA_Turret_REF:SkeletalBodySetup_0'",
+          "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/Turret/Physics/PA_Turret_REF.4"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'PA_Turret_REF:SkeletalBodySetup_1'",
+          "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/Turret/Physics/PA_Turret_REF.5"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'PA_Turret_REF:SkeletalBodySetup_2'",
+          "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/Turret/Physics/PA_Turret_REF.6"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'PA_Turret_REF:SkeletalBodySetup_3'",
+          "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/Turret/Physics/PA_Turret_REF.7"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate'PA_Turret_REF:PhysicsConstraintTemplate_0'",
+          "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/Turret/Physics/PA_Turret_REF.1"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'PA_Turret_REF:PhysicsConstraintTemplate_1'",
+          "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/Turret/Physics/PA_Turret_REF.2"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'PA_Turret_REF:PhysicsConstraintTemplate_2'",
+          "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/Turret/Physics/PA_Turret_REF.3"
+        }
+      ],
+      "ThumbnailInfo": null
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_0",
+    "Outer": "PA_Turret_REF",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "joint_Neck_01",
+        "ConstraintBone1": "joint_Neck_01",
+        "ConstraintBone2": "joint_Head_01",
+        "Pos2": {
+          "X": 0.0,
+          "Y": 1.4341082E-22,
+          "Z": 0.0
+        },
+        "PriAxis2": {
+          "X": -0.9950768,
+          "Y": -1.2186177E-16,
+          "Z": -0.09910608
+        },
+        "SecAxis2": {
+          "X": -1.1032769E-16,
+          "Y": 1.0,
+          "Z": -1.2186177E-16
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "ACM_Limited",
+            "Swing2Motion": "ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_1",
+    "Outer": "PA_Turret_REF",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "joint_Leg_02",
+        "ConstraintBone1": "joint_Leg_02",
+        "ConstraintBone2": "joint_Neck_01",
+        "Pos2": {
+          "X": 29.75037,
+          "Y": 6.9919944E-16,
+          "Z": -3.964305
+        },
+        "PriAxis2": {
+          "X": -0.9246067,
+          "Y": -1.1996567E-16,
+          "Z": 0.38092363
+        },
+        "SecAxis2": {
+          "X": -1.669467E-16,
+          "Y": 1.0,
+          "Z": -9.029191E-17
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "ACM_Limited",
+            "Swing2Motion": "ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_2",
+    "Outer": "PA_Turret_REF",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "joint_Foot_01",
+        "ConstraintBone1": "joint_Foot_01",
+        "ConstraintBone2": "joint_Leg_02",
+        "Pos2": {
+          "X": 33.63524,
+          "Y": -1.1184334E-15,
+          "Z": -5.3290705E-14
+        },
+        "PriAxis2": {
+          "X": 0.08875042,
+          "Y": -1.9497937E-32,
+          "Z": -0.9960539
+        },
+        "SecAxis2": {
+          "X": 2.1969406E-31,
+          "Y": 1.0,
+          "Z": 1.1754944E-38
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "ACM_Limited",
+            "Swing2Motion": "ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "PA_Turret_REF",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -8.691938,
+              "Y": 0.14873695,
+              "Z": 11.566417
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": -89.54822,
+              "Roll": -83.29647
+            },
+            "Radius": 15.624935,
+            "Length": 26.731947,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "joint_Head_01",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "462608B445812E3283797A8C2F7DB921"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "PA_Turret_REF",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 15.393717,
+              "Y": -0.08268738,
+              "Z": -2.4332666
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": -91.83512,
+              "Roll": -74.82307
+            },
+            "Radius": 6.8931236,
+            "Length": 13.113234,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "joint_Neck_01",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "69C799994738EDA63C0F10869B521238"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_2",
+    "Outer": "PA_Turret_REF",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 17.255672,
+              "Y": 0.123836994,
+              "Z": -1.6595516
+            },
+            "Rotation": {
+              "Pitch": 6.830189E-06,
+              "Yaw": -90.00526,
+              "Roll": -89.61782
+            },
+            "Radius": 7.2838054,
+            "Length": 21.09541,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "joint_Leg_02",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "226E438D49BAB290172E4C97DEC15FDD"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_3",
+    "Outer": "PA_Turret_REF",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 5.587262,
+              "Y": 0.27457213,
+              "Z": -20.354326
+            },
+            "Rotation": {
+              "Pitch": 0.0149376225,
+              "Yaw": -90.00001,
+              "Roll": -15.937948
+            },
+            "Radius": 16.140966,
+            "Length": 24.766806,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "joint_Foot_01",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "108B2B68431463013C3265A25DEF8725"
+  }
+]

@@ -1,0 +1,173 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_K33EnterTunnelInteraction",
+    "Outer": "BP_K33EnterTunnelInteraction_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DBDPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_actualSnapTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsLocallyObserved_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInteractionEnterStart",
+    "Outer": "BP_K33EnterTunnelInteraction_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'InteractionDefinition:OnInteractionEnterStart'",
+      "ObjectPath": "/Script/DeadByDaylight"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'DBDPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "actualSnapTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_K33EnterTunnelInteraction_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_K33EnterTunnelInteraction_C:ExecuteUbergraph_BP_K33EnterTunnelInteraction'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/Interactions/KillerInteractions/BP_K33EnterTunnelInteraction.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'K33EnterTunnelInteraction'",
+      "ObjectPath": "/Script/TheK33"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_K33EnterTunnelInteraction_C:OnInteractionEnterStart'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/Interactions/KillerInteractions/BP_K33EnterTunnelInteraction.1"
+      },
+      {
+        "ObjectName": "Function'BP_K33EnterTunnelInteraction_C:ExecuteUbergraph_BP_K33EnterTunnelInteraction'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/Interactions/KillerInteractions/BP_K33EnterTunnelInteraction.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_K33EnterTunnelInteraction": {
+        "ObjectName": "Function'BP_K33EnterTunnelInteraction_C:ExecuteUbergraph_BP_K33EnterTunnelInteraction'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/Interactions/KillerInteractions/BP_K33EnterTunnelInteraction.0"
+      },
+      "OnInteractionEnterStart": {
+        "ObjectName": "Function'BP_K33EnterTunnelInteraction_C:OnInteractionEnterStart'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/Interactions/KillerInteractions/BP_K33EnterTunnelInteraction.1"
+      }
+    },
+    "ClassFlags": 10754068,
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_K33EnterTunnelInteraction_C'Default__BP_K33EnterTunnelInteraction_C'",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/Interactions/KillerInteractions/BP_K33EnterTunnelInteraction.3"
+    }
+  },
+  {
+    "Type": "BP_K33EnterTunnelInteraction_C",
+    "Name": "Default__BP_K33EnterTunnelInteraction_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/Interactions/KillerInteractions/BP_K33EnterTunnelInteraction.BP_K33EnterTunnelInteraction_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "_confirmEnterControlStationMontage": {
+        "MontageID": "EnterTunnel_GoingIn"
+      },
+      "_cancelMontage": {
+        "MontageID": "EnterTunnel_Cancel"
+      },
+      "_afterTeleportationMontage": {
+        "MontageID": "EnterTunnel_WakeUp"
+      },
+      "_cameraTransitionOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "_chargeInteractionTime": {
+        "_dataTableRowHandle": {
+          "DataTable": {
+            "ObjectName": "DataTable'K33_TunableValue'",
+            "ObjectPath": "DeadByDaylight/Content/Data/Dlc/Wormhole/K33_TunableValue.0"
+          },
+          "RowName": "EnterTunnelChargeTime"
+        }
+      },
+      "ScaleMainAnimationToTime": true,
+      "CanInteractWhileCarrying": false,
+      "InteractionCanBeToggled": true,
+      "UpdateMontage": {
+        "MontageID": "EnterTunnel_Charge"
+      }
+    }
+  }
+]

@@ -1,0 +1,137 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_K33Power_Addon_12",
+    "Outer": "BP_K33Power_Addon_12_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_CreateAndReceiveConditionForBP_conditionReceiver_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'ConditionReceiver'",
+          "ObjectPath": "/Script/Competence"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateAndReceiveConditionForBP_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'EventDrivenModifierCondition'",
+          "ObjectPath": "/Script/Competence"
+        }
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "Function",
+    "Name": "Authority_OnInstantiateModifierConditions",
+    "Outer": "BP_K33Power_Addon_12_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'BaseModifierContainer:Authority_OnInstantiateModifierConditions'",
+      "ObjectPath": "/Script/Competence"
+    },
+    "FunctionFlags": 134744068
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_K33Power_Addon_12_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_K33Power_Addon_12_C:ExecuteUbergraph_BP_K33Power_Addon_12'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/ItemAddons/K33PowerAddons/BP_K33Power_Addon_12.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'OnEventSetTimerAddon'",
+      "ObjectPath": "/Script/DBDCompetence"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_K33Power_Addon_12_C:Authority_OnInstantiateModifierConditions'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/ItemAddons/K33PowerAddons/BP_K33Power_Addon_12.1"
+      },
+      {
+        "ObjectName": "Function'BP_K33Power_Addon_12_C:ExecuteUbergraph_BP_K33Power_Addon_12'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/ItemAddons/K33PowerAddons/BP_K33Power_Addon_12.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_K33Power_Addon_12": {
+        "ObjectName": "Function'BP_K33Power_Addon_12_C:ExecuteUbergraph_BP_K33Power_Addon_12'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/ItemAddons/K33PowerAddons/BP_K33Power_Addon_12.0"
+      },
+      "Authority_OnInstantiateModifierConditions": {
+        "ObjectName": "Function'BP_K33Power_Addon_12_C:Authority_OnInstantiateModifierConditions'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/ItemAddons/K33PowerAddons/BP_K33Power_Addon_12.1"
+      }
+    },
+    "ClassFlags": 10749972,
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_K33Power_Addon_12_C'Default__BP_K33Power_Addon_12_C'",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/ItemAddons/K33PowerAddons/BP_K33Power_Addon_12.3"
+    }
+  },
+  {
+    "Type": "BP_K33Power_Addon_12_C",
+    "Name": "Default__BP_K33Power_Addon_12_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/ItemAddons/K33PowerAddons/BP_K33Power_Addon_12.BP_K33Power_Addon_12_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "_addonEffectTime": 3.0,
+      "_eventToListenTo": {
+        "TagName": "GameEvent.Killer.K33.ExitTunnel.End"
+      },
+      "BaseItemType": {
+        "ObjectName": "BlueprintGeneratedClass'BP_K33Power_C'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K33Power/BP_K33Power.1"
+      },
+      "ModifierData": {
+        "Modifiers": [
+          {
+            "Type": {
+              "TagName": "GameplayModifierType.IncreaseAllMovementSpeed"
+            },
+            "ModifierValue": 0.05
+          }
+        ]
+      },
+      "_canOptimizeTickActivation": true
+    }
+  }
+]
