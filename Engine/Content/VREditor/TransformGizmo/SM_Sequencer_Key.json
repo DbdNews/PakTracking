@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_Sequencer_Key",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -251,10 +252,10 @@
     "BodySetupGuid": "03B0782E43A4D3C2AFA298B72B9BFF30",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 11143,
         "SizeOnDisk": 11143,
-        "OffsetInFile": "0x12398"
+        "OffsetInFile": "0x12313"
       }
     }
   },
@@ -262,28 +263,25 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_Sequencer_Key",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 1897,
         "SizeOnDisk": 1897,
-        "OffsetInFile": "0x14F67"
+        "OffsetInFile": "0x14EE2"
       }
     }
   },
   {
     "Type": "StaticMesh",
     "Name": "SM_Sequencer_Key",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
-      "MinLOD": {
-        "bCooked": true,
-        "Default": 0,
-        "Value": 0
-      },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "Material Main",
+            "ObjectName": "Material'Main'",
             "ObjectPath": "Engine/Content/VREditor/TransformGizmo/Main.0"
           },
           "MaterialSlotName": "Main",
@@ -299,7 +297,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "Material Xray",
+            "ObjectName": "Material'Xray'",
             "ObjectPath": "Engine/Content/VREditor/TransformGizmo/Xray.0"
           },
           "MaterialSlotName": "Xray",
@@ -327,14 +325,83 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_Sequencer_Key:BodySetup_0",
+      "ObjectName": "BodySetup'SM_Sequencer_Key:BodySetup_0'",
       "ObjectPath": "Engine/Content/VREditor/TransformGizmo/SM_Sequencer_Key.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_Sequencer_Key:NavCollision_2",
+      "ObjectName": "NavCollision'SM_Sequencer_Key:NavCollision_2'",
       "ObjectPath": "Engine/Content/VREditor/TransformGizmo/SM_Sequencer_Key.1"
     },
     "LightingGuid": "1FC9B27D-44E4773E-0572FA8E-B40D4AC4",
-    "RenderData": null
+    "RenderData": {
+      "LODs": [
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 332,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 543,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 996,
+              "NumTriangles": 332,
+              "MinVertexIndex": 24,
+              "MaxVertexIndex": 567,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 568
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 3,
+            "NumVertices": 568,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          }
+        }
+      ],
+      "Bounds": {
+        "Origin": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "BoxExtent": {
+          "X": 15.615794,
+          "Y": 32.335068,
+          "Z": 23.49734
+        },
+        "SphereRadius": 32.80694
+      },
+      "bLODsShareStaticLighting": true,
+      "ScreenSize": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
   }
 ]

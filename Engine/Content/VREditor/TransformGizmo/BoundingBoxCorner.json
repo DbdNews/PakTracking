@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "BoundingBoxCorner",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -162,10 +163,10 @@
     "BodySetupGuid": "8BCFCFC24E0DF8EF018F38A90F4EFBDA",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 1431,
         "SizeOnDisk": 1431,
-        "OffsetInFile": "0x652D"
+        "OffsetInFile": "0x64A8"
       }
     }
   },
@@ -173,28 +174,25 @@
     "Type": "NavCollision",
     "Name": "NavCollision_3",
     "Outer": "BoundingBoxCorner",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 889,
         "SizeOnDisk": 889,
-        "OffsetInFile": "0x6B0C"
+        "OffsetInFile": "0x6A87"
       }
     }
   },
   {
     "Type": "StaticMesh",
     "Name": "BoundingBoxCorner",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
-      "MinLOD": {
-        "bCooked": true,
-        "Default": 0,
-        "Value": 0
-      },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "Material TransformGizmoMaterial",
+            "ObjectName": "Material'TransformGizmoMaterial'",
             "ObjectPath": "Engine/Content/VREditor/TransformGizmo/TransformGizmoMaterial.0"
           },
           "MaterialSlotName": "TransformGizmoMaterial",
@@ -210,7 +208,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "Material TranslucentTransformGizmoMaterial",
+            "ObjectName": "Material'TranslucentTransformGizmoMaterial'",
             "ObjectPath": "Engine/Content/VREditor/TransformGizmo/TranslucentTransformGizmoMaterial.0"
           },
           "MaterialSlotName": "TranslucentTransformGizmoMaterial",
@@ -237,14 +235,83 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup BoundingBoxCorner:BodySetup_0",
+      "ObjectName": "BodySetup'BoundingBoxCorner:BodySetup_0'",
       "ObjectPath": "Engine/Content/VREditor/TransformGizmo/BoundingBoxCorner.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision BoundingBoxCorner:NavCollision_3",
+      "ObjectName": "NavCollision'BoundingBoxCorner:NavCollision_3'",
       "ObjectPath": "Engine/Content/VREditor/TransformGizmo/BoundingBoxCorner.1"
     },
     "LightingGuid": "F7BD0228-4C6D976A-C498D7A8-3676E2FB",
-    "RenderData": null
+    "RenderData": {
+      "LODs": [
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 86,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 157,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 258,
+              "NumTriangles": 86,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 157,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 158
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 1,
+            "NumVertices": 158,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          }
+        }
+      ],
+      "Bounds": {
+        "Origin": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "BoxExtent": {
+          "X": 3.7489195,
+          "Y": 3.7500207,
+          "Z": 3.7506564
+        },
+        "SphereRadius": 6.385936
+      },
+      "bLODsShareStaticLighting": true,
+      "ScreenSize": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
   }
 ]

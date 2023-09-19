@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "RB_BodySetup_0",
     "Outer": "Cube",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -132,10 +133,10 @@
     "BodySetupGuid": "655DB63D4F06BA2BC136A19EC273BBD6",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 1403,
         "SizeOnDisk": 1403,
-        "OffsetInFile": "0x3557"
+        "OffsetInFile": "0x34D2"
       }
     }
   },
@@ -143,28 +144,25 @@
     "Type": "NavCollision",
     "Name": "NavCollision_0",
     "Outer": "Cube",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 457,
         "SizeOnDisk": 457,
-        "OffsetInFile": "0x3B1A"
+        "OffsetInFile": "0x3A95"
       }
     }
   },
   {
     "Type": "StaticMesh",
     "Name": "Cube",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
-      "MinLOD": {
-        "bCooked": true,
-        "Default": 0,
-        "Value": 0
-      },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "Material DefaultMaterial",
+            "ObjectName": "Material'DefaultMaterial'",
             "ObjectPath": "Engine/Content/EngineMaterials/DefaultMaterial.0"
           },
           "MaterialSlotName": "DefaultMaterial",
@@ -191,14 +189,72 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup Cube:RB_BodySetup_0",
+      "ObjectName": "BodySetup'Cube:RB_BodySetup_0'",
       "ObjectPath": "Engine/Content/EngineMeshes/Cube.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision Cube:NavCollision_0",
+      "ObjectName": "NavCollision'Cube:NavCollision_0'",
       "ObjectPath": "Engine/Content/EngineMeshes/Cube.1"
     },
     "LightingGuid": "C1786C43-4D216D82-7E8BD494-312794BA",
-    "RenderData": null
+    "RenderData": {
+      "LODs": [
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 12,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 23,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 24
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 4,
+            "NumVertices": 24,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          }
+        }
+      ],
+      "Bounds": {
+        "Origin": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "BoxExtent": {
+          "X": 128.0,
+          "Y": 128.0,
+          "Z": 128.0
+        },
+        "SphereRadius": 221.7025
+      },
+      "bLODsShareStaticLighting": true,
+      "ScreenSize": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
   }
 ]

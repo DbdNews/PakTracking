@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "houdini_logo",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -131,10 +132,10 @@
     "BodySetupGuid": "257D430349D86E008085B8AD1CD866FF",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 32021,
         "SizeOnDisk": 32021,
-        "OffsetInFile": "0x236AC"
+        "OffsetInFile": "0x23627"
       }
     }
   },
@@ -142,28 +143,25 @@
     "Type": "NavCollision",
     "Name": "NavCollision_0",
     "Outer": "houdini_logo",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 457,
         "SizeOnDisk": 457,
-        "OffsetInFile": "0x2B409"
+        "OffsetInFile": "0x2B384"
       }
     }
   },
   {
     "Type": "StaticMesh",
     "Name": "houdini_logo",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
-      "MinLOD": {
-        "bCooked": true,
-        "Default": 0,
-        "Value": 0
-      },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "Material houdini_default_material",
+            "ObjectName": "Material'houdini_default_material'",
             "ObjectPath": "Engine/Plugins/Runtime/HoudiniEngine/Content/houdini_default_material.0"
           },
           "MaterialSlotName": "houdini_default_material",
@@ -195,14 +193,72 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup houdini_logo:BodySetup_0",
+      "ObjectName": "BodySetup'houdini_logo:BodySetup_0'",
       "ObjectPath": "Engine/Plugins/Runtime/HoudiniEngine/Content/houdini_logo.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision houdini_logo:NavCollision_0",
+      "ObjectName": "NavCollision'houdini_logo:NavCollision_0'",
       "ObjectPath": "Engine/Plugins/Runtime/HoudiniEngine/Content/houdini_logo.1"
     },
     "LightingGuid": "0AB59292-483CA114-F0330F84-80A7ED59",
-    "RenderData": null
+    "RenderData": {
+      "LODs": [
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 1104,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 1367,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 1368
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 3,
+            "NumVertices": 1368,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 4,
+            "NumVertices": 1368
+          }
+        }
+      ],
+      "Bounds": {
+        "Origin": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 126.439835
+        },
+        "BoxExtent": {
+          "X": 123.037125,
+          "Y": 31.25,
+          "Z": 126.439835
+        },
+        "SphereRadius": 179.16956
+      },
+      "bLODsShareStaticLighting": true,
+      "ScreenSize": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
   }
 ]

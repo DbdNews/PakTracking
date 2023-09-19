@@ -1,0 +1,175 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ComparePriorityToInteraction",
+    "Outer": "BP_AntiCampSelfUnhook_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'InteractionDefinition:ComparePriorityToInteraction'",
+      "ObjectPath": "/Script/DeadByDaylight"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "interaction",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'InteractionDefinition'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "Enum": {
+          "ObjectName": "Enum'EInteractionComparisonPriority'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "CallFunc_GetObjectClass_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'InteractionDefinition'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_ClassIsChildOf_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_AntiCampSelfUnhook_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'AntiCampSelfUnhook'",
+      "ObjectPath": "/Script/DBDInteraction"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_AntiCampSelfUnhook_C:ComparePriorityToInteraction'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/Interactions/BP_AntiCampSelfUnhook.0"
+      }
+    ],
+    "FuncMap": {
+      "ComparePriorityToInteraction": {
+        "ObjectName": "Function'BP_AntiCampSelfUnhook_C:ComparePriorityToInteraction'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/Interactions/BP_AntiCampSelfUnhook.0"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_AntiCampSelfUnhook_C'Default__BP_AntiCampSelfUnhook_C'",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/Interactions/BP_AntiCampSelfUnhook.2"
+    }
+  },
+  {
+    "Type": "BP_AntiCampSelfUnhook_C",
+    "Name": "Default__BP_AntiCampSelfUnhook_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/Interactions/BP_AntiCampSelfUnhook.BP_AntiCampSelfUnhook_C'",
+    "Properties": {
+      "_selfUnhookMontage": {
+        "MontageID": "HookEscaping"
+      },
+      "_enduranceEffectDuration": {
+        "_dataTableRowHandle": {
+          "DataTable": {
+            "ObjectName": "DataTable'TunableValuesDB'",
+            "ObjectPath": "DeadByDaylight/Content/Data/TunableValuesDB.0"
+          },
+          "RowName": "AntiCampSelfUnhookEnduranceEffectDuration"
+        },
+        "_defaultValue": 5.0
+      },
+      "_movementSpeedBonusDuration": {
+        "_dataTableRowHandle": {
+          "DataTable": {
+            "ObjectName": "DataTable'TunableValuesDB'",
+            "ObjectPath": "DeadByDaylight/Content/Data/TunableValuesDB.0"
+          },
+          "RowName": "AntiCampSelfUnhookMovementSpeedBonusEffectDuration"
+        },
+        "_defaultValue": 10.0
+      },
+      "_enduranceEffectClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_EnduranceEffect_C'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Perks/StatusEffects/BP_EnduranceEffect.0"
+      },
+      "_movementSpeedBonusEffectClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_AntiCampSelfUnhookedMovementSpeedBonusEffect_C'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Perks/StatusEffects/BP_AntiCampSelfUnhookedMovementSpeedBonusEffect.0"
+      },
+      "StopInteractionOnChargeComplete": true,
+      "InteractionID": "AntiCampEscapeHook",
+      "SnapTime": 0.0,
+      "CamperCanInteract": true,
+      "TestClearPathDuringSnap": false,
+      "CanInteractWhileIncapacitated": true,
+      "CanInteractWhileUnhookingSelf": true,
+      "UseAuthoritativeMovement": false,
+      "CanAuthoritativePush": false,
+      "AutoBindToParentInteractor": false,
+      "AutoBindToParentZone": false,
+      "StopInteractionOnInputRelease": true,
+      "InteractionDescriptionText": {
+        "Namespace": "",
+        "Key": "3B80B88049FB3288D382389F633BE936",
+        "SourceString": "AntiCampEscape",
+        "LocalizedString": "Unhook"
+      },
+      "InteractionCanBeToggled": true,
+      "IgnoreSprintToCancelSetting": true,
+      "_tags": [
+        "Semantics.Interaction.Id.SelfUnhook"
+      ]
+    }
+  }
+]

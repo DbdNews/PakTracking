@@ -1317,6 +1317,7 @@ DirtyAreasUpdateFreq=60.000000
 +StructRedirects=(OldName="HelpTopicData", NewName="/Script/DBDSharedTypes.HelpTopicData")
 +StructRedirects=(OldName="HelpContextMappingData", NewName="/Script/DBDSharedTypes.HelpContextMappingData")
 +StructRedirects=(OldName="HelpCategoryData", NewName="/Script/DBDSharedTypes.HelpCategoryData")
++StructRedirects=(OldName="FCustomizationCategories", NewName="/Script/DBDSharedTypes.FCustomizationCategories")
 +StructRedirects=(OldName="/Script/DeadByDaylight.VideoThumbnailProperties", NewName="/Script/DBDVideoPlayer.VideoThumbnailProperties")
 +EnumRedirects=(OldName="/Script/DBDUIViewInterfaces.EKillerResult", NewName="/Script/DBDSharedTypes.EKillerMatchResult")
 +EnumRedirects=(OldName="EHudOffscreenIndicatorType", NewName="EHudScreenIndicatorType")
@@ -1347,6 +1348,8 @@ DirtyAreasUpdateFreq=60.000000
 +EnumRedirects=(OldName="ELeanState", NewName="/Script/DBDSharedTypes.ELeanState")
 +EnumRedirects=(OldName="ECurrencyType", NewName="/Script/DBDSharedTypes.ECurrencyType")
 +EnumRedirects=(OldName="EInventoryItemType", NewName="/Script/DBDSharedTypes.EInventoryItemType")
++EnumRedirects=(OldName="ECustomizationCategory", NewName="/Script/DBDSharedTypes.ECustomizationCategory")
++EnumRedirects=(OldName="EAudioCustomizationCategory", NewName="/Script/DBDSharedTypes.EAudioCustomizationCategory")
 +EnumRedirects=(OldName="ECamperImmobilizeState", NewName="/Script/DeadByDaylight.EImmobilizedState")
 +EnumRedirects=(OldName="ECamperGuidedAction", NewName="/Script/DeadByDaylight.EGuidedState")
 +EnumRedirects=(OldName="TextureGroup",ValueChanges=(("TEXTUREGROUP_Project01","TEXTUREGROUP_SkyboxReflections")))
@@ -1473,6 +1476,20 @@ DirtyAreasUpdateFreq=60.000000
 +ClassRedirects=(OldName="/Script/DBDGameplay.FatherHackedComponent",NewName="/Script/DBDGameplay.WormholeFatherHackingComponent")
 +PropertyRedirects=(OldName="/Script/DBDGameplay.WrmFatherHackingComponent.Cosmetic_OnHackedStateChanged",NewName="/Script/DBDGameplay.WormholeFatherHackingComponent.Cosmetic_OnHasBeenHackedChanged")
 +FunctionRedirects=(OldName="/Script/TheK33.S39P02.GetTrap",NewName="/Script/TheK33.S39P02.GetChemicalBombTrap")
++FunctionRedirects=(OldName="/Script/DeadByDaylight.LocalPlayerUtilities.GetLocalHumanPlayerState",NewName="/Script/DeadByDaylight.LocalPlayerUtilities.GetFirstLocalValidHumanPlayerState")
++ClassRedirects=(OldName="/Script/DBDGameplay.WrmFatherDeadBody",NewName="/Script/TheK33.WormholeFatherDeadBody")
++ClassRedirects=(OldName="/Script/DBDGameplay.FatherHackableActor",NewName="/Script/TheK33.WormholeFatherHackableActor")
++ClassRedirects=(OldName="/Script/DBDGameplay.FatherTerminalHackingInteraction",NewName="/Script/TheK33.FatherTerminalHackingInteraction")
++ClassRedirects=(OldName="/Script/DBDGameplay.WormholeFatherTerminal",NewName="/Script/TheK33.WormholeFatherTerminal")
++ClassRedirects=(OldName="/Script/DBDGameplay.WormholeFatherRoomZoneOverlap",NewName="/Script/TheK33.WormholeFatherRoomZoneOverlap")
++ClassRedirects=(OldName="/Script/DBDGameplay.WormholeFatherDoorAnimInstance",NewName="/Script/TheK33.WormholeFatherDoorAnimInstance")
++ClassRedirects=(OldName="/Script/DBDGameplay.QuesitaManagerComponent",NewName="/Script/TheK33.QuesitaManagerComponent")
++ClassRedirects=(OldName="/Script/DBDGameplay.WormholeFatherHackingComponent",NewName="/Script/TheK33.WormholeFatherHackingComponent")
++ClassRedirects=(OldName="/Script/DBDGameplay.CollectFatherKeyCardInteraction",NewName="/Script/TheK33.CollectFatherKeyCardInteraction")
++ClassRedirects=(OldName="/Script/DBDGameplay.FatherTerminalHackingInteraction",NewName="/Script/TheK33.FatherTerminalHackingInteraction")
++ClassRedirects=(OldName="/Script/DBDGameplay.QuesitaClosetHideEnterInteraction",NewName="/Script/TheK33.QuesitaClosetHideEnterInteraction")
++ClassRedirects=(OldName="/Script/DBDGameplay.WormholeFatherKeyCardOutlineUpdateStrategy",NewName="/Script/TheK33.WormholeFatherKeyCardOutlineUpdateStrategy")
++ClassRedirects=(OldName="/Script/DBDGameplay.FatherKeyCard",NewName="/Script/TheK33.WormholeFatherKeyCard")
 
 [/Script/IOSRuntimeSettings.IOSRuntimeSettings]
 BundleIdentifier=com.bhvr.deadbydaylight
@@ -1552,7 +1569,7 @@ GridServerIP=172.16.115.249
 
 [/Script/HoudiniEngineRuntime.HoudiniRuntimeSettings]
 bUseCustomHoudiniLocation=True
-CustomHoudiniLocation=(Path="C:/Program Files/Side Effects Software/Houdini 17.5.173/bin")
+CustomHoudiniLocation=(Path="C:/Program Files/Side Effects Software/Houdini 19.5.640/bin")
 
 [SSL]
 +PinnedPublicKeys=.dev.bhvrdbd.com:++MBgDH5WGvL9Bcn5Be30cRcL0f5O+NyoXuWtQdX1aI=;PiEjPYP2N0QUoKvrwZZjmvSLIl0bBGJgKUevOeNowEM=
@@ -1933,6 +1950,9 @@ Tangentspace=OrthonormalLeftHanded
 bForceRDOOff=False
 DefaultRDOLambda=30
 
+[Engine.BufferVisualizationMaterials]
+DBDScreenshotToolA=(Material="/Game/Tools/CustomizationTool/Screenshot/Buffer/DBDScreenshotToolA.DBDScreenshotToolA", Name=LOCTEXT("DBDScreenshotToolAMat", "DBD Screenshot Tool Alpha"))
+
 [AutomationTestBlacklist]
 +BlacklistTest=(Test="Project.Functional Tests./Game/AutomationTests/",Map="",Reason="Avoiding duplicates with GPR",RHIs="",Warn="true")
 
@@ -1968,4 +1988,3 @@ r.SkeletalMeshReductionModule=SkeletalMeshReduction
 
 [/Script/Engine.DataDrivenConsoleVariableSettings]
 +CVarsArray=(Type=CVarInt,Name="dbd.SelectCharacterMenuIdleAnimation",ToolTip="Select between all idle menu animation (0=Main, 1=interrupt01, 2=interrupt02..etc...)",DefaultValueFloat=0.000000,DefaultValueInt=0,DefaultValueBool=False)
-

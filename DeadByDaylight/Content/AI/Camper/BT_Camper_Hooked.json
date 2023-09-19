@@ -1,0 +1,651 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Camper_Hooked",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Camper_Hooked:BTComposite_Selector_28'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.2"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Camper'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BB_Camper.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_18",
+    "Outer": "BT_Camper_Hooked",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_InputPress'BT_Camper_Hooked:BTTask_InputPress_9'",
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.22"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsInteractionAvailable'BT_Camper_Hooked:BTDecorator_IsInteractionAvailable_4'",
+              "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.13"
+            },
+            {
+              "ObjectName": "BTDecorator_IsCamperState'BT_Camper_Hooked:BTDecorator_IsCamperState_0'",
+              "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.10"
+            },
+            {
+              "ObjectName": "BTDecorator_IsGameState'BT_Camper_Hooked:BTDecorator_IsGameState_1'",
+              "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.11"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_InputPress'BT_Camper_Hooked:BTTask_InputPress_12'",
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.20"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_HasGoodHookEscapeChance'BT_Camper_Hooked:BTDecorator_HasGoodHookEscapeChance_1'",
+              "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.8"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Attempt Hook Escape",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Camper_Hooked'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Camper_Hooked:BTComposite_Selector_28'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_28",
+    "Outer": "BT_Camper_Hooked",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_InputPress'BT_Camper_Hooked:BTTask_InputPress_0'",
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.18"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Camper_Hooked:BTDecorator_Blackboard_0'",
+              "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.4"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Camper_Hooked:BTDecorator_Blackboard_5'",
+              "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.5"
+            },
+            {
+              "ObjectName": "BTDecorator_IsInteractionAvailable'BT_Camper_Hooked:BTDecorator_IsInteractionAvailable_6'",
+              "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.15"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Camper_Hooked:BTComposite_Selector_3'",
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsInteractionAvailable'BT_Camper_Hooked:BTDecorator_IsInteractionAvailable_0'",
+              "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.12"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Camper_Hooked:BTComposite_Selector_18'",
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.1"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsInteractionAvailable'BT_Camper_Hooked:BTDecorator_IsInteractionAvailable_5'",
+              "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.14"
+            },
+            {
+              "ObjectName": "BTDecorator_IsLocationInPressureZone'BT_Camper_Hooked:BTDecorator_IsLocationInPressureZone_1'",
+              "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.16"
+            },
+            {
+              "ObjectName": "BTDecorator_ExtIsAtLocation'BT_Camper_Hooked:BTDecorator_ExtIsAtLocation_1'",
+              "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.7"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Camper_Hooked:BTTask_Wait_5'",
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.23"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_FindInteractor_Camper'BT_Camper_Hooked:BTService_FindInteractor_Camper_2'",
+          "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.17"
+        }
+      ],
+      "NodeName": "Hooked Loop",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Camper_Hooked'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_3",
+    "Outer": "BT_Camper_Hooked",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_InputPress'BT_Camper_Hooked:BTTask_InputPress_1'",
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.19"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Camper_Hooked:BTDecorator_Blackboard_6'",
+              "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.6"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_InputPress'BT_Camper_Hooked:BTTask_InputPress_2'",
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.21"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsAtLocation'BT_Camper_Hooked:BTDecorator_IsAtLocation_1'",
+              "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.9"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Anti Camp Hook Escape",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Camper_Hooked'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Camper_Hooked:BTComposite_Selector_28'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "BT_Camper_Hooked",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Properties": {
+      "IntValue": 1,
+      "FloatValue": 0.51,
+      "CachedDescription": "HookDrainStage Is Equal To 1",
+      "BlackboardKey": {
+        "SelectedKeyName": "HookDrainStage"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "If In Hook Drain Stage 1",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Camper_Hooked'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Camper_Hooked:BTComposite_Selector_28'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_5",
+    "Outer": "BT_Camper_Hooked",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Properties": {
+      "FloatValue": 0.51,
+      "CachedDescription": "HookTimerPercentLeft Is Less Than Or Equal To 0.510000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "HookTimerPercentLeft"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "If About To Move To Next Stage",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Camper_Hooked'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Camper_Hooked:BTComposite_Selector_28'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_6",
+    "Outer": "BT_Camper_Hooked",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Properties": {
+      "FloatValue": 0.25,
+      "CachedDescription": "HookTimerPercentLeft Is Less Than Or Equal To 0.250000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "HookTimerPercentLeft"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "Is Getting Close to Death",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Camper_Hooked'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Camper_Hooked:BTComposite_Selector_3'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ExtIsAtLocation",
+    "Name": "BTDecorator_ExtIsAtLocation_1",
+    "Outer": "BT_Camper_Hooked",
+    "Class": "UScriptClass'BTDecorator_ExtIsAtLocation'",
+    "Properties": {
+      "BBLoc": {
+        "SelectedKeyName": "NeedFriendInteractorLocation"
+      },
+      "AcceptableRadius": {
+        "DefaultValue": 2400.0
+      },
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "If No Standing Friend Nearby",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Camper_Hooked'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Camper_Hooked:BTComposite_Selector_28'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_HasGoodHookEscapeChance",
+    "Name": "BTDecorator_HasGoodHookEscapeChance_1",
+    "Outer": "BT_Camper_Hooked",
+    "Class": "UScriptClass'BTDecorator_HasGoodHookEscapeChance'",
+    "Properties": {
+      "GoodHookEscapeProbability": 0.25,
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Camper_Hooked'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Camper_Hooked:BTComposite_Selector_18'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_1",
+    "Outer": "BT_Camper_Hooked",
+    "Class": "UScriptClass'BTDecorator_IsAtLocation'",
+    "Properties": {
+      "AcceptableRadius": 1000.0,
+      "BlackboardKey": {
+        "SelectedKeyName": "HostileStimulusActor"
+      },
+      "bInverseCondition": true,
+      "NodeName": "Is Killer Far Away Enough",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Camper_Hooked'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Camper_Hooked:BTComposite_Selector_3'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsCamperState",
+    "Name": "BTDecorator_IsCamperState_0",
+    "Outer": "BT_Camper_Hooked",
+    "Class": "UScriptClass'BTDecorator_IsCamperState'",
+    "Properties": {
+      "BBCamper": {},
+      "DamageState": "ECamperDamageState::VE_Injured",
+      "DamageOp": "EArithmeticKeyOperation::LessOrEqual",
+      "ImmobilizeOp": "EArithmeticKeyOperation::GreaterOrEqual",
+      "OnFilter": "EIsCamperStateOnFilter::OnOthersThanSelf",
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "If No Standing Friends (No Chance To Be Rescued)",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Camper_Hooked'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Camper_Hooked:BTComposite_Selector_18'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsGameState",
+    "Name": "BTDecorator_IsGameState_1",
+    "Outer": "BT_Camper_Hooked",
+    "Class": "UScriptClass'BTDecorator_IsGameState'",
+    "Properties": {
+      "RemainingObjectiveOp": "EArithmeticKeyOperation::Greater",
+      "NbRemainingObjectives": 2,
+      "SurvivorsLeftOp": "EArithmeticKeyOperation::LessOrEqual",
+      "NbSurvivorsLeft": 2,
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "If Enough Survivors For Remaining Objectives",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Camper_Hooked'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Camper_Hooked:BTComposite_Selector_18'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsInteractionAvailable",
+    "Name": "BTDecorator_IsInteractionAvailable_0",
+    "Outer": "BT_Camper_Hooked",
+    "Class": "UScriptClass'BTDecorator_IsInteractionAvailable'",
+    "Properties": {
+      "InteractionIds": [
+        "AntiCampEscapeHook"
+      ],
+      "BBInteractor": {},
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "If Anti Camp Escape Interaction Available",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Camper_Hooked'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Camper_Hooked:BTComposite_Selector_28'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsInteractionAvailable",
+    "Name": "BTDecorator_IsInteractionAvailable_4",
+    "Outer": "BT_Camper_Hooked",
+    "Class": "UScriptClass'BTDecorator_IsInteractionAvailable'",
+    "Properties": {
+      "InteractionIds": [
+        "EscapeHook"
+      ],
+      "OnFilter": "EIsInteractionAvailableOnFilter::AnyFriend",
+      "BBInteractor": {},
+      "FailIfNotPerformingInteraction": true,
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "If No Friend Escaping Hook (Let Them Try First)",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Camper_Hooked'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Camper_Hooked:BTComposite_Selector_18'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsInteractionAvailable",
+    "Name": "BTDecorator_IsInteractionAvailable_5",
+    "Outer": "BT_Camper_Hooked",
+    "Class": "UScriptClass'BTDecorator_IsInteractionAvailable'",
+    "Properties": {
+      "InteractionIds": [
+        "EscapeHook"
+      ],
+      "BBInteractor": {},
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "If Escape Hook Interaction Available",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Camper_Hooked'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Camper_Hooked:BTComposite_Selector_28'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsInteractionAvailable",
+    "Name": "BTDecorator_IsInteractionAvailable_6",
+    "Outer": "BT_Camper_Hooked",
+    "Class": "UScriptClass'BTDecorator_IsInteractionAvailable'",
+    "Properties": {
+      "InteractionIds": [
+        "EscapeHook",
+        "AntiCampEscapeHook"
+      ],
+      "BBInteractor": {},
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "If Any Escape Hook Interaction Available",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Camper_Hooked'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Camper_Hooked:BTComposite_Selector_28'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsLocationInPressureZone",
+    "Name": "BTDecorator_IsLocationInPressureZone_1",
+    "Outer": "BT_Camper_Hooked",
+    "Class": "UScriptClass'BTDecorator_IsLocationInPressureZone'",
+    "Properties": {
+      "BBAtLocation": {
+        "SelectedKeyName": "SelfActor"
+      },
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "If Not In Pressure Zone (Its Safe To Escape)",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Camper_Hooked'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Camper_Hooked:BTComposite_Selector_28'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.2"
+      }
+    }
+  },
+  {
+    "Type": "BTService_FindInteractor_Camper",
+    "Name": "BTService_FindInteractor_Camper_2",
+    "Outer": "BT_Camper_Hooked",
+    "Class": "UScriptClass'BTService_FindInteractor_Camper'",
+    "Properties": {
+      "StatusFilter": "EFindInteractableCamperFilter::Standing",
+      "BBOnlyFromActor": {},
+      "RejectIfWasInCooldownAndFocusedOnAnotherObject": false,
+      "RejectIfFocusedByOther": false,
+      "RejectIfNotFocusedBySelf": false,
+      "RejectAboveRange": 2400.0,
+      "BBInteractLocation": {
+        "SelectedKeyName": "NeedFriendInteractorLocation"
+      },
+      "BBInteractorObj": {
+        "SelectedKeyName": "NeedFriendInteractor"
+      },
+      "BBUnsafeActionID": {},
+      "BBUnsafeActionUsesItemAddons": {},
+      "BBUnsafeActionIsSelfInteraction": {},
+      "BBUnsafeActionRange": {},
+      "BBSearchAround": {},
+      "BBObjectLocation": {},
+      "NodeName": "Find Friend Helper Interactor",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Camper_Hooked'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Camper_Hooked:BTComposite_Selector_28'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_InputPress",
+    "Name": "BTTask_InputPress_0",
+    "Outer": "BT_Camper_Hooked",
+    "Class": "UScriptClass'BTTask_InputPress'",
+    "Properties": {
+      "Input": "EPawnInputPressTypes::Interact",
+      "InputMode": "ETaskInputPressModes::Hold",
+      "NodeName": "Input Press To Escape Hook",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Camper_Hooked'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Camper_Hooked:BTComposite_Selector_28'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_InputPress",
+    "Name": "BTTask_InputPress_1",
+    "Outer": "BT_Camper_Hooked",
+    "Class": "UScriptClass'BTTask_InputPress'",
+    "Properties": {
+      "Input": "EPawnInputPressTypes::Interact",
+      "InputMode": "ETaskInputPressModes::Hold",
+      "NodeName": "Input Press To Escape Hook",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Camper_Hooked'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Camper_Hooked:BTComposite_Selector_3'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_InputPress",
+    "Name": "BTTask_InputPress_12",
+    "Outer": "BT_Camper_Hooked",
+    "Class": "UScriptClass'BTTask_InputPress'",
+    "Properties": {
+      "Input": "EPawnInputPressTypes::Interact",
+      "InputMode": "ETaskInputPressModes::Hold",
+      "NodeName": "Input Press To Escape Hook",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Camper_Hooked'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Camper_Hooked:BTComposite_Selector_18'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_InputPress",
+    "Name": "BTTask_InputPress_2",
+    "Outer": "BT_Camper_Hooked",
+    "Class": "UScriptClass'BTTask_InputPress'",
+    "Properties": {
+      "Input": "EPawnInputPressTypes::Interact",
+      "InputMode": "ETaskInputPressModes::Hold",
+      "NodeName": "Input Press To Escape Hook",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Camper_Hooked'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Camper_Hooked:BTComposite_Selector_3'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_InputPress",
+    "Name": "BTTask_InputPress_9",
+    "Outer": "BT_Camper_Hooked",
+    "Class": "UScriptClass'BTTask_InputPress'",
+    "Properties": {
+      "Input": "EPawnInputPressTypes::Interact",
+      "InputMode": "ETaskInputPressModes::Hold",
+      "NodeName": "Input Press To Escape Hook",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Camper_Hooked'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Camper_Hooked:BTComposite_Selector_18'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_5",
+    "Outer": "BT_Camper_Hooked",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Properties": {
+      "WaitTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Camper_Hooked'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Camper_Hooked:BTComposite_Selector_28'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BT_Camper_Hooked.2"
+      }
+    }
+  }
+]

@@ -319,7 +319,7 @@
           "Namespace": "",
           "Key": "9B12563D4D51A2F59DE97C9BBFAC0AF0",
           "SourceString": "RITUAL_K21_NAME",
-          "LocalizedString": "Ritual of The Blight"
+          "LocalizedString": "Rite of The Blight"
         },
         "Description": {
           "Namespace": "",
@@ -1435,7 +1435,7 @@
           "Namespace": "",
           "Key": "D563D01846091FAABE099AA17F2F1DDD",
           "SourceString": "RITUAL_K31_DESC",
-          "LocalizedString": "With The Skull Merchant, hit {1} Survivors within 10 seconds of them being inside a Drone's Active Zone."
+          "LocalizedString": "With The Skull Merchant, down {1} Survivors that have a Claw Trap."
         },
         "IconPath": "UI/Icons/DailyRituals/dailyRitualIcon_deviousness.png",
         "PossibleCharacters": {
@@ -1448,7 +1448,7 @@
         "TrackedEvents": [],
         "TrackedGameEvents": [
           {
-            "TagName": "GameEvent.ScoreEvent.Killer.K31.HitSurvivorInActiveZoneNormal"
+            "TagName": "GameEvent.ScoreEvent.Killer.K31.DownSurvivorWithClawTrap"
           }
         ],
         "Evaluator": {
@@ -1482,6 +1482,39 @@
         "TrackedGameEvents": [
           {
             "TagName": "GameEvent.K32.TeleportToSurvivor.End"
+          }
+        ],
+        "Evaluator": {
+          "AssetPathName": "None",
+          "SubPathString": ""
+        }
+      },
+      "DR_xenomorph": {
+        "RitualId": "DR_xenomorph",
+        "DisplayName": {
+          "Namespace": "",
+          "Key": "4BE3A5CD437B34952CDB3AA65FB34436",
+          "SourceString": "RITUAL_K33_NAME",
+          "LocalizedString": "Rite of the Xenomorph"
+        },
+        "Description": {
+          "Namespace": "",
+          "Key": "560CD70A42F86AC5B59327B12B32EE3F",
+          "SourceString": "RITUAL_K33_DESC",
+          "LocalizedString": "With The Xenomorph, hit a Survivor with a Tail Attack {1} time(s)."
+        },
+        "IconPath": "UI/Icons/DailyRituals/dailyRitualIcon_deviousness.png",
+        "PossibleCharacters": {
+          "CharacterIDs": [
+            268435488
+          ],
+          "Roles": [],
+          "SelectOneCharacterFromRoles": []
+        },
+        "TrackedEvents": [],
+        "TrackedGameEvents": [
+          {
+            "TagName": "GameEvent.Killer.K33.TailAttack.HitSurvivor"
           }
         ],
         "Evaluator": {
