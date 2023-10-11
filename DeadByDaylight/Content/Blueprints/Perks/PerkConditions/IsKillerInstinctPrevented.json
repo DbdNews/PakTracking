@@ -1,11 +1,77 @@
 [
   {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_IsKillerInstinctPrevented",
+    "Outer": "IsKillerInstinctPrevented_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "InitializeSubjectProviderClass",
+    "Outer": "IsKillerInstinctPrevented_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'BaseModifierCondition:InitializeSubjectProviderClass'",
+      "ObjectPath": "/Script/Competence"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
     "Type": "BlueprintGeneratedClass",
     "Name": "IsKillerInstinctPrevented_C",
     "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'IsKillerInstinctPrevented_C:ExecuteUbergraph_IsKillerInstinctPrevented'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Perks/PerkConditions/IsKillerInstinctPrevented.0"
+      }
+    },
     "SuperStruct": {
       "ObjectName": "Class'HasObjectState'",
       "ObjectPath": "/Script/Competence"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'IsKillerInstinctPrevented_C:InitializeSubjectProviderClass'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Perks/PerkConditions/IsKillerInstinctPrevented.1"
+      },
+      {
+        "ObjectName": "Function'IsKillerInstinctPrevented_C:ExecuteUbergraph_IsKillerInstinctPrevented'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Perks/PerkConditions/IsKillerInstinctPrevented.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_IsKillerInstinctPrevented": {
+        "ObjectName": "Function'IsKillerInstinctPrevented_C:ExecuteUbergraph_IsKillerInstinctPrevented'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Perks/PerkConditions/IsKillerInstinctPrevented.0"
+      },
+      "InitializeSubjectProviderClass": {
+        "ObjectName": "Function'IsKillerInstinctPrevented_C:InitializeSubjectProviderClass'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Perks/PerkConditions/IsKillerInstinctPrevented.1"
+      }
     },
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
     "ClassWithin": {
@@ -16,7 +82,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "IsKillerInstinctPrevented_C'Default__IsKillerInstinctPrevented_C'",
-      "ObjectPath": "DeadByDaylight/Content/Blueprints/Perks/PerkConditions/IsKillerInstinctPrevented.1"
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/Perks/PerkConditions/IsKillerInstinctPrevented.3"
     }
   },
   {
@@ -24,6 +90,7 @@
     "Name": "Default__IsKillerInstinctPrevented_C",
     "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/Perks/PerkConditions/IsKillerInstinctPrevented.IsKillerInstinctPrevented_C'",
     "Properties": {
+      "UberGraphFrame": {},
       "_state": {
         "TagName": "State.PreventKillerInstinct"
       }

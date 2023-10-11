@@ -1,0 +1,231 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_NaughtyBearKill",
+    "Outer": "NaughtyBearKill_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DBDPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_player_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DBDPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_complete",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetCharacterInventoryComponent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'CharacterInventoryComponent'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetCharacterInventoryComponent_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'CharacterInventoryComponent'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInteractionExitEnd",
+    "Outer": "NaughtyBearKill_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'InteractionDefinition:OnInteractionExitEnd'",
+      "ObjectPath": "/Script/DeadByDaylight"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'DBDPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInteractionCompletionStateChanged",
+    "Outer": "NaughtyBearKill_C",
+    "Class": "UScriptClass'Function'",
+    "Super": {
+      "ObjectName": "Function'BaseKillWithProp_C:OnInteractionCompletionStateChanged'",
+      "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/BaseKillWithProp.1"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'BaseKillWithProp_C:OnInteractionCompletionStateChanged'",
+      "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/BaseKillWithProp.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'DBDPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "complete",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "NaughtyBearKill_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BaseKillWithProp_C'",
+      "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/BaseKillWithProp.4"
+    },
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'NaughtyBearKill_C:ExecuteUbergraph_NaughtyBearKill'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/NaughtyBearKill.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BaseKillWithProp_C'",
+      "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/BaseKillWithProp.4"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'NaughtyBearKill_C:OnInteractionCompletionStateChanged'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/NaughtyBearKill.2"
+      },
+      {
+        "ObjectName": "Function'NaughtyBearKill_C:OnInteractionExitEnd'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/NaughtyBearKill.1"
+      },
+      {
+        "ObjectName": "Function'NaughtyBearKill_C:ExecuteUbergraph_NaughtyBearKill'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/NaughtyBearKill.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_NaughtyBearKill": {
+        "ObjectName": "Function'NaughtyBearKill_C:ExecuteUbergraph_NaughtyBearKill'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/NaughtyBearKill.0"
+      },
+      "OnInteractionExitEnd": {
+        "ObjectName": "Function'NaughtyBearKill_C:OnInteractionExitEnd'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/NaughtyBearKill.1"
+      },
+      "OnInteractionCompletionStateChanged": {
+        "ObjectName": "Function'NaughtyBearKill_C:OnInteractionCompletionStateChanged'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/NaughtyBearKill.2"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "NaughtyBearKill_C'Default__NaughtyBearKill_C'",
+      "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/NaughtyBearKill.4"
+    }
+  },
+  {
+    "Type": "NaughtyBearKill_C",
+    "Name": "Default__NaughtyBearKill_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/NaughtyBearKill.NaughtyBearKill_C'",
+    "Template": {
+      "ObjectName": "BaseKillWithProp_C'Default__BaseKillWithProp_C'",
+      "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/BaseKillWithProp.5"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "Props": [
+        null
+      ],
+      "PropClasses": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'BP_KillProp_BearTrap_C'",
+          "ObjectPath": "DeadByDaylight/Content/Meshes/Props/BearTrap/BP_KillProp_BearTrap.0"
+        }
+      ],
+      "_overrideSlasherFieldOfViewDuringInteraction": true,
+      "_camperCopySlasherFOVCurve": true
+    }
+  }
+]

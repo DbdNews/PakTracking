@@ -1,0 +1,114 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_PlayersInZoneTracker_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'PlayersInZoneTracker'",
+      "ObjectPath": "/Script/DBDGameplay"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_PlayersInZoneTracker_C'Default__BP_PlayersInZoneTracker_C'",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/BP_PlayersInZoneTracker.1"
+    }
+  },
+  {
+    "Type": "BP_PlayersInZoneTracker_C",
+    "Name": "Default__BP_PlayersInZoneTracker_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/GameplayElements/BP_PlayersInZoneTracker.BP_PlayersInZoneTracker_C'",
+    "Properties": {
+      "_playerTracker": {
+        "ObjectName": "SphereComponent'Default__BP_PlayersInZoneTracker_C:PlayerTracker'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/BP_PlayersInZoneTracker.2"
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "PlayerTracker",
+    "Outer": "Default__BP_PlayersInZoneTracker_C",
+    "Class": "UScriptClass'SphereComponent'",
+    "Properties": {
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "CollisionProfileName": "Custom",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "InteractionDetector",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BlinkBlocker",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Ground",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Interactable",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Audio",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Spider",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Traps",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PawnDetector",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      }
+    }
+  }
+]

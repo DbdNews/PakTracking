@@ -1,0 +1,237 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_HookSurvivorVoidHook",
+    "Outer": "BP_HookSurvivorVoidHook_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DBDPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_complete",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAudioComponent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AkComponent'",
+          "ObjectPath": "/Script/AkAudio"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "Temp_struct_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "Temp_struct_Variable",
+          "Flags": "RF_Public",
+          "ElementSize": 56,
+          "Struct": {
+            "ObjectName": "ScriptStruct'AkExternalSourceInfo'",
+            "ObjectPath": "/Script/AkAudio"
+          }
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "Temp_delegate_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "PropertyFlags": "ConstParm",
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'OnAkPostEventCallback__DelegateSignature'",
+          "ObjectPath": "/Script/AkAudio"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_PostAkEvent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInteractionCompletionStateChanged",
+    "Outer": "BP_HookSurvivorVoidHook_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'ChargeableInteractionDefinition:OnInteractionCompletionStateChanged'",
+      "ObjectPath": "/Script/DeadByDaylight"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'DBDPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "complete",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_HookSurvivorVoidHook_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_HookSurvivorVoidHook_C:ExecuteUbergraph_BP_HookSurvivorVoidHook'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/Interactions/BP_HookSurvivorVoidHook.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Halloween2023VoidHookSurvivorDefinition'",
+      "ObjectPath": "/Script/Halloween2023"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_HookSurvivorVoidHook_C:OnInteractionCompletionStateChanged'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/Interactions/BP_HookSurvivorVoidHook.1"
+      },
+      {
+        "ObjectName": "Function'BP_HookSurvivorVoidHook_C:ExecuteUbergraph_BP_HookSurvivorVoidHook'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/Interactions/BP_HookSurvivorVoidHook.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_HookSurvivorVoidHook": {
+        "ObjectName": "Function'BP_HookSurvivorVoidHook_C:ExecuteUbergraph_BP_HookSurvivorVoidHook'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/Interactions/BP_HookSurvivorVoidHook.0"
+      },
+      "OnInteractionCompletionStateChanged": {
+        "ObjectName": "Function'BP_HookSurvivorVoidHook_C:OnInteractionCompletionStateChanged'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/Interactions/BP_HookSurvivorVoidHook.1"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_HookSurvivorVoidHook_C'Default__BP_HookSurvivorVoidHook_C'",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/Interactions/BP_HookSurvivorVoidHook.3"
+    }
+  },
+  {
+    "Type": "BP_HookSurvivorVoidHook_C",
+    "Name": "Default__BP_HookSurvivorVoidHook_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/MeatLocker/Interactions/BP_HookSurvivorVoidHook.BP_HookSurvivorVoidHook_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "StopInteractionOnChargeComplete": true,
+      "InteractionID": "Hang",
+      "SnapTime": 0.5,
+      "StopEnterMontageOnExit": false,
+      "StopUpdateMontageOnExit": true,
+      "SlasherCanInteract": true,
+      "SnapPosition": true,
+      "SnapRotation": true,
+      "IsInterruptibleIfTestClearPathDuringSnapFails": false,
+      "ScaleEnterAnimationToTime": true,
+      "ScaleMainAnimationToTime": true,
+      "IsHighPriority": true,
+      "UseAuthoritativeMovement": false,
+      "AutoBindToParentInteractor": false,
+      "AutoBindToParentZone": false,
+      "CancelOnMoveInput": 0.0,
+      "ShowBasicInteractionIcon": true,
+      "InteractionDescriptionText": {
+        "Namespace": "",
+        "Key": "0619DCA54316B1EEAF4E6187EA5D6D66",
+        "SourceString": "Hang",
+        "LocalizedString": "Hang"
+      },
+      "EnterMontage": {
+        "MontageID": "HookSetup"
+      },
+      "UpdateMontage": {
+        "MontageID": "HookCamper"
+      },
+      "SnapSocketName": "socket_KillerAttach",
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      },
+      "bReplicates": false
+    }
+  }
+]

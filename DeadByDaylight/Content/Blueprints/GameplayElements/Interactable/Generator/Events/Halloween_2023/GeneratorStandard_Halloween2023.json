@@ -14,18 +14,6 @@
       },
       {
         "Type": "BoolProperty",
-        "Name": "CallFunc_IsValid_ReturnValue",
-        "Flags": "RF_Public",
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "BoolProperty",
         "Name": "CallFunc_HasAuthority_ReturnValue",
         "Flags": "RF_Public",
         "ElementSize": 1,
@@ -212,10 +200,34 @@
         "bIsNativeBool": true
       },
       {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
         "Type": "IntProperty",
         "Name": "CallFunc_PostAkEvent_ReturnValue",
         "Flags": "RF_Public",
         "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_K2_AttachToComponent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
       }
     ],
     "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
@@ -447,11 +459,11 @@
       "NumReplicatedProperties": 1,
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'GeneratorStandard_Halloween2023_C:SimpleConstructionScript_0'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.34"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.37"
       },
       "InheritableComponentHandler": {
         "ObjectName": "InheritableComponentHandler'GeneratorStandard_Halloween2023_C:InheritableComponentHandler'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.17"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.18"
       },
       "UberGraphFunction": {
         "ObjectName": "Function'GeneratorStandard_Halloween2023_C:ExecuteUbergraph_GeneratorStandard_Halloween2023'",
@@ -663,11 +675,11 @@
       },
       "_transformOptimizer": {
         "ObjectName": "InteractableTransformOptimizer'Default__GeneratorStandard_Halloween2023_C:InteractableOptimizer'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.18"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.19"
       },
       "_interactableObjectState": {
         "ObjectName": "GameplayTagContainerComponent'Default__GeneratorStandard_Halloween2023_C:InteractableObjectState'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.16"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.17"
       }
     }
   },
@@ -716,17 +728,26 @@
     "Properties": {
       "_timeWorkingOnGeneratorNeededToAwardEnergy": {
         "_dataTableRowHandle": {
-          "DataTable": null
+          "DataTable": {
+            "ObjectName": "DataTable'Halloween2023TunableDB'",
+            "ObjectPath": "DeadByDaylight/Content/Data/Events/XRay/Halloween2023TunableDB.0"
+          }
         }
       },
       "_maxEnergyCanAward": {
         "_dataTableRowHandle": {
-          "DataTable": null
+          "DataTable": {
+            "ObjectName": "DataTable'Halloween2023TunableDB'",
+            "ObjectPath": "DeadByDaylight/Content/Data/Events/XRay/Halloween2023TunableDB.0"
+          }
         }
       },
       "_energyToGiveOnEvent": {
         "_dataTableRowHandle": {
-          "DataTable": null
+          "DataTable": {
+            "ObjectName": "DataTable'Halloween2023TunableDB'",
+            "ObjectPath": "DeadByDaylight/Content/Data/Events/XRay/Halloween2023TunableDB.0"
+          }
         }
       }
     }
@@ -744,6 +765,32 @@
       "ChildActorTemplate": {
         "ObjectName": "BP_HL_2023_Generator_Centrifuge_C'GeneratorStandard_Halloween2023_C:BP_HL_2023_Generator_Centrifuge_GEN_VARIABLE.BP_HL_2022_Generator_Centrifuge_GEN_VARIABLE_BP_HL_2023_Generator_Centrifuge_C_CAT'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.12"
+      }
+    }
+  },
+  {
+    "Type": "DBDSkeletalMeshComponentBudgeted",
+    "Name": "SkeletalMeshComponent_GEN_VARIABLE",
+    "Outer": "GeneratorStandard_Halloween2023_C",
+    "Class": "UScriptClass'DBDSkeletalMeshComponentBudgeted'",
+    "Template": {
+      "ObjectName": "DBDSkeletalMeshComponentBudgeted'GeneratorStandard_C:SkeletalMeshComponent_GEN_VARIABLE'",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/GeneratorStandard.101"
+    },
+    "Properties": {
+      "_significanceStrategy": {
+        "ObjectName": "LinearSignificanceStrategy'GeneratorStandard_Halloween2023_C:SkeletalMeshComponent_GEN_VARIABLE.LinearSignificanceStrategy_0'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.20"
+      },
+      "_animBudgeterSignificanceStrategy": {
+        "ObjectName": "SimpleAnimBudgeterSignificanceStrategy'GeneratorStandard_Halloween2023_C:SkeletalMeshComponent_GEN_VARIABLE.SimpleAnimBudgeterSignificanceStrategy_0'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.36"
+      },
+      "AnimationData": {
+        "AnimToPlay": {
+          "ObjectName": "AnimSequence'GN_Idle'",
+          "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/Generators/Animations/AnimSequences/GN_Idle.0"
+        }
       }
     }
   },
@@ -789,7 +836,7 @@
           },
           "ComponentTemplate": {
             "ObjectName": "NiagaraComponent'GeneratorStandard_Halloween2023_C:NS_Generator_Activation_Bubble_GEN_VARIABLE'",
-            "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.19"
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.21"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -811,7 +858,7 @@
           },
           "ComponentTemplate": {
             "ObjectName": "NiagaraComponent'GeneratorStandard_Halloween2023_C:NS_Generator_Activation_Burst_GEN_VARIABLE'",
-            "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.20"
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.22"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -833,7 +880,7 @@
           },
           "ComponentTemplate": {
             "ObjectName": "NiagaraComponent'GeneratorStandard_Halloween2023_C:NS_Generator_Base_Activation_GEN_VARIABLE'",
-            "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.21"
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.23"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -855,7 +902,7 @@
           },
           "ComponentTemplate": {
             "ObjectName": "NiagaraComponent'GeneratorStandard_Halloween2023_C:NS_Generator_Idle_Lights_GEN_VARIABLE'",
-            "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.22"
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.24"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -877,7 +924,7 @@
           },
           "ComponentTemplate": {
             "ObjectName": "NiagaraComponent'GeneratorStandard_Halloween2023_C:NS_Generator_Top_Activation_GEN_VARIABLE'",
-            "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.23"
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.25"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -913,6 +960,28 @@
             "ChangedPropertyList": [],
             "bHasValidCookedData": false
           }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'DBDSkeletalMeshComponentBudgeted'",
+            "ObjectPath": "/Script/DBDAnimationBudgetAllocator"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "DBDSkeletalMeshComponentBudgeted'GeneratorStandard_Halloween2023_C:SkeletalMeshComponent_GEN_VARIABLE'",
+            "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.15"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'GeneratorStandard_C'",
+              "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/GeneratorStandard.77"
+            },
+            "SCSVariableName": "SkeletalMeshComponent",
+            "AssociatedGuid": "E34AE08D-4DC9A856-87D2A4A4-47B8B5F5"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
         }
       ]
     }
@@ -925,6 +994,16 @@
     "Template": {
       "ObjectName": "InteractableTransformOptimizer'Default__GeneratorStandard_C:InteractableOptimizer'",
       "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/GeneratorStandard.134"
+    }
+  },
+  {
+    "Type": "LinearSignificanceStrategy",
+    "Name": "LinearSignificanceStrategy_0",
+    "Outer": "SkeletalMeshComponent_GEN_VARIABLE",
+    "Class": "UScriptClass'LinearSignificanceStrategy'",
+    "Template": {
+      "ObjectName": "LinearSignificanceStrategy'GeneratorStandard_C:SkeletalMeshComponent_GEN_VARIABLE.LinearSignificanceStrategy_0'",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/GeneratorStandard.139"
     }
   },
   {
@@ -1054,7 +1133,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'GeneratorStandard_Halloween2023_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.24"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.26"
       },
       "VariableGuid": "57FE87C1-42675B8E-099A4E86-0E32AEF9",
       "InternalVariableName": "DefaultSceneRoot"
@@ -1076,12 +1155,6 @@
       },
       "ParentComponentOrVariableName": "SkeletalMeshComponent",
       "ParentComponentOwnerClassName": "GeneratorStandard_C",
-      "ChildNodes": [
-        {
-          "ObjectName": "SCS_Node'GeneratorStandard_Halloween2023_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.33"
-        }
-      ],
       "VariableGuid": "2EACDDE9-44123F57-38E003B7-3B039C0B",
       "InternalVariableName": "BP_HL_2023_Generator_Centrifuge"
     }
@@ -1116,7 +1189,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'GeneratorStandard_Halloween2023_C:Void Energy Hover Location_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.25"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.27"
       },
       "ParentComponentOrVariableName": "SceneRoot",
       "ParentComponentOwnerClassName": "GeneratorStandard_C",
@@ -1136,7 +1209,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'GeneratorStandard_Halloween2023_C:Void Energy Spawn Location_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.26"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.28"
       },
       "ParentComponentOrVariableName": "SceneRoot",
       "ParentComponentOwnerClassName": "GeneratorStandard_C",
@@ -1156,7 +1229,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "EventGeneratorComponent'GeneratorStandard_Halloween2023_C:EventGenerator_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.15"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.16"
       },
       "VariableGuid": "A87C10E7-46165ED4-007BF7AC-E0A9590F",
       "InternalVariableName": "EventGenerator"
@@ -1174,10 +1247,22 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'GeneratorStandard_Halloween2023_C:SM_XR_Generator_Centrifuge_Addon_Halloween2023_0_GEN_VARIABLE'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.35"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.38"
       },
+      "ParentComponentOrVariableName": "SkeletalMeshComponent",
+      "ParentComponentOwnerClassName": "GeneratorStandard_C",
       "VariableGuid": "79BDC1D3-4C812741-EB14F5AC-120F1F4C",
       "InternalVariableName": "SM_XR_Generator_Centrifuge_Addon_Halloween2023_0"
+    }
+  },
+  {
+    "Type": "SimpleAnimBudgeterSignificanceStrategy",
+    "Name": "SimpleAnimBudgeterSignificanceStrategy_0",
+    "Outer": "SkeletalMeshComponent_GEN_VARIABLE",
+    "Class": "UScriptClass'SimpleAnimBudgeterSignificanceStrategy'",
+    "Template": {
+      "ObjectName": "SimpleAnimBudgeterSignificanceStrategy'GeneratorStandard_C:SkeletalMeshComponent_GEN_VARIABLE.SimpleAnimBudgeterSignificanceStrategy_0'",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/GeneratorStandard.245"
     }
   },
   {
@@ -1189,54 +1274,58 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'GeneratorStandard_Halloween2023_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.29"
-        },
-        {
-          "ObjectName": "SCS_Node'GeneratorStandard_Halloween2023_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.30"
-        },
-        {
-          "ObjectName": "SCS_Node'GeneratorStandard_Halloween2023_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.31"
         },
         {
-          "ObjectName": "SCS_Node'GeneratorStandard_Halloween2023_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectName": "SCS_Node'GeneratorStandard_Halloween2023_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.32"
         },
         {
+          "ObjectName": "SCS_Node'GeneratorStandard_Halloween2023_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.33"
+        },
+        {
+          "ObjectName": "SCS_Node'GeneratorStandard_Halloween2023_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.34"
+        },
+        {
           "ObjectName": "SCS_Node'GeneratorStandard_Halloween2023_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.28"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.30"
+        },
+        {
+          "ObjectName": "SCS_Node'GeneratorStandard_Halloween2023_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.35"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'GeneratorStandard_Halloween2023_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.29"
-        },
-        {
-          "ObjectName": "SCS_Node'GeneratorStandard_Halloween2023_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.30"
-        },
-        {
-          "ObjectName": "SCS_Node'GeneratorStandard_Halloween2023_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.31"
         },
         {
-          "ObjectName": "SCS_Node'GeneratorStandard_Halloween2023_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectName": "SCS_Node'GeneratorStandard_Halloween2023_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.32"
         },
         {
+          "ObjectName": "SCS_Node'GeneratorStandard_Halloween2023_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.33"
+        },
+        {
+          "ObjectName": "SCS_Node'GeneratorStandard_Halloween2023_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.34"
+        },
+        {
           "ObjectName": "SCS_Node'GeneratorStandard_Halloween2023_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.28"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.30"
         },
         {
           "ObjectName": "SCS_Node'GeneratorStandard_Halloween2023_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.33"
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.35"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'GeneratorStandard_Halloween2023_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.27"
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Generator/Events/Halloween_2023/GeneratorStandard_Halloween2023.29"
       }
     }
   },
@@ -1246,6 +1335,10 @@
     "Outer": "GeneratorStandard_Halloween2023_C",
     "Class": "UScriptClass'StaticMeshComponent'",
     "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_XR_Generator_Centrifuge_Addon_Halloween2023'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/SpecialEvents/Halloween2023/Props/SM_XR_Generator_Centrifuge_Addon_Halloween2023.2"
+      },
       "bUseDefaultCollision": false,
       "DetailLevelBeforeCastShadows": "DM_MAX"
     }

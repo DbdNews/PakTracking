@@ -1,0 +1,1351 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_HauntActor",
+    "Outer": "BP_HauntActor_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_CustomEvent_Result",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'EAkResult'",
+          "ObjectPath": "/Script/AkAudio"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'OnAkBankCallback__DelegateSignature'",
+          "ObjectPath": "/Script/AkAudio"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "Sound Start",
+    "Outer": "BP_HauntActor_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "Result",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Enum'EAkResult'",
+          "ObjectPath": "/Script/AkAudio"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BP_HauntActor_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Update Haunt VFXState",
+    "Outer": "BP_HauntActor_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "ReleasedState",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "HauntState",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "VFXOpacity",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_HauntActor_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_HauntActor_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.31"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_HauntActor_C:ExecuteUbergraph_BP_HauntActor'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Interactable'",
+      "ObjectPath": "/Script/DeadByDaylight"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_HauntActor_C:Update Haunt VFXState'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.3"
+      },
+      {
+        "ObjectName": "Function'BP_HauntActor_C:ReceiveBeginPlay'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.2"
+      },
+      {
+        "ObjectName": "Function'BP_HauntActor_C:Sound Start'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.1"
+      },
+      {
+        "ObjectName": "Function'BP_HauntActor_C:ExecuteUbergraph_BP_HauntActor'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MaterialHelper",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialHelper'",
+          "ObjectPath": "/Script/GFXUtilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Ak_Audio_Haunt",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'AkComponent'",
+          "ObjectPath": "/Script/AkAudio"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NS_Haunt_Halloween2023_Core",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PointLight",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'PointLightComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NS_Haunt_Halloween2023_Eyes",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NS_Haunt_Halloween2023_Ashes",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SkeletalMeshComponentBudgeted",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SkeletalMeshComponentBudgeted'",
+          "ObjectPath": "/Script/AnimationBudgetAllocator"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "HauntOutlineStrategy",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'HauntOutlineStrategy'",
+          "ObjectPath": "/Script/Halloween2023"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DBDOutline",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DBDOutlineComponent'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SurvivorTracker",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_PlayersInZoneTracker_C'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/BP_PlayersInZoneTracker.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SlasherTracker",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_PlayersInZoneTracker_C'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/BP_PlayersInZoneTracker.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_HauntActor": {
+        "ObjectName": "Function'BP_HauntActor_C:ExecuteUbergraph_BP_HauntActor'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.0"
+      },
+      "Sound Start": {
+        "ObjectName": "Function'BP_HauntActor_C:Sound Start'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.1"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_HauntActor_C:ReceiveBeginPlay'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.2"
+      },
+      "Update Haunt VFXState": {
+        "ObjectName": "Function'BP_HauntActor_C:Update Haunt VFXState'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.3"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_HauntActor_C'Default__BP_HauntActor_C'",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.5"
+    }
+  },
+  {
+    "Type": "BP_HauntActor_C",
+    "Name": "Default__BP_HauntActor_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.BP_HauntActor_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "_transformOptimizer": {
+        "ObjectName": "InteractableTransformOptimizer'Default__BP_HauntActor_C:InteractableOptimizer'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.12"
+      },
+      "_interactableObjectState": {
+        "ObjectName": "GameplayTagContainerComponent'Default__BP_HauntActor_C:InteractableObjectState'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.10"
+      }
+    }
+  },
+  {
+    "Type": "AkComponent",
+    "Name": "Ak_Audio_Haunt_GEN_VARIABLE",
+    "Outer": "BP_HauntActor_C",
+    "Class": "UScriptClass'AkComponent'",
+    "Properties": {
+      "MaxDistance": 1700.0,
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 120.0
+      }
+    }
+  },
+  {
+    "Type": "BP_PlayersInZoneTracker_C",
+    "Name": "SlasherTracker_GEN_VARIABLE",
+    "Outer": "BP_HauntActor_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/GameplayElements/BP_PlayersInZoneTracker.BP_PlayersInZoneTracker_C'",
+    "Template": {
+      "ObjectName": "BP_PlayersInZoneTracker_C'Default__BP_PlayersInZoneTracker_C'",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/BP_PlayersInZoneTracker.1"
+    },
+    "Properties": {
+      "_playerTracker": {
+        "ObjectName": "SphereComponent'BP_HauntActor_C:SlasherTracker_GEN_VARIABLE.PlayerTracker'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.33"
+      }
+    }
+  },
+  {
+    "Type": "BP_PlayersInZoneTracker_C",
+    "Name": "SurvivorTracker_GEN_VARIABLE",
+    "Outer": "BP_HauntActor_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/GameplayElements/BP_PlayersInZoneTracker.BP_PlayersInZoneTracker_C'",
+    "Template": {
+      "ObjectName": "BP_PlayersInZoneTracker_C'Default__BP_PlayersInZoneTracker_C'",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/BP_PlayersInZoneTracker.1"
+    },
+    "Properties": {
+      "_playerTracker": {
+        "ObjectName": "SphereComponent'BP_HauntActor_C:SurvivorTracker_GEN_VARIABLE.PlayerTracker'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.34"
+      }
+    }
+  },
+  {
+    "Type": "DBDOutlineComponent",
+    "Name": "DBDOutline_GEN_VARIABLE",
+    "Outer": "BP_HauntActor_C",
+    "Class": "UScriptClass'DBDOutlineComponent'",
+    "Properties": {
+      "OutlineName": "haunt"
+    }
+  },
+  {
+    "Type": "GameplayTagContainerComponent",
+    "Name": "InteractableObjectState",
+    "Outer": "Default__BP_HauntActor_C",
+    "Class": "UScriptClass'GameplayTagContainerComponent'"
+  },
+  {
+    "Type": "HauntOutlineStrategy",
+    "Name": "HauntOutlineStrategy_GEN_VARIABLE",
+    "Outer": "BP_HauntActor_C",
+    "Class": "UScriptClass'HauntOutlineStrategy'"
+  },
+  {
+    "Type": "InteractableTransformOptimizer",
+    "Name": "InteractableOptimizer",
+    "Outer": "Default__BP_HauntActor_C",
+    "Class": "UScriptClass'InteractableTransformOptimizer'"
+  },
+  {
+    "Type": "MaterialHelper",
+    "Name": "MaterialHelper_GEN_VARIABLE",
+    "Outer": "BP_HauntActor_C",
+    "Class": "UScriptClass'MaterialHelper'",
+    "Properties": {
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 89.99999,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NS_Haunt_Halloween2023_Ashes_GEN_VARIABLE",
+    "Outer": "BP_HauntActor_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'NS_Haunt_Halloween2023_Ashes'",
+        "ObjectPath": "DeadByDaylight/Content/Effects/Niagara/NiagaraParticleSystem/Halloween2023/Haunt/NS_Haunt_Halloween2023_Ashes.93"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "MaskRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'Vector2D'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.MaskRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'Vector2D'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "MaskRangeAshes",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'Vector2D'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.MaskRangeAshes",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'Vector2D'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "MaskRangeSmoke",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'Vector2D'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.MaskRangeSmoke",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'Vector2D'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "NonEmissiveMultiplier",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.NonEmissiveMultiplier",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Opacity",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Opacity",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.MaskRange",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'Vector2D'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "Offset": 8,
+            "Name": "User.MaskRangeAshes",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'Vector2D'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "Offset": 16,
+            "Name": "User.MaskRangeSmoke",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'Vector2D'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "Offset": 24,
+            "Name": "User.NonEmissiveMultiplier",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "Offset": 28,
+            "Name": "User.Opacity",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          205,
+          204,
+          76,
+          62,
+          0,
+          0,
+          0,
+          63,
+          205,
+          204,
+          204,
+          61,
+          205,
+          204,
+          204,
+          62,
+          0,
+          0,
+          128,
+          63,
+          0,
+          0,
+          128,
+          63
+        ]
+      },
+      "DetailLevelBeforeCastShadows": "DM_MAX"
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NS_Haunt_Halloween2023_Core_GEN_VARIABLE",
+    "Outer": "BP_HauntActor_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'NS_Haunt_Halloween2023_Core'",
+        "ObjectPath": "DeadByDaylight/Content/Effects/Niagara/NiagaraParticleSystem/Halloween2023/Haunt/NS_Haunt_Halloween2023_Core.10"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Opacity",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Opacity",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.Opacity",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          128,
+          63
+        ]
+      },
+      "DetailLevelBeforeCastShadows": "DM_MAX"
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NS_Haunt_Halloween2023_Eyes_GEN_VARIABLE",
+    "Outer": "BP_HauntActor_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'NS_Haunt_Halloween2023_Eyes'",
+        "ObjectPath": "DeadByDaylight/Content/Effects/Niagara/NiagaraParticleSystem/Halloween2023/Haunt/NS_Haunt_Halloween2023_Eyes.16"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Opacity",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Opacity",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.Opacity",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          128,
+          63
+        ]
+      },
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "RelativeLocation": {
+        "X": -9.354942,
+        "Y": -9.552505,
+        "Z": 0.399954
+      }
+    }
+  },
+  {
+    "Type": "PointLightComponent",
+    "Name": "PointLight_GEN_VARIABLE",
+    "Outer": "BP_HauntActor_C",
+    "Class": "UScriptClass'PointLightComponent'",
+    "Properties": {
+      "SourceRadius": 3.0,
+      "SourceLength": 7.95389,
+      "AttenuationRadius": 13.0,
+      "LightingChannels": {
+        "bChannel1": false,
+        "bChannel2": false
+      },
+      "Intensity": 50.0,
+      "LightColor": {
+        "B": 222,
+        "G": 255,
+        "R": 49,
+        "A": 255,
+        "Hex": "FF31FFDE"
+      },
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "RelativeLocation": {
+        "X": -9.623516,
+        "Y": -13.278901,
+        "Z": -1.9E-05
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_HauntActor_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_HauntActor_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.18"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_HauntActor_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.24"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_HauntActor_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.27"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_HauntActor_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.21"
+        }
+      ],
+      "VariableGuid": "B33BCDAF-4298B5B8-D74ECA97-01929D9F",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_HauntActor_C:NS_Haunt_Halloween2023_Ashes_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.14"
+      },
+      "VariableGuid": "32589731-4506EA6F-2CEF7FB0-242979A4",
+      "InternalVariableName": "NS_Haunt_Halloween2023_Ashes"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_10",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'AkComponent'",
+        "ObjectPath": "/Script/AkAudio"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "AkComponent'BP_HauntActor_C:Ak_Audio_Haunt_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.6"
+      },
+      "VariableGuid": "775C7430-41A8B133-A6370A89-B07EFDC8",
+      "InternalVariableName": "Ak_Audio_Haunt"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_11",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'MaterialHelper'",
+        "ObjectPath": "/Script/GFXUtilities"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "MaterialHelper'BP_HauntActor_C:MaterialHelper_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.13"
+      },
+      "VariableGuid": "C529BE5A-4C8F366E-46A44AAA-CB8967AC",
+      "InternalVariableName": "MaterialHelper"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'HauntOutlineStrategy'",
+        "ObjectPath": "/Script/Halloween2023"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "HauntOutlineStrategy'BP_HauntActor_C:HauntOutlineStrategy_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.11"
+      },
+      "VariableGuid": "9D6DE054-4DF30FF0-669CB39A-7BF53B15",
+      "InternalVariableName": "HauntOutlineStrategy"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DBDOutlineComponent'",
+        "ObjectPath": "/Script/DeadByDaylight"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DBDOutlineComponent'BP_HauntActor_C:DBDOutline_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.9"
+      },
+      "VariableGuid": "31624A47-414630C9-202FB392-949CC18A",
+      "InternalVariableName": "DBDOutline"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_PlayersInZoneTracker_C'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/BP_PlayersInZoneTracker.0"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_PlayersInZoneTracker_C'BP_HauntActor_C:SlasherTracker_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.7"
+      },
+      "VariableGuid": "DA2DB811-45B3C8DC-4449FE89-1E3BA2B7",
+      "InternalVariableName": "SlasherTracker"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_PlayersInZoneTracker_C'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/BP_PlayersInZoneTracker.0"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_PlayersInZoneTracker_C'BP_HauntActor_C:SurvivorTracker_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.8"
+      },
+      "VariableGuid": "29FC22A3-4F101E52-5FA5F5A8-CE01E726",
+      "InternalVariableName": "SurvivorTracker"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SkeletalMeshComponentBudgeted'",
+        "ObjectPath": "/Script/AnimationBudgetAllocator"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SkeletalMeshComponentBudgeted'BP_HauntActor_C:SkeletalMeshComponentBudgeted_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.32"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_HauntActor_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_HauntActor_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.28"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_HauntActor_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.29"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_HauntActor_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.22"
+        }
+      ],
+      "VariableGuid": "2C67C98E-4168BB5E-DA3E0DA3-66EB541A",
+      "InternalVariableName": "SkeletalMeshComponentBudgeted"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_7",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_HauntActor_C:NS_Haunt_Halloween2023_Eyes_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.16"
+      },
+      "AttachToName": "joint_Head_01",
+      "VariableGuid": "C135B2F1-43E5D588-39C87082-572C5E62",
+      "InternalVariableName": "NS_Haunt_Halloween2023_Eyes"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_8",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'PointLightComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PointLightComponent'BP_HauntActor_C:PointLight_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.17"
+      },
+      "AttachToName": "joint_TorsoC_01",
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_HauntActor_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.30"
+        }
+      ],
+      "VariableGuid": "4F68E177-4272983D-D5311297-30D9E6CE",
+      "InternalVariableName": "PointLight"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_9",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_HauntActor_C:NS_Haunt_Halloween2023_Core_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.15"
+      },
+      "VariableGuid": "3087A067-4A687055-68B6CF9D-F0953E27",
+      "InternalVariableName": "NS_Haunt_Halloween2023_Core"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_HauntActor_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_HauntActor_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_HauntActor_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_HauntActor_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_HauntActor_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.23"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_HauntActor_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_HauntActor_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_HauntActor_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_HauntActor_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.24"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_HauntActor_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_HauntActor_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.27"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_HauntActor_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_HauntActor_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.28"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_HauntActor_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.29"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_HauntActor_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.30"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_HauntActor_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_HauntActor_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.22"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_HauntActor_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Halloween2023/BP_HauntActor.19"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponentBudgeted",
+    "Name": "SkeletalMeshComponentBudgeted_GEN_VARIABLE",
+    "Outer": "BP_HauntActor_C",
+    "Class": "UScriptClass'SkeletalMeshComponentBudgeted'",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'AB_TheHaunt_C'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/The_Haunt/AnimBlueprints/AB_TheHaunt.2"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'The_Haunt_REF'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/The_Haunt/Models/The_Haunt_REF.0"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_HauntMesh'",
+          "ObjectPath": "DeadByDaylight/Content/Effects/Materials/Halloween2023/Haunt/MI_HauntMesh.0"
+        }
+      ],
+      "DetailLevelBeforeCastShadows": "DM_MAX",
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "PlayerTracker",
+    "Outer": "SlasherTracker_GEN_VARIABLE",
+    "Class": "UScriptClass'SphereComponent'",
+    "Template": {
+      "ObjectName": "SphereComponent'Default__BP_PlayersInZoneTracker_C:PlayerTracker'",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/BP_PlayersInZoneTracker.2"
+    },
+    "Properties": {
+      "SphereRadius": 100.0,
+      "BodyInstance": {
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "InteractionDetector",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BlinkBlocker",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Ground",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Interactable",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Audio",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Spider",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Traps",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "PlayerTracker",
+    "Outer": "SurvivorTracker_GEN_VARIABLE",
+    "Class": "UScriptClass'SphereComponent'",
+    "Template": {
+      "ObjectName": "SphereComponent'Default__BP_PlayersInZoneTracker_C:PlayerTracker'",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/BP_PlayersInZoneTracker.2"
+    },
+    "Properties": {
+      "SphereRadius": 50.0,
+      "ShapeColor": {
+        "B": 0,
+        "G": 190,
+        "R": 255,
+        "A": 255,
+        "Hex": "FFFFBE00"
+      },
+      "BodyInstance": {
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "InteractionDetector",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BlinkBlocker",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Ground",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Interactable",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Audio",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Spider",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Traps",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PawnDetector",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Slasher",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      }
+    }
+  }
+]
