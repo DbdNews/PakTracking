@@ -1,0 +1,1464 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_AB_Qat_Cage",
+    "Outer": "AB_Qat_Cage_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_RandomRotator_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_EndRattle",
+    "Outer": "AB_Qat_Cage_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimNotify_CageIdleTrigger",
+    "Outer": "AB_Qat_Cage_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "RandomEvent",
+    "Outer": "AB_Qat_Cage_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_IntInt_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_IntInt_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_RandomInteger_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ResetEvent",
+    "Outer": "AB_Qat_Cage_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "AB_Qat_Cage_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraph",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Parm | OutParm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PoseLink'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "AB_Qat_Cage_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "Base",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 9,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 10,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 4,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 11,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 1,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                2
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Rattle01",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 12,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 3,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 3,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                4
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Ratle02",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 13,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                6
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Rattle03",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 14,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 5,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 7,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                8
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 3,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 3,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'SM_Qat_Cage01_REF_Skeleton'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Model/SM_Qat_Cage01_REF_Skeleton.0"
+      },
+      "OrderedSavedPoseIndicesMap": [
+        {
+          "AnimGraph": {
+            "OrderedSavedPoseNodeIndices": []
+          }
+        }
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "CopyIndex": 0,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_TransitionResult"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "AnimBlueprintGeneratedClass'AB_Qat_Cage_C'",
+              "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Blueprint/AB_Qat_Cage.6"
+            }
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "CopyIndex": 1,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_TransitionResult_1"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "AnimBlueprintGeneratedClass'AB_Qat_Cage_C'",
+              "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Blueprint/AB_Qat_Cage.6"
+            }
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "CopyIndex": 2,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_TransitionResult_2"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "AnimBlueprintGeneratedClass'AB_Qat_Cage_C'",
+              "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Blueprint/AB_Qat_Cage.6"
+            }
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "CopyIndex": 3,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_TransitionResult_3"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "AnimBlueprintGeneratedClass'AB_Qat_Cage_C'",
+              "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Blueprint/AB_Qat_Cage.6"
+            }
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "CopyIndex": 4,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_TransitionResult_4"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "AnimBlueprintGeneratedClass'AB_Qat_Cage_C'",
+              "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Blueprint/AB_Qat_Cage.6"
+            }
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "CopyIndex": 5,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_TransitionResult_5"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "AnimBlueprintGeneratedClass'AB_Qat_Cage_C'",
+              "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Blueprint/AB_Qat_Cage.6"
+            }
+          }
+        }
+      ],
+      "PropertyAccessLibrary": {
+        "PathSegments": [
+          {
+            "Name": "IsRattle02",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "IsRattle02"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'AB_Qat_Cage_C'",
+                "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Blueprint/AB_Qat_Cage.6"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_TransitionResult",
+            "Struct": {
+              "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+              "ObjectPath": "/Script/Engine"
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_TransitionResult"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'AB_Qat_Cage_C'",
+                "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Blueprint/AB_Qat_Cage.6"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bCanEnterTransition",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bCanEnterTransition"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                "ObjectPath": "/Script/Engine"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "IsRattle03",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "IsRattle03"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'AB_Qat_Cage_C'",
+                "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Blueprint/AB_Qat_Cage.6"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_TransitionResult_1",
+            "Struct": {
+              "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+              "ObjectPath": "/Script/Engine"
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_TransitionResult_1"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'AB_Qat_Cage_C'",
+                "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Blueprint/AB_Qat_Cage.6"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bCanEnterTransition",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bCanEnterTransition"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                "ObjectPath": "/Script/Engine"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "IsRattle01",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "IsRattle01"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'AB_Qat_Cage_C'",
+                "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Blueprint/AB_Qat_Cage.6"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_TransitionResult_2",
+            "Struct": {
+              "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+              "ObjectPath": "/Script/Engine"
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_TransitionResult_2"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'AB_Qat_Cage_C'",
+                "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Blueprint/AB_Qat_Cage.6"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bCanEnterTransition",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bCanEnterTransition"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                "ObjectPath": "/Script/Engine"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "IsRattle01",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "IsRattle01"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'AB_Qat_Cage_C'",
+                "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Blueprint/AB_Qat_Cage.6"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_TransitionResult_3",
+            "Struct": {
+              "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+              "ObjectPath": "/Script/Engine"
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_TransitionResult_3"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'AB_Qat_Cage_C'",
+                "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Blueprint/AB_Qat_Cage.6"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bCanEnterTransition",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bCanEnterTransition"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                "ObjectPath": "/Script/Engine"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "IsRattle02",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "IsRattle02"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'AB_Qat_Cage_C'",
+                "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Blueprint/AB_Qat_Cage.6"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_TransitionResult_4",
+            "Struct": {
+              "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+              "ObjectPath": "/Script/Engine"
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_TransitionResult_4"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'AB_Qat_Cage_C'",
+                "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Blueprint/AB_Qat_Cage.6"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bCanEnterTransition",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bCanEnterTransition"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                "ObjectPath": "/Script/Engine"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "IsRattle03",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "IsRattle03"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'AB_Qat_Cage_C'",
+                "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Blueprint/AB_Qat_Cage.6"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_TransitionResult_5",
+            "Struct": {
+              "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+              "ObjectPath": "/Script/Engine"
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_TransitionResult_5"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'AB_Qat_Cage_C'",
+                "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Blueprint/AB_Qat_Cage.6"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bCanEnterTransition",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bCanEnterTransition"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                "ObjectPath": "/Script/Engine"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          }
+        ],
+        "SrcPaths": [
+          {
+            "PathSegmentStartIndex": 0,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 3,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 6,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 9,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 12,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 15,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          }
+        ],
+        "DestPaths": [
+          {
+            "PathSegmentStartIndex": 1,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 4,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 7,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 10,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 13,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 16,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          }
+        ],
+        "CopyBatches": {
+          "Copies": [
+            {
+              "AccessIndex": 0,
+              "DestAccessStartIndex": 0,
+              "DestAccessEndIndex": 1,
+              "Type": "EPropertyAccessCopyType::Bool"
+            },
+            {
+              "AccessIndex": 1,
+              "DestAccessStartIndex": 1,
+              "DestAccessEndIndex": 2,
+              "Type": "EPropertyAccessCopyType::Bool"
+            },
+            {
+              "AccessIndex": 2,
+              "DestAccessStartIndex": 2,
+              "DestAccessEndIndex": 3,
+              "Type": "EPropertyAccessCopyType::Bool"
+            },
+            {
+              "AccessIndex": 3,
+              "DestAccessStartIndex": 3,
+              "DestAccessEndIndex": 4,
+              "Type": "EPropertyAccessCopyType::Bool"
+            },
+            {
+              "AccessIndex": 4,
+              "DestAccessStartIndex": 4,
+              "DestAccessEndIndex": 5,
+              "Type": "EPropertyAccessCopyType::Bool"
+            },
+            {
+              "AccessIndex": 5,
+              "DestAccessStartIndex": 5,
+              "DestAccessEndIndex": 6,
+              "Type": "EPropertyAccessCopyType::Bool"
+            }
+          ]
+        }
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'AB_Qat_Cage_C:ExecuteUbergraph_AB_Qat_Cage'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Blueprint/AB_Qat_Cage.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AnimInstance'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'AB_Qat_Cage_C:AnimGraph'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Blueprint/AB_Qat_Cage.5"
+      },
+      {
+        "ObjectName": "Function'AB_Qat_Cage_C:ResetEvent'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Blueprint/AB_Qat_Cage.4"
+      },
+      {
+        "ObjectName": "Function'AB_Qat_Cage_C:RandomEvent'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Blueprint/AB_Qat_Cage.3"
+      },
+      {
+        "ObjectName": "Function'AB_Qat_Cage_C:AnimNotify_CageIdleTrigger'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Blueprint/AB_Qat_Cage.2"
+      },
+      {
+        "ObjectName": "Function'AB_Qat_Cage_C:AnimNotify_EndRattle'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Blueprint/AB_Qat_Cage.1"
+      },
+      {
+        "ObjectName": "Function'AB_Qat_Cage_C:ExecuteUbergraph_AB_Qat_Cage'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Blueprint/AB_Qat_Cage.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Root",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 64,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_Root'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_5",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 136,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 64,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 136,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 64,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 136,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 64,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 136,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 64,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateMachine",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 176,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "IsRattle01",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "IsRattle02",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Random",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CycleCount",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "DurationIdle",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "IsRattle03",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "TriggerRandom",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "IsRattleHappening",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "RandomRotate",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_AB_Qat_Cage": {
+        "ObjectName": "Function'AB_Qat_Cage_C:ExecuteUbergraph_AB_Qat_Cage'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Blueprint/AB_Qat_Cage.0"
+      },
+      "AnimNotify_EndRattle": {
+        "ObjectName": "Function'AB_Qat_Cage_C:AnimNotify_EndRattle'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Blueprint/AB_Qat_Cage.1"
+      },
+      "AnimNotify_CageIdleTrigger": {
+        "ObjectName": "Function'AB_Qat_Cage_C:AnimNotify_CageIdleTrigger'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Blueprint/AB_Qat_Cage.2"
+      },
+      "RandomEvent": {
+        "ObjectName": "Function'AB_Qat_Cage_C:RandomEvent'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Blueprint/AB_Qat_Cage.3"
+      },
+      "ResetEvent": {
+        "ObjectName": "Function'AB_Qat_Cage_C:ResetEvent'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Blueprint/AB_Qat_Cage.4"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'AB_Qat_Cage_C:AnimGraph'",
+        "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Blueprint/AB_Qat_Cage.5"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "AB_Qat_Cage_C'Default__AB_Qat_Cage_C'",
+      "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Blueprint/AB_Qat_Cage.7"
+    }
+  },
+  {
+    "Type": "AB_Qat_Cage_C",
+    "Name": "Default__AB_Qat_Cage_C",
+    "Class": "AnimBlueprintGeneratedClass'DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Blueprint/AB_Qat_Cage.AB_Qat_Cage_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root": {
+        "Result": {
+          "LinkID": 15
+        },
+        "Name": "AnimGraph",
+        "Group": "None"
+      },
+      "AnimGraphNode_TransitionResult_5": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_4": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_3": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_2": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_1": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_3": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'SM_Qat_Cage01_Rattle03'",
+          "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Animation/SM_Qat_Cage01_Rattle03.3"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupName": "None",
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "GroupScope": "EAnimSyncGroupScope::Local",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_3": {
+        "Result": {
+          "LinkID": 7
+        },
+        "Name": "Rattle03",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_2": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'SM_Qat_Cage01_Rattle02'",
+          "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Animation/SM_Qat_Cage01_Rattle02.2"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupName": "None",
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "GroupScope": "EAnimSyncGroupScope::Local",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_2": {
+        "Result": {
+          "LinkID": 9
+        },
+        "Name": "Ratle02",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_1": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'SM_Qat_Cage01_Rattle01'",
+          "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Animation/SM_Qat_Cage01_Rattle01.2"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupName": "None",
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "GroupScope": "EAnimSyncGroupScope::Local",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_1": {
+        "Result": {
+          "LinkID": 11
+        },
+        "Name": "Rattle01",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'SM_Qat_Cage01_Idle'",
+          "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Qatar/Blockers/Qat_Cage/Animation/SM_Qat_Cage01_Idle.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupName": "None",
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "GroupScope": "EAnimSyncGroupScope::Local",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult": {
+        "Result": {
+          "LinkID": 13
+        },
+        "Name": "Idle",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "DurationIdle": 4,
+      "RandomRotate": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      }
+    }
+  }
+]
