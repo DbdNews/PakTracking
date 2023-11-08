@@ -1,0 +1,190 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_K34ScamperInteraction_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'K34ScamperChargeableInteraction'",
+      "ObjectPath": "/Script/TheK34"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_K34ScamperInteraction_C'Default__BP_K34ScamperInteraction_C'",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K34Power/BP_K34ScamperInteraction.1"
+    }
+  },
+  {
+    "Type": "BP_K34ScamperInteraction_C",
+    "Name": "Default__BP_K34ScamperInteraction_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/GameplayElements/Item/K34Power/BP_K34ScamperInteraction.BP_K34ScamperInteraction_C'",
+    "Properties": {
+      "_scamperMovementSpeedSettings": [
+        {
+          "EScamperPhase::Dashing": {
+            "SpeedCurve": {
+              "ObjectName": "CurveFloat'K34ScamperSpeedCurve'",
+              "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K34Power/K34ScamperSpeedCurve.0"
+            },
+            "YawLimitationCurve": {
+              "ObjectName": "CurveFloat'K34SliceAndDiceDash_LookAngleToTurnRateCurve'",
+              "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K34Power/K34SliceAndDiceDash_LookAngleToTurnRateCurve.0"
+            },
+            "AccelerationMultiplierModifier": {
+              "_useTunable": true,
+              "_nonTunableValue": 1.25,
+              "_tunableValue": {
+                "_dataTableRowHandle": {
+                  "DataTable": {
+                    "ObjectName": "DataTable'K34_TunableValue'",
+                    "ObjectPath": "DeadByDaylight/Content/Data/Dlc/Yerkes/K34_TunableValue.0"
+                  },
+                  "RowName": "ScamperAccelerationMultiplier"
+                },
+                "_defaultValue": 0.0
+              },
+              "_statModifiers": []
+            },
+            "Duration": {
+              "_useTunable": true,
+              "_nonTunableValue": 0.0,
+              "_tunableValue": {
+                "_dataTableRowHandle": {
+                  "DataTable": {
+                    "ObjectName": "DataTable'K34_TunableValue'",
+                    "ObjectPath": "DeadByDaylight/Content/Data/Dlc/Yerkes/K34_TunableValue.0"
+                  },
+                  "RowName": "ScamperDuration"
+                },
+                "_defaultValue": 0.0
+              },
+              "_statModifiers": [
+                {
+                  "OperationStrategy": "EModifierOperationStrategy::Mult",
+                  "ModifierTag": {
+                    "TagName": "GameplayModifierType.K34.ModifyScamperDurationAdditive"
+                  },
+                  "CompoundStrategy": "EModifierCompoundStrategy::Add"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "EScamperPhase::Charging": {
+            "SpeedCurve": {
+              "ObjectName": "CurveFloat'K34ScamperChargingSpeedCurve'",
+              "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K34Power/K34ScamperChargingSpeedCurve.0"
+            },
+            "YawLimitationCurve": null,
+            "AccelerationMultiplierModifier": {
+              "_useTunable": false,
+              "_nonTunableValue": -1.0,
+              "_tunableValue": {
+                "_dataTableRowHandle": {
+                  "DataTable": null,
+                  "RowName": "None"
+                },
+                "_defaultValue": 0.0
+              },
+              "_statModifiers": []
+            },
+            "Duration": {
+              "_useTunable": true,
+              "_nonTunableValue": 0.0,
+              "_tunableValue": {
+                "_dataTableRowHandle": {
+                  "DataTable": {
+                    "ObjectName": "DataTable'K34_TunableValue'",
+                    "ObjectPath": "DeadByDaylight/Content/Data/Dlc/Yerkes/K34_TunableValue.0"
+                  },
+                  "RowName": "ScamperChargeupDuration"
+                },
+                "_defaultValue": 0.0
+              },
+              "_statModifiers": [
+                {
+                  "OperationStrategy": "EModifierOperationStrategy::Mult",
+                  "ModifierTag": {
+                    "TagName": "GameplayModifierType.K34.ModifyScamperChargingDurationAdditive"
+                  },
+                  "CompoundStrategy": "EModifierCompoundStrategy::Add"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "_chainingHeldInputBuffer": {
+        "_dataTableRowHandle": {
+          "DataTable": {
+            "ObjectName": "DataTable'K34_TunableValue'",
+            "ObjectPath": "DeadByDaylight/Content/Data/Dlc/Yerkes/K34_TunableValue.0"
+          },
+          "RowName": "ScamperChainingInputBuffer"
+        }
+      },
+      "InteractionID": "SliceAndDice",
+      "AllowStartInteractionFromHeldInput": true,
+      "IgnoreStrafeAnimFix": true,
+      "AllowNavigation": true,
+      "AllowRotation": true,
+      "UseCameraMontageMode": false,
+      "UseAuthoritativeMovement": false,
+      "CanAuthoritativePush": false,
+      "InteractionInputType": "EInputInteractionType::VE_ItemUse",
+      "InteractionDescriptionText": {
+        "Namespace": "",
+        "Key": "24B747AB4A4511B1A78DD6A1A3A1DA3D",
+        "SourceString": "INTERACTION_K34_SliceAndDiceStartCharging_PROMPT",
+        "LocalizedString": "Slice & Dice"
+      },
+      "_secondaryInteractions": [
+        {
+          "K34_SLICE_AND_DICE_DASH_INTERACTION_ID": {
+            "SecondaryInteractionID": "K34_SLICE_AND_DICE_DASH_INTERACTION_ID",
+            "SecondaryInteractionInputType": "EInputInteractionType::VE_AttackInteract",
+            "SecondaryInteractionDescriptionText": {
+              "Namespace": "",
+              "Key": "83790FDE4928AC10B9442093DE31FA4E",
+              "SourceString": "INTERACTION_K34_SliceAndDiceDash_PROMPT",
+              "LocalizedString": "Slice & Dice Dash"
+            },
+            "ShouldShow": false
+          }
+        },
+        {
+          "K34_SLICE_AND_DICE_INTERACTION_ID": {
+            "SecondaryInteractionID": "K34_SLICE_AND_DICE_INTERACTION_ID",
+            "SecondaryInteractionInputType": "EInputInteractionType::VE_AttackInteract",
+            "SecondaryInteractionDescriptionText": {
+              "Namespace": "",
+              "Key": "1BDAAE4F45BF0EB0483739ACE76D2668",
+              "SourceString": "INTERACTION_K34_SliceAndDiceAttack_PROMPT",
+              "LocalizedString": "Slice & Dice Attack"
+            },
+            "ShouldShow": false
+          }
+        },
+        {
+          "K34_CHARGE_INTERACTION_ID": {
+            "SecondaryInteractionID": "K34_SLICE_AND_DICE_CHARGE_INTERACTION_ID",
+            "SecondaryInteractionInputType": "EInputInteractionType::VE_ItemUse",
+            "SecondaryInteractionDescriptionText": {
+              "Namespace": "",
+              "Key": "80957B1F48C6F587043353BB807AF7E7",
+              "SourceString": "INTERACTION_K34_SliceAndDiceCharge_PROMPT",
+              "LocalizedString": "Charge Slice & Dice"
+            },
+            "ShouldShow": false
+          }
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,261 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_K34Power_Addon_13",
+    "Outer": "BP_K34Power_Addon_13_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwner_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsSlasher_Player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'SlasherPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_gameEventType",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_gameEventData",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'GameEventData'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DBDPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsCamper_Player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'CamperPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Authority_ImposeNewStatusEffectOfClassOrChangeLifeTime_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'StatusEffect'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "Authority_OnCollectablePickedUp",
+    "Outer": "BP_K34Power_Addon_13_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'ItemAddon:Authority_OnCollectablePickedUp'",
+      "ObjectPath": "/Script/DeadByDaylight"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'DBDPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnGameEventDispatched",
+    "Outer": "BP_K34Power_Addon_13_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'GameplayModifierContainer:OnGameEventDispatched'",
+      "ObjectPath": "/Script/DeadByDaylight"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "gameEventType",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "gameEventData",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'GameEventData'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_HasOutParms | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_K34Power_Addon_13_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_K34Power_Addon_13_C:ExecuteUbergraph_BP_K34Power_Addon_13'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/ItemAddons/K34PowerAddons/BP_K34Power_Addon_13.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ItemAddon'",
+      "ObjectPath": "/Script/DeadByDaylight"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_K34Power_Addon_13_C:OnGameEventDispatched'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/ItemAddons/K34PowerAddons/BP_K34Power_Addon_13.2"
+      },
+      {
+        "ObjectName": "Function'BP_K34Power_Addon_13_C:Authority_OnCollectablePickedUp'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/ItemAddons/K34PowerAddons/BP_K34Power_Addon_13.1"
+      },
+      {
+        "ObjectName": "Function'BP_K34Power_Addon_13_C:ExecuteUbergraph_BP_K34Power_Addon_13'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/ItemAddons/K34PowerAddons/BP_K34Power_Addon_13.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "ExhaustionDuration",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_K34Power_Addon_13": {
+        "ObjectName": "Function'BP_K34Power_Addon_13_C:ExecuteUbergraph_BP_K34Power_Addon_13'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/ItemAddons/K34PowerAddons/BP_K34Power_Addon_13.0"
+      },
+      "Authority_OnCollectablePickedUp": {
+        "ObjectName": "Function'BP_K34Power_Addon_13_C:Authority_OnCollectablePickedUp'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/ItemAddons/K34PowerAddons/BP_K34Power_Addon_13.1"
+      },
+      "OnGameEventDispatched": {
+        "ObjectName": "Function'BP_K34Power_Addon_13_C:OnGameEventDispatched'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/ItemAddons/K34PowerAddons/BP_K34Power_Addon_13.2"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_K34Power_Addon_13_C'Default__BP_K34Power_Addon_13_C'",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/ItemAddons/K34PowerAddons/BP_K34Power_Addon_13.4"
+    }
+  },
+  {
+    "Type": "BP_K34Power_Addon_13_C",
+    "Name": "Default__BP_K34Power_Addon_13_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/ItemAddons/K34PowerAddons/BP_K34Power_Addon_13.BP_K34Power_Addon_13_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "ExhaustionDuration": 15.0,
+      "BaseItemType": {
+        "ObjectName": "BlueprintGeneratedClass'BP_K34Power_C'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Item/K34Power/BP_K34Power.2"
+      }
+    }
+  }
+]
