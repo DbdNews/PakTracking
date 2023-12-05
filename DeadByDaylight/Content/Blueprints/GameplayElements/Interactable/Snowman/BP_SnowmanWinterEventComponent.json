@@ -7,7 +7,7 @@
       "ObjectName": "Class'SnowmanWinterEventComponent'",
       "ObjectPath": "/Script/SnowmanWinterEvent"
     },
-    "ClassFlags": 10749972,
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
     "ClassWithin": {
       "ObjectName": "Class'Object'",
       "ObjectPath": "/Script/CoreUObject"
@@ -24,7 +24,11 @@
     "Name": "Default__BP_SnowmanWinterEventComponent_C",
     "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Snowman/BP_SnowmanWinterEventComponent.BP_SnowmanWinterEventComponent_C'",
     "Properties": {
-      "_numbSnowmenToSpawnAtStart": {
+      "_snowmanClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_Snowman_C'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Snowman/BP_Snowman.119"
+      },
+      "_numSnowmenToSpawnAtStart": {
         "_dataTableRowHandle": {
           "DataTable": {
             "ObjectName": "DataTable'SnowmanTunableDB'",
@@ -37,18 +41,30 @@
         "ObjectName": "BlueprintGeneratedClass'BP_SnowmanSpawnPlacementStrategy_C'",
         "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Snowman/BP_SnowmanSpawnPlacementStrategy.0"
       },
-      "_snowmanClass": {
-        "ObjectName": "BlueprintGeneratedClass'BP_Snowman_C'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Snowman/BP_Snowman.129"
-      },
-      "_survivorInSnowmanEffect": {
-        "ObjectName": "BlueprintGeneratedClass'BP_SurvivorControllingSnowmanStatusEffect_C'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Snowman/StatusEffects/BP_SurvivorControllingSnowmanStatusEffect.0"
-      },
-      "_killerInSnowmanEffect": {
-        "ObjectName": "BlueprintGeneratedClass'BP_KillerControllingSnowmanStatusEffect_C'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Snowman/StatusEffects/BP_KillerControllingSnowmanStatusEffect.0"
-      }
+      "_survivorInSnowmanEffectClasses": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'BP_SurvivorControllingSnowmanStatusEffect_C'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Snowman/StatusEffects/BP_SurvivorControllingSnowmanStatusEffect.0"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'BP_PlayerControllingSnowmanBlindnessEffect_C'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Snowman/StatusEffects/BP_PlayerControllingSnowmanBlindnessEffect.2"
+        }
+      ],
+      "_killerInSnowmanEffectClasses": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'BP_KillerControllingSnowmanStatusEffect_C'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Snowman/StatusEffects/BP_KillerControllingSnowmanStatusEffect.0"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'BP_KillerControllingSnowmanUndetectableEffect_C'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Snowman/StatusEffects/BP_KillerControllingSnowmanUndetectableEffect.2"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'BP_PlayerControllingSnowmanBlindnessEffect_C'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/GameplayElements/Interactable/Snowman/StatusEffects/BP_PlayerControllingSnowmanBlindnessEffect.2"
+        }
+      ]
     }
   }
 ]

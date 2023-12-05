@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_Snowman_Piece_02",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "ConvexElems": [
@@ -220,10 +221,10 @@
     "BodySetupGuid": "5E05CE7A4871987AA0B24D9D318626FE",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 13993,
         "SizeOnDisk": 13993,
-        "OffsetInFile": "0x11FA7"
+        "OffsetInFile": "0x11F22"
       }
     }
   },
@@ -231,28 +232,25 @@
     "Type": "NavCollision",
     "Name": "NavCollision_0",
     "Outer": "SM_Snowman_Piece_02",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 793,
         "SizeOnDisk": 793,
-        "OffsetInFile": "0x15698"
+        "OffsetInFile": "0x15613"
       }
     }
   },
   {
     "Type": "StaticMesh",
     "Name": "SM_Snowman_Piece_02",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
-      "MinLOD": {
-        "bCooked": true,
-        "Default": 0,
-        "Value": 0
-      },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "Material WorldGridMaterial",
+            "ObjectName": "Material'WorldGridMaterial'",
             "ObjectPath": "Engine/Content/EngineMaterials/WorldGridMaterial.0"
           },
           "MaterialSlotName": "lambert1",
@@ -285,14 +283,72 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_Snowman_Piece_02:BodySetup_0",
+      "ObjectName": "BodySetup'SM_Snowman_Piece_02:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Effects/Mesh/Prop/SM_Snowman_Piece_02.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_Snowman_Piece_02:NavCollision_0",
+      "ObjectName": "NavCollision'SM_Snowman_Piece_02:NavCollision_0'",
       "ObjectPath": "DeadByDaylight/Content/Effects/Mesh/Prop/SM_Snowman_Piece_02.1"
     },
     "LightingGuid": "672B9155-4EEEC28A-47C4319F-D824EFB6",
-    "RenderData": null
+    "RenderData": {
+      "LODs": [
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 760,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 401,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 402
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 2,
+            "NumVertices": 402,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          }
+        }
+      ],
+      "Bounds": {
+        "Origin": {
+          "X": 0.10553247,
+          "Y": -0.053922117,
+          "Z": -0.018559456
+        },
+        "BoxExtent": {
+          "X": 0.6495781,
+          "Y": 0.14159742,
+          "Z": 1.1994891
+        },
+        "SphereRadius": 1.2071819
+      },
+      "bLODsShareStaticLighting": true,
+      "ScreenSize": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
   }
 ]

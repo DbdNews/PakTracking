@@ -1,0 +1,206 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_SnowballLauncherController_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_SnowballLauncherController_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Winter2023/Snowballs/BP_SnowballLauncherController.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'SnowballLauncherController'",
+      "ObjectPath": "/Script/WinterEvent2023"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_SnowballLauncherController_C'Default__BP_SnowballLauncherController_C'",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Winter2023/Snowballs/BP_SnowballLauncherController.1"
+    }
+  },
+  {
+    "Type": "BP_SnowballLauncherController_C",
+    "Name": "Default__BP_SnowballLauncherController_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/Events/Winter2023/Snowballs/BP_SnowballLauncherController.BP_SnowballLauncherController_C'",
+    "Properties": {
+      "_snowballProvider": {
+        "ObjectName": "SnowballProvider'Default__BP_SnowballLauncherController_C:SnowballProvider'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Winter2023/Snowballs/BP_SnowballLauncherController.7"
+      },
+      "_snowballLauncher": {
+        "ObjectName": "SnowballProjectileLauncher'Default__BP_SnowballLauncherController_C:SnowballLauncher'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Winter2023/Snowballs/BP_SnowballLauncherController.6"
+      },
+      "_snowballCarryLimit": {
+        "_dataTableRowHandle": {
+          "DataTable": {
+            "ObjectName": "DataTable'Winter2023TunableDB'",
+            "ObjectPath": "DeadByDaylight/Content/Data/Events/Yerkes/Winter2023TunableDB.0"
+          },
+          "RowName": "SnowballCarryLimit"
+        },
+        "_defaultValue": 1.0
+      }
+    }
+  },
+  {
+    "Type": "BaseProjectileReplicationComponent",
+    "Name": "Projectile Replication Component",
+    "Outer": "SnowballLauncher",
+    "Class": "UScriptClass'BaseProjectileReplicationComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_SnowballLauncherController_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_SnowballLauncherController_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Winter2023/Snowballs/BP_SnowballLauncherController.3"
+      },
+      "VariableGuid": "8715BE7B-4A889B05-8041CBB7-8DD12481",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_SnowballLauncherController_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_SnowballLauncherController_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Winter2023/Snowballs/BP_SnowballLauncherController.4"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_SnowballLauncherController_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Winter2023/Snowballs/BP_SnowballLauncherController.4"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_SnowballLauncherController_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Winter2023/Snowballs/BP_SnowballLauncherController.4"
+      }
+    }
+  },
+  {
+    "Type": "SnowballProjectileLauncher",
+    "Name": "SnowballLauncher",
+    "Outer": "Default__BP_SnowballLauncherController_C",
+    "Class": "UScriptClass'SnowballProjectileLauncher'",
+    "Properties": {
+      "_launchSpeed": {
+        "_dataTableRowHandle": {
+          "DataTable": {
+            "ObjectName": "DataTable'Winter2023TunableDB'",
+            "ObjectPath": "DeadByDaylight/Content/Data/Events/Yerkes/Winter2023TunableDB.0"
+          },
+          "RowName": "SnowballLaunchSpeed"
+        }
+      },
+      "_angleOffset": {
+        "Pitch": 5.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "_snowballPitchCurve": {
+        "ObjectName": "CurveFloat'HatchetLaunchPitch'",
+        "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Curves/HatchetLaunchPitch.0"
+      },
+      "_aimAngleOffsetPitchSurvivorFemale": {
+        "_dataTableRowHandle": {
+          "DataTable": {
+            "ObjectName": "DataTable'Winter2023TunableDB'",
+            "ObjectPath": "DeadByDaylight/Content/Data/Events/Yerkes/Winter2023TunableDB.0"
+          },
+          "RowName": "SnowballThrowPitchAngleOffsetSurvivorFemale"
+        }
+      },
+      "_aimAngleOffsetPitchSurvivorMale": {
+        "_dataTableRowHandle": {
+          "DataTable": {
+            "ObjectName": "DataTable'Winter2023TunableDB'",
+            "ObjectPath": "DeadByDaylight/Content/Data/Events/Yerkes/Winter2023TunableDB.0"
+          },
+          "RowName": "SnowballThrowPitchAngleOffsetSurvivorMale"
+        }
+      },
+      "_aimAngleOffsetPitchKiller": {
+        "_dataTableRowHandle": {
+          "DataTable": {
+            "ObjectName": "DataTable'Winter2023TunableDB'",
+            "ObjectPath": "DeadByDaylight/Content/Data/Events/Yerkes/Winter2023TunableDB.0"
+          },
+          "RowName": "SnowballThrowPitchAngleOffsetKiller"
+        }
+      },
+      "_killerLaunchPositionOffset": {
+        "X": 10.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "_characterBoneNameCamper": "FX_Snowskull_Throw",
+      "_characterBoneNameSlasher": "FX_Snowskull_Throw",
+      "IsOutOfAmmoTag": {
+        "TagName": "State.IsOutOfSnowballs"
+      },
+      "ProjectileClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_WinterEventSnowballProjectile_C'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Winter2023/Snowballs/BP_WinterEventSnowballProjectile.4"
+      },
+      "_ammo": 0,
+      "_maxAmmo": 0,
+      "_projectileReplicationComponent": {
+        "ObjectName": "BaseProjectileReplicationComponent'Default__BP_SnowballLauncherController_C:SnowballLauncher.Projectile Replication Component'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Winter2023/Snowballs/BP_SnowballLauncherController.2"
+      }
+    }
+  },
+  {
+    "Type": "SnowballProvider",
+    "Name": "SnowballProvider",
+    "Outer": "Default__BP_SnowballLauncherController_C",
+    "Class": "UScriptClass'SnowballProvider'",
+    "Properties": {
+      "_actorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_WinterEventSnowballProjectile_C'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Winter2023/Snowballs/BP_WinterEventSnowballProjectile.4"
+      },
+      "_size": 0
+    }
+  }
+]
