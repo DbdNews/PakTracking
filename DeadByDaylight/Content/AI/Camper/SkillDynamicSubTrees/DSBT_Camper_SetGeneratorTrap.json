@@ -1,0 +1,188 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "DSBT_Camper_SetGeneratorTrap",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_Camper_SetGeneratorTrap:BTComposite_Selector_1'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_SetGeneratorTrap.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Camper'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/BB_Camper.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "DSBT_Camper_SetGeneratorTrap",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'DSBT_Camper_SetGeneratorTrap:BTComposite_Sequence_3'",
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_SetGeneratorTrap.2"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_SetGeneratorTrap'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_SetGeneratorTrap.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "DSBT_Camper_SetGeneratorTrap",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'DSBT_Camper_SetGeneratorTrap:BTTask_Wait_0'",
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_SetGeneratorTrap.6"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_InputPress'DSBT_Camper_SetGeneratorTrap:BTTask_InputPress_0'",
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_SetGeneratorTrap.5"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'DSBT_Camper_SetGeneratorTrap:BTTask_Wait_1'",
+            "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_SetGeneratorTrap.7"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_SetBBEntry'DSBT_Camper_SetGeneratorTrap:BTService_SetBBEntry_0'",
+          "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_SetGeneratorTrap.4"
+        },
+        {
+          "ObjectName": "BTService_ClearBBEntry'DSBT_Camper_SetGeneratorTrap:BTService_ClearBBEntry_0'",
+          "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_SetGeneratorTrap.3"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_SetGeneratorTrap'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_SetGeneratorTrap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_Camper_SetGeneratorTrap:BTComposite_Selector_1'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_SetGeneratorTrap.1"
+      }
+    }
+  },
+  {
+    "Type": "BTService_ClearBBEntry",
+    "Name": "BTService_ClearBBEntry_0",
+    "Outer": "DSBT_Camper_SetGeneratorTrap",
+    "Class": "UScriptClass'BTService_ClearBBEntry'",
+    "Properties": {
+      "BBToResetKey": {
+        "SelectedKeyName": "IsDoingLeaveGeneratorInteraction"
+      },
+      "When": "EAINodeRelevancyOptions::OnExit",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_SetGeneratorTrap'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_SetGeneratorTrap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'DSBT_Camper_SetGeneratorTrap:BTComposite_Sequence_3'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_SetGeneratorTrap.2"
+      }
+    }
+  },
+  {
+    "Type": "BTService_SetBBEntry",
+    "Name": "BTService_SetBBEntry_0",
+    "Outer": "DSBT_Camper_SetGeneratorTrap",
+    "Class": "UScriptClass'BTService_SetBBEntry'",
+    "Properties": {
+      "BBToSetKey": {
+        "SelectedKeyName": "IsDoingLeaveGeneratorInteraction"
+      },
+      "ToSetValue": "True",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_SetGeneratorTrap'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_SetGeneratorTrap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'DSBT_Camper_SetGeneratorTrap:BTComposite_Sequence_3'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_SetGeneratorTrap.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_InputPress",
+    "Name": "BTTask_InputPress_0",
+    "Outer": "DSBT_Camper_SetGeneratorTrap",
+    "Class": "UScriptClass'BTTask_InputPress'",
+    "Properties": {
+      "Input": "EPawnInputPressTypes::AbilityTwo",
+      "NodeName": "Set Generator Trap",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_SetGeneratorTrap'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_SetGeneratorTrap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'DSBT_Camper_SetGeneratorTrap:BTComposite_Sequence_3'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_SetGeneratorTrap.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "DSBT_Camper_SetGeneratorTrap",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Properties": {
+      "WaitTime": 0.5,
+      "NodeName": "Wait Until Stand Up",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_SetGeneratorTrap'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_SetGeneratorTrap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'DSBT_Camper_SetGeneratorTrap:BTComposite_Sequence_3'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_SetGeneratorTrap.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_1",
+    "Outer": "DSBT_Camper_SetGeneratorTrap",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Properties": {
+      "NodeName": "Wait Until Interaction Done",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Camper_SetGeneratorTrap'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_SetGeneratorTrap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'DSBT_Camper_SetGeneratorTrap:BTComposite_Sequence_3'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Camper/SkillDynamicSubTrees/DSBT_Camper_SetGeneratorTrap.2"
+      }
+    }
+  }
+]

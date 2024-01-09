@@ -1,0 +1,181 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "DSBT_Slasher_TeleportWarp",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence'DSBT_Slasher_TeleportWarp:BTComposite_Sequence_0'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Slasher/DSBT_Slasher_TeleportWarp.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Slasher'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Slasher/BB_Slasher.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "DSBT_Slasher_TeleportWarp",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ExtMoveTo'DSBT_Slasher_TeleportWarp:BTTask_ExtMoveTo_0'",
+            "ObjectPath": "DeadByDaylight/Content/AI/Slasher/DSBT_Slasher_TeleportWarp.4"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RotateToFaceBBEntry'DSBT_Slasher_TeleportWarp:BTTask_RotateToFaceBBEntry_0'",
+            "ObjectPath": "DeadByDaylight/Content/AI/Slasher/DSBT_Slasher_TeleportWarp.5"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'DSBT_Slasher_TeleportWarp:BTTask_Wait_0'",
+            "ObjectPath": "DeadByDaylight/Content/AI/Slasher/DSBT_Slasher_TeleportWarp.6"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_GetPinLocation'DSBT_Slasher_TeleportWarp:BTService_GetPinLocation_0'",
+          "ObjectPath": "DeadByDaylight/Content/AI/Slasher/DSBT_Slasher_TeleportWarp.2"
+        },
+        {
+          "ObjectName": "BTService_GetPinLocation'DSBT_Slasher_TeleportWarp:BTService_GetPinLocation_1'",
+          "ObjectPath": "DeadByDaylight/Content/AI/Slasher/DSBT_Slasher_TeleportWarp.3"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Slasher_TeleportWarp'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Slasher/DSBT_Slasher_TeleportWarp.0"
+      }
+    }
+  },
+  {
+    "Type": "BTService_GetPinLocation",
+    "Name": "BTService_GetPinLocation_0",
+    "Outer": "DSBT_Slasher_TeleportWarp",
+    "Class": "UScriptClass'BTService_GetPinLocation'",
+    "Properties": {
+      "BBToSetKey": {
+        "SelectedKeyName": "StartWarpLocation"
+      },
+      "PinTag": {
+        "TagName": "AI.PinLocation.WarpStart"
+      },
+      "When": "EAINodeRelevancyOptions::OnTick",
+      "NodeName": "Get Start Warp Pin Location",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Slasher_TeleportWarp'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Slasher/DSBT_Slasher_TeleportWarp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'DSBT_Slasher_TeleportWarp:BTComposite_Sequence_0'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Slasher/DSBT_Slasher_TeleportWarp.1"
+      }
+    }
+  },
+  {
+    "Type": "BTService_GetPinLocation",
+    "Name": "BTService_GetPinLocation_1",
+    "Outer": "DSBT_Slasher_TeleportWarp",
+    "Class": "UScriptClass'BTService_GetPinLocation'",
+    "Properties": {
+      "BBToSetKey": {
+        "SelectedKeyName": "EndWarpLocation"
+      },
+      "PinTag": {
+        "TagName": "AI.PinLocation.WarpEnd"
+      },
+      "When": "EAINodeRelevancyOptions::OnTick",
+      "NodeName": "Get End Warp Pin Location",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Slasher_TeleportWarp'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Slasher/DSBT_Slasher_TeleportWarp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'DSBT_Slasher_TeleportWarp:BTComposite_Sequence_0'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Slasher/DSBT_Slasher_TeleportWarp.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ExtMoveTo",
+    "Name": "BTTask_ExtMoveTo_0",
+    "Outer": "DSBT_Slasher_TeleportWarp",
+    "Class": "UScriptClass'BTTask_ExtMoveTo'",
+    "Properties": {
+      "BBStrafeFocus": {
+        "SelectedKeyName": "EndWarpLocation"
+      },
+      "StrafeFocus": "EExtMoveToStrafeFocusOptions::NearGoal",
+      "BBIgnoreGroupAvoidance": {},
+      "AcceptableRadius": 10.0,
+      "bReachTestIncludesAgentRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "StartWarpLocation"
+      },
+      "NodeName": "Move To Start Warp Location",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Slasher_TeleportWarp'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Slasher/DSBT_Slasher_TeleportWarp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'DSBT_Slasher_TeleportWarp:BTComposite_Sequence_0'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Slasher/DSBT_Slasher_TeleportWarp.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RotateToFaceBBEntry",
+    "Name": "BTTask_RotateToFaceBBEntry_0",
+    "Outer": "DSBT_Slasher_TeleportWarp",
+    "Class": "UScriptClass'BTTask_RotateToFaceBBEntry'",
+    "Properties": {
+      "Precision": 1.0,
+      "BlackboardKey": {
+        "SelectedKeyName": "EndWarpLocation"
+      },
+      "NodeName": "Face End Warp Location",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Slasher_TeleportWarp'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Slasher/DSBT_Slasher_TeleportWarp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'DSBT_Slasher_TeleportWarp:BTComposite_Sequence_0'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Slasher/DSBT_Slasher_TeleportWarp.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "DSBT_Slasher_TeleportWarp",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Slasher_TeleportWarp'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Slasher/DSBT_Slasher_TeleportWarp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'DSBT_Slasher_TeleportWarp:BTComposite_Sequence_0'",
+        "ObjectPath": "DeadByDaylight/Content/AI/Slasher/DSBT_Slasher_TeleportWarp.1"
+      }
+    }
+  }
+]
