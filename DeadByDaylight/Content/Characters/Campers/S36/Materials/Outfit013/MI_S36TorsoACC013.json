@@ -21,12 +21,38 @@
         },
         {
           "ParameterInfo": {
+            "Name": "EmissiveTouchMultiplier",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.03,
+          "ExpressionGUID": "659E74D7-421D6A16-4D567EBA-6FC73AA3"
+        },
+        {
+          "ParameterInfo": {
             "Name": "RefractionDepthBias",
             "Association": "GlobalParameter",
             "Index": -1
           },
           "ParameterValue": 0.0,
           "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "VectorParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "EmissiveTouch",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 0.0,
+            "Hex": "FFFFFF"
+          },
+          "ExpressionGUID": "4F8B57D1-40850BE9-B53C4A92-7E169F6E"
         }
       ],
       "TextureParameterValues": [
@@ -65,6 +91,54 @@
             "ObjectPath": "DeadByDaylight/Content/Characters/Campers/S36/Textures/Outfit013/T_S36TorsoACC013_BC.0"
           },
           "ExpressionGUID": "CFE713C8-4B47B97B-BEFC90AD-BB3E6B38"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Blood Dirt Emissive",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_S36Torso013_M'",
+            "ObjectPath": "DeadByDaylight/Content/Characters/Campers/S36/Textures/Outfit013/T_S36Torso013_M.0"
+          },
+          "ExpressionGUID": "7F3DFFEC-44055318-7F1A70B0-9CBA02A2"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "EmmisiveMask Texture",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_S36Torso013_M'",
+            "ObjectPath": "DeadByDaylight/Content/Characters/Campers/S36/Textures/Outfit013/T_S36Torso013_M.0"
+          },
+          "ExpressionGUID": "471B8093-4A4C4473-0A287D88-1D334B11"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Emissive_Tileable_Texture",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_S36Torso013_BDE'",
+            "ObjectPath": "DeadByDaylight/Content/Characters/Campers/S36/Textures/Outfit013/T_S36Torso013_BDE.0"
+          },
+          "ExpressionGUID": "10D1CAC9-4A33A558-0E4BE29F-A545DA41"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "FlowMap Emissive",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'Black_Linear'",
+            "ObjectPath": "DeadByDaylight/Content/Textures/Environment/Tiles/Black_Linear.0"
+          },
+          "ExpressionGUID": "9DAF4CAD-4FD0FE8B-284C8ABA-1016CC4F"
         }
       ],
       "BasePropertyOverrides": {
@@ -73,6 +147,20 @@
         "TwoSided": true,
         "BlendMode": "BLEND_Masked",
         "OpacityMaskClipValue": 0.3333
+      },
+      "StaticParameters": {
+        "StaticSwitchParameters": [
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "UseEmissiveTile",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "E798D95E-4631E2E2-DD8A14A0-0985A5A3"
+          }
+        ]
       },
       "CachedReferencedTextures": [
         {
@@ -181,7 +269,17 @@
         {
           "SamplingScale": 1.0,
           "UVChannelIndex": 0,
+          "TextureName": "Black_Linear"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
           "TextureName": "Green_Linear"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_S36Torso013_BDE"
         },
         {
           "SamplingScale": 1.0,

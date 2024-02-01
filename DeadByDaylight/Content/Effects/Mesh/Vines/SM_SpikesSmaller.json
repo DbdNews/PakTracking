@@ -389,26 +389,83 @@
             "RestOffset": 0.0,
             "Name": "None",
             "bContributeToMass": true,
-            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+            "CollisionEnabled": "ECollisionEnabled::NoCollision"
           }
         ]
       },
       "DefaultInstance": {
         "ObjectType": "ECC_WorldStatic",
-        "CollisionProfileName": "BlockAll",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
         "CollisionResponses": {
           "ResponseArray": [
             {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel2",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel3",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel4",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel5",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel6",
+              "Response": "ECR_Ignore"
+            },
+            {
               "Channel": "Interactable",
-              "Response": "ECR_Block"
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Audio",
+              "Response": "ECR_Ignore"
             },
             {
               "Channel": "Slasher",
-              "Response": "ECR_Block"
+              "Response": "ECR_Ignore"
             },
             {
-              "Channel": "Blood",
-              "Response": "ECR_Block"
+              "Channel": "Traps",
+              "Response": "ECR_Ignore"
             },
             {
               "Channel": "InteractionDetector",
@@ -421,22 +478,18 @@
             {
               "Channel": "Ground",
               "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Walkable",
-              "Response": "ECR_Block"
             }
           ]
         }
       }
     },
-    "BodySetupGuid": "30A89F8F4DC11FF81623999D8504BD0E",
+    "BodySetupGuid": "D0B8DADF4C3089AB9544EBB289A31B76",
     "CookedFormatData": {
       "PhysXPC": {
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
-        "ElementCount": 378995,
-        "SizeOnDisk": 378995,
-        "OffsetInFile": "0x18DBF9"
+        "ElementCount": 47917,
+        "SizeOnDisk": 47917,
+        "OffsetInFile": "0x64912"
       }
     }
   },
@@ -450,7 +503,7 @@
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 1897,
         "SizeOnDisk": 1897,
-        "OffsetInFile": "0x1EA4B4"
+        "OffsetInFile": "0x70487"
       }
     }
   },
@@ -459,6 +512,30 @@
     "Name": "SM_SpikesSmaller",
     "Class": "UScriptClass'StaticMesh'",
     "Properties": {
+      "MinLOD": {
+        "bCooked": true,
+        "Default": 0,
+        "Value": 0
+      },
+      "ShadowMaxLOD": {
+        "PerDetailModeValue": [
+          {
+            "Ultra": 3
+          },
+          {
+            "High": 3
+          },
+          {
+            "Medium": 3
+          },
+          {
+            "Low": 3
+          },
+          {
+            "Mobile": 3
+          }
+        ]
+      },
       "StaticMaterials": [
         {
           "MaterialInterface": {
@@ -470,27 +547,27 @@
           "UVChannelData": {
             "bInitialized": true,
             "bOverrideDensities": false,
-            "LocalUVDensities": 26.893713,
+            "LocalUVDensities": 26.838226,
             "LocalUVDensities": 0.0,
             "LocalUVDensities": 0.0,
             "LocalUVDensities": 0.0
           }
         }
       ],
-      "LightmapUVDensity": 26.893713,
+      "LightmapUVDensity": 26.838226,
       "LightMapResolution": 64,
       "ExtendedBounds": {
         "Origin": {
-          "X": 7.7586365,
+          "X": 7.7882767,
           "Y": -9.815567,
-          "Z": 49.468502
+          "Z": 49.474277
         },
         "BoxExtent": {
-          "X": 77.653015,
+          "X": 77.623375,
           "Y": 105.81241,
-          "Z": 59.420322
+          "Z": 59.395172
         },
-        "SphereRadius": 120.55589
+        "SphereRadius": 120.53887
       }
     },
     "BodySetup": {
@@ -501,7 +578,7 @@
       "ObjectName": "NavCollision'SM_SpikesSmaller:NavCollision_0'",
       "ObjectPath": "DeadByDaylight/Content/Effects/Mesh/Vines/SM_SpikesSmaller.1"
     },
-    "LightingGuid": "EECF0EB9-4D68B682-07D64BB0-FC1E7DAF",
+    "LightingGuid": "B51D8395-430A0588-550E60AE-E3EB81F5",
     "RenderData": {
       "LODs": [
         {
@@ -509,23 +586,116 @@
             {
               "MaterialIndex": 0,
               "FirstIndex": 0,
-              "NumTriangles": 13520,
+              "NumTriangles": 1622,
               "MinVertexIndex": 0,
-              "MaxVertexIndex": 24456,
+              "MaxVertexIndex": 4283,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
               "bVisibleInRayTracing": true
             }
           ],
-          "MaxDeviation": 0.0,
+          "MaxDeviation": 0.38294974,
           "PositionVertexBuffer": {
             "Stride": 12,
-            "NumVertices": 24457
+            "NumVertices": 4284
           },
           "VertexBuffer": {
             "NumTexCoords": 1,
-            "NumVertices": 24457,
+            "NumVertices": 4284,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          }
+        },
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 811,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 2279,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 1.0608671,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 2280
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 1,
+            "NumVertices": 2280,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          }
+        },
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 405,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 1164,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 4.0058336,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 1165
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 1,
+            "NumVertices": 1165,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          }
+        },
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 201,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 595,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 17.227692,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 596
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 1,
+            "NumVertices": 596,
             "Strides": -1,
             "UseHighPrecisionTangentBasis": false,
             "UseFullPrecisionUVs": false
@@ -538,23 +708,23 @@
       ],
       "Bounds": {
         "Origin": {
-          "X": 7.7586365,
+          "X": 7.7882767,
           "Y": -9.815567,
-          "Z": 49.468502
+          "Z": 49.474277
         },
         "BoxExtent": {
-          "X": 77.653015,
+          "X": 77.623375,
           "Y": 105.81241,
-          "Z": 59.420322
+          "Z": 59.395172
         },
-        "SphereRadius": 120.55589
+        "SphereRadius": 120.53887
       },
       "bLODsShareStaticLighting": true,
       "ScreenSize": [
         1.0,
-        0.0,
-        0.0,
-        0.0,
+        0.9636177,
+        0.42425618,
+        0.120768525,
         0.0,
         0.0,
         0.0,
