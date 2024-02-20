@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_0",
     "Outer": "SM_HOS_Shock_BasementFloor01",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -67,7 +68,7 @@
     "BodySetupGuid": "A19B40414DBF7E0593C8E890608EA7AB",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 493,
         "SizeOnDisk": 493,
         "OffsetInFile": "0xE02F"
@@ -78,9 +79,10 @@
     "Type": "NavCollision",
     "Name": "NavCollision_1",
     "Outer": "SM_HOS_Shock_BasementFloor01",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
       "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 265,
         "SizeOnDisk": 265,
         "OffsetInFile": "0xE264"
@@ -90,6 +92,7 @@
   {
     "Type": "StaticMesh",
     "Name": "SM_HOS_Shock_BasementFloor01",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
       "MinLOD": {
         "bCooked": true,
@@ -97,18 +100,28 @@
         "Value": 0
       },
       "ShadowMaxLOD": {
-        "PerDetailModeValue": {
-          "Ultra": 2,
-          "High": 2,
-          "Medium": 2,
-          "Low": 2,
-          "Mobile": 2
-        }
+        "PerDetailModeValue": [
+          {
+            "Ultra": 2
+          },
+          {
+            "High": 2
+          },
+          {
+            "Medium": 2
+          },
+          {
+            "Low": 2
+          },
+          {
+            "Mobile": 2
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_HOS_Concreat01",
+            "ObjectName": "MaterialInstanceConstant'MI_HOS_Concreat01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/MI_HOS_Concreat01.0"
           },
           "MaterialSlotName": "MI_HOS_Concreat01",
@@ -124,7 +137,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_HOS_IR_Wall01",
+            "ObjectName": "MaterialInstanceConstant'MI_HOS_IR_Wall01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/MI_Hos_IR_Wall01.0"
           },
           "MaterialSlotName": "MI_HOS_IR_Wall01",
@@ -140,7 +153,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_ShockRoom_Lamp",
+            "ObjectName": "MaterialInstanceConstant'MI_ShockRoom_Lamp'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/MI_ShockRoom_Lamp.0"
           },
           "MaterialSlotName": "MI_ShockRoom_Lamp",
@@ -156,7 +169,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_HOS_RustMetal01",
+            "ObjectName": "MaterialInstanceConstant'MI_HOS_RustMetal01'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/MI_HOS_RustMetal01.0"
           },
           "MaterialSlotName": "MI_HOS_RustMetal01",
@@ -172,7 +185,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_HOS_Metal02",
+            "ObjectName": "MaterialInstanceConstant'MI_HOS_Metal02'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Instances/MI_HOS_Metal02.0"
           },
           "MaterialSlotName": "MI_HOS_Metal02",
@@ -188,7 +201,7 @@
         },
         {
           "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant MI_Hospital_Floor03",
+            "ObjectName": "MaterialInstanceConstant'MI_Hospital_Floor03'",
             "ObjectPath": "DeadByDaylight/Content/Materials/Substance/MI_Hospital_Floor03.0"
           },
           "MaterialSlotName": "MI_Hospital_Floor03",
@@ -221,14 +234,244 @@
       }
     },
     "BodySetup": {
-      "ObjectName": "BodySetup SM_HOS_Shock_BasementFloor01:BodySetup_0",
+      "ObjectName": "BodySetup'SM_HOS_Shock_BasementFloor01:BodySetup_0'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/SM_HOS_Shock_BasementFloor01.0"
     },
     "NavCollision": {
-      "ObjectName": "NavCollision SM_HOS_Shock_BasementFloor01:NavCollision_1",
+      "ObjectName": "NavCollision'SM_HOS_Shock_BasementFloor01:NavCollision_1'",
       "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Hospital/Structures/SM_HOS_Shock_BasementFloor01.1"
     },
     "LightingGuid": "D159CC0B-46CE4930-A81CE99D-E780477C",
-    "RenderData": null
+    "RenderData": {
+      "LODs": [
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 108,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 323,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 324,
+              "NumTriangles": 50,
+              "MinVertexIndex": 324,
+              "MaxVertexIndex": 473,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 2,
+              "FirstIndex": 474,
+              "NumTriangles": 44,
+              "MinVertexIndex": 474,
+              "MaxVertexIndex": 605,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 3,
+              "FirstIndex": 606,
+              "NumTriangles": 16,
+              "MinVertexIndex": 606,
+              "MaxVertexIndex": 653,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 4,
+              "FirstIndex": 654,
+              "NumTriangles": 50,
+              "MinVertexIndex": 654,
+              "MaxVertexIndex": 803,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 5,
+              "FirstIndex": 804,
+              "NumTriangles": 10,
+              "MinVertexIndex": 804,
+              "MaxVertexIndex": 827,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 828
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 2,
+            "NumVertices": 828,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          }
+        },
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 3,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 8,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 9,
+              "NumTriangles": 11,
+              "MinVertexIndex": 9,
+              "MaxVertexIndex": 41,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 2,
+              "FirstIndex": 42,
+              "NumTriangles": 2,
+              "MinVertexIndex": 42,
+              "MaxVertexIndex": 47,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 3,
+              "FirstIndex": 48,
+              "NumTriangles": 1,
+              "MinVertexIndex": 48,
+              "MaxVertexIndex": 50,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 4,
+              "FirstIndex": 51,
+              "NumTriangles": 13,
+              "MinVertexIndex": 51,
+              "MaxVertexIndex": 89,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 5,
+              "FirstIndex": 90,
+              "NumTriangles": 10,
+              "MinVertexIndex": 90,
+              "MaxVertexIndex": 109,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 110
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 1,
+            "NumVertices": 110,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          }
+        },
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 5,
+              "FirstIndex": 0,
+              "NumTriangles": 10,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 23,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 24
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 2,
+            "NumVertices": 24,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          }
+        }
+      ],
+      "Bounds": {
+        "Origin": {
+          "X": 50.583862,
+          "Y": 9.724274,
+          "Z": 101.04945
+        },
+        "BoxExtent": {
+          "X": 303.0855,
+          "Y": 156.16019,
+          "Z": 4.288555
+        },
+        "SphereRadius": 340.97687
+      },
+      "bLODsShareStaticLighting": false,
+      "ScreenSize": [
+        1.5045054,
+        0.08240516,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
   }
 ]

@@ -1,0 +1,298 @@
+[
+  {
+    "Type": "BodySetup",
+    "Name": "BodySetup_17",
+    "Outer": "SM_COM_PlantFern01",
+    "Class": "UScriptClass'BodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphereElems": [
+          {
+            "Center": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 30.0
+            },
+            "Radius": 50.0,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "WalkableSlopeOverride": {
+        "WalkableSlopeBehavior": "WalkableSlope_Unwalkable"
+      },
+      "DefaultInstance": {
+        "ObjectType": "ECC_WorldDynamic",
+        "CollisionProfileName": "BlockAllDynamicFoliage",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Interactable",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Audio",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Traps",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "InteractionDetector",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BlinkBlocker",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Ground",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "891407D5400237B837EAC888FC125D49",
+    "CookedFormatData": {
+      "PhysXPC": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 25,
+        "SizeOnDisk": 25,
+        "OffsetInFile": "0xC990"
+      }
+    }
+  },
+  {
+    "Type": "StaticMesh",
+    "Name": "SM_COM_PlantFern01",
+    "Class": "UScriptClass'StaticMesh'",
+    "Properties": {
+      "MinLOD": {
+        "bCooked": true,
+        "Default": 0,
+        "Value": 0
+      },
+      "ShadowMaxLOD": {
+        "PerDetailModeValue": [
+          {
+            "Ultra": 2
+          },
+          {
+            "High": 2
+          },
+          {
+            "Medium": 2
+          },
+          {
+            "Low": 2
+          },
+          {
+            "Mobile": 2
+          }
+        ]
+      },
+      "StaticMaterials": [
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'MI_HideGrass01'",
+            "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Vegetations/MI_HideGrass01.0"
+          },
+          "MaterialSlotName": "MI_HideGrass01",
+          "ImportedMaterialSlotName": "MI_HideGrass01",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 256.19,
+            "LocalUVDensities": 443.69806,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 0.0
+          }
+        }
+      ],
+      "LightmapUVDensity": 443.69806,
+      "LightMapResolution": 32,
+      "LightMapCoordinateIndex": 1,
+      "LODForCollision": 2,
+      "bHasNavigationData": false,
+      "BatchingMode": "EBatchingMode::GPUCulling",
+      "ExtendedBounds": {
+        "Origin": {
+          "X": -2.3550797,
+          "Y": 2.5969315,
+          "Z": 54.722656
+        },
+        "BoxExtent": {
+          "X": 108.462715,
+          "Y": 102.03086,
+          "Z": 61.174202
+        },
+        "SphereRadius": 119.292465
+      }
+    },
+    "BodySetup": {
+      "ObjectName": "BodySetup'SM_COM_PlantFern01:BodySetup_17'",
+      "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/_Foliage/Vegetations/SM_COM_PlantFern01.0"
+    },
+    "NavCollision": null,
+    "LightingGuid": "8DE05F72-4883C733-470A02A6-2CAA08E5",
+    "RenderData": {
+      "LODs": [
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 257,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 244,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 245
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 2,
+            "NumVertices": 245,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          }
+        },
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 168,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 178,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 9.70315,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 179
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 2,
+            "NumVertices": 179,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          }
+        },
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 84,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 108,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": true,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 19.317072,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 109
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 2,
+            "NumVertices": 109,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          }
+        }
+      ],
+      "Bounds": {
+        "Origin": {
+          "X": -2.3550797,
+          "Y": 2.5969315,
+          "Z": 54.722656
+        },
+        "BoxExtent": {
+          "X": 108.462715,
+          "Y": 102.03086,
+          "Z": 61.174202
+        },
+        "SphereRadius": 119.292465
+      },
+      "bLODsShareStaticLighting": true,
+      "ScreenSize": [
+        1.0,
+        0.4,
+        0.2,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  }
+]

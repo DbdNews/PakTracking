@@ -1,0 +1,360 @@
+[
+  {
+    "Type": "BodySetup",
+    "Name": "BodySetup_3",
+    "Outer": "SM_COM_Grass01",
+    "Class": "UScriptClass'BodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphereElems": [
+          {
+            "Center": {
+              "X": -5.0,
+              "Y": 0.0,
+              "Z": 20.0
+            },
+            "Radius": 35.0,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "WalkableSlopeOverride": {
+        "WalkableSlopeBehavior": "WalkableSlope_Unwalkable"
+      },
+      "DefaultInstance": {
+        "ObjectType": "ECC_WorldDynamic",
+        "CollisionProfileName": "BlockAllDynamicFoliage",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Interactable",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Audio",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Traps",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "InteractionDetector",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BlinkBlocker",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Ground",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "C0F0774045BD31A02DAC4DA44AED4571",
+    "CookedFormatData": {
+      "PhysXPC": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 25,
+        "SizeOnDisk": 25,
+        "OffsetInFile": "0x548B4"
+      }
+    }
+  },
+  {
+    "Type": "StaticMesh",
+    "Name": "SM_COM_Grass01",
+    "Class": "UScriptClass'StaticMesh'",
+    "Properties": {
+      "MinLOD": {
+        "bCooked": true,
+        "Default": 0,
+        "Value": 0
+      },
+      "ShadowMaxLOD": {
+        "PerDetailModeValue": [
+          {
+            "Ultra": 4
+          },
+          {
+            "High": 4
+          },
+          {
+            "Medium": 4
+          },
+          {
+            "Low": 4
+          },
+          {
+            "Mobile": 4
+          }
+        ]
+      },
+      "StaticMaterials": [
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'MI_HideGrass01'",
+            "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Vegetations/MI_HideGrass01.0"
+          },
+          "MaterialSlotName": "MI_HideGrass01",
+          "ImportedMaterialSlotName": "MI_HideGrass01",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 137.73038,
+            "LocalUVDensities": 169.9205,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 0.0
+          }
+        }
+      ],
+      "LightmapUVDensity": 169.9205,
+      "LightMapResolution": 64,
+      "LightMapCoordinateIndex": 1,
+      "LODForCollision": 4,
+      "bHasNavigationData": false,
+      "BatchingMode": "EBatchingMode::GPUCulling",
+      "ExtendedBounds": {
+        "Origin": {
+          "X": -4.977989,
+          "Y": -1.4872665,
+          "Z": 54.90563
+        },
+        "BoxExtent": {
+          "X": 80.77159,
+          "Y": 79.87915,
+          "Z": 57.928688
+        },
+        "SphereRadius": 94.6923
+      }
+    },
+    "BodySetup": {
+      "ObjectName": "BodySetup'SM_COM_Grass01:BodySetup_3'",
+      "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/_Foliage/Vegetations/SM_COM_Grass01.0"
+    },
+    "NavCollision": null,
+    "LightingGuid": "20FE9678-48CC57E2-9B1C289B-2D7A38FE",
+    "RenderData": {
+      "LODs": [
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 1612,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 2303,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 2304
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 2,
+            "NumVertices": 2304,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 4,
+            "NumVertices": 2304
+          }
+        },
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 1160,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 1638,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 1639
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 2,
+            "NumVertices": 1639,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          }
+        },
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 462,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 644,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 645
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 2,
+            "NumVertices": 645,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          }
+        },
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 336,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 455,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 456
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 2,
+            "NumVertices": 456,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          }
+        },
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 138,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 183,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 184
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 2,
+            "NumVertices": 184,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          }
+        }
+      ],
+      "Bounds": {
+        "Origin": {
+          "X": -4.977989,
+          "Y": -1.4872665,
+          "Z": 54.90563
+        },
+        "BoxExtent": {
+          "X": 80.77159,
+          "Y": 79.87915,
+          "Z": 57.928688
+        },
+        "SphereRadius": 94.6923
+      },
+      "bLODsShareStaticLighting": false,
+      "ScreenSize": [
+        1.0,
+        0.1,
+        0.07,
+        0.05,
+        0.03,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  }
+]

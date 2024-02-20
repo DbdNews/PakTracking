@@ -6,7 +6,7 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.37"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.23"
       },
       "bClassRequiresNativeTick": true
     },
@@ -17,39 +17,39 @@
     "ChildProperties": [
       {
         "Type": "ObjectProperty",
-        "Name": "BG",
-        "Flags": 2097153,
-        "ElementSize": 8,
-        "PropertyFlags": 562952101429260,
-        "PropertyClass": {
-          "ObjectName": "Class'DBDImage'",
-          "ObjectPath": "/Script/DBDUIViewsCore"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "ContentBG",
-        "Flags": 2097153,
-        "ElementSize": 8,
-        "PropertyFlags": 562952101429260,
-        "PropertyClass": {
-          "ObjectName": "Class'DBDImage'",
-          "ObjectPath": "/Script/DBDUIViewsCore"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
         "Name": "ContentImage",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
-        "PropertyFlags": 562952101429260,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'DBDImage'",
+          "ObjectPath": "/Script/DBDUIViewsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ContentSmokeBG",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'DBDImage'",
+          "ObjectPath": "/Script/DBDUIViewsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MainBG",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
         "PropertyClass": {
           "ObjectName": "Class'DBDImage'",
           "ObjectPath": "/Script/DBDUIViewsCore"
         }
       }
     ],
-    "ClassFlags": 10754064,
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
     "ClassWithin": {
       "ObjectName": "Class'Object'",
       "ObjectPath": "/Script/CoreUObject"
@@ -71,54 +71,61 @@
     }
   },
   {
-    "Type": "CanvasPanel",
-    "Name": "CanvasPanel_0",
+    "Type": "DBDImage",
+    "Name": "ContentImage",
     "Outer": "WidgetTree",
-    "Class": "UScriptClass'CanvasPanel'",
+    "Class": "UScriptClass'DBDImage'",
     "Properties": {
-      "Slots": [
-        {
-          "ObjectName": "CanvasPanelSlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_1'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.3"
-        }
-      ]
-    }
-  },
-  {
-    "Type": "CanvasPanelSlot",
-    "Name": "CanvasPanelSlot_1",
-    "Outer": "CanvasPanel_0",
-    "Class": "UScriptClass'CanvasPanelSlot'",
-    "Properties": {
-      "LayoutData": {
-        "Offsets": {
-          "Right": 0.0,
-          "Bottom": 0.0
+      "Brush": {
+        "ImageSize": {
+          "X": 1850.0,
+          "Y": 1850.0
         },
-        "Anchors": {
-          "Maximum": {
-            "X": 1.0,
-            "Y": 1.0
-          }
-        },
-        "Alignment": {
-          "X": 0.0,
-          "Y": 0.5
+        "ResourceObject": {
+          "ObjectName": "Texture2D'ProgressionSystemInfoPopupScreen_I26'",
+          "ObjectPath": "DeadByDaylight/Content/UI/ProgressionSystemInfoPopupScreen/ProgressionSystemInfoPopupScreen_I26.0"
         }
       },
-      "Parent": {
-        "ObjectName": "CanvasPanel'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.2"
-      },
-      "Content": {
-        "ObjectName": "ScaleBox'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.ScaleContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.19"
+      "Slot": {
+        "ObjectName": "OverlaySlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.Overlay_1.OverlaySlot_7'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.12"
       }
     }
   },
   {
     "Type": "DBDImage",
-    "Name": "BG",
+    "Name": "ContentSmokeBG",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'DBDImage'",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 3840.0,
+          "Y": 1917.0
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 0.7,
+            "Hex": "B3FFFFFF"
+          }
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_UI_ProgressionSystemInfoPopupBkg'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Popups/ProgressionSystemInfoPopup/T_UI_ProgressionSystemInfoPopupBkg.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.Overlay_95.OverlaySlot_4'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.15"
+      }
+    }
+  },
+  {
+    "Type": "DBDImage",
+    "Name": "MainBG",
     "Outer": "WidgetTree",
     "Class": "UScriptClass'DBDImage'",
     "Properties": {
@@ -131,53 +138,7 @@
       },
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.Overlay_95.OverlaySlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.17"
-      }
-    }
-  },
-  {
-    "Type": "DBDImage",
-    "Name": "ContentBG",
-    "Outer": "WidgetTree",
-    "Class": "UScriptClass'DBDImage'",
-    "Properties": {
-      "Brush": {
-        "TintColor": {
-          "SpecifiedColor": {
-            "R": 0.052083,
-            "G": 0.052083,
-            "B": 0.052083,
-            "A": 0.5,
-            "Hex": "7F404040"
-          }
-        },
-        "ResourceObject": {
-          "ObjectName": "MaterialInstanceConstant'MI_UI_PopupBG_Generic'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Popups/Materials/MI_UI_PopupBG_Generic.0"
-        },
-        "DrawAs": "ESlateBrushDrawType::Box"
-      },
-      "Slot": {
-        "ObjectName": "OverlaySlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.Overlay_1.OverlaySlot_2'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.16"
-      }
-    }
-  },
-  {
-    "Type": "DBDImage",
-    "Name": "ContentImage",
-    "Outer": "WidgetTree",
-    "Class": "UScriptClass'DBDImage'",
-    "Properties": {
-      "Brush": {
-        "ImageSize": {
-          "X": 1300.0,
-          "Y": 1300.0
-        }
-      },
-      "Slot": {
-        "ObjectName": "HorizontalBoxSlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.Content.HorizontalBoxSlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.11"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.13"
       }
     }
   },
@@ -236,10 +197,10 @@
           "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
         }
       },
-      "AutoWrapText": true,
+      "WrapTextAt": 1600.0,
       "Slot": {
         "ObjectName": "ScrollBoxSlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.MessageScrollBox.ScrollBoxSlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.21"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.18"
       }
     }
   },
@@ -294,8 +255,8 @@
       "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
       "Justification": "ETextJustify::Center",
       "Slot": {
-        "ObjectName": "SizeBoxSlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.TitleDimensions.SizeBoxSlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.29"
+        "ObjectName": "VerticalBoxSlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.TextContainer.VerticalBoxSlot_3'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.21"
       }
     }
   },
@@ -409,71 +370,12 @@
       "Slots": [
         {
           "ObjectName": "ScrollBoxSlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.MessageScrollBox.ScrollBoxSlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.21"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.18"
         }
       ],
       "Slot": {
         "ObjectName": "VerticalBoxSlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.TextContainer.VerticalBoxSlot_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.32"
-      }
-    }
-  },
-  {
-    "Type": "HorizontalBox",
-    "Name": "Content",
-    "Outer": "WidgetTree",
-    "Class": "UScriptClass'HorizontalBox'",
-    "Properties": {
-      "Slots": [
-        {
-          "ObjectName": "HorizontalBoxSlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.Content.HorizontalBoxSlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.11"
-        },
-        {
-          "ObjectName": "HorizontalBoxSlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.Content.HorizontalBoxSlot_1'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.12"
-        }
-      ],
-      "Slot": {
-        "ObjectName": "OverlaySlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.Overlay_1.OverlaySlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.15"
-      }
-    }
-  },
-  {
-    "Type": "HorizontalBoxSlot",
-    "Name": "HorizontalBoxSlot_0",
-    "Outer": "Content",
-    "Class": "UScriptClass'HorizontalBoxSlot'",
-    "Properties": {
-      "HorizontalAlignment": "HAlign_Left",
-      "Parent": {
-        "ObjectName": "HorizontalBox'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.Content'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.10"
-      },
-      "Content": {
-        "ObjectName": "DBDImage'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.ContentImage'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.6"
-      }
-    }
-  },
-  {
-    "Type": "HorizontalBoxSlot",
-    "Name": "HorizontalBoxSlot_1",
-    "Outer": "Content",
-    "Class": "UScriptClass'HorizontalBoxSlot'",
-    "Properties": {
-      "Size": {
-        "SizeRule": "ESlateSizeRule::Fill"
-      },
-      "HorizontalAlignment": "HAlign_Right",
-      "Parent": {
-        "ObjectName": "HorizontalBox'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.Content'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.10"
-      },
-      "Content": {
-        "ObjectName": "SizeBox'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.TextContainerDimensions'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.24"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.20"
       }
     }
   },
@@ -485,17 +387,21 @@
     "Properties": {
       "Slots": [
         {
-          "ObjectName": "OverlaySlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.Overlay_1.OverlaySlot_2'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.16"
+          "ObjectName": "OverlaySlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.Overlay_1.OverlaySlot_7'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.12"
         },
         {
-          "ObjectName": "OverlaySlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.Overlay_1.OverlaySlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.15"
+          "ObjectName": "OverlaySlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.Overlay_1.OverlaySlot_6'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.11"
+        },
+        {
+          "ObjectName": "OverlaySlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.Overlay_1.OverlaySlot_4'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.10"
         }
       ],
       "Slot": {
-        "ObjectName": "SizeBoxSlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.ContentDimensions.SizeBoxSlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.27"
+        "ObjectName": "OverlaySlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.Overlay_95.OverlaySlot_2'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.14"
       }
     }
   },
@@ -508,52 +414,86 @@
       "Slots": [
         {
           "ObjectName": "OverlaySlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.Overlay_95.OverlaySlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.17"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.13"
         },
         {
-          "ObjectName": "OverlaySlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.Overlay_95.OverlaySlot_1'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.18"
+          "ObjectName": "OverlaySlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.Overlay_95.OverlaySlot_4'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.15"
+        },
+        {
+          "ObjectName": "OverlaySlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.Overlay_95.OverlaySlot_2'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.14"
         }
       ],
       "Slot": {
         "ObjectName": "ScaleBoxSlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.ScaleContainer.ScaleBoxSlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.20"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.17"
       }
     }
   },
   {
     "Type": "OverlaySlot",
-    "Name": "OverlaySlot_0",
+    "Name": "OverlaySlot_4",
     "Outer": "Overlay_1",
     "Class": "UScriptClass'OverlaySlot'",
     "Properties": {
-      "HorizontalAlignment": "HAlign_Fill",
-      "VerticalAlignment": "VAlign_Fill",
+      "Padding": {
+        "Bottom": 180.0
+      },
+      "HorizontalAlignment": "HAlign_Right",
+      "VerticalAlignment": "VAlign_Bottom",
       "Parent": {
         "ObjectName": "Overlay'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.Overlay_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.13"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.8"
       },
       "Content": {
-        "ObjectName": "HorizontalBox'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.Content'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.10"
+        "ObjectName": "WBP_CoreStandardInputSwitcher_C'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.ProgressionButton'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.22"
       }
     }
   },
   {
     "Type": "OverlaySlot",
-    "Name": "OverlaySlot_2",
+    "Name": "OverlaySlot_6",
     "Outer": "Overlay_1",
     "Class": "UScriptClass'OverlaySlot'",
     "Properties": {
-      "HorizontalAlignment": "HAlign_Fill",
-      "VerticalAlignment": "VAlign_Fill",
+      "Padding": {
+        "Left": 950.0,
+        "Top": -330.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
       "Parent": {
         "ObjectName": "Overlay'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.Overlay_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.13"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.8"
       },
       "Content": {
-        "ObjectName": "DBDImage'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.ContentBG'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.5"
+        "ObjectName": "VerticalBox'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.TextContainer'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.19"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_7",
+    "Outer": "Overlay_1",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Properties": {
+      "Padding": {
+        "Top": 96.0,
+        "Right": 850.0,
+        "Bottom": 60.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.Overlay_1'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.8"
+      },
+      "Content": {
+        "ObjectName": "DBDImage'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.ContentImage'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.2"
       }
     }
   },
@@ -567,29 +507,55 @@
       "VerticalAlignment": "VAlign_Fill",
       "Parent": {
         "ObjectName": "Overlay'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.Overlay_95'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.14"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.9"
       },
       "Content": {
-        "ObjectName": "DBDImage'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.BG'",
+        "ObjectName": "DBDImage'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.MainBG'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.4"
       }
     }
   },
   {
     "Type": "OverlaySlot",
-    "Name": "OverlaySlot_1",
+    "Name": "OverlaySlot_2",
     "Outer": "Overlay_95",
     "Class": "UScriptClass'OverlaySlot'",
     "Properties": {
-      "HorizontalAlignment": "HAlign_Center",
+      "Padding": {
+        "Left": 150.0,
+        "Top": 80.0,
+        "Right": 150.0
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.Overlay_95'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.9"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.Overlay_1'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.8"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_4",
+    "Outer": "Overlay_95",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Properties": {
+      "Padding": {
+        "Top": 80.0
+      },
+      "HorizontalAlignment": "HAlign_Fill",
       "VerticalAlignment": "VAlign_Center",
       "Parent": {
         "ObjectName": "Overlay'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.Overlay_95'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.14"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.9"
       },
       "Content": {
-        "ObjectName": "VerticalBox'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.31"
+        "ObjectName": "DBDImage'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.ContentSmokeBG'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.3"
       }
     }
   },
@@ -603,13 +569,9 @@
       "Slots": [
         {
           "ObjectName": "ScaleBoxSlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.ScaleContainer.ScaleBoxSlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.20"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.17"
         }
       ],
-      "Slot": {
-        "ObjectName": "CanvasPanelSlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.3"
-      },
       "bIsVariable": true
     }
   },
@@ -623,11 +585,11 @@
       "VerticalAlignment": "VAlign_Fill",
       "Parent": {
         "ObjectName": "ScaleBox'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.ScaleContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.19"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.16"
       },
       "Content": {
         "ObjectName": "Overlay'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.Overlay_95'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.14"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.9"
       }
     }
   },
@@ -637,171 +599,16 @@
     "Outer": "MessageScrollBox",
     "Class": "UScriptClass'ScrollBoxSlot'",
     "Properties": {
+      "Padding": {
+        "Top": 120.0
+      },
       "Parent": {
         "ObjectName": "DBDScrollBox'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.MessageScrollBox'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.9"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.7"
       },
       "Content": {
         "ObjectName": "DBDRichTextBlock'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.MessageText'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.7"
-      }
-    }
-  },
-  {
-    "Type": "SizeBox",
-    "Name": "ButtonDimensions",
-    "Outer": "WidgetTree",
-    "Class": "UScriptClass'SizeBox'",
-    "Properties": {
-      "MinDesiredHeight": 150.0,
-      "MaxDesiredHeight": 150.0,
-      "bOverride_MinDesiredHeight": true,
-      "bOverride_MaxDesiredHeight": true,
-      "Slots": [
-        {
-          "ObjectName": "SizeBoxSlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.ButtonDimensions.SizeBoxSlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.26"
-        }
-      ],
-      "Slot": {
-        "ObjectName": "VerticalBoxSlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.35"
-      }
-    }
-  },
-  {
-    "Type": "SizeBox",
-    "Name": "ContentDimensions",
-    "Outer": "WidgetTree",
-    "Class": "UScriptClass'SizeBox'",
-    "Properties": {
-      "MinDesiredWidth": 3400.0,
-      "MaxDesiredWidth": 3500.0,
-      "bOverride_MinDesiredWidth": true,
-      "bOverride_MaxDesiredWidth": true,
-      "Slots": [
-        {
-          "ObjectName": "SizeBoxSlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.ContentDimensions.SizeBoxSlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.27"
-        }
-      ],
-      "Slot": {
-        "ObjectName": "VerticalBoxSlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.34"
-      }
-    }
-  },
-  {
-    "Type": "SizeBox",
-    "Name": "TextContainerDimensions",
-    "Outer": "WidgetTree",
-    "Class": "UScriptClass'SizeBox'",
-    "Properties": {
-      "MinDesiredWidth": 1930.0,
-      "MinDesiredHeight": 200.0,
-      "MaxDesiredWidth": 1930.0,
-      "MaxDesiredHeight": 700.0,
-      "bOverride_MinDesiredWidth": true,
-      "bOverride_MinDesiredHeight": true,
-      "bOverride_MaxDesiredWidth": true,
-      "bOverride_MaxDesiredHeight": true,
-      "Slots": [
-        {
-          "ObjectName": "SizeBoxSlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.TextContainerDimensions.SizeBoxSlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.28"
-        }
-      ],
-      "Slot": {
-        "ObjectName": "HorizontalBoxSlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.Content.HorizontalBoxSlot_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.12"
-      }
-    }
-  },
-  {
-    "Type": "SizeBox",
-    "Name": "TitleDimensions",
-    "Outer": "WidgetTree",
-    "Class": "UScriptClass'SizeBox'",
-    "Properties": {
-      "MinDesiredHeight": 200.0,
-      "bOverride_MinDesiredHeight": true,
-      "Slots": [
-        {
-          "ObjectName": "SizeBoxSlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.TitleDimensions.SizeBoxSlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.29"
-        }
-      ],
-      "Slot": {
-        "ObjectName": "VerticalBoxSlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.TextContainer.VerticalBoxSlot_3'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.33"
-      }
-    }
-  },
-  {
-    "Type": "SizeBoxSlot",
-    "Name": "SizeBoxSlot_0",
-    "Outer": "ButtonDimensions",
-    "Class": "UScriptClass'SizeBoxSlot'",
-    "Properties": {
-      "HorizontalAlignment": "HAlign_Right",
-      "VerticalAlignment": "VAlign_Center",
-      "Parent": {
-        "ObjectName": "SizeBox'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.ButtonDimensions'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.22"
-      },
-      "Content": {
-        "ObjectName": "WBP_CoreStandardInputSwitcher_C'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.ProgressionButton'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.36"
-      }
-    }
-  },
-  {
-    "Type": "SizeBoxSlot",
-    "Name": "SizeBoxSlot_0",
-    "Outer": "ContentDimensions",
-    "Class": "UScriptClass'SizeBoxSlot'",
-    "Properties": {
-      "Parent": {
-        "ObjectName": "SizeBox'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.ContentDimensions'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.23"
-      },
-      "Content": {
-        "ObjectName": "Overlay'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.Overlay_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.13"
-      }
-    }
-  },
-  {
-    "Type": "SizeBoxSlot",
-    "Name": "SizeBoxSlot_0",
-    "Outer": "TextContainerDimensions",
-    "Class": "UScriptClass'SizeBoxSlot'",
-    "Properties": {
-      "Parent": {
-        "ObjectName": "SizeBox'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.TextContainerDimensions'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.24"
-      },
-      "Content": {
-        "ObjectName": "VerticalBox'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.TextContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.30"
-      }
-    }
-  },
-  {
-    "Type": "SizeBoxSlot",
-    "Name": "SizeBoxSlot_0",
-    "Outer": "TitleDimensions",
-    "Class": "UScriptClass'SizeBoxSlot'",
-    "Properties": {
-      "HorizontalAlignment": "HAlign_Left",
-      "VerticalAlignment": "VAlign_Top",
-      "Parent": {
-        "ObjectName": "SizeBox'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.TitleDimensions'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.25"
-      },
-      "Content": {
-        "ObjectName": "DBDRichTextBlock'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.TitleText'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.8"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.5"
       }
     }
   },
@@ -814,38 +621,16 @@
       "Slots": [
         {
           "ObjectName": "VerticalBoxSlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.TextContainer.VerticalBoxSlot_3'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.33"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.21"
         },
         {
           "ObjectName": "VerticalBoxSlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.TextContainer.VerticalBoxSlot_1'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.32"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.20"
         }
       ],
       "Slot": {
-        "ObjectName": "SizeBoxSlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.TextContainerDimensions.SizeBoxSlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.28"
-      }
-    }
-  },
-  {
-    "Type": "VerticalBox",
-    "Name": "VerticalBox_0",
-    "Outer": "WidgetTree",
-    "Class": "UScriptClass'VerticalBox'",
-    "Properties": {
-      "Slots": [
-        {
-          "ObjectName": "VerticalBoxSlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.34"
-        },
-        {
-          "ObjectName": "VerticalBoxSlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_1'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.35"
-        }
-      ],
-      "Slot": {
-        "ObjectName": "OverlaySlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.Overlay_95.OverlaySlot_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.18"
+        "ObjectName": "OverlaySlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.Overlay_1.OverlaySlot_6'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.11"
       }
     }
   },
@@ -858,13 +643,17 @@
       "Size": {
         "SizeRule": "ESlateSizeRule::Fill"
       },
+      "Padding": {
+        "Top": 34.0
+      },
+      "VerticalAlignment": "VAlign_Top",
       "Parent": {
         "ObjectName": "VerticalBox'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.TextContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.30"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.19"
       },
       "Content": {
         "ObjectName": "DBDScrollBox'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.MessageScrollBox'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.9"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.7"
       }
     }
   },
@@ -878,43 +667,11 @@
       "VerticalAlignment": "VAlign_Top",
       "Parent": {
         "ObjectName": "VerticalBox'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.TextContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.30"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.19"
       },
       "Content": {
-        "ObjectName": "SizeBox'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.TitleDimensions'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.25"
-      }
-    }
-  },
-  {
-    "Type": "VerticalBoxSlot",
-    "Name": "VerticalBoxSlot_0",
-    "Outer": "VerticalBox_0",
-    "Class": "UScriptClass'VerticalBoxSlot'",
-    "Properties": {
-      "Parent": {
-        "ObjectName": "VerticalBox'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.31"
-      },
-      "Content": {
-        "ObjectName": "SizeBox'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.ContentDimensions'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.23"
-      }
-    }
-  },
-  {
-    "Type": "VerticalBoxSlot",
-    "Name": "VerticalBoxSlot_1",
-    "Outer": "VerticalBox_0",
-    "Class": "UScriptClass'VerticalBoxSlot'",
-    "Properties": {
-      "Parent": {
-        "ObjectName": "VerticalBox'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.VerticalBox_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.31"
-      },
-      "Content": {
-        "ObjectName": "SizeBox'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.ButtonDimensions'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.22"
+        "ObjectName": "DBDRichTextBlock'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.TitleText'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.6"
       }
     }
   },
@@ -922,12 +679,15 @@
     "Type": "WBP_CoreStandardInputSwitcher_C",
     "Name": "ProgressionButton",
     "Outer": "WidgetTree",
-    "Template": "Default__WBP_CoreStandardInputSwitcher_C",
     "Class": "WidgetBlueprintGeneratedClass'DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/InputSwitchers/WBP_CoreStandardInputSwitcher.WBP_CoreStandardInputSwitcher_C'",
+    "Template": {
+      "ObjectName": "WBP_CoreStandardInputSwitcher_C'Default__WBP_CoreStandardInputSwitcher_C'",
+      "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/InputSwitchers/WBP_CoreStandardInputSwitcher.1"
+    },
     "Properties": {
       "Slot": {
-        "ObjectName": "SizeBoxSlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.ButtonDimensions.SizeBoxSlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.26"
+        "ObjectName": "OverlaySlot'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.Overlay_1.OverlaySlot_4'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.10"
       }
     }
   },
@@ -938,8 +698,8 @@
     "Class": "UScriptClass'WidgetTree'",
     "Properties": {
       "RootWidget": {
-        "ObjectName": "CanvasPanel'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.2"
+        "ObjectName": "ScaleBox'WBP_ProgressionSystemInfoPopupWidget_C:WidgetTree.ScaleContainer'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_ProgressionSystemInfoPopupWidget.16"
       }
     }
   }

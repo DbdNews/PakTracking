@@ -6,7 +6,7 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'WBP_SeasonEndRankRewardsPopup_C:WidgetTree'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.57"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.53"
       },
       "bClassRequiresNativeTick": true
     },
@@ -61,7 +61,7 @@
       },
       {
         "Type": "ObjectProperty",
-        "Name": "TitleBG",
+        "Name": "SmokeBG",
         "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
         "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
@@ -71,7 +71,7 @@
         }
       }
     ],
-    "ClassFlags": 10754064,
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
     "ClassWithin": {
       "ObjectName": "Class'Object'",
       "ObjectPath": "/Script/CoreUObject"
@@ -93,59 +93,20 @@
     }
   },
   {
-    "Type": "CanvasPanel",
-    "Name": "CanvasPanel_0",
-    "Outer": "WidgetTree",
-    "Class": "UScriptClass'CanvasPanel'",
-    "Properties": {
-      "Slots": [
-        {
-          "ObjectName": "CanvasPanelSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.3"
-        }
-      ]
-    }
-  },
-  {
-    "Type": "CanvasPanelSlot",
-    "Name": "CanvasPanelSlot_0",
-    "Outer": "CanvasPanel_0",
-    "Class": "UScriptClass'CanvasPanelSlot'",
-    "Properties": {
-      "LayoutData": {
-        "Offsets": {
-          "Top": -600.0,
-          "Right": 0.0,
-          "Bottom": 1200.0
-        },
-        "Anchors": {
-          "Minimum": {
-            "X": 0.0,
-            "Y": 0.5
-          },
-          "Maximum": {
-            "X": 1.0,
-            "Y": 0.5
-          }
-        }
-      },
-      "Parent": {
-        "ObjectName": "CanvasPanel'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.2"
-      },
-      "Content": {
-        "ObjectName": "ScaleBox'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.ScaleContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.39"
-      }
-    }
-  },
-  {
     "Type": "DBDImage",
     "Name": "BG",
     "Outer": "WidgetTree",
     "Class": "UScriptClass'DBDImage'",
     "Properties": {
       "Brush": {
+        "ImageSize": {
+          "X": 2048.0,
+          "Y": 512.0
+        },
+        "Margin": {
+          "Top": 0.5,
+          "Bottom": 0.5
+        },
         "TintColor": {
           "SpecifiedColor": {
             "R": 0.0,
@@ -163,8 +124,9 @@
       },
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.PopupOverlay.OverlaySlot_14'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.38"
-      }
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.35"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
     }
   },
   {
@@ -187,13 +149,13 @@
         }
       },
       "Slot": {
-        "ObjectName": "GridSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.GridPanel_271.GridSlot_8'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.25"
+        "ObjectName": "GridSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Content.GridSlot_1'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.15"
       },
       "RenderTransform": {
         "Scale": {
-          "X": 1.6,
-          "Y": 1.6
+          "X": 1.7,
+          "Y": 1.7
         }
       },
       "RenderTransformPivot": {
@@ -210,17 +172,23 @@
     "Properties": {
       "Brush": {
         "ImageSize": {
-          "X": 4.0,
-          "Y": 256.0
+          "X": 16.0,
+          "Y": 512.0
         },
         "ResourceObject": {
-          "ObjectName": "Texture2D'T_customBots_DividerVertical'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/CustomBots/T_customBots_DividerVertical.0"
+          "ObjectName": "Texture2D'T_UI_RankDivider'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Popups/SeasonEndRankRewardPopup/T_UI_RankDivider.0"
         }
       },
       "Slot": {
-        "ObjectName": "HorizontalBoxSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_2'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.29"
+        "ObjectName": "HorizontalBoxSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_4'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.26"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 2.0,
+          "Y": 1.0
+        }
       }
     }
   },
@@ -233,58 +201,53 @@
       "Brush": {
         "ImageSize": {
           "X": 2048.0,
-          "Y": 150.0
-        },
-        "TintColor": {
-          "SpecifiedColor": {
-            "R": 0.0,
-            "G": 0.0,
-            "B": 0.0,
-            "A": 0.5,
-            "Hex": "7F000000"
-          }
+          "Y": 160.0
         },
         "ResourceObject": {
-          "ObjectName": "Texture2D'T_UI_Popup_TitleBar'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Popups/Generic/T_UI_Popup_TitleBar.0"
+          "ObjectName": "Texture2D'T_UI_Popup_FooterBar'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Popups/SeasonEndRankRewardPopup/T_UI_Popup_FooterBar.0"
         }
       },
       "Slot": {
-        "ObjectName": "GridSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.GridPanel_271.GridSlot_16'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.19"
+        "ObjectName": "GridSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Content.GridSlot_16'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.17"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 1.5,
+          "Y": 1.0
+        }
       }
     }
   },
   {
     "Type": "DBDImage",
-    "Name": "TitleBG",
+    "Name": "SmokeBG",
     "Outer": "WidgetTree",
     "Class": "UScriptClass'DBDImage'",
     "Properties": {
       "Brush": {
         "ImageSize": {
-          "X": 2400.0,
-          "Y": 150.0
-        },
-        "TintColor": {
-          "SpecifiedColor": {
-            "R": 0.0,
-            "G": 0.0,
-            "B": 0.0,
-            "A": 1.0,
-            "Hex": "FF000000"
-          }
+          "X": 2048.0,
+          "Y": 1024.0
         },
         "ResourceObject": {
-          "ObjectName": "Texture2D'T_UI_Popup_TitleBar'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Popups/Generic/T_UI_Popup_TitleBar.0"
+          "ObjectName": "Texture2D'T_UI_PopupBkgPaint'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Popups/SeasonEndRankRewardPopup/T_UI_PopupBkgPaint.0"
         },
         "DrawAs": "ESlateBrushDrawType::Box"
       },
       "Slot": {
-        "ObjectName": "GridSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.GridPanel_271.GridSlot_2'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.20"
-      }
+        "ObjectName": "GridSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Content.GridSlot_6'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.21"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 1.15,
+          "Y": 1.3
+        }
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
     }
   },
   {
@@ -302,15 +265,20 @@
       "bOverrideDefaultStyle": true,
       "DefaultTextStyleOverride": {
         "Font": {
-          "TypefaceFontName": "Italic"
+          "FontObject": {
+            "ObjectName": "Font'DBDCoreFont'",
+            "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Fonts/DBDCoreFont.0"
+          },
+          "TypefaceFontName": "Italic",
+          "Size": 22
         },
         "ColorAndOpacity": {
           "SpecifiedColor": {
-            "R": 0.307292,
-            "G": 0.257047,
-            "B": 0.071722,
+            "R": 0.412543,
+            "G": 0.270498,
+            "B": 0.132868,
             "A": 1.0,
-            "Hex": "FF978B4C"
+            "Hex": "FFAC8E66"
           }
         },
         "ShadowColorAndOpacity": {
@@ -322,8 +290,8 @@
         }
       },
       "Slot": {
-        "ObjectName": "GridSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.GridPanel_271.GridSlot_5'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.23"
+        "ObjectName": "GridSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Content.GridSlot_5'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.20"
       }
     }
   },
@@ -342,8 +310,11 @@
       "bOverrideDefaultStyle": true,
       "DefaultTextStyleOverride": {
         "Font": {
-          "TypefaceFontName": "Bold",
-          "Size": 32
+          "FontObject": {
+            "ObjectName": "Font'DBDCoreFont'",
+            "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Fonts/DBDCoreFont.0"
+          },
+          "TypefaceFontName": "Black"
         },
         "ColorAndOpacity": {
           "SpecifiedColor": {
@@ -364,10 +335,9 @@
       },
       "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
       "Justification": "ETextJustify::Center",
-      "AutoWrapText": true,
       "Slot": {
         "ObjectName": "VerticalBoxSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.VerticalBox.VerticalBoxSlot_5'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.48"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.44"
       }
     }
   },
@@ -386,7 +356,12 @@
       "bOverrideDefaultStyle": true,
       "DefaultTextStyleOverride": {
         "Font": {
-          "Size": 30
+          "FontObject": {
+            "ObjectName": "Font'DBDCoreFont'",
+            "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Fonts/DBDCoreFont.0"
+          },
+          "TypefaceFontName": "Regular",
+          "Size": 22
         },
         "ColorAndOpacity": {
           "SpecifiedColor": {
@@ -409,7 +384,7 @@
       "Justification": "ETextJustify::Center",
       "Slot": {
         "ObjectName": "VerticalBoxSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.VerticalBox.VerticalBoxSlot_4'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.47"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.43"
       }
     }
   },
@@ -428,16 +403,19 @@
       "bOverrideDefaultStyle": true,
       "DefaultTextStyleOverride": {
         "Font": {
-          "TypefaceFontName": "Condensed",
-          "Size": 32
+          "FontObject": {
+            "ObjectName": "Font'DBDCoreFont'",
+            "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Fonts/DBDCoreFont.0"
+          },
+          "TypefaceFontName": "Regular"
         },
         "ColorAndOpacity": {
           "SpecifiedColor": {
-            "R": 1.0,
-            "G": 1.0,
-            "B": 1.0,
+            "R": 0.445201,
+            "G": 0.445201,
+            "B": 0.445201,
             "A": 1.0,
-            "Hex": "FFFFFFFF"
+            "Hex": "FFB2B2B2"
           }
         },
         "ShadowColorAndOpacity": {
@@ -448,10 +426,10 @@
           "Hex": "000000"
         }
       },
-      "AutoWrapText": true,
+      "WrapTextAt": 1200.0,
       "Slot": {
-        "ObjectName": "GridSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.GridPanel_271.GridSlot_7'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.24"
+        "ObjectName": "GridSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Content.GridSlot_7'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.22"
       }
     }
   },
@@ -470,8 +448,11 @@
       "bOverrideDefaultStyle": true,
       "DefaultTextStyleOverride": {
         "Font": {
-          "TypefaceFontName": "Bold",
-          "Size": 32
+          "FontObject": {
+            "ObjectName": "Font'DBDCoreFont'",
+            "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Fonts/DBDCoreFont.0"
+          },
+          "TypefaceFontName": "Black"
         },
         "ColorAndOpacity": {
           "SpecifiedColor": {
@@ -492,10 +473,9 @@
       },
       "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
       "Justification": "ETextJustify::Center",
-      "AutoWrapText": true,
       "Slot": {
         "ObjectName": "VerticalBoxSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.VerticalBox_137.VerticalBoxSlot_2'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.50"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.46"
       }
     }
   },
@@ -514,7 +494,12 @@
       "bOverrideDefaultStyle": true,
       "DefaultTextStyleOverride": {
         "Font": {
-          "Size": 30
+          "FontObject": {
+            "ObjectName": "Font'DBDCoreFont'",
+            "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Fonts/DBDCoreFont.0"
+          },
+          "TypefaceFontName": "Regular",
+          "Size": 22
         },
         "ColorAndOpacity": {
           "SpecifiedColor": {
@@ -537,7 +522,7 @@
       "Justification": "ETextJustify::Center",
       "Slot": {
         "ObjectName": "VerticalBoxSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.VerticalBox_137.VerticalBoxSlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.49"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.45"
       }
     }
   },
@@ -560,8 +545,12 @@
       "bOverrideDefaultStyle": true,
       "DefaultTextStyleOverride": {
         "Font": {
-          "TypefaceFontName": "Bold",
-          "Size": 60
+          "FontObject": {
+            "ObjectName": "Font'DBDCoreFont'",
+            "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Assets/Fonts/DBDCoreFont.0"
+          },
+          "TypefaceFontName": "Black",
+          "Size": 48
         },
         "ColorAndOpacity": {
           "SpecifiedColor": {
@@ -582,14 +571,14 @@
       },
       "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
       "Slot": {
-        "ObjectName": "GridSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.GridPanel_271.GridSlot_3'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.21"
+        "ObjectName": "GridSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Content.GridSlot_3'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.18"
       }
     }
   },
   {
     "Type": "GridPanel",
-    "Name": "GridPanel_271",
+    "Name": "Content",
     "Outer": "WidgetTree",
     "Class": "UScriptClass'GridPanel'",
     "Properties": {
@@ -607,224 +596,221 @@
       ],
       "Slots": [
         {
-          "ObjectName": "GridSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.GridPanel_271.GridSlot_10'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.17"
-        },
-        {
-          "ObjectName": "GridSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.GridPanel_271.GridSlot_2'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.20"
-        },
-        {
-          "ObjectName": "GridSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.GridPanel_271.GridSlot_3'",
+          "ObjectName": "GridSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Content.GridSlot_6'",
           "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.21"
         },
         {
-          "ObjectName": "GridSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.GridPanel_271.GridSlot_7'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.24"
+          "ObjectName": "GridSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Content.GridSlot_3'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.18"
         },
         {
-          "ObjectName": "GridSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.GridPanel_271.GridSlot_8'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.25"
-        },
-        {
-          "ObjectName": "GridSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.GridPanel_271.GridSlot_4'",
+          "ObjectName": "GridSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Content.GridSlot_7'",
           "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.22"
         },
         {
-          "ObjectName": "GridSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.GridPanel_271.GridSlot_5'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.23"
+          "ObjectName": "GridSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Content.GridSlot_1'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.15"
         },
         {
-          "ObjectName": "GridSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.GridPanel_271.GridSlot_16'",
+          "ObjectName": "GridSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Content.GridSlot_4'",
           "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.19"
         },
         {
-          "ObjectName": "GridSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.GridPanel_271.GridSlot_15'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.18"
+          "ObjectName": "GridSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Content.GridSlot_5'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.20"
+        },
+        {
+          "ObjectName": "GridSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Content.GridSlot_16'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.17"
+        },
+        {
+          "ObjectName": "GridSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Content.GridSlot_15'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.16"
         }
       ],
       "Slot": {
-        "ObjectName": "OverlaySlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.PopupOverlay.OverlaySlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.37"
+        "ObjectName": "OverlaySlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.PopupOverlay.OverlaySlot_3'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.36"
       }
     }
   },
   {
     "Type": "GridSlot",
-    "Name": "GridSlot_10",
-    "Outer": "GridPanel_271",
+    "Name": "GridSlot_1",
+    "Outer": "Content",
     "Class": "UScriptClass'GridSlot'",
     "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Bottom",
       "RowSpan": 5,
-      "ColumnSpan": 1,
+      "Column": 1,
+      "Nudge": {
+        "X": 1160.0,
+        "Y": 150.0
+      },
       "Parent": {
-        "ObjectName": "GridPanel'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.GridPanel_271'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.16"
+        "ObjectName": "GridPanel'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Content'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.14"
       },
       "Content": {
-        "ObjectName": "Spacer'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.LeftSpacer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.43"
+        "ObjectName": "DBDImage'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.ContentImage'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.3"
       }
     }
   },
   {
     "Type": "GridSlot",
     "Name": "GridSlot_15",
-    "Outer": "GridPanel_271",
+    "Outer": "Content",
     "Class": "UScriptClass'GridSlot'",
     "Properties": {
+      "HorizontalAlignment": "HAlign_Right",
       "VerticalAlignment": "VAlign_Center",
       "Row": 4,
       "Column": 2,
       "Layer": 2,
+      "Nudge": {
+        "X": -350.0,
+        "Y": 20.0
+      },
       "Parent": {
-        "ObjectName": "GridPanel'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.GridPanel_271'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.16"
+        "ObjectName": "GridPanel'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Content'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.14"
       },
       "Content": {
         "ObjectName": "WBP_CoreStandardInputSwitcher_C'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.ProgressionButton'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.56"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.52"
       }
     }
   },
   {
     "Type": "GridSlot",
     "Name": "GridSlot_16",
-    "Outer": "GridPanel_271",
+    "Outer": "Content",
     "Class": "UScriptClass'GridSlot'",
     "Properties": {
       "VerticalAlignment": "VAlign_Center",
       "Row": 4,
-      "ColumnSpan": 5,
+      "ColumnSpan": 3,
       "Layer": 2,
+      "Nudge": {
+        "X": 0.0,
+        "Y": 20.0
+      },
       "Parent": {
-        "ObjectName": "GridPanel'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.GridPanel_271'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.16"
+        "ObjectName": "GridPanel'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Content'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.14"
       },
       "Content": {
         "ObjectName": "DBDImage'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.FooterBG'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.7"
-      }
-    }
-  },
-  {
-    "Type": "GridSlot",
-    "Name": "GridSlot_2",
-    "Outer": "GridPanel_271",
-    "Class": "UScriptClass'GridSlot'",
-    "Properties": {
-      "VerticalAlignment": "VAlign_Center",
-      "ColumnSpan": 5,
-      "Parent": {
-        "ObjectName": "GridPanel'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.GridPanel_271'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.16"
-      },
-      "Content": {
-        "ObjectName": "DBDImage'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.TitleBG'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.8"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.5"
       }
     }
   },
   {
     "Type": "GridSlot",
     "Name": "GridSlot_3",
-    "Outer": "GridPanel_271",
+    "Outer": "Content",
     "Class": "UScriptClass'GridSlot'",
     "Properties": {
       "HorizontalAlignment": "HAlign_Left",
       "VerticalAlignment": "VAlign_Center",
-      "Column": 1,
+      "ColumnSpan": 2,
       "Layer": 1,
       "Parent": {
-        "ObjectName": "GridPanel'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.GridPanel_271'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.16"
+        "ObjectName": "GridPanel'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Content'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.14"
       },
       "Content": {
         "ObjectName": "DBDRichTextBlock'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.TitleText'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.15"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.13"
       }
     }
   },
   {
     "Type": "GridSlot",
     "Name": "GridSlot_4",
-    "Outer": "GridPanel_271",
+    "Outer": "Content",
     "Class": "UScriptClass'GridSlot'",
     "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
       "Row": 2,
-      "Column": 1,
+      "Layer": 2,
       "Parent": {
-        "ObjectName": "GridPanel'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.GridPanel_271'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.16"
+        "ObjectName": "GridPanel'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Content'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.14"
       },
       "Content": {
-        "ObjectName": "SizeBox'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.SizeBox_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.41"
+        "ObjectName": "Overlay'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.SeasonGrades'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.30"
       }
     }
   },
   {
     "Type": "GridSlot",
     "Name": "GridSlot_5",
-    "Outer": "GridPanel_271",
+    "Outer": "Content",
     "Class": "UScriptClass'GridSlot'",
     "Properties": {
+      "Padding": {
+        "Bottom": 20.0
+      },
       "HorizontalAlignment": "HAlign_Left",
-      "VerticalAlignment": "VAlign_Bottom",
+      "VerticalAlignment": "VAlign_Center",
       "Row": 3,
-      "Column": 1,
+      "ColumnSpan": 2,
       "Layer": 1,
       "Parent": {
-        "ObjectName": "GridPanel'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.GridPanel_271'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.16"
+        "ObjectName": "GridPanel'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Content'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.14"
       },
       "Content": {
         "ObjectName": "DBDRichTextBlock'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.DisclaimerMessageRTB'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.9"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.7"
+      }
+    }
+  },
+  {
+    "Type": "GridSlot",
+    "Name": "GridSlot_6",
+    "Outer": "Content",
+    "Class": "UScriptClass'GridSlot'",
+    "Properties": {
+      "Padding": {
+        "Left": -400.0,
+        "Top": 50.0,
+        "Right": -500.0,
+        "Bottom": -400.0
+      },
+      "RowSpan": 4,
+      "ColumnSpan": 3,
+      "Parent": {
+        "ObjectName": "GridPanel'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Content'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.14"
+      },
+      "Content": {
+        "ObjectName": "DBDImage'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.SmokeBG'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.6"
       }
     }
   },
   {
     "Type": "GridSlot",
     "Name": "GridSlot_7",
-    "Outer": "GridPanel_271",
+    "Outer": "Content",
     "Class": "UScriptClass'GridSlot'",
     "Properties": {
-      "VerticalAlignment": "VAlign_Top",
+      "VerticalAlignment": "VAlign_Center",
       "Row": 1,
-      "Column": 1,
+      "ColumnSpan": 2,
       "Parent": {
-        "ObjectName": "GridPanel'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.GridPanel_271'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.16"
+        "ObjectName": "GridPanel'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Content'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.14"
       },
       "Content": {
         "ObjectName": "DBDRichTextBlock'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.MessageText'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.12"
-      }
-    }
-  },
-  {
-    "Type": "GridSlot",
-    "Name": "GridSlot_8",
-    "Outer": "GridPanel_271",
-    "Class": "UScriptClass'GridSlot'",
-    "Properties": {
-      "HorizontalAlignment": "HAlign_Right",
-      "VerticalAlignment": "VAlign_Bottom",
-      "RowSpan": 5,
-      "Column": 2,
-      "Layer": 1,
-      "Nudge": {
-        "X": 300.0,
-        "Y": 130.0
-      },
-      "Parent": {
-        "ObjectName": "GridPanel'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.GridPanel_271'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.16"
-      },
-      "Content": {
-        "ObjectName": "DBDImage'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.ContentImage'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.5"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.10"
       }
     }
   },
@@ -837,20 +823,20 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.27"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.24"
         },
         {
-          "ObjectName": "HorizontalBoxSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_2'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.29"
+          "ObjectName": "HorizontalBoxSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_4'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.26"
         },
         {
           "ObjectName": "HorizontalBoxSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_1'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.28"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.25"
         }
       ],
       "Slot": {
-        "ObjectName": "SizeBoxSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.SizeBox_0.SizeBoxSlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.42"
+        "ObjectName": "OverlaySlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.SeasonGrades.OverlaySlot_0'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.37"
       }
     }
   },
@@ -860,13 +846,14 @@
     "Outer": "HorizontalBox",
     "Class": "UScriptClass'HorizontalBoxSlot'",
     "Properties": {
+      "VerticalAlignment": "VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.HorizontalBox'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.26"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.23"
       },
       "Content": {
         "ObjectName": "VerticalBox'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.VerticalBox_137'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.45"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.41"
       }
     }
   },
@@ -876,36 +863,34 @@
     "Outer": "HorizontalBox",
     "Class": "UScriptClass'HorizontalBoxSlot'",
     "Properties": {
+      "VerticalAlignment": "VAlign_Center",
       "Parent": {
         "ObjectName": "HorizontalBox'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.HorizontalBox'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.26"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.23"
       },
       "Content": {
         "ObjectName": "VerticalBox'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.VerticalBox'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.44"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.40"
       }
     }
   },
   {
     "Type": "HorizontalBoxSlot",
-    "Name": "HorizontalBoxSlot_2",
+    "Name": "HorizontalBoxSlot_4",
     "Outer": "HorizontalBox",
     "Class": "UScriptClass'HorizontalBoxSlot'",
     "Properties": {
       "Padding": {
-        "Left": 50.0,
-        "Right": 50.0
-      },
-      "Size": {
-        "SizeRule": "ESlateSizeRule::Fill"
+        "Left": 40.0,
+        "Right": 40.0
       },
       "Parent": {
         "ObjectName": "HorizontalBox'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.HorizontalBox'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.26"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.23"
       },
       "Content": {
         "ObjectName": "DBDImage'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Divider'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.6"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.4"
       }
     }
   },
@@ -918,16 +903,16 @@
       "Slots": [
         {
           "ObjectName": "OverlaySlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Overlay_0.OverlaySlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.33"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.31"
         },
         {
           "ObjectName": "OverlaySlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Overlay_0.OverlaySlot_1'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.34"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.32"
         }
       ],
       "Slot": {
         "ObjectName": "VerticalBoxSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.VerticalBox_137.VerticalBoxSlot_3'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.51"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.47"
       }
     }
   },
@@ -940,16 +925,16 @@
       "Slots": [
         {
           "ObjectName": "OverlaySlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Overlay_1.OverlaySlot_3'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.36"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.34"
         },
         {
           "ObjectName": "OverlaySlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Overlay_1.OverlaySlot_1'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.35"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.33"
         }
       ],
       "Slot": {
         "ObjectName": "VerticalBoxSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.VerticalBox.VerticalBoxSlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.46"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.42"
       }
     }
   },
@@ -962,16 +947,34 @@
       "Slots": [
         {
           "ObjectName": "OverlaySlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.PopupOverlay.OverlaySlot_14'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.38"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.35"
         },
         {
-          "ObjectName": "OverlaySlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.PopupOverlay.OverlaySlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.37"
+          "ObjectName": "OverlaySlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.PopupOverlay.OverlaySlot_3'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.36"
         }
       ],
       "Slot": {
         "ObjectName": "ScaleBoxSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.ScaleContainer.ScaleBoxSlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.40"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.39"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "SeasonGrades",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Overlay'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.SeasonGrades.OverlaySlot_0'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.37"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "GridSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Content.GridSlot_4'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.19"
       }
     }
   },
@@ -987,11 +990,11 @@
       "HorizontalAlignment": "HAlign_Center",
       "Parent": {
         "ObjectName": "Overlay'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Overlay_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.30"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.27"
       },
       "Content": {
         "ObjectName": "WBP_CorePlayerRank_C'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.SurvivorRank'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.55"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.51"
       }
     }
   },
@@ -1009,11 +1012,11 @@
       "VerticalAlignment": "VAlign_Fill",
       "Parent": {
         "ObjectName": "Overlay'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Overlay_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.30"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.27"
       },
       "Content": {
         "ObjectName": "WBP_CoreCurrencyProgressionReward_C'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.SurvivorReward'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.53"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.49"
       }
     }
   },
@@ -1031,11 +1034,11 @@
       "VerticalAlignment": "VAlign_Fill",
       "Parent": {
         "ObjectName": "Overlay'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Overlay_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.31"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.28"
       },
       "Content": {
         "ObjectName": "WBP_CoreCurrencyProgressionReward_C'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.KillerReward'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.52"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.48"
       }
     }
   },
@@ -1051,29 +1054,11 @@
       "HorizontalAlignment": "HAlign_Center",
       "Parent": {
         "ObjectName": "Overlay'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Overlay_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.31"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.28"
       },
       "Content": {
         "ObjectName": "WBP_CorePlayerRank_C'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.KillerRank'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.54"
-      }
-    }
-  },
-  {
-    "Type": "OverlaySlot",
-    "Name": "OverlaySlot_0",
-    "Outer": "PopupOverlay",
-    "Class": "UScriptClass'OverlaySlot'",
-    "Properties": {
-      "HorizontalAlignment": "HAlign_Fill",
-      "VerticalAlignment": "VAlign_Fill",
-      "Parent": {
-        "ObjectName": "Overlay'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.PopupOverlay'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.32"
-      },
-      "Content": {
-        "ObjectName": "GridPanel'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.GridPanel_271'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.16"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.50"
       }
     }
   },
@@ -1083,15 +1068,54 @@
     "Outer": "PopupOverlay",
     "Class": "UScriptClass'OverlaySlot'",
     "Properties": {
+      "Padding": {
+        "Top": -130.0,
+        "Bottom": -130.0
+      },
       "HorizontalAlignment": "HAlign_Fill",
       "VerticalAlignment": "VAlign_Fill",
       "Parent": {
         "ObjectName": "Overlay'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.PopupOverlay'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.32"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.29"
       },
       "Content": {
         "ObjectName": "DBDImage'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.BG'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.4"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.2"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_3",
+    "Outer": "PopupOverlay",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.PopupOverlay'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.29"
+      },
+      "Content": {
+        "ObjectName": "GridPanel'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Content'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.14"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Outer": "SeasonGrades",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.SeasonGrades'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.30"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.HorizontalBox'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.23"
       }
     }
   },
@@ -1101,16 +1125,13 @@
     "Outer": "WidgetTree",
     "Class": "UScriptClass'ScaleBox'",
     "Properties": {
+      "Stretch": "EStretch::UserSpecified",
       "Slots": [
         {
           "ObjectName": "ScaleBoxSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.ScaleContainer.ScaleBoxSlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.40"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.39"
         }
-      ],
-      "Slot": {
-        "ObjectName": "CanvasPanelSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.3"
-      }
+      ]
     }
   },
   {
@@ -1122,66 +1143,11 @@
       "HorizontalAlignment": "HAlign_Fill",
       "Parent": {
         "ObjectName": "ScaleBox'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.ScaleContainer'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.39"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.38"
       },
       "Content": {
         "ObjectName": "Overlay'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.PopupOverlay'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.32"
-      }
-    }
-  },
-  {
-    "Type": "SizeBox",
-    "Name": "SizeBox_0",
-    "Outer": "WidgetTree",
-    "Class": "UScriptClass'SizeBox'",
-    "Properties": {
-      "MinDesiredWidth": 300.0,
-      "MinDesiredHeight": 500.0,
-      "MaxDesiredWidth": 300.0,
-      "MaxDesiredHeight": 500.0,
-      "bOverride_MinDesiredWidth": true,
-      "bOverride_MinDesiredHeight": true,
-      "bOverride_MaxDesiredWidth": true,
-      "bOverride_MaxDesiredHeight": true,
-      "Slots": [
-        {
-          "ObjectName": "SizeBoxSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.SizeBox_0.SizeBoxSlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.42"
-        }
-      ],
-      "Slot": {
-        "ObjectName": "GridSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.GridPanel_271.GridSlot_4'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.22"
-      }
-    }
-  },
-  {
-    "Type": "SizeBoxSlot",
-    "Name": "SizeBoxSlot_0",
-    "Outer": "SizeBox_0",
-    "Class": "UScriptClass'SizeBoxSlot'",
-    "Properties": {
-      "HorizontalAlignment": "HAlign_Center",
-      "Parent": {
-        "ObjectName": "SizeBox'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.SizeBox_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.41"
-      },
-      "Content": {
-        "ObjectName": "HorizontalBox'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.HorizontalBox'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.26"
-      }
-    }
-  },
-  {
-    "Type": "Spacer",
-    "Name": "LeftSpacer",
-    "Outer": "WidgetTree",
-    "Class": "UScriptClass'Spacer'",
-    "Properties": {
-      "Slot": {
-        "ObjectName": "GridSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.GridPanel_271.GridSlot_10'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.17"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.29"
       }
     }
   },
@@ -1194,20 +1160,20 @@
       "Slots": [
         {
           "ObjectName": "VerticalBoxSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.VerticalBox.VerticalBoxSlot_4'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.47"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.43"
         },
         {
           "ObjectName": "VerticalBoxSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.VerticalBox.VerticalBoxSlot_5'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.48"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.44"
         },
         {
           "ObjectName": "VerticalBoxSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.VerticalBox.VerticalBoxSlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.46"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.42"
         }
       ],
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.28"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.25"
       }
     }
   },
@@ -1220,20 +1186,20 @@
       "Slots": [
         {
           "ObjectName": "VerticalBoxSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.VerticalBox_137.VerticalBoxSlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.49"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.45"
         },
         {
           "ObjectName": "VerticalBoxSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.VerticalBox_137.VerticalBoxSlot_2'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.50"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.46"
         },
         {
           "ObjectName": "VerticalBoxSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.VerticalBox_137.VerticalBoxSlot_3'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.51"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.47"
         }
       ],
       "Slot": {
         "ObjectName": "HorizontalBoxSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.HorizontalBox.HorizontalBoxSlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.27"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.24"
       }
     }
   },
@@ -1250,11 +1216,11 @@
       "VerticalAlignment": "VAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.VerticalBox'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.44"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.40"
       },
       "Content": {
         "ObjectName": "Overlay'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Overlay_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.31"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.28"
       }
     }
   },
@@ -1264,14 +1230,17 @@
     "Outer": "VerticalBox",
     "Class": "UScriptClass'VerticalBoxSlot'",
     "Properties": {
+      "Padding": {
+        "Bottom": 5.0
+      },
       "HorizontalAlignment": "HAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.VerticalBox'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.44"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.40"
       },
       "Content": {
         "ObjectName": "DBDRichTextBlock'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.KillerSeasonHighRTB'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.11"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.9"
       }
     }
   },
@@ -1281,14 +1250,17 @@
     "Outer": "VerticalBox",
     "Class": "UScriptClass'VerticalBoxSlot'",
     "Properties": {
+      "Padding": {
+        "Bottom": 50.0
+      },
       "HorizontalAlignment": "HAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.VerticalBox'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.44"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.40"
       },
       "Content": {
         "ObjectName": "DBDRichTextBlock'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.KillerRankRTB'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.10"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.8"
       }
     }
   },
@@ -1298,14 +1270,18 @@
     "Outer": "VerticalBox_137",
     "Class": "UScriptClass'VerticalBoxSlot'",
     "Properties": {
+      "Padding": {
+        "Bottom": 5.0
+      },
       "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.VerticalBox_137'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.45"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.41"
       },
       "Content": {
         "ObjectName": "DBDRichTextBlock'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.SurvivorSeasonHighRTB'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.14"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.12"
       }
     }
   },
@@ -1315,14 +1291,17 @@
     "Outer": "VerticalBox_137",
     "Class": "UScriptClass'VerticalBoxSlot'",
     "Properties": {
+      "Padding": {
+        "Bottom": 50.0
+      },
       "HorizontalAlignment": "HAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.VerticalBox_137'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.45"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.41"
       },
       "Content": {
         "ObjectName": "DBDRichTextBlock'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.SurvivorRankRTB'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.13"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.11"
       }
     }
   },
@@ -1338,11 +1317,11 @@
       "VerticalAlignment": "VAlign_Center",
       "Parent": {
         "ObjectName": "VerticalBox'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.VerticalBox_137'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.45"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.41"
       },
       "Content": {
         "ObjectName": "Overlay'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Overlay_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.30"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.27"
       }
     }
   },
@@ -1350,12 +1329,15 @@
     "Type": "WBP_CoreCurrencyProgressionReward_C",
     "Name": "KillerReward",
     "Outer": "WidgetTree",
-    "Template": "Default__WBP_CoreCurrencyProgressionReward_C",
     "Class": "WidgetBlueprintGeneratedClass'DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCurrencyProgressionReward.WBP_CoreCurrencyProgressionReward_C'",
+    "Template": {
+      "ObjectName": "WBP_CoreCurrencyProgressionReward_C'Default__WBP_CoreCurrencyProgressionReward_C'",
+      "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCurrencyProgressionReward.7"
+    },
     "Properties": {
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Overlay_1.OverlaySlot_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.35"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.33"
       }
     }
   },
@@ -1363,12 +1345,15 @@
     "Type": "WBP_CoreCurrencyProgressionReward_C",
     "Name": "SurvivorReward",
     "Outer": "WidgetTree",
-    "Template": "Default__WBP_CoreCurrencyProgressionReward_C",
     "Class": "WidgetBlueprintGeneratedClass'DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCurrencyProgressionReward.WBP_CoreCurrencyProgressionReward_C'",
+    "Template": {
+      "ObjectName": "WBP_CoreCurrencyProgressionReward_C'Default__WBP_CoreCurrencyProgressionReward_C'",
+      "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Rewards/WBP_CoreCurrencyProgressionReward.7"
+    },
     "Properties": {
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Overlay_0.OverlaySlot_1'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.34"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.32"
       }
     }
   },
@@ -1376,44 +1361,22 @@
     "Type": "WBP_CorePlayerRank_C",
     "Name": "KillerRank",
     "Outer": "WidgetTree",
-    "Template": "Default__WBP_CorePlayerRank_C",
     "Class": "WidgetBlueprintGeneratedClass'DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/PlayerProfile/WBP_CorePlayerRank.WBP_CorePlayerRank_C'",
+    "Template": {
+      "ObjectName": "WBP_CorePlayerRank_C'Default__WBP_CorePlayerRank_C'",
+      "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/PlayerProfile/WBP_CorePlayerRank.8"
+    },
     "Properties": {
-      "_rankImages": [
-        {
-          "1": {
-            "ObjectName": "Texture2D'SeasonEndRankRewardsPopup_I23'",
-            "ObjectPath": "DeadByDaylight/Content/UI/SeasonEndRankRewardsPopup/SeasonEndRankRewardsPopup_I23.0"
-          }
-        },
-        {
-          "2": {
-            "ObjectName": "Texture2D'SeasonEndRankRewardsPopup_I21'",
-            "ObjectPath": "DeadByDaylight/Content/UI/SeasonEndRankRewardsPopup/SeasonEndRankRewardsPopup_I21.0"
-          }
-        },
-        {
-          "3": {
-            "ObjectName": "Texture2D'SeasonEndRankRewardsPopup_I1D'",
-            "ObjectPath": "DeadByDaylight/Content/UI/SeasonEndRankRewardsPopup/SeasonEndRankRewardsPopup_I1D.0"
-          }
-        },
-        {
-          "4": {
-            "ObjectName": "Texture2D'SeasonEndRankRewardsPopup_I1B'",
-            "ObjectPath": "DeadByDaylight/Content/UI/SeasonEndRankRewardsPopup/SeasonEndRankRewardsPopup_I1B.0"
-          }
-        },
-        {
-          "5": {
-            "ObjectName": "Texture2D'SeasonEndRankRewardsPopup_ID'",
-            "ObjectPath": "DeadByDaylight/Content/UI/SeasonEndRankRewardsPopup/SeasonEndRankRewardsPopup_ID.0"
-          }
-        }
-      ],
+      "_showTooltipOnHover": false,
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Overlay_1.OverlaySlot_3'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.36"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.34"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 1.8,
+          "Y": 1.8
+        }
       }
     }
   },
@@ -1421,44 +1384,22 @@
     "Type": "WBP_CorePlayerRank_C",
     "Name": "SurvivorRank",
     "Outer": "WidgetTree",
-    "Template": "Default__WBP_CorePlayerRank_C",
     "Class": "WidgetBlueprintGeneratedClass'DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/PlayerProfile/WBP_CorePlayerRank.WBP_CorePlayerRank_C'",
+    "Template": {
+      "ObjectName": "WBP_CorePlayerRank_C'Default__WBP_CorePlayerRank_C'",
+      "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/PlayerProfile/WBP_CorePlayerRank.8"
+    },
     "Properties": {
-      "_rankImages": [
-        {
-          "1": {
-            "ObjectName": "Texture2D'SeasonEndRankRewardsPopup_I23'",
-            "ObjectPath": "DeadByDaylight/Content/UI/SeasonEndRankRewardsPopup/SeasonEndRankRewardsPopup_I23.0"
-          }
-        },
-        {
-          "2": {
-            "ObjectName": "Texture2D'SeasonEndRankRewardsPopup_I21'",
-            "ObjectPath": "DeadByDaylight/Content/UI/SeasonEndRankRewardsPopup/SeasonEndRankRewardsPopup_I21.0"
-          }
-        },
-        {
-          "3": {
-            "ObjectName": "Texture2D'SeasonEndRankRewardsPopup_I1D'",
-            "ObjectPath": "DeadByDaylight/Content/UI/SeasonEndRankRewardsPopup/SeasonEndRankRewardsPopup_I1D.0"
-          }
-        },
-        {
-          "4": {
-            "ObjectName": "Texture2D'SeasonEndRankRewardsPopup_I1B'",
-            "ObjectPath": "DeadByDaylight/Content/UI/SeasonEndRankRewardsPopup/SeasonEndRankRewardsPopup_I1B.0"
-          }
-        },
-        {
-          "5": {
-            "ObjectName": "Texture2D'SeasonEndRankRewardsPopup_ID'",
-            "ObjectPath": "DeadByDaylight/Content/UI/SeasonEndRankRewardsPopup/SeasonEndRankRewardsPopup_ID.0"
-          }
-        }
-      ],
+      "_showTooltipOnHover": false,
       "Slot": {
         "ObjectName": "OverlaySlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Overlay_0.OverlaySlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.33"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.31"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 1.8,
+          "Y": 1.8
+        }
       }
     }
   },
@@ -1466,12 +1407,15 @@
     "Type": "WBP_CoreStandardInputSwitcher_C",
     "Name": "ProgressionButton",
     "Outer": "WidgetTree",
-    "Template": "Default__WBP_CoreStandardInputSwitcher_C",
     "Class": "WidgetBlueprintGeneratedClass'DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/InputSwitchers/WBP_CoreStandardInputSwitcher.WBP_CoreStandardInputSwitcher_C'",
+    "Template": {
+      "ObjectName": "WBP_CoreStandardInputSwitcher_C'Default__WBP_CoreStandardInputSwitcher_C'",
+      "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/Inputs/InputSwitchers/WBP_CoreStandardInputSwitcher.1"
+    },
     "Properties": {
       "Slot": {
-        "ObjectName": "GridSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.GridPanel_271.GridSlot_15'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.18"
+        "ObjectName": "GridSlot'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.Content.GridSlot_15'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.16"
       }
     }
   },
@@ -1482,8 +1426,8 @@
     "Class": "UScriptClass'WidgetTree'",
     "Properties": {
       "RootWidget": {
-        "ObjectName": "CanvasPanel'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.CanvasPanel_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.2"
+        "ObjectName": "ScaleBox'WBP_SeasonEndRankRewardsPopup_C:WidgetTree.ScaleContainer'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_SeasonEndRankRewardsPopup.38"
       }
     }
   }
