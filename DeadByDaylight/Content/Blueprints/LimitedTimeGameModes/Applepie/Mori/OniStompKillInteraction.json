@@ -1,0 +1,298 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_OniStompKillInteraction",
+    "Outer": "OniStompKillInteraction_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GetChargeCompleted_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DBDPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_hasInteractionStarted",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "K2Node_DynamicCast_AsBPI_Effect_General",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "InterfaceClass": {
+          "ObjectName": "BlueprintGeneratedClass'BPI_Effect_General_C'",
+          "ObjectPath": "DeadByDaylight/Content/Effects/Blueprints/Interface/General/BPI_Effect_General.89"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInteractionFinished",
+    "Outer": "OniStompKillInteraction_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'InteractionDefinition:OnInteractionFinished'",
+      "ObjectPath": "/Script/DeadByDaylight"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'DBDPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "hasInteractionStarted",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "IsKillerAllowedToKillSurvivor",
+    "Outer": "OniStompKillInteraction_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'KillInteractionDefinition:IsKillerAllowedToKillSurvivor'",
+      "ObjectPath": "/Script/DeadByDaylight"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "killer",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'SlasherPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "survivor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'CamperPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetExitAnimationMontage",
+    "Outer": "OniStompKillInteraction_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'KillInteractionDefinition:GetExitAnimationMontage'",
+      "ObjectPath": "/Script/DeadByDaylight"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimationMontageDescriptor'",
+          "ObjectPath": "/Script/AnimationUtilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_AnimationMontageDescriptor",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimationMontageDescriptor'",
+          "ObjectPath": "/Script/AnimationUtilities"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "OniStompKillInteraction_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'Kill_C'",
+      "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/Kill.4"
+    },
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'OniStompKillInteraction_C:ExecuteUbergraph_OniStompKillInteraction'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/LimitedTimeGameModes/Applepie/Mori/OniStompKillInteraction.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'Kill_C'",
+      "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/Kill.4"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'OniStompKillInteraction_C:GetExitAnimationMontage'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/LimitedTimeGameModes/Applepie/Mori/OniStompKillInteraction.3"
+      },
+      {
+        "ObjectName": "Function'OniStompKillInteraction_C:IsKillerAllowedToKillSurvivor'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/LimitedTimeGameModes/Applepie/Mori/OniStompKillInteraction.2"
+      },
+      {
+        "ObjectName": "Function'OniStompKillInteraction_C:OnInteractionFinished'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/LimitedTimeGameModes/Applepie/Mori/OniStompKillInteraction.1"
+      },
+      {
+        "ObjectName": "Function'OniStompKillInteraction_C:ExecuteUbergraph_OniStompKillInteraction'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/LimitedTimeGameModes/Applepie/Mori/OniStompKillInteraction.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "SlasherCloseHatch",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_OniStompKillInteraction": {
+        "ObjectName": "Function'OniStompKillInteraction_C:ExecuteUbergraph_OniStompKillInteraction'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/LimitedTimeGameModes/Applepie/Mori/OniStompKillInteraction.0"
+      },
+      "OnInteractionFinished": {
+        "ObjectName": "Function'OniStompKillInteraction_C:OnInteractionFinished'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/LimitedTimeGameModes/Applepie/Mori/OniStompKillInteraction.1"
+      },
+      "IsKillerAllowedToKillSurvivor": {
+        "ObjectName": "Function'OniStompKillInteraction_C:IsKillerAllowedToKillSurvivor'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/LimitedTimeGameModes/Applepie/Mori/OniStompKillInteraction.2"
+      },
+      "GetExitAnimationMontage": {
+        "ObjectName": "Function'OniStompKillInteraction_C:GetExitAnimationMontage'",
+        "ObjectPath": "DeadByDaylight/Content/Blueprints/LimitedTimeGameModes/Applepie/Mori/OniStompKillInteraction.3"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "OniStompKillInteraction_C'Default__OniStompKillInteraction_C'",
+      "ObjectPath": "DeadByDaylight/Content/Blueprints/LimitedTimeGameModes/Applepie/Mori/OniStompKillInteraction.5"
+    }
+  },
+  {
+    "Type": "OniStompKillInteraction_C",
+    "Name": "Default__OniStompKillInteraction_C",
+    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/LimitedTimeGameModes/Applepie/Mori/OniStompKillInteraction.OniStompKillInteraction_C'",
+    "Template": {
+      "ObjectName": "Kill_C'Default__Kill_C'",
+      "ObjectPath": "DeadByDaylight/Content/Characters/Slashers/Blueprints/Interactions/Kill.5"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "SlasherCloseHatch": "StompMori",
+      "_isKillShownInThirdPerson": false,
+      "StopInteractionOnInputRelease": false,
+      "UpdateMontage": {
+        "MontageID": "StompMori"
+      },
+      "_isInterruptibleBySacrifice": false
+    }
+  }
+]
