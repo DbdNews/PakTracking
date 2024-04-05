@@ -54,37 +54,352 @@
     "Type": "DBDImage",
     "Name": "BG",
     "Outer": "WidgetTree",
-    "Class": "UScriptClass'DBDImage'"
+    "Class": "UScriptClass'DBDImage'",
+    "Properties": {
+      "Brush": {
+        "DrawAs": "ESlateBrushDrawType::Box",
+        "ImageSize": {
+          "X": 512.0,
+          "Y": 512.0
+        },
+        "Margin": {
+          "Top": 0.5,
+          "Bottom": 0.5
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 1.0,
+            "Hex": "000000"
+          }
+        },
+        "ResourceObject": {
+          "ObjectName": "MaterialInstanceConstant'MI_UI_PopupBG_Generic'",
+          "ObjectPath": "/DBDUICore/Assets/Popups/Materials/MI_UI_PopupBG_Generic.0"
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 0.95,
+        "Hex": "F3000000"
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WBP_CoreStoreUnlockConfirmationPopup_C:WidgetTree.Overlay_1.OverlaySlot_0'",
+        "ObjectPath": "/DBDUICore/Popups/WBP_CoreStoreUnlockConfirmationPopup.49"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
   },
   {
     "Type": "DBDImage",
     "Name": "PriorityHeader",
     "Outer": "WidgetTree",
-    "Class": "UScriptClass'DBDImage'"
+    "Class": "UScriptClass'DBDImage'",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 4096.0,
+          "Y": 196.0
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Right": 0.5
+        },
+        "ResourceObject": {
+          "ObjectName": "MaterialInstanceConstant'MI_UI_PopupHeader_Blue'",
+          "ObjectPath": "/DBDUICore/Assets/Popups/Generic/MI_UI_PopupHeader_Blue.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WBP_CoreStoreUnlockConfirmationPopup_C:WidgetTree.HeaderOverlay.OverlaySlot_0'",
+        "ObjectPath": "/DBDUICore/Popups/WBP_CoreStoreUnlockConfirmationPopup.47"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
   },
   {
     "Type": "DBDRichTextBlock",
     "Name": "MessageText",
     "Outer": "WidgetTree",
-    "Class": "UScriptClass'DBDRichTextBlock'"
+    "Class": "UScriptClass'DBDRichTextBlock'",
+    "Properties": {
+      "_hasUndocking": true,
+      "Text": {
+        "Namespace": "",
+        "Key": "91D0889E44242A950324D880E7E35A08",
+        "SourceString": "You will need to unlock {Character's name} in order to use this {Item's name}. You are free to unlock this item for {currency icon}{currency amount} and it will be available once you unlock {Character's name}.",
+        "LocalizedString": "You will need to unlock {Character's name} in order to use this {Item's name}. You are free to unlock this item for {currency icon}{currency amount} and it will be available once you unlock {Character's name}."
+      },
+      "TextStyleSet": {
+        "ObjectName": "DataTable'CoreRichTextStyle'",
+        "ObjectPath": "/DBDUICore/Data/RichTexts/CoreRichTextStyle.0"
+      },
+      "DecoratorClasses": [
+        {
+          "ObjectName": "Class'RichTextNestedTagsDecorator'",
+          "ObjectPath": "/Script/DBDUIViewsCore"
+        },
+        {
+          "ObjectName": "Class'RichTextHTMLDecorator'",
+          "ObjectPath": "/Script/DBDUIViewsCore"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'ScalableIconsDecorator_C'",
+          "ObjectPath": "/DBDUICore/Common/ScalableIconsDecorator.0"
+        }
+      ],
+      "bOverrideDefaultStyle": true,
+      "DefaultTextStyleOverride": {
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Font'DBDCoreFont'",
+            "ObjectPath": "/DBDUICore/Assets/Fonts/DBDCoreFont.0"
+          },
+          "TypefaceFontName": "Regular",
+          "Size": 36
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 0.7,
+            "Hex": "B3FFFFFF"
+          }
+        },
+        "ShadowOffset": {
+          "X": 1.0,
+          "Y": 1.0
+        },
+        "ShadowColorAndOpacity": {
+          "R": 0.0,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 0.0,
+          "Hex": "000000"
+        },
+        "SelectedBackgroundColor": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 1.0,
+            "Hex": "000000"
+          },
+          "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+        }
+      },
+      "AutoWrapText": true,
+      "Slot": {
+        "ObjectName": "ScrollBoxSlot'WBP_CoreStoreUnlockConfirmationPopup_C:WidgetTree.MessageScrollBox.ScrollBoxSlot_0'",
+        "ObjectPath": "/DBDUICore/Popups/WBP_CoreStoreUnlockConfirmationPopup.55"
+      }
+    }
   },
   {
     "Type": "DBDRichTextBlock",
     "Name": "TitleText",
     "Outer": "WidgetTree",
-    "Class": "UScriptClass'DBDRichTextBlock'"
+    "Class": "UScriptClass'DBDRichTextBlock'",
+    "Properties": {
+      "_hasUndocking": true,
+      "TextStyleSet": {
+        "ObjectName": "DataTable'CoreRichTextStyle'",
+        "ObjectPath": "/DBDUICore/Data/RichTexts/CoreRichTextStyle.0"
+      },
+      "DecoratorClasses": [
+        {
+          "ObjectName": "Class'RichTextNestedTagsDecorator'",
+          "ObjectPath": "/Script/DBDUIViewsCore"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'ScalableIconsDecorator_C'",
+          "ObjectPath": "/DBDUICore/Common/ScalableIconsDecorator.0"
+        }
+      ],
+      "bOverrideDefaultStyle": true,
+      "DefaultTextStyleOverride": {
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Font'DBDCoreFont'",
+            "ObjectPath": "/DBDUICore/Assets/Fonts/DBDCoreFont.0"
+          },
+          "TypefaceFontName": "Bold",
+          "Size": 60
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "FFFFFF"
+          }
+        },
+        "ShadowColorAndOpacity": {
+          "R": 0.0,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 0.0,
+          "Hex": "000000"
+        }
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "OverlaySlot'WBP_CoreStoreUnlockConfirmationPopup_C:WidgetTree.HeaderOverlay.OverlaySlot_3'",
+        "ObjectPath": "/DBDUICore/Popups/WBP_CoreStoreUnlockConfirmationPopup.48"
+      }
+    }
   },
   {
     "Type": "DBDScrollBox",
     "Name": "MessageScrollBox",
     "Outer": "WidgetTree",
-    "Class": "UScriptClass'DBDScrollBox'"
+    "Class": "UScriptClass'DBDScrollBox'",
+    "Properties": {
+      "_displayPromptText": {
+        "Namespace": "",
+        "Key": "8229C9A24A7D9FA33EEEFE8873CF424F",
+        "SourceString": "SCROLL_DESCRIPTION_TEXT",
+        "LocalizedString": "SCROLL_DESCRIPTION_TEXT"
+      },
+      "_showDisplayPrompt": "EShowScrollDisplayPrompt::ShowOnMouseOver",
+      "WidgetStyle": {
+        "TopShadowBrush": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "BottomShadowBrush": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "LeftShadowBrush": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "RightShadowBrush": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        }
+      },
+      "WidgetBarStyle": {
+        "VerticalBackgroundImage": {
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageSize": {
+            "X": 32.0,
+            "Y": 1024.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'UI_scrollBar_verticalBG'",
+            "ObjectPath": "/DBDUICore/Assets/Common/ScrollBar/UI_scrollBar_verticalBG.0"
+          }
+        },
+        "VerticalTopSlotImage": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "VerticalBottomSlotImage": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "HorizontalBottomSlotImage": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "NormalThumbImage": {
+          "ImageSize": {
+            "X": 32.0,
+            "Y": 64.0
+          },
+          "Margin": {
+            "Left": 0.0,
+            "Top": 0.45,
+            "Right": 0.0,
+            "Bottom": 0.45
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'UI_scrollBar_9Slice'",
+            "ObjectPath": "/DBDUICore/Assets/Common/ScrollBar/UI_scrollBar_9Slice.0"
+          }
+        },
+        "HoveredThumbImage": {
+          "ImageSize": {
+            "X": 32.0,
+            "Y": 64.0
+          },
+          "Margin": {
+            "Left": 0.0,
+            "Top": 0.45,
+            "Right": 0.0,
+            "Bottom": 0.45
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'UI_scrollBar_9Slice'",
+            "ObjectPath": "/DBDUICore/Assets/Common/ScrollBar/UI_scrollBar_9Slice.0"
+          }
+        },
+        "DraggedThumbImage": {
+          "ImageSize": {
+            "X": 32.0,
+            "Y": 64.0
+          },
+          "Margin": {
+            "Left": 0.0,
+            "Top": 0.45,
+            "Right": 0.0,
+            "Bottom": 0.45
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'UI_scrollBar_9Slice'",
+            "ObjectPath": "/DBDUICore/Assets/Common/ScrollBar/UI_scrollBar_9Slice.0"
+          }
+        }
+      },
+      "ScrollbarThickness": {
+        "X": 32.0,
+        "Y": 0.0
+      },
+      "ScrollbarPadding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Slots": [
+        {
+          "ObjectName": "ScrollBoxSlot'WBP_CoreStoreUnlockConfirmationPopup_C:WidgetTree.MessageScrollBox.ScrollBoxSlot_0'",
+          "ObjectPath": "/DBDUICore/Popups/WBP_CoreStoreUnlockConfirmationPopup.55"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'WBP_CoreStoreUnlockConfirmationPopup_C:WidgetTree.ContainerDimensions.SizeBoxSlot_0'",
+        "ObjectPath": "/DBDUICore/Popups/WBP_CoreStoreUnlockConfirmationPopup.57"
+      },
+      "bIsVariable": true
+    }
   },
   {
     "Type": "DBDTextBlock",
     "Name": "UnlockTB",
     "Outer": "WidgetTree",
-    "Class": "UScriptClass'DBDTextBlock'"
+    "Class": "UScriptClass'DBDTextBlock'",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "B375937F45D4A15773E0E18C1CED998D",
+        "SourceString": "UNLOCK",
+        "LocalizedString": "UNLOCK"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'DBDCoreFont'",
+          "ObjectPath": "/DBDUICore/Assets/Fonts/DBDCoreFont.0"
+        },
+        "Size": 32
+      },
+      "Slot": {
+        "ObjectName": "GridSlot'WBP_CoreStoreUnlockConfirmationPopup_C:WidgetTree.GridPanel_0.GridSlot_1'",
+        "ObjectPath": "/DBDUICore/Popups/WBP_CoreStoreUnlockConfirmationPopup.13"
+      }
+    }
   },
   {
     "Type": "Function",
@@ -2988,6 +3303,12 @@
     "Template": {
       "ObjectName": "WBP_CoreCurrencyInputSwitcher_C'Default__WBP_CoreCurrencyInputSwitcher_C'",
       "ObjectPath": "/DBDUICore/Common/Inputs/InputSwitchers/WBP_CoreCurrencyInputSwitcher.7"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "GridSlot'WBP_CoreStoreUnlockConfirmationPopup_C:WidgetTree.GridPanel_0.GridSlot_2'",
+        "ObjectPath": "/DBDUICore/Popups/WBP_CoreStoreUnlockConfirmationPopup.14"
+      }
     }
   },
   {
@@ -2998,6 +3319,12 @@
     "Template": {
       "ObjectName": "WBP_CoreStandardInputSwitcher_C'Default__WBP_CoreStandardInputSwitcher_C'",
       "ObjectPath": "/DBDUICore/Common/Inputs/InputSwitchers/WBP_CoreStandardInputSwitcher.7"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "GridSlot'WBP_CoreStoreUnlockConfirmationPopup_C:WidgetTree.GridPanel_0.GridSlot_0'",
+        "ObjectPath": "/DBDUICore/Popups/WBP_CoreStoreUnlockConfirmationPopup.12"
+      }
     }
   },
   {
@@ -3005,7 +3332,10 @@
     "Name": "Default__WBP_CoreStoreUnlockConfirmationPopup_C",
     "Class": "WidgetBlueprintGeneratedClass'/DBDUICore/Popups/WBP_CoreStoreUnlockConfirmationPopup.WBP_CoreStoreUnlockConfirmationPopup_C'",
     "Properties": {
-      "UberGraphFrame": {}
+      "UberGraphFrame": {},
+      "ScaleType": "EScaleType::Menu",
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
     }
   },
   {

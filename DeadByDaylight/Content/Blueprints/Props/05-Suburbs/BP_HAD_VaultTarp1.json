@@ -3,7 +3,23 @@
     "Type": "ActorSpawner",
     "Name": "ActorSpawner_GEN_VARIABLE",
     "Outer": "BP_HAD_VaultTarp1_C",
-    "Class": "UScriptClass'ActorSpawner'"
+    "Class": "UScriptClass'ActorSpawner'",
+    "Properties": {
+      "Visualization": {
+        "AssetPathName": "/Game/Blueprints/GameplayElements/Interactable/Window/WindowStandard.WindowStandard_C",
+        "SubPathString": ""
+      },
+      "ActivatedSceneElement": [
+        {
+          "SceneElement": {
+            "AssetPathName": "/Game/Blueprints/GameplayElements/Interactable/Window/WindowStandard.WindowStandard_C",
+            "SubPathString": ""
+          },
+          "Weight": 1.0
+        }
+      ],
+      "Mobility": "EComponentMobility::Static"
+    }
   },
   {
     "Type": "BlueprintGeneratedClass",
@@ -85,7 +101,7 @@
     "Outer": "BP_HAD_VaultTarp1_C",
     "Class": "UScriptClass'SceneComponent'",
     "Properties": {
-      "DetailMode": "EDetailMode::DM_Low"
+      "Mobility": "EComponentMobility::Static"
     }
   },
   {
@@ -199,8 +215,113 @@
           "ObjectName": "MaterialInstanceConstant'MI_COM_VaultTarp_01'",
           "ObjectPath": "/Game/Materials/Instances/Common/Props/MI_COM_VaultTarp_01.0"
         }
-      ]
-    },
-    "LODData": null
+      ],
+      "DetailLevelBeforeCastShadows": "EDetailMode::DM_MAX",
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "BlockAll",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel2",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel3",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel4",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel5",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel6",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Interactable",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Audio",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Slasher",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Traps",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "InteractionDetector",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "BlinkBlocker",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Ground",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": -0.21277122,
+        "Y": 1.846009,
+        "Z": 103.58267
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.000114,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.8,
+        "Y": 1.395,
+        "Z": 1.0
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
   }
 ]

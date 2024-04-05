@@ -68,10 +68,10 @@
     "BodySetupGuid": "FF4A9C94477B8264BDAA0182E3AABBE2",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_None",
-        "ElementCount": 4,
-        "SizeOnDisk": 0,
-        "OffsetInFile": "0x1000503C7"
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 136674,
+        "SizeOnDisk": 136674,
+        "OffsetInFile": "0xDA"
       }
     }
   },
@@ -79,28 +79,288 @@
     "Type": "NavCollision",
     "Name": "NavCollision_1",
     "Outer": "SM_MoriStore_Ground_01",
-    "Class": "UScriptClass'NavCollision'"
+    "Class": "UScriptClass'NavCollision'",
+    "CookedFormatData": {
+      "NavCollision_Chaos": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 361,
+        "SizeOnDisk": 361,
+        "OffsetInFile": "0x32"
+      }
+    }
   },
   {
     "Type": "StaticMesh",
     "Name": "SM_MoriStore_Ground_01",
     "Class": "UScriptClass'StaticMesh'",
     "Properties": {
-      "MinLOD": {
+      "MinLod": {
         "bCooked": true,
         "Default": 0,
         "Value": 0
       },
-      "LightMapResolution": 768,
-      "LightMapCoordinateIndex": 327680,
-      "DistanceFieldSelfShadowBias": 1.285697E-39,
-      "BodySetup": null,
-      "LODForCollision": 131072,
-      "bGlobalForceMipLevelsToBeResident": false
+      "ShadowMaxLOD": {
+        "PerDetailModeValue": [
+          {
+            "Key": "Ultra",
+            "Value": 2
+          },
+          {
+            "Key": "High",
+            "Value": 2
+          },
+          {
+            "Key": "Medium",
+            "Value": 2
+          },
+          {
+            "Key": "Low",
+            "Value": 2
+          },
+          {
+            "Key": "Mobile",
+            "Value": 2
+          }
+        ]
+      },
+      "StaticMaterials": [
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'MI_Lobby_GroundMudBattleDryWetRocky_Blend'",
+            "ObjectPath": "/Game/Materials/Instances/Lobby/MI_Lobby_GroundMudBattleDryWetRocky_Blend.0"
+          },
+          "MaterialSlotName": "MI_Lobby_GroundMudBattleDryWetRocky_Blend",
+          "ImportedMaterialSlotName": "MI_Lobby_GroundMudBattleDryWetRocky_Blend",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 511.9315,
+            "LocalUVDensities": 5266.3457,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 0.0
+          }
+        }
+      ],
+      "LightmapUVDensity": 5266.3457,
+      "LightMapResolution": 64,
+      "LightMapCoordinateIndex": 1,
+      "ExtendedBounds": {
+        "Origin": {
+          "X": -0.17944336,
+          "Y": -0.12084961,
+          "Z": 0.63622224
+        },
+        "BoxExtent": {
+          "X": 2500.0325,
+          "Y": 2499.9885,
+          "Z": 1.9599601
+        },
+        "SphereRadius": 3535.5486371617126
+      }
     },
-    "BodySetup": null,
-    "NavCollision": null,
-    "LightingGuid": "00000000-00000000-00000000-00000000",
-    "RenderData": null
+    "BodySetup": {
+      "ObjectName": "BodySetup'SM_MoriStore_Ground_01:BodySetup_0'",
+      "ObjectPath": "/Game/Meshes/Environment/Lobby/SM_MoriStore_Ground_01.0"
+    },
+    "NavCollision": {
+      "ObjectName": "NavCollision'SM_MoriStore_Ground_01:NavCollision_1'",
+      "ObjectPath": "/Game/Meshes/Environment/Lobby/SM_MoriStore_Ground_01.1"
+    },
+    "LightingGuid": "181FC353-44CF3654-61F2AFA4-5C6CAF73",
+    "RenderData": {
+      "LODs": [
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 2825,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 1429,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 1430
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 2,
+            "NumVertices": 1430,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          },
+          "CardRepresentationData": {
+            "Bounds": {
+              "Min": {
+                "X": -2501.212,
+                "Y": -2501.1094,
+                "Z": -2.3237379
+              },
+              "Max": {
+                "X": 2500.853,
+                "Y": 2500.8677,
+                "Z": 3.5961823
+              },
+              "IsValid": 1
+            },
+            "MaxLodLevel": 0,
+            "bMostlyTwoSided": false,
+            "CardBuildData": [
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "Origin": {
+                    "X": -0.17944336,
+                    "Y": -0.12084961,
+                    "Z": 0.63622284
+                  },
+                  "Extent": {
+                    "X": 2501.0325,
+                    "Y": 2500.9885,
+                    "Z": 12.959961
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 5
+              }
+            ]
+          }
+        },
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 1412,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 719,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.48867723,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 720
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 2,
+            "NumVertices": 720,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          }
+        },
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 705,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 365,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.9316515,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 366
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 2,
+            "NumVertices": 366,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          }
+        }
+      ],
+      "NaniteResources": {
+        "RootData": null,
+        "StreamablePages": {
+          "BulkDataFlags": "BULKDATA_None",
+          "ElementCount": 0,
+          "SizeOnDisk": 0,
+          "OffsetInFile": "0x2E609"
+        },
+        "ImposterAtlas": [],
+        "HierarchyNodes": [],
+        "HierarchyRootOffsets": [],
+        "PageStreamingStates": [],
+        "PageDependencies": [],
+        "NumRootPages": 0,
+        "PositionPrecision": 0,
+        "NormalPrecision": 0,
+        "TangentPrecision": 0,
+        "NumInputTriangles": 0,
+        "NumInputVertices": 0,
+        "NumInputMeshes": 0,
+        "NumInputTexCoords": 0,
+        "NumClusters": 0,
+        "ResourceFlags": 0
+      },
+      "Bounds": {
+        "Origin": {
+          "X": -0.17944336,
+          "Y": -0.12084961,
+          "Z": 0.63622224
+        },
+        "BoxExtent": {
+          "X": 2500.0325,
+          "Y": 2499.9885,
+          "Z": 1.9599601
+        },
+        "SphereRadius": 3535.5486
+      },
+      "bLODsShareStaticLighting": true,
+      "ScreenSize": [
+        1.0,
+        0.5,
+        0.2,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
   }
 ]

@@ -298,10 +298,10 @@
     "BodySetupGuid": "1CD7BD234EF20C9E254858AE39C147EA",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_None",
-        "ElementCount": 4,
-        "SizeOnDisk": 2,
-        "OffsetInFile": "0x1998"
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 2200,
+        "SizeOnDisk": 2200,
+        "OffsetInFile": "0x440"
       }
     }
   },
@@ -309,22 +309,197 @@
     "Type": "NavCollision",
     "Name": "NavCollision_2",
     "Outer": "SM_K12_BottlePaper_07",
-    "Class": "UScriptClass'NavCollision'"
+    "Class": "UScriptClass'NavCollision'",
+    "CookedFormatData": {
+      "NavCollision_Chaos": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 697,
+        "SizeOnDisk": 697,
+        "OffsetInFile": "0x32"
+      }
+    }
   },
   {
     "Type": "StaticMesh",
     "Name": "SM_K12_BottlePaper_07",
     "Class": "UScriptClass'StaticMesh'",
     "Properties": {
-      "LightMapCoordinateIndex": 1,
-      "DistanceFieldSelfShadowBias": "NaN",
-      "BodySetup": null,
-      "LODForCollision": 0,
-      "bGlobalForceMipLevelsToBeResident": false
+      "StaticMaterials": [
+        {
+          "MaterialInterface": {
+            "ObjectName": "Material'M_K12_BottlePaper'",
+            "ObjectPath": "/Game/Effects/Materials/M_K12_BottlePaper.0"
+          },
+          "MaterialSlotName": "MI_GKWS01_002",
+          "ImportedMaterialSlotName": "MI_GKWS01_002",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 47.55444,
+            "LocalUVDensities": 43.95127,
+            "LocalUVDensities": 6.2457743,
+            "LocalUVDensities": 0.0
+          }
+        }
+      ],
+      "LightmapUVDensity": 6.2457743,
+      "LightMapResolution": 64,
+      "LightMapCoordinateIndex": 2,
+      "ExtendedBounds": {
+        "Origin": {
+          "X": 0.26445502,
+          "Y": 0.4756699,
+          "Z": 0.48738885
+        },
+        "BoxExtent": {
+          "X": 2.173509,
+          "Y": 1.2194545,
+          "Z": 3.6774542
+        },
+        "SphereRadius": 4.44239516121861
+      }
     },
-    "BodySetup": null,
-    "NavCollision": null,
-    "LightingGuid": "00000000-00000000-00000000-00000000",
-    "RenderData": null
+    "BodySetup": {
+      "ObjectName": "BodySetup'SM_K12_BottlePaper_07:BodySetup_1'",
+      "ObjectPath": "/Game/Characters/Slashers/Guam/Models/Weapons/BottleDestroyed/SM_K12_BottlePaper_07.0"
+    },
+    "NavCollision": {
+      "ObjectName": "NavCollision'SM_K12_BottlePaper_07:NavCollision_2'",
+      "ObjectPath": "/Game/Characters/Slashers/Guam/Models/Weapons/BottleDestroyed/SM_K12_BottlePaper_07.1"
+    },
+    "LightingGuid": "ABAC5E59-4E2D2B99-44C62FA5-DAB2529F",
+    "RenderData": {
+      "LODs": [
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 9,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 9,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 10
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 3,
+            "NumVertices": 10,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          },
+          "CardRepresentationData": {
+            "Bounds": {
+              "Min": {
+                "X": -2.9090538,
+                "Y": -1.7437847,
+                "Z": -4.1900654
+              },
+              "Max": {
+                "X": 3.437964,
+                "Y": 2.6951244,
+                "Z": 5.164843
+              },
+              "IsValid": 1
+            },
+            "MaxLodLevel": 0,
+            "bMostlyTwoSided": false,
+            "CardBuildData": [
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": -1.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": 0.26445484,
+                    "Y": 0.47566986,
+                    "Z": 0.4873886
+                  },
+                  "Extent": {
+                    "X": 3.1735086,
+                    "Y": 4.677454,
+                    "Z": 10.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 2
+              }
+            ]
+          }
+        }
+      ],
+      "NaniteResources": {
+        "RootData": null,
+        "StreamablePages": {
+          "BulkDataFlags": "BULKDATA_None",
+          "ElementCount": 0,
+          "SizeOnDisk": 0,
+          "OffsetInFile": "0x39D"
+        },
+        "ImposterAtlas": [],
+        "HierarchyNodes": [],
+        "HierarchyRootOffsets": [],
+        "PageStreamingStates": [],
+        "PageDependencies": [],
+        "NumRootPages": 0,
+        "PositionPrecision": 0,
+        "NormalPrecision": 0,
+        "TangentPrecision": 0,
+        "NumInputTriangles": 0,
+        "NumInputVertices": 0,
+        "NumInputMeshes": 0,
+        "NumInputTexCoords": 0,
+        "NumClusters": 0,
+        "ResourceFlags": 0
+      },
+      "Bounds": {
+        "Origin": {
+          "X": 0.26445502,
+          "Y": 0.4756699,
+          "Z": 0.48738885
+        },
+        "BoxExtent": {
+          "X": 2.173509,
+          "Y": 1.2194545,
+          "Z": 3.6774542
+        },
+        "SphereRadius": 4.442395
+      },
+      "bLODsShareStaticLighting": true,
+      "ScreenSize": [
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
   }
 ]

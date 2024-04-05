@@ -27,6 +27,9 @@
     "Template": {
       "ObjectName": "AkComponent'BP_Slasher_Character_C:AkComponent_16'",
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.2"
+    },
+    "Properties": {
+      "DetailModeBitMask": -1
     }
   },
   {
@@ -67,6 +70,12 @@
     "Template": {
       "ObjectName": "BlindableComponent'Default__BP_Slasher_Character_C:BlindableComponent'",
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.7"
+    },
+    "Properties": {
+      "_chargeableComponent": {
+        "ObjectName": "ChargeableComponent'Default__BP_Slasher_Character_08_24_C:BlindnessChargeableComponent'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.26"
+      }
     }
   },
   {
@@ -284,6 +293,9 @@
     "Template": {
       "ObjectName": "BoxComponent'BP_Slasher_Character_C:Box12CA137340F2B5649E3C4091BC985C45'",
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.11"
+    },
+    "Properties": {
+      "DetailModeBitMask": -1
     }
   },
   {
@@ -294,6 +306,9 @@
     "Template": {
       "ObjectName": "BoxComponent'BP_Slasher_Character_C:BoxA71A067B4771F21AF897FE9C61373795'",
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.12"
+    },
+    "Properties": {
+      "DetailModeBitMask": -1
     }
   },
   {
@@ -304,6 +319,9 @@
     "Template": {
       "ObjectName": "BoxComponent'BP_Slasher_Character_C:BoxF1942F2B47A3392B57B0D381F4800C25'",
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.13"
+    },
+    "Properties": {
+      "DetailModeBitMask": -1
     }
   },
   {
@@ -316,10 +334,9 @@
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.14"
     },
     "Properties": {
-      "RelativeLocation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BP_Slasher_Character_08_24_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.20"
       }
     }
   },
@@ -333,10 +350,9 @@
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.15"
     },
     "Properties": {
-      "RelativeLocation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BP_Slasher_Character_08_24_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.20"
       }
     }
   },
@@ -368,6 +384,9 @@
     "Template": {
       "ObjectName": "BP_RedStainComponent_C'BP_Slasher_Character_C:RedStainComponent_GEN_VARIABLE'",
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.21"
+    },
+    "Properties": {
+      "DetailModeBitMask": -1
     }
   },
   {
@@ -379,7 +398,247 @@
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.22"
     },
     "Properties": {
-      "UberGraphFrame": {}
+      "UberGraphFrame": {},
+      "DefaultSlasherPower": "Item_Slasher_Hatchet",
+      "KillerAbilities": [
+        "EKillerAbilities::VE_Killer08Ability",
+        "EKillerAbilities::VE_MAX"
+      ],
+      "KillerSoundCuesComponent": {
+        "ObjectName": "KillerSoundCuesComponent'Default__BP_Slasher_Character_08_24_C:Killer Sound Cues Component'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.65"
+      },
+      "_terrorNavModifierComponent": {
+        "ObjectName": "DBDNavModifierComponent'Default__BP_Slasher_Character_08_24_C:TerrorNavModifierComponent'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.34"
+      },
+      "_bloodFXComponent": {
+        "ObjectName": "KillerBloodFXComponent'Default__BP_Slasher_Character_08_24_C:Killer Blood VFX Component'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.62"
+      },
+      "_stillnessTracker": {
+        "ObjectName": "StillnessTrackerComponent'Default__BP_Slasher_Character_08_24_C:StillnessTracker'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.123"
+      },
+      "_hitsWhileCarryingTracker": {
+        "ObjectName": "SlasherHitsWhileCarryingTrackerComponent'Default__BP_Slasher_Character_08_24_C:HitsWhileCarryingTracker'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.106"
+      },
+      "_presenceTag": {
+        "TagName": "State.Presence.TheHuntress"
+      },
+      "_moriComponent": {
+        "ObjectName": "MoriComponent'Default__BP_Slasher_Character_08_24_C:MoriComponent'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.69"
+      },
+      "_finisherMoriTrackerComponent": {
+        "ObjectName": "FinisherMoriTrackerComponent'Default__BP_Slasher_Character_08_24_C:FinisherMoriTrackerComponent'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.39"
+      },
+      "_hitValidator": {
+        "ObjectName": "HitValidatorComponent'Default__BP_Slasher_Character_08_24_C:Hit Validator'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.57"
+      },
+      "_hitValidationConfigurator": {
+        "ObjectName": "HitValidatorConfigurator'Default__BP_Slasher_Character_08_24_C:Hit Validator Configurator'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.58"
+      },
+      "_attackerComponent": {
+        "ObjectName": "DBDAttackerComponent'Default__BP_Slasher_Character_08_24_C:Attacker Component'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.33"
+      },
+      "_armIKSensorComponent": {
+        "ObjectName": "ArmIKSensorComponent'Default__BP_Slasher_Character_08_24_C:ArmIKSensor'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.3"
+      },
+      "_killerIntroComponent": {
+        "ObjectName": "KillerIntroComponent'Default__BP_Slasher_Character_08_24_C:KillerIntroComponent'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.63"
+      },
+      "_blindingFXComponent": {
+        "ObjectName": "KillerBlindingFXComponent'Default__BP_Slasher_Character_08_24_C:Blinding FX Component'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.61"
+      },
+      "_redStainUpdateStrategy": {
+        "ObjectName": "KillerRedStainUpdateStrategy'Default__BP_Slasher_Character_08_24_C:KillerRedStainUpdateStrategy'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.64"
+      },
+      "_slasherStunnableComponent": {
+        "ObjectName": "SlasherStunnableComponent'Default__BP_Slasher_Character_08_24_C:SlasherStunnableComponent'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.109"
+      },
+      "MaterialHelper": {
+        "ObjectName": "MaterialHelper'Default__BP_Slasher_Character_08_24_C:MaterialHelperNative'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.67"
+      },
+      "_characterInventoryComponent": {
+        "ObjectName": "CharacterInventoryComponent'Default__BP_Slasher_Character_08_24_C:CharacterInventoryComponent'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.23"
+      },
+      "_renderedPixelCounter": {
+        "ObjectName": "BoxOcclusionQueryComponent'Default__BP_Slasher_Character_08_24_C:RenderedPixelCounter'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.13"
+      },
+      "_standingOcclusionBox": {
+        "ObjectName": "BoxComponent'Default__BP_Slasher_Character_08_24_C:Standing Occlusion Box'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.12"
+      },
+      "_crouchingOcclusionBox": {
+        "ObjectName": "BoxComponent'Default__BP_Slasher_Character_08_24_C:Crouching Occlusion Box'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.11"
+      },
+      "_activator": {
+        "ObjectName": "ActivatorComponent'Default__BP_Slasher_Character_08_24_C:Activator'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.0"
+      },
+      "_stateMachine": {
+        "ObjectName": "SlasherStateMachine'Default__BP_Slasher_Character_08_24_C:SlasherStateMachine'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.108"
+      },
+      "_interactionHandler": {
+        "ObjectName": "PlayerInteractionHandler'Default__BP_Slasher_Character_08_24_C:InteractionHandler'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.81"
+      },
+      "_perkManager": {
+        "ObjectName": "PerkManager'Default__BP_Slasher_Character_08_24_C:PerkManager'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.78"
+      },
+      "_playerData": {
+        "ObjectName": "DBDPlayerData'Default__BP_Slasher_Character_08_24_C:PlayerData'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.37"
+      },
+      "_characterChaseVisualComponent": {
+        "ObjectName": "CharacterChaseVisualComponent'Default__BP_Slasher_Character_08_24_C:CharacterChaseVisualComponent'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.22"
+      },
+      "_cameraHandlerComponent": {
+        "ObjectName": "CameraHandlerComponent'Default__BP_Slasher_Character_08_24_C:CameraHandlerComponent'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.18"
+      },
+      "_reversibleActionSystemComponent": {
+        "ObjectName": "ReversibleActionSystemComponent'Default__BP_Slasher_Character_08_24_C:ActionSystemComponent'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.88"
+      },
+      "_itemDropOffPosition": {
+        "ObjectName": "SceneComponent'Default__BP_Slasher_Character_08_24_C:ItemDropOffPosition'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.92"
+      },
+      "_perceptionStimuliComponent": {
+        "ObjectName": "AIPerceptionStimuliSourceComponent'Default__BP_Slasher_Character_08_24_C:AIPerceptionStimuliSourceComponent'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.1"
+      },
+      "_blindingChargeableComponent": {
+        "ObjectName": "ChargeableComponent'Default__BP_Slasher_Character_08_24_C:BlindnessChargeableComponent'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.26"
+      },
+      "_blindableComponent": {
+        "ObjectName": "BlindableComponent'Default__BP_Slasher_Character_08_24_C:BlindableComponent'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.6"
+      },
+      "_eventListener": {
+        "ObjectName": "PollableEventListener'Default__BP_Slasher_Character_08_24_C:EventListener'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.84"
+      },
+      "_chaseComponent": {
+        "ObjectName": "ChaserCharacterComponent'Default__BP_Slasher_Character_08_24_C:Chase Component'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.28"
+      },
+      "_meatHookZoneDetector": {
+        "ObjectName": "ZoneDetectorComponent'Default__BP_Slasher_Character_08_24_C:MeatHookZoneDetector'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.126"
+      },
+      "_basementZoneDetector": {
+        "ObjectName": "ZoneDetectorComponent'Default__BP_Slasher_Character_08_24_C:BasementZoneDetector'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.125"
+      },
+      "_authoritativeMovementComponent": {
+        "ObjectName": "AuthoritativeMovementComponent'Default__BP_Slasher_Character_08_24_C:AuthoritativeMovement'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.5"
+      },
+      "_objectState": {
+        "ObjectName": "GameplayTagContainerComponent'Default__BP_Slasher_Character_08_24_C:ObjectState'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.55"
+      },
+      "_audioFXComponent": {
+        "ObjectName": "AudioFXComponent'Default__BP_Slasher_Character_08_24_C:AudioFXComponent'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.4"
+      },
+      "_playerPerspectiveComponent": {
+        "ObjectName": "PlayerPerspectiveComponent'Default__BP_Slasher_Character_08_24_C:PlayerPerspectiveComponent'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.82"
+      },
+      "_characterSightComponent": {
+        "ObjectName": "CharacterSightComponent'Default__BP_Slasher_Character_08_24_C:CharacterSightComponent'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.25"
+      },
+      "_characterSightableComponent": {
+        "ObjectName": "CharacterSightableComponent'Default__BP_Slasher_Character_08_24_C:CharacterSightableComponent'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.24"
+      },
+      "_navigationStateComponent": {
+        "ObjectName": "NavigationStateComponent'Default__BP_Slasher_Character_08_24_C:NavigationStateComponent'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.71"
+      },
+      "_interactionDetectorComponent": {
+        "ObjectName": "InteractionDetectorComponent'Default__BP_Slasher_Character_08_24_C:InteractionDetectorComponent'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.60"
+      },
+      "_clippablePrimitivesRegistererComponent": {
+        "ObjectName": "PrimitivesRegistererComponent'Default__BP_Slasher_Character_08_24_C:PrimitiveRegistererComponent'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.87"
+      },
+      "_clippableProviderComponent": {
+        "ObjectName": "ClippableProviderComponent'Default__BP_Slasher_Character_08_24_C:ClippableProviderComponent'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.29"
+      },
+      "_dynCapsuleResizer": {
+        "ObjectName": "DynamicCapsuleResizerComponent'Default__BP_Slasher_Character_08_24_C:Dyn Capsule Resizer'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.38"
+      },
+      "_playerGameRelevancyComponent": {
+        "ObjectName": "PlayerGameRelevancyComponent'Default__BP_Slasher_Character_08_24_C:PlayerGameRelevancyComponent'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.80"
+      },
+      "_contextualQuestComponent": {
+        "ObjectName": "ContextualQuestComponent'Default__BP_Slasher_Character_08_24_C:ContextualQuestComponent'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.30"
+      },
+      "_presentationChargeableProgressComponent": {
+        "ObjectName": "ChargeableProgressProviderComponent'Default__BP_Slasher_Character_08_24_C:Presentation Chargeable Progress'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.27"
+      },
+      "_otherCharactersVerticalCollisionsHandler": {
+        "ObjectName": "OtherCharactersVerticalCollisionsHandler'Default__BP_Slasher_Character_08_24_C:OtherCharactersVerticalCollisionsHandler'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.72"
+      },
+      "_montagePlayer": {
+        "ObjectName": "MontagePlayer'Default__BP_Slasher_Character_08_24_C:MontagePlayer'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.68"
+      },
+      "_characterIndex": 268435463,
+      "Mesh": {
+        "ObjectName": "PlayerSkeletalMeshComponentBudgeted'Default__BP_Slasher_Character_08_24_C:CharacterMesh0'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.83"
+      },
+      "CharacterMovement": {
+        "ObjectName": "SlasherMovementComponent'Default__BP_Slasher_Character_08_24_C:CharMoveComp'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.107"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "CapsuleComponent'Default__BP_Slasher_Character_08_24_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.20"
+      },
+      "AIControllerClass": {
+        "ObjectName": "BlueprintGeneratedClass'AIController_Slasher_Bear_C'",
+        "ObjectPath": "/Game/AI/Slasher/AIController_Slasher_Bear.14"
+      },
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent'Default__BP_Slasher_Character_08_24_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.20"
+      },
+      "Tags": [
+        "Huntress"
+      ]
     }
   },
   {
@@ -390,6 +649,9 @@
     "Template": {
       "ObjectName": "CameraComponent'BP_Slasher_Character_C:CameraComponent_214'",
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.24"
+    },
+    "Properties": {
+      "DetailModeBitMask": -1
     }
   },
   {
@@ -410,6 +672,9 @@
     "Template": {
       "ObjectName": "CapsuleComponent'BP_Slasher_Character_C:CapsuleB3F23CF64DA6BE23BA2FD4A8BE196FB3'",
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.26"
+    },
+    "Properties": {
+      "DetailModeBitMask": -1
     }
   },
   {
@@ -430,6 +695,9 @@
     "Template": {
       "ObjectName": "CapsulePlayerOverlapComponent'BP_Slasher_Character_C:PawnDetector_GEN_VARIABLE'",
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.28"
+    },
+    "Properties": {
+      "DetailModeBitMask": -1
     }
   },
   {
@@ -480,6 +748,30 @@
     "Template": {
       "ObjectName": "ChargeableComponent'Default__BP_Slasher_Character_C:BlindnessChargeableComponent'",
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.34"
+    },
+    "Properties": {
+      "OnInteractionEmptiedEvent": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_Slasher_Character_08_24_C'Default__BP_Slasher_Character_08_24_C'",
+              "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.16"
+            },
+            "FunctionName": "OnBlindChargeEmptied"
+          }
+        ]
+      },
+      "ChargeableCompletionPercentChangeCosmeticDelegate": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BlindableComponent'Default__BP_Slasher_Character_08_24_C:BlindableComponent'",
+              "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.6"
+            },
+            "FunctionName": "OnChargeableCompletionPercent"
+          }
+        ]
+      }
     }
   },
   {
@@ -540,6 +832,13 @@
     "Template": {
       "ObjectName": "CustomizedAudioComponent'BP_Slasher_Character_C:CustomizedAudio_GEN_VARIABLE'",
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.46"
+    },
+    "Properties": {
+      "AudioCharacterNameDefaultSwitchState": "K08_ID_Huntress",
+      "AudioCharacterSubNameDefaultSwitchState": "AudioSwitchSubKiller_K08",
+      "AudioCharacterClothesDefaultSwitchState": "K08_CLOTH_Default",
+      "AudioCharacterShoesDefaultSwitchState": "K08_SHOE_Default_Barefoot",
+      "AudioCharacterWeaponDefaultSwitchState": "K08_WPN_Default_Axe"
     }
   },
   {
@@ -570,6 +869,9 @@
     "Template": {
       "ObjectName": "DBDOutlineComponent'BP_Slasher_Character_C:DBDOutlineComponent_2'",
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.50"
+    },
+    "Properties": {
+      "DetailModeBitMask": -1
     }
   },
   {
@@ -2716,29 +3018,6 @@
                 }
               }
             }
-          },
-          "Class": {
-            "ObjectName": "Class'TheHuntressPower'",
-            "ObjectPath": "/Script/TheHuntress"
-          },
-          "Target": {
-            "Inst": "EX_LocalVariable",
-            "Variable": {
-              "Owner": {
-                "ObjectName": "Function'BP_Slasher_Character_08_24_C:GetHatchetSpawner'",
-                "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.43"
-              },
-              "Property": {
-                "Type": "ObjectProperty",
-                "Name": "CallFunc_GetItem_ReturnValue",
-                "Flags": "RF_Public",
-                "ElementSize": 8,
-                "PropertyClass": {
-                  "ObjectName": "Class'Collectable'",
-                  "ObjectPath": "/Script/DeadByDaylight"
-                }
-              }
-            }
           }
         }
       },
@@ -4697,6 +4976,9 @@
     "Template": {
       "ObjectName": "LoudNoiseHUDIndicator'BP_Slasher_Character_C:LoudNoiseHUDIndicator7C90E1D2468056CDB31015A780409DE1'",
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.243"
+    },
+    "Properties": {
+      "DetailModeBitMask": -1
     }
   },
   {
@@ -4707,6 +4989,12 @@
     "Template": {
       "ObjectName": "MaterialHelper'Default__BP_Slasher_Character_C:MaterialHelperNative'",
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.244"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "PlayerSkeletalMeshComponentBudgeted'Default__BP_Slasher_Character_08_24_C:CharacterMesh0'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.83"
+      }
     }
   },
   {
@@ -4717,6 +5005,37 @@
     "Template": {
       "ObjectName": "MontagePlayer'Default__BP_Slasher_Character_C:MontagePlayer'",
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.246"
+    },
+    "Properties": {
+      "_contextualAnimationMappings": [
+        {
+          "ContextTag": {
+            "TagName": "AnimationMapping.AlwaysLoaded"
+          },
+          "AnimationMapping": {
+            "AssetPathName": "/Game/Characters/Slashers/Animations/MontageMappings/DefaultSlasherAnimationMappings.DefaultSlasherAnimationMappings",
+            "SubPathString": ""
+          }
+        },
+        {
+          "ContextTag": {
+            "TagName": "AnimationMapping.AlwaysLoaded"
+          },
+          "AnimationMapping": {
+            "AssetPathName": "/Game/Characters/Slashers/Animations/MontageMappings/Slasher008_AnimMappings.Slasher008_AnimMappings",
+            "SubPathString": ""
+          }
+        },
+        {
+          "ContextTag": {
+            "TagName": "State.Presence.TheHuntress"
+          },
+          "AnimationMapping": {
+            "AssetPathName": "/Game/Characters/Slashers/Animations/MontageMappings/Slasher008_024_AnimMappings.Slasher008_024_AnimMappings",
+            "SubPathString": ""
+          }
+        }
+      ]
     }
   },
   {
@@ -4727,6 +5046,14 @@
     "Template": {
       "ObjectName": "MoriComponent'Default__BP_Slasher_Character_C:MoriComponent'",
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.247"
+    },
+    "Properties": {
+      "_moriInteractionClasses": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'HuntressKill_024_C'",
+          "ObjectPath": "/Game/Characters/Slashers/Blueprints/Interactions/HuntressKill_024.0"
+        }
+      ]
     }
   },
   {
@@ -4767,6 +5094,9 @@
     "Template": {
       "ObjectName": "ParticleSystemComponent'BP_Slasher_Character_C:P_Vignette_EndGame_Top_GEN_VARIABLE'",
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.251"
+    },
+    "Properties": {
+      "DetailModeBitMask": -1
     }
   },
   {
@@ -4777,6 +5107,9 @@
     "Template": {
       "ObjectName": "ParticleSystemComponent'BP_Slasher_Character_C:P_VignetteLeftE59A5013413716D3ED932F8783A625B4'",
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.252"
+    },
+    "Properties": {
+      "DetailModeBitMask": -1
     }
   },
   {
@@ -4787,6 +5120,9 @@
     "Template": {
       "ObjectName": "ParticleSystemComponent'BP_Slasher_Character_C:P_VignetteRightB834F27C4AF1EE4F5DAA7A83742CF9B2'",
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.253"
+    },
+    "Properties": {
+      "DetailModeBitMask": -1
     }
   },
   {
@@ -4797,6 +5133,9 @@
     "Template": {
       "ObjectName": "ParticleSystemComponent'BP_Slasher_Character_C:ParticleSystem19A2C95CD49D002146DF21EA0F73A269F'",
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.254"
+    },
+    "Properties": {
+      "DetailModeBitMask": -1
     }
   },
   {
@@ -4817,6 +5156,16 @@
     "Template": {
       "ObjectName": "PerkManager'Default__BP_Slasher_Character_C:PerkManager'",
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.256"
+    },
+    "Properties": {
+      "_perks": {
+        "ObjectName": "PerkCollectionComponent'Default__BP_Slasher_Character_08_24_C:PerkCollectionComponent'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.77"
+      },
+      "_statusEffects": {
+        "ObjectName": "StatusEffectCollectionComponent'Default__BP_Slasher_Character_08_24_C:StatusEffectCollection'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.122"
+      }
     }
   },
   {
@@ -4867,6 +5216,53 @@
     "Template": {
       "ObjectName": "PlayerSkeletalMeshComponentBudgeted'Default__BP_Slasher_Character_C:CharacterMesh0'",
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.261"
+    },
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'AB_Slasher_08_C'",
+        "ObjectPath": "/Game/Characters/Slashers/Bear/Bluprint/AB_Slasher_08.1"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'BE_DSkeleton_024_REF'",
+        "ObjectPath": "/Game/Characters/Slashers/Bear/Models/BE_DSkeleton_024_REF.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'BE_DSkeleton_024_REF'",
+        "ObjectPath": "/Game/Characters/Slashers/Bear/Models/BE_DSkeleton_024_REF.0"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_Basic_FullAlpha'",
+          "ObjectPath": "/Game/Materials/Instances/MI_Basic_FullAlpha.0"
+        }
+      ],
+      "BodyInstance": {
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Pawn",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Audio",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        },
+        "MassInKgOverride": 138.26219
+      },
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BP_Slasher_Character_08_24_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character_08_24.20"
+      }
     }
   },
   {
@@ -4887,6 +5283,9 @@
     "Template": {
       "ObjectName": "PostProcessComponent'BP_Slasher_Character_C:BlindedPostProcess_new_GEN_VARIABLE'",
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.264"
+    },
+    "Properties": {
+      "DetailModeBitMask": -1
     }
   },
   {
@@ -4897,6 +5296,9 @@
     "Template": {
       "ObjectName": "PostProcessComponent'BP_Slasher_Character_C:VignetteBloodlust_GEN_VARIABLE'",
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.265"
+    },
+    "Properties": {
+      "DetailModeBitMask": -1
     }
   },
   {
@@ -4933,6 +5335,9 @@
     "Template": {
       "ObjectName": "SceneComponent'BP_Slasher_Character_C:Scene1FBE636D489F4E67FFC0EB967F90EAC0'",
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.269"
+    },
+    "Properties": {
+      "DetailModeBitMask": -1
     }
   },
   {
@@ -4943,6 +5348,9 @@
     "Template": {
       "ObjectName": "SceneComponent'BP_Slasher_Character_C:Scene921EA90444BA05DD7DF524BE71551BBF'",
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.270"
+    },
+    "Properties": {
+      "DetailModeBitMask": -1
     }
   },
   {
@@ -4969,6 +5377,9 @@
     "Template": {
       "ObjectName": "ScreenSpaceLocationComponent'BP_Slasher_Character_C:ScreenSpaceLocation548576A64A480642A441E0872CCC1824'",
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.273"
+    },
+    "Properties": {
+      "DetailModeBitMask": -1
     }
   },
   {
@@ -4979,6 +5390,9 @@
     "Template": {
       "ObjectName": "ScreenSpaceLocationComponent'BP_Slasher_Character_C:ScreenSpaceLocation79E41DEF47CDB39AED6BE08370914E0F'",
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.274"
+    },
+    "Properties": {
+      "DetailModeBitMask": -1
     }
   },
   {
@@ -4989,6 +5403,9 @@
     "Template": {
       "ObjectName": "ScreenSpaceLocationComponent'BP_Slasher_Character_C:ScreenSpaceLocation_MiddleT_GEN_VARIABLE'",
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.275"
+    },
+    "Properties": {
+      "DetailModeBitMask": -1
     }
   },
   {
@@ -4999,6 +5416,9 @@
     "Template": {
       "ObjectName": "ScreenSpaceLocationComponent'BP_Slasher_Character_C:ScreenSpaceLocationBC72336E45AFE78403571AB7EA3AAD84'",
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.276"
+    },
+    "Properties": {
+      "DetailModeBitMask": -1
     }
   },
   {
@@ -5009,6 +5429,9 @@
     "Template": {
       "ObjectName": "ScreenSpaceLocationComponent'BP_Slasher_Character_C:ScreenSpaceLocationE298D299483F4C0ED599E094619F6405'",
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.277"
+    },
+    "Properties": {
+      "DetailModeBitMask": -1
     }
   },
   {
@@ -5211,6 +5634,9 @@
     "Template": {
       "ObjectName": "SphereComponent'BP_Slasher_Character_C:AudioAmbientDetector_GEN_VARIABLE'",
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.347"
+    },
+    "Properties": {
+      "DetailModeBitMask": -1
     }
   },
   {
@@ -5233,9 +5659,9 @@
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.349"
     },
     "Properties": {
-      "bEvaluateWorldPositionOffsetInRayTracing": true
-    },
-    "LODData": null
+      "bEvaluateWorldPositionOffsetInRayTracing": true,
+      "DetailModeBitMask": -1
+    }
   },
   {
     "Type": "StaticMeshComponent",
@@ -5247,9 +5673,9 @@
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.350"
     },
     "Properties": {
-      "bEvaluateWorldPositionOffsetInRayTracing": true
-    },
-    "LODData": null
+      "bEvaluateWorldPositionOffsetInRayTracing": true,
+      "DetailModeBitMask": -1
+    }
   },
   {
     "Type": "StaticMeshComponent",
@@ -5261,9 +5687,9 @@
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.351"
     },
     "Properties": {
-      "bEvaluateWorldPositionOffsetInRayTracing": true
-    },
-    "LODData": null
+      "bEvaluateWorldPositionOffsetInRayTracing": true,
+      "DetailModeBitMask": -1
+    }
   },
   {
     "Type": "StaticMeshComponent",
@@ -5275,9 +5701,9 @@
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.352"
     },
     "Properties": {
-      "bEvaluateWorldPositionOffsetInRayTracing": true
-    },
-    "LODData": null
+      "bEvaluateWorldPositionOffsetInRayTracing": true,
+      "DetailModeBitMask": -1
+    }
   },
   {
     "Type": "StaticMeshComponent",
@@ -5289,9 +5715,9 @@
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.353"
     },
     "Properties": {
-      "bEvaluateWorldPositionOffsetInRayTracing": true
-    },
-    "LODData": null
+      "bEvaluateWorldPositionOffsetInRayTracing": true,
+      "DetailModeBitMask": -1
+    }
   },
   {
     "Type": "StaticMeshComponent",
@@ -5303,9 +5729,9 @@
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.354"
     },
     "Properties": {
-      "bEvaluateWorldPositionOffsetInRayTracing": true
-    },
-    "LODData": null
+      "bEvaluateWorldPositionOffsetInRayTracing": true,
+      "DetailModeBitMask": -1
+    }
   },
   {
     "Type": "StaticMeshComponent",
@@ -5317,9 +5743,9 @@
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.355"
     },
     "Properties": {
-      "bEvaluateWorldPositionOffsetInRayTracing": true
-    },
-    "LODData": null
+      "bEvaluateWorldPositionOffsetInRayTracing": true,
+      "DetailModeBitMask": -1
+    }
   },
   {
     "Type": "StaticMeshComponent",
@@ -5331,9 +5757,9 @@
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.356"
     },
     "Properties": {
-      "bEvaluateWorldPositionOffsetInRayTracing": true
-    },
-    "LODData": null
+      "bEvaluateWorldPositionOffsetInRayTracing": true,
+      "DetailModeBitMask": -1
+    }
   },
   {
     "Type": "StaticMeshComponent",
@@ -5345,9 +5771,9 @@
       "ObjectPath": "/Game/Characters/Slashers/Blueprints/BP_Slasher_Character.357"
     },
     "Properties": {
-      "bEvaluateWorldPositionOffsetInRayTracing": true
-    },
-    "LODData": null
+      "bEvaluateWorldPositionOffsetInRayTracing": true,
+      "DetailModeBitMask": -1
+    }
   },
   {
     "Type": "StatusEffectCollectionComponent",

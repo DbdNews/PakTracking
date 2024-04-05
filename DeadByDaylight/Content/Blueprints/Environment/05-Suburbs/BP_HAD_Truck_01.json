@@ -73,7 +73,104 @@
         "ObjectName": "Class'NavArea_Obstacle'",
         "ObjectPath": "/Script/NavigationSystem"
       },
-      "bUseSystemDefaultObstacleAreaClass": false
+      "bUseSystemDefaultObstacleAreaClass": false,
+      "DetailLevelBeforeCastShadows": "EDetailMode::DM_MAX",
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "CharacterBlocker",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel2",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel3",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel4",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel5",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel6",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Interactable",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Audio",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Slasher",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "Traps",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "InteractionDetector",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "BlinkBlocker",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Ground",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -1.8219932E-08,
+        "Z": 120.38552
+      },
+      "RelativeScale3D": {
+        "X": 3.2426906,
+        "Y": 9.301505,
+        "Z": 2.4201689
+      },
+      "Mobility": "EComponentMobility::Static"
     }
   },
   {
@@ -98,7 +195,7 @@
     "Outer": "BP_HAD_Truck_01_C",
     "Class": "UScriptClass'SceneComponent'",
     "Properties": {
-      "DetailMode": "EDetailMode::DM_Low"
+      "Mobility": "EComponentMobility::Static"
     }
   },
   {
@@ -224,8 +321,11 @@
       "StaticMesh": {
         "ObjectName": "StaticMesh'SM_COM_PickupTruck_01'",
         "ObjectPath": "/Game/Meshes/Environment/Common/Blockers/SM_COM_PickupTruck_01.2"
+      },
+      "DetailLevelBeforeCastShadows": "EDetailMode::DM_MAX",
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic"
       }
-    },
-    "LODData": null
+    }
   }
 ]

@@ -170,10 +170,10 @@
     "BodySetupGuid": "469FFF8A4AC4B9E856BBC1A0ECB649C9",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_None",
-        "ElementCount": 4,
-        "SizeOnDisk": 2,
-        "OffsetInFile": "0x18DE"
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 1044,
+        "SizeOnDisk": 1044,
+        "OffsetInFile": "0x264"
       }
     }
   },
@@ -181,21 +181,191 @@
     "Type": "NavCollision",
     "Name": "NavCollision_3",
     "Outer": "BoundingBoxEdge",
-    "Class": "UScriptClass'NavCollision'"
+    "Class": "UScriptClass'NavCollision'",
+    "CookedFormatData": {
+      "NavCollision_Chaos": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 361,
+        "SizeOnDisk": 361,
+        "OffsetInFile": "0x32"
+      }
+    }
   },
   {
     "Type": "StaticMesh",
     "Name": "BoundingBoxEdge",
     "Class": "UScriptClass'StaticMesh'",
     "Properties": {
-      "LightMapCoordinateIndex": 2,
-      "DistanceFieldSelfShadowBias": "NaN",
-      "BodySetup": null,
-      "bGlobalForceMipLevelsToBeResident": false
+      "StaticMaterials": [
+        {
+          "MaterialInterface": {
+            "ObjectName": "Material'TransformGizmoMaterial'",
+            "ObjectPath": "/Engine/VREditor/TransformGizmo/TransformGizmoMaterial.0"
+          },
+          "MaterialSlotName": "TransformGizmoMaterial",
+          "ImportedMaterialSlotName": "Main",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 13.991388,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 0.0
+          }
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "Material'TranslucentTransformGizmoMaterial'",
+            "ObjectPath": "/Engine/VREditor/TransformGizmo/TranslucentTransformGizmoMaterial.0"
+          },
+          "MaterialSlotName": "TranslucentTransformGizmoMaterial",
+          "ImportedMaterialSlotName": "Xray",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 13.991388,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 0.0
+          }
+        }
+      ],
+      "LightmapUVDensity": 13.991388,
+      "LightMapResolution": 64,
+      "ExtendedBounds": {
+        "Origin": {
+          "X": 0.0,
+          "Y": -0.0003991127,
+          "Z": 0.0
+        },
+        "BoxExtent": {
+          "X": 5.0012746,
+          "Y": 0.50000006,
+          "Z": 0.50000006
+        },
+        "SphereRadius": 5.03660249710083
+      }
     },
-    "BodySetup": null,
-    "NavCollision": null,
-    "LightingGuid": "00000000-00000000-00000000-00000000",
-    "RenderData": null
+    "BodySetup": {
+      "ObjectName": "BodySetup'BoundingBoxEdge:BodySetup_0'",
+      "ObjectPath": "/Engine/VREditor/TransformGizmo/BoundingBoxEdge.0"
+    },
+    "NavCollision": {
+      "ObjectName": "NavCollision'BoundingBoxEdge:NavCollision_3'",
+      "ObjectPath": "/Engine/VREditor/TransformGizmo/BoundingBoxEdge.1"
+    },
+    "LightingGuid": "F83BBCE1-42BA0042-9AF122B2-7864CF35",
+    "RenderData": {
+      "LODs": [
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 28,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 47,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 84,
+              "NumTriangles": 28,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 47,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 48
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 1,
+            "NumVertices": 48,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          },
+          "CardRepresentationData": {
+            "Bounds": {
+              "Min": {
+                "X": -6.0012746,
+                "Y": -1.5003991,
+                "Z": -1.5
+              },
+              "Max": {
+                "X": 6.0012746,
+                "Y": 1.4996009,
+                "Z": 1.5
+              },
+              "IsValid": 1
+            },
+            "MaxLodLevel": 0,
+            "bMostlyTwoSided": false,
+            "CardBuildData": []
+          }
+        }
+      ],
+      "NaniteResources": {
+        "RootData": null,
+        "StreamablePages": {
+          "BulkDataFlags": "BULKDATA_None",
+          "ElementCount": 0,
+          "SizeOnDisk": 0,
+          "OffsetInFile": "0xB8B"
+        },
+        "ImposterAtlas": [],
+        "HierarchyNodes": [],
+        "HierarchyRootOffsets": [],
+        "PageStreamingStates": [],
+        "PageDependencies": [],
+        "NumRootPages": 0,
+        "PositionPrecision": 0,
+        "NormalPrecision": 0,
+        "TangentPrecision": 0,
+        "NumInputTriangles": 0,
+        "NumInputVertices": 0,
+        "NumInputMeshes": 0,
+        "NumInputTexCoords": 0,
+        "NumClusters": 0,
+        "ResourceFlags": 0
+      },
+      "Bounds": {
+        "Origin": {
+          "X": 0.0,
+          "Y": -0.0003991127,
+          "Z": 0.0
+        },
+        "BoxExtent": {
+          "X": 5.0012746,
+          "Y": 0.50000006,
+          "Z": 0.50000006
+        },
+        "SphereRadius": 5.0366025
+      },
+      "bLODsShareStaticLighting": true,
+      "ScreenSize": [
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
   }
 ]

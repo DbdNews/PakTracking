@@ -260,28 +260,28 @@
         "G": 0.109247,
         "B": 0.295,
         "A": 1.0,
-        "Hex": "FF335D94"
+        "Hex": "335D94"
       },
       "Horizon color": {
         "R": 1.979559,
         "G": 2.586644,
         "B": 3.0,
         "A": 1.0,
-        "Hex": "FFFFFFFF"
+        "Hex": "FFFFFF"
       },
       "Cloud color": {
         "R": 0.855778,
         "G": 0.91902,
         "B": 1.0,
         "A": 1.0,
-        "Hex": "FFEFF6FF"
+        "Hex": "EFF6FF"
       },
       "Overall Color": {
         "R": 1.0,
         "G": 1.0,
         "B": 1.0,
         "A": 1.0,
-        "Hex": "FFFFFFFF"
+        "Hex": "FFFFFF"
       },
       "Cloud speed": 1.0,
       "Cloud opacity": 0.699999988079071,
@@ -5936,7 +5936,7 @@
     "Outer": "BP_Sky_Sphere_C",
     "Class": "UScriptClass'SceneComponent'",
     "Properties": {
-      "DetailMode": "EDetailMode::DM_Low"
+      "Mobility": "EComponentMobility::Static"
     }
   },
   {
@@ -6044,14 +6044,113 @@
           "ObjectPath": "/Engine/EngineSky/M_Sky_Panning_Clouds2.0"
         }
       ],
-      "bTraceComplexOnMove": false,
+      "bGenerateOverlapEvents": false,
+      "bVisibleInRayTracing": false,
       "bReceivesDecals": false,
-      "bOnlyOwnerSee": false,
-      "bAffectIndirectLightingWhileHidden": false,
+      "CastShadow": false,
+      "bAffectDynamicIndirectLighting": false,
       "bCastDynamicShadow": false,
-      "bCastContactShadow": false,
-      "bSelfShadowOnly": false
-    },
-    "LODData": null
+      "bCastStaticShadow": false,
+      "DetailLevelBeforeCastShadows": "EDetailMode::DM_MAX",
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel2",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel3",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel4",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel5",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel6",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Interactable",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Audio",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Slasher",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Traps",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "InteractionDetector",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "BlinkBlocker",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Ground",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        },
+        "MassInKgOverride": 0.0,
+        "bAutoWeld": false
+      },
+      "RelativeScale3D": {
+        "X": 400.0,
+        "Y": 400.0,
+        "Z": 400.0
+      },
+      "bAbsoluteRotation": true,
+      "Mobility": "EComponentMobility::Static",
+      "bCanEverAffectNavigation": false
+    }
   }
 ]

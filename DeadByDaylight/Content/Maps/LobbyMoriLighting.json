@@ -60,7 +60,37 @@
       "DefaultSceneRoot": {
         "ObjectName": "SceneComponent'LobbyMoriLighting:PersistentLevel.BP_Mori_LightingRig_C_1.DefaultSceneRoot'",
         "ObjectPath": "/Game/Maps/LobbyMoriLighting.12"
-      }
+      },
+      "RootComponent": {
+        "ObjectName": "SceneComponent'LobbyMoriLighting:PersistentLevel.BP_Mori_LightingRig_C_1.DefaultSceneRoot'",
+        "ObjectPath": "/Game/Maps/LobbyMoriLighting.12"
+      },
+      "BlueprintCreatedComponents": [
+        {
+          "ObjectName": "SceneComponent'LobbyMoriLighting:PersistentLevel.BP_Mori_LightingRig_C_1.DefaultSceneRoot'",
+          "ObjectPath": "/Game/Maps/LobbyMoriLighting.12"
+        },
+        {
+          "ObjectName": "SpotLightComponent'LobbyMoriLighting:PersistentLevel.BP_Mori_LightingRig_C_1.RimLight_LightComponent0'",
+          "ObjectPath": "/Game/Maps/LobbyMoriLighting.18"
+        },
+        {
+          "ObjectName": "SpotLightComponent'LobbyMoriLighting:PersistentLevel.BP_Mori_LightingRig_C_1.KeyLight_LightComponent0'",
+          "ObjectPath": "/Game/Maps/LobbyMoriLighting.15"
+        },
+        {
+          "ObjectName": "SpotLightComponent'LobbyMoriLighting:PersistentLevel.BP_Mori_LightingRig_C_1.LegKeyLight_LightComponent0'",
+          "ObjectPath": "/Game/Maps/LobbyMoriLighting.16"
+        },
+        {
+          "ObjectName": "PointLightComponent'LobbyMoriLighting:PersistentLevel.BP_Mori_LightingRig_C_1.BGFogLight'",
+          "ObjectPath": "/Game/Maps/LobbyMoriLighting.11"
+        },
+        {
+          "ObjectName": "SpotLightComponent'LobbyMoriLighting:PersistentLevel.BP_Mori_LightingRig_C_1.LegKeyLight_LightComponent1'",
+          "ObjectPath": "/Game/Maps/LobbyMoriLighting.17"
+        }
+      ]
     }
   },
   {
@@ -88,8 +118,28 @@
       "LightSourceAngle": 2.5,
       "ContactShadowLength": 20.0,
       "ContactShadowLengthInWS": true,
-      "DeepShadowLayerDistribution": 2.0,
-      "IndirectLightingIntensity": "NaN"
+      "Intensity": 2.0,
+      "LightColor": {
+        "B": 197,
+        "G": 197,
+        "R": 197,
+        "A": 255,
+        "Hex": "C5C5C5"
+      },
+      "DetailLevelBeforeCastShadows": "EDetailMode::DM_MAX",
+      "VolumetricScatteringIntensity": 1.0,
+      "AmbientOcclusionContribution": 1.0,
+      "RelativeLocation": {
+        "X": 116.07626,
+        "Y": -236.04398,
+        "Z": -28.2543
+      },
+      "RelativeRotation": {
+        "Pitch": -46.0,
+        "Yaw": 343.52682,
+        "Roll": 5.688896E-13
+      },
+      "Mobility": "EComponentMobility::Movable"
     }
   },
   {
@@ -126,7 +176,7 @@
         "G": 90,
         "R": 81,
         "A": 255,
-        "Hex": "FF515A67"
+        "Hex": "515A67"
       },
       "VolumetricFogEmissive": {
         "R": 0.005469,
@@ -137,13 +187,20 @@
       },
       "VolumetricFogExtinctionScale": 1.5,
       "VolumetricFogStartDistance": 235.0,
-      "PhysicsVolume": null,
-      "AttachParent": null,
-      "RelativeScale3D": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      }
+      "bOverrideDensityAndDistanceParametersWithDensityCurve": true,
+      "DensityCurve": {
+        "ObjectName": "CurveFloat'Mori_Fog'",
+        "ObjectPath": "/Game/Blueprints/Curves/Mori_Fog.0"
+      },
+      "DistanceUntilNoFog": 0.0,
+      "RelativeLocation": {
+        "X": -348.09805,
+        "Y": 21.163977,
+        "Z": 39.388634
+      },
+      "ComponentTags": [
+        "Fog Override"
+      ]
     }
   },
   {
@@ -310,8 +367,8 @@
       "bAutoSpawnMissingNavData": true,
       "bSpawnNavDataInNavBoundsLevel": true,
       "NavigationSystemClass": {
-        "AssetPathName": "/Script/NavigationSystem",
-        "SubPathString": "\u0000\u0000\u0000"
+        "AssetPathName": "/Script/NavigationSystem.NavigationSystemV1",
+        "SubPathString": ""
       }
     }
   },
@@ -323,6 +380,15 @@
     "Template": {
       "ObjectName": "PointLightComponent'BP_Store_Mori_LightingRig_C:BGFogLight_GEN_VARIABLE'",
       "ObjectPath": "/Game/Blueprints/2021Skysystem/BP_Store_Mori_LightingRig.5"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'LobbyMoriLighting:PersistentLevel.BP_Mori_LightingRig_C_1.DefaultSceneRoot'",
+        "ObjectPath": "/Game/Maps/LobbyMoriLighting.12"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
     }
   },
   {
@@ -335,8 +401,9 @@
       "ObjectPath": "/Game/Blueprints/2021Skysystem/BP_Store_Mori_LightingRig.6"
     },
     "Properties": {
-      "bReplicateUsingRegisteredSubObjectList": false,
-      "bReplicates": true
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
     }
   },
   {
@@ -366,14 +433,17 @@
         "ObjectName": "TextureCube'T_Haddonfield_Skylight'",
         "ObjectPath": "/Game/Textures/Lighting/T_Haddonfield_Skylight.0"
       },
-      "LightColor": {
-        "B": 0,
-        "G": 0,
-        "R": 0,
-        "A": 64,
-        "Hex": "40000000"
+      "Intensity": 2.0,
+      "CastShadows": false,
+      "DetailLevelBeforeCastShadows": "EDetailMode::DM_MAX",
+      "VolumetricScatteringIntensity": 1.0,
+      "AmbientOcclusionContribution": 1.0,
+      "RelativeLocation": {
+        "X": -4.5474735E-13,
+        "Y": 115.89799,
+        "Z": 5.927759E-07
       },
-      "CastDynamicShadows": false
+      "Mobility": "EComponentMobility::Movable"
     }
   },
   {
@@ -384,6 +454,15 @@
     "Template": {
       "ObjectName": "SpotLightComponent'BP_Store_Mori_LightingRig_C:KeyLight_LightComponent0_GEN_VARIABLE'",
       "ObjectPath": "/Game/Blueprints/2021Skysystem/BP_Store_Mori_LightingRig.14"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'LobbyMoriLighting:PersistentLevel.BP_Mori_LightingRig_C_1.DefaultSceneRoot'",
+        "ObjectPath": "/Game/Maps/LobbyMoriLighting.12"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
     }
   },
   {
@@ -394,6 +473,15 @@
     "Template": {
       "ObjectName": "SpotLightComponent'BP_Store_Mori_LightingRig_C:LegKeyLight_LightComponent0_GEN_VARIABLE'",
       "ObjectPath": "/Game/Blueprints/2021Skysystem/BP_Store_Mori_LightingRig.15"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'LobbyMoriLighting:PersistentLevel.BP_Mori_LightingRig_C_1.DefaultSceneRoot'",
+        "ObjectPath": "/Game/Maps/LobbyMoriLighting.12"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
     }
   },
   {
@@ -404,6 +492,13 @@
     "Template": {
       "ObjectName": "SpotLightComponent'BP_Store_Mori_LightingRig_C:LegKeyLight_LightComponent1_GEN_VARIABLE'",
       "ObjectPath": "/Game/Blueprints/2021Skysystem/BP_Store_Mori_LightingRig.16"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'LobbyMoriLighting:PersistentLevel.BP_Mori_LightingRig_C_1.DefaultSceneRoot'",
+        "ObjectPath": "/Game/Maps/LobbyMoriLighting.12"
+      },
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
     }
   },
   {
@@ -414,6 +509,15 @@
     "Template": {
       "ObjectName": "SpotLightComponent'BP_Store_Mori_LightingRig_C:RimLight_LightComponent0_GEN_VARIABLE'",
       "ObjectPath": "/Game/Blueprints/2021Skysystem/BP_Store_Mori_LightingRig.17"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'LobbyMoriLighting:PersistentLevel.BP_Mori_LightingRig_C_1.DefaultSceneRoot'",
+        "ObjectPath": "/Game/Maps/LobbyMoriLighting.12"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
     }
   },
   {
@@ -437,10 +541,18 @@
         "ObjectName": "NavigationSystemModuleConfig'LobbyMoriLighting:PersistentLevel.WorldSettings.NavigationSystemModuleConfig_0'",
         "ObjectPath": "/Game/Maps/LobbyMoriLighting.10"
       },
-      "LastBookmarkClass": {
-        "ObjectName": "Model'LobbyMoriLighting:PersistentLevel.Model_0'",
-        "ObjectPath": "/Game/Maps/LobbyMoriLighting.9"
-      }
+      "BookmarkArray": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
     }
   }
 ]
