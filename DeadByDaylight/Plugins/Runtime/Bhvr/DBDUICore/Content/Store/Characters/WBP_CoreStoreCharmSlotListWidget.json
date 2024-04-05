@@ -1,0 +1,2075 @@
+[
+  {
+    "Type": "DBDImage",
+    "Name": "BackgroundIMG",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'DBDImage'"
+  },
+  {
+    "Type": "DBDTextBlock",
+    "Name": "TitleTB",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'DBDTextBlock'"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget",
+    "Outer": "WBP_CoreStoreCharmSlotListWidget_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Subtract_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GreaterEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_IsDesignTime",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Subtract_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_LessEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_GetAllChildren_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "CallFunc_GetAllChildren_ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyFlags": "InstancedReference",
+          "PropertyClass": {
+            "ObjectName": "Class'Widget'",
+            "ObjectPath": "/Script/UMG"
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'Widget'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_RemoveChild_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Subtract_IntInt_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'UserWidget'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_ObjectIsA_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_AddChild_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PanelSlot'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_PushExecutionFlow",
+        "StatementIndex": 0,
+        "PushingAddress": 991,
+        "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget[991]"
+      },
+      {
+        "Inst": "EX_ComputedJump",
+        "StatementIndex": 5,
+        "OffsetExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "EntryPoint",
+              "Flags": "RF_Public",
+              "ElementSize": 4,
+              "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_PushExecutionFlow",
+        "StatementIndex": 15,
+        "PushingAddress": 338,
+        "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget[338]"
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 20,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+            },
+            "Property": {
+              "Type": "ArrayProperty",
+              "Name": "CallFunc_GetAllChildren_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 16,
+              "PropertyFlags": "ReferenceParm | ContainsInstancedReference",
+              "Inner": {
+                "Type": "ObjectProperty",
+                "Name": "CallFunc_GetAllChildren_ReturnValue",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyFlags": "InstancedReference",
+                "PropertyClass": {
+                  "ObjectName": "Class'Widget'",
+                  "ObjectPath": "/Script/UMG"
+                }
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_InstanceVariable",
+            "Variable": {
+              "Path": [
+                "CharmSlotsContainer"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'CoreStoreCharmSlotListWidget'",
+                "ObjectPath": "/Script/DBDUIViewsCore"
+              }
+            }
+          },
+          "Offset": 10,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+            },
+            "Property": {
+              "Type": "ArrayProperty",
+              "Name": "CallFunc_GetAllChildren_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 16,
+              "PropertyFlags": "ReferenceParm | ContainsInstancedReference",
+              "Inner": {
+                "Type": "ObjectProperty",
+                "Name": "CallFunc_GetAllChildren_ReturnValue",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyFlags": "InstancedReference",
+                "PropertyClass": {
+                  "ObjectName": "Class'Widget'",
+                  "ObjectPath": "/Script/UMG"
+                }
+              }
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_FinalFunction",
+            "Function": {
+              "ObjectName": "Class'PanelWidget:GetAllChildren'",
+              "ObjectPath": "/Script/UMG"
+            },
+            "Parameters": []
+          }
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 70,
+        "ObjectExpression": {
+          "Inst": "EX_ObjectConst",
+          "Value": {
+            "ObjectName": "Class'Default__KismetArrayLibrary'",
+            "ObjectPath": "/Script/Engine"
+          }
+        },
+        "Offset": 37,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'KismetArrayLibrary:Array_Get'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+                  "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+                },
+                "Property": {
+                  "Type": "ArrayProperty",
+                  "Name": "CallFunc_GetAllChildren_ReturnValue",
+                  "Flags": "RF_Public",
+                  "ElementSize": 16,
+                  "PropertyFlags": "ReferenceParm | ContainsInstancedReference",
+                  "Inner": {
+                    "Type": "ObjectProperty",
+                    "Name": "CallFunc_GetAllChildren_ReturnValue",
+                    "Flags": "RF_Public",
+                    "ElementSize": 8,
+                    "PropertyFlags": "InstancedReference",
+                    "PropertyClass": {
+                      "ObjectName": "Class'Widget'",
+                      "ObjectPath": "/Script/UMG"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+                  "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+                },
+                "Property": {
+                  "Type": "IntProperty",
+                  "Name": "Temp_int_Loop_Counter_Variable",
+                  "Flags": "RF_Public",
+                  "ElementSize": 4
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+                  "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+                },
+                "Property": {
+                  "Type": "ObjectProperty",
+                  "Name": "CallFunc_Array_Get_Item",
+                  "Flags": "RF_Public",
+                  "ElementSize": 8,
+                  "PropertyFlags": "InstancedReference",
+                  "PropertyClass": {
+                    "ObjectName": "Class'Widget'",
+                    "ObjectPath": "/Script/UMG"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 129,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_ObjectIsA_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'GameplayStatics:ObjectIsA'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+                  "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+                },
+                "Property": {
+                  "Type": "ObjectProperty",
+                  "Name": "CallFunc_Array_Get_Item",
+                  "Flags": "RF_Public",
+                  "ElementSize": 8,
+                  "PropertyFlags": "InstancedReference",
+                  "PropertyClass": {
+                    "ObjectName": "Class'Widget'",
+                    "ObjectPath": "/Script/UMG"
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Path": [
+                  "_charmSlotItemWidgetClass"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'CoreStoreCharmSlotListWidget'",
+                  "ObjectPath": "/Script/DBDUIViewsCore"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_PopExecutionFlowIfNot",
+        "StatementIndex": 167,
+        "BooleanExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_ObjectIsA_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 177,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+            },
+            "Property": {
+              "Type": "ArrayProperty",
+              "Name": "CallFunc_GetAllChildren_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 16,
+              "PropertyFlags": "ReferenceParm | ContainsInstancedReference",
+              "Inner": {
+                "Type": "ObjectProperty",
+                "Name": "CallFunc_GetAllChildren_ReturnValue",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyFlags": "InstancedReference",
+                "PropertyClass": {
+                  "ObjectName": "Class'Widget'",
+                  "ObjectPath": "/Script/UMG"
+                }
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_InstanceVariable",
+            "Variable": {
+              "Path": [
+                "CharmSlotsContainer"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'CoreStoreCharmSlotListWidget'",
+                "ObjectPath": "/Script/DBDUIViewsCore"
+              }
+            }
+          },
+          "Offset": 10,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+            },
+            "Property": {
+              "Type": "ArrayProperty",
+              "Name": "CallFunc_GetAllChildren_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 16,
+              "PropertyFlags": "ReferenceParm | ContainsInstancedReference",
+              "Inner": {
+                "Type": "ObjectProperty",
+                "Name": "CallFunc_GetAllChildren_ReturnValue",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyFlags": "InstancedReference",
+                "PropertyClass": {
+                  "ObjectName": "Class'Widget'",
+                  "ObjectPath": "/Script/UMG"
+                }
+              }
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_FinalFunction",
+            "Function": {
+              "ObjectName": "Class'PanelWidget:GetAllChildren'",
+              "ObjectPath": "/Script/UMG"
+            },
+            "Parameters": []
+          }
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 227,
+        "ObjectExpression": {
+          "Inst": "EX_ObjectConst",
+          "Value": {
+            "ObjectName": "Class'Default__KismetArrayLibrary'",
+            "ObjectPath": "/Script/Engine"
+          }
+        },
+        "Offset": 37,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'KismetArrayLibrary:Array_Get'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+                  "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+                },
+                "Property": {
+                  "Type": "ArrayProperty",
+                  "Name": "CallFunc_GetAllChildren_ReturnValue",
+                  "Flags": "RF_Public",
+                  "ElementSize": 16,
+                  "PropertyFlags": "ReferenceParm | ContainsInstancedReference",
+                  "Inner": {
+                    "Type": "ObjectProperty",
+                    "Name": "CallFunc_GetAllChildren_ReturnValue",
+                    "Flags": "RF_Public",
+                    "ElementSize": 8,
+                    "PropertyFlags": "InstancedReference",
+                    "PropertyClass": {
+                      "ObjectName": "Class'Widget'",
+                      "ObjectPath": "/Script/UMG"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+                  "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+                },
+                "Property": {
+                  "Type": "IntProperty",
+                  "Name": "Temp_int_Loop_Counter_Variable",
+                  "Flags": "RF_Public",
+                  "ElementSize": 4
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+                  "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+                },
+                "Property": {
+                  "Type": "ObjectProperty",
+                  "Name": "CallFunc_Array_Get_Item",
+                  "Flags": "RF_Public",
+                  "ElementSize": 8,
+                  "PropertyFlags": "InstancedReference",
+                  "PropertyClass": {
+                    "ObjectName": "Class'Widget'",
+                    "ObjectPath": "/Script/UMG"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 286,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_RemoveChild_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_InstanceVariable",
+            "Variable": {
+              "Path": [
+                "CharmSlotsContainer"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'CoreStoreCharmSlotListWidget'",
+                "ObjectPath": "/Script/DBDUIViewsCore"
+              }
+            }
+          },
+          "Offset": 19,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_RemoveChild_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_FinalFunction",
+            "Function": {
+              "ObjectName": "Class'PanelWidget:RemoveChild'",
+              "ObjectPath": "/Script/UMG"
+            },
+            "Parameters": [
+              {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+                    "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+                  },
+                  "Property": {
+                    "Type": "ObjectProperty",
+                    "Name": "CallFunc_Array_Get_Item",
+                    "Flags": "RF_Public",
+                    "ElementSize": 8,
+                    "PropertyFlags": "InstancedReference",
+                    "PropertyClass": {
+                      "ObjectName": "Class'Widget'",
+                      "ObjectPath": "/Script/UMG"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "Inst": "EX_PopExecutionFlow",
+        "StatementIndex": 337
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 338,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "CallFunc_Subtract_IntInt_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:Subtract_IntInt'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+                  "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+                },
+                "Property": {
+                  "Type": "IntProperty",
+                  "Name": "Temp_int_Loop_Counter_Variable",
+                  "Flags": "RF_Public",
+                  "ElementSize": 4
+                }
+              }
+            },
+            {
+              "Inst": "EX_IntConst",
+              "Value": 1
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 380,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "Temp_int_Loop_Counter_Variable",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "CallFunc_Subtract_IntInt_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 407,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_GreaterEqual_IntInt_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:GreaterEqual_IntInt'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+                  "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+                },
+                "Property": {
+                  "Type": "IntProperty",
+                  "Name": "Temp_int_Loop_Counter_Variable",
+                  "Flags": "RF_Public",
+                  "ElementSize": 4
+                }
+              }
+            },
+            {
+              "Inst": "EX_IntConst",
+              "Value": 0
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_JumpIfNot",
+        "StatementIndex": 441,
+        "CodeOffset": 460,
+        "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget[460]",
+        "BooleanExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_GreaterEqual_IntInt_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 455,
+        "CodeOffset": 15,
+        "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget[15]"
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 460,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "Temp_int_Variable",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_IntConst",
+          "Value": 0
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 483,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "CallFunc_Subtract_IntInt_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:Subtract_IntInt'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Path": [
+                  "_preConstructedCharmSlotsCount"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'CoreStoreCharmSlotListWidget'",
+                  "ObjectPath": "/Script/DBDUIViewsCore"
+                }
+              }
+            },
+            {
+              "Inst": "EX_IntConst",
+              "Value": 1
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 525,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_LessEqual_IntInt_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:LessEqual_IntInt'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+                  "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+                },
+                "Property": {
+                  "Type": "IntProperty",
+                  "Name": "Temp_int_Variable",
+                  "Flags": "RF_Public",
+                  "ElementSize": 4
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+                  "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+                },
+                "Property": {
+                  "Type": "IntProperty",
+                  "Name": "CallFunc_Subtract_IntInt_ReturnValue_1",
+                  "Flags": "RF_Public",
+                  "ElementSize": 4
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_PopExecutionFlowIfNot",
+        "StatementIndex": 563,
+        "BooleanExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_LessEqual_IntInt_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_PushExecutionFlow",
+        "StatementIndex": 573,
+        "PushingAddress": 724,
+        "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget[724]"
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 578,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_Create_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'UserWidget'",
+                "ObjectPath": "/Script/UMG"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_ObjectConst",
+            "Value": {
+              "ObjectName": "Class'Default__WidgetBlueprintLibrary'",
+              "ObjectPath": "/Script/UMG"
+            }
+          },
+          "Offset": 21,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_Create_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'UserWidget'",
+                "ObjectPath": "/Script/UMG"
+              }
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_FinalFunction",
+            "Function": {
+              "ObjectName": "Class'WidgetBlueprintLibrary:Create'",
+              "ObjectPath": "/Script/UMG"
+            },
+            "Parameters": [
+              {
+                "Inst": "EX_Self"
+              },
+              {
+                "Inst": "EX_InstanceVariable",
+                "Variable": {
+                  "Path": [
+                    "_charmSlotItemWidgetClass"
+                  ],
+                  "ResolvedOwner": {
+                    "ObjectName": "Class'CoreStoreCharmSlotListWidget'",
+                    "ObjectPath": "/Script/DBDUIViewsCore"
+                  }
+                }
+              },
+              {
+                "Inst": "EX_NoObject"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 631,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_AddChild_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'PanelSlot'",
+                "ObjectPath": "/Script/UMG"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_InstanceVariable",
+            "Variable": {
+              "Path": [
+                "CharmSlotsContainer"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'CoreStoreCharmSlotListWidget'",
+                "ObjectPath": "/Script/DBDUIViewsCore"
+              }
+            }
+          },
+          "Offset": 19,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_AddChild_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'PanelSlot'",
+                "ObjectPath": "/Script/UMG"
+              }
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_FinalFunction",
+            "Function": {
+              "ObjectName": "Class'PanelWidget:AddChild'",
+              "ObjectPath": "/Script/UMG"
+            },
+            "Parameters": [
+              {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+                    "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+                  },
+                  "Property": {
+                    "Type": "ObjectProperty",
+                    "Name": "CallFunc_Create_ReturnValue",
+                    "Flags": "RF_Public",
+                    "ElementSize": 8,
+                    "PropertyFlags": "InstancedReference",
+                    "PropertyClass": {
+                      "ObjectName": "Class'UserWidget'",
+                      "ObjectPath": "/Script/UMG"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 682,
+        "ObjectExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_Create_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'UserWidget'",
+                "ObjectPath": "/Script/UMG"
+              }
+            }
+          }
+        },
+        "Offset": 19,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'UserWidget:SetPadding'",
+            "ObjectPath": "/Script/UMG"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Path": [
+                  "_charmSlotsPadding"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'CoreStoreCharmSlotListWidget'",
+                  "ObjectPath": "/Script/DBDUIViewsCore"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_PopExecutionFlow",
+        "StatementIndex": 723
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 724,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "CallFunc_Add_IntInt_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:Add_IntInt'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+                  "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+                },
+                "Property": {
+                  "Type": "IntProperty",
+                  "Name": "Temp_int_Variable",
+                  "Flags": "RF_Public",
+                  "ElementSize": 4
+                }
+              }
+            },
+            {
+              "Inst": "EX_IntConst",
+              "Value": 1
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 766,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "Temp_int_Variable",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "CallFunc_Add_IntInt_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 793,
+        "CodeOffset": 483,
+        "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget[483]"
+      },
+      {
+        "Inst": "EX_PopExecutionFlowIfNot",
+        "StatementIndex": 798,
+        "BooleanExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "K2Node_Event_IsDesignTime",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 808,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+            },
+            "Property": {
+              "Type": "ArrayProperty",
+              "Name": "CallFunc_GetAllChildren_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 16,
+              "PropertyFlags": "ReferenceParm | ContainsInstancedReference",
+              "Inner": {
+                "Type": "ObjectProperty",
+                "Name": "CallFunc_GetAllChildren_ReturnValue",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyFlags": "InstancedReference",
+                "PropertyClass": {
+                  "ObjectName": "Class'Widget'",
+                  "ObjectPath": "/Script/UMG"
+                }
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_InstanceVariable",
+            "Variable": {
+              "Path": [
+                "CharmSlotsContainer"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'CoreStoreCharmSlotListWidget'",
+                "ObjectPath": "/Script/DBDUIViewsCore"
+              }
+            }
+          },
+          "Offset": 10,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+            },
+            "Property": {
+              "Type": "ArrayProperty",
+              "Name": "CallFunc_GetAllChildren_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 16,
+              "PropertyFlags": "ReferenceParm | ContainsInstancedReference",
+              "Inner": {
+                "Type": "ObjectProperty",
+                "Name": "CallFunc_GetAllChildren_ReturnValue",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyFlags": "InstancedReference",
+                "PropertyClass": {
+                  "ObjectName": "Class'Widget'",
+                  "ObjectPath": "/Script/UMG"
+                }
+              }
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_FinalFunction",
+            "Function": {
+              "ObjectName": "Class'PanelWidget:GetAllChildren'",
+              "ObjectPath": "/Script/UMG"
+            },
+            "Parameters": []
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 858,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "CallFunc_Array_Length_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_ObjectConst",
+            "Value": {
+              "ObjectName": "Class'Default__KismetArrayLibrary'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          "Offset": 19,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "CallFunc_Array_Length_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_FinalFunction",
+            "Function": {
+              "ObjectName": "Class'KismetArrayLibrary:Array_Length'",
+              "ObjectPath": "/Script/Engine"
+            },
+            "Parameters": [
+              {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+                    "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+                  },
+                  "Property": {
+                    "Type": "ArrayProperty",
+                    "Name": "CallFunc_GetAllChildren_ReturnValue",
+                    "Flags": "RF_Public",
+                    "ElementSize": 16,
+                    "PropertyFlags": "ReferenceParm | ContainsInstancedReference",
+                    "Inner": {
+                      "Type": "ObjectProperty",
+                      "Name": "CallFunc_GetAllChildren_ReturnValue",
+                      "Flags": "RF_Public",
+                      "ElementSize": 8,
+                      "PropertyFlags": "InstancedReference",
+                      "PropertyClass": {
+                        "ObjectName": "Class'Widget'",
+                        "ObjectPath": "/Script/UMG"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 917,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "CallFunc_Subtract_IntInt_ReturnValue_2",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:Subtract_IntInt'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+                  "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+                },
+                "Property": {
+                  "Type": "IntProperty",
+                  "Name": "CallFunc_Array_Length_ReturnValue",
+                  "Flags": "RF_Public",
+                  "ElementSize": 4
+                }
+              }
+            },
+            {
+              "Inst": "EX_IntConst",
+              "Value": 1
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 959,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "Temp_int_Loop_Counter_Variable",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "CallFunc_Subtract_IntInt_ReturnValue_2",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 986,
+        "CodeOffset": 407,
+        "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget[407]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 991,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 993
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "PreConstruct",
+    "Outer": "WBP_CoreStoreCharmSlotListWidget_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget:PreConstruct'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "IsDesignTime",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LetValueOnPersistentFrame",
+        "StatementIndex": 0,
+        "DestinationProperty": {
+          "Owner": {
+            "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+            "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+          },
+          "Property": {
+            "Type": "BoolProperty",
+            "Name": "K2Node_Event_IsDesignTime",
+            "Flags": "RF_Public",
+            "ElementSize": 1,
+            "FieldSize": 1,
+            "ByteOffset": 0,
+            "ByteMask": 1,
+            "FieldMask": 255,
+            "BoolSize": 1,
+            "bIsNativeBool": true
+          }
+        },
+        "AssignmentExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:PreConstruct'",
+              "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.3"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "IsDesignTime",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 18,
+        "Function": {
+          "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+          "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 798
+          }
+        ],
+        "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget[798]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 33,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 35
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "GridPanel",
+    "Name": "GridPanel_3",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'GridPanel'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "GridSlot'WBP_CoreStoreCharmSlotListWidget_C:WidgetTree.GridPanel_3.GridSlot_4'",
+          "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.6"
+        },
+        {
+          "ObjectName": "GridSlot'WBP_CoreStoreCharmSlotListWidget_C:WidgetTree.GridPanel_3.GridSlot_3'",
+          "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.5"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'WBP_CoreStoreCharmSlotListWidget_C:WidgetTree.SizeBox_0.SizeBoxSlot_0'",
+        "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.9"
+      }
+    }
+  },
+  {
+    "Type": "GridSlot",
+    "Name": "GridSlot_3",
+    "Outer": "GridPanel_3",
+    "Class": "UScriptClass'GridSlot'",
+    "Properties": {
+      "Padding": {
+        "Left": 50.0,
+        "Top": 35.0,
+        "Right": 50.0
+      },
+      "Parent": {
+        "ObjectName": "GridPanel'WBP_CoreStoreCharmSlotListWidget_C:WidgetTree.GridPanel_3'",
+        "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.4"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'WBP_CoreStoreCharmSlotListWidget_C:WidgetTree.VerticalBox_2'",
+        "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.12"
+      }
+    }
+  },
+  {
+    "Type": "GridSlot",
+    "Name": "GridSlot_4",
+    "Outer": "GridPanel_3",
+    "Class": "UScriptClass'GridSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "GridPanel'WBP_CoreStoreCharmSlotListWidget_C:WidgetTree.GridPanel_3'",
+        "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.4"
+      },
+      "Content": {
+        "ObjectName": "DBDImage'WBP_CoreStoreCharmSlotListWidget_C:WidgetTree.BackgroundIMG'",
+        "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.0"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "CharmSlotsContainer",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WBP_CoreStoreCharmSlotListWidget_C:WidgetTree.VerticalBox_2.VerticalBoxSlot_2'",
+        "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.15"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_0",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'SizeBox'",
+    "Properties": {
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'WBP_CoreStoreCharmSlotListWidget_C:WidgetTree.SizeBox_0.SizeBoxSlot_0'",
+          "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.9"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "SizeBox_0",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Properties": {
+      "Padding": {
+        "Left": 5.0,
+        "Top": -12.0
+      },
+      "Parent": {
+        "ObjectName": "SizeBox'WBP_CoreStoreCharmSlotListWidget_C:WidgetTree.SizeBox_0'",
+        "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.8"
+      },
+      "Content": {
+        "ObjectName": "GridPanel'WBP_CoreStoreCharmSlotListWidget_C:WidgetTree.GridPanel_3'",
+        "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.4"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "BOTTOM_SPACER",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Spacer'",
+    "Properties": {
+      "Size": {
+        "X": 1.0,
+        "Y": 160.0
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WBP_CoreStoreCharmSlotListWidget_C:WidgetTree.VerticalBox_2.VerticalBoxSlot_3'",
+        "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.16"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "TITLE_SPACER",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Spacer'",
+    "Properties": {
+      "Size": {
+        "X": 1.0,
+        "Y": 50.0
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WBP_CoreStoreCharmSlotListWidget_C:WidgetTree.VerticalBox_2.VerticalBoxSlot_1'",
+        "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.14"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_2",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'VerticalBox'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'WBP_CoreStoreCharmSlotListWidget_C:WidgetTree.VerticalBox_2.VerticalBoxSlot_0'",
+          "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.13"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'WBP_CoreStoreCharmSlotListWidget_C:WidgetTree.VerticalBox_2.VerticalBoxSlot_1'",
+          "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.14"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'WBP_CoreStoreCharmSlotListWidget_C:WidgetTree.VerticalBox_2.VerticalBoxSlot_2'",
+          "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.15"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'WBP_CoreStoreCharmSlotListWidget_C:WidgetTree.VerticalBox_2.VerticalBoxSlot_3'",
+          "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.16"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "GridSlot'WBP_CoreStoreCharmSlotListWidget_C:WidgetTree.GridPanel_3.GridSlot_3'",
+        "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.5"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Outer": "VerticalBox_2",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Properties": {
+      "Padding": {
+        "Top": 3.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "Parent": {
+        "ObjectName": "VerticalBox'WBP_CoreStoreCharmSlotListWidget_C:WidgetTree.VerticalBox_2'",
+        "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.12"
+      },
+      "Content": {
+        "ObjectName": "DBDTextBlock'WBP_CoreStoreCharmSlotListWidget_C:WidgetTree.TitleTB'",
+        "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.1"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Outer": "VerticalBox_2",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'WBP_CoreStoreCharmSlotListWidget_C:WidgetTree.VerticalBox_2'",
+        "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.12"
+      },
+      "Content": {
+        "ObjectName": "Spacer'WBP_CoreStoreCharmSlotListWidget_C:WidgetTree.TITLE_SPACER'",
+        "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.11"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Outer": "VerticalBox_2",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Properties": {
+      "Padding": {
+        "Right": -25.0
+      },
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'WBP_CoreStoreCharmSlotListWidget_C:WidgetTree.VerticalBox_2'",
+        "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.12"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'WBP_CoreStoreCharmSlotListWidget_C:WidgetTree.CharmSlotsContainer'",
+        "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.7"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_3",
+    "Outer": "VerticalBox_2",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'WBP_CoreStoreCharmSlotListWidget_C:WidgetTree.VerticalBox_2'",
+        "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.12"
+      },
+      "Content": {
+        "ObjectName": "Spacer'WBP_CoreStoreCharmSlotListWidget_C:WidgetTree.BOTTOM_SPACER'",
+        "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.10"
+      }
+    }
+  },
+  {
+    "Type": "WBP_CoreStoreCharmSlotListWidget_C",
+    "Name": "Default__WBP_CoreStoreCharmSlotListWidget_C",
+    "Class": "WidgetBlueprintGeneratedClass'/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.WBP_CoreStoreCharmSlotListWidget_C'",
+    "Properties": {
+      "UberGraphFrame": {}
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WBP_CoreStoreCharmSlotListWidget_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WBP_CoreStoreCharmSlotListWidget_C:WidgetTree'",
+        "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.19"
+      },
+      "bClassRequiresNativeTick": true,
+      "UberGraphFunction": {
+        "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+        "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'CoreStoreCharmSlotListWidget'",
+      "ObjectPath": "/Script/DBDUIViewsCore"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:PreConstruct'",
+        "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.3"
+      },
+      {
+        "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+        "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BackgroundIMG",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'DBDImage'",
+          "ObjectPath": "/Script/DBDUIViewsCore"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget": {
+        "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:ExecuteUbergraph_WBP_CoreStoreCharmSlotListWidget'",
+        "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.2"
+      },
+      "PreConstruct": {
+        "ObjectName": "Function'WBP_CoreStoreCharmSlotListWidget_C:PreConstruct'",
+        "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.3"
+      }
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WBP_CoreStoreCharmSlotListWidget_C'Default__WBP_CoreStoreCharmSlotListWidget_C'",
+      "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.17"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "WBP_CoreStoreCharmSlotListWidget_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "SizeBox'WBP_CoreStoreCharmSlotListWidget_C:WidgetTree.SizeBox_0'",
+        "ObjectPath": "/DBDUICore/Store/Characters/WBP_CoreStoreCharmSlotListWidget.8"
+      }
+    }
+  }
+]

@@ -3,6 +3,7 @@
     "Type": "BodySetup",
     "Name": "BodySetup_1",
     "Outer": "Cube",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "AggGeom": {
         "BoxElems": [
@@ -28,49 +29,49 @@
         ]
       },
       "DefaultInstance": {
-        "ObjectType": "ECC_WorldStatic",
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
         "CollisionProfileName": "BlockAll",
         "CollisionResponses": {
           "ResponseArray": [
             {
               "Channel": "Interactable",
-              "Response": "ECR_Block"
+              "Response": "ECollisionResponse::ECR_Block"
             },
             {
               "Channel": "Slasher",
-              "Response": "ECR_Block"
+              "Response": "ECollisionResponse::ECR_Block"
             },
             {
               "Channel": "Blood",
-              "Response": "ECR_Block"
+              "Response": "ECollisionResponse::ECR_Block"
             },
             {
               "Channel": "InteractionDetector",
-              "Response": "ECR_Ignore"
+              "Response": "ECollisionResponse::ECR_Ignore"
             },
             {
               "Channel": "BlinkBlocker",
-              "Response": "ECR_Ignore"
+              "Response": "ECollisionResponse::ECR_Ignore"
             },
             {
               "Channel": "Ground",
-              "Response": "ECR_Ignore"
+              "Response": "ECollisionResponse::ECR_Ignore"
             },
             {
               "Channel": "Walkable",
-              "Response": "ECR_Block"
+              "Response": "ECollisionResponse::ECR_Block"
             }
           ]
         }
       }
     },
-    "BodySetupGuid": "CD2024A34BED374A71F8009AA6C3E9A6",
+    "BodySetupGuid": "A3D0A08F47B4EA33FC6B698D4EFEF81A",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
-        "ElementCount": 1537,
-        "SizeOnDisk": 1537,
-        "OffsetInFile": "0x3B04"
+        "BulkDataFlags": "BULKDATA_None",
+        "ElementCount": 4,
+        "SizeOnDisk": 0,
+        "OffsetInFile": "0x100001E07"
       }
     }
   },
@@ -78,63 +79,22 @@
     "Type": "NavCollision",
     "Name": "NavCollision_1",
     "Outer": "Cube",
-    "CookedFormatData": {
-      "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
-        "ElementCount": 265,
-        "SizeOnDisk": 265,
-        "OffsetInFile": "0x414D"
-      }
-    }
+    "Class": "UScriptClass'NavCollision'"
   },
   {
     "Type": "StaticMesh",
     "Name": "Cube",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
-      "MinLOD": {
-        "bCooked": true,
-        "Default": 0,
-        "Value": 0
-      },
-      "StaticMaterials": [
-        {
-          "MaterialInterface": {
-            "ObjectName": "Material WorldGridMaterial",
-            "ObjectPath": "Engine/Content/EngineMaterials/WorldGridMaterial.0"
-          },
-          "MaterialSlotName": "WorldGridMaterial",
-          "ImportedMaterialSlotName": "WorldGridMaterial",
-          "UVChannelData": {
-            "bInitialized": true,
-            "bOverrideDensities": false,
-            "LocalUVDensities": 100.0,
-            "LocalUVDensities": 356.3928,
-            "LocalUVDensities": 0.0,
-            "LocalUVDensities": 0.0
-          }
-        }
-      ],
-      "LightmapUVDensity": 356.3928,
-      "LightMapResolution": 64,
       "LightMapCoordinateIndex": 1,
-      "ExtendedBounds": {
-        "BoxExtent": {
-          "X": 50.0,
-          "Y": 50.0,
-          "Z": 50.0
-        },
-        "SphereRadius": 86.60254
-      }
+      "DistanceFieldSelfShadowBias": "NaN",
+      "BodySetup": null,
+      "LODForCollision": 0,
+      "bGlobalForceMipLevelsToBeResident": false
     },
-    "BodySetup": {
-      "ObjectName": "BodySetup Cube:BodySetup_1",
-      "ObjectPath": "Engine/Content/BasicShapes/Cube.0"
-    },
-    "NavCollision": {
-      "ObjectName": "NavCollision Cube:NavCollision_1",
-      "ObjectPath": "Engine/Content/BasicShapes/Cube.1"
-    },
-    "LightingGuid": "68A23EAF-49097757-525E7EBD-2F2C456C",
+    "BodySetup": null,
+    "NavCollision": null,
+    "LightingGuid": "00000000-00000000-00000000-00000000",
     "RenderData": null
   }
 ]

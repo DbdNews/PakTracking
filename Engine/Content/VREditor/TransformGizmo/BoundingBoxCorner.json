@@ -80,7 +80,80 @@
                 "Z": 0.56249976
               }
             ],
-            "IndexData": [],
+            "IndexData": [
+              9,
+              4,
+              5,
+              9,
+              8,
+              4,
+              1,
+              8,
+              0,
+              8,
+              6,
+              4,
+              2,
+              1,
+              0,
+              3,
+              2,
+              0,
+              11,
+              8,
+              1,
+              11,
+              1,
+              2,
+              13,
+              3,
+              0,
+              9,
+              5,
+              10,
+              13,
+              12,
+              3,
+              9,
+              10,
+              13,
+              12,
+              5,
+              6,
+              5,
+              4,
+              6,
+              12,
+              2,
+              3,
+              7,
+              6,
+              8,
+              13,
+              5,
+              12,
+              13,
+              10,
+              5,
+              9,
+              0,
+              8,
+              9,
+              13,
+              0,
+              11,
+              7,
+              8,
+              11,
+              2,
+              12,
+              11,
+              6,
+              7,
+              11,
+              12,
+              6
+            ],
             "ElemBox": {
               "Min": {
                 "X": -3.8489194,
@@ -123,50 +196,50 @@
         ]
       },
       "DefaultInstance": {
-        "ObjectType": "ECC_WorldStatic",
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
         "CollisionProfileName": "BlockAll",
         "CollisionResponses": {
           "ResponseArray": [
             {
               "Channel": "Interactable",
-              "Response": "ECR_Block"
+              "Response": "ECollisionResponse::ECR_Block"
             },
             {
               "Channel": "Slasher",
-              "Response": "ECR_Block"
+              "Response": "ECollisionResponse::ECR_Block"
             },
             {
               "Channel": "Blood",
-              "Response": "ECR_Block"
+              "Response": "ECollisionResponse::ECR_Block"
             },
             {
               "Channel": "InteractionDetector",
-              "Response": "ECR_Ignore"
+              "Response": "ECollisionResponse::ECR_Ignore"
             },
             {
               "Channel": "BlinkBlocker",
-              "Response": "ECR_Ignore"
+              "Response": "ECollisionResponse::ECR_Ignore"
             },
             {
               "Channel": "Ground",
-              "Response": "ECR_Ignore"
+              "Response": "ECollisionResponse::ECR_Ignore"
             },
             {
               "Channel": "Walkable",
-              "Response": "ECR_Block"
+              "Response": "ECollisionResponse::ECR_Block"
             }
           ]
         }
       },
-      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
     },
-    "BodySetupGuid": "8BCFCFC24E0DF8EF018F38A90F4EFBDA",
+    "BodySetupGuid": "928374604A404C3E8A9C1EA84902455C",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
-        "ElementCount": 1431,
-        "SizeOnDisk": 1431,
-        "OffsetInFile": "0x64A8"
+        "BulkDataFlags": "BULKDATA_None",
+        "ElementCount": 4,
+        "SizeOnDisk": 2,
+        "OffsetInFile": "0x3274"
       }
     }
   },
@@ -174,144 +247,21 @@
     "Type": "NavCollision",
     "Name": "NavCollision_3",
     "Outer": "BoundingBoxCorner",
-    "Class": "UScriptClass'NavCollision'",
-    "CookedFormatData": {
-      "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
-        "ElementCount": 889,
-        "SizeOnDisk": 889,
-        "OffsetInFile": "0x6A87"
-      }
-    }
+    "Class": "UScriptClass'NavCollision'"
   },
   {
     "Type": "StaticMesh",
     "Name": "BoundingBoxCorner",
     "Class": "UScriptClass'StaticMesh'",
     "Properties": {
-      "StaticMaterials": [
-        {
-          "MaterialInterface": {
-            "ObjectName": "Material'TransformGizmoMaterial'",
-            "ObjectPath": "Engine/Content/VREditor/TransformGizmo/TransformGizmoMaterial.0"
-          },
-          "MaterialSlotName": "TransformGizmoMaterial",
-          "ImportedMaterialSlotName": "Main",
-          "UVChannelData": {
-            "bInitialized": true,
-            "bOverrideDensities": false,
-            "LocalUVDensities": 3.9466724,
-            "LocalUVDensities": 0.0,
-            "LocalUVDensities": 0.0,
-            "LocalUVDensities": 0.0
-          }
-        },
-        {
-          "MaterialInterface": {
-            "ObjectName": "Material'TranslucentTransformGizmoMaterial'",
-            "ObjectPath": "Engine/Content/VREditor/TransformGizmo/TranslucentTransformGizmoMaterial.0"
-          },
-          "MaterialSlotName": "TranslucentTransformGizmoMaterial",
-          "ImportedMaterialSlotName": "Xray",
-          "UVChannelData": {
-            "bInitialized": true,
-            "bOverrideDensities": false,
-            "LocalUVDensities": 3.9466724,
-            "LocalUVDensities": 0.0,
-            "LocalUVDensities": 0.0,
-            "LocalUVDensities": 0.0
-          }
-        }
-      ],
-      "LightmapUVDensity": 3.9466724,
-      "LightMapResolution": 64,
-      "ExtendedBounds": {
-        "BoxExtent": {
-          "X": 3.7489195,
-          "Y": 3.7500207,
-          "Z": 3.7506564
-        },
-        "SphereRadius": 6.385936
-      }
+      "LightMapCoordinateIndex": 2,
+      "DistanceFieldSelfShadowBias": "NaN",
+      "BodySetup": null,
+      "bGlobalForceMipLevelsToBeResident": false
     },
-    "BodySetup": {
-      "ObjectName": "BodySetup'BoundingBoxCorner:BodySetup_0'",
-      "ObjectPath": "Engine/Content/VREditor/TransformGizmo/BoundingBoxCorner.0"
-    },
-    "NavCollision": {
-      "ObjectName": "NavCollision'BoundingBoxCorner:NavCollision_3'",
-      "ObjectPath": "Engine/Content/VREditor/TransformGizmo/BoundingBoxCorner.1"
-    },
-    "LightingGuid": "F7BD0228-4C6D976A-C498D7A8-3676E2FB",
-    "RenderData": {
-      "LODs": [
-        {
-          "Sections": [
-            {
-              "MaterialIndex": 0,
-              "FirstIndex": 0,
-              "NumTriangles": 86,
-              "MinVertexIndex": 0,
-              "MaxVertexIndex": 157,
-              "bEnableCollision": true,
-              "bCastShadow": true,
-              "bForceOpaque": false,
-              "bVisibleInRayTracing": true
-            },
-            {
-              "MaterialIndex": 1,
-              "FirstIndex": 258,
-              "NumTriangles": 86,
-              "MinVertexIndex": 0,
-              "MaxVertexIndex": 157,
-              "bEnableCollision": true,
-              "bCastShadow": true,
-              "bForceOpaque": false,
-              "bVisibleInRayTracing": true
-            }
-          ],
-          "MaxDeviation": 0.0,
-          "PositionVertexBuffer": {
-            "Stride": 12,
-            "NumVertices": 158
-          },
-          "VertexBuffer": {
-            "NumTexCoords": 1,
-            "NumVertices": 158,
-            "Strides": -1,
-            "UseHighPrecisionTangentBasis": false,
-            "UseFullPrecisionUVs": false
-          },
-          "ColorVertexBuffer": {
-            "Stride": 0,
-            "NumVertices": 0
-          }
-        }
-      ],
-      "Bounds": {
-        "Origin": {
-          "X": 0.0,
-          "Y": 0.0,
-          "Z": 0.0
-        },
-        "BoxExtent": {
-          "X": 3.7489195,
-          "Y": 3.7500207,
-          "Z": 3.7506564
-        },
-        "SphereRadius": 6.385936
-      },
-      "bLODsShareStaticLighting": true,
-      "ScreenSize": [
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ]
-    }
+    "BodySetup": null,
+    "NavCollision": null,
+    "LightingGuid": "00000000-00000000-00000000-00000000",
+    "RenderData": null
   }
 ]

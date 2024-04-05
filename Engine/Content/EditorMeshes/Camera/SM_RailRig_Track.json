@@ -6,49 +6,49 @@
     "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "DefaultInstance": {
-        "ObjectType": "ECC_WorldStatic",
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
         "CollisionProfileName": "BlockAll",
         "CollisionResponses": {
           "ResponseArray": [
             {
               "Channel": "Interactable",
-              "Response": "ECR_Block"
+              "Response": "ECollisionResponse::ECR_Block"
             },
             {
               "Channel": "Slasher",
-              "Response": "ECR_Block"
+              "Response": "ECollisionResponse::ECR_Block"
             },
             {
               "Channel": "Blood",
-              "Response": "ECR_Block"
+              "Response": "ECollisionResponse::ECR_Block"
             },
             {
               "Channel": "InteractionDetector",
-              "Response": "ECR_Ignore"
+              "Response": "ECollisionResponse::ECR_Ignore"
             },
             {
               "Channel": "BlinkBlocker",
-              "Response": "ECR_Ignore"
+              "Response": "ECollisionResponse::ECR_Ignore"
             },
             {
               "Channel": "Ground",
-              "Response": "ECR_Ignore"
+              "Response": "ECollisionResponse::ECR_Ignore"
             },
             {
               "Channel": "Walkable",
-              "Response": "ECR_Block"
+              "Response": "ECollisionResponse::ECR_Block"
             }
           ]
         }
       }
     },
-    "BodySetupGuid": "0EAA33D84B2C00A4EF99379D6181F75A",
+    "BodySetupGuid": "F6F916844EC74A177C030A8FBE570E82",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
-        "ElementCount": 35049,
-        "SizeOnDisk": 35049,
-        "OffsetInFile": "0x21D60"
+        "BulkDataFlags": "BULKDATA_None",
+        "ElementCount": 4,
+        "SizeOnDisk": 0,
+        "OffsetInFile": "0x100020FAC"
       }
     }
   },
@@ -56,123 +56,22 @@
     "Type": "NavCollision",
     "Name": "NavCollision_1",
     "Outer": "SM_RailRig_Track",
-    "Class": "UScriptClass'NavCollision'",
-    "CookedFormatData": {
-      "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
-        "ElementCount": 21,
-        "SizeOnDisk": 21,
-        "OffsetInFile": "0x2A691"
-      }
-    }
+    "Class": "UScriptClass'NavCollision'"
   },
   {
     "Type": "StaticMesh",
     "Name": "SM_RailRig_Track",
     "Class": "UScriptClass'StaticMesh'",
     "Properties": {
-      "StaticMaterials": [
-        {
-          "MaterialInterface": {
-            "ObjectName": "MaterialInstanceConstant'MI_CineMat_Rig'",
-            "ObjectPath": "Engine/Content/EditorMaterials/Camera/MI_CineMat_Rig.0"
-          },
-          "MaterialSlotName": "MI_CineMat_Rig",
-          "ImportedMaterialSlotName": "MI_CineMat_Rig",
-          "UVChannelData": {
-            "bInitialized": true,
-            "bOverrideDensities": false,
-            "LocalUVDensities": 43.407047,
-            "LocalUVDensities": 81.01163,
-            "LocalUVDensities": 0.0,
-            "LocalUVDensities": 0.0
-          }
-        }
-      ],
-      "LightmapUVDensity": 81.01163,
-      "LightMapResolution": 64,
       "LightMapCoordinateIndex": 1,
-      "ExtendedBounds": {
-        "Origin": {
-          "X": -0.41309738,
-          "Y": -0.010063648,
-          "Z": 24.216694
-        },
-        "BoxExtent": {
-          "X": 24.40374,
-          "Y": 4.0012503,
-          "Z": 37.87151
-        },
-        "SphereRadius": 45.053234
-      }
+      "DistanceFieldSelfShadowBias": "NaN",
+      "BodySetup": null,
+      "LODForCollision": 0,
+      "bGlobalForceMipLevelsToBeResident": false
     },
-    "BodySetup": {
-      "ObjectName": "BodySetup'SM_RailRig_Track:BodySetup_0'",
-      "ObjectPath": "Engine/Content/EditorMeshes/Camera/SM_RailRig_Track.0"
-    },
-    "NavCollision": {
-      "ObjectName": "NavCollision'SM_RailRig_Track:NavCollision_1'",
-      "ObjectPath": "Engine/Content/EditorMeshes/Camera/SM_RailRig_Track.1"
-    },
-    "LightingGuid": "87EF0A6F-47783B5D-3040AD85-C8964252",
-    "RenderData": {
-      "LODs": [
-        {
-          "Sections": [
-            {
-              "MaterialIndex": 0,
-              "FirstIndex": 0,
-              "NumTriangles": 1488,
-              "MinVertexIndex": 0,
-              "MaxVertexIndex": 861,
-              "bEnableCollision": true,
-              "bCastShadow": true,
-              "bForceOpaque": false,
-              "bVisibleInRayTracing": true
-            }
-          ],
-          "MaxDeviation": 0.0,
-          "PositionVertexBuffer": {
-            "Stride": 12,
-            "NumVertices": 862
-          },
-          "VertexBuffer": {
-            "NumTexCoords": 2,
-            "NumVertices": 862,
-            "Strides": -1,
-            "UseHighPrecisionTangentBasis": false,
-            "UseFullPrecisionUVs": false
-          },
-          "ColorVertexBuffer": {
-            "Stride": 0,
-            "NumVertices": 0
-          }
-        }
-      ],
-      "Bounds": {
-        "Origin": {
-          "X": -0.41309738,
-          "Y": -0.010063648,
-          "Z": 24.216694
-        },
-        "BoxExtent": {
-          "X": 24.40374,
-          "Y": 4.0012503,
-          "Z": 37.87151
-        },
-        "SphereRadius": 45.053234
-      },
-      "bLODsShareStaticLighting": true,
-      "ScreenSize": [
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ]
-    }
+    "BodySetup": null,
+    "NavCollision": null,
+    "LightingGuid": "00000000-00000000-00000000-00000000",
+    "RenderData": null
   }
 ]

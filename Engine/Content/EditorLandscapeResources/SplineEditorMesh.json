@@ -1,0 +1,77 @@
+[
+  {
+    "Type": "BodySetup",
+    "Name": "BodySetup_4",
+    "Outer": "SplineEditorMesh",
+    "Class": "UScriptClass'BodySetup'",
+    "Properties": {
+      "DefaultInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Interactable",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "Slasher",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "Blood",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "InteractionDetector",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "BlinkBlocker",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Ground",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Walkable",
+              "Response": "ECollisionResponse::ECR_Block"
+            }
+          ]
+        }
+      },
+      "PhysicsType": "EPhysicsType::PhysType_Kinematic"
+    },
+    "BodySetupGuid": "EA5BF5A2465C94F4425BB285C14D14BB"
+  },
+  {
+    "Type": "NavCollision",
+    "Name": "NavCollision_0",
+    "Outer": "SplineEditorMesh",
+    "Class": "UScriptClass'NavCollision'",
+    "CookedFormatData": {
+      "NavCollision_Chaos": {
+        "BulkDataFlags": "BULKDATA_None",
+        "ElementCount": 1,
+        "SizeOnDisk": 0,
+        "OffsetInFile": "0x10FF"
+      }
+    }
+  },
+  {
+    "Type": "StaticMesh",
+    "Name": "SplineEditorMesh",
+    "Class": "UScriptClass'StaticMesh'",
+    "Properties": {
+      "LightMapCoordinateIndex": 1,
+      "DistanceFieldSelfShadowBias": "NaN",
+      "BodySetup": null,
+      "bGlobalForceMipLevelsToBeResident": false
+    },
+    "BodySetup": null,
+    "NavCollision": null,
+    "LightingGuid": "00000000-00000000-00000000-00000000",
+    "RenderData": null
+  }
+]

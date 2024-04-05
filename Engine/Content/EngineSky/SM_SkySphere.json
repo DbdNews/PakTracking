@@ -3,108 +3,76 @@
     "Type": "BodySetup",
     "Name": "RB_BodySetup_7",
     "Outer": "SM_SkySphere",
+    "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "DefaultInstance": {
-        "ObjectType": "ECC_WorldStatic",
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
         "CollisionProfileName": "BlockAll",
         "CollisionResponses": {
           "ResponseArray": [
             {
               "Channel": "Interactable",
-              "Response": "ECR_Block"
+              "Response": "ECollisionResponse::ECR_Block"
             },
             {
               "Channel": "Slasher",
-              "Response": "ECR_Block"
+              "Response": "ECollisionResponse::ECR_Block"
             },
             {
               "Channel": "Blood",
-              "Response": "ECR_Block"
+              "Response": "ECollisionResponse::ECR_Block"
             },
             {
               "Channel": "InteractionDetector",
-              "Response": "ECR_Ignore"
+              "Response": "ECollisionResponse::ECR_Ignore"
             },
             {
               "Channel": "BlinkBlocker",
-              "Response": "ECR_Ignore"
+              "Response": "ECollisionResponse::ECR_Ignore"
             },
             {
               "Channel": "Ground",
-              "Response": "ECR_Ignore"
+              "Response": "ECollisionResponse::ECR_Ignore"
             },
             {
               "Channel": "Walkable",
-              "Response": "ECR_Block"
+              "Response": "ECollisionResponse::ECR_Block"
             }
           ]
         }
       },
-      "PhysicsType": "PhysType_Kinematic"
+      "PhysicsType": "EPhysicsType::PhysType_Kinematic"
     },
-    "BodySetupGuid": "D6D4EEDA479FBA0D2E1E24B29A5C2E6A"
+    "BodySetupGuid": "7B9E45DF4F790411B55DDFA0AC40125E"
   },
   {
     "Type": "NavCollision",
     "Name": "NavCollision_9",
     "Outer": "SM_SkySphere",
+    "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
-      "NavCollision_X": {
-        "BulkDataFlags": "BULKDATA_ForceInlinePayload",
-        "ElementCount": 21,
-        "SizeOnDisk": 21,
-        "OffsetInFile": "0x3F98B"
+      "NavCollision_Chaos": {
+        "BulkDataFlags": "BULKDATA_None",
+        "ElementCount": 1,
+        "SizeOnDisk": 0,
+        "OffsetInFile": "0x26C23"
       }
     }
   },
   {
     "Type": "StaticMesh",
     "Name": "SM_SkySphere",
+    "Class": "UScriptClass'StaticMesh'",
     "Properties": {
-      "MinLOD": {
-        "bCooked": true,
-        "Default": 0,
-        "Value": 0
-      },
-      "StaticMaterials": [
-        {
-          "MaterialInterface": {
-            "ObjectName": "Material M_Sky_Panning_Clouds2",
-            "ObjectPath": "Engine/Content/EngineSky/M_Sky_Panning_Clouds2.0"
-          },
-          "MaterialSlotName": "M_Sky_Panning_Clouds2",
-          "ImportedMaterialSlotName": "M_Sky_Panning_Clouds2",
-          "UVChannelData": {
-            "bInitialized": true,
-            "bOverrideDensities": false,
-            "LocalUVDensities": 10800.838,
-            "LocalUVDensities": 17127.469,
-            "LocalUVDensities": 0.0,
-            "LocalUVDensities": 0.0
-          }
-        }
-      ],
-      "LightmapUVDensity": 17127.469,
-      "LightMapResolution": 32,
       "LightMapCoordinateIndex": 1,
-      "ExtendedBounds": {
-        "BoxExtent": {
-          "X": 4096.0,
-          "Y": 4096.0,
-          "Z": 4096.0
-        },
-        "SphereRadius": 4096.0005
-      }
+      "DistanceFieldSelfShadowBias": "NaN",
+      "BodySetup": null,
+      "LODForCollision": 0,
+      "bGlobalForceMipLevelsToBeResident": false
     },
-    "BodySetup": {
-      "ObjectName": "BodySetup SM_SkySphere:RB_BodySetup_7",
-      "ObjectPath": "Engine/Content/EngineSky/SM_SkySphere.0"
-    },
-    "NavCollision": {
-      "ObjectName": "NavCollision SM_SkySphere:NavCollision_9",
-      "ObjectPath": "Engine/Content/EngineSky/SM_SkySphere.1"
-    },
-    "LightingGuid": "9B503771-4AC2B993-E7B084A6-8FE79E56",
+    "BodySetup": null,
+    "NavCollision": null,
+    "LightingGuid": "00000000-00000000-00000000-00000000",
     "RenderData": null
   }
 ]

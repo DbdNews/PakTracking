@@ -1,0 +1,1661 @@
+[
+  {
+    "Type": "DBDImage",
+    "Name": "FirstPurchaseBackground",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'DBDImage'"
+  },
+  {
+    "Type": "DBDImage",
+    "Name": "FirstPurchaseIconImage",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'DBDImage'"
+  },
+  {
+    "Type": "DBDTextBlock",
+    "Name": "FirstPurchaseDescriptionTextBlock",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'DBDTextBlock'"
+  },
+  {
+    "Type": "DBDTextBlock",
+    "Name": "FirstPurchaseTitleTextBlock",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'DBDTextBlock'"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetFirstPurchaseData",
+    "Outer": "WBP_CoreAuricCellsFirstPurchaseBanner_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "FirstPurchaseData",
+        "Flags": "RF_Public",
+        "ElementSize": 104,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'AuricCellsFirstPurchaseViewData'",
+          "ObjectPath": "/Script/DBDUIViewInterfaces"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Now_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'DateTime'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_DateTimeDateTime_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_TimerFlagViewData",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "Struct": {
+          "ObjectName": "Class'TimerFlagViewData'",
+          "ObjectPath": "/Script/DBDUIViewInterfaces"
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_StringToText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_StringToText_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'Widget'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 0,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreAuricCellsFirstPurchaseBanner_C:SetFirstPurchaseData'",
+              "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.4"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "Temp_bool_Variable",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_StructMemberContext",
+          "Property": {
+            "Path": [
+              "IsFirstPurchase"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Class'AuricCellsFirstPurchaseViewData'",
+              "ObjectPath": "/Script/DBDUIViewInterfaces"
+            }
+          },
+          "StructExpression": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'WBP_CoreAuricCellsFirstPurchaseBanner_C:SetFirstPurchaseData'",
+                "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.4"
+              },
+              "Property": {
+                "Type": "StructProperty",
+                "Name": "FirstPurchaseData",
+                "Flags": "RF_Public",
+                "ElementSize": 104,
+                "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+                "Struct": {
+                  "ObjectName": "Class'AuricCellsFirstPurchaseViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 28,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreAuricCellsFirstPurchaseBanner_C'",
+              "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.16"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "FlagSwitcher",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+              "PropertyClass": {
+                "ObjectName": "Class'WidgetSwitcher'",
+                "ObjectPath": "/Script/UMG"
+              }
+            }
+          }
+        },
+        "Offset": 67,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "SetActiveWidget",
+          "Parameters": [
+            {
+              "Inst": "EX_SwitchValue",
+              "IndexTerm": {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'WBP_CoreAuricCellsFirstPurchaseBanner_C:SetFirstPurchaseData'",
+                    "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.4"
+                  },
+                  "Property": {
+                    "Type": "BoolProperty",
+                    "Name": "Temp_bool_Variable",
+                    "Flags": "RF_Public",
+                    "ElementSize": 1,
+                    "FieldSize": 1,
+                    "ByteOffset": 0,
+                    "ByteMask": 1,
+                    "FieldMask": 255,
+                    "BoolSize": 1,
+                    "bIsNativeBool": true
+                  }
+                }
+              },
+              "EndGotoOffset": 116,
+              "Cases": [
+                {
+                  "CaseIndexValueTerm": {
+                    "Inst": "EX_False"
+                  },
+                  "NextOffset": 93,
+                  "CaseTerm": {
+                    "Inst": "EX_InstanceVariable",
+                    "Variable": {
+                      "Owner": {
+                        "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreAuricCellsFirstPurchaseBanner_C'",
+                        "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.16"
+                      },
+                      "Property": {
+                        "Type": "ObjectProperty",
+                        "Name": "WBP_CoreOwnedTag",
+                        "Flags": "RF_Public | RF_LoadCompleted",
+                        "ElementSize": 8,
+                        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+                        "PropertyClass": {
+                          "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreOwnedTag_C'",
+                          "ObjectPath": "/DBDUICore/Common/WBP_CoreOwnedTag.6"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "CaseIndexValueTerm": {
+                    "Inst": "EX_True"
+                  },
+                  "NextOffset": 107,
+                  "CaseTerm": {
+                    "Inst": "EX_InstanceVariable",
+                    "Variable": {
+                      "Owner": {
+                        "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreAuricCellsFirstPurchaseBanner_C'",
+                        "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.16"
+                      },
+                      "Property": {
+                        "Type": "ObjectProperty",
+                        "Name": "WBP_CoreTimerFlag",
+                        "Flags": "RF_Public | RF_LoadCompleted",
+                        "ElementSize": 8,
+                        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+                        "PropertyClass": {
+                          "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreTimerFlag_C'",
+                          "ObjectPath": "/DBDUICore/Common/WBP_CoreTimerFlag.16"
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "DefaultTerm": {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'WBP_CoreAuricCellsFirstPurchaseBanner_C:SetFirstPurchaseData'",
+                    "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.4"
+                  },
+                  "Property": {
+                    "Type": "ObjectProperty",
+                    "Name": "K2Node_Select_Default",
+                    "Flags": "RF_Public",
+                    "ElementSize": 8,
+                    "PropertyFlags": "InstancedReference",
+                    "PropertyClass": {
+                      "ObjectName": "Class'Widget'",
+                      "ObjectPath": "/Script/UMG"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_CallMath",
+        "StatementIndex": 117,
+        "Function": {
+          "ObjectName": "Class'CoreCommonUIUtils:SetConditionalWidgetVisibility'",
+          "ObjectPath": "/Script/CoreCommonUIUtils"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_InstanceVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreAuricCellsFirstPurchaseBanner_C'",
+                "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.16"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "FirstPurchaseDescriptionTextBlock",
+                "Flags": "RF_Public | RF_LoadCompleted",
+                "ElementSize": 8,
+                "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+                "PropertyClass": {
+                  "ObjectName": "Class'DBDTextBlock'",
+                  "ObjectPath": "/Script/DBDUIViewsCore"
+                }
+              }
+            }
+          },
+          {
+            "Inst": "EX_StructMemberContext",
+            "Property": {
+              "Path": [
+                "IsFirstPurchase"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'AuricCellsFirstPurchaseViewData'",
+                "ObjectPath": "/Script/DBDUIViewInterfaces"
+              }
+            },
+            "StructExpression": {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_CoreAuricCellsFirstPurchaseBanner_C:SetFirstPurchaseData'",
+                  "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.4"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "FirstPurchaseData",
+                  "Flags": "RF_Public",
+                  "ElementSize": 104,
+                  "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+                  "Struct": {
+                    "ObjectName": "Class'AuricCellsFirstPurchaseViewData'",
+                    "ObjectPath": "/Script/DBDUIViewInterfaces"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "Inst": "EX_ByteConst",
+            "Value": 4
+          },
+          {
+            "Inst": "EX_ByteConst",
+            "Value": 1
+          }
+        ]
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 158,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreAuricCellsFirstPurchaseBanner_C:SetFirstPurchaseData'",
+              "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.4"
+            },
+            "Property": {
+              "Type": "TextProperty",
+              "Name": "CallFunc_Conv_StringToText_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 24
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetTextLibrary:Conv_StringToText'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_StructMemberContext",
+              "Property": {
+                "Path": [
+                  "Description"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'AuricCellsFirstPurchaseViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              },
+              "StructExpression": {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'WBP_CoreAuricCellsFirstPurchaseBanner_C:SetFirstPurchaseData'",
+                    "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.4"
+                  },
+                  "Property": {
+                    "Type": "StructProperty",
+                    "Name": "FirstPurchaseData",
+                    "Flags": "RF_Public",
+                    "ElementSize": 104,
+                    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+                    "Struct": {
+                      "ObjectName": "Class'AuricCellsFirstPurchaseViewData'",
+                      "ObjectPath": "/Script/DBDUIViewInterfaces"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 204,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreAuricCellsFirstPurchaseBanner_C'",
+              "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.16"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "FirstPurchaseDescriptionTextBlock",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+              "PropertyClass": {
+                "ObjectName": "Class'DBDTextBlock'",
+                "ObjectPath": "/Script/DBDUIViewsCore"
+              }
+            }
+          }
+        },
+        "Offset": 23,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "SetText",
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_CoreAuricCellsFirstPurchaseBanner_C:SetFirstPurchaseData'",
+                  "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.4"
+                },
+                "Property": {
+                  "Type": "TextProperty",
+                  "Name": "CallFunc_Conv_StringToText_ReturnValue",
+                  "Flags": "RF_Public",
+                  "ElementSize": 24
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 249,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreAuricCellsFirstPurchaseBanner_C'",
+              "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.16"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "FirstPurchaseIconImage",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+              "PropertyClass": {
+                "ObjectName": "Class'DBDImage'",
+                "ObjectPath": "/Script/DBDUIViewsCore"
+              }
+            }
+          }
+        },
+        "Offset": 33,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "SetBrushFromSoftTexture",
+          "Parameters": [
+            {
+              "Inst": "EX_StructMemberContext",
+              "Property": {
+                "Path": [
+                  "IconTexture"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'AuricCellsFirstPurchaseViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              },
+              "StructExpression": {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'WBP_CoreAuricCellsFirstPurchaseBanner_C:SetFirstPurchaseData'",
+                    "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.4"
+                  },
+                  "Property": {
+                    "Type": "StructProperty",
+                    "Name": "FirstPurchaseData",
+                    "Flags": "RF_Public",
+                    "ElementSize": 104,
+                    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+                    "Struct": {
+                      "ObjectName": "Class'AuricCellsFirstPurchaseViewData'",
+                      "ObjectPath": "/Script/DBDUIViewInterfaces"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_False"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 304,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreAuricCellsFirstPurchaseBanner_C:SetFirstPurchaseData'",
+              "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.4"
+            },
+            "Property": {
+              "Type": "TextProperty",
+              "Name": "CallFunc_Conv_StringToText_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 24
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetTextLibrary:Conv_StringToText'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_StructMemberContext",
+              "Property": {
+                "Path": [
+                  "Title"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'AuricCellsFirstPurchaseViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              },
+              "StructExpression": {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'WBP_CoreAuricCellsFirstPurchaseBanner_C:SetFirstPurchaseData'",
+                    "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.4"
+                  },
+                  "Property": {
+                    "Type": "StructProperty",
+                    "Name": "FirstPurchaseData",
+                    "Flags": "RF_Public",
+                    "ElementSize": 104,
+                    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+                    "Struct": {
+                      "ObjectName": "Class'AuricCellsFirstPurchaseViewData'",
+                      "ObjectPath": "/Script/DBDUIViewInterfaces"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 350,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreAuricCellsFirstPurchaseBanner_C'",
+              "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.16"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "FirstPurchaseTitleTextBlock",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+              "PropertyClass": {
+                "ObjectName": "Class'DBDTextBlock'",
+                "ObjectPath": "/Script/DBDUIViewsCore"
+              }
+            }
+          }
+        },
+        "Offset": 23,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "SetText",
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_CoreAuricCellsFirstPurchaseBanner_C:SetFirstPurchaseData'",
+                  "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.4"
+                },
+                "Property": {
+                  "Type": "TextProperty",
+                  "Name": "CallFunc_Conv_StringToText_ReturnValue_1",
+                  "Flags": "RF_Public",
+                  "ElementSize": 24
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 395,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreAuricCellsFirstPurchaseBanner_C:SetFirstPurchaseData'",
+              "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.4"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_Now_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "Struct": {
+                "ObjectName": "Class'DateTime'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:Now'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": []
+        }
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 423,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreAuricCellsFirstPurchaseBanner_C:SetFirstPurchaseData'",
+              "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.4"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_Less_DateTimeDateTime_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:Less_DateTimeDateTime'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_StructMemberContext",
+              "Property": {
+                "Path": [
+                  "EndDate"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'AuricCellsFirstPurchaseViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              },
+              "StructExpression": {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'WBP_CoreAuricCellsFirstPurchaseBanner_C:SetFirstPurchaseData'",
+                    "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.4"
+                  },
+                  "Property": {
+                    "Type": "StructProperty",
+                    "Name": "FirstPurchaseData",
+                    "Flags": "RF_Public",
+                    "ElementSize": 104,
+                    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+                    "Struct": {
+                      "ObjectName": "Class'AuricCellsFirstPurchaseViewData'",
+                      "ObjectPath": "/Script/DBDUIViewInterfaces"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_CoreAuricCellsFirstPurchaseBanner_C:SetFirstPurchaseData'",
+                  "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.4"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "CallFunc_Now_ReturnValue",
+                  "Flags": "RF_Public",
+                  "ElementSize": 8,
+                  "Struct": {
+                    "ObjectName": "Class'DateTime'",
+                    "ObjectPath": "/Script/CoreUObject"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_JumpIfNot",
+        "StatementIndex": 470,
+        "CodeOffset": 527,
+        "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.SetFirstPurchaseData[527]",
+        "BooleanExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreAuricCellsFirstPurchaseBanner_C:SetFirstPurchaseData'",
+              "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.4"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_Less_DateTimeDateTime_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 484,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreAuricCellsFirstPurchaseBanner_C'",
+              "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.16"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "WBP_CoreTimerFlag",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+              "PropertyClass": {
+                "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreTimerFlag_C'",
+                "ObjectPath": "/DBDUICore/Common/WBP_CoreTimerFlag.16"
+              }
+            }
+          }
+        },
+        "Offset": 16,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "SetVisibility",
+          "Parameters": [
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 1
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 522,
+        "CodeOffset": 852,
+        "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.SetFirstPurchaseData[852]"
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 527,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreAuricCellsFirstPurchaseBanner_C'",
+              "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.16"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "WBP_CoreTimerFlag",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+              "PropertyClass": {
+                "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreTimerFlag_C'",
+                "ObjectPath": "/DBDUICore/Common/WBP_CoreTimerFlag.16"
+              }
+            }
+          }
+        },
+        "Offset": 16,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "SetVisibility",
+          "Parameters": [
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 3
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 565,
+        "Variable": {
+          "Inst": "EX_StructMemberContext",
+          "Property": {
+            "Path": [
+              "FlagType"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Class'TimerFlagViewData'",
+              "ObjectPath": "/Script/DBDUIViewInterfaces"
+            }
+          },
+          "StructExpression": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'WBP_CoreAuricCellsFirstPurchaseBanner_C:SetFirstPurchaseData'",
+                "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.4"
+              },
+              "Property": {
+                "Type": "StructProperty",
+                "Name": "K2Node_MakeStruct_TimerFlagViewData",
+                "Flags": "RF_Public",
+                "ElementSize": 48,
+                "Struct": {
+                  "ObjectName": "Class'TimerFlagViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_ByteConst",
+          "Value": 1
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 594,
+        "Variable": {
+          "Inst": "EX_StructMemberContext",
+          "Property": {
+            "Path": [
+              "FlagSize"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Class'TimerFlagViewData'",
+              "ObjectPath": "/Script/DBDUIViewInterfaces"
+            }
+          },
+          "StructExpression": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'WBP_CoreAuricCellsFirstPurchaseBanner_C:SetFirstPurchaseData'",
+                "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.4"
+              },
+              "Property": {
+                "Type": "StructProperty",
+                "Name": "K2Node_MakeStruct_TimerFlagViewData",
+                "Flags": "RF_Public",
+                "ElementSize": 48,
+                "Struct": {
+                  "ObjectName": "Class'TimerFlagViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_ByteConst",
+          "Value": 1
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 623,
+        "Variable": {
+          "Inst": "EX_StructMemberContext",
+          "Property": {
+            "Path": [
+              "ItemType"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Class'TimerFlagViewData'",
+              "ObjectPath": "/Script/DBDUIViewInterfaces"
+            }
+          },
+          "StructExpression": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'WBP_CoreAuricCellsFirstPurchaseBanner_C:SetFirstPurchaseData'",
+                "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.4"
+              },
+              "Property": {
+                "Type": "StructProperty",
+                "Name": "K2Node_MakeStruct_TimerFlagViewData",
+                "Flags": "RF_Public",
+                "ElementSize": 48,
+                "Struct": {
+                  "ObjectName": "Class'TimerFlagViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_ByteConst",
+          "Value": 2
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 652,
+        "Variable": {
+          "Inst": "EX_StructMemberContext",
+          "Property": {
+            "Path": [
+              "TimerText"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Class'TimerFlagViewData'",
+              "ObjectPath": "/Script/DBDUIViewInterfaces"
+            }
+          },
+          "StructExpression": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'WBP_CoreAuricCellsFirstPurchaseBanner_C:SetFirstPurchaseData'",
+                "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.4"
+              },
+              "Property": {
+                "Type": "StructProperty",
+                "Name": "K2Node_MakeStruct_TimerFlagViewData",
+                "Flags": "RF_Public",
+                "ElementSize": 48,
+                "Struct": {
+                  "ObjectName": "Class'TimerFlagViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_StringConst",
+          "Value": ""
+        }
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 681,
+        "Variable": {
+          "Inst": "EX_StructMemberContext",
+          "Property": {
+            "Path": [
+              "ShouldTick"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Class'TimerFlagViewData'",
+              "ObjectPath": "/Script/DBDUIViewInterfaces"
+            }
+          },
+          "StructExpression": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'WBP_CoreAuricCellsFirstPurchaseBanner_C:SetFirstPurchaseData'",
+                "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.4"
+              },
+              "Property": {
+                "Type": "StructProperty",
+                "Name": "K2Node_MakeStruct_TimerFlagViewData",
+                "Flags": "RF_Public",
+                "ElementSize": 48,
+                "Struct": {
+                  "ObjectName": "Class'TimerFlagViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_True"
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 701,
+        "Variable": {
+          "Inst": "EX_StructMemberContext",
+          "Property": {
+            "Path": [
+              "EndDate"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Class'TimerFlagViewData'",
+              "ObjectPath": "/Script/DBDUIViewInterfaces"
+            }
+          },
+          "StructExpression": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'WBP_CoreAuricCellsFirstPurchaseBanner_C:SetFirstPurchaseData'",
+                "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.4"
+              },
+              "Property": {
+                "Type": "StructProperty",
+                "Name": "K2Node_MakeStruct_TimerFlagViewData",
+                "Flags": "RF_Public",
+                "ElementSize": 48,
+                "Struct": {
+                  "ObjectName": "Class'TimerFlagViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_StructMemberContext",
+          "Property": {
+            "Path": [
+              "EndDate"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Class'AuricCellsFirstPurchaseViewData'",
+              "ObjectPath": "/Script/DBDUIViewInterfaces"
+            }
+          },
+          "StructExpression": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'WBP_CoreAuricCellsFirstPurchaseBanner_C:SetFirstPurchaseData'",
+                "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.4"
+              },
+              "Property": {
+                "Type": "StructProperty",
+                "Name": "FirstPurchaseData",
+                "Flags": "RF_Public",
+                "ElementSize": 104,
+                "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+                "Struct": {
+                  "ObjectName": "Class'AuricCellsFirstPurchaseViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 746,
+        "Variable": {
+          "Inst": "EX_StructMemberContext",
+          "Property": {
+            "Path": [
+              "DisplayFormat"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Class'TimerFlagViewData'",
+              "ObjectPath": "/Script/DBDUIViewInterfaces"
+            }
+          },
+          "StructExpression": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'WBP_CoreAuricCellsFirstPurchaseBanner_C:SetFirstPurchaseData'",
+                "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.4"
+              },
+              "Property": {
+                "Type": "StructProperty",
+                "Name": "K2Node_MakeStruct_TimerFlagViewData",
+                "Flags": "RF_Public",
+                "ElementSize": 48,
+                "Struct": {
+                  "ObjectName": "Class'TimerFlagViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_ByteConst",
+          "Value": 0
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 775,
+        "Variable": {
+          "Inst": "EX_StructMemberContext",
+          "Property": {
+            "Path": [
+              "NumberOfUnitsInDisplay"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Class'TimerFlagViewData'",
+              "ObjectPath": "/Script/DBDUIViewInterfaces"
+            }
+          },
+          "StructExpression": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'WBP_CoreAuricCellsFirstPurchaseBanner_C:SetFirstPurchaseData'",
+                "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.4"
+              },
+              "Property": {
+                "Type": "StructProperty",
+                "Name": "K2Node_MakeStruct_TimerFlagViewData",
+                "Flags": "RF_Public",
+                "ElementSize": 48,
+                "Struct": {
+                  "ObjectName": "Class'TimerFlagViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_IntConst",
+          "Value": 2
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 807,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreAuricCellsFirstPurchaseBanner_C'",
+              "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.16"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "WBP_CoreTimerFlag",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+              "PropertyClass": {
+                "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreTimerFlag_C'",
+                "ObjectPath": "/DBDUICore/Common/WBP_CoreTimerFlag.16"
+              }
+            }
+          }
+        },
+        "Offset": 23,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "SetData",
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_CoreAuricCellsFirstPurchaseBanner_C:SetFirstPurchaseData'",
+                  "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.4"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "K2Node_MakeStruct_TimerFlagViewData",
+                  "Flags": "RF_Public",
+                  "ElementSize": 48,
+                  "Struct": {
+                    "ObjectName": "Class'TimerFlagViewData'",
+                    "ObjectPath": "/Script/DBDUIViewInterfaces"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 852,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 854
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Overlay",
+    "Name": "FirstPurchase",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Overlay'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WBP_CoreAuricCellsFirstPurchaseBanner_C:WidgetTree.FirstPurchase.OverlaySlot_3'",
+          "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.7"
+        },
+        {
+          "ObjectName": "OverlaySlot'WBP_CoreAuricCellsFirstPurchaseBanner_C:WidgetTree.FirstPurchase.OverlaySlot_7'",
+          "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.9"
+        },
+        {
+          "ObjectName": "OverlaySlot'WBP_CoreAuricCellsFirstPurchaseBanner_C:WidgetTree.FirstPurchase.OverlaySlot_2'",
+          "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.6"
+        },
+        {
+          "ObjectName": "OverlaySlot'WBP_CoreAuricCellsFirstPurchaseBanner_C:WidgetTree.FirstPurchase.OverlaySlot_5'",
+          "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.8"
+        }
+      ],
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Outer": "FirstPurchase",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Properties": {
+      "Padding": {
+        "Top": -28.0,
+        "Right": 75.0,
+        "Bottom": -28.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WBP_CoreAuricCellsFirstPurchaseBanner_C:WidgetTree.FirstPurchase'",
+        "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.5"
+      },
+      "Content": {
+        "ObjectName": "DBDImage'WBP_CoreAuricCellsFirstPurchaseBanner_C:WidgetTree.FirstPurchaseIconImage'",
+        "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.1"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_3",
+    "Outer": "FirstPurchase",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WBP_CoreAuricCellsFirstPurchaseBanner_C:WidgetTree.FirstPurchase'",
+        "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.5"
+      },
+      "Content": {
+        "ObjectName": "DBDImage'WBP_CoreAuricCellsFirstPurchaseBanner_C:WidgetTree.FirstPurchaseBackground'",
+        "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.0"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_5",
+    "Outer": "FirstPurchase",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Properties": {
+      "Padding": {
+        "Top": 20.0,
+        "Right": 20.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
+      "Parent": {
+        "ObjectName": "Overlay'WBP_CoreAuricCellsFirstPurchaseBanner_C:WidgetTree.FirstPurchase'",
+        "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.5"
+      },
+      "Content": {
+        "ObjectName": "WidgetSwitcher'WBP_CoreAuricCellsFirstPurchaseBanner_C:WidgetTree.FlagSwitcher'",
+        "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.17"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_7",
+    "Outer": "FirstPurchase",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Properties": {
+      "Padding": {
+        "Left": 100.0,
+        "Right": 325.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WBP_CoreAuricCellsFirstPurchaseBanner_C:WidgetTree.FirstPurchase'",
+        "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.5"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'WBP_CoreAuricCellsFirstPurchaseBanner_C:WidgetTree.VerticalBox_30'",
+        "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.10"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_30",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'VerticalBox'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'WBP_CoreAuricCellsFirstPurchaseBanner_C:WidgetTree.VerticalBox_30.VerticalBoxSlot_0'",
+          "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.11"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'WBP_CoreAuricCellsFirstPurchaseBanner_C:WidgetTree.VerticalBox_30.VerticalBoxSlot_1'",
+          "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.12"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WBP_CoreAuricCellsFirstPurchaseBanner_C:WidgetTree.FirstPurchase.OverlaySlot_7'",
+        "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.9"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Outer": "VerticalBox_30",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'WBP_CoreAuricCellsFirstPurchaseBanner_C:WidgetTree.VerticalBox_30'",
+        "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.10"
+      },
+      "Content": {
+        "ObjectName": "DBDTextBlock'WBP_CoreAuricCellsFirstPurchaseBanner_C:WidgetTree.FirstPurchaseTitleTextBlock'",
+        "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.3"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Outer": "VerticalBox_30",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'WBP_CoreAuricCellsFirstPurchaseBanner_C:WidgetTree.VerticalBox_30'",
+        "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.10"
+      },
+      "Content": {
+        "ObjectName": "DBDTextBlock'WBP_CoreAuricCellsFirstPurchaseBanner_C:WidgetTree.FirstPurchaseDescriptionTextBlock'",
+        "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.2"
+      }
+    }
+  },
+  {
+    "Type": "WBP_CoreAuricCellsFirstPurchaseBanner_C",
+    "Name": "Default__WBP_CoreAuricCellsFirstPurchaseBanner_C",
+    "Class": "WidgetBlueprintGeneratedClass'/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.WBP_CoreAuricCellsFirstPurchaseBanner_C'",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "WBP_CoreOwnedTag_C",
+    "Name": "WBP_CoreOwnedTag",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'/DBDUICore/Common/WBP_CoreOwnedTag.WBP_CoreOwnedTag_C'",
+    "Template": {
+      "ObjectName": "WBP_CoreOwnedTag_C'Default__WBP_CoreOwnedTag_C'",
+      "ObjectPath": "/DBDUICore/Common/WBP_CoreOwnedTag.5"
+    }
+  },
+  {
+    "Type": "WBP_CoreTimerFlag_C",
+    "Name": "WBP_CoreTimerFlag",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'/DBDUICore/Common/WBP_CoreTimerFlag.WBP_CoreTimerFlag_C'",
+    "Template": {
+      "ObjectName": "WBP_CoreTimerFlag_C'Default__WBP_CoreTimerFlag_C'",
+      "ObjectPath": "/DBDUICore/Common/WBP_CoreTimerFlag.15"
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WBP_CoreAuricCellsFirstPurchaseBanner_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WBP_CoreAuricCellsFirstPurchaseBanner_C:WidgetTree'",
+        "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.20"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WBP_CoreAuricCellsFirstPurchaseBanner_C:SetFirstPurchaseData'",
+        "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.4"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "FirstPurchase",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Overlay'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FirstPurchaseDescriptionTextBlock",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'DBDTextBlock'",
+          "ObjectPath": "/Script/DBDUIViewsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FirstPurchaseIconImage",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'DBDImage'",
+          "ObjectPath": "/Script/DBDUIViewsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FirstPurchaseTitleTextBlock",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'DBDTextBlock'",
+          "ObjectPath": "/Script/DBDUIViewsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FlagSwitcher",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetSwitcher'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WBP_CoreOwnedTag",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreOwnedTag_C'",
+          "ObjectPath": "/DBDUICore/Common/WBP_CoreOwnedTag.6"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WBP_CoreTimerFlag",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreTimerFlag_C'",
+          "ObjectPath": "/DBDUICore/Common/WBP_CoreTimerFlag.16"
+        }
+      }
+    ],
+    "FuncMap": {
+      "SetFirstPurchaseData": {
+        "ObjectName": "Function'WBP_CoreAuricCellsFirstPurchaseBanner_C:SetFirstPurchaseData'",
+        "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.4"
+      }
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WBP_CoreAuricCellsFirstPurchaseBanner_C'Default__WBP_CoreAuricCellsFirstPurchaseBanner_C'",
+      "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.13"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetSwitcher",
+    "Name": "FlagSwitcher",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'WBP_CoreAuricCellsFirstPurchaseBanner_C:WidgetTree.FlagSwitcher.WidgetSwitcherSlot_0'",
+          "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.18"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'WBP_CoreAuricCellsFirstPurchaseBanner_C:WidgetTree.FlagSwitcher.WidgetSwitcherSlot_1'",
+          "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.19"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WBP_CoreAuricCellsFirstPurchaseBanner_C:WidgetTree.FirstPurchase.OverlaySlot_5'",
+        "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.8"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_0",
+    "Outer": "FlagSwitcher",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'WBP_CoreAuricCellsFirstPurchaseBanner_C:WidgetTree.FlagSwitcher'",
+        "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.17"
+      },
+      "Content": {
+        "ObjectName": "WBP_CoreTimerFlag_C'WBP_CoreAuricCellsFirstPurchaseBanner_C:WidgetTree.WBP_CoreTimerFlag'",
+        "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.15"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_1",
+    "Outer": "FlagSwitcher",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'WBP_CoreAuricCellsFirstPurchaseBanner_C:WidgetTree.FlagSwitcher'",
+        "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.17"
+      },
+      "Content": {
+        "ObjectName": "WBP_CoreOwnedTag_C'WBP_CoreAuricCellsFirstPurchaseBanner_C:WidgetTree.WBP_CoreOwnedTag'",
+        "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.14"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "WBP_CoreAuricCellsFirstPurchaseBanner_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Overlay'WBP_CoreAuricCellsFirstPurchaseBanner_C:WidgetTree.FirstPurchase'",
+        "ObjectPath": "/DBDUICore/AuricCells/WBP_CoreAuricCellsFirstPurchaseBanner.5"
+      }
+    }
+  }
+]

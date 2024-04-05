@@ -9,9 +9,9 @@
         "SphereElems": [
           {
             "Center": {
-              "X": 3.949275E-06,
-              "Y": -5.57953E-06,
-              "Z": -1.254577E-05
+              "X": 1.0,
+              "Y": 3.949275E-06,
+              "Z": -5.57953E-06
             },
             "Radius": 160.0,
             "RestOffset": 0.0,
@@ -22,147 +22,71 @@
         ]
       },
       "DefaultInstance": {
-        "ObjectType": "ECC_WorldStatic",
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
         "CollisionProfileName": "BlockAll",
         "CollisionResponses": {
           "ResponseArray": [
             {
               "Channel": "Interactable",
-              "Response": "ECR_Block"
+              "Response": "ECollisionResponse::ECR_Block"
             },
             {
               "Channel": "Slasher",
-              "Response": "ECR_Block"
+              "Response": "ECollisionResponse::ECR_Block"
             },
             {
               "Channel": "Blood",
-              "Response": "ECR_Block"
+              "Response": "ECollisionResponse::ECR_Block"
             },
             {
               "Channel": "InteractionDetector",
-              "Response": "ECR_Ignore"
+              "Response": "ECollisionResponse::ECR_Ignore"
             },
             {
               "Channel": "BlinkBlocker",
-              "Response": "ECR_Ignore"
+              "Response": "ECollisionResponse::ECR_Ignore"
             },
             {
               "Channel": "Ground",
-              "Response": "ECR_Ignore"
+              "Response": "ECollisionResponse::ECR_Ignore"
             },
             {
               "Channel": "Walkable",
-              "Response": "ECR_Block"
+              "Response": "ECollisionResponse::ECR_Block"
             }
           ]
         },
         "bSimulatePhysics": true
       }
     },
-    "BodySetupGuid": "572BACBB4C0F7A7E5E958FB3CA3C35D7",
+    "BodySetupGuid": "665E375943992B6CC0E0A3BD87F0875A",
     "CookedFormatData": {
       "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
-        "ElementCount": 14897,
-        "SizeOnDisk": 14897,
-        "OffsetInFile": "0xDABC"
+        "BulkDataFlags": "BULKDATA_None",
+        "ElementCount": 4,
+        "SizeOnDisk": 0,
+        "OffsetInFile": "0x10000DB5C"
       }
     }
+  },
+  {
+    "Type": "NavCollision",
+    "Name": "NavCollision_0",
+    "Outer": "Sphere",
+    "Class": "UScriptClass'NavCollision'"
   },
   {
     "Type": "StaticMesh",
     "Name": "Sphere",
     "Class": "UScriptClass'StaticMesh'",
     "Properties": {
-      "StaticMaterials": [
-        {
-          "MaterialInterface": null,
-          "MaterialSlotName": "MaterialSlot",
-          "ImportedMaterialSlotName": "MaterialSlot",
-          "UVChannelData": {
-            "bInitialized": true,
-            "bOverrideDensities": false,
-            "LocalUVDensities": 604.0186,
-            "LocalUVDensities": 0.0,
-            "LocalUVDensities": 0.0,
-            "LocalUVDensities": 0.0
-          }
-        }
-      ],
-      "LightmapUVDensity": 604.0186,
-      "ExtendedBounds": {
-        "BoxExtent": {
-          "X": 160.0,
-          "Y": 160.0,
-          "Z": 160.0
-        },
-        "SphereRadius": 160.00002
-      }
+      "LightMapCoordinateIndex": 1,
+      "DistanceFieldSelfShadowBias": 2.4269183E-35,
+      "bGlobalForceMipLevelsToBeResident": false
     },
-    "BodySetup": {
-      "ObjectName": "BodySetup'Sphere:RB_BodySetup_0'",
-      "ObjectPath": "Engine/Content/EngineMeshes/Sphere.0"
-    },
+    "BodySetup": null,
     "NavCollision": null,
-    "LightingGuid": "3211F117-4B7B5E3B-D44DA486-542FB3DB",
-    "RenderData": {
-      "LODs": [
-        {
-          "Sections": [
-            {
-              "MaterialIndex": 0,
-              "FirstIndex": 0,
-              "NumTriangles": 528,
-              "MinVertexIndex": 0,
-              "MaxVertexIndex": 322,
-              "bEnableCollision": true,
-              "bCastShadow": true,
-              "bForceOpaque": false,
-              "bVisibleInRayTracing": true
-            }
-          ],
-          "MaxDeviation": 0.0,
-          "PositionVertexBuffer": {
-            "Stride": 12,
-            "NumVertices": 323
-          },
-          "VertexBuffer": {
-            "NumTexCoords": 1,
-            "NumVertices": 323,
-            "Strides": -1,
-            "UseHighPrecisionTangentBasis": false,
-            "UseFullPrecisionUVs": false
-          },
-          "ColorVertexBuffer": {
-            "Stride": 0,
-            "NumVertices": 0
-          }
-        }
-      ],
-      "Bounds": {
-        "Origin": {
-          "X": 0.0,
-          "Y": 0.0,
-          "Z": 0.0
-        },
-        "BoxExtent": {
-          "X": 160.0,
-          "Y": 160.0,
-          "Z": 160.0
-        },
-        "SphereRadius": 160.00002
-      },
-      "bLODsShareStaticLighting": true,
-      "ScreenSize": [
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ]
-    }
+    "LightingGuid": "00000000-00000000-00000000-00000000",
+    "RenderData": null
   }
 ]
