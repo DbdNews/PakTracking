@@ -6,6 +6,8 @@ PerfIndexThresholds_ResolutionQuality="GPU 18 42 115"
 PerfIndexThresholds_ViewDistanceQuality="Min 18 42 105"
 PerfIndexThresholds_AntiAliasingQuality="GPU 18 42 115"
 PerfIndexThresholds_ShadowQuality="Min 18 42 105"
+PerfIndexThresholds_GlobalIlluminationQuality="GPU 18 42 115"
+PerfIndexThresholds_ReflectionQuality="GPU 18 42 115"
 PerfIndexThresholds_PostProcessQuality="GPU 18 42 115"
 PerfIndexThresholds_TextureQuality="GPU 18 42 115"
 PerfIndexThresholds_EffectsQuality="Min 18 42 105"
@@ -15,19 +17,60 @@ PerfIndexThresholds_ShadingQuality="GPU 18 42 115"
 PerfIndexValues_ResolutionQuality="50 71 87 100 100"
 
 [AntiAliasingQuality@0]
-r.PostProcessAAQuality=0
+r.FXAA.Quality=0
+r.TemporalAA.Quality=0
+r.TSR.History.R11G11B10=1
+r.TSR.History.ScreenPercentage=100
+r.TSR.History.UpdateQuality=0
+r.TSR.History.GrandReprojection=0
+r.TSR.ShadingRejection.Flickering=0
+r.TSR.Velocity.Extrapolation=0
+r.TSR.RejectionAntiAliasingQuality=0
 
 [AntiAliasingQuality@1]
-r.PostProcessAAQuality=2
+r.FXAA.Quality=1
+r.TemporalAA.Quality=1
+r.TSR.History.R11G11B10=1
+r.TSR.History.ScreenPercentage=100
+r.TSR.History.UpdateQuality=1
+r.TSR.History.GrandReprojection=0
+r.TSR.ShadingRejection.Flickering=0
+r.TSR.Velocity.Extrapolation=0
+r.TSR.RejectionAntiAliasingQuality=1
 
 [AntiAliasingQuality@2]
-r.PostProcessAAQuality=3
+r.FXAA.Quality=3
+r.TemporalAA.Quality=1
+r.TSR.History.R11G11B10=1
+r.TSR.History.ScreenPercentage=100
+r.TSR.History.UpdateQuality=2
+r.TSR.History.GrandReprojection=0
+r.TSR.ShadingRejection.Flickering=1
+r.TSR.Velocity.Extrapolation=0
+r.TSR.RejectionAntiAliasingQuality=1
 
 [AntiAliasingQuality@3]
-r.PostProcessAAQuality=4
+r.FXAA.Quality=4
+r.TemporalAA.Quality=2
+r.TSR.History.R11G11B10=1
+r.TSR.History.ScreenPercentage=200
+r.TSR.History.UpdateQuality=3
+r.TSR.History.GrandReprojection=0
+r.TSR.ShadingRejection.Flickering=1
+r.TSR.Velocity.Extrapolation=1
+r.TSR.RejectionAntiAliasingQuality=2
 
 [AntiAliasingQuality@Cine]
-r.PostProcessAAQuality=6
+r.FXAA.Quality=5
+r.TemporalAA.Quality=2
+r.TSR.History.R11G11B10=0
+r.TSR.History.ScreenPercentage=200
+r.TSR.History.UpdateQuality=3
+r.TSR.History.GrandReprojection=1
+r.TSR.ShadingRejection.Flickering=1
+r.TSR.Velocity.Extrapolation=1
+r.TSR.RejectionAntiAliasingQuality=2
+
 
 
 [ViewDistanceQuality@0]
@@ -62,10 +105,16 @@ r.Shadow.DistanceScale=0.6
 r.Shadow.CSM.TransitionScale=0
 r.Shadow.PreShadowResolutionFactor=0.5
 r.DistanceFieldShadowing=0
-r.DistanceFieldAO=0
 r.VolumetricFog=0
 r.LightMaxDrawDistanceScale=0
 r.CapsuleShadows=0
+r.Shadow.Virtual.MaxPhysicalPages=512
+r.Shadow.Virtual.ResolutionLodBiasDirectional=0.0
+r.Shadow.Virtual.ResolutionLodBiasLocal=1.0
+r.Shadow.Virtual.SMRT.RayCountDirectional=0
+r.Shadow.Virtual.SMRT.SamplesPerRayDirectional=2
+r.Shadow.Virtual.SMRT.RayCountLocal=0
+r.Shadow.Virtual.SMRT.SamplesPerRayLocal=2
 
 [ShadowQuality@1]
 r.LightFunctionQuality=1
@@ -78,10 +127,16 @@ r.Shadow.DistanceScale=0.7
 r.Shadow.CSM.TransitionScale=0.25
 r.Shadow.PreShadowResolutionFactor=0.5
 r.DistanceFieldShadowing=0
-r.DistanceFieldAO=0
 r.VolumetricFog=0
 r.LightMaxDrawDistanceScale=.5
 r.CapsuleShadows=1
+r.Shadow.Virtual.MaxPhysicalPages=512
+r.Shadow.Virtual.ResolutionLodBiasDirectional=0.0
+r.Shadow.Virtual.ResolutionLodBiasLocal=1.0
+r.Shadow.Virtual.SMRT.RayCountDirectional=4
+r.Shadow.Virtual.SMRT.SamplesPerRayDirectional=2
+r.Shadow.Virtual.SMRT.RayCountLocal=4
+r.Shadow.Virtual.SMRT.SamplesPerRayLocal=2
 
 [ShadowQuality@2]
 r.LightFunctionQuality=1
@@ -94,14 +149,19 @@ r.Shadow.DistanceScale=0.85
 r.Shadow.CSM.TransitionScale=0.8
 r.Shadow.PreShadowResolutionFactor=0.5
 r.DistanceFieldShadowing=1
-r.DistanceFieldAO=1
-r.AOQuality=1
 r.VolumetricFog=1
 r.VolumetricFog.GridPixelSize=16
 r.VolumetricFog.GridSizeZ=64
 r.VolumetricFog.HistoryMissSupersampleCount=4
 r.LightMaxDrawDistanceScale=1
 r.CapsuleShadows=1
+r.Shadow.Virtual.MaxPhysicalPages=2048
+r.Shadow.Virtual.ResolutionLodBiasDirectional=-0.5
+r.Shadow.Virtual.ResolutionLodBiasLocal=0.0
+r.Shadow.Virtual.SMRT.RayCountDirectional=8
+r.Shadow.Virtual.SMRT.SamplesPerRayDirectional=4
+r.Shadow.Virtual.SMRT.RayCountLocal=8
+r.Shadow.Virtual.SMRT.SamplesPerRayLocal=4
 
 [ShadowQuality@3]
 r.LightFunctionQuality=1
@@ -114,14 +174,19 @@ r.Shadow.DistanceScale=1.0
 r.Shadow.CSM.TransitionScale=1.0
 r.Shadow.PreShadowResolutionFactor=1.0
 r.DistanceFieldShadowing=1
-r.DistanceFieldAO=1
-r.AOQuality=2
 r.VolumetricFog=1
 r.VolumetricFog.GridPixelSize=8
 r.VolumetricFog.GridSizeZ=128
 r.VolumetricFog.HistoryMissSupersampleCount=4
 r.LightMaxDrawDistanceScale=1
 r.CapsuleShadows=1
+r.Shadow.Virtual.MaxPhysicalPages=4096
+r.Shadow.Virtual.ResolutionLodBiasDirectional=-1.5
+r.Shadow.Virtual.ResolutionLodBiasLocal=0.0
+r.Shadow.Virtual.SMRT.RayCountDirectional=8
+r.Shadow.Virtual.SMRT.SamplesPerRayDirectional=4
+r.Shadow.Virtual.SMRT.RayCountLocal=8
+r.Shadow.Virtual.SMRT.SamplesPerRayLocal=4
 
 [ShadowQuality@Cine]
 r.LightFunctionQuality=1
@@ -134,18 +199,140 @@ r.Shadow.DistanceScale=1.0
 r.Shadow.CSM.TransitionScale=1.0
 r.Shadow.PreShadowResolutionFactor=1.0
 r.DistanceFieldShadowing=1
-r.DistanceFieldAO=1
-r.AOQuality=2
 r.VolumetricFog=1
 r.VolumetricFog.GridPixelSize=4
 r.VolumetricFog.GridSizeZ=128
 r.VolumetricFog.HistoryMissSupersampleCount=16
 r.LightMaxDrawDistanceScale=1
 r.CapsuleShadows=1
+r.Shadow.Virtual.MaxPhysicalPages=8192
+r.Shadow.Virtual.ResolutionLodBiasDirectional=-1.5
+r.Shadow.Virtual.ResolutionLodBiasLocal=0.0
+r.Shadow.Virtual.SMRT.RayCountDirectional=16
+r.Shadow.Virtual.SMRT.SamplesPerRayDirectional=8
+r.Shadow.Virtual.SMRT.RayCountLocal=16
+r.Shadow.Virtual.SMRT.SamplesPerRayLocal=8
+
+
+[GlobalIlluminationQuality@0]
+r.DistanceFieldAO=0
+r.Lumen.DiffuseIndirect.Allow=0
+
+[GlobalIlluminationQuality@1]
+r.DistanceFieldAO=1
+r.AOQuality=1
+r.Lumen.DiffuseIndirect.Allow=0
+
+[GlobalIlluminationQuality@2]
+r.DistanceFieldAO=1
+r.AOQuality=1
+r.Lumen.DiffuseIndirect.Allow=1
+r.LumenScene.Radiosity.ProbeSpacing=8
+r.LumenScene.Radiosity.HemisphereProbeResolution=3
+r.Lumen.TraceMeshSDFs.Allow=0
+r.Lumen.ScreenProbeGather.RadianceCache.ProbeResolution=16
+r.Lumen.ScreenProbeGather.RadianceCache.NumProbesToTraceBudget=300
+r.Lumen.ScreenProbeGather.DownsampleFactor=32
+r.Lumen.ScreenProbeGather.TracingOctahedronResolution=8
+r.Lumen.ScreenProbeGather.IrradianceFormat=1
+r.Lumen.ScreenProbeGather.StochasticInterpolation=1
+r.Lumen.ScreenProbeGather.FullResolutionJitterWidth=1
+r.Lumen.ScreenProbeGather.TwoSidedFoliageBackfaceDiffuse=0
+r.Lumen.ScreenProbeGather.ScreenTraces.HZBTraversal.FullResDepth=0
+r.Lumen.Reflections.MaxRoughnessToTraceForFoliage=0.2
+r.Lumen.TranslucencyVolume.GridPixelSize=64
+r.Lumen.TranslucencyVolume.TraceFromVolume=0
+r.Lumen.TranslucencyVolume.RadianceCache.ProbeResolution=8
+r.Lumen.TranslucencyVolume.RadianceCache.NumProbesToTraceBudget=200
+
+[GlobalIlluminationQuality@3]
+r.DistanceFieldAO=1
+r.AOQuality=2
+r.Lumen.DiffuseIndirect.Allow=1
+r.LumenScene.Radiosity.ProbeSpacing=4
+r.LumenScene.Radiosity.HemisphereProbeResolution=4
+r.Lumen.TraceMeshSDFs.Allow=1
+r.Lumen.ScreenProbeGather.RadianceCache.ProbeResolution=32
+r.Lumen.ScreenProbeGather.RadianceCache.NumProbesToTraceBudget=300
+r.Lumen.ScreenProbeGather.DownsampleFactor=16
+r.Lumen.ScreenProbeGather.TracingOctahedronResolution=8
+r.Lumen.ScreenProbeGather.IrradianceFormat=0
+r.Lumen.ScreenProbeGather.StochasticInterpolation=0
+r.Lumen.ScreenProbeGather.FullResolutionJitterWidth=1
+r.Lumen.ScreenProbeGather.TwoSidedFoliageBackfaceDiffuse=1
+r.Lumen.ScreenProbeGather.ScreenTraces.HZBTraversal.FullResDepth=1
+r.Lumen.Reflections.MaxRoughnessToTraceForFoliage=0.4
+r.Lumen.TranslucencyVolume.GridPixelSize=32
+r.Lumen.TranslucencyVolume.TraceFromVolume=1
+r.Lumen.TranslucencyVolume.TracingOctahedronResolution=3
+r.Lumen.TranslucencyVolume.RadianceCache.ProbeResolution=8
+r.Lumen.TranslucencyVolume.RadianceCache.NumProbesToTraceBudget=200
+
+[GlobalIlluminationQuality@Cine]
+r.DistanceFieldAO=1
+r.AOQuality=2
+r.Lumen.DiffuseIndirect.Allow=1
+r.LumenScene.Radiosity.ProbeSpacing=4
+r.LumenScene.Radiosity.HemisphereProbeResolution=4
+r.Lumen.TraceMeshSDFs.Allow=1
+r.Lumen.ScreenProbeGather.RadianceCache.ProbeResolution=32
+r.Lumen.ScreenProbeGather.RadianceCache.NumProbesToTraceBudget=1000
+r.Lumen.ScreenProbeGather.DownsampleFactor=8
+r.Lumen.ScreenProbeGather.TracingOctahedronResolution=16
+r.Lumen.ScreenProbeGather.IrradianceFormat=0
+r.Lumen.ScreenProbeGather.StochasticInterpolation=0
+r.Lumen.ScreenProbeGather.FullResolutionJitterWidth=.5
+r.Lumen.ScreenProbeGather.TwoSidedFoliageBackfaceDiffuse=1
+r.Lumen.ScreenProbeGather.ScreenTraces.HZBTraversal.FullResDepth=1
+r.Lumen.Reflections.Foliage=1
+r.Lumen.TranslucencyVolume.GridPixelSize=32
+r.Lumen.TranslucencyVolume.TraceFromVolume=1
+r.Lumen.TranslucencyVolume.TracingOctahedronResolution=4
+r.Lumen.TranslucencyVolume.RadianceCache.ProbeResolution=16
+r.Lumen.TranslucencyVolume.RadianceCache.NumProbesToTraceBudget=1000
+
+
+
+[ReflectionQuality@0]
+r.SSR.Quality=0
+r.SSR.HalfResSceneColor=1
+r.Lumen.Reflections.Allow=0
+
+[ReflectionQuality@1]
+r.SSR.Quality=2
+r.SSR.HalfResSceneColor=1
+r.Lumen.Reflections.Allow=0
+
+[ReflectionQuality@2]
+r.SSR.Quality=2
+r.SSR.HalfResSceneColor=1
+r.Lumen.Reflections.Allow=1
+r.Lumen.Reflections.DownsampleFactor=2
+r.Lumen.TranslucencyReflections.FrontLayer.Allow=0
+r.Lumen.TranslucencyReflections.FrontLayer.Enable=0
+
+[ReflectionQuality@3]
+r.SSR.Quality=3
+r.SSR.HalfResSceneColor=0
+r.Lumen.Reflections.Allow=1
+r.Lumen.Reflections.DownsampleFactor=1
+r.Lumen.TranslucencyReflections.FrontLayer.Allow=1
+r.Lumen.TranslucencyReflections.FrontLayer.Enable=0
+
+[ReflectionQuality@Cine]
+r.SSR.Quality=4
+r.SSR.HalfResSceneColor=0
+r.Lumen.Reflections.Allow=1
+r.Lumen.Reflections.DownsampleFactor=1
+r.Lumen.TranslucencyReflections.FrontLayer.Allow=1
+r.Lumen.TranslucencyReflections.FrontLayer.Enable=1
+
+
 
 
 [PostProcessQuality@0]
 r.MotionBlurQuality=0
+r.MotionBlur.HalfResGather=1
 r.AmbientOcclusionMipLevelFactor=1.0
 r.AmbientOcclusionMaxQuality=0
 r.AmbientOcclusionLevels=0
@@ -156,6 +343,7 @@ r.LensFlareQuality=0
 r.SceneColorFringeQuality=0
 r.EyeAdaptationQuality=2
 r.BloomQuality=4
+r.Bloom.ScreenPercentage=25.000
 r.FastBlurThreshold=0
 r.Upscale.Quality=1
 r.Tonemapper.GrainQuantization=0
@@ -165,6 +353,7 @@ r.Tonemapper.Quality=0
 
 [PostProcessQuality@1]
 r.MotionBlurQuality=3
+r.MotionBlur.HalfResGather=1
 r.AmbientOcclusionMipLevelFactor=1.0
 r.AmbientOcclusionMaxQuality=60
 r.AmbientOcclusionLevels=-1
@@ -175,6 +364,7 @@ r.LensFlareQuality=0
 r.SceneColorFringeQuality=0
 r.EyeAdaptationQuality=2
 r.BloomQuality=4
+r.Bloom.ScreenPercentage=35.355
 r.FastBlurThreshold=2
 r.Upscale.Quality=2
 r.Tonemapper.GrainQuantization=0
@@ -195,6 +385,7 @@ r.DOF.Kernel.MaxBackgroundRadius=0.006   ; required because low gathering and no
 
 [PostProcessQuality@2]
 r.MotionBlurQuality=3
+r.MotionBlur.HalfResGather=0
 r.AmbientOcclusionMipLevelFactor=0.6
 r.AmbientOcclusionMaxQuality=100
 r.AmbientOcclusionLevels=-1
@@ -205,6 +396,7 @@ r.LensFlareQuality=2
 r.SceneColorFringeQuality=1
 r.EyeAdaptationQuality=2
 r.BloomQuality=5
+r.Bloom.ScreenPercentage=50.000
 r.FastBlurThreshold=3
 r.Upscale.Quality=2
 r.Tonemapper.GrainQuantization=1
@@ -227,6 +419,7 @@ r.DOF.Kernel.MaxBackgroundRadius=0.012   ; required because of AccumulatorQualit
 
 [PostProcessQuality@3]
 r.MotionBlurQuality=4
+r.MotionBlur.HalfResGather=0
 r.AmbientOcclusionMipLevelFactor=0.4
 r.AmbientOcclusionMaxQuality=100
 r.AmbientOcclusionLevels=-1
@@ -237,6 +430,7 @@ r.LensFlareQuality=2
 r.SceneColorFringeQuality=1
 r.EyeAdaptationQuality=2
 r.BloomQuality=5
+r.Bloom.ScreenPercentage=70.711
 r.FastBlurThreshold=100
 r.Upscale.Quality=3
 r.Tonemapper.GrainQuantization=1
@@ -261,6 +455,7 @@ r.DOF.Kernel.MaxBackgroundRadius=0.025
 
 [PostProcessQuality@Cine]
 r.MotionBlurQuality=4
+r.MotionBlur.HalfResGather=0
 r.AmbientOcclusionMipLevelFactor=0.4
 r.AmbientOcclusionMaxQuality=100
 r.AmbientOcclusionLevels=-1
@@ -272,6 +467,7 @@ r.LensFlareQuality=3
 r.SceneColorFringeQuality=1
 r.EyeAdaptationQuality=2
 r.BloomQuality=5
+r.Bloom.ScreenPercentage=100
 r.FastBlurThreshold=100
 r.Upscale.Quality=3
 r.Tonemapper.GrainQuantization=1
@@ -305,7 +501,7 @@ r.MaxAnisotropy=0
 r.VT.MaxAnisotropy=4
 r.Streaming.LimitPoolSizeToVRAM=1
 r.Streaming.PoolSize=400
-r.Streaming.MaxEffectiveScreenSize=0
+r.Streaming.MaxEffectiveScreenSize=0f
 
 [TextureQuality@1]
 r.Streaming.MipBias=1
@@ -355,13 +551,10 @@ r.Streaming.MaxEffectiveScreenSize=0
 [EffectsQuality@0]
 r.TranslucencyLightingVolumeDim=24
 r.RefractionQuality=0
-r.SSR.Quality=0
-r.SSR.HalfResSceneColor=1
 r.SceneColorFormat=3
 r.DetailMode=0
 r.TranslucencyVolumeBlur=0
 r.MaterialQualityLevel=0 ; Low quality
-r.AnisotropicMaterials=0
 r.SSS.Scale=0
 r.SSS.SampleSet=0
 r.SSS.Quality=0
@@ -386,13 +579,10 @@ fx.Niagara.QualityLevel=0
 [EffectsQuality@1]
 r.TranslucencyLightingVolumeDim=32
 r.RefractionQuality=0
-r.SSR.Quality=0
-r.SSR.HalfResSceneColor=1
 r.SceneColorFormat=3
 r.DetailMode=1
 r.TranslucencyVolumeBlur=0
 r.MaterialQualityLevel=2 ; Medium quality
-r.AnisotropicMaterials=0
 r.SSS.Scale=0.75
 r.SSS.SampleSet=0
 r.SSS.Quality=0
@@ -417,13 +607,10 @@ fx.Niagara.QualityLevel=1
 [EffectsQuality@2]
 r.TranslucencyLightingVolumeDim=48
 r.RefractionQuality=2
-r.SSR.Quality=2
-r.SSR.HalfResSceneColor=1
 r.SceneColorFormat=3
 r.DetailMode=1
 r.TranslucencyVolumeBlur=1
 r.MaterialQualityLevel=1 ; High quality
-r.AnisotropicMaterials=1
 r.SSS.Scale=1
 r.SSS.SampleSet=1
 r.SSS.Quality=-1
@@ -448,13 +635,10 @@ fx.Niagara.QualityLevel=2
 [EffectsQuality@3]
 r.TranslucencyLightingVolumeDim=64
 r.RefractionQuality=2
-r.SSR.Quality=3
-r.SSR.HalfResSceneColor=0
 r.SceneColorFormat=4
 r.DetailMode=2
 r.TranslucencyVolumeBlur=1
 r.MaterialQualityLevel=1 ; High quality
-r.AnisotropicMaterials=1
 r.SSS.Scale=1
 r.SSS.SampleSet=2
 r.SSS.Quality=1
@@ -479,13 +663,10 @@ fx.Niagara.QualityLevel=3
 [EffectsQuality@Cine]
 r.TranslucencyLightingVolumeDim=64
 r.RefractionQuality=2
-r.SSR.Quality=4
-r.SSR.HalfResSceneColor=0
 r.SceneColorFormat=4
 r.DetailMode=2
 r.TranslucencyVolumeBlur=1
 r.MaterialQualityLevel=1 ; High quality
-r.AnisotropicMaterials=1
 r.SSS.Scale=1
 r.SSS.SampleSet=2
 r.SSS.Quality=1
@@ -509,15 +690,15 @@ fx.Niagara.QualityLevel=4
 
 
 [FoliageQuality@0]
-foliage.DensityScale=0
+foliage.DensityScale=1.0
 grass.DensityScale=0
 
 [FoliageQuality@1]
-foliage.DensityScale=0.4
+foliage.DensityScale=1.0
 grass.DensityScale=0.4
 
 [FoliageQuality@2]
-foliage.DensityScale=0.8
+foliage.DensityScale=1.0
 grass.DensityScale=0.8
 
 [FoliageQuality@3]
@@ -534,28 +715,33 @@ r.HairStrands.SkyLighting.IntegrationType=2
 r.HairStrands.SkyAO.SampleCount=4
 r.HairStrands.Visibility.MSAA.SamplePerPixel=1
 r.HairStrands.Interpolation.UseSingleGuide=1
+r.AnisotropicMaterials=0
 
 [ShadingQuality@1]
 r.HairStrands.SkyLighting.IntegrationType=2
 r.HairStrands.SkyAO.SampleCount=4
 r.HairStrands.Visibility.MSAA.SamplePerPixel=1
 r.HairStrands.Interpolation.UseSingleGuide=1
+r.AnisotropicMaterials=0
 
 [ShadingQuality@2]
 r.HairStrands.SkyLighting.IntegrationType=2
 r.HairStrands.SkyAO.SampleCount=4
 r.HairStrands.Visibility.MSAA.SamplePerPixel=4
 r.HairStrands.Interpolation.UseSingleGuide=1
+r.AnisotropicMaterials=1
 
 [ShadingQuality@3]
 r.HairStrands.SkyLighting.IntegrationType=2
 r.HairStrands.SkyAO.SampleCount=4
 r.HairStrands.Visibility.MSAA.SamplePerPixel=4
 r.HairStrands.Interpolation.UseSingleGuide=0
+r.AnisotropicMaterials=1
 
 [ShadingQuality@Cine]
-r.HairStrands.SkyLighting.IntegrationType=0
+r.HairStrands.SkyLighting.IntegrationType=1
 r.HairStrands.SkyAO.SampleCount=8
 r.HairStrands.Visibility.MSAA.SamplePerPixel=8
 r.HairStrands.Interpolation.UseSingleGuide=0
+r.AnisotropicMaterials=1
 

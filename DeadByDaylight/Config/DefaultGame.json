@@ -55,7 +55,7 @@ ReservationTimeout=30.0
 +PrimaryAssetTypesToScan=(PrimaryAssetType="ItemAddon",AssetBaseClass=/Script/DeadByDaylight.ItemAddonDataAsset,bHasBlueprintClasses=False,bIsEditorOnly=False,Directories=((Path="/Game/Data/AssetData/ItemAddons")),SpecificAssets=,Rules=(Priority=-1,ChunkId=-1,bApplyRecursively=True,CookRule=Unknown))
 +PrimaryAssetTypesToScan=(PrimaryAssetType="Item",AssetBaseClass=/Script/DeadByDaylight.ItemDataAsset,bHasBlueprintClasses=False,bIsEditorOnly=False,Directories=((Path="/Game/Data/AssetData/Items")),SpecificAssets=,Rules=(Priority=-1,ChunkId=-1,bApplyRecursively=True,CookRule=Unknown))
 +PrimaryAssetTypesToScan=(PrimaryAssetType="Perk",AssetBaseClass=/Script/DeadByDaylight.PerkDataAsset,bHasBlueprintClasses=False,bIsEditorOnly=False,Directories=((Path="/Game/Data/AssetData/Perks")),SpecificAssets=,Rules=(Priority=-1,ChunkId=-1,bApplyRecursively=True,CookRule=Unknown))
-MetaDataTagsForAssetRegistry=("InclusionVersion","ExcludeFromPTB")
+MetaDataTagsForAssetRegistry=("InclusionVersion","ExcludeFromPTB","ExclusionLastModifiedBy")
 
 [CoreRedirects]
 +FunctionRedirects=(OldName="Generator.IsDamaged",NewName="Generator.IsRegressing")
@@ -91,12 +91,12 @@ BlueprintNativizationMethod=Disabled
 bIncludeNativizedAssetsInProjectGeneration=False
 bExcludeMonolithicEngineHeadersInNativizedCode=False
 UsePakFile=True
-PakFileAdditionalCompressionOptions=-compressionblocksize=1MB
-PakFileCompressionMethod=Leviathan
-PakFileCompressionLevel_Distribution=7
-PakFileCompressionLevel_TestShipping=7
-PakFileCompressionLevel_DebugDevelopment=3
-bUseIoStore=False
+PackageCompressionMethod=Leviathan
+PackageAdditionalCompressionOptions=-compressionblocksize=1MB
+PackageCompressionLevel_Distribution=7
+PackageCompressionLevel_TestShipping=7
+PackageCompressionLevel_DebugDevelopment=3
+bUseIoStore=True
 bGenerateChunks=True
 bGenerateNoChunks=False
 bChunkHardReferencesOnly=True
@@ -133,9 +133,10 @@ bCookMapsOnly=False
 bCompressed=True
 bSkipEditorContent=False
 bSkipMovies=False
-+MapsToCook=(FilePath="../../../../DeadByDaylight/Content/Maps/ParadiseTransition.umap")
++MapsToCook=(FilePath="/Game/Maps/ParadiseTransition")
 +MapsToCook=(FilePath="/Game/Maps/Tutorial/Killer_Tutorial")
 +MapsToCook=(FilePath="/Game/Maps/Tutorial/Survivor_Tutorial")
++DirectoriesToAlwaysCook=(Path="/Game/UI")
 +DirectoriesToAlwaysCook=(Path="/Game/Audio/SoundBanks")
 +DirectoriesToAlwaysCook=(Path="/Game/Blueprints/Tiles")
 +DirectoriesToAlwaysCook=(Path="/Game/ProceduralLevelGeneration/TiledMaps")
@@ -166,6 +167,9 @@ bSkipMovies=False
 +DirectoriesToNeverCook=(Path="/Game/Maps/Blocky")
 +DirectoriesToNeverCook=(Path="/Game/Maps/AutomationTests")
 +DirectoriesToNeverCook=(Path="/Game/Maps/Automation")
++DirectoriesToNeverCook=(Path="/ControlRig")
++DirectoriesToNeverCook=(Path="/DBDCharacterCreator")
++DirectoriesToNeverCook=(Path="/MeshModelingToolset")
 +DirectoriesToNeverCook=(Path="/Game/Maps/Zoo/AnimGym")
 +DirectoriesToAlwaysStageAsUFS=(Path="WwiseAudio")
 +DirectoriesToAlwaysStageAsNonUFS=(Path="Version")
@@ -176,30 +180,10 @@ bSkipMovies=False
 +EarlyDownloaderPakFileFiles=-...\Content\Localization\DeadByDaylight\*.*
 
 [Staging]
-+WhitelistConfigFiles=DeadByDaylight/Config/DefaultDBDChunking.ini
-+BlacklistConfigFiles=DeadByDaylight/Config/DefaultBhvrLightCookSettings.ini
-
-[/Script/AkAudio.AkIOSInitializationSettings]
-CommonSettings=(SampleRate=48000,MaximumNumberOfMemoryPools=256,MaximumNumberOfPositioningPaths=255,DefaultPoolSize=16777216,MemoryCutoffThreshold=1.000000,CommandQueueSize=262144,SamplesPerFrame=1024,MainOutputSettings=(AudioDeviceShareset="",DeviceID=0,PanningRule=Speakers,ChannelConfigType=Standard,ChannelMask=3,NumberOfChannels=0),StreamingLookAheadRatio=1.000000,StreamManagerPoolSize=65536,LowerEnginePoolSize=12582912,LowerEngineMemoryCutoffThreshold=1.000000,NumberOfRefillsInVoice=4,SpatialAudioSettings=(SpatialAudioPoolSize=65536,MaxSoundPropagationDepth=8,DiffractionFlags=11,MovementThreshold=10.000000))
-CommunicationSettings=(InitializeSystemComms=True,PoolSize=1048576,DiscoveryBroadcastPort=24024,CommandPort=0,NotificationPort=0,NetworkName="")
-AdvancedSettings=(IO_MemorySize=2097152,TargetAutoStreamBufferLength=380.000000,UseStreamCache=False,MaximumPinnedBytesInCache=4294967295,PrepareEventMemoryPoolID=-1,EnableGameSyncPreparation=False,ContinuousPlaybackLookAhead=1,MonitorPoolSize=262144,MonitorQueuePoolSize=1048576,MaximumHardwareTimeoutMs=1000,DebugOutOfRangeCheckEnabled=False,DebugOutOfRangeLimit=16.000000,SpatialAudioSettings=(DiffractionShadowAttenuationFactor=2.000000,DiffractionShadowDegrees=30.000000))
-
-[/Script/AkAudio.AkAndroidInitializationSettings]
-CommonSettings=(SampleRate=48000,MaximumNumberOfMemoryPools=256,MaximumNumberOfPositioningPaths=255,DefaultPoolSize=16777216,MemoryCutoffThreshold=1.000000,CommandQueueSize=262144,SamplesPerFrame=1024,MainOutputSettings=(AudioDeviceShareset="",DeviceID=0,PanningRule=Headphones,ChannelConfigType=Standard,ChannelMask=3,NumberOfChannels=0),StreamingLookAheadRatio=1.000000,StreamManagerPoolSize=65536,LowerEnginePoolSize=12582912,LowerEngineMemoryCutoffThreshold=1.000000,NumberOfRefillsInVoice=4,SpatialAudioSettings=(SpatialAudioPoolSize=65536,MaxSoundPropagationDepth=8,DiffractionFlags=11,MovementThreshold=10.000000))
-CommunicationSettings=(InitializeSystemComms=True,PoolSize=1048576,DiscoveryBroadcastPort=24024,CommandPort=0,NotificationPort=0,NetworkName="")
-AdvancedSettings=(AudioAPI=3,RoundFrameSizeToHardwareSize=True,EnableMultiCoreRendering=False,IO_MemorySize=2097152,TargetAutoStreamBufferLength=380.000000,UseStreamCache=False,MaximumPinnedBytesInCache=4294967295,PrepareEventMemoryPoolID=-1,EnableGameSyncPreparation=False,ContinuousPlaybackLookAhead=1,MonitorPoolSize=262144,MonitorQueuePoolSize=1048576,MaximumHardwareTimeoutMs=1000,DebugOutOfRangeCheckEnabled=False,DebugOutOfRangeLimit=16.000000,SpatialAudioSettings=(DiffractionShadowAttenuationFactor=2.000000,DiffractionShadowDegrees=30.000000))
++AllowedConfigFiles=DeadByDaylight/Config/DefaultDBDChunking.ini
++DisallowedConfigFiles=DeadByDaylight/Config/DefaultBhvrLightCookSettings.ini
 
 [/Script/AkAudio.AkLinuxInitializationSettings]
-CommonSettings=(SampleRate=48000,MaximumNumberOfMemoryPools=256,MaximumNumberOfPositioningPaths=255,DefaultPoolSize=16777216,MemoryCutoffThreshold=1.000000,CommandQueueSize=262144,SamplesPerFrame=1024,MainOutputSettings=(AudioDeviceShareset="",DeviceID=0,PanningRule=Speakers,ChannelConfigType=Anonymous,ChannelMask=0,NumberOfChannels=0),StreamingLookAheadRatio=1.000000,StreamManagerPoolSize=65536,LowerEnginePoolSize=12582912,LowerEngineMemoryCutoffThreshold=1.000000,NumberOfRefillsInVoice=4,SpatialAudioSettings=(SpatialAudioPoolSize=65536,MaxSoundPropagationDepth=8,DiffractionFlags=11,MovementThreshold=10.000000))
-CommunicationSettings=(InitializeSystemComms=True,PoolSize=1048576,DiscoveryBroadcastPort=24024,CommandPort=0,NotificationPort=0,NetworkName="")
-AdvancedSettings=(EnableMultiCoreRendering=False,IO_MemorySize=2097152,TargetAutoStreamBufferLength=380.000000,UseStreamCache=False,MaximumPinnedBytesInCache=4294967295,PrepareEventMemoryPoolID=-1,EnableGameSyncPreparation=False,ContinuousPlaybackLookAhead=1,MonitorPoolSize=262144,MonitorQueuePoolSize=1048576,MaximumHardwareTimeoutMs=1000,DebugOutOfRangeCheckEnabled=False,DebugOutOfRangeLimit=16.000000,SpatialAudioSettings=(DiffractionShadowAttenuationFactor=2.000000,DiffractionShadowDegrees=30.000000))
-
-[/Script/AkAudio.AkLuminInitializationSettings]
-CommonSettings=(SampleRate=48000,MaximumNumberOfMemoryPools=256,MaximumNumberOfPositioningPaths=255,DefaultPoolSize=16777216,MemoryCutoffThreshold=1.000000,CommandQueueSize=262144,SamplesPerFrame=1024,MainOutputSettings=(AudioDeviceShareset="",DeviceID=0,PanningRule=Headphones,ChannelConfigType=Standard,ChannelMask=3,NumberOfChannels=0),StreamingLookAheadRatio=1.000000,StreamManagerPoolSize=65536,LowerEnginePoolSize=12582912,LowerEngineMemoryCutoffThreshold=1.000000,NumberOfRefillsInVoice=4,SpatialAudioSettings=(SpatialAudioPoolSize=65536,MaxSoundPropagationDepth=8,DiffractionFlags=11,MovementThreshold=10.000000))
-CommunicationSettings=(InitializeSystemComms=True,PoolSize=1048576,DiscoveryBroadcastPort=24024,CommandPort=0,NotificationPort=0,NetworkName="")
-AdvancedSettings=(EnableMultiCoreRendering=False,IO_MemorySize=2097152,TargetAutoStreamBufferLength=380.000000,UseStreamCache=False,MaximumPinnedBytesInCache=4294967295,PrepareEventMemoryPoolID=-1,EnableGameSyncPreparation=False,ContinuousPlaybackLookAhead=1,MonitorPoolSize=262144,MonitorQueuePoolSize=1048576,MaximumHardwareTimeoutMs=1000,DebugOutOfRangeCheckEnabled=False,DebugOutOfRangeLimit=16.000000,SpatialAudioSettings=(DiffractionShadowAttenuationFactor=2.000000,DiffractionShadowDegrees=30.000000))
-
-[/Script/AkAudio.AkMacInitializationSettings]
 CommonSettings=(SampleRate=48000,MaximumNumberOfMemoryPools=256,MaximumNumberOfPositioningPaths=255,DefaultPoolSize=16777216,MemoryCutoffThreshold=1.000000,CommandQueueSize=262144,SamplesPerFrame=1024,MainOutputSettings=(AudioDeviceShareset="",DeviceID=0,PanningRule=Speakers,ChannelConfigType=Anonymous,ChannelMask=0,NumberOfChannels=0),StreamingLookAheadRatio=1.000000,StreamManagerPoolSize=65536,LowerEnginePoolSize=12582912,LowerEngineMemoryCutoffThreshold=1.000000,NumberOfRefillsInVoice=4,SpatialAudioSettings=(SpatialAudioPoolSize=65536,MaxSoundPropagationDepth=8,DiffractionFlags=11,MovementThreshold=10.000000))
 CommunicationSettings=(InitializeSystemComms=True,PoolSize=1048576,DiscoveryBroadcastPort=24024,CommandPort=0,NotificationPort=0,NetworkName="")
 AdvancedSettings=(EnableMultiCoreRendering=False,IO_MemorySize=2097152,TargetAutoStreamBufferLength=380.000000,UseStreamCache=False,MaximumPinnedBytesInCache=4294967295,PrepareEventMemoryPoolID=-1,EnableGameSyncPreparation=False,ContinuousPlaybackLookAhead=1,MonitorPoolSize=262144,MonitorQueuePoolSize=1048576,MaximumHardwareTimeoutMs=1000,DebugOutOfRangeCheckEnabled=False,DebugOutOfRangeLimit=16.000000,SpatialAudioSettings=(DiffractionShadowAttenuationFactor=2.000000,DiffractionShadowDegrees=30.000000))
@@ -232,11 +216,11 @@ AdvancedSettings=(AudioAPI=7,GlobalFocus=True,UseHeadMountedDisplayAudioDevice=F
 
 [/Script/AkAudio.AkSettings]
 MaxSimultaneousReverbVolumes=2
-WwiseProjectPath=(FilePath="../../../Wwise/DeadByDaylight/Content_Raw/Audio/Wwise_2021_1_12_ApplePie/DeadByDaylight_2021_1_12_Applepie.wproj")
+WwiseProjectPath=(FilePath="../../Wwise/DeadByDaylight/Content_Raw/Audio/Wwise_2021_1_14_Bacon/DeadByDaylight_2021_1_14_Bacon.wproj")
 WwiseSoundDataFolder=(Path="WwiseAudio")
 DefaultOcclusionCollisionChannel=ECC_Visibility
 DefaultFitToGeometryCollisionChannel=ECC_WorldStatic
-AkGeometryMap=((/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial, ()),(/Engine/EngineMaterials/LandscapeHolePhysicalMaterial.LandscapeHolePhysicalMaterial, ()),(/Engine/EngineMaterials/PhysMat_Carboard.PhysMat_Carboard, ()),(/Engine/EngineMaterials/PhysMat_Ice.PhysMat_Ice, ()),(/Engine/EngineMaterials/PhysMat_Metal.PhysMat_Metal, ()),(/Engine/EngineMaterials/PhysMat_Rubber.PhysMat_Rubber, ()),(/Engine/EngineMaterials/PhysMat_Vehicle.PhysMat_Vehicle, ()),(/Engine/EngineMaterials/PhysMat_VehicleRagdoll.PhysMat_VehicleRagdoll, ()),(/Game/Characters/Campers/Materials/Physics_Mat/Jacket.Jacket, ()),(/Game/Materials/MYM/Assets/Materials/PhysicalMaterials/PM_Water.PM_Water, ()),(/Game/Materials/PhysicalMaterials/PM_Barrel_Metal.PM_Barrel_Metal, ()),(/Game/Materials/PhysicalMaterials/PM_Barrel_Plastic.PM_Barrel_Plastic, ()),(/Game/Materials/PhysicalMaterials/PM_Blood.PM_Blood, ()),(/Game/Materials/PhysicalMaterials/PM_Brick.PM_Brick, ()),(/Game/Materials/PhysicalMaterials/PM_Cardboard.PM_Cardboard, ()),(/Game/Materials/PhysicalMaterials/PM_Carpet.PM_Carpet, ()),(/Game/Materials/PhysicalMaterials/PM_Ceramic.PM_Ceramic, ()),(/Game/Materials/PhysicalMaterials/PM_ChainLinkFence.PM_ChainLinkFence, ()),(/Game/Materials/PhysicalMaterials/PM_Concrete.PM_Concrete, ()),(/Game/Materials/PhysicalMaterials/PM_Corn.PM_Corn, ()),(/Game/Materials/PhysicalMaterials/PM_Default.PM_Default, ()),(/Game/Materials/PhysicalMaterials/PM_Dirt.PM_Dirt, ()),(/Game/Materials/PhysicalMaterials/PM_Drywall.PM_Drywall, ()),(/Game/Materials/PhysicalMaterials/PM_FleshDry.PM_FleshDry, ()),(/Game/Materials/PhysicalMaterials/PM_FleshJuicy.PM_FleshJuicy, ()),(/Game/Materials/PhysicalMaterials/PM_Glass.PM_Glass, ()),(/Game/Materials/PhysicalMaterials/PM_Gravel.PM_Gravel, ()),(/Game/Materials/PhysicalMaterials/PM_Hair.PM_Hair, ()),(/Game/Materials/PhysicalMaterials/PM_HardWood.PM_HardWood, ()),(/Game/Materials/PhysicalMaterials/PM_Leaves.PM_Leaves, ()),(/Game/Materials/PhysicalMaterials/PM_Mannequin.PM_Mannequin, ()),(/Game/Materials/PhysicalMaterials/PM_Metal_Grid.PM_Metal_Grid, ()),(/Game/Materials/PhysicalMaterials/PM_Metal_Hard.PM_Metal_Hard, ()),(/Game/Materials/PhysicalMaterials/PM_Metal_Soft.PM_Metal_Soft, ()),(/Game/Materials/PhysicalMaterials/PM_Mud.PM_Mud, ()),(/Game/Materials/PhysicalMaterials/PM_Plastic.PM_Plastic, ()),(/Game/Materials/PhysicalMaterials/PM_Plexiglass.PM_Plexiglass, ()),(/Game/Materials/PhysicalMaterials/PM_Rock.PM_Rock, ()),(/Game/Materials/PhysicalMaterials/PM_Sand.PM_Sand, ()),(/Game/Materials/PhysicalMaterials/PM_Snow.PM_Snow, ()),(/Game/Materials/PhysicalMaterials/PM_TECH_Debris_Glass.PM_TECH_Debris_Glass, ()),(/Game/Materials/PhysicalMaterials/PM_TECH_Debris_Rock.PM_TECH_Debris_Rock, ()),(/Game/Materials/PhysicalMaterials/PM_TECH_Debris_Trash.PM_TECH_Debris_Trash, ()),(/Game/Materials/PhysicalMaterials/PM_TECH_Deris_Popcorn.PM_TECH_Deris_Popcorn, ()),(/Game/Materials/PhysicalMaterials/PM_TECH_Occlusion_Floor.PM_TECH_Occlusion_Floor, ()),(/Game/Materials/PhysicalMaterials/PM_TECH_Occlusion_GodWall.PM_TECH_Occlusion_GodWall, ()),(/Game/Materials/PhysicalMaterials/PM_TECH_Occlusion_Wall.PM_TECH_Occlusion_Wall, ()),(/Game/Materials/PhysicalMaterials/PM_Tarp.PM_Tarp, ()),(/Game/Materials/PhysicalMaterials/PM_Tire.PM_Tire, ()),(/Game/Materials/PhysicalMaterials/PM_Tree.PM_Tree, ()),(/Game/Materials/PhysicalMaterials/PM_Typewriter.PM_Typewriter, ()),(/Game/Materials/PhysicalMaterials/PM_Vegetation.PM_Vegetation, ()),(/Game/Materials/PhysicalMaterials/PM_Water.PM_Water, ()),(/Game/Materials/PhysicalMaterials/PM_Wood.PM_Wood, ()),(/Game/Materials/PhysicalMaterials/PM_Wood_WSpace.PM_Wood_WSpace, ()))
+AkGeometryMap=(("/Engine/EngineMaterials/DefaultDestructiblePhysicalMaterial.DefaultDestructiblePhysicalMaterial", ()),("/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial", ()),("/Engine/EngineMaterials/LandscapeHolePhysicalMaterial.LandscapeHolePhysicalMaterial", ()),("/Engine/EngineMaterials/PhysMat_Carboard.PhysMat_Carboard", ()),("/Engine/EngineMaterials/PhysMat_Ice.PhysMat_Ice", ()),("/Engine/EngineMaterials/PhysMat_Metal.PhysMat_Metal", ()),("/Engine/EngineMaterials/PhysMat_Rubber.PhysMat_Rubber", ()),("/Engine/EngineMaterials/PhysMat_Vehicle.PhysMat_Vehicle", ()),("/Engine/EngineMaterials/PhysMat_VehicleRagdoll.PhysMat_VehicleRagdoll", ()),("/Game/Characters/Campers/Materials/Physics_Mat/Jacket.Jacket", ()),("/Game/Materials/MYM/Assets/Materials/PhysicalMaterials/PM_Water.PM_Water", ()),("/Game/Materials/PhysicalMaterials/PM_Barrel_Metal.PM_Barrel_Metal", ()),("/Game/Materials/PhysicalMaterials/PM_Barrel_Plastic.PM_Barrel_Plastic", ()),("/Game/Materials/PhysicalMaterials/PM_Blood.PM_Blood", ()),("/Game/Materials/PhysicalMaterials/PM_Brick.PM_Brick", ()),("/Game/Materials/PhysicalMaterials/PM_Cardboard.PM_Cardboard", ()),("/Game/Materials/PhysicalMaterials/PM_Carpet.PM_Carpet", ()),("/Game/Materials/PhysicalMaterials/PM_Ceramic.PM_Ceramic", ()),("/Game/Materials/PhysicalMaterials/PM_ChainLinkFence.PM_ChainLinkFence", ()),("/Game/Materials/PhysicalMaterials/PM_Concrete.PM_Concrete", ()),("/Game/Materials/PhysicalMaterials/PM_Corn.PM_Corn", ()),("/Game/Materials/PhysicalMaterials/PM_Default.PM_Default", ()),("/Game/Materials/PhysicalMaterials/PM_Dirt.PM_Dirt", ()),("/Game/Materials/PhysicalMaterials/PM_Drywall.PM_Drywall", ()),("/Game/Materials/PhysicalMaterials/PM_FleshDry.PM_FleshDry", ()),("/Game/Materials/PhysicalMaterials/PM_FleshJuicy.PM_FleshJuicy", ()),("/Game/Materials/PhysicalMaterials/PM_Glass.PM_Glass", ()),("/Game/Materials/PhysicalMaterials/PM_Gravel.PM_Gravel", ()),("/Game/Materials/PhysicalMaterials/PM_Hair.PM_Hair", ()),("/Game/Materials/PhysicalMaterials/PM_HardWood.PM_HardWood", ()),("/Game/Materials/PhysicalMaterials/PM_Leaves.PM_Leaves", ()),("/Game/Materials/PhysicalMaterials/PM_Mannequin.PM_Mannequin", ()),("/Game/Materials/PhysicalMaterials/PM_Metal_Grid.PM_Metal_Grid", ()),("/Game/Materials/PhysicalMaterials/PM_Metal_Hard.PM_Metal_Hard", ()),("/Game/Materials/PhysicalMaterials/PM_Metal_Soft.PM_Metal_Soft", ()),("/Game/Materials/PhysicalMaterials/PM_Mud.PM_Mud", ()),("/Game/Materials/PhysicalMaterials/PM_Plastic.PM_Plastic", ()),("/Game/Materials/PhysicalMaterials/PM_Plexiglass.PM_Plexiglass", ()),("/Game/Materials/PhysicalMaterials/PM_Rock.PM_Rock", ()),("/Game/Materials/PhysicalMaterials/PM_Sand.PM_Sand", ()),("/Game/Materials/PhysicalMaterials/PM_Snow.PM_Snow", ()),("/Game/Materials/PhysicalMaterials/PM_TECH_Debris_Glass.PM_TECH_Debris_Glass", ()),("/Game/Materials/PhysicalMaterials/PM_TECH_Debris_Rock.PM_TECH_Debris_Rock", ()),("/Game/Materials/PhysicalMaterials/PM_TECH_Debris_Trash.PM_TECH_Debris_Trash", ()),("/Game/Materials/PhysicalMaterials/PM_TECH_Deris_Popcorn.PM_TECH_Deris_Popcorn", ()),("/Game/Materials/PhysicalMaterials/PM_TECH_Occlusion_Floor.PM_TECH_Occlusion_Floor", ()),("/Game/Materials/PhysicalMaterials/PM_TECH_Occlusion_GodWall.PM_TECH_Occlusion_GodWall", ()),("/Game/Materials/PhysicalMaterials/PM_TECH_Occlusion_Wall.PM_TECH_Occlusion_Wall", ()),("/Game/Materials/PhysicalMaterials/PM_Tarp.PM_Tarp", ()),("/Game/Materials/PhysicalMaterials/PM_Tire.PM_Tire", ()),("/Game/Materials/PhysicalMaterials/PM_Tree.PM_Tree", ()),("/Game/Materials/PhysicalMaterials/PM_Typewriter.PM_Typewriter", ()),("/Game/Materials/PhysicalMaterials/PM_Vegetation.PM_Vegetation", ()),("/Game/Materials/PhysicalMaterials/PM_Water.PM_Water", ()),("/Game/Materials/PhysicalMaterials/PM_Wood.PM_Wood", ()),("/Game/Materials/PhysicalMaterials/PM_Wood_WSpace.PM_Wood_WSpace", ()))
 GlobalDecayAbsorption=0.500000
 DefaultReverbAuxBus=None
 EnvironmentDecayAuxBusMap=()
@@ -280,10 +264,11 @@ VisualizeRoomsAndPortals=False
 +AccessKeys=(KeyId="7.2.0_ptb",Key="Cafo/GRR0NxSlgPLsPkzcmgKq6A3NFs2mgSSE8Q0zkI=")
 
 +AccessKeys=(KeyId="7.3.0_ptb",Key="6DTZg9UKKc7STTY2piHfh0znNsOUx+Vs2bcrACj9X3w=")
-
 +AccessKeys=(KeyId="7.3.3_ptb",Key="MHatdnGeQjPpeO8kF1eMD2AoY3gcSezLeKG3aW00cSU=")
 
 +AccessKeys=(KeyId="7.4.0_ptb",Key="DcP6eOwcXwrqH9RyhHfqUP3GS2M1X98H+wi5mepxksE=")
 +AccessKeys=(KeyId="7.5.0_ptb",Key="gCEkCOlz1NiOF3SxPQ6GreL6F7lT/jinWqMYPQOnONY=")
 +AccessKeys=(KeyId="7.5.1_ptb",Key="lKY9P4Z2euaqjo1ABDCHyDB8cR7MTrTZ7anAJ/onlGA=")
 +AccessKeys=(KeyId="7.6.0_ptb",Key="1+Dto68Yn10HpLkULzLSXF6HECBmra16cyXxC/eb50U=")
++AccessKeys=(KeyId="7.7.0_ptb",Key="NRbPCOOu0fbo5GRM3tLvlKcSPDRyvxRcxX/cg1b2UVY=")
+

@@ -1,8 +1,8 @@
 
 [/Script/EngineSettings.GameMapsSettings]
 GameInstanceClass=/Script/Engine.GameInstance
-EditorStartupMap=/Engine/Maps/Templates/Template_Default
-GameDefaultMap=/Engine/Maps/Entry
+EditorStartupMap=/Engine/Maps/Templates/OpenWorld
+GameDefaultMap=/Engine/Maps/Templates/OpenWorld
 ServerDefaultMap=/Engine/Maps/Entry
 GlobalDefaultGameMode="/Script/Engine.GameModeBase"
 LocalMapOptions=
@@ -22,6 +22,17 @@ HttpTimeout=180
 HttpConnectionTimeout=60
 HttpReceiveTimeout=30
 HttpSendTimeout=30
+FlushSoftTimeLimitDefault=2.0
+FlushHardTimeLimitDefault=4.0
+FlushSoftTimeLimitBackground=2.0
+FlushHardTimeLimitBackground=4.0
+FlushSoftTimeLimitShutdown=2.0
+FlushHardTimeLimitShutdown=4.0
+FlushSoftTimeLimitFullFlush=-1.0
+FlushHardTimeLimitFullFlush=-1.0
+
+[HTTP.HttpThread]
+RunningThreadedRequestLimit=11
 
 [HTTP.Curl]
 bAllowSeekFunction=false
@@ -35,11 +46,21 @@ DeleteTempFilesWithoutURLMappingEntries=true
 
 RemoveURLMappingEntriesWithoutPhysicalTempFiles=true
 
+[WebSockets]
++WebSocketsProtocols="ws"
++WebSocketsProtocols="wss"
++WebSocketsProtocols="v10.stomp"
++WebSocketsProtocols="v11.stomp"
++WebSocketsProtocols="v12.stomp"
++WebSocketsProtocols="xmpp"
+TextMessageMemoryLimit=1048576
+
 [WebSockets.LibWebSockets]
 ThreadStackSize=131072
 ThreadTargetFrameTimeInSeconds=0.0333
 ThreadMinimumSleepTimeInSeconds=0.0
 MaxHttpHeaderData=32768
+PingPongInterval=0
 
 [Ping]
 StackSize=1048576
@@ -58,6 +79,27 @@ LargerMemoryBucket_MinGB=12
 DefaultMemoryBucket_MinGB=8
 SmallerMemoryBucket_MinGB=6
 SmallestMemoryBucket_MinGB=0
+
+[CoreUObject.UninitializedScriptStructMembersCheck]
+EngineModuleReflectedUninitializedPropertyVerbosity=Error
+ProjectModuleReflectedUninitializedPropertyVerbosity=Error
+ObjectReferenceReflectedUninitializedPropertyVerbosity=Error
+
+[CoreUObject.ShortTypeNameInMetaDataCheck]
++MetaDataKeys=AllowedClasses
++MetaDataKeys=DisallowedClasses
++MetaDataKeys=BaseStruct
++MetaDataKeys=BaseClass
++MetaDataKeys=HasNativeMake
++MetaDataKeys=HasnativeBreak
++MetaDataKeys=RowType
++MetaDataKeys=BitmaskEnum
++MetaDataKeys=ActorClassToPoll
++MetaDataKeys=ComponentClass
++MetaDataKeys=MustImplement
++MetaDataKeys=MetaClass
++MetaDataKeys=MetaStruct
++MetaDataKeys=RequiredAssetDataTags
 
 [/Script/Engine.Engine]
 ConsoleClassName=/Script/Engine.Console
@@ -86,14 +128,17 @@ DefaultBSPVertexTextureName=/Engine/EditorResources/BSPVertex.BSPVertex
 HighFrequencyNoiseTextureName=/Engine/EngineMaterials/Good64x64TilingNoiseHighFreq.Good64x64TilingNoiseHighFreq
 DefaultBokehTextureName=/Engine/EngineMaterials/DefaultBokeh.DefaultBokeh
 DefaultBloomKernelTextureName=/Engine/EngineMaterials/DefaultBloomKernel.DefaultBloomKernel
+DefaultFilmGrainTextureName=/Engine/EngineResources/FilmGrains/Marcie_Grain_v3_128_M2_000.Marcie_Grain_v3_128_M2_000
 GeomMaterialName=/Engine/EngineDebugMaterials/GeomMaterial.GeomMaterial
 DebugMeshMaterialName=/Engine/EngineDebugMaterials/DebugMeshMaterial.DebugMeshMaterial
 EmissiveMeshMaterialName=/Engine/EngineMaterials/EmissiveMeshMaterial.EmissiveMeshMaterial
 PreIntegratedSkinBRDFTextureName=/Engine/EngineMaterials/PreintegratedSkinBRDF.PreintegratedSkinBRDF
-BlueNoiseTextureName=/Engine/EngineMaterials/BlueNoise.BlueNoise
+BlueNoiseScalarTextureName=/Engine/EngineMaterials/STBlueNoise_scalar_128x128x64.STBlueNoise_scalar_128x128x64
+BlueNoiseVec2TextureName=/Engine/EngineMaterials/STBlueNoise_vec2_128x128x64.STBlueNoise_vec2_128x128x64
 MiniFontTextureName=/Engine/EngineMaterials/MiniFont.MiniFont
 WeightMapPlaceholderTextureName=/Engine/EngineMaterials/WeightMapPlaceholderTexture.WeightMapPlaceholderTexture
 LightMapDensityTextureName=/Engine/EngineMaterials/DefaultWhiteGrid.DefaultWhiteGrid
+NaniteHiddenSectionMaterialName=/Engine/EngineMaterials/NaniteHiddenSectionMaterial.NaniteHiddenSectionMaterial
 LevelColorationLitMaterialName=/Engine/EngineDebugMaterials/LevelColorationLitMaterial.LevelColorationLitMaterial
 LevelColorationUnlitMaterialName=/Engine/EngineDebugMaterials/LevelColorationUnlitMaterial.LevelColorationUnlitMaterial
 LightingTexelDensityName=/Engine/EngineDebugMaterials/MAT_LevelColorationLitLightmapUV.MAT_LevelColorationLitLightmapUV
@@ -117,6 +162,9 @@ EditorBrushMaterialName=/Engine/EngineMaterials/EditorBrushMaterial.EditorBrushM
 DefaultPhysMaterialName=/Engine/EngineMaterials/DefaultPhysicalMaterial.DefaultPhysicalMaterial
 DefaultDeferredDecalMaterialName=/Engine/EngineMaterials/DefaultDeferredDecalMaterial.DefaultDeferredDecalMaterial
 DefaultPostProcessMaterialName=/Engine/EngineMaterials/DefaultPostProcessMaterial.DefaultPostProcessMaterial
+DefaultFlattenMaterialName=/Engine/EngineMaterials/FlattenMaterial.FlattenMaterial
+DefaultHLODFlattenMaterialName=/Engine/EngineMaterials/FlattenMaterial_VT.FlattenMaterial_VT
+DefaultLandscapeFlattenMaterialName=/Engine/EngineMaterials/FlattenMaterial_WS_Normal_VT.FlattenMaterial_WS_Normal_VT
 TimecodeProviderClassName=None
 ArrowMaterialName=/Engine/EngineMaterials/GizmoMaterial.GizmoMaterial
 ParticleEventManagerClassPath="/Script/Engine.ParticleEventManager"
@@ -181,6 +229,18 @@ LightingOnlyBrightness=(R=0.3,G=0.3,B=0.3,A=1.0)
 +HLODColorationColors=(R=1.0,G=0.0,B=1.0,A=1.0) ; purple
 +HLODColorationColors=(R=0.0,G=1.0,B=1.0,A=1.0) ; cyan
 +HLODColorationColors=(R=0.5,G=0.5,B=0.5,A=1.0) ; grey
+GPUSkinCacheVisualizationExcludedColor=(R=1.0,G=0.0,B=0.0,A=1.0) ; red (not use skin cache on sk mesh)
+GPUSkinCacheVisualizationIncludedColor=(R=0.0,G=1.0,B=0.0,A=1.0) ; green (use skin cache on sk mesh)
+GPUSkinCacheVisualizationRecomputeTangentsColor=(R=0.0,G=0.0,B=1.0,A=1.0) ; blue (use recompute tangents on sk mesh)
+GPUSkinCacheVisualizationLowMemoryThresholdInMB=2.0
+GPUSkinCacheVisualizationHighMemoryThresholdInMB=10.0
+GPUSkinCacheVisualizationLowMemoryColor=(R=0.0,G=1.0,B=0.0,A=1.0) ; green
+GPUSkinCacheVisualizationMidMemoryColor=(R=1.0,G=1.0,B=0.0,A=1.0) ; yellow
+GPUSkinCacheVisualizationHighMemoryColor=(R=1.0,G=0.0,B=0.0,A=1.0) ; red
++GPUSkinCacheVisualizationRayTracingLODOffsetColors=(R=1.0,G=1.0,B=0.0,A=1.0) ; yellow (RT_LOD == Raster_LOD)
++GPUSkinCacheVisualizationRayTracingLODOffsetColors=(R=1.0,G=0.0,B=0.0,A=1.0) ; red (RT_LOD == Raster_LOD + 1)
++GPUSkinCacheVisualizationRayTracingLODOffsetColors=(R=0.0,G=1.0,B=0.0,A=1.0) ; green (RT_LOD == Raster_LOD + 2)
++GPUSkinCacheVisualizationRayTracingLODOffsetColors=(R=0.0,G=0.0,B=1.0,A=1.0) ; blue (RT_LOD >= Raster_LOD + 3)
 MaxPixelShaderAdditiveComplexityCount=2000
 MaxES3PixelShaderAdditiveComplexityCount=800
 bSubtitlesEnabled=True
@@ -222,27 +282,7 @@ DefaultSelectedMaterialColor=(R=0.84,G=0.92,B=0.02,A=1.0)
 bEnableOnScreenDebugMessages=true
 DurationOfErrorsAndWarningsOnHUD=0
 NearClipPlane=10.0
-
-+MatineeTrackRedirects=(TargetClassName="/Script/Engine.CameraActor",OldFieldName="PostProcessSettings.EyeAdaptationLowPercent",NewFieldName="CameraComponent.PostProcessSettings.AutoExposureLowPercent")
-+MatineeTrackRedirects=(TargetClassName="/Script/Engine.CameraActor",OldFieldName="PostProcessSettings.EyeAdaptationHighPercent",NewFieldName="CameraComponent.PostProcessSettings.AutoExposureHighPercent")
-+MatineeTrackRedirects=(TargetClassName="/Script/Engine.CameraActor",OldFieldName="PostProcessSettings.EyeAdaptationMinBrightness",NewFieldName="CameraComponent.PostProcessSettings.AutoExposureMinBrightness")
-+MatineeTrackRedirects=(TargetClassName="/Script/Engine.CameraActor",OldFieldName="PostProcessSettings.EyeAdaptationMaxBrightness",NewFieldName="CameraComponent.PostProcessSettings.AutoExposureMaxBrightness")
-+MatineeTrackRedirects=(TargetClassName="/Script/Engine.CameraActor",OldFieldName="PostProcessSettings.EyeAdaptionSpeedDown",NewFieldName="CameraComponent.PostProcessSettings.AutoExposureSpeedDown")
-+MatineeTrackRedirects=(TargetClassName="/Script/Engine.CameraActor",OldFieldName="PostProcessSettings.EyeAdaptionSpeedUp",NewFieldName="CameraComponent.PostProcessSettings.AutoExposureSpeedUp")
-+MatineeTrackRedirects=(TargetClassName="/Script/Engine.CameraActor",OldFieldName="PostProcessSettings.ExposureOffset",NewFieldName="CameraComponent.PostProcessSettings.AutoExposureBias")
-
-+MatineeTrackRedirects=(TargetClassName="/Script/Engine.PostprocessVolume",OldFieldName="Settings.EyeAdaptationLowPercent",NewFieldName="Settings.AutoExposureLowPercent")
-+MatineeTrackRedirects=(TargetClassName="/Script/Engine.PostprocessVolume",OldFieldName="Settings.EyeAdaptationHighPercent",NewFieldName="Settings.AutoExposureHighPercent")
-+MatineeTrackRedirects=(TargetClassName="/Script/Engine.PostprocessVolume",OldFieldName="Settings.EyeAdaptationMinBrightness",NewFieldName="Settings.AutoExposureMinBrightness")
-+MatineeTrackRedirects=(TargetClassName="/Script/Engine.PostprocessVolume",OldFieldName="Settings.EyeAdaptationMaxBrightness",NewFieldName="Settings.AutoExposureMaxBrightness")
-+MatineeTrackRedirects=(TargetClassName="/Script/Engine.PostprocessVolume",OldFieldName="Settings.EyeAdaptionSpeedDown",NewFieldName="Settings.AutoExposureSpeedDown")
-+MatineeTrackRedirects=(TargetClassName="/Script/Engine.PostprocessVolume",OldFieldName="Settings.EyeAdaptionSpeedUp",NewFieldName="Settings.AutoExposureSpeedUp")
-+MatineeTrackRedirects=(TargetClassName="/Script/Engine.PostprocessVolume",OldFieldName="Settings.ExposureOffset",NewFieldName="Settings.AutoExposureBias")
-
-+MatineeTrackRedirects=(TargetClassName="/Script/Engine.CameraActor",OldFieldName="FOVAngle",NewFieldName="CameraComponent.FieldOfView")
-+MatineeTrackRedirects=(TargetClassName="/Script/Engine.CameraActor",OldFieldName="AspectRatio",NewFieldName="CameraComponent.AspectRatio")
-+MatineeTrackRedirects=(TargetClassName="/Script/Engine.CameraActor",OldFieldName="bConstrainAspectRatio",NewFieldName="CameraComponent.bConstrainAspectRatio")
-+MatineeTrackRedirects=(TargetClassName="/Script/Engine.CameraActor",OldFieldName="PostProcessSettings.",NewFieldName="CameraComponent.PostProcessSettings.")
+DefaultWorldPartitionHLODLayer=/Engine/Maps/Templates/HLODs/HLODLayer_Instanced.HLODLayer_Instanced
 
 [CoreRedirects]
 
@@ -294,9 +334,11 @@ NearClipPlane=10.0
 +PropertyRedirects=(OldName="MultiLineEditableTextBox.bAutoWrapText",NewName="MultiLineEditableTextBox.AutoWrapText")
 +PropertyRedirects=(OldName="AnimNode_SequenceEvaluator.bShouldLoopWhenInSyncGroup",NewName="AnimNode_SequenceEvaluator.bShouldLoop")
 
++PropertyRedirects=(OldName="PoseSearchDatabase.Weights",NewName="PoseSearchDatabase.DefaultWeights")
+
 +EnumRedirects=(OldName="EControllerHand",NewName="/Script/InputCore.EControllerHand")
-+EnumRedirects=(OldName="AnimPhysConstraintType",NewName="AnimPhysAngularConstraintType")
-+EnumRedirects=(OldName="AnimPhysAxisType",NewName="AnimPhysLinearConstraintType")
++EnumRedirects=(OldName="AnimPhysConstraintType",NewName="/Script/AnimGraphRuntime.AnimPhysAngularConstraintType")
++EnumRedirects=(OldName="AnimPhysAxisType",NewName="/Script/AnimGraphRuntime.AnimPhysLinearConstraintType")
 +EnumRedirects=(OldName="EEnvQueryParam",NewName="/Script/AIModule.EAIParamType")
 
 
@@ -323,14 +365,12 @@ NearClipPlane=10.0
 +PropertyRedirects=(OldName="MovieScene.ShotTrack",NewName="MovieScene.CameraCutTrack")
 +PropertyRedirects=(OldName="MovieSceneShotSection.ShotNumber",NewName="MovieSceneShotSection.CameraCutNumber")
 
-+EnumRedirects=(OldName="ESteamVRTrackingSpace",NewName="EHMDTrackingOrigin")
-
 
 +ClassRedirects=(OldName="EdGraphPin",NewName="/Script/Engine.EdGraphPin_Deprecated")
 +ClassRedirects=(OldName="HapticFeedbackEffect",NewName="/Script/Engine.HapticFeedbackEffect_Curve")
 +ClassRedirects=(OldName="LandscapeProxy",NewName="/Script/Landscape.LandscapeStreamingProxy",InstanceOnly=True)
 
-+StructRedirects=(OldName="HapticFeedbackDetails",NewName="HapticFeedbackDetails_Curve")
++StructRedirects=(OldName="HapticFeedbackDetails",NewName="/Script/Engine.HapticFeedbackDetails_Curve")
 +StructRedirects=(OldName="AnimNode_SaveCachedPose",NewName="/Script/Engine.AnimNode_SaveCachedPose")
 
 +FunctionRedirects=(OldName="SceneCaptureComponent2D.UpdateContent",NewName="SceneCaptureComponent2D.CaptureScene")
@@ -371,7 +411,7 @@ NearClipPlane=10.0
 +ClassRedirects=(OldName="SoundCueGraphSchema",NewName="/Script/AudioEditor.SoundCueGraphSchema")
 
 +StructRedirects=(OldName="AnimationNode_TwoWayBlend",NewName="/Script/AnimGraphRuntime.AnimNode_TwoWayBlend")
-+StructRedirects=(OldName="AttenuationSettings",NewName="SoundAttenuationSettings")
++StructRedirects=(OldName="AttenuationSettings",NewName="/Script/Engine.SoundAttenuationSettings")
 +StructRedirects=(OldName="LevelSequencePlaybackSettings",NewName="/Script/MovieScene.MovieSceneSequencePlaybackSettings")
 
 +FunctionRedirects=(OldName="BlueprintGameplayTagLibrary.DoGameplayTagsMatch",NewName="BlueprintGameplayTagLibrary.MatchesTag")
@@ -404,11 +444,8 @@ NearClipPlane=10.0
 +EnumRedirects=(OldName="ESoundDistanceModel",NewName="/Script/Engine.EAttenuationDistanceModel",ValueChanges=(("ATTENUATION_Custom","EAttenuationDistanceModel::Custom"),("ATTENUATION_Inverse","EAttenuationDistanceModel::Inverse"),("ATTENUATION_Linear","EAttenuationDistanceModel::Linear"),("ATTENUATION_LogReverse","EAttenuationDistanceModel::LogReverse"),("ATTENUATION_Logarithmic","EAttenuationDistanceModel::Logarithmic"),("ATTENUATION_NaturalSound","EAttenuationDistanceModel::NaturalSound")) )
 
 
-+StructRedirects=(OldName="ClothingAssetData",NewName="ClothingAssetData_Legacy")
-+StructRedirects=(OldName="ClothPhysicsProperties",NewName="ClothPhysicsProperties_Legacy")
-
-+ClassRedirects=(OldName="AnimGraphNode_Ragdoll",NewName="/Script/ImmediatePhysicsEditor.AnimGraphNode_RigidBody")
-+StructRedirects=(OldName="AnimNode_Ragdoll",NewName="/Script/ImmediatePhysics.AnimNode_RigidBody")
++StructRedirects=(OldName="ClothingAssetData",NewName="/Script/Engine.ClothingAssetData_Legacy")
++StructRedirects=(OldName="ClothPhysicsProperties",NewName="/Script/Engine.ClothPhysicsProperties_Legacy")
 
 +StructRedirects=(OldName="MovieSceneObjectBindingPtr",NewName="/Script/MovieScene.MovieSceneObjectBindingID")
 
@@ -420,15 +457,13 @@ NearClipPlane=10.0
 +PropertyRedirects=(OldName="FPostProcessSettings.bOverride_BloomConvolutionPreFilter", NewName="FPostProcessSettings.bOverride_BloomConvolutionPreFilter_DEPRECATED")
 
 
-+PropertyRedirects=(OldName="GoogleVRControllerEventManager.OnControllerRecenteredDelegate", NewName="GoogleVRControllerEventManager.OnControllerRecenteredDelegate_DEPRECATED")
-
 +ClassRedirects=(OldName="ARBlueprintFunctionLibrary", NewName="/Script/AugmentedReality.ARBlueprintLibrary")
-+StructRedirects=(OldName="ARHitTestResult",NewName="/Script/AugmentedReality.ARHitTestResult")
 
 +ClassRedirects=(OldName="HeadMountedDisplayFunctionLibrary",NewName="/Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary")
 +EnumRedirects=(OldName="EWidgetClipping",ValueChanges=(("EWidgetClipping::No","EWidgetClipping::Inherit"),("EWidgetClipping::Yes","EWidgetClipping::ClipToBounds"),("EWidgetClipping::YesWithoutIntersecting","EWidgetClipping::ClipToBoundsWithoutIntersecting"),("EWidgetClipping::YesAlways","EWidgetClipping::ClipToBoundsAlways")) )
 +EnumRedirects=(OldName="EOrientPositionSelector",NewName="/Script/HeadMountedDisplay.EOrientPositionSelector")
 +EnumRedirects=(OldName="EHMDTrackingOrigin",NewName="/Script/HeadMountedDisplay.EHMDTrackingOrigin")
++EnumRedirects=(OldName="ESteamVRTrackingSpace",NewName="/Script/HeadMountedDisplay.EHMDTrackingOrigin")
 +EnumRedirects=(OldName="EHMDWornState",NewName="/Script/HeadMountedDisplay.EHMDWornState")
 +EnumRedirects=(OldName="ESocialScreenModes",NewName="/Script/HeadMountedDisplay.ESpectatorScreenMode",ValueChanges=(("SystemMirror","ESpectatorScreenMode::SingleEyeCroppedToFill"),("SeparateTest","ESpectatorScreenMode::Undistorted"),("SeparateTexture","ESpectatorScreenMode::Texture"),("SeparateSoftwareMirror","ESpectatorScreenMode::Undistorted")) )
 +FunctionRedirects=(OldName="SetSocialScreenMode",NewName="/Script/HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetSpectatorScreenMode")
@@ -436,7 +471,7 @@ NearClipPlane=10.0
 +PropertyRedirects=(OldName="Widget.ClipToBounds",NewName="Clipping")
 
 
-+StructRedirects=(OldName="TargetReference",NewName="/Script/AnimGraphRuntime.BoneSocketTarget")
++StructRedirects=(OldName="TargetReference",NewName="/Script/Engine.BoneSocketTarget")
 
 +StructRedirects=(OldName="StringAssetReference",NewName="/Script/CoreUObject.SoftObjectPath")
 +StructRedirects=(OldName="StringClassReference",NewName="/Script/CoreUObject.SoftClassPath")
@@ -450,6 +485,9 @@ NearClipPlane=10.0
 +FunctionRedirects=(OldName="RandomUnitVectorInCone",NewName="/Script/Engine.KismetMathLibrary.RandomUnitVectorInConeInRadians")
 +FunctionRedirects=(OldName="RandomUnitVectorInConeWithYawAndPitch",NewName="/Script/Engine.KismetMathLibrary.RandomUnitVectorInEllipticalConeInDegrees")
 +PropertyRedirects=(OldName="KismetMathLibrary.RandomUnitVectorInConeInRadians.ConeHalfAngle",NewName="ConeHalfAngleInRadians")
+
++PropertyRedirects=(OldName="KismetMathLibrary.RandomPointInBoundingBox.Origin",NewName="Center")
++PropertyRedirects=(OldName="KismetMathLibrary.RandomPointInBoundingBox.BoxExtent",NewName="HalfSize")
 
 +PropertyRedirects=(OldName="Widget.Visiblity",NewName="Widget.Visibility")
 +PropertyRedirects=(OldName="WidgetBlueprintLibrary.SetInputMode_UIOnlyEx.Target",NewName="PlayerController")
@@ -560,28 +598,12 @@ NearClipPlane=10.0
 +PackageRedirects=(OldName="/Script/ImmediatePhysicsEditor", NewName="/Script/AnimGraph")
 +PackageRedirects=(OldName="/Script/ImmediatePhysics", NewName="/Script/AnimGraphRuntime")
 +ClassRedirects=(OldName="/Script/ImmediatePhysicsEditor.AnimGraphNode_RigidBody",NewName="/Script/AnimGraph.AnimGraphNode_RigidBody")
++ClassRedirects=(OldName="AnimGraphNode_Ragdoll",NewName="/Script/AnimGraph.AnimGraphNode_RigidBody")
 +StructRedirects=(OldName="/Script/ImmediatePhysics.AnimNode_RigidBody",NewName="/Script/AnimGraphRuntime.AnimNode_RigidBody")
++StructRedirects=(OldName="AnimNode_Ragdoll",NewName="/Script/AnimGraphRuntime.AnimNode_RigidBody")
 
-
-+PackageRedirects=(OldName="/Script/MagicLeapGestures", NewName="/Script/MagicLeapHandTracking")
-+ClassRedirects=(OldName="/Script/MagicLeapGestures.MagicLeapGesturesFunctionLibrary",NewName="/Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary")
-+EnumRedirects=(OldName="/Script/MagicLeapGestures.EStaticGestures",NewName="/Script/MagicLeapHandTracking.EHandTrackingGesture")
-+EnumRedirects=(OldName="/Script/MagicLeapGestures.EGestureKeypointsFilterLevel",NewName="/Script/MagicLeapHandTracking.EHandTrackingKeypointFilterLevel")
-+EnumRedirects=(OldName="/Script/MagicLeapGestures.EGestureRecognitionFilterLevel",NewName="/Script/MagicLeapHandTracking.EHandTrackingGestureFilterLevel")
-+EnumRedirects=(OldName="/Script/MagicLeapGestures.EGestureTransformSpace",NewName="/Script/MagicLeapHandTracking.EGestureTransformSpace")
-+EnumRedirects=(OldName="ESceneTextureId",ValueChanges=(("PPI_ShadingModel","PPI_ShadingModelColor"))
++EnumRedirects=(OldName="/Script/Engine.ESceneTextureId",ValueChanges=(("PPI_ShadingModel","PPI_ShadingModelColor"),("PPI_LightingModel","PPI_ShadingModelColor")))
 +FunctionRedirects=(OldName="NavigationSystemV1.SimpleMoveToLocation",NewName="AIBlueprintHelperLibrary.SimpleMoveToLocation")
-+FunctionRedirects=(OldName="/Script/MagicLeapHandTracking.MagicLeapGesturesFunctionLibrary.GetHandCenter",NewName="/Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.GetHandCenter")
-+FunctionRedirects=(OldName="/Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.GetHandPointer",NewName="/Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.GetHandIndexFingerTip")
-+FunctionRedirects=(OldName="/Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.GetHandSecondary",NewName="/Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.GetHandThumbTip")
-+FunctionRedirects=(OldName="/Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.GetHandCenterNormalized",NewName="/Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.GetHandCenterNormalized")
-+FunctionRedirects=(OldName="/Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.GetGestureKeypoints",NewName="/Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.GetGestureKeypoints")
-+FunctionRedirects=(OldName="/Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.SetConfiguration",NewName="/Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.SetConfiguration")
-+FunctionRedirects=(OldName="/Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.GetConfiguration",NewName="/Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.GetConfiguration")
-+FunctionRedirects=(OldName="/Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.SetStaticGestureConfidenceThreshold",NewName="/Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.SetStaticGestureConfidenceThreshold")
-+FunctionRedirects=(OldName="/Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.GetStaticGestureConfidenceThreshold",NewName="/Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.GetStaticGestureConfidenceThreshold")
-+FunctionRedirects=(OldName="/Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.GetHandGestureConfidence",NewName="/Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.GetCurrentGestureConfidence")
-+FunctionRedirects=(OldName="/Script/MagicLeapHandTracking.MagicLeapGesturesFunctionLibrary.GetCurrentGesture",NewName="/Script/MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.GetCurrentGesture")
 
 +ClassRedirects=(OldName="LevelSequenceDirectorBlueprint",NewName="/Script/LevelSequence.LegacyLevelSequenceDirectorBlueprint")
 +ClassRedirects=(OldName="LevelSequenceDirectorGeneratedClass",NewName="/Script/Engine.BlueprintGeneratedClass")
@@ -591,10 +613,6 @@ NearClipPlane=10.0
 +FunctionRedirects=(OldName="AddChildWrapBox", NewName="AddChildToWrapBox")
 
 +PropertyRedirects=(OldName="GameplayStatics.CreatePlayer.bSpawnPawn",NewName="bSpawnPlayerController")
-
-+EnumRedirects=(OldName="ETiledMultiResLevel",NewName="EFixedFoveatedRenderingLevel",ValueChanges=(("ETiledMultiResLevel_Off","FFR_Off"),("ETiledMultiResLevel_LMSLow","FFR_Low"),("ETiledMultiResLevel_LMSMedium","FFR_Medium"),("ETiledMultiResLevel_LMSHigh","FFR_High"),("ETiledMultiResLevel_LMSHighTop","FFR_HighTop")))
-+FunctionRedirects=(OldName="GetTiledMultiresLevel",NewName="GetFixedFoveatedRenderingLevel")
-+FunctionRedirects=(OldName="SetTiledMultiresLevel",NewName="SetFixedFoveatedRenderingLevel")
 
 +FunctionRedirects=(OldName="SkeletalMeshComponent.SetAnimInstanceClass",NewName="SkeletalMeshComponent.SetAnimClass")
 +FunctionRedirects=(OldName="SkeletalMeshComponent.K2_SetAnimInstanceClass",NewName="SkeletalMeshComponent.SetAnimClass")
@@ -615,9 +633,9 @@ NearClipPlane=10.0
 +FunctionRedirects=(OldName="Widget.SetRenderAngle", NewName="Widget.SetRenderTransformAngle")
 
 +ClassRedirects=(OldName="/Script/CoreUObject.MulticastDelegateProperty",NewName="/Script/CoreUObject.MulticastInlineDelegateProperty")
-+ClassRedirects=(OldName="EditorAutomationActor",NewName="EditorUtilityActor")
-+ClassRedirects=(OldName="EditorAutomationActorComponent",NewName="EditorUtilityActorComponent")
-+ClassRedirects=(OldName="EditorAutomationObject",NewName="EditorUtilityObject")
++ClassRedirects=(OldName="EditorAutomationActor",NewName="/Script/Blutility.EditorUtilityActor")
++ClassRedirects=(OldName="EditorAutomationActorComponent",NewName="/Script/Blutility.EditorUtilityActorComponent")
++ClassRedirects=(OldName="EditorAutomationObject",NewName="/Script/Blutility.EditorUtilityObject")
 +ClassRedirects=(OldName="LandscapeBlueprintCustomBrush",NewName="/Script/LandscapeEditorUtilities.LandscapeBlueprintBrush")
 
 +PropertyRedirects=(OldName="LandscapeLayerBrush.BPCustomBrush",NewName="LandscapeLayerBrush.BlueprintBrush")
@@ -652,14 +670,14 @@ NearClipPlane=10.0
 
 +ClassRedirects=(OldName="/Script/ClothingSystemRuntimeNv.ClothingAssetNv",NewName="/Script/ClothingSystemRuntimeCommon.ClothingAssetCommon")
 +ClassRedirects=(OldName="/Script/ClothingSystemRuntimeNv.ClothLODDataNv",NewName="/Script/ClothingSystemRuntimeCommon.ClothLODDataCommon_Legacy")
-+EnumRedirects=(OldName="MaskTarget_PhysMesh",NewName="EWeightMapTargetCommon",ValueChanges=(("MaskTarget_PhysMesh::MaxDistance","EWeightMapTargetCommon::MaxDistance"),("MaskTarget_PhysMesh::BackstopDistance","EWeightMapTargetCommon::BackstopDistance"),("MaskTarget_PhysMesh::BackstopRadius","EWeightMapTargetCommon::BackstopRadius"),("MaskTarget_PhysMesh::AnimDriveMultiplier","EWeightMapTargetCommon::AnimDriveStiffness")))
++EnumRedirects=(OldName="MaskTarget_PhysMesh",NewName="/Script/ClothingSystemRuntimeCommon.EWeightMapTargetCommon",ValueChanges=(("MaskTarget_PhysMesh::MaxDistance","EWeightMapTargetCommon::MaxDistance"),("MaskTarget_PhysMesh::BackstopDistance","EWeightMapTargetCommon::BackstopDistance"),("MaskTarget_PhysMesh::BackstopRadius","EWeightMapTargetCommon::BackstopRadius"),("MaskTarget_PhysMesh::AnimDriveMultiplier","EWeightMapTargetCommon::AnimDriveStiffness")))
 
 +ClassRedirects=(OldName="/Script/ClothingSystemRuntimeCommon.ClothLODDataCommon",NewName="/Script/ClothingSystemRuntimeCommon.ClothLODDataCommon_Legacy")
 
 +ClassRedirects=(OldName="/Script/ClothingSystemRuntimeInterface.ClothPhysicalMeshDataBase",NewName="/Script/ClothingSystemRuntimeInterface.ClothPhysicalMeshDataBase_Legacy")
 +ClassRedirects=(OldName="/Script/ClothingSystemRuntimeNv.ClothPhysicalMeshDataNv",NewName="/Script/ClothingSystemRuntimeNv.ClothPhysicalMeshDataNv_Legacy")
 
-+EnumRedirects=(OldName="EWeightMapTargetCommon",ValueChanges=(("EWeightMapTargetCommon::AnimDriveMultiplier","EWeightMapTargetCommon::AnimDriveStiffness")))
++EnumRedirects=(OldName="/Script/ClothingSystemRuntimeCommon.EWeightMapTargetCommon",ValueChanges=(("EWeightMapTargetCommon::AnimDriveMultiplier","EWeightMapTargetCommon::AnimDriveStiffness")))
 +EnumRedirects=(OldName="EChaosWeightMapTarget",ValueChanges=(("EChaosWeightMapTarget::AnimDriveMultiplier","EChaosWeightMapTarget::AnimDriveStiffness")))
 
 +FunctionRedirects=(OldName="SkeletalMeshComponent.GetSubInstanceByTag",NewName="SkeletalMeshComponent.GetLinkedAnimGraphInstanceByTag")
@@ -691,9 +709,6 @@ NearClipPlane=10.0
 +PropertyRedirects=(OldName="AnimClassData.LayerNodeProperties",NewName="LinkedAnimLayerNodeProperties")
 +ClassRedirects=(OldName="/Script/MeshEditingToolset.BaseBrushTool",NewName="/Script/InteractiveToolsFramework.BaseBrushTool")
 +ClassRedirects=(OldName="/Script/MeshEditingToolset.BrushBaseProperties",NewName="/Script/InteractiveToolsFramework.BrushBaseProperties")
-
-+ClassRedirects=(OldName="PixelStreamingInputComponent",NewName="PixelStreamerInputComponent")
-+PropertyRedirects=(OldName="PixelStreamerInputComponent.OnPixelStreamingInputEvent",NewName="PixelStreamerInputComponent.OnInputEvent")
 
 +EnumRedirects=(OldName="ECurveBlendOption",ValueChanges=(("ECurveBlendOption::MaxWeight", "ECurveBlendOption::Override"))
 +ClassRedirects=(OldName="/Script/OnlineBlueprintSupport.K2Node_LatentOnlineCall", NewName="/Script/BlueprintGraph.K2Node_AsyncAction")
@@ -765,9 +780,6 @@ NearClipPlane=10.0
 +StructRedirects=(OldName="FOscillator",NewName="/Script/GameplayCameras.FOscillator")
 +StructRedirects=(OldName="ROscillator",NewName="/Script/GameplayCameras.ROscillator")
 +StructRedirects=(OldName="VOscillator",NewName="/Script/GameplayCameras.VOscillator")
-+ClassRedirects=(OldName="CameraShake",NewName="/Script/GameplayCameras.MatineeCameraShake")
-+ClassRedirects=(OldName="MatineeCameraShake",NewName="/Script/GameplayCameras.MatineeCameraShake")
-+ClassRedirects=(OldName="MatineeCameraShakePattern",NewName="/Script/GameplayCameras.MatineeCameraShakePattern")
 +EnumRedirects=(OldName="ECameraAnimPlaySpace",NewName="/Script/Engine.ECameraShakePlaySpace")
 +FunctionRedirects=(OldName="PlayerController.ClientPlayCameraShake",NewName="ClientStartCameraShake")
 +FunctionRedirects=(OldName="PlayerController.ClientPlayCameraShakeFromSource",NewName="ClientStartCameraShakeFromSource")
@@ -780,7 +792,241 @@ NearClipPlane=10.0
 +PropertyRedirects=(OldName="CameraShakeSourceComponent.bAutoPlay",NewName="bAutoStart")
 +PropertyRedirects=(OldName="FieldSystemComponent.IsChaosField",NewName="bIsChaosField")
 +PropertyRedirects=(OldName="FieldSystemComponent.IsGlobalField",NewName="bIsWorldField")
+
 +EnumRedirects=(OldName="TextureCompressionSettings",ValueChanges=(("TC_ReflectionCapture","TC_EncodedReflectionCapture")))
++EnumRedirects=(OldName="EEnvQueryTrace",ValueChanges=(("Geometry","GeometryByChannel")))
++EnumRedirects=(OldName="/Script/Engine.ENetworkFailure",NewName="/Script/NetCore.ENetworkFailure")
++ClassRedirects=(OldName="WaterMeshActor",NewName="/Script/Water.WaterZone")
+
++StructRedirects=(OldName="/Script/ControlRig.RigUnit_SpringInterpQuaternion",NewName="/Script/ControlRig.RigUnit_SpringInterpQuaternionV2")
++ClassRedirects=(OldName="RigVMStructNode",NewName="/Script/RigVMDeveloper.RigVMUnitNode")
++EnumRedirects=(OldName="/Script/Slate.ETextTransformPolicy", NewName="/Script/SlateCore.ETextTransformPolicy")
++PropertyRedirects=(OldName="BlendProfile.BlendProfileMode", NewName="Mode")
++PropertyRedirects=(OldName="RigVMInjectionInfo.StructNode", NewName="UnitNode")
++ClassRedirects=(OldName="/Script/UnrealEd.ProjectPackagingSettings", NewName="/Script/DeveloperToolSettings.ProjectPackagingSettings")
++ClassRedirects=(OldName="/Script/UnrealEd.CookerSettings", NewName="/Script/DeveloperToolSettings.CookerSettings")
++ClassRedirects=(OldName="/Script/MeshDescription.MeshDescriptionBulkDataWrapper",NewName="/Script/Engine.StaticMeshDescriptionBulkData")
++StructRedirects=(OldName="/Script/Engine.FilePath",NewName="/Script/CoreUObject.FilePath")
++StructRedirects=(OldName="/Script/Engine.DirectoryPath",NewName="/Script/CoreUObject.DirectoryPath")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.GetNumFrames.AnimationSequence",NewName="AnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.GetNumKeys.AnimationSequence",NewName="AnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.GetAnimationTrackNames.AnimationSequence",NewName="AnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.GetRawTrackPositionData.AnimationSequence",NewName="AnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.GetRawTrackRotationData.AnimationSequence",NewName="AnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.GetRawTrackScaleData.AnimationSequence",NewName="AnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.GetRawTrackData.AnimationSequence",NewName="AnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.IsValidRawAnimationTrackName.AnimationSequence",NewName="AnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.GetAnimationNotifyEvents.AnimationSequence",NewName="AnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.GetAnimationNotifyEventNames.AnimationSequence",NewName="AnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.AddAnimationNotifyEvent.AnimationSequence",NewName="AnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.AddAnimationNotifyStateEvent.AnimationSequence",NewName="AnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.AddAnimationNotifyEventObject.AnimationSequence",NewName="AnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.AddAnimationNotifyStateEventObject.AnimationSequence",NewName="AnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.RemoveAnimationNotifyEventsByName.AnimationSequence",NewName="AnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.RemoveAnimationNotifyEventsByTrack.AnimationSequence",NewName="AnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.ReplaceAnimNotifyStates.AnimationSequence",NewName="AnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.ReplaceAnimNotifies.AnimationSequence",NewName="AnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.CopyAnimNotifiesFromSequence.SrcAnimSequence",NewName="SourceAnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.CopyAnimNotifiesFromSequence.DestAnimSequence",NewName="DestinationAnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.GetAnimationNotifyTrackNames.AnimationSequence",NewName="AnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.AddAnimationNotifyTrack.AnimationSequence",NewName="AnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.RemoveAnimationNotifyTrack.AnimationSequence",NewName="AnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.RemoveAllAnimationNotifyTracks.AnimationSequence",NewName="AnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.IsValidAnimNotifyTrackName.AnimationSequence",NewName="AnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.GetAnimationNotifyEventsForTrack.AnimationSequence",NewName="AnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.AddMetaData.AnimationSequence",NewName="AnimationAsset")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.AddMetaDataObject.AnimationSequence",NewName="AnimationAsset")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.RemoveAllMetaData.AnimationSequence",NewName="AnimationAsset")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.RemoveMetaData.AnimationSequence",NewName="AnimationAsset")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.RemoveMetaDataOfClass.AnimationSequence",NewName="AnimationAsset")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.GetMetaData.AnimationSequence",NewName="AnimationAsset")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.GetMetaDataOfClass.AnimationSequence",NewName="AnimationAsset")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.ContainsMetaDataOfClass.AnimationSequence",NewName="AnimationAsset")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.GetBonePoseForTime.AnimationSequence",NewName="AnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.GetBonePoseForFrame.AnimationSequence",NewName="AnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.GetBonePosesForTime.AnimationSequence",NewName="AnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.GetBonePosesForFrame.AnimationSequence",NewName="AnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.GetSequenceLength.AnimationSequence",NewName="AnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.GetRateScale.AnimationSequence",NewName="AnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.SetRateScale.AnimationSequence",NewName="AnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.GetFrameAtTime.AnimationSequence",NewName="AnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.GetTimeAtFrame.AnimationSequence",NewName="AnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.IsValidTime.AnimationSequence",NewName="AnimationSequenceBase")
++PropertyRedirects=(OldName="AnimationBlueprintLibrary.FindBonePathToRoot.AnimationSequence",NewName="AnimationSequenceBase")
+
++PropertyRedirects=(OldName="AssetRegistry.ScanPathsSynchronous.bIgnoreBlackListScanFilters",NewName="bIgnoreDenyListScanFilters")
++PropertyRedirects=(OldName="LandscapeComponent.LayerWhitelist", NewName="LayerAllowList")
++EnumRedirects=(OldName="ELandscapeLayerPaintingRestriction",ValueChanges=(("UseComponentWhitelist","UseComponentAllowList")) )
++PropertyRedirects=(OldName="DataLayer.bIsDynamicallyLoaded", NewName="DataLayer.bIsRuntime")
++PropertyRedirects=(OldName="DataLayer.InitialState", NewName="DataLayer.InitialRuntimeState")
++PropertyRedirects=(OldName="DataLayerSubsystem.OnDataLayerStateChanged", NewName="DataLayerSubsystem.OnDataLayerRuntimeStateChanged")
++FunctionRedirects=(OldName="WorldDataLayers.OnDataLayerStateChanged", NewName="WorldDataLayers.OnDataLayerRuntimeStateChanged")
+
++ClassRedirects=(OldName="/Script/Engine.BlendSpaceBase",NewName="/Script/Engine.BlendSpace")
++FunctionRedirects=(OldName="Image.SetBrushSize",NewName="SetDesiredSizeOverride")
++ClassRedirects=(OldName="/Script/PropertyAccess.AnimBlueprintClassSubsystem_PropertyAccess",NewName="/Script/Engine.AnimBlueprintClassSubsystem_PropertyAccess")
++PackageRedirects=(OldName="/Script/PropertyAccess", Removed=true)
++StructRedirects=(OldName="AnimInstanceSubsystemData",NewName="/Script/Engine.AnimSubsystemInstance")
++ClassRedirects=(OldName="/Script/AnimationModifiers.AnimationBlueprintLibrary",NewName="/Script/AnimationBlueprintLibrary.AnimationBlueprintLibrary")
++PropertyRedirects=(OldName="GeometryCollectionComponent.Simulating", NewName="SimulatePhysics")
++PropertyRedirects=(OldName="GeometryCollectionComponent.ApplyExternalStrain.Index", NewName="GeometryCollectionComponent.ApplyExternalStrain.ItemIndex")
++PropertyRedirects=(OldName="GeometryCollectionComponent.CrumbleCluster.Index", NewName="GeometryCollectionComponent.CrumbleCluster.ItemIndex")
++PropertyRedirects=(OldName="ControlRigComponent.OnPreUpdateDelegate", NewName="OnPreForwardsSolveDelegate")
++PropertyRedirects=(OldName="ControlRigComponent.OnPostUpdateDelegate", NewName="OnPostForwardsSolveDelegate")
++PropertyRedirects=(OldName="AnimNode_Mirror.BlendTimeOnMirrorStateChange",NewName="AnimNode_Mirror.BlendTime")
++PropertyRedirects=(OldName="AnimNode_Mirror.bResetChildOnMirrorStateChange",NewName="AnimNode_Mirror.bResetChild")
++PropertyRedirects=(OldName="PlayerState.Ping",NewName="CompressedPing")
++ClassRedirects=(OldName="/Script/MovieSceneTracks.MovieSceneVectorSection",NewName="/Script/MovieSceneTracks.MovieSceneFloatVectorSection")
++ClassRedirects=(OldName="/Script/MovieSceneTracks.MovieSceneVectorTrack",NewName="/Script/MovieSceneTracks.MovieSceneFloatVectorTrack")
++ClassRedirects=(OldName="/Script/MovieSceneTracks.MovieSceneVectorTrackExtensions",NewName="/Script/SequencerScripting.MovieSceneFloatVectorTrackExtensions")
++StructRedirects=(OldName="/Script/MovieSceneTracks.MovieSceneVectorKeyStructBase",NewName="/Script/MovieSceneTracks.MovieSceneFloatVectorKeyStructBase")
++StructRedirects=(OldName="/Script/MovieSceneTracks.MovieSceneVectorKeyStruct",NewName="/Script/MovieSceneTracks.MovieSceneVector3fKeyStruct")
+
++StructRedirects=(OldName="AudioComponentParam", NewName="/Script/AudioExtensions.AudioParameter")
++PropertyRedirects=(OldName="AudioParameter.SoundWaveParam", NewName="AudioParameter.ObjectParam")
+
++FunctionRedirects=(OldName="AudioComponent.SetBoolParameter", NewName="AudioParameterControllerInterface.SetBoolParameter")
++FunctionRedirects=(OldName="AudioComponent.SetFloatParameter", NewName="AudioParameterControllerInterface.SetFloatParameter")
++FunctionRedirects=(OldName="AudioComponent.SetIntParameter", NewName="AudioParameterControllerInterface.SetIntParameter")
++PropertyRedirects=(OldName="AudioComponent.InstanceParameters", NewName="AudioComponent.DefaultParameters")
+
++FunctionRedirects=(OldName="SoundGeneratorParameterInterface.SetBoolParameter", NewName="AudioParameterControllerInterface.SetBoolParameter")
++FunctionRedirects=(OldName="SoundGeneratorParameterInterface.SetFloatParameter", NewName="AudioParameterControllerInterface.SetFloatParameter")
++FunctionRedirects=(OldName="SoundGeneratorParameterInterface.SetIntParameter", NewName="AudioParameterControllerInterface.SetIntParameter")
++ClassRedirects=(OldName="/Script/AudioExtensions.AudioParameterInterface", NewName="/Script/AudioExtensions.AudioParameterControllerInterface")
+
++EnumRedirects=(OldName="ESoundwaveSampleRateSettings",ValueChanges=(("ESoundwaveSampleRateSettings::MatchDevice","ESoundwaveSampleRateSettings::Max")) )
+
++PropertyRedirects=(OldName="GameplayCueNotify_SoundInfo.SoundCue",NewName="GameplayCueNotify_SoundInfo.Sound")
+
++ClassRedirects=(OldName="/Script/LiveLink.LiveLinkRetargetAsset", NewName="/Script/LiveLinkAnimationCore.LiveLinkRetargetAsset")
++ClassRedirects=(OldName="/Script/LiveLink.LiveLinkRemapAsset", NewName="/Script/LiveLinkAnimationCore.LiveLinkRemapAsset")
++ClassRedirects=(OldName="/Script/LiveLink.LiveLinkInstance", NewName="/Script/LiveLinkAnimationCore.LiveLinkInstance")
++StructRedirects=(OldName="/Script/LiveLink.AnimNode_LiveLinkPose", NewName="/Script/LiveLinkAnimationCore.AnimNode_LiveLinkPose")
++StructRedirects=(OldName="/Script/LiveLink.LiveLinkInstanceProxy", NewName="/Script/LiveLinkAnimationCore.LiveLinkInstanceProxy")
+
++EnumRedirects=(OldName="ELevelInstanceRuntimeBehavior",ValueChanges=(("Embedded","Partitioned")) )
+
++PackageRedirects=(OldName="/Engine/VT/LightmapVirtualTextureSpace_0_Compressed",Removed=True)
+
++ClassRedirects=(OldName="ComputeGraph", NewName="/Script/ComputeFramework.ComputeGraph")
++ClassRedirects=(OldName="ComputeGraphComponent", NewName="/Script/ComputeFramework.ComputeGraphComponent")
++ClassRedirects=(OldName="ComputeKernel", NewName="/Script/ComputeFramework.ComputeKernel")
++ClassRedirects=(OldName="ComputeKernelFromText", NewName="/Script/ComputeFramework.ComputeKernelFromText")
++ClassRedirects=(OldName="ComputeKernelSource", NewName="/Script/ComputeFramework.ComputeKernelSource")
++ClassRedirects=(OldName="ComputeKernel", NewName="/Script/ComputeFramework.ComputeKernel")
+
++ClassRedirects=(OldName="PackedLevelInstance", NewName="/Script/Engine.PackedLevelActor")
++ClassRedirects=(OldName="EditorStyleSettings",NewName="/Script/UnrealEd.EditorStyleSettings")
++EnumRedirects=(OldName="EAssetEditorOpenLocation",NewName="/Script/UnrealEd.EAssetEditorOpenLocation")
++EnumRedirects=(OldName="ELogCategoryColorizationMode",NewName="/Script/OutputLog.ELogCategoryColorizationMode")
++EnumRedirects=(OldName="/Script/UnrealEd.ELogCategoryColorizationMode",NewName="/Script/OutputLog.ELogCategoryColorizationMode")
+
++PropertyRedirects=(OldName="PostProcessSettings.LocalExposureContrastReduction", NewName="PostProcessSettings.LocalExposureContrastScale")
++PropertyRedirects=(OldName="PostProcessSettings.bOverride_LocalExposureContrastReduction", NewName="PostProcessSettings.bOverride_LocalExposureContrastScale")
+
++FunctionRedirects=(OldName="KismetStringLibrary.Conv_FloatToString", NewName="Conv_DoubleToString")
++PropertyRedirects=(OldName="KismetStringLibrary.Conv_DoubleToString.InFloat", NewName="Conv_DoubleToString.InDouble")
++FunctionRedirects=(OldName="KismetStringLibrary.Conv_StringToFloat", NewName="Conv_StringToDouble")
++FunctionRedirects=(OldName="KismetStringLibrary.BuildString_Float", NewName="BuildString_Double")
++PropertyRedirects=(OldName="KismetStringLibrary.BuildString_Double.InFloat", NewName="BuildString_Double.InDouble")
+
++FunctionRedirects=(OldName="KismetMathLibrary.MakeVector_NetQuantize", NewName="MakeVector")
++FunctionRedirects=(OldName="KismetMathLibrary.MakeVector_NetQuantize10", NewName="MakeVector")
++FunctionRedirects=(OldName="KismetMathLibrary.MakeVector_NetQuantize100", NewName="MakeVector")
++FunctionRedirects=(OldName="KismetMathLibrary.MakeVector_NetQuantizeNormal", NewName="MakeVector")
++FunctionRedirects=(OldName="KismetMathLibrary.BreakVector_NetQuantize", NewName="BreakVector")
++FunctionRedirects=(OldName="KismetMathLibrary.BreakVector_NetQuantize10", NewName="BreakVector")
++FunctionRedirects=(OldName="KismetMathLibrary.BreakVector_NetQuantize100", NewName="BreakVector")
++FunctionRedirects=(OldName="KismetMathLibrary.BreakVector_NetQuantizeNormal", NewName="BreakVector")
++FunctionRedirects=(OldName="KismetMathLibrary.Multiply_FloatFloat", NewName="Multiply_DoubleDouble")
++FunctionRedirects=(OldName="KismetMathLibrary.Divide_FloatFloat", NewName="Divide_DoubleDouble")
++FunctionRedirects=(OldName="KismetMathLibrary.Add_FloatFloat", NewName="Add_DoubleDouble")
++FunctionRedirects=(OldName="KismetMathLibrary.Subtract_FloatFloat", NewName="Subtract_DoubleDouble")
++FunctionRedirects=(OldName="KismetMathLibrary.Less_FloatFloat", NewName="Less_DoubleDouble")
++FunctionRedirects=(OldName="KismetMathLibrary.Greater_FloatFloat", NewName="Greater_DoubleDouble")
++FunctionRedirects=(OldName="KismetMathLibrary.LessEqual_FloatFloat", NewName="LessEqual_DoubleDouble")
++FunctionRedirects=(OldName="KismetMathLibrary.GreaterEqual_FloatFloat", NewName="GreaterEqual_DoubleDouble")
++FunctionRedirects=(OldName="KismetMathLibrary.EqualEqual_FloatFloat", NewName="EqualEqual_DoubleDouble")
++FunctionRedirects=(OldName="KismetMathLibrary.NotEqual_FloatFloat", NewName="NotEqual_DoubleDouble")
+
++StructRedirects=(OldName="/Script/Engine.ActorComponentDuplicatedObjectData", NewName="/Script/Engine.DataCacheDuplicatedObjectData")
+
++ClassRedirects=(OldName="RigVMTemplateNode", NewName="/Script/RigVMDeveloper.RigVMUnitNode")
+
++StructRedirects=(OldName="/Script/SequencerScripting.SequencerBindingProxy", NewName="/Script/MovieScene.MovieSceneBindingProxy")
+
++FunctionRedirects=(OldName="KismetSystemLibrary.MakeLiteralFloat", NewName="MakeLiteralDouble")
+
++FunctionRedirects=(OldName="KismetTextLibrary.Conv_FloatToText", NewName="Conv_DoubleToText")
++PropertyRedirects=(OldName="KismetTextLibrary.Conv_DoubleToText.InDouble", NewName="Conv_DoubleToText.Value")
+
++PropertyRedirects=(OldName="AITask_MoveTo.AIMoveTo.bUseContinuosGoalTracking", NewName="AITask_MoveTo.AIMoveTo.bUseContinuousGoalTracking")
+
++PropertyRedirects=(OldName="RectLightComponent.SetSourceTexture.bNewValue", NewName="NewValue")
++PropertyRedirects=(OldName="RectLightComponent.SetSourceWidth.bNewValue", NewName="NewValue")
+
++PropertyRedirects=(OldName="RecastNavMeshTileGenerationDebug.bHeightfieldSolidPostRadiusFiltering", NewName="bHeightfieldSolidPostInclusionBoundsFiltering")
+
++PropertyRedirects=(OldName="SimSpaceSettings.MasterAlpha", NewName="SimSpaceSettings.WorldAlpha")
+
++PropertyRedirects=(OldName="SkinnedMeshComponent.MasterPoseComponent", NewName="LeaderPoseComponent")
++PropertyRedirects=(OldName="SkinnedMeshComponent.bUseBoundsFromMasterPoseComponent", NewName="bUseBoundsFromLeaderPoseComponent")
++PropertyRedirects=(OldName="SkinnedMeshComponent.bIgnoreMasterPoseComponentLOD", NewName="bIgnoreLeaderPoseComponentLOD")
++FunctionRedirects=(OldName="SkinnedMeshComponent.SetMasterPoseComponent", NewName="SetLeaderPoseComponent")
++PropertyRedirects=(OldName="SkinnedMeshComponent.SetLeaderPoseComponent.NewMasterBoneComponent",NewName="SkinnedMeshComponent.SetLeaderPoseComponent.NewLeaderBoneComponent")
+
++PropertyRedirects=(OldName="SkeletalMeshComponent.bPropagateCurvesToSlaves", NewName="bPropagateCurvesToFollowers")
++FunctionRedirects=(OldName="SkeletalMeshComponent.BindClothToMasterPoseComponent", NewName="BindClothToLeaderPoseComponent")
++FunctionRedirects=(OldName="SkeletalMeshComponent.UnbindClothFromMasterPoseComponent", NewName="UnbindClothFromLeaderPoseComponent")
+
++FunctionRedirects=(OldName="SkinnedMeshComponent.SetSkeletalMesh", NewName="SetSkinnedAssetAndUpdate")
+
++PropertyRedirects=(OldName="AGameplayAbilityWorldReticle.MasterPC", NewName="PrimaryPC")
++PropertyRedirects=(OldName="AGameplayAbilityTargetActor.MasterPC", NewName="PrimaryPC")
+
++ClassRedirects=(OldName="CameraShake",NewName="/Script/GameplayCameras.LegacyCameraShake")
++ClassRedirects=(OldName="MatineeCameraShake",NewName="/Script/GameplayCameras.LegacyCameraShake")
++ClassRedirects=(OldName="MatineeCameraShakePattern",NewName="/Script/GameplayCameras.LegacyCameraShakePattern")
++ClassRedirects=(OldName="MatineeCameraShakeFunctionLibrary", NewName="/Script/GameplayCameras.LegacyCameraShakeFunctionLibrary")
++FunctionRedirects=(OldName="LegacyCameraShake.StartMatineeCameraShake", NewName="LegacyCameraShake.StartLegacyCameraShake")
++FunctionRedirects=(OldName="LegacyCameraShake.StartMatineeCameraShakeFromSource", NewName="LegacyCameraShake.StartLegacyCameraShakeFromSource")
++FunctionRedirects=(OldName="LegacyCameraShakeFunctionLibrary.Conv_MatineeCameraShake", NewName="LegacyCameraShakeFunctionLibrary.Conv_LegacyCameraShake")
+
++PropertyRedirects=(OldName="AnimationSettings.BoneTimecodeCustomAttributeNameSettings",NewName="BoneTimecodeAnimationAttributeNameSettings")
++PropertyRedirects=(OldName="AnimationSettings.BoneCustomAttributesNames",NewName="BoneAnimationAttributesNames")
++PropertyRedirects=(OldName="AnimationSettings.BoneNamesWithCustomAttributes",NewName="BoneNamesWithAnimationAttributes")
+
++ClassRedirects=(OldName="/Script/Engine.PlatformInputDeviceMapperLibrary",NewName="/Script/Engine.InputDeviceLibrary")
++ClassRedirects=(OldName="/Script/Engine.PlatformInputDeviceMapperLibrary",NewName="/Script/Engine.InputDeviceLibrary")
++StructRedirects=(OldName="/Script/Engine.SetDevicePropertyParams", NewName="/Script/Engine.ActivateDevicePropertyParams")
++FunctionRedirects=(OldName="InputDeviceSubsystem.GetPlayerControllerFromInputDevice", NewName="InputDeviceLibrary.GetPlayerControllerFromInputDevice")
++FunctionRedirects=(OldName="InputDeviceSubsystem.GetPlayerControllerFromPlatformUser", NewName="InputDeviceLibrary.GetPlayerControllerFromPlatformUser")
++FunctionRedirects=(OldName="InputDeviceSubsystem.IsDevicePropertyHandleValid", NewName="InputDeviceLibrary.IsDevicePropertyHandleValid")
++PropertyRedirects=(OldName="/Script/NavigationSystem.RecastNavMeshTileGenerationDebug.bHeightfieldSolidFromRasterization",NewName="bHeightfieldFromRasterization")
++PropertyRedirects=(OldName="/Script/NavigationSystem.RecastNavMeshTileGenerationDebug.bHeightfieldSolidPostInclusionBoundsFiltering",NewName="bHeightfieldPostInclusionBoundsFiltering")
++PropertyRedirects=(OldName="/Script/NavigationSystem.RecastNavMeshTileGenerationDebug.bHeightfieldSolidPostHeightFiltering",NewName="bHeightfieldPostHeightFiltering")
++PropertyRedirects=(OldName="/Script/NavigationSystem.RecastNavMeshTileGenerationDebug.bHeightfieldSolidBounds",NewName="bHeightfieldBounds")
+
++StructRedirects=(OldName="/Script/AssetTools.RevisionInfo", NewName="/Script/AssetDefinition.RevisionInfo")
++PropertyRedirects=(OldName="DecalComponent.SetFadeIn.Duaration", NewName="DecalComponent.SetFadeIn.Duration")
++PropertyRedirects=(OldName="BlendSpace.PerBoneBlend", NewName="BlendSpace.ManualPerBoneOverrides")
++ClassRedirects=(OldName="/Script/MovieRenderPipelineCore.MoviePipelineMasterConfig", NewName="/Script/MovieRenderPipelineCore.MoviePipelinePrimaryConfig")
++FunctionRedirects=(OldName="KismetMathLibrary.Conv_FloatToLinearColor", NewName="Conv_DoubleToLinearColor")
++FunctionRedirects=(OldName="KismetMathLibrary.Conv_ByteToFloat", NewName="Conv_ByteToDouble")
++FunctionRedirects=(OldName="KismetMathLibrary.Conv_IntToFloat", NewName="Conv_IntToDouble")
++FunctionRedirects=(OldName="KismetMathLibrary.Conv_BoolToFloat", NewName="Conv_BoolToDouble")
++FunctionRedirects=(OldName="KismetMathLibrary.Conv_FloatToVector", NewName="Conv_DoubleToVector")
++PropertyRedirects=(OldName="KismetMathLibrary.Conv_DoubleToLinearColor.InFloat", NewName="Conv_DoubleToLinearColor.InDouble")
++PropertyRedirects=(OldName="KismetMathLibrary.Conv_DoubleToVector.InFloat", NewName="Conv_DoubleToVector.InDouble")
+
++PropertyRedirects=(OldName="KismetSystemLibrary.MakeTopLevelAssetPath.FullPathOrPackageName", NewName="KismetSystemLibrary.MakeTopLevelAssetPath.PackageName")
++PropertyRedirects=(OldName="/Script/NavigationSystem.NavigationSystemV1.GeometryExportVertexCountWarningThreshold",NewName="/Script/NavigationSystem.NavigationSystemV1.GeometryExportTriangleCountWarningThreshold")
++PropertyRedirects=(OldName="ISMComponentDescriptor.bIsLocalToWorldDeterminantNegative", NewName="ISMComponentDescriptor.bReverseCulling")
+
++PropertyRedirects=(OldName="MaterialInstanceBasePropertyOverrides.MaxWorldPositionOffsetDistance", NewName="MaterialInstanceBasePropertyOverrides.MaxWorldPositionOffsetDisplacement")
++PropertyRedirects=(OldName="MaterialInstanceBasePropertyOverrides.bOverride_MaxWorldPositionOffsetDistance", NewName="MaterialInstanceBasePropertyOverrides.bOverride_MaxWorldPositionOffsetDisplacement")
++PropertyRedirects=(OldName="Material.MaxWorldPositionOffsetDistance", NewName="Material.MaxWorldPositionOffsetDisplacement")
 
 [CoreUObject.Metadata]
 +MetadataRedirects=(OldKey="K2Protected", NewKey="BlueprintProtected")
@@ -837,6 +1083,7 @@ ServerFlushLogInterval=30
 +Package=/Engine/EngineMaterials/PreintegratedSkinBRDF
 +Package=/Engine/EngineMaterials/RemoveSurfaceMaterial
 +Package=/Engine/EngineMaterials/WeightMapPlaceholderTexture
++Package=/Engine/EngineMaterials/NaniteHiddenSectionMaterial
 
 +Package=/Engine/EngineDebugMaterials/BoneWeightMaterial
 +Package=/Engine/EngineDebugMaterials/DebugMeshMaterial
@@ -876,15 +1123,15 @@ ZeroEngineVersionWarning=True
 UseStrictEngineVersioning=True
 CanStripEditorOnlyExportsAndImports=True
 CanSkipEditorReferencedPackagesWhenCooking=False
-CanUseUnversionedPropertySerialization=False
+CanUseUnversionedPropertySerialization=True
 TestUnversionedPropertySerializationWhenCooking=False
 DetailedCallstacksInNonMonolithicBuilds=True
 UseSeperateBulkDataFiles=False
 GameThreadHeartBeatStartSuspended=False
 GameThreadHeartBeatHitchDuration=-1.0
 GameThreadHeartBeatStackWalk=false
-AllowBulkDataInIoStore=True
-LegacyBulkDataOffsets=False
+IgnoreInlineBulkDataReloadEnsures=False
+UsePackageTrailer=True
 HangDuration=0.0
 AssetLogShowsDiskPath=True
 AssetLogShowsAbsolutePath=True
@@ -892,9 +1139,50 @@ TaskThreadStackSize=393216
 PoolThreadStackSize=131072
 DefaultThreadStackSize=1048576
 
+[Core.System.Experimental]
+EnablePackageSidecarSaving=False
+AllowVirtualizationOptOut =False
+
+[Core.ContentVirtualization]
+SystemName=None
+LazyInit=False
+
+[Core.VirtualizationModule]
+EnablePayloadVirtualization=True
+EnableCacheAfterPull=True
+MinPayloadLength=0
+BackendGraph=ContentVirtualizationBackendGraph_None
+VirtualizationProcessTag=#virtualized
+AllowSubmitIfVirtualizationFailed=false
+FilterMode=OptOut
+FilterEngineContent=True
+FilterEnginePluginContent=True
+FilterMapContent=True
+LazyInitConnections=False
++DisabledAsset=StaticMesh
++DisabledAsset=SoundWave
+
+[/Script/Virtualization.VirtualizationFilterSettings]
+!ExcludePackagePaths=ClearArray
+
+[ContentVirtualizationBackendGraph_None]
+CacheStorageHierarchy=()
+PersistentStorageHierarchy=()
+
+[ContentVirtualizationBackendGraph_LocalCache]
+CacheStorageHierarchy=(Entry=LocalFileCache)
+PersistentStorageHierarchy=()
+LocalFileCache=(Type=FileSystem, Path="%GAMESAVEDDIR%VirtualizedPayloads/")
+
+[ContentVirtualizationBackendGraph_JupiterLocalHost]
+CacheStorageHierarchy=(Entry=LocalFileCache)
+PersistentStorageHierarchy=(JupiterCache)
+LocalFileCache=(Type=FileSystem, Path="%GAMESAVEDDIR%VirtualizedPayloads/")
+JupiterCache=(Type=Jupiter, Host="http://localhost", Namespace="ue.mirage", ChunkSize=524288)
+
 [/Script/Engine.StreamingSettings]
 s.MinBulkDataSizeForAsyncLoading=131072
-s.AsyncLoadingThreadEnabled=False
+s.AsyncLoadingThreadEnabled=True
 s.EventDrivenLoaderEnabled=True
 s.WarnIfTimeLimitExceeded=False
 s.TimeLimitExceededMultiplier=1.5
@@ -923,10 +1211,14 @@ gc.MaxObjectsInEditor=25165824
 gc.IncrementalBeginDestroyEnabled=True
 gc.CreateGCClusters=True
 gc.MinGCClusterSize=5
+gc.AssetClustreringEnabled=False
 gc.ActorClusteringEnabled=False
 gc.BlueprintClusteringEnabled=False
 gc.UseDisregardForGCOnDedicatedServers=False
 gc.MultithreadedDestructionEnabled=True
+gc.VerifyGCObjectNames=True
+gc.VerifyUObjectsAreNotFGCObjects=False
+gc.PendingKillEnabled=True
 
 [Internationalization]
 +LocalizationPaths=../../../Engine/Content/Localization/Engine
@@ -941,6 +1233,19 @@ UnfocusedVolumeMultiplier=0.0
 UseAudioThread=true
 EnableAudioMixer=false
 DeferStartupPrecache=false
++AllWaveFormats=BINKA
++AllWaveFormats=ADPCM
++AllWaveFormats=PCM
++AllWaveFormats=OPUS
++AllWaveFormats=OGG
++FormatModuleHints=AudioFormatOPUS
++FormatModuleHints=AudioFormatOGG
++FormatModuleHints=AudioFormatADPCM
++FormatModuleHints=AudioFormatBINKA
++AudioInfoModules=BinkAudioDecoder
+FallbackFormat=BINKA
+PlatformFormat=BINKA
+PlatformStreamingFormat=BINKA
 
 [AudioChannelAzimuthMap]
 FrontLeft=330
@@ -1061,6 +1366,102 @@ PacketLimitPerFrame=0
 NetConnPacketTimeLimitMSPerFrame=100
 CooloffTime=10
 
+[GameNetDriver RPCDoSDetection]
+bRPCDoSDetection=false
+bRPCDoSAnalytics=false
+HitchTimeQuotaMS=1000
+HitchSuspendDetectionTimeMS=1000
+InitialConnectToleranceMS=2000
+RPCBlockWhitelist=ServerUpdateCamera
+RPCBlockWhitelist=ServerMove
+RPCBlockWhitelist=ServerMovePacked
++DetectionSeverity=Normal
++DetectionSeverity=Hitch
++DetectionSeverity=Burst
++DetectionSeverity=PersistentBurst
++DetectionSeverity=DoS
++DetectionSeverity=ExpensiveDoS
++DetectionSeverity=Kick
+
+[BeaconNetDriver RPCDoSDetection]
+bRPCDoSDetection=false
+bRPCDoSAnalytics=false
+HitchTimeQuotaMS=1000
+HitchSuspendDetectionTimeMS=1000
+InitialConnectToleranceMS=2000
++DetectionSeverity=Normal
++DetectionSeverity=Hitch
++DetectionSeverity=Burst
++DetectionSeverity=PersistentBurst
++DetectionSeverity=DoS
++DetectionSeverity=ExpensiveDoS
++DetectionSeverity=Kick
+
+[RPCDoSDetection.Normal]
+EscalateQuotaRPCsPerFrame=256
+EscalateTimeQuotaMSPerFrame=10
+
+[RPCDoSDetection.Hitch]
+EscalateQuotaRPCsPerPeriod=512
+EscalateTimeQuotaMSPerPeriod=50
+EscalateQuotaTimePeriod=2
+CooloffTime=5
+AutoEscalateTime=10
+
+[RPCDoSDetection.Burst]
+EscalateQuotaRPCsPerPeriod=1024
+EscalateTimeQuotaMSPerPeriod=512
+EscalateQuotaTimePeriod=8
+CooloffTime=5
+AutoEscalateTime=8
+
+[RPCDoSDetection.PersistentBurst]
+bLogEscalate=true
+bSendEscalateAnalytics=true
+bTrackRecentRPCs=true
+EscalateQuotaRPCsPerPeriod=2048
+EscalateTimeQuotaMSPerPeriod=1024
+EscalateQuotaTimePeriod=8
+EscalationCountTolerance=15
+EscalationTimeToleranceMS=8000
+CooloffTime=5
+AutoEscalateTime=8
+
+[RPCDoSDetection.DoS]
+bLogEscalate=true
+bSendEscalateAnalytics=true
+bTrackRecentRPCs=true
+EscalateQuotaRPCsPerPeriod=4096
+EscalateTimeQuotaMSPerPeriod=2048
+EscalateQuotaTimePeriod=8
+EscalationCountTolerance=10
+EscalationTimeToleranceMS=8000
+RPCRepeatLimitPerPeriod=512
+RPCRepeatLimitMSPerPeriod=1024
+RPCRepeatLimitTimePeriod=4
+CooloffTime=10
+AutoEscalateTime=11
+
+[RPCDoSDetection.ExpensiveDoS]
+bLogEscalate=true
+bSendEscalateAnalytics=true
+bTrackRecentRPCs=true
+EscalateQuotaRPCsPerPeriod=32768
+EscalateTimeQuotaMSPerPeriod=8192
+EscalateQuotaTimePeriod=16
+EscalationCountTolerance=5
+EscalationTimeToleranceMS=8000
+RPCRepeatLimitPerPeriod=512
+RPCRepeatLimitMSPerPeriod=1024
+RPCRepeatLimitTimePeriod=4
+CooloffTime=10
+
+[RPCDoSDetection.Kick]
+bLogEscalate=true
+bSendEscalateAnalytics=true
+bKickPlayer=true
+
+
 [/Script/Engine.DemoNetDriver]
 NetConnectionClassName="/Script/Engine.DemoNetConnection"
 DemoSpectatorClass=Engine.PlayerController
@@ -1089,9 +1490,7 @@ GameCommandLine=-log
 FOVAngle=90.000000
 GodMode=True
 UseAxisIndicator=True
-MatineeCurveDetail=0.1
 HeightMapExportClassName="TerrainHeightMapExporterTextT3D"
-bGroupingActive=true
 bCustomCameraAlignEmitter=true
 CustomCameraAlignEmitterDistance=100.0
 bDrawSocketsInGMode=false
@@ -1102,9 +1501,8 @@ InEditorGameURLOptions=
 
 [/Script/UnrealEd.UnrealEdEngine]
 AutoSaveIndex=0
-+TemplateMapInfos=(ThumbnailTexture=Texture2D'/Engine/Maps/Templates/Thumbnails/Default.Default',Map="/Engine/Maps/Templates/Template_Default")
-+TemplateMapInfos=(ThumbnailTexture=Texture2D'/Engine/Maps/Templates/Thumbnails/TimeOfDay.TimeOfDay',Map="/Engine/Maps/Templates/TimeOfDay_Default")
-+TemplateMapInfos=(ThumbnailTexture=Texture2D'/Engine/Maps/Templates/Thumbnails/VR-Basic.VR-Basic',Map="/Engine/Maps/Templates/VR-Basic")
++TemplateMapInfos=(Thumbnail="/Engine/Maps/Templates/Thumbnails/OpenWorld.OpenWorld",Map="/Engine/Maps/Templates/OpenWorld",DisplayName="Open World",Category="OpenWorld")
++TemplateMapInfos=(Thumbnail="/Engine/Maps/Templates/Thumbnails/Basic.Basic",Map="/Engine/Maps/Templates/Template_Default",DisplayName="Basic")
 
 +PackagesToBeFullyLoadedAtStartup=/Engine/EditorMaterials/Cross
 +PackagesToBeFullyLoadedAtStartup=/Engine/EditorMaterials/Cross_Mat
@@ -1147,7 +1545,6 @@ AutoSaveIndex=0
 +PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/SceneManager
 +PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/SmallFont
 +PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/S_Actor
-+PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/S_DecalActorIcon
 +PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/S_TextRenderActorIcon
 +PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/S_Emitter
 +PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/S_ExpoHeightFog
@@ -1160,7 +1557,6 @@ AutoSaveIndex=0
 +PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/S_Player
 +PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/S_RadForce
 +PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/S_ReflActorIcon
-+PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/S_Terrain
 +PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/S_Thruster
 +PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/S_Trigger
 +PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/S_VectorFieldVol
@@ -1172,8 +1568,6 @@ AutoSaveIndex=0
 +PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/LightIcons/S_LightPointMove
 +PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/LightIcons/S_LightSpot
 +PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/LightIcons/S_LightSpotMove
-+PackagesToBeFullyLoadedAtStartup=/Engine/EditorResources/Spline/T_Loft_Spline
-
 +PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/BlinkingCaret
 +PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/DefaultBokeh
 +PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/DefaultBloomKernel
@@ -1200,6 +1594,7 @@ AutoSaveIndex=0
 +PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/PreintegratedSkinBRDF
 +PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/RemoveSurfaceMaterial
 +PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/WeightMapPlaceholderTexture
++PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/NaniteHiddenSectionMaterial
 
 +PackagesToBeFullyLoadedAtStartup=/Engine/EngineFonts/SmallFont
 +PackagesToBeFullyLoadedAtStartup=/Engine/EngineFonts/TinyFont
@@ -1218,17 +1613,45 @@ bAllowCompilingThroughWorkers=True
 bAllowAsynchronousShaderCompiling=True
 NumUnusedShaderCompilingThreads=3
 NumUnusedShaderCompilingThreadsDuringGame=4
+ShaderCompilerCoreCountThreshold=12
+PercentageUnusedShaderCompilingThreads=50
 MaxShaderJobBatchSize=10
-bPromptToRetryFailedShaderCompiles=True
+bPromptToRetryFailedShaderCompiles=False
 bLogJobCompletionTimes=False
 ProcessGameThreadTargetTime=.01
-WorkerTimeToLive=60
+WorkerTimeToLive=20
 BuildWorkerTimeToLive=1200
-WorkerProcessPriority=2
+WorkerProcessPriority=-1
 
 bUseVirtualCores = False
 
 bForceUseSCWMemoryPressureLimits = False
+
+bDoNotChunkPSOCache=True
+
+[ShaderCompiler]
+r.Shaders.Symbols=0
+r.Shaders.GenerateSymbols=0
+r.Shaders.WriteSymbols=0
+r.Shaders.WriteSymbols.Zip=0
+r.Shaders.SymbolPathOverride=""
+r.Shaders.AllowUniqueSymbols=0
+
+[ShaderCompiler_BuildMachine]
+r.Shaders.Symbols=0
+r.Shaders.GenerateSymbols=0
+r.Shaders.WriteSymbols=0
+r.Shaders.WriteSymbols.Zip=0
+r.Shaders.SymbolPathOverride=""
+r.Shaders.AllowUniqueSymbols=0
+
+[Rendering.AutoScreenPercentage]
+MinDisplayResolution=720
+MinRenderingResolution=720
+MidDisplayResolution=2160
+MidRenderingResolution=1080
+MaxDisplayResolution=4320
+MaxRenderingResolution=1440
 
 [LogFiles]
 PurgeLogsDays=5
@@ -1237,7 +1660,6 @@ LogTimes=True
 
 [Kismet]
 AllowDerivedBlueprints=true
-CompileDisplaysTextBackend=false
 CompileDisplaysBinaryBackend=false
 CompileDisplaysAnimBlueprintBackend=false
 bTurnOffEditorConstructionScript=false
@@ -1255,8 +1677,10 @@ bDeferDependencyLoads=true
 bForceDisableCookedDependencyDeferring=false
 bExecutionAfterReturn=false
 bCanSuppressAccessViolation=false
-bLoadNativeConvertedBPClassInEditor=false
 bIgnoreCompileOnLoadErrorsOnBuildMachine=false
+bAllowNativeComponentClassOverrides=true
+bUseLegacyAnimBlueprintThreadSafetyChecks=true
+bThreadSafetyStrictPrivateMemberChecks=false
 
 [/Script/Engine.Blueprint]
 bRecompileOnLoad=true
@@ -1347,17 +1771,43 @@ bRecompileOnLoad=true
 [MemReportCommands]
 +Cmd="Mem FromReport"
 +Cmd="LogCountedInstances"
-+Cmd="obj list -alphasort"
++Cmd="obj list -resourcesizesort"
 +Cmd="rhi.DumpMemory"
++Cmd="rhi.DumpResourceMemory"
++Cmd="rhi.dumpresourcememory summary name=Lumen"
++Cmd="rhi.dumpresourcememory summary name=Nanite"
++Cmd="rhi.dumpresourcememory summary name=Shadow"
++Cmd="rhi.dumpresourcememory summary name=DistanceFields"
++Cmd="rhi.dumpresourcememory summary name=GPUScene"
++Cmd="rhi.dumpresourcememory summary name=SkinCache"
++Cmd="rhi.dumpresourcememory summary name=TangentsRHIBuffer"
++Cmd="rhi.dumpresourcememory summary name=IndexBuffer"
++Cmd="rhi.dumpresourcememory summary name=VertexBuffer"
++Cmd="rhi.dumpresourcememory summary name=TexCoordRHIBuffer"
++Cmd="rhi.dumpresourcememory summary name=None"
++Cmd="rhi.dumpresourcememory summary Type=TextureCube"
++Cmd="rhi.dumpresourcememory summary name=CaptureCube"
++Cmd="rhi.dumpresourcememory summary name=MorphDeltasVB"
++Cmd="rhi.dumpresourcememory summary name=VertexIndicesVB"
++Cmd="rhi.dumpresourcememory summary name=VirtualTexture"
++Cmd="rhi.dumpresourcememory summary name=VirtualPhysicalTexture"
++Cmd="rhi.dumpresourcememory summary name=VolumetricFog"
++Cmd="rhi.dumpresourcememory summary name=Hair"
++Cmd="rhi.dumpresourcememory summary name=Subsurface"
++Cmd="obj list class=SkeletalMesh -resourcesizesort"
++Cmd="obj list class=StaticMesh -resourcesizesort"
++Cmd="listtextures nonvt"
++Cmd="listtextures uncompressed"
 +Cmd="LogOutStatLevels"
 +Cmd="ListSpawnedActors"
++Cmd="wp.DumpDataLayers"
++Cmd="wp.DumpStreamingSources"
 
 [MemReportFullCommands]
 +Cmd="DumpParticleMem"
 +Cmd="ConfigMem"
 +Cmd="r.DumpRenderTargetPoolMemory"
 +Cmd="ListTextures"
-+Cmd="ListSounds -alphasort"
 +Cmd="ListParticleSystems -alphasort"
 +Cmd="obj list class=SoundWave -alphasort"
 +Cmd="obj list class=SkeletalMesh -alphasort"
@@ -1378,7 +1828,8 @@ con.DebugEarlyCheat = True
 con.DebugLateDefault = True
 con.DebugLateCheat = True
 
-r.DetectAndWarnOfBadDrivers = 0
+!LogNamedEventFilters=ClearArray
++LogNamedEventFilters="Frame *"
 
 [SystemSettingsEditor]
 
@@ -1393,7 +1844,7 @@ bHasVoiceEnabled=true
 VoiceNotificationDelta=0.33
 MaxLocalTalkers=1
 MaxRemoteTalkers=16
-PollingIntervalInMs=50
+PollingIntervalInMs=20
 bUseBuildIdOverride=false
 BuildIdOverride=0
 !AdditionalModulesToLoad=Clear
@@ -1440,39 +1891,20 @@ RedirectPort=9001
 
 [OnlineSubsystemFacebook]
 bEnabled=false
-APIVer="v2.12"
+APIVer="v15.0"
 
 [OnlineSubsystemFacebook.OnlineIdentityFacebook]
 LoginUrl="https://www.facebook.com/`ver/dialog/oauth"
 LoginRedirectUrl="https://www.facebook.com/connect/login_success.html"
 MeURL="https://graph.facebook.com/`ver/me?access_token=`token"
 +LoginDomains=".facebook.com"
-bUsePopup=false
-ProfileFields=locale
-+ProfileFields=link
-+ProfileFields=gender
+bUsePopup=true
 
 [OnlineSubsystemFacebook.OnlineSharingFacebook]
 PermissionsURL="https://graph.facebook.com/`ver/me/permissions?access_token=`token"
 
 [OnlineSubsystemFacebook.OnlineFriendsFacebook]
 FriendsUrl="https://graph.facebook.com/`ver/me/friends?fields=`fields&access_token=`token"
-FriendsFields=locale
-+FriendsFields=link
-+FriendsFields=gender
-
-[OnlineSubsystemTwitch]
-bEnabled=false
-ClientId=""
-
-[OnlineSubsystemTwitch.OnlineIdentityTwitch]
-LoginUrl="https://api.twitch.tv/kraken/oauth2/authorize"
-bForceVerify=true
-LoginRedirectUrl=""
-+LoginDomains=".twitch.tv"
-TokenValidateUrl="https://api.twitch.tv/kraken"
-+ScopeFields=user_read
-TokenRevokeUrl="https://api.twitch.tv/kraken/oauth2/revoke"
 
 [OnlineSubsystemSamsung]
 bEnabled=true
@@ -1485,8 +1917,19 @@ bIncludeSamsungLocText=true
 [OnlineSubsystemApple]
 bEnabled=false
 
+[/Script/OnlineSubsystemEOS.EOSSettings]
++AuthScopeFlags="BasicProfile"
++AuthScopeFlags="FriendsList"
++AuthScopeFlags="Presence"
+
 [OnlineSubsystemNull]
 bEnabled=true
+bAutoLoginAtStartup=true
+bRequireLoginCredentials=false
+bAddUserNumToNullId=false
+bForceStableNullId=false
+bForceOfflineMode=false
+
 Achievement_0_Id=null-ach-0
 Achievement_0_bIsHidden=false
 Achievement_0_Title="Achievement 0"
@@ -1568,6 +2011,14 @@ TravelSessionTimeoutSecs=45
 BeaconConnectionInitialTimeout=90.0
 BeaconConnectionTimeout=45.0
 
+[OnlineServices.Lobbies]
++SchemaDescriptors=(Id="LobbyBase", CategoryIds=("Lobby", "LobbyMember"))
++SchemaCategoryDescriptors=(Id="Lobby", ServiceDescriptorId="Lobby")
++SchemaCategoryDescriptors=(Id="LobbyMember", ServiceDescriptorId="LobbyMember")
++SchemaCategoryAttributeDescriptors=(SchemaId="LobbyBase", CategoryId="Lobby", AttributeIds=("SchemaCompatibilityId"))
++SchemaCategoryAttributeDescriptors=(SchemaId="LobbyBase", CategoryId="LobbyMember")
++SchemaAttributeDescriptors=(Id="SchemaCompatibilityId", Type="Int64", Flags=("Public", "SchemaCompatibilityId"))
+
 [StaticMeshLODSettings]
 LevelArchitecture=(NumLODs=4,MaxNumStreamedLODs=0,bSupportLODStreaming=0,LightMapResolution=32,LODPercentTriangles=50,PixelError=12,SilhouetteImportance=4,Name=LOCTEXT("LevelArchitectureLOD","Level Architecture"))
 SmallProp=(NumLODs=4,MaxNumStreamedLODs=0,bSupportLODStreaming=0,LODPercentTriangles=50,PixelError=10,Name=LOCTEXT("SmallPropLOD","Small Prop"))
@@ -1583,108 +2034,141 @@ HighDetail=(NumLODs=6,MaxNumStreamedLODs=0,bSupportLODStreaming=0,LODPercentTria
 +BucketConfigs=(Name="DefaultBucket", Size=10000000)
 PathToRAC=RuntimeAssetCache
 
+[Zen]
+AutoLaunch=true
+
+[Zen.AutoLaunch]
+DataPath=%APPSETTINGSDIR%Zen/Data
+LocalDataCachePathEnvOverride=UE-LocalDataCachePath
+LocalDataCachePathCommandLineOverride=LocalDataCachePath
+LocalDataCachePathEditorOverrideSetting=LocalDerivedDataCache
+ExtraArgs=--http asio --gc-cache-duration-seconds 2937600 --gc-interval-seconds 21600
+
+[Zen.ConnectExisting]
+HostName=localhost
+Port=1337
 
 [DerivedDataBackendGraph]
-MinimumDaysToKeepFile=7
-Root=(Type=KeyLength, Length=120, Inner=AsyncPut)
-AsyncPut=(Type=AsyncPut, Inner=Hierarchy)
-Hierarchy=(Type=Hierarchical, Inner=Boot, Inner=Pak, Inner=EnginePak, Inner=Local, Inner=Shared)
-Boot=(Type=Boot, Filename="%GAMEDIR%DerivedDataCache/Boot.ddc", MaxCacheSize=512)
-Local=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, PurgeTransient=true, DeleteUnused=true, UnusedFileAge=34, FoldersToClean=-1, PromptIfMissing=true, Path=%ENGINEDIR%DerivedDataCache, EnvPathOverride=UE-LocalDataCachePath, EditorOverrideSetting=LocalDerivedDataCache)
-Shared=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, DeleteUnused=true, UnusedFileAge=10, FoldersToClean=10, MaxFileChecksPerSec=1, ConsiderSlowAt=70, PromptIfMissing=false, Path=?EpicDDC, EnvPathOverride=UE-SharedDataCachePath, EditorOverrideSetting=SharedDerivedDataCache, CommandLineOverride=SharedDataCachePath)
-AltShared=(Type=FileSystem, ReadOnly=true, Clean=false, Flush=false, DeleteUnused=true, UnusedFileAge=23, FoldersToClean=10, MaxFileChecksPerSec=1, ConsiderSlowAt=70, PromptIfMissing=false, Path=?EpicDDC2, EnvPathOverride=UE-SharedDataCachePath2)
+Root=(Type=Hierarchical, Inner=Pak, Inner=EnginePak, Inner=Local, Inner=Shared, Inner=Cloud)
+Local=(Type=FileSystem, PurgeTransient=true, UnusedFileAge=34, PromptIfMissing=true, Path=%ENGINEDIR%DerivedDataCache, EnvPathOverride=UE-LocalDataCachePath, EditorOverrideSetting=LocalDerivedDataCache, CommandLineOverride=LocalDataCachePath)
+Shared=(Type=FileSystem, UnusedFileAge=10, FoldersToClean=10, ConsiderSlowAt=70, Path=?EpicDDC, EnvPathOverride=UE-SharedDataCachePath, EditorOverrideSetting=SharedDerivedDataCache, CommandLineOverride=SharedDataCachePath)
+Cloud=(Type=Cloud, ServerID=Default, EnvHostOverride=UE-CloudDataCacheHost, CommandLineHostOverride=CloudDataCacheHost, CommandLineOAuthSecretOverride="CloudDataCacheOAuthSecret", OAuthAccessTokenEnvOverride="UE-CloudDataCacheAccessToken")
 Pak=(Type=ReadPak, Filename="%GAMEDIR%DerivedDataCache/DDC.ddp")
-EnginePak=(Type=ReadPak, Filename=%ENGINEDIR%DerivedDataCache/DDC.ddp)
-
-[DerivedDataBackendGraph_Fill_Seattle]
-MinimumDaysToKeepFile=7
-Root=(Type=KeyLength, Length=120, Inner=AsyncPut)
-AsyncPut=(Type=AsyncPut, Inner=Hierarchy)
-Hierarchy=(Type=Hierarchical, Inner=Boot, Inner=Pak, Inner=EnginePak, Inner=Local, Inner=Seattle)
-Boot=(Type=Boot, Filename="%GAMEDIR%DerivedDataCache/Boot.ddc", MaxCacheSize=512)
-Local=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, PurgeTransient=true, DeleteUnused=true, UnusedFileAge=34, FoldersToClean=-1, Path=%ENGINEDIR%DerivedDataCache)
-Seattle=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, DeleteUnused=true, UnusedFileAge=23, FoldersToClean=10, MaxFileChecksPerSec=1, Path=?EpicSeaDDC, EnvPathOverride=UE-SharedDataCachePath_Seattle)
-Pak=(Type=ReadPak, Filename="%GAMEDIR%DerivedDataCache/DDC.ddp")
-EnginePak=(Type=ReadPak, Filename=%ENGINEDIR%DerivedDataCache/DDC.ddp)
+EnginePak=(Type=ReadPak, Filename="%ENGINEDIR%DerivedDataCache/DDC.ddp")
 
 [InstalledDerivedDataBackendGraph]
-MinimumDaysToKeepFile=7
 Root=(Type=KeyLength, Length=120, Inner=AsyncPut)
 AsyncPut=(Type=AsyncPut, Inner=Hierarchy)
-Hierarchy=(Type=Hierarchical, Inner=Boot, Inner=Pak, Inner=CompressedPak, Inner=EnginePak, Inner=EnterprisePak, Inner=Local, Inner=Shared)
-Boot=(Type=Boot, Filename="%ENGINEUSERDIR%DerivedDataCache/Boot.ddc", MaxCacheSize=512)
-Local=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, PurgeTransient=true, DeleteUnused=true, UnusedFileAge=34, FoldersToClean=-1, Path="%ENGINEVERSIONAGNOSTICUSERDIR%DerivedDataCache", EditorOverrideSetting=LocalDerivedDataCache)
-Shared=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, DeleteUnused=true, UnusedFileAge=10, FoldersToClean=10, MaxFileChecksPerSec=1, Path=?EpicDDC, EnvPathOverride=UE-SharedDataCachePath, EditorOverrideSetting=SharedDerivedDataCache)
+Hierarchy=(Type=Hierarchical, Inner=Pak, Inner=CompressedPak, Inner=EnginePak, Inner=EnterprisePak, Inner=Local, Inner=Shared, Inner=Cloud)
+Local=(Type=FileSystem, PurgeTransient=true, UnusedFileAge=34, Path="%ENGINEVERSIONAGNOSTICUSERDIR%DerivedDataCache", EnvPathOverride=UE-LocalDataCachePath, EditorOverrideSetting=LocalDerivedDataCache)
+Shared=(Type=FileSystem, UnusedFileAge=10, FoldersToClean=10, ConsiderSlowAt=70, Path=?EpicDDC, EnvPathOverride=UE-SharedDataCachePath, EditorOverrideSetting=SharedDerivedDataCache, CommandLineOverride=SharedDataCachePath)
+Cloud=(Type=Cloud, ServerID=Default, EnvHostOverride=UE-CloudDataCacheHost, CommandLineHostOverride=CloudDataCacheHost, CommandLineOAuthSecretOverride="CloudDataCacheOAuthSecret", OAuthAccessTokenEnvOverride="UE-CloudDataCacheAccessToken")
 Pak=(Type=ReadPak, Filename="%GAMEDIR%DerivedDataCache/DDC.ddp")
 CompressedPak=(Type=ReadPak, Filename="%GAMEDIR%DerivedDataCache/Compressed.ddp", Compressed=true)
 EnginePak=(Type=ReadPak, Filename=../../../Engine/DerivedDataCache/Compressed.ddp, Compressed=true)
 EnterprisePak=(Type=ReadPak, Filename=../../../Enterprise/DerivedDataCache/Compressed.ddp, Compressed=true)
 
-[NoShared]
-MinimumDaysToKeepFile=7
+[ZenOnlyDDC]
+Root=(Type=KeyLength, Length=120, Inner=AsyncPut)
+AsyncPut=(Type=AsyncPut, Inner=Zen)
+Zen=(Type=Zen, Namespace="ue.ddc")
+
+[ZenDDC]
+Root=(Type=Hierarchical, Inner=Pak, Inner=EnginePak, Inner=Local, Inner=ZenLocal, Inner=Shared, Inner=Cloud)
+Local=(Type=FileSystem, PurgeTransient=true, DeleteOnly=true, UnusedFileAge=34, PromptIfMissing=true, Path=%ENGINEDIR%DerivedDataCache, EnvPathOverride=UE-LocalDataCachePath, EditorOverrideSetting=LocalDerivedDataCache, CommandLineOverride=LocalDataCachePath)
+ZenLocal=(Type=Zen, Namespace="ue.ddc")
+Shared=(Type=FileSystem, UnusedFileAge=10, FoldersToClean=10, ConsiderSlowAt=70, Path=?EpicDDC, EnvPathOverride=UE-SharedDataCachePath, EditorOverrideSetting=SharedDerivedDataCache, CommandLineOverride=SharedDataCachePath)
+Cloud=(Type=Cloud, ServerID=Default, EnvHostOverride=UE-CloudDataCacheHost, CommandLineHostOverride=CloudDataCacheHost, CommandLineOAuthSecretOverride="CloudDataCacheOAuthSecret", OAuthAccessTokenEnvOverride="UE-CloudDataCacheAccessToken")
+Pak=(Type=ReadPak, Filename="%GAMEDIR%DerivedDataCache/DDC.ddp")
+EnginePak=(Type=ReadPak, Filename="%ENGINEDIR%DerivedDataCache/DDC.ddp")
+
+[ZenColdDDC]
 Root=(Type=KeyLength, Length=120, Inner=AsyncPut)
 AsyncPut=(Type=AsyncPut, Inner=Hierarchy)
-Hierarchy=(Type=Hierarchical, Inner=Boot, Inner=Pak, Inner=Local)
-Boot=(Type=Boot, Filename="%GAMEDIR%DerivedDataCache/Boot.ddc", MaxCacheSize=512)
-Local=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, PurgeTransient=true, DeleteUnused=true, UnusedFileAge=34, FoldersToClean=-1, Path=%ENGINEDIR%DerivedDataCache, EnvPathOverride=UE-LocalDataCachePath, EditorOverrideSetting=LocalDerivedDataCache)
+Hierarchy=(Type=Hierarchical, Inner=ZenLocal)
+ZenLocal=(Type=Zen, Namespace="ue.ddc", Sandbox=Cold, Flush=true)
+
+[ZenWarmDDC]
+Root=(Type=KeyLength, Length=120, Inner=AsyncPut)
+AsyncPut=(Type=AsyncPut, Inner=Hierarchy)
+Hierarchy=(Type=Hierarchical, Inner=ZenLocal)
+ZenLocal=(Type=Zen, Namespace="ue.ddc", Sandbox=Cold)
+
+[DerivedDataBackendGraph_Fill_Seattle]
+Root=(Type=KeyLength, Length=120, Inner=AsyncPut)
+AsyncPut=(Type=AsyncPut, Inner=Hierarchy)
+Hierarchy=(Type=Hierarchical, Inner=Pak, Inner=EnginePak, Inner=Local, Inner=Seattle)
+Local=(Type=FileSystem, PurgeTransient=true, UnusedFileAge=34, Path=%ENGINEDIR%DerivedDataCache, EnvPathOverride=UE-LocalDataCachePath, EditorOverrideSetting=LocalDerivedDataCache)
+Seattle=(Type=FileSystem, UnusedFileAge=23, FoldersToClean=10, Path=?EpicSeaDDC, EnvPathOverride=UE-SharedDataCachePath_Seattle)
+Pak=(Type=ReadPak, Filename="%GAMEDIR%DerivedDataCache/DDC.ddp")
+EnginePak=(Type=ReadPak, Filename="%ENGINEDIR%DerivedDataCache/DDC.ddp")
+
+[NoShared]
+Root=(Type=KeyLength, Length=120, Inner=AsyncPut)
+AsyncPut=(Type=AsyncPut, Inner=Hierarchy)
+Hierarchy=(Type=Hierarchical, Inner=Pak, Inner=Local)
+Local=(Type=FileSystem, PurgeTransient=true, UnusedFileAge=34, Path=%ENGINEDIR%DerivedDataCache, EnvPathOverride=UE-LocalDataCachePath, EditorOverrideSetting=LocalDerivedDataCache)
 Pak=(Type=ReadPak, Filename="%GAMEDIR%DerivedDataCache/DDC.ddp")
 
-[CreatePak]
-MinimumDaysToKeepFile=7
+[Cold]
 Root=(Type=KeyLength, Length=120, Inner=AsyncPut)
 AsyncPut=(Type=AsyncPut, Inner=Hierarchy)
-Hierarchy=(Type=Hierarchical, Inner=Boot, Inner=PakWrite, Inner=PakRead, Inner=Local, Inner=Shared)
-Boot=(Type=Boot, Filename="%GAMEDIR%DerivedDataCache/Boot.ddc", MaxCacheSize=512)
-Local=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, PurgeTransient=true, DeleteUnused=true, UnusedFileAge=34, FoldersToClean=-1, Path=%ENGINEDIR%DerivedDataCache)
-Shared=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, DeleteUnused=false, UnusedFileAge=23, FoldersToClean=-1, Path=?EpicDDC, EnvPathOverride=UE-SharedDataCachePath)
-AltShared=(Type=FileSystem, ReadOnly=true, Clean=false, Flush=false, DeleteUnused=false, UnusedFileAge=23, FoldersToClean=-1, Path=?EpicDDC2, EnvPathOverride=UE-SharedDataCachePath2)
+Hierarchy=(Type=Hierarchical, Inner=Local)
+Local=(Type=FileSystem, Flush=true, PurgeTransient=true, UnusedFileAge=1, Path="%GAMEDIR%ColdDerivedDataCache")
+
+[Warm]
+Root=(Type=KeyLength, Length=120, Inner=AsyncPut)
+AsyncPut=(Type=AsyncPut, Inner=Hierarchy)
+Hierarchy=(Type=Hierarchical, Inner=Local)
+Local=(Type=FileSystem, Clean=true, PurgeTransient=true, UnusedFileAge=1, Path="%GAMEDIR%ColdDerivedDataCache")
+
+[CreatePak]
+Root=(Type=KeyLength, Length=120, Inner=AsyncPut)
+AsyncPut=(Type=AsyncPut, Inner=Hierarchy)
+Hierarchy=(Type=Hierarchical, Inner=PakWrite, Inner=PakRead, Inner=Local, Inner=Shared, Inner=Cloud)
+Local=(Type=FileSystem, PurgeTransient=true, UnusedFileAge=34, Path=%ENGINEDIR%DerivedDataCache, EnvPathOverride=UE-LocalDataCachePath, EditorOverrideSetting=LocalDerivedDataCache)
+Shared=(Type=FileSystem, DeleteUnused=false, ConsiderSlowAt=70, Path=?EpicDDC, EnvPathOverride=UE-SharedDataCachePath, EditorOverrideSetting=SharedDerivedDataCache, CommandLineOverride=SharedDataCachePath)
+Cloud=(Type=Cloud, ServerID=Default, EnvHostOverride=UE-CloudDataCacheHost, CommandLineHostOverride=CloudDataCacheHost, CommandLineOAuthSecretOverride="CloudDataCacheOAuthSecret", OAuthAccessTokenEnvOverride="UE-CloudDataCacheAccessToken")
 PakRead=(Type=ReadPak, Filename="%GAMEDIR%DerivedDataCache/DDC.ddp")
 PakWrite=(Type=WritePak, Filename="%GAMEDIR%DerivedDataCache/DDC.ddp")
 
 [CreateInstalledProjectPak]
-MinimumDaysToKeepFile=7
 Root=(Type=KeyLength, Length=120, Inner=AsyncPut)
 AsyncPut=(Type=AsyncPut, Inner=Hierarchy)
-Hierarchy=(Type=Hierarchical, Inner=Boot, Inner=EnginePak, Inner=PakWrite, Inner=PakRead, Inner=Local, Inner=Shared)
-Boot=(Type=Boot, Filename="%GAMEDIR%DerivedDataCache/Boot.ddc", MaxCacheSize=512)
-Local=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, PurgeTransient=true, DeleteUnused=true, UnusedFileAge=34, FoldersToClean=-1, Path=%ENGINEDIR%DerivedDataCache, EnvPathOverride=UE-LocalDataCachePath)
-Shared=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, DeleteUnused=false, UnusedFileAge=23, FoldersToClean=-1, Path=?EpicDDC, EnvPathOverride=UE-SharedDataCachePath, CommandLineOverride=SharedDataCachePath)
-AltShared=(Type=FileSystem, ReadOnly=true, Clean=false, Flush=false, DeleteUnused=false, UnusedFileAge=23, FoldersToClean=-1, Path=?EpicDDC2, EnvPathOverride=UE-SharedDataCachePath2)
+Hierarchy=(Type=Hierarchical, Inner=EnginePak, Inner=PakWrite, Inner=PakRead, Inner=Local, Inner=Shared, Inner=Cloud)
+Local=(Type=FileSystem, PurgeTransient=true, UnusedFileAge=34, Path=%ENGINEDIR%DerivedDataCache, EnvPathOverride=UE-LocalDataCachePath, EditorOverrideSetting=LocalDerivedDataCache)
+Shared=(Type=FileSystem, DeleteUnused=false, ConsiderSlowAt=70, Path=?EpicDDC, EnvPathOverride=UE-SharedDataCachePath, EditorOverrideSetting=SharedDerivedDataCache, CommandLineOverride=SharedDataCachePath)
+Cloud=(Type=Cloud, ServerID=Default, EnvHostOverride=UE-CloudDataCacheHost, CommandLineHostOverride=CloudDataCacheHost, CommandLineOAuthSecretOverride="CloudDataCacheOAuthSecret", OAuthAccessTokenEnvOverride="UE-CloudDataCacheAccessToken")
 EnginePak=(Type=ReadPak, Filename=../../../Engine/DerivedDataCache/Compressed.ddp, Compressed=true)
 PakRead=(Type=ReadPak, Filename="%GAMEDIR%DerivedDataCache/Compressed.ddp", Compressed=true)
 PakWrite=(Type=WritePak, Filename="%GAMEDIR%DerivedDataCache/Compressed.ddp", Compressed=true)
 
 [CreateInstalledEnginePak]
-MinimumDaysToKeepFile=7
 Root=(Type=KeyLength, Length=120, Inner=AsyncPut)
 AsyncPut=(Type=AsyncPut, Inner=Hierarchy)
-Hierarchy=(Type=Hierarchical, Inner=Boot, Inner=PakWrite, Inner=Local, Inner=Shared)
-Boot=(Type=Boot, Filename="%GAMEDIR%DerivedDataCache/Boot.ddc", MaxCacheSize=512)
-Local=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, PurgeTransient=true, DeleteUnused=true, UnusedFileAge=34, FoldersToClean=-1, Path=%ENGINEDIR%DerivedDataCache, EnvPathOverride=UE-LocalDataCachePath)
-Shared=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, DeleteUnused=false, UnusedFileAge=23, FoldersToClean=-1, Path=?EpicDDC, EnvPathOverride=UE-SharedDataCachePath)
-AltShared=(Type=FileSystem, ReadOnly=true, Clean=false, Flush=false, DeleteUnused=false, UnusedFileAge=23, FoldersToClean=-1, Path=?EpicDDC2, EnvPathOverride=UE-SharedDataCachePath2)
-PakWrite=(Type=WritePak, Filename=%ENGINEDIR%DerivedDataCache/Compressed.ddp, Compressed=true)
+Hierarchy=(Type=Hierarchical, Inner=PakWrite, Inner=Local, Inner=Shared, Inner=Cloud)
+Local=(Type=FileSystem, PurgeTransient=true, UnusedFileAge=34, Path=%ENGINEDIR%DerivedDataCache, EnvPathOverride=UE-LocalDataCachePath, EditorOverrideSetting=LocalDerivedDataCache)
+Shared=(Type=FileSystem, DeleteUnused=false, ConsiderSlowAt=70, Path=?EpicDDC, EnvPathOverride=UE-SharedDataCachePath, EditorOverrideSetting=SharedDerivedDataCache, CommandLineOverride=SharedDataCachePath)
+Cloud=(Type=Cloud, ServerID=Default, EnvHostOverride=UE-CloudDataCacheHost, CommandLineHostOverride=CloudDataCacheHost, CommandLineOAuthSecretOverride="CloudDataCacheOAuthSecret", OAuthAccessTokenEnvOverride="UE-CloudDataCacheAccessToken")
+PakWrite=(Type=WritePak, Filename="%ENGINEDIR%DerivedDataCache/Compressed.ddp", Compressed=true)
 
 [CreateInstalledEnterprisePak]
-MinimumDaysToKeepFile=7
 Root=(Type=KeyLength, Length=120, Inner=AsyncPut)
 AsyncPut=(Type=AsyncPut, Inner=Hierarchy)
-Hierarchy=(Type=Hierarchical, Inner=Boot, Inner=PakWrite, Inner=Local, Inner=Shared)
-Boot=(Type=Boot, Filename="%GAMEDIR%DerivedDataCache/Boot.ddc", MaxCacheSize=512)
-Local=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, PurgeTransient=true, DeleteUnused=true, UnusedFileAge=34, FoldersToClean=-1, Path=%ENGINEDIR%DerivedDataCache, EnvPathOverride=UE-LocalDataCachePath)
-Shared=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, DeleteUnused=false, UnusedFileAge=23, FoldersToClean=-1, Path=?EpicDDC, EnvPathOverride=UE-SharedDataCachePath)
-AltShared=(Type=FileSystem, ReadOnly=true, Clean=false, Flush=false, DeleteUnused=false, UnusedFileAge=23, FoldersToClean=-1, Path=?EpicDDC2, EnvPathOverride=UE-SharedDataCachePath2)
+Hierarchy=(Type=Hierarchical, Inner=PakWrite, Inner=Local, Inner=Shared, Inner=Cloud)
+Local=(Type=FileSystem, PurgeTransient=true, UnusedFileAge=34, Path=%ENGINEDIR%DerivedDataCache, EnvPathOverride=UE-LocalDataCachePath, EditorOverrideSetting=LocalDerivedDataCache)
+Shared=(Type=FileSystem, DeleteUnused=false, ConsiderSlowAt=70, Path=?EpicDDC, EnvPathOverride=UE-SharedDataCachePath, EditorOverrideSetting=SharedDerivedDataCache, CommandLineOverride=SharedDataCachePath)
+Cloud=(Type=Cloud, ServerID=Default, EnvHostOverride=UE-CloudDataCacheHost, CommandLineHostOverride=CloudDataCacheHost, CommandLineOAuthSecretOverride="CloudDataCacheOAuthSecret", OAuthAccessTokenEnvOverride="UE-CloudDataCacheAccessToken")
 PakWrite=(Type=WritePak, Filename=../../../Enterprise/DerivedDataCache/Compressed.ddp, Compressed=true)
 
 [CreateProjectCache]
-MinimumDaysToKeepFile=7
 Root=(Type=KeyLength, Length=120, Inner=AsyncPut)
 AsyncPut=(Type=AsyncPut, Inner=Hierarchy)
-Hierarchy=(Type=Hierarchical, Inner=Local, Inner=Project, Inner=Shared)
-Local=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, PurgeTransient=true, DeleteUnused=true, UnusedFileAge=34, FoldersToClean=-1, Path=%ENGINEDIR%DerivedDataCache, EnvPathOverride=UE-LocalDataCachePath)
-Project=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=true, PurgeTransient=true, DeleteUnused=true, UnusedFileAge=34, FoldersToClean=-1, Path=%GAMEDIR%ProjectDerivedData)
-Shared=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, DeleteUnused=false, UnusedFileAge=23, FoldersToClean=-1, Path=?EpicDDC, EnvPathOverride=UE-SharedDataCachePath)
-AltShared=(Type=FileSystem, ReadOnly=true, Clean=false, Flush=false, DeleteUnused=false, UnusedFileAge=23, FoldersToClean=-1, Path=?EpicDDC2, EnvPathOverride=UE-SharedDataCachePath2)
+Hierarchy=(Type=Hierarchical, Inner=Local, Inner=Project, Inner=Shared, Inner=Cloud)
+Local=(Type=FileSystem, PurgeTransient=true, UnusedFileAge=34, Path=%ENGINEDIR%DerivedDataCache, EnvPathOverride=UE-LocalDataCachePath, EditorOverrideSetting=LocalDerivedDataCache)
+Project=(Type=FileSystem, Flush=true, PurgeTransient=true, UnusedFileAge=34, Path=%GAMEDIR%ProjectDerivedData)
+Shared=(Type=FileSystem, DeleteUnused=false, ConsiderSlowAt=70, Path=?EpicDDC, EnvPathOverride=UE-SharedDataCachePath, EditorOverrideSetting=SharedDerivedDataCache, CommandLineOverride=SharedDataCachePath)
+Cloud=(Type=Cloud, ServerID=Default, EnvHostOverride=UE-CloudDataCacheHost, CommandLineHostOverride=CloudDataCacheHost, CommandLineOAuthSecretOverride="CloudDataCacheOAuthSecret", OAuthAccessTokenEnvOverride="UE-CloudDataCacheAccessToken")
 
 [VirtualTextureChunkDDCCache]
 UnusedFileAge=34
@@ -1693,8 +2177,7 @@ Path=%GAMEDIR%DerivedDataCache/VT
 
 [DDCCleanup]
 TimeToWaitAfterInit=120
-TimeBetweenDeleteingDirectories=5
-TimeBetweenDeletingFiles=2
+MaxFileChecksPerSec=1000
 
 [/Script/Engine.LocalPlayer]
 AspectRatioAxisConstraint=AspectRatio_MaintainXFOV
@@ -1708,20 +2191,19 @@ AspectRatioAxisConstraint=AspectRatio_MaintainXFOV
 +Class=Texture2D
 
 [AssetRegistry]
-+BlacklistContentSubPathScanFilters="__ExternalActors__"
-+CookedTagsBlacklist=(Class=Blueprint,Tag=FiB)
-+CookedTagsBlacklist=(Class=Blueprint,Tag=FiBData)
++CookedTagsBlacklist=(Class=/Script/Engine.Blueprint,Tag=FiB)
++CookedTagsBlacklist=(Class=/Script/Engine.Blueprint,Tag=FiBData)
 +CookedTagsBlacklist=(Class=*,Tag=AssetImportData)
 
 bUseAssetRegistryTagsWhitelistInsteadOfBlacklist=false
-+CookedTagsWhitelist=(Class=Blueprint,Tag=ParentClass)
-+CookedTagsWhitelist=(Class=Blueprint,Tag=GeneratedClass)
-+CookedTagsWhitelist=(Class=Blueprint,Tag=GameplayCueName)
++CookedTagsWhitelist=(Class=/Script/Engine.Blueprint,Tag=ParentClass)
++CookedTagsWhitelist=(Class=/Script/Engine.Blueprint,Tag=GeneratedClass)
++CookedTagsWhitelist=(Class=/Script/Engine.Blueprint,Tag=GameplayCueName)
 +CookedTagsWhitelist=(Class=*,Tag=AssetBundleData)
 +CookedTagsWhitelist=(Class=*,Tag=PrimaryAssetType)
 +CookedTagsWhitelist=(Class=*,Tag=PrimaryAssetName)
-+CookedTagsWhitelist=(Class=World,Tag=Tests)
-+CookedTagsWhitelist=(Class=World,Tag=TestNames)
++CookedTagsWhitelist=(Class=/Script/Engine.World,Tag=Tests)
++CookedTagsWhitelist=(Class=/Script/Engine.World,Tag=TestNames)
 
 +CookedTagsAsFName=PrimaryAssetType
 +CookedTagsAsFName=PrimaryAssetName
@@ -1738,12 +2220,13 @@ bFilterDependenciesWithNoTags=false
 bFilterSearchableNames=true
 
 [AutomationTesting]
-ImportTestPath=../../Content/EditorAutomation/
+ImportTestPath=Content/EditorAutomation/
 ImportTestPackagePath=/Engine/Content/EditorAutomation
 bForceSmokeTests=false
 
 [AutomationTesting.FbxImport]
-FbxImportTestPath=../../Content/FbxEditorAutomation/
+FbxImportTestPath=Content/FbxEditorAutomation/
+FbxImportEditorTestPath=../../../Engine/Content/FbxEditorAutomation/
 FbxImportTestPackagePath=/Engine/FbxEditorAutomationOut
 
 [AutomationTesting.Blueprint]
@@ -1759,7 +2242,6 @@ TestAllBlueprints=false
 +EditorTestModules=Cascade
 +TestLevelFolders=TestMaps
 MaterialEditorPromotionTest=(DefaultMaterialAsset=(FilePath="../../Content/EditorMeshes/ColorCalibrator/M_ColorGrid.uasset"),DefaultDiffuseTexture=(FilePath="../../Content/EngineMaterials/DefaultDiffuse.uasset"),DefaultNormalTexture=(FilePath="../../Content/EngineMaterials/DefaultNormal.uasset"))
-ParticleEditorPromotionTest=(DefaultParticleAsset=(FilePath="../../Content/Tutorial/SubEditors/TutorialAssets/TutorialParticleSystem.uasset"))
 
 [AutomationTesting.StaticMeshEditorTest]
 +EditorViewButtons=Wireframe
@@ -1773,6 +2255,10 @@ ParticleEditorPromotionTest=(DefaultParticleAsset=(FilePath="../../Content/Tutor
 +EditorViewButtons=Binormals
 +EditorViewButtons=UV
 EditorViewButtonsObject=EditorCylinder
+DefaultInteractiveFramerate=5
+DefaultInteractiveFramerateWaitTime=600
+DefaultInteractiveFramerateDuration=5
+
 
 [/Script/NavigationSystem.NavigationSystemV1]
 bAutoCreateNavigationData=true
@@ -1789,6 +2275,9 @@ DefaultDrawDistance=5000.0
 TileSizeUU=1000.f
 CellSize=19.f
 CellHeight=10.f
+NavMeshResolutionParams[0]=(CellSize=38.000000,CellHeight=10.f)
+NavMeshResolutionParams[1]=(CellSize=19.000000,CellHeight=10.f)
+NavMeshResolutionParams[2]=(CellSize=19.000000,CellHeight=10.f)
 AgentRadius=34.f
 AgentHeight=144.f
 AgentMaxHeight=160.f
@@ -1805,13 +2294,12 @@ DrawColor=(R=38,G=38,B=38,A=64)
 DrawColor=(R=140,G=255,B=0,A=164)
 
 [Trace.ChannelPresets]
-Default=cpu,frame,log,bookmark
 Rendering=gpu,cpu,frame,log,bookmark
 
 [RemoteConfiguration]
 Enabled=false
 ConfigPathPrefix=\\epicgames.net\root\Home
-ConfigPathSuffix=UE4Cloud
+ConfigPathSuffix=UECloud
 Timeout=1.0f
 +IniToLoad=EditorPerProjectUserSettings
 +IniToLoad=EditorKeyBindings
@@ -1908,6 +2396,7 @@ NumPreallocatedVertices=50000
 bTouchFallbackToMouse=true
 
 [Pak]
+bDoUseOodleDespiteNoPluginCompression = true
 +ExtensionsToNotUsePluginCompression=uplugin
 +ExtensionsToNotUsePluginCompression=upluginmanifest
 +ExtensionsToNotUsePluginCompression=uproject
@@ -1921,7 +2410,9 @@ bTouchFallbackToMouse=true
 +DirectoryIndexKeepFiles="*/Content/Movies/*"
 +DirectoryIndexKeepFiles="*/Plugins/*.uplugin*"
 +DirectoryIndexKeepFiles="*/*.ini*"
++DirectoryIndexKeepFiles="*/*.upipelinecache*"
 +DirectoryIndexKeepEmptyDirectories=*/Plugins/*
++DirectoryIndexKeepEmptyDirectories="*/PipelineCaches/*"
 +IndexValidationIgnore="*/Saved/Logs/*"
 
 [/Script/GameplayDebugger.GameplayDebuggingReplicator]
@@ -1945,13 +2436,10 @@ bSupportsLandscapeLeftOrientation=True
 bSupportsLandscapeRightOrientation=True
 PreferredLandscapeOrientation=LandscapeLeft
 bSupportsMetal=True
-bCookPVRTCTextures=True
-bCookASTCTextures=False
 bSupportsMetalMRT=False
-bShipForBitcode=True
+bShipForBitcode=False
 bGameSupportsMultipleActiveControllers=False
 bAllowRemoteRotation=True
-bUseRemoteAsVirtualJoystick=True
 bUseAbsoluteDpadValues=False
 bAllowControllers=True
 bBuildAsFramework=False
@@ -1962,10 +2450,12 @@ bUseRSync=True
 BundleDisplayName=[PROJECT_NAME]
 BundleName=[PROJECT_NAME]
 BundleIdentifier=com.YourCompany.[PROJECT_NAME]
+DevCodeSigningIdentity=iPhone Developer:;Apple Development:
+DistroCodeSigningIdentity=iPhone Distribution:;Apple Distribution:
 VersionInfo=1.0
 FrameRateLock=PUFRL_30
 bEnableDynamicMaxFPS=False
-MinimumiOSVersion=IOS_12
+MinimumiOSVersion=IOS_15
 bSupportsIPad=True
 bSupportsIPhone=True
 AdditionalPlistData=
@@ -1980,23 +2470,28 @@ IOSCloudKitSyncStrategy=None
 bGenerateCrashReportSymbols=false
 bAutomaticSigning=false
 UseFastIntrinsics=False
-ForceFloats=False
+ForceFloats=True
 EnableMathOptimisations=True
-MaxShaderLanguageVersion=3
+MetalLanguageVersion=0
 bDisableMotionData=False
 bEnableAdvertisingIdentifier=True
+
+[XcodeConfiguration]
+bUseModernXcode=false
+bUseModernCodeSigning=true
+ModernSigningTeam=
+ModernSigningPrefix=com.YourCompany
 
 [/Script/AndroidRuntimeSettings.AndroidRuntimeSettings]
 SDKAPILevelOverride=
 NDKAPILevelOverride=
+BuildToolsOverride=
 bEnableGooglePlaySupport=false
 bSupportAdMob=true
-bBuildForArmV7=true
-bBuildForArm64=false
-bBuildForX86=false
+bBuildForArm64=true
 bBuildForX8664=false
 bBuildForES31=true
-bSupportsVulkan=false
+bSupportsVulkan=true
 bSupportsVulkanSM5=false
 bDetectVulkanByDefault=true
 bSplitIntoSeparateApks=false
@@ -2014,9 +2509,8 @@ StoreVersionOffsetArm64=0
 StoreVersionOffsetX86=0
 StoreVersionOffsetX8664=0
 VersionDisplayName=1.0
-MinSDKVersion=19
+MinSDKVersion=26
 TargetSDKVersion=28
-bEnableGradle=true
 bEnableLint=false
 bShowLaunchImage=true
 bValidateTextureFormats=true
@@ -2028,7 +2522,7 @@ TextureFormatPriority_DXT=0.6
 TextureFormatPriority_ASTC=0.9
 bEnableNewKeyboard=True
 bAndroidVoiceEnabled=false
-bBuildWithHiddenSymbolVisibility=false
+bBuildWithHiddenSymbolVisibility=True
 bSaveSymbols=false
 bAllowControllers=True
 bAllowIMU=False
@@ -2041,53 +2535,23 @@ bBundleABISplit=True
 bBundleLanguageSplit=True
 bBundleDensitySplit=True
 bFullScreen=True
-bForceLDLinker=False
+bStripShaderReflection=True
 bForceSmallOBBFiles=False
 bAllowLargeOBBFiles=False
 bAllowPatchOBBFile=False
 bAllowOverflowOBBFiles=False
 bExtractNativeLibs=true
 bEnableDomStorage=False
+bSkipLibCpp=False
+bDisableLibCppSharedDependencyValidation=False
+bDisableFunctionDataSections=False
+bEnableAdvancedBinaryCompression=False
+bDisableStackProtector=False
+bEnableMulticastSupport=False
 
 [/Script/AndroidPlatformEditor.AndroidSDKSettings]
 SDKAPILevel=latest
-NDKAPILevel=android-21
-
-[/Script/MagicLeap.MagicLeapSettings]
-bEnableZI=False
-bUseVulkanForZI=True
-bUseMLAudioForZI=True
-
-[/Script/LuminRuntimeSettings.LuminRuntimeSettings]
-PackageName=com.YourCompany.[PROJECT]
-ApplicationDisplayName=
-bIsScreensApp=false
-FrameTimingHint=FPS_60
-bProtectedContent=False
-bManualCallToAppReady=False
-bUseMobileRendering=true
-Certificate=(FilePath="")
-IconModelPath=(Path="Build/Lumin/Resources/Model")
-IconPortalPath=(Path="Build/Lumin/Resources/Portal")
-bUseVulkan=true
-VersionCode=1
-MinimumAPILevel=7
-ControllerTrackingType=Tracked
-ControllerTrackingMode=CoordinateFrameUID
-+AppPrivileges=LowLatencyLightwear
-+AppPrivileges=Internet
-+AppPrivileges=LocalAreaNetwork
-+AppPrivileges=GesturesSubscribe
-+AppPrivileges=GesturesConfig
-+AppPrivileges=CameraCapture
-+AppPrivileges=WorldReconstruction
-+AppPrivileges=PcfRead
-+AppPrivileges=AudioCaptureMic
-+AppPrivileges=IdentityRead
-+AppPrivileges=VoiceInput
-+AppPrivileges=ControllerPose
-bRemoveDebugInfo=true
-VulkanValidationLayerLibs=(Path="")
+NDKAPILevel=android-26
 
 [/Script/UnrealEd.CookerSettings]
 DefaultPVRTCQuality=1
@@ -2103,7 +2567,6 @@ DefaultASTCQualityBySize=3
 +ClassesExcludedOnDedicatedServer=Font
 +ClassesExcludedOnDedicatedServer=InterpCurveEdSetup
 +ClassesExcludedOnDedicatedServer=MaterialExpression
-+ClassesExcludedOnDedicatedServer=MatineeActorCameraAnim
 +ClassesExcludedOnDedicatedServer=NiagaraEmitter
 +ClassesExcludedOnDedicatedServer=NiagaraScript
 +ClassesExcludedOnDedicatedServer=ParticleEmitter
@@ -2117,14 +2580,18 @@ DefaultASTCQualityBySize=3
 +ClassesExcludedOnDedicatedClient=MetaData
 +ClassesExcludedOnDedicatedClient=ObjectRedirector
 +ClassesExcludedOnDedicatedClient=InterpCurveEdSetup
-+ClassesExcludedOnDedicatedClient=MatineeActorCameraAnim
 
 +VersionedIntRValues=r.AllowStaticLighting
++VersionedIntRValues=r.MaterialEditor.LWCTruncateMode
 +VersionedIntRValues=r.GBuffer
-+VersionedIntRValues=r.BasePassOutputsVelocity
++VersionedIntRValues=r.VelocityOutputPass
 +VersionedIntRValues=r.SelectiveBasePassOutputs
 +VersionedIntRValues=r.DBuffer
-+VersionedIntRValues=r.Shaders.KeepDebugInfo
++VersionedIntRValues=r.Shaders.Symbols
++VersionedIntRValues=r.Shaders.GenerateSymbols
++VersionedIntRValues=r.Shaders.WriteSymbols
++VersionedIntRValues=r.Shaders.AllowUniqueSymbols
++VersionedIntRValues=r.Shaders.ExtraData
 +VersionedIntRValues=r.Shaders.Optimize
 +VersionedIntRValues=r.CompileShadersForDevelopment
 +VersionedIntRValues=r.MobileHDR
@@ -2137,26 +2604,35 @@ DefaultGravityZ=-980.0
 bEnable2DPhysics=false
 
 [/Script/WindowsTargetPlatform.WindowsTargetSettings]
-+TargetedRHIs=PCD3D_SM5
-MinimumOSVersion=MSOS_Vista
++D3D12TargetedShaderFormats=PCD3D_SM5
++D3D11TargetedShaderFormats=PCD3D_SM5
+bEnableDistanceFields=true
 bEnableRayTracing=true
 bTarget32Bit=false
 
 [/Script/LinuxTargetPlatform.LinuxTargetSettings]
 +TargetedRHIs=SF_VULKAN_SM5
+bEnableRayTracing=true
 
 [/Script/MacTargetPlatform.MacTargetSettings]
-MaxShaderLanguageVersion=4
+MetalLanguageVersion=7
 +TargetedRHIs=SF_METAL_SM5
 UseFastIntrinsics=False
-ForceFloats=False
 EnableMathOptimisations=True
+TargetArchitecture=MacTargetArchitectureUniversal
+EditorTargetArchitecture=MacTargetArchitectureUniversal
+EditorDefaultArchitecture=MacTargetArchitectureHost
+DefaultArchitecture=MacTargetArchitectureHost
+bBuildAllSupportedOnBuildMachine=true
+bEnableRayTracing=false
 
 [HMDPluginPriority]
 OculusHMD=40
 SteamVR=30
 OpenXRHMD=20
-WindowsMixedRealityHMD=10
+
+[/Script/OculusHMD.OculusHMDRuntimeSettings]
+XrApi=NativeOpenXR
 
 [/Script/Engine.AISystemBase]
 AISystemModuleName=AIModule
@@ -2249,7 +2725,7 @@ GameHUDBind=(Key=Tilde,bShift=False,bCtrl=True,bAlt=False,bCmd=False)
 [/Script/Engine.PlayerCameraManager]
 ServerUpdateCameraTimeout=2.0
 
-[/Script/CinematicCamera.CineCameraComponent]
+[/Script/CinematicCamera.CineCameraSettings]
 +FilmbackPresets=(Name="16:9 Film",FilmbackSettings=(SensorWidth=24.00,SensorHeight=13.5))
 +FilmbackPresets=(Name="16:9 Digital Film",FilmbackSettings=(SensorWidth=23.76,SensorHeight=13.365))
 +FilmbackPresets=(Name="16:9 DSLR",FilmbackSettings=(SensorWidth=36,SensorHeight=20.25))
@@ -2263,7 +2739,6 @@ ServerUpdateCameraTimeout=2.0
 +FilmbackPresets=(Name="APS-C (Canon)",FilmbackSettings=(SensorWidth=22.2,SensorHeight=14.8))
 +FilmbackPresets=(Name="Full Frame DSLR",FilmbackSettings=(SensorWidth=36,SensorHeight=24))
 +FilmbackPresets=(Name="Micro Four Thirds",FilmbackSettings=(SensorWidth=17.3,SensorHeight=13))
-DefaultFilmbackPresetName="16:9 DSLR" ; Deprecated, here for backwards compatibility
 DefaultFilmbackPreset="16:9 Digital Film"
 +LensPresets=(Name="12mm Prime f/2.8",LensSettings=(MinFocalLength=12,MaxFocalLength=12,MinFStop=2.8,MaxFStop=22,DiaphragmBladeCount=7))
 +LensPresets=(Name="30mm Prime f/1.4",LensSettings=(MinFocalLength=30,MaxFocalLength=30,MinFStop=1.4,MaxFStop=22,DiaphragmBladeCount=7))
@@ -2275,6 +2750,11 @@ DefaultFilmbackPreset="16:9 Digital Film"
 +LensPresets=(Name="70-200mm Zoom f/2.8",LensSettings=(MinFocalLength=70,MaxFocalLength=200,MinFStop=2.8,MaxFStop=22,DiaphragmBladeCount=7))
 +LensPresets=(Name="Universal Zoom",LensSettings=(MinFocalLength=4,MaxFocalLength=1000,MinFStop=1.2,MaxFStop=22,DiaphragmBladeCount=7))
 DefaultLensPresetName="Universal Zoom"
++CropPresets=(Name="No Crop",CropSettings=(AspectRatio=0))
++CropPresets=(Name="1.33 (4:3)",CropSettings=(AspectRatio=1.333333))
++CropPresets=(Name="1.77 (16:9)",CropSettings=(AspectRatio=1.777778))
++CropPresets=(Name="2.39",CropSettings=(AspectRatio=2.39))
+DefaultCropPresetName="No Crop"
 DefaultLensFocalLength=35
 DefaultLensFStop=2.8
 
@@ -2294,12 +2774,7 @@ HMDWornMovementThreshold = 50.0
 
 [/Script/Engine.AnimationSettings]
 bStripAnimationDataOnDedicatedServer=False
-+BoneCustomAttributesNames=(Name="TCHour",Meaning="Timecode Hour")
-+BoneCustomAttributesNames=(Name="TCMinute",Meaning="Timecode Minute")
-+BoneCustomAttributesNames=(Name="TCSecond",Meaning="Timecode Second")
-+BoneCustomAttributesNames=(Name="TCFrame",Meaning="Timecode Frame")
-+BoneCustomAttributesNames=(Name="TCSubframe",Meaning="Timecode Subframe")
-+BoneCustomAttributesNames=(Name="Takename",Meaning="Takename")
+BoneTimecodeCustomAttributeNameSettings=(HourAttributeName="TCHour",MinuteAttributeName="TCMinute",SecondAttributeName="TCSecond",FrameAttributeName="TCFrame",SubframeAttributeName="TCSubframe",RateAttributeName="TCRate",TakenameAttributeName="Takename")
 
 [Animation.DefaultObjectSettings]
 BoneCompressionSettings="/Engine/Animation/DefaultAnimBoneCompressionSettings"
@@ -2348,19 +2823,46 @@ bAllowDelayedMessaging=false
 DefaultChaosSolverActorClass=/Script/ChaosSolverEngine.ChaosSolverActor
 
 [/Script/Engine.VirtualTexturePoolConfig]
-DefaultSizeInMegabyte=64
-+Pools=(SizeInMegabyte=64, MinTileSize=0, MaxTileSize=9999, Formats=(PF_DXT1, PF_DXT5))
-+Pools=(SizeInMegabyte=512, MinTileSize=0, MaxTileSize=9999, Formats=(PF_A32B32G32R32F))
++Pools=(SizeInMegabyte=64, bAllowSizeScale=False, bEnableResidencyMipMapBias=True)
+
+[PlatformPaths]
+UnrealBuildTool=Engine/Build/BatchFiles/Build.bat
 
 [AlternateTextureCompression]
 TextureCompressionFormat="TextureFormatOodle"
-TextureFormatPrefix="OODLE_"
-bEnableInEditor=True
 
-[TextureFormatOodle]
+[TextureFormatOodleSettings]
 bForceAllBC23ToBC7=False
-bForceRDOOff=True
 bDebugColor=False
+DebugDumpFilter=
+LogVerbosity=0
 GlobalLambdaMultiplier=1.000000
-DefaultRDOLambda=30
 
+[/Script/Engine.TextureEncodingProjectSettings]
+bFinalUsesRDO=false
+FinalRDOLambda=30
+FinalEffortLevel=Normal
+FinalUniversalTiling=Disabled
+bFastUsesRDO=false
+FastRDOLambda=30
+FastEffortLevel=Normal
+FastUniversalTiling=Disabled
+CookUsesSpeed=Final
+EditorUsesSpeed=FinalIfAvailable
+
+[OodleDataCompressionFormat]
+PreallocatedBufferCount=2
+
+[Plugins]
++ConfigFilesPluginsCannotOverride=EditorPerProjectUserSettings
+[ClothSettings]
+EnvironmentCollisionPadding = 2.f
+EnvironmentCollisionThickness = 2.f
+EnvironmentCollisionMaxShapes = 32
+
+[/Script/InterchangeEngine.InterchangeProjectSettings]
+FilePickerClass=/Script/InterchangeEditorUtilities.InterchangeFilePickerGeneric
+bStaticMeshUseSmoothEdgesIfSmoothingInformationIsMissing=True
+ContentImportSettings=(DefaultPipelineStackOverride=((Materials, "Materials"),(Textures, "Textures")),ShowPipelineStacksConfigurationDialogOverride=((Textures, False)),PipelineStacks=(("Assets", (Pipelines=("/Interchange/Pipelines/DefaultAssetsPipeline.DefaultAssetsPipeline"))),("Materials", (Pipelines=("/Interchange/Pipelines/DefaultMaterialPipeline.DefaultMaterialPipeline"))),("Textures", (Pipelines=("/Interchange/Pipelines/DefaultTexturePipeline.DefaultTexturePipeline")))),DefaultPipelineStack="Assets",PipelineConfigurationDialogClass="/Script/InterchangeEditorPipelines.InterchangePipelineConfigurationGeneric",bShowPipelineStacksConfigurationDialog=True)
+SceneImportSettings=(PipelineStacks=(("Scene", (Pipelines=("/Interchange/Pipelines/DefaultSceneAssetsPipeline.DefaultSceneAssetsPipeline","/Interchange/Pipelines/DefaultSceneLevelPipeline.DefaultSceneLevelPipeline")))),DefaultPipelineStack="Scene",PipelineConfigurationDialogClass="/Script/InterchangeEditorPipelines.InterchangePipelineConfigurationGeneric",bShowPipelineStacksConfigurationDialog=True)
+GenericPipelineClass=/Script/InterchangePipelines.InterchangeGenericAssetsPipeline
