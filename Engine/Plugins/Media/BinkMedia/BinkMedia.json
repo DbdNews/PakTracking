@@ -18,19 +18,20 @@
 	[
 		{
 			"Name" : "BinkMediaPlayer",
-			"Type" : "Runtime",
+			"Type" : "RuntimeNoCommandlet",
 			"LoadingPhase" : "PreLoadingScreen",
-			"TargetDenyList": [ "Server" ],
-			"PlatformDenyList": [ 
+			"BlacklistTargets": [ "Server" ],
+			"BlacklistPlatforms": [ 
+				"HoloLens",
+				"Lumin",
 				"tvOS"
 			]
 		},
 		{
 			"Name" : "BinkMediaPlayerEditor",
 			"Type" : "Editor",
-			"TargetDenyList": [ "Server" ],
-			"PlatformDenyList": [ 
-			]
+			"LoadingPhase" : "PostEngineInit",
+			"BlacklistTargets": [ "Server" ]
 		}
     ]
 }

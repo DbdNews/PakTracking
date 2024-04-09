@@ -5,16 +5,13 @@
     "Class": "UScriptClass'DataTable'",
     "Properties": {
       "RowStruct": {
-        "ObjectName": "Class'GameTypeSettings'",
-        "ObjectPath": "/Script/DeadByDaylight"
+        "ObjectName": "ScriptStruct'GameTypeSettings'",
+        "ObjectPath": "/Script/DBDSharedTypes"
       }
     },
     "Rows": {
       "DreadByDaylight": {
-        "GameType": "EGameType::10",
-        "DisplayTitle": {
-          "CultureInvariantString": null
-        },
+        "GameType": "EGameType::DreadByDaylight",
         "Modifiers": [
           {
             "Key": "EGameTypeModifierName::AllowsItemAddons",
@@ -145,42 +142,68 @@
             }
           }
         ],
-        "MutatorData": {
-          "AssetPathName": "/Game/Data/LimitedTimeGameModes/Zodiac/MutatorData.MutatorData",
-          "SubPathString": ""
-        },
-        "LockedKillerLoadout": {
-          "offering": "_EMPTY_",
-          "Item": "_EMPTY_",
-          "addon1": "_EMPTY_",
-          "addon2": "_EMPTY_",
-          "Data": [
-            "_EMPTY_",
-            "_EMPTY_",
-            "_EMPTY_",
-            "_EMPTY_",
-            "_EMPTY_",
-            "_EMPTY_",
-            "_EMPTY_",
-            "_EMPTY_"
-          ]
-        },
-        "LockedSurvivorLoadout": {
-          "offering": "_EMPTY_",
-          "Item": "_EMPTY_",
-          "addon1": "_EMPTY_",
-          "addon2": "_EMPTY_",
-          "Data": [
-            "_EMPTY_",
-            "_EMPTY_",
-            "_EMPTY_",
-            "_EMPTY_",
-            "_EMPTY_",
-            "_EMPTY_",
-            "_EMPTY_",
-            "_EMPTY_"
-          ]
-        }
+        "Mutators": [
+          {
+            "Component": {
+              "AssetPathName": "/Script/Mutators.DisableTerrorRadiusAudioGameplayMutator",
+              "SubPathString": ""
+            },
+            "ShouldSpawnOnSurvivor": true,
+            "ShouldSpawnOnKiller": false,
+            "ShouldSpawnOnGameState": false,
+            "CustomParam": 0.0
+          },
+          {
+            "Component": {
+              "AssetPathName": "/Game/Blueprints/LimitedTimeGameModes/DreadByDaylight/Mutators/BP_HideScratchMarksMutator.BP_HideScratchMarksMutator_C",
+              "SubPathString": ""
+            },
+            "ShouldSpawnOnSurvivor": true,
+            "ShouldSpawnOnKiller": false,
+            "ShouldSpawnOnGameState": false,
+            "CustomParam": 0.0
+          },
+          {
+            "Component": {
+              "AssetPathName": "/Script/Mutators.HideHUDGameplayMutator",
+              "SubPathString": ""
+            },
+            "ShouldSpawnOnSurvivor": false,
+            "ShouldSpawnOnKiller": false,
+            "ShouldSpawnOnGameState": true,
+            "CustomParam": 0.0
+          },
+          {
+            "Component": {
+              "AssetPathName": "/Game/Blueprints/LimitedTimeGameModes/DreadByDaylight/Mutators/BP_DarkWorldCosmeticMutator.BP_DarkWorldCosmeticMutator_C",
+              "SubPathString": ""
+            },
+            "ShouldSpawnOnSurvivor": true,
+            "ShouldSpawnOnKiller": true,
+            "ShouldSpawnOnGameState": false,
+            "CustomParam": 0.0
+          },
+          {
+            "Component": {
+              "AssetPathName": "/Game/Blueprints/LimitedTimeGameModes/DreadByDaylight/Mutators/BP_ModifyExitGateIndicatorDurationMutator.BP_ModifyExitGateIndicatorDurationMutator_C",
+              "SubPathString": ""
+            },
+            "ShouldSpawnOnSurvivor": true,
+            "ShouldSpawnOnKiller": true,
+            "ShouldSpawnOnGameState": false,
+            "CustomParam": 4.0
+          },
+          {
+            "Component": {
+              "AssetPathName": "/Script/Mutators.AddGeneratorProgressionGameplayMutator",
+              "SubPathString": ""
+            },
+            "ShouldSpawnOnSurvivor": false,
+            "ShouldSpawnOnKiller": false,
+            "ShouldSpawnOnGameState": true,
+            "CustomParam": 0.05
+          }
+        ]
       }
     }
   }

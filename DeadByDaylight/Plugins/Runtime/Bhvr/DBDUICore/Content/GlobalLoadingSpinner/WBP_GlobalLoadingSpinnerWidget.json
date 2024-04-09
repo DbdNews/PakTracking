@@ -8,60 +8,14 @@
       {
         "Type": "IntProperty",
         "Name": "EntryPoint",
-        "Flags": 1,
+        "Flags": "RF_Public",
         "ElementSize": 4,
-        "PropertyFlags": 148
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "Temp_bool_Variable",
-        "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "EnumProperty",
-        "Name": "Temp_byte_Variable",
-        "Flags": 1,
-        "ElementSize": 1,
-        "Enum": {
-          "ObjectName": "Enum'ESlateVisibility'",
-          "ObjectPath": "/Script/UMG"
-        },
-        "UnderlyingProp": {
-          "Type": "ByteProperty",
-          "Name": "UnderlyingType",
-          "Flags": 1,
-          "ElementSize": 1,
-          "Enum": null
-        }
-      },
-      {
-        "Type": "EnumProperty",
-        "Name": "Temp_byte_Variable_1",
-        "Flags": 1,
-        "ElementSize": 1,
-        "Enum": {
-          "ObjectName": "Enum'ESlateVisibility'",
-          "ObjectPath": "/Script/UMG"
-        },
-        "UnderlyingProp": {
-          "Type": "ByteProperty",
-          "Name": "UnderlyingType",
-          "Flags": 1,
-          "ElementSize": 1,
-          "Enum": null
-        }
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
       },
       {
         "Type": "BoolProperty",
         "Name": "K2Node_Event_isVisible",
-        "Flags": 1,
+        "Flags": "RF_Public",
         "ElementSize": 1,
         "FieldSize": 1,
         "ByteOffset": 0,
@@ -71,24 +25,602 @@
         "bIsNativeBool": true
       },
       {
-        "Type": "EnumProperty",
-        "Name": "K2Node_Select_Default",
-        "Flags": 1,
-        "ElementSize": 1,
-        "Enum": {
-          "ObjectName": "Enum'ESlateVisibility'",
-          "ObjectPath": "/Script/UMG"
-        },
-        "UnderlyingProp": {
-          "Type": "ByteProperty",
-          "Name": "UnderlyingType",
-          "Flags": 1,
-          "ElementSize": 1,
-          "Enum": null
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SelectFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SelectFloat_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SelectFloat_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'UITweenInstance'",
+          "ObjectPath": "/Script/UITween"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_ToOpacity_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'UITweenInstance'",
+          "ObjectPath": "/Script/UITween"
         }
       }
     ],
-    "FunctionFlags": 32769
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_ComputedJump",
+        "StatementIndex": 0,
+        "OffsetExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_GlobalLoadingSpinnerWidget_C:ExecuteUbergraph_WBP_GlobalLoadingSpinnerWidget'",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.0"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "EntryPoint",
+              "Flags": "RF_Public",
+              "ElementSize": 4,
+              "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_JumpIfNot",
+        "StatementIndex": 10,
+        "CodeOffset": 43,
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.ExecuteUbergraph_WBP_GlobalLoadingSpinnerWidget[43]",
+        "BooleanExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_GlobalLoadingSpinnerWidget_C:ExecuteUbergraph_WBP_GlobalLoadingSpinnerWidget'",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.0"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "K2Node_Event_isVisible",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_CallMath",
+        "StatementIndex": 24,
+        "Function": {
+          "ObjectName": "Function'UITween:Clear'",
+          "ObjectPath": "/Script/UITween"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_InstanceVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "WidgetBlueprintGeneratedClass'WBP_GlobalLoadingSpinnerWidget_C'",
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.3"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "LoadingSpinner",
+                "Flags": "RF_Public | RF_LoadCompleted",
+                "ElementSize": 8,
+                "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+                "PropertyClass": {
+                  "ObjectName": "WidgetBlueprintGeneratedClass'WBP_LoadingWheel_C'",
+                  "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/WBP_LoadingWheel.2"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 43,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_GlobalLoadingSpinnerWidget_C:ExecuteUbergraph_WBP_GlobalLoadingSpinnerWidget'",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.0"
+            },
+            "Property": {
+              "Type": "FloatProperty",
+              "Name": "CallFunc_SelectFloat_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Function'KismetMathLibrary:SelectFloat'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_FloatConst",
+              "Value": 0.0
+            },
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "WidgetBlueprintGeneratedClass'WBP_GlobalLoadingSpinnerWidget_C'",
+                  "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.3"
+                },
+                "Property": {
+                  "Type": "FloatProperty",
+                  "Name": "LoadingSpinnerFadeOutDelayTime",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 4,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_GlobalLoadingSpinnerWidget_C:ExecuteUbergraph_WBP_GlobalLoadingSpinnerWidget'",
+                  "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.0"
+                },
+                "Property": {
+                  "Type": "BoolProperty",
+                  "Name": "K2Node_Event_isVisible",
+                  "Flags": "RF_Public",
+                  "ElementSize": 1,
+                  "FieldSize": 1,
+                  "ByteOffset": 0,
+                  "ByteMask": 1,
+                  "FieldMask": 255,
+                  "BoolSize": 1,
+                  "bIsNativeBool": true
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 94,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_GlobalLoadingSpinnerWidget_C:ExecuteUbergraph_WBP_GlobalLoadingSpinnerWidget'",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.0"
+            },
+            "Property": {
+              "Type": "FloatProperty",
+              "Name": "CallFunc_SelectFloat_ReturnValue_2",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Function'KismetMathLibrary:SelectFloat'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "WidgetBlueprintGeneratedClass'WBP_GlobalLoadingSpinnerWidget_C'",
+                  "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.3"
+                },
+                "Property": {
+                  "Type": "FloatProperty",
+                  "Name": "LoadingSpinnerFadeInTime",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 4,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+                }
+              }
+            },
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "WidgetBlueprintGeneratedClass'WBP_GlobalLoadingSpinnerWidget_C'",
+                  "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.3"
+                },
+                "Property": {
+                  "Type": "FloatProperty",
+                  "Name": "LoadingSpinnerFadeOutTime",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 4,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_GlobalLoadingSpinnerWidget_C:ExecuteUbergraph_WBP_GlobalLoadingSpinnerWidget'",
+                  "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.0"
+                },
+                "Property": {
+                  "Type": "BoolProperty",
+                  "Name": "K2Node_Event_isVisible",
+                  "Flags": "RF_Public",
+                  "ElementSize": 1,
+                  "FieldSize": 1,
+                  "ByteOffset": 0,
+                  "ByteMask": 1,
+                  "FieldMask": 255,
+                  "BoolSize": 1,
+                  "bIsNativeBool": true
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 149,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_GlobalLoadingSpinnerWidget_C:ExecuteUbergraph_WBP_GlobalLoadingSpinnerWidget'",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.0"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_Create_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyClass": {
+                "ObjectName": "Class'UITweenInstance'",
+                "ObjectPath": "/Script/UITween"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Function'UITween:Create'",
+            "ObjectPath": "/Script/UITween"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "WidgetBlueprintGeneratedClass'WBP_GlobalLoadingSpinnerWidget_C'",
+                  "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.3"
+                },
+                "Property": {
+                  "Type": "ObjectProperty",
+                  "Name": "LoadingSpinner",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 8,
+                  "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+                  "PropertyClass": {
+                    "ObjectName": "WidgetBlueprintGeneratedClass'WBP_LoadingWheel_C'",
+                    "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/WBP_LoadingWheel.2"
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_GlobalLoadingSpinnerWidget_C:ExecuteUbergraph_WBP_GlobalLoadingSpinnerWidget'",
+                  "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.0"
+                },
+                "Property": {
+                  "Type": "FloatProperty",
+                  "Name": "CallFunc_SelectFloat_ReturnValue_2",
+                  "Flags": "RF_Public",
+                  "ElementSize": 4
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_GlobalLoadingSpinnerWidget_C:ExecuteUbergraph_WBP_GlobalLoadingSpinnerWidget'",
+                  "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.0"
+                },
+                "Property": {
+                  "Type": "FloatProperty",
+                  "Name": "CallFunc_SelectFloat_ReturnValue_1",
+                  "Flags": "RF_Public",
+                  "ElementSize": 4
+                }
+              }
+            },
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 0
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 198,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_GlobalLoadingSpinnerWidget_C:ExecuteUbergraph_WBP_GlobalLoadingSpinnerWidget'",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.0"
+            },
+            "Property": {
+              "Type": "FloatProperty",
+              "Name": "CallFunc_SelectFloat_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Function'KismetMathLibrary:SelectFloat'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_FloatConst",
+              "Value": 1.0
+            },
+            {
+              "Inst": "EX_FloatConst",
+              "Value": 0.0
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_GlobalLoadingSpinnerWidget_C:ExecuteUbergraph_WBP_GlobalLoadingSpinnerWidget'",
+                  "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.0"
+                },
+                "Property": {
+                  "Type": "BoolProperty",
+                  "Name": "K2Node_Event_isVisible",
+                  "Flags": "RF_Public",
+                  "ElementSize": 1,
+                  "FieldSize": 1,
+                  "ByteOffset": 0,
+                  "ByteMask": 1,
+                  "FieldMask": 255,
+                  "BoolSize": 1,
+                  "bIsNativeBool": true
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 245,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_GlobalLoadingSpinnerWidget_C:ExecuteUbergraph_WBP_GlobalLoadingSpinnerWidget'",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.0"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_ToOpacity_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyClass": {
+                "ObjectName": "Class'UITweenInstance'",
+                "ObjectPath": "/Script/UITween"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'WBP_GlobalLoadingSpinnerWidget_C:ExecuteUbergraph_WBP_GlobalLoadingSpinnerWidget'",
+                "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.0"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "CallFunc_Create_ReturnValue",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'UITweenInstance'",
+                  "ObjectPath": "/Script/UITween"
+                }
+              }
+            }
+          },
+          "Offset": 19,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'WBP_GlobalLoadingSpinnerWidget_C:ExecuteUbergraph_WBP_GlobalLoadingSpinnerWidget'",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.0"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_ToOpacity_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyClass": {
+                "ObjectName": "Class'UITweenInstance'",
+                "ObjectPath": "/Script/UITween"
+              }
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_FinalFunction",
+            "Function": {
+              "ObjectName": "Function'UITweenInstance:ToOpacity'",
+              "ObjectPath": "/Script/UITween"
+            },
+            "Parameters": [
+              {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'WBP_GlobalLoadingSpinnerWidget_C:ExecuteUbergraph_WBP_GlobalLoadingSpinnerWidget'",
+                    "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.0"
+                  },
+                  "Property": {
+                    "Type": "FloatProperty",
+                    "Name": "CallFunc_SelectFloat_ReturnValue",
+                    "Flags": "RF_Public",
+                    "ElementSize": 4
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 296,
+        "ObjectExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_GlobalLoadingSpinnerWidget_C:ExecuteUbergraph_WBP_GlobalLoadingSpinnerWidget'",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.0"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_ToOpacity_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyClass": {
+                "ObjectName": "Class'UITweenInstance'",
+                "ObjectPath": "/Script/UITween"
+              }
+            }
+          }
+        },
+        "Offset": 10,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Function'UITweenInstance:Begin'",
+            "ObjectPath": "/Script/UITween"
+          },
+          "Parameters": []
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 328,
+        "CodeOffset": 348,
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.ExecuteUbergraph_WBP_GlobalLoadingSpinnerWidget[348]"
+      },
+      {
+        "Inst": "EX_VirtualFunction",
+        "StatementIndex": 333,
+        "Function": "SetGlobalSpinnerVisibility",
+        "Parameters": [
+          {
+            "Inst": "EX_False"
+          }
+        ]
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 348,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 350
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Outer": "WBP_GlobalLoadingSpinnerWidget_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'UserWidget:Construct'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 0,
+        "Function": {
+          "ObjectName": "Function'WBP_GlobalLoadingSpinnerWidget_C:ExecuteUbergraph_WBP_GlobalLoadingSpinnerWidget'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.0"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 333
+          }
+        ],
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.ExecuteUbergraph_WBP_GlobalLoadingSpinnerWidget[333]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 15,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 17
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
   },
   {
     "Type": "Function",
@@ -103,9 +635,9 @@
       {
         "Type": "BoolProperty",
         "Name": "isVisible",
-        "Flags": 1,
+        "Flags": "RF_Public",
         "ElementSize": 1,
-        "PropertyFlags": 148,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
         "FieldSize": 1,
         "ByteOffset": 0,
         "ByteMask": 1,
@@ -114,7 +646,79 @@
         "bIsNativeBool": true
       }
     ],
-    "FunctionFlags": 201459712
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LetValueOnPersistentFrame",
+        "StatementIndex": 0,
+        "DestinationProperty": {
+          "Owner": {
+            "ObjectName": "Function'WBP_GlobalLoadingSpinnerWidget_C:ExecuteUbergraph_WBP_GlobalLoadingSpinnerWidget'",
+            "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.0"
+          },
+          "Property": {
+            "Type": "BoolProperty",
+            "Name": "K2Node_Event_isVisible",
+            "Flags": "RF_Public",
+            "ElementSize": 1,
+            "FieldSize": 1,
+            "ByteOffset": 0,
+            "ByteMask": 1,
+            "FieldMask": 255,
+            "BoolSize": 1,
+            "bIsNativeBool": true
+          }
+        },
+        "AssignmentExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_GlobalLoadingSpinnerWidget_C:SetGlobalSpinnerVisibility'",
+              "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.2"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "isVisible",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 18,
+        "Function": {
+          "ObjectName": "Function'WBP_GlobalLoadingSpinnerWidget_C:ExecuteUbergraph_WBP_GlobalLoadingSpinnerWidget'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.0"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 10
+          }
+        ],
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.ExecuteUbergraph_WBP_GlobalLoadingSpinnerWidget[10]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 33,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 35
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
   },
   {
     "Type": "WidgetBlueprintGeneratedClass",
@@ -123,7 +727,7 @@
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'WBP_GlobalLoadingSpinnerWidget_C:WidgetTree'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.7"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.10"
       },
       "bClassRequiresNativeTick": true,
       "UberGraphFunction": {
@@ -138,6 +742,10 @@
     "Children": [
       {
         "ObjectName": "Function'WBP_GlobalLoadingSpinnerWidget_C:SetGlobalSpinnerVisibility'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.2"
+      },
+      {
+        "ObjectName": "Function'WBP_GlobalLoadingSpinnerWidget_C:Construct'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.1"
       },
       {
@@ -149,9 +757,9 @@
       {
         "Type": "StructProperty",
         "Name": "UberGraphFrame",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 16,
-        "PropertyFlags": 2105344,
+        "PropertyFlags": "Transient | DuplicateTransient",
         "Struct": {
           "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
           "ObjectPath": "/Script/Engine"
@@ -160,13 +768,34 @@
       {
         "Type": "ObjectProperty",
         "Name": "LoadingSpinner",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 8,
-        "PropertyFlags": 562952101429260,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
         "PropertyClass": {
-          "ObjectName": "WidgetBlueprintGeneratedClass'WBP_LoadingSmall_C'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/WBP_LoadingSmall.2"
+          "ObjectName": "WidgetBlueprintGeneratedClass'WBP_LoadingWheel_C'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/WBP_LoadingWheel.2"
         }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "LoadingSpinnerFadeInTime",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "LoadingSpinnerFadeOutTime",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "LoadingSpinnerFadeOutDelayTime",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
       }
     ],
     "FuncMap": {
@@ -174,12 +803,16 @@
         "ObjectName": "Function'WBP_GlobalLoadingSpinnerWidget_C:ExecuteUbergraph_WBP_GlobalLoadingSpinnerWidget'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.0"
       },
+      "Construct": {
+        "ObjectName": "Function'WBP_GlobalLoadingSpinnerWidget_C:Construct'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.1"
+      },
       "SetGlobalSpinnerVisibility": {
         "ObjectName": "Function'WBP_GlobalLoadingSpinnerWidget_C:SetGlobalSpinnerVisibility'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.1"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.2"
       }
     },
-    "ClassFlags": 10754064,
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
     "ClassWithin": {
       "ObjectName": "Class'Object'",
       "ObjectPath": "/Script/CoreUObject"
@@ -188,7 +821,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "WBP_GlobalLoadingSpinnerWidget_C'Default__WBP_GlobalLoadingSpinnerWidget_C'",
-      "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.3"
+      "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.4"
     }
   },
   {
@@ -197,58 +830,118 @@
     "Class": "WidgetBlueprintGeneratedClass'DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.WBP_GlobalLoadingSpinnerWidget_C'",
     "Properties": {
       "UberGraphFrame": {},
+      "LoadingSpinnerFadeInTime": 0.3,
+      "LoadingSpinnerFadeOutTime": 0.3,
+      "LoadingSpinnerFadeOutDelayTime": 0.2,
+      "ScaleType": "EScaleType::Menu",
       "bHasScriptImplementedTick": false,
       "bHasScriptImplementedPaint": false
     }
   },
   {
-    "Type": "Overlay",
-    "Name": "Overlay_32",
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel",
     "Outer": "WidgetTree",
-    "Class": "UScriptClass'Overlay'",
+    "Class": "UScriptClass'CanvasPanel'",
     "Properties": {
       "Slots": [
         {
-          "ObjectName": "OverlaySlot'WBP_GlobalLoadingSpinnerWidget_C:WidgetTree.Overlay_32.OverlaySlot_0'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.5"
+          "ObjectName": "CanvasPanelSlot'WBP_GlobalLoadingSpinnerWidget_C:WidgetTree.CanvasPanel.CanvasPanelSlot_0'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.6"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ScaleBoxSlot'WBP_GlobalLoadingSpinnerWidget_C:WidgetTree.ScaleContainer.ScaleBoxSlot_0'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.8"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Outer": "CanvasPanel",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -210.0,
+          "Top": 1325.0,
+          "Right": 128.0,
+          "Bottom": 128.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.0
+          }
+        },
+        "Alignment": {
+          "X": 1.0,
+          "Y": 0.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'WBP_GlobalLoadingSpinnerWidget_C:WidgetTree.CanvasPanel'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.5"
+      },
+      "Content": {
+        "ObjectName": "WBP_LoadingWheel_C'WBP_GlobalLoadingSpinnerWidget_C:WidgetTree.LoadingSpinner'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.9"
+      }
+    }
+  },
+  {
+    "Type": "ScaleBox",
+    "Name": "ScaleContainer",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'ScaleBox'",
+    "Properties": {
+      "Stretch": "EStretch::UserSpecified",
+      "Slots": [
+        {
+          "ObjectName": "ScaleBoxSlot'WBP_GlobalLoadingSpinnerWidget_C:WidgetTree.ScaleContainer.ScaleBoxSlot_0'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.8"
         }
       ]
     }
   },
   {
-    "Type": "OverlaySlot",
-    "Name": "OverlaySlot_0",
-    "Outer": "Overlay_32",
-    "Class": "UScriptClass'OverlaySlot'",
+    "Type": "ScaleBoxSlot",
+    "Name": "ScaleBoxSlot_0",
+    "Outer": "ScaleContainer",
+    "Class": "UScriptClass'ScaleBoxSlot'",
     "Properties": {
-      "Padding": {
-        "Right": 220.0,
-        "Bottom": 700.0
-      },
-      "HorizontalAlignment": "HAlign_Right",
-      "VerticalAlignment": "VAlign_Bottom",
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
       "Parent": {
-        "ObjectName": "Overlay'WBP_GlobalLoadingSpinnerWidget_C:WidgetTree.Overlay_32'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.4"
+        "ObjectName": "ScaleBox'WBP_GlobalLoadingSpinnerWidget_C:WidgetTree.ScaleContainer'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.7"
       },
       "Content": {
-        "ObjectName": "WBP_LoadingSmall_C'WBP_GlobalLoadingSpinnerWidget_C:WidgetTree.LoadingSpinner'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.6"
+        "ObjectName": "CanvasPanel'WBP_GlobalLoadingSpinnerWidget_C:WidgetTree.CanvasPanel'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.5"
       }
     }
   },
   {
-    "Type": "WBP_LoadingSmall_C",
+    "Type": "WBP_LoadingWheel_C",
     "Name": "LoadingSpinner",
     "Outer": "WidgetTree",
-    "Template": "Default__WBP_LoadingSmall_C",
-    "Class": "WidgetBlueprintGeneratedClass'DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/WBP_LoadingSmall.WBP_LoadingSmall_C'",
+    "Class": "WidgetBlueprintGeneratedClass'DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/WBP_LoadingWheel.WBP_LoadingWheel_C'",
+    "Template": {
+      "ObjectName": "WBP_LoadingWheel_C'Default__WBP_LoadingWheel_C'",
+      "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Common/WBP_LoadingWheel.3"
+    },
     "Properties": {
       "Slot": {
-        "ObjectName": "OverlaySlot'WBP_GlobalLoadingSpinnerWidget_C:WidgetTree.Overlay_32.OverlaySlot_0'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.5"
+        "ObjectName": "CanvasPanelSlot'WBP_GlobalLoadingSpinnerWidget_C:WidgetTree.CanvasPanel.CanvasPanelSlot_0'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.6"
       },
-      "Visibility": "ESlateVisibility::Collapsed"
+      "Visibility": "ESlateVisibility::HitTestInvisible"
     }
   },
   {
@@ -258,8 +951,8 @@
     "Class": "UScriptClass'WidgetTree'",
     "Properties": {
       "RootWidget": {
-        "ObjectName": "Overlay'WBP_GlobalLoadingSpinnerWidget_C:WidgetTree.Overlay_32'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.4"
+        "ObjectName": "ScaleBox'WBP_GlobalLoadingSpinnerWidget_C:WidgetTree.ScaleContainer'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/GlobalLoadingSpinner/WBP_GlobalLoadingSpinnerWidget.7"
       }
     }
   }

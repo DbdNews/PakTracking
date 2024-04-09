@@ -8,12 +8,45 @@
       {
         "Type": "IntProperty",
         "Name": "EntryPoint",
-        "Flags": 1,
+        "Flags": "RF_Public",
         "ElementSize": 4,
-        "PropertyFlags": 148
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
       }
     ],
-    "FunctionFlags": 32769
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_ComputedJump",
+        "StatementIndex": 0,
+        "OffsetExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'AB_NK_Hair_ACC023_C:ExecuteUbergraph_AB_NK_Hair_ACC023'",
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Nea/Models/Heads/ACC/Top/Blueprints/AB_NK_Hair_ACC023.0"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "EntryPoint",
+              "Flags": "RF_Public",
+              "ElementSize": 4,
+              "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 10,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 12
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
   },
   {
     "Type": "Function",
@@ -24,16 +57,66 @@
       {
         "Type": "StructProperty",
         "Name": "AnimGraph",
-        "Flags": 1,
+        "Flags": "RF_Public",
         "ElementSize": 24,
-        "PropertyFlags": 384,
+        "PropertyFlags": "Parm | OutParm",
         "Struct": {
           "ObjectName": "ScriptStruct'PoseLink'",
           "ObjectPath": "/Script/Engine"
         }
       }
     ],
-    "FunctionFlags": 205520896
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 0,
+        "Variable": {
+          "Inst": "EX_LocalOutVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'AB_NK_Hair_ACC023_C:AnimGraph'",
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Nea/Models/Heads/ACC/Top/Blueprints/AB_NK_Hair_ACC023.1"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "AnimGraph",
+              "Flags": "RF_Public",
+              "ElementSize": 24,
+              "PropertyFlags": "Parm | OutParm",
+              "Struct": {
+                "ObjectName": "ScriptStruct'PoseLink'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_StructConst",
+          "Struct": {
+            "ObjectName": "ScriptStruct'PoseLink'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Properties": [
+            {
+              "Inst": "EX_IntConst",
+              "Value": -1
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 37,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 39
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
   },
   {
     "Type": "AnimBlueprintGeneratedClass",
@@ -138,7 +221,8 @@
       },
       "OrderedSavedPoseIndicesMap": [
         {
-          "AnimGraph": {
+          "Key": "AnimGraph",
+          "Value": {
             "OrderedSavedPoseNodeIndices": [
               0
             ]
@@ -440,9 +524,9 @@
       {
         "Type": "StructProperty",
         "Name": "UberGraphFrame",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 16,
-        "PropertyFlags": 2105344,
+        "PropertyFlags": "Transient | DuplicateTransient",
         "Struct": {
           "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
           "ObjectPath": "/Script/Engine"
@@ -451,7 +535,7 @@
       {
         "Type": "StructProperty",
         "Name": "AnimGraphNode_Root",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 64,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_Root'",
@@ -461,7 +545,7 @@
       {
         "Type": "StructProperty",
         "Name": "AnimGraphNode_TransitionResult_1",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 40,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
@@ -471,7 +555,7 @@
       {
         "Type": "StructProperty",
         "Name": "AnimGraphNode_TransitionResult",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 40,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
@@ -481,7 +565,7 @@
       {
         "Type": "StructProperty",
         "Name": "AnimGraphNode_AnimDynamics_9",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 1216,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_AnimDynamics'",
@@ -491,7 +575,7 @@
       {
         "Type": "StructProperty",
         "Name": "AnimGraphNode_BoneDrivenController_5",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 384,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_BoneDrivenController'",
@@ -501,7 +585,7 @@
       {
         "Type": "StructProperty",
         "Name": "AnimGraphNode_BoneDrivenController_4",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 384,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_BoneDrivenController'",
@@ -511,7 +595,7 @@
       {
         "Type": "StructProperty",
         "Name": "AnimGraphNode_BoneDrivenController_3",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 384,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_BoneDrivenController'",
@@ -521,7 +605,7 @@
       {
         "Type": "StructProperty",
         "Name": "AnimGraphNode_AnimDynamics_8",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 1216,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_AnimDynamics'",
@@ -531,7 +615,7 @@
       {
         "Type": "StructProperty",
         "Name": "AnimGraphNode_AnimDynamics_7",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 1216,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_AnimDynamics'",
@@ -541,7 +625,7 @@
       {
         "Type": "StructProperty",
         "Name": "AnimGraphNode_AnimDynamics_6",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 1216,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_AnimDynamics'",
@@ -551,7 +635,7 @@
       {
         "Type": "StructProperty",
         "Name": "AnimGraphNode_AnimDynamics_5",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 1216,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_AnimDynamics'",
@@ -561,7 +645,7 @@
       {
         "Type": "StructProperty",
         "Name": "AnimGraphNode_UseCachedPose_2",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 56,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_UseCachedPose'",
@@ -571,7 +655,7 @@
       {
         "Type": "StructProperty",
         "Name": "AnimGraphNode_LocalToComponentSpace_1",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 40,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_ConvertLocalToComponentSpace'",
@@ -581,7 +665,7 @@
       {
         "Type": "StructProperty",
         "Name": "AnimGraphNode_ComponentToLocalSpace_1",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 40,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_ConvertComponentToLocalSpace'",
@@ -591,7 +675,7 @@
       {
         "Type": "StructProperty",
         "Name": "AnimGraphNode_StateResult_2",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 64,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_StateResult'",
@@ -601,7 +685,7 @@
       {
         "Type": "StructProperty",
         "Name": "AnimGraphNode_BoneDrivenController_2",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 384,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_BoneDrivenController'",
@@ -611,7 +695,7 @@
       {
         "Type": "StructProperty",
         "Name": "AnimGraphNode_BoneDrivenController_1",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 384,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_BoneDrivenController'",
@@ -621,7 +705,7 @@
       {
         "Type": "StructProperty",
         "Name": "AnimGraphNode_BoneDrivenController",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 384,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_BoneDrivenController'",
@@ -631,7 +715,7 @@
       {
         "Type": "StructProperty",
         "Name": "AnimGraphNode_AnimDynamics_4",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 1216,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_AnimDynamics'",
@@ -641,7 +725,7 @@
       {
         "Type": "StructProperty",
         "Name": "AnimGraphNode_AnimDynamics_3",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 1216,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_AnimDynamics'",
@@ -651,7 +735,7 @@
       {
         "Type": "StructProperty",
         "Name": "AnimGraphNode_UseCachedPose_1",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 56,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_UseCachedPose'",
@@ -661,7 +745,7 @@
       {
         "Type": "StructProperty",
         "Name": "AnimGraphNode_LocalToComponentSpace",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 40,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_ConvertLocalToComponentSpace'",
@@ -671,7 +755,7 @@
       {
         "Type": "StructProperty",
         "Name": "AnimGraphNode_AnimDynamics_2",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 1216,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_AnimDynamics'",
@@ -681,7 +765,7 @@
       {
         "Type": "StructProperty",
         "Name": "AnimGraphNode_AnimDynamics_1",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 1216,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_AnimDynamics'",
@@ -691,7 +775,7 @@
       {
         "Type": "StructProperty",
         "Name": "AnimGraphNode_AnimDynamics",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 1216,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_AnimDynamics'",
@@ -701,7 +785,7 @@
       {
         "Type": "StructProperty",
         "Name": "AnimGraphNode_ComponentToLocalSpace",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 40,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_ConvertComponentToLocalSpace'",
@@ -711,7 +795,7 @@
       {
         "Type": "StructProperty",
         "Name": "AnimGraphNode_StateResult_1",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 64,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_StateResult'",
@@ -721,7 +805,7 @@
       {
         "Type": "StructProperty",
         "Name": "AnimGraphNode_UseCachedPose",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 56,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_UseCachedPose'",
@@ -731,7 +815,7 @@
       {
         "Type": "StructProperty",
         "Name": "AnimGraphNode_StateResult",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 64,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_StateResult'",
@@ -741,7 +825,7 @@
       {
         "Type": "StructProperty",
         "Name": "AnimGraphNode_StateMachine",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 176,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
@@ -751,9 +835,9 @@
       {
         "Type": "StructProperty",
         "Name": "AnimGraphNode_CopyPoseFromMesh",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 472,
-        "PropertyFlags": 549755813888,
+        "PropertyFlags": "ContainsInstancedReference",
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_CopyPoseFromMesh'",
           "ObjectPath": "/Script/AnimGraphRuntime"
@@ -762,7 +846,7 @@
       {
         "Type": "StructProperty",
         "Name": "AnimGraphNode_SaveCachedPose",
-        "Flags": 2097153,
+        "Flags": "RF_Public | RF_LoadCompleted",
         "ElementSize": 352,
         "Struct": {
           "ObjectName": "ScriptStruct'AnimNode_SaveCachedPose'",
@@ -780,7 +864,7 @@
         "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Nea/Models/Heads/ACC/Top/Blueprints/AB_NK_Hair_ACC023.1"
       }
     },
-    "ClassFlags": 8652824,
+    "ClassFlags": "CLASS_Transient | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
     "ClassWithin": {
       "ObjectName": "Class'SkeletalMeshComponent'",
       "ObjectPath": "/Script/Engine"

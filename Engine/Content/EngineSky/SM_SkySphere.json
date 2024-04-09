@@ -6,44 +6,44 @@
     "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "DefaultInstance": {
-        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "ObjectType": "ECC_WorldStatic",
         "CollisionProfileName": "BlockAll",
         "CollisionResponses": {
           "ResponseArray": [
             {
               "Channel": "Interactable",
-              "Response": "ECollisionResponse::ECR_Block"
+              "Response": "ECR_Block"
             },
             {
               "Channel": "Slasher",
-              "Response": "ECollisionResponse::ECR_Block"
+              "Response": "ECR_Block"
             },
             {
               "Channel": "Blood",
-              "Response": "ECollisionResponse::ECR_Block"
+              "Response": "ECR_Block"
             },
             {
               "Channel": "InteractionDetector",
-              "Response": "ECollisionResponse::ECR_Ignore"
+              "Response": "ECR_Ignore"
             },
             {
               "Channel": "BlinkBlocker",
-              "Response": "ECollisionResponse::ECR_Ignore"
+              "Response": "ECR_Ignore"
             },
             {
               "Channel": "Ground",
-              "Response": "ECollisionResponse::ECR_Ignore"
+              "Response": "ECR_Ignore"
             },
             {
               "Channel": "Walkable",
-              "Response": "ECollisionResponse::ECR_Block"
+              "Response": "ECR_Block"
             }
           ]
         }
       },
-      "PhysicsType": "EPhysicsType::PhysType_Kinematic"
+      "PhysicsType": "PhysType_Kinematic"
     },
-    "BodySetupGuid": "7B9E45DF4F790411B55DDFA0AC40125E"
+    "BodySetupGuid": "D6D4EEDA479FBA0D2E1E24B29A5C2E6A"
   },
   {
     "Type": "NavCollision",
@@ -51,11 +51,11 @@
     "Outer": "SM_SkySphere",
     "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
-      "NavCollision_Chaos": {
+      "NavCollision_X": {
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 21,
         "SizeOnDisk": 21,
-        "OffsetInFile": "0x32"
+        "OffsetInFile": "0x3F98B"
       }
     }
   },
@@ -64,11 +64,16 @@
     "Name": "SM_SkySphere",
     "Class": "UScriptClass'StaticMesh'",
     "Properties": {
+      "MinLOD": {
+        "bCooked": true,
+        "Default": 0,
+        "Value": 0
+      },
       "StaticMaterials": [
         {
           "MaterialInterface": {
             "ObjectName": "Material'M_Sky_Panning_Clouds2'",
-            "ObjectPath": "/Engine/EngineSky/M_Sky_Panning_Clouds2.0"
+            "ObjectPath": "Engine/Content/EngineSky/M_Sky_Panning_Clouds2.0"
           },
           "MaterialSlotName": "M_Sky_Panning_Clouds2",
           "ImportedMaterialSlotName": "M_Sky_Panning_Clouds2",
@@ -91,18 +96,18 @@
           "Y": 4096.0,
           "Z": 4096.0
         },
-        "SphereRadius": 4096.00048828125
+        "SphereRadius": 4096.0005
       }
     },
     "BodySetup": {
       "ObjectName": "BodySetup'SM_SkySphere:RB_BodySetup_7'",
-      "ObjectPath": "/Engine/EngineSky/SM_SkySphere.0"
+      "ObjectPath": "Engine/Content/EngineSky/SM_SkySphere.0"
     },
     "NavCollision": {
       "ObjectName": "NavCollision'SM_SkySphere:NavCollision_9'",
-      "ObjectPath": "/Engine/EngineSky/SM_SkySphere.1"
+      "ObjectPath": "Engine/Content/EngineSky/SM_SkySphere.1"
     },
-    "LightingGuid": "32CC4E8D-49460DA3-B5E073AD-0543FCF9",
+    "LightingGuid": "9B503771-4AC2B993-E7B084A6-8FE79E56",
     "RenderData": {
       "LODs": [
         {
@@ -134,51 +139,9 @@
           "ColorVertexBuffer": {
             "Stride": 0,
             "NumVertices": 0
-          },
-          "CardRepresentationData": {
-            "Bounds": {
-              "Min": {
-                "X": -4097.0,
-                "Y": -4097.0,
-                "Z": -4097.0
-              },
-              "Max": {
-                "X": 4097.0,
-                "Y": 4097.0,
-                "Z": 4097.0
-              },
-              "IsValid": 1
-            },
-            "MaxLodLevel": 0,
-            "bMostlyTwoSided": false,
-            "CardBuildData": []
           }
         }
       ],
-      "NaniteResources": {
-        "RootData": null,
-        "StreamablePages": {
-          "BulkDataFlags": "BULKDATA_None",
-          "ElementCount": 0,
-          "SizeOnDisk": 0,
-          "OffsetInFile": "0x266E9"
-        },
-        "ImposterAtlas": [],
-        "HierarchyNodes": [],
-        "HierarchyRootOffsets": [],
-        "PageStreamingStates": [],
-        "PageDependencies": [],
-        "NumRootPages": 0,
-        "PositionPrecision": 0,
-        "NormalPrecision": 0,
-        "TangentPrecision": 0,
-        "NumInputTriangles": 0,
-        "NumInputVertices": 0,
-        "NumInputMeshes": 0,
-        "NumInputTexCoords": 0,
-        "NumClusters": 0,
-        "ResourceFlags": 0
-      },
       "Bounds": {
         "Origin": {
           "X": 0.0,
@@ -194,7 +157,7 @@
       },
       "bLODsShareStaticLighting": true,
       "ScreenSize": [
-        2.0,
+        1.0,
         0.0,
         0.0,
         0.0,

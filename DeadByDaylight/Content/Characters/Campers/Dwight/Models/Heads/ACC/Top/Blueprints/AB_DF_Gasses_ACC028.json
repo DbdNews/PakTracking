@@ -13,6 +13,39 @@
         "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
       }
     ],
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_ComputedJump",
+        "StatementIndex": 0,
+        "OffsetExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'AB_DF_Gasses_ACC028_C:ExecuteUbergraph_AB_DF_Gasses_ACC028'",
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Dwight/Models/Heads/ACC/Top/Blueprints/AB_DF_Gasses_ACC028.0"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "EntryPoint",
+              "Flags": "RF_Public",
+              "ElementSize": 4,
+              "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 10,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 12
+      }
+    ],
     "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
   },
   {
@@ -31,6 +64,56 @@
           "ObjectName": "ScriptStruct'PoseLink'",
           "ObjectPath": "/Script/Engine"
         }
+      }
+    ],
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 0,
+        "Variable": {
+          "Inst": "EX_LocalOutVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'AB_DF_Gasses_ACC028_C:AnimGraph'",
+              "ObjectPath": "DeadByDaylight/Content/Characters/Campers/Dwight/Models/Heads/ACC/Top/Blueprints/AB_DF_Gasses_ACC028.1"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "AnimGraph",
+              "Flags": "RF_Public",
+              "ElementSize": 24,
+              "PropertyFlags": "Parm | OutParm",
+              "Struct": {
+                "ObjectName": "ScriptStruct'PoseLink'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_StructConst",
+          "Struct": {
+            "ObjectName": "ScriptStruct'PoseLink'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Properties": [
+            {
+              "Inst": "EX_IntConst",
+              "Value": -1
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 37,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 39
       }
     ],
     "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
@@ -138,7 +221,8 @@
       },
       "OrderedSavedPoseIndicesMap": [
         {
-          "AnimGraph": {
+          "Key": "AnimGraph",
+          "Value": {
             "OrderedSavedPoseNodeIndices": [
               0
             ]

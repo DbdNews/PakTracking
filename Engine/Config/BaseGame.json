@@ -73,20 +73,16 @@ MinWindowWidth=16
 MinWindowHeight=16
 
 [/Script/UnrealEd.ProjectPackagingSettings]
-@EngineCustomBuilds=Name
-@ProjectCustomBuilds=Name
 BuildConfiguration=PPBC_Development
 FullRebuild=False
 UsePakFile=True
-bUseIoStore=True
 bCompressed=True
-PackageCompressionFormat=Oodle
-PackageCompressionMethod=Kraken
-PackageCompressionLevel_Distribution=7
-PackageCompressionLevel_TestShipping=5
-PackageCompressionLevel_DebugDevelopment=4
-PackageCompressionMinBytesSaved=1024
-PackageCompressionMinPercentSaved=5
+PakFileCompressionFormats=Oodle
+PakFileAdditionalCompressionOptions=-compressionblocksize=256KB
+PakFileCompressionMethod=Kraken
+PakFileCompressionLevel_Distribution=7
+PakFileCompressionLevel_TestShipping=5
+PakFileCompressionLevel_DebugDevelopment=3
 bForceUseProjectCompressionFormatIgnoreHardwareOverride=False
 bGenerateChunks=False
 bChunkHardReferencesOnly=False
@@ -100,7 +96,6 @@ bSharedMaterialNativeLibraries=True
 bShareMaterialShaderCode=True
 bSkipMovies=False
 bPakUsesSecondaryOrder=True
-WriteBackMetadataToAssetRegistry=Disabled
 
 +EarlyDownloaderPakFileFiles=...\Content\Internationalization\...\*.icu
 +EarlyDownloaderPakFileFiles=...\Content\Internationalization\...\*.brk
@@ -108,26 +103,21 @@ WriteBackMetadataToAssetRegistry=Disabled
 +EarlyDownloaderPakFileFiles=...\Content\Internationalization\...\*.nrm
 +EarlyDownloaderPakFileFiles=...\Content\Internationalization\...\*.cfu
 +EarlyDownloaderPakFileFiles=...\Content\Localization\...\*.*
++EarlyDownloaderPakFileFiles=...\Content\Localization\*.*
 +EarlyDownloaderPakFileFiles=...\Content\Certificates\...\*.*
++EarlyDownloaderPakFileFiles=...\Content\Certificates\*.*
 +EarlyDownloaderPakFileFiles=-...\Content\Localization\Game\...\*.*
++EarlyDownloaderPakFileFiles=-...\Content\Localization\Game\*.*
 +EarlyDownloaderPakFileFiles=...\Config\...\*.ini
++EarlyDownloaderPakFileFiles=...\Config\*.ini
 +EarlyDownloaderPakFileFiles=...\Engine\GlobalShaderCache*.bin
 +EarlyDownloaderPakFileFiles=...\Content\ShaderArchive-Global*.ushaderbytecode
++EarlyDownloaderPakFileFiles=...\Content\Slate\*.*
 +EarlyDownloaderPakFileFiles=...\Content\Slate\...\*.*
-+EarlyDownloaderPakFileFiles=-...\Content\Slate\...\*.uasset
-+EarlyDownloaderPakFileFiles=-...\Content\Slate\...\*.umap
 +EarlyDownloaderPakFileFiles=...\*.upluginmanifest
 +EarlyDownloaderPakFileFiles=...\*.uproject
 +EarlyDownloaderPakFileFiles=...\global_sf*.metalmap
 
-
-
-[/Script/DeveloperToolSettings.PlatformsMenuSettings]
-StagingDirectory=(Path="")
-LaunchOnTarget=
-PerPlatformBuildConfig=()
-PerPlatformTargetFlavorName=(("Android", "Android_ASTC"))
-PerPlatformBuildTarget=()
 
 [/Script/Engine.HUD]
 DebugDisplay=AI
@@ -154,6 +144,7 @@ MaxGlobalTimeDilation=20.0
 HearingRange=768
 SightRadius=3000
 LoseSightRadius=3500
+LoSHearingRange=1500
 PeripheralVisionAngle=90
 
 [/Script/AIModule.AISense_Hearing]
@@ -162,6 +153,7 @@ SpeedOfSoundSq=0
 [/Script/AIModule.AISenseConfig_Hearing]
 Implementation=Class'/Script/AIModule.AISense_Hearing'
 HearingRange=768
+LoSHearingRange=1500
 DetectionByAffiliation=(bDetectEnemies=true)
 
 [/Script/AIModule.AISenseConfig_Sight]
@@ -194,64 +186,3 @@ FrameInterpolationProcessor=Class'/Script/LiveLink.LiveLinkBasicFrameInterpolati
 
 [Staging]
 
-[CookedEditorSettings]
-+EngineAssetPaths="/Engine"
-+ProjectAssetPaths="/Game"
-+DisallowedObjectClassesToLoad="/Script/Engine.Blueprint"
-+DisallowedObjectClassesToLoad="/Script/Engine.AssetImportData"
-+DisallowedAssetClassesToGather="/Script/Engine.World"
-+DisallowedPathsToGather="/Game/Developers"
-
-+EngineExtraStageFiles=(Path="Config", Files="*Editor*")
-+EngineExtraStageFiles=(Path="Config", Files="*Lightmass*")
-+EngineExtraStageFiles=(Path="Content/Slate")
-+EngineExtraStageFiles=(Path="Content/Splash")
-+EngineExtraStageFiles=(Path="Content/EngineMaterials")
-+EngineExtraStageFiles=(Path="Content/EditorResources")
-+EngineExtraStageFiles=(Path="Content/EngineFonts")
-+EngineExtraStageFiles=(Path="Content/Maps/Templates")
-+EngineExtraStageFiles=(Path="Build", Files="Build.version", Recursive=false, NonUFS=true)
-+EngineExtraStageFiles=(Path="Source/ThirdParty/Licenses")
-
-bStageShaderDirs=true
-bStagePlatformBuildDirs=false
-bStageExtrasDirs=false
-bStagePlatformDirs=true
-bStageUAT=true
-bIsForExternalDistribution=false
-
-+DisabledPlugins=USDStageEditor
-+DisabledPlugins=USDImporter
-
-
-bBuildAgainstRelease=false
-DLCPluginName=MakeCookedEditorAsDLC
-ReleaseName=
-ReleaseTargetType=Game
-
-
-[CookedEditorSettings_CookedEditor]
-MapMode=Uncooked
-
-+DisabledPlugins=GeometryMode
-+DisabledPlugins=Volumetrics
-+DisabledPlugins=AssetSearch
-+DisabledPlugins=BPEditorExtension
-+DisabledPlugins=ObjectBrowser
-+DisabledPlugins=FunctionalTestingEditor
-+DisabledPlugins=RuntimeTests
-+DisabledPlugins=EditorTests
-+DisabledPluginsInShipping=GameplayInsights
-+DisabledPluginsInShipping=TraceSourceFilters
-
-+EngineExtraStageFiles=(Path="Content/Editor/Slate")
-+ProjectExtraStageFiles=(Path="Content/Editor/Slate")
-
-[CookedEditorSettings_CookedCooker]
-MapMode=Cooked
-
-+EngineExtraStageFiles=(Path="Config")
-+ProjectExtraStageFiles=(Path="Config")
-
-+EngineExtraStageFiles=(Path="Build/BatchFiles", Recursive=true, NonUFS=true)
-+EngineExtraStageFiles=(Path="Build/BatchFiles/Linux", Recursive=true, NonUFS=true)

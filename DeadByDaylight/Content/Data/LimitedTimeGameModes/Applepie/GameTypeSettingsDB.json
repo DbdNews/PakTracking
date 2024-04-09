@@ -5,53 +5,286 @@
     "Class": "UScriptClass'DataTable'",
     "Properties": {
       "RowStruct": {
-        "ObjectName": "Class'GameTypeSettings'",
-        "ObjectPath": "/Script/DeadByDaylight"
+        "ObjectName": "ScriptStruct'GameTypeSettings'",
+        "ObjectPath": "/Script/DBDSharedTypes"
       }
     },
     "Rows": {
       "Cake": {
-        "GameType": "EGameType::11",
-        "DisplayTitle": {
-          "CultureInvariantString": null
-        },
-        "Modifiers": [],
-        "MutatorData": {
-          "AssetPathName": "None",
-          "SubPathString": null
-        },
-        "LockedKillerLoadout": {
-          "offering": "None",
-          "Item": "None",
-          "addon1": "None",
-          "addon2": "None",
-          "Data": [
-            "_EMPTY_",
-            "_EMPTY_",
-            "_EMPTY_",
-            "_EMPTY_",
-            "_EMPTY_",
-            "_EMPTY_",
-            "_EMPTY_",
-            "_EMPTY_"
-          ]
-        },
-        "LockedSurvivorLoadout": {
-          "offering": "None",
-          "Item": "None",
-          "addon1": "None",
-          "addon2": "None",
-          "Data": [
-            "_EMPTY_",
-            "_EMPTY_",
-            "_EMPTY_",
-            "_EMPTY_",
-            "_EMPTY_",
-            "_EMPTY_",
-            "_EMPTY_",
-            "_EMPTY_"
-          ]
-        }
+        "GameType": "EGameType::Cake",
+        "Modifiers": [
+          {
+            "Key": "EGameTypeModifierName::CanUseActiveSpecialEvent",
+            "Value": {
+              "setType": "EFlexibleTunableType::BooleanTunable",
+              "_boolValue": true,
+              "_floatValue": 0.0,
+              "_intValue": 0,
+              "_stringValue": "",
+              "_arrayValue": []
+            }
+          },
+          {
+            "Key": "EGameTypeModifierName::DisabledInventory",
+            "Value": {
+              "setType": "EFlexibleTunableType::StringArrayTunable",
+              "_boolValue": false,
+              "_floatValue": 0.0,
+              "_intValue": 0,
+              "_stringValue": "",
+              "_arrayValue": [
+                "Laurie",
+                "Bill",
+                "Quentin",
+                "Eric",
+                "Ash",
+                "Nancy",
+                "Steve",
+                "S22",
+                "S26",
+                "S27",
+                "S30",
+                "S32",
+                "S33",
+                "S38",
+                "S39",
+                "S40",
+                "Chuckles",
+                "Bob",
+                "HillBilly",
+                "Nurse",
+                "Witch",
+                "Shape",
+                "Killer07",
+                "Bear",
+                "Cannibal",
+                "Nightmare",
+                "Pig",
+                "Clown",
+                "Spirit",
+                "Legion",
+                "Plague",
+                "Ghostface",
+                "Demogorgon",
+                "Gunslinger",
+                "K20",
+                "K21",
+                "K22",
+                "K23",
+                "K24",
+                "K25",
+                "K26",
+                "K27",
+                "K28",
+                "K29",
+                "K30",
+                "K31",
+                "K32",
+                "K33",
+                "K34",
+                "K35",
+                "S36_outfit_013",
+                "SwedenKiller_outfit_012",
+                "SwedenKiller_outfit_020"
+              ]
+            }
+          },
+          {
+            "Key": "EGameTypeModifierName::IsLimitedTimeExperience",
+            "Value": {
+              "setType": "EFlexibleTunableType::BooleanTunable",
+              "_boolValue": true,
+              "_floatValue": 0.0,
+              "_intValue": 0,
+              "_stringValue": "",
+              "_arrayValue": []
+            }
+          },
+          {
+            "Key": "EGameTypeModifierName::DisabledPanelTabs",
+            "Value": {
+              "setType": "EFlexibleTunableType::StringArrayTunable",
+              "_boolValue": false,
+              "_floatValue": 0.0,
+              "_intValue": 0,
+              "_stringValue": "",
+              "_arrayValue": [
+                "LOADOUT",
+                "BLOODWEB",
+                "CUSTOMIZE"
+              ]
+            }
+          },
+          {
+            "Key": "EGameTypeModifierName::AllowsQuestProgression",
+            "Value": {
+              "setType": "EFlexibleTunableType::BooleanTunable",
+              "_boolValue": true,
+              "_floatValue": 0.0,
+              "_intValue": 0,
+              "_stringValue": "",
+              "_arrayValue": []
+            }
+          },
+          {
+            "Key": "EGameTypeModifierName::InGameChestCountModifier",
+            "Value": {
+              "setType": "EFlexibleTunableType::IntTunable",
+              "_boolValue": false,
+              "_floatValue": 0.0,
+              "_intValue": -3,
+              "_stringValue": "",
+              "_arrayValue": []
+            }
+          },
+          {
+            "Key": "EGameTypeModifierName::AudioGroupState",
+            "Value": {
+              "setType": "EFlexibleTunableType::StringTunable",
+              "_boolValue": false,
+              "_floatValue": 0.0,
+              "_intValue": 0,
+              "_stringValue": "Cake",
+              "_arrayValue": []
+            }
+          },
+          {
+            "Key": "EGameTypeModifierName::GrantedCharacters",
+            "Value": {
+              "setType": "EFlexibleTunableType::StringArrayTunable",
+              "_boolValue": false,
+              "_floatValue": 0.0,
+              "_intValue": 0,
+              "_stringValue": "",
+              "_arrayValue": [
+                "Oni"
+              ]
+            }
+          },
+          {
+            "Key": "EGameTypeModifierName::ForcesDefaultCustomization",
+            "Value": {
+              "setType": "EFlexibleTunableType::BooleanTunable",
+              "_boolValue": true,
+              "_floatValue": 0.0,
+              "_intValue": 0,
+              "_stringValue": "",
+              "_arrayValue": []
+            }
+          }
+        ],
+        "Mutators": [
+          {
+            "Component": {
+              "AssetPathName": "/Game/Blueprints/LimitedTimeGameModes/Applepie/Mutators/BP_AddOniStompMoriMutator.BP_AddOniStompMoriMutator_C",
+              "SubPathString": ""
+            },
+            "ShouldSpawnOnSurvivor": true,
+            "ShouldSpawnOnKiller": false,
+            "ShouldSpawnOnGameState": false,
+            "CustomParam": 0.0
+          },
+          {
+            "Component": {
+              "AssetPathName": "/Game/Blueprints/LimitedTimeGameModes/Applepie/Mutators/BP_PreventVaultMutator.BP_PreventVaultMutator_C",
+              "SubPathString": ""
+            },
+            "ShouldSpawnOnSurvivor": true,
+            "ShouldSpawnOnKiller": true,
+            "ShouldSpawnOnGameState": false,
+            "CustomParam": 0.0
+          },
+          {
+            "Component": {
+              "AssetPathName": "/Script/Mutators.OpenEscapeDoorOnGeneratorCompletionMutator",
+              "SubPathString": ""
+            },
+            "ShouldSpawnOnSurvivor": false,
+            "ShouldSpawnOnKiller": false,
+            "ShouldSpawnOnGameState": true,
+            "CustomParam": 0.0
+          },
+          {
+            "Component": {
+              "AssetPathName": "/Game/Blueprints/LimitedTimeGameModes/Applepie/Mutators/BP_ModifySurvivorScaleMutator.BP_ModifySurvivorScaleMutator_C",
+              "SubPathString": ""
+            },
+            "ShouldSpawnOnSurvivor": true,
+            "ShouldSpawnOnKiller": false,
+            "ShouldSpawnOnGameState": false,
+            "CustomParam": 0.5
+          },
+          {
+            "Component": {
+              "AssetPathName": "/Game/Blueprints/LimitedTimeGameModes/Applepie/Mutators/BP_ModifyPlayerScaleMutator.BP_ModifyPlayerScaleMutator_C",
+              "SubPathString": ""
+            },
+            "ShouldSpawnOnSurvivor": false,
+            "ShouldSpawnOnKiller": true,
+            "ShouldSpawnOnGameState": false,
+            "CustomParam": 2.0
+          },
+          {
+            "Component": {
+              "AssetPathName": "/Script/Mutators.OverrideGeneratorRequirementsMutator",
+              "SubPathString": ""
+            },
+            "ShouldSpawnOnSurvivor": false,
+            "ShouldSpawnOnKiller": false,
+            "ShouldSpawnOnGameState": true,
+            "CustomParam": 3.0
+          },
+          {
+            "Component": {
+              "AssetPathName": "/Game/Blueprints/LimitedTimeGameModes/Applepie/Mutators/BP_RevealSurviorsAuraEveryMinuteMutator.BP_RevealSurviorsAuraEveryMinuteMutator_C",
+              "SubPathString": ""
+            },
+            "ShouldSpawnOnSurvivor": false,
+            "ShouldSpawnOnKiller": true,
+            "ShouldSpawnOnGameState": false,
+            "CustomParam": 2.0
+          },
+          {
+            "Component": {
+              "AssetPathName": "/Script/Mutators.OverrideGeneratorMaxChargeMutator",
+              "SubPathString": ""
+            },
+            "ShouldSpawnOnSurvivor": false,
+            "ShouldSpawnOnKiller": false,
+            "ShouldSpawnOnGameState": true,
+            "CustomParam": 70.0
+          },
+          {
+            "Component": {
+              "AssetPathName": "/Game/Blueprints/LimitedTimeGameModes/Applepie/Mutators/BP_PermanentBrokenEffectMutator.BP_PermanentBrokenEffectMutator_C",
+              "SubPathString": ""
+            },
+            "ShouldSpawnOnSurvivor": true,
+            "ShouldSpawnOnKiller": false,
+            "ShouldSpawnOnGameState": false,
+            "CustomParam": 0.0
+          },
+          {
+            "Component": {
+              "AssetPathName": "/Script/Mutators.ForceHookStageMutator",
+              "SubPathString": ""
+            },
+            "ShouldSpawnOnSurvivor": true,
+            "ShouldSpawnOnKiller": false,
+            "ShouldSpawnOnGameState": false,
+            "CustomParam": 2.0
+          },
+          {
+            "Component": {
+              "AssetPathName": "/Game/Blueprints/LimitedTimeGameModes/Applepie/Mutators/BP_PreventPickupMutator.BP_PreventPickupMutator_C",
+              "SubPathString": ""
+            },
+            "ShouldSpawnOnSurvivor": false,
+            "ShouldSpawnOnKiller": true,
+            "ShouldSpawnOnGameState": false,
+            "CustomParam": 0.0
+          }
+        ]
       }
     }
   }

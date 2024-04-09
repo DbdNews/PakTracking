@@ -6,7 +6,7 @@
 	"Description": "Exposes a unified API for cryptography functionality provided by the platform, if available. Otherwise, interfaces with OpenSSL.",
 	"Category": "Misc",
 	"CreatedBy": "Epic Games, Inc.",
-	"CreatedByURL": "https://epicgames.com",
+	"CreatedByURL": "http://epicgames.com",
 	"DocsURL": "",
 	"MarketplaceURL": "",
 	"SupportURL": "",
@@ -20,32 +20,36 @@
 			"Name": "PlatformCrypto",
 			"Type": "RuntimeAndProgram",
 			"LoadingPhase": "EarliestPossible",
-			"PlatformAllowList": [
+			"WhitelistPlatforms": [
 				"Android",
 				"IOS",
 				"Mac",
+				"Win32",
 				"Win64",
 				"Linux",
-				"LinuxArm64"
+				"PS4",
+				"XboxOne"
 			],
-			"PlatformDenyList": [
+			"BlacklistPlatforms": [
 				"TVOS"
 			],
-			"ProgramAllowList": [ "UnrealPak" ]
+			"WhitelistPrograms": [ "UnrealPak" ]
 		},
 		{
 			"Name": "PlatformCryptoTypes",
 			"Type": "RuntimeAndProgram",
 			"LoadingPhase": "EarliestPossible",
-			"PlatformAllowList": [
+			"WhitelistPlatforms": [
 				"Android",
 				"IOS",
 				"Mac",
+				"Win32",
 				"Win64",
 				"Linux",
-				"LinuxArm64"
+				"PS4",
+				"XboxOne"
 			],
-			"PlatformDenyList": [
+			"BlacklistPlatforms": [
 				"TVOS"
 			]
 		},
@@ -53,15 +57,29 @@
 			"Name": "PlatformCryptoOpenSSL",
 			"Type": "RuntimeAndProgram",
 			"LoadingPhase": "EarliestPossible",
-			"PlatformAllowList": [
+			"WhitelistPlatforms": [
 				"Android",
 				"IOS",
 				"Mac",
+				"Win32",
 				"Win64",
 				"Linux",
-				"LinuxArm64"
+				"PS4"
 			],
-			"PlatformDenyList": [
+			"BlacklistPlatforms": [
+				"TVOS"
+			]
+		},
+		{
+			"Name": "PlatformCryptoBCrypt",
+			"Type": "RuntimeAndProgram",
+			"LoadingPhase": "EarliestPossible",
+			"WhitelistPlatforms": [
+				"XboxOne"
+			],
+			"BlacklistPlatforms": [
+				"Android",
+				"IOS",
 				"TVOS"
 			]
 		}

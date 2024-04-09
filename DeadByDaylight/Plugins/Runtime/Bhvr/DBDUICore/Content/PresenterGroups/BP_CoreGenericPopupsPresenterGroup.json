@@ -7,7 +7,7 @@
       "ObjectName": "Class'PresenterGroup'",
       "ObjectPath": "/Script/DBDUIPresenters"
     },
-    "ClassFlags": 10754064,
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
     "ClassWithin": {
       "ObjectName": "Class'Object'",
       "ObjectPath": "/Script/CoreUObject"
@@ -31,7 +31,7 @@
         },
         {
           "ObjectName": "RootContainer'Default__BP_CoreGenericPopupsPresenterGroup_C:RootContainer'",
-          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/PresenterGroups/BP_CoreGenericPopupsPresenterGroup.7"
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/PresenterGroups/BP_CoreGenericPopupsPresenterGroup.8"
         },
         {
           "ObjectName": "FocusHandler'Default__BP_CoreGenericPopupsPresenterGroup_C:FocusHandler'",
@@ -49,6 +49,10 @@
         },
         {
           "ObjectName": "GenericTextInputPopupPresenter'Default__BP_CoreGenericPopupsPresenterGroup_C:GenericTextInputPopupPresenter_0'",
+          "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/PresenterGroups/BP_CoreGenericPopupsPresenterGroup.7"
+        },
+        {
+          "ObjectName": "GenericRefreshingPopupPresenter'Default__BP_CoreGenericPopupsPresenterGroup_C:GenericRefreshingPopupPresenter_0'",
           "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/PresenterGroups/BP_CoreGenericPopupsPresenterGroup.6"
         }
       ]
@@ -60,7 +64,12 @@
     "Outer": "Default__BP_CoreGenericPopupsPresenterGroup_C",
     "Class": "UScriptClass'ContextObserver'",
     "Properties": {
-      "ObservedContextSection": "EContextSection::GenericPopups"
+      "ObservedContexts": [
+        "EContext::GenericRefreshingPopup",
+        "EContext::UMGDailyRitualsPopup",
+        "EContext::UMGGenericPopup",
+        "EContext::UMGGenericTextInputPopup"
+      ]
     }
   },
   {
@@ -92,6 +101,22 @@
       "PopupWidgetClass": {
         "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreGenericPopup_C'",
         "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreGenericPopup.5"
+      },
+      "_ignoredPresentationRequirementFunctions": [
+        "IsGameStateReady"
+      ]
+    }
+  },
+  {
+    "Type": "GenericRefreshingPopupPresenter",
+    "Name": "GenericRefreshingPopupPresenter_0",
+    "Outer": "Default__BP_CoreGenericPopupsPresenterGroup_C",
+    "Class": "UScriptClass'GenericRefreshingPopupPresenter'",
+    "Properties": {
+      "ObservedContext": "EContext::GenericRefreshingPopup",
+      "PopupWidgetClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreGenericRefreshingPopupWidget_C'",
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreGenericRefreshingPopupWidget.0"
       }
     }
   },
@@ -104,7 +129,7 @@
       "ObservedContext": "EContext::UMGGenericTextInputPopup",
       "PopupWidgetClass": {
         "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreGenericTextInputPopup_C'",
-        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreGenericTextInputPopup.5"
+        "ObjectPath": "DeadByDaylight/Plugins/Runtime/Bhvr/DBDUICore/Content/Popups/WBP_CoreGenericTextInputPopup.6"
       }
     }
   },
