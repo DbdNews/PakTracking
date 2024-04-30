@@ -1,0 +1,132 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "TN_Lamps_ACC019_REF_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'TN_Lamps_ACC019_REF_PhysicsAsset:SkeletalBodySetup_0'",
+          "ObjectPath": "/Game/Characters/Slashers/Nurse/Models/Bodies/ACC/Physics/TN_Lamps_ACC019_REF_PhysicsAsset.2"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'TN_Lamps_ACC019_REF_PhysicsAsset:SkeletalBodySetup_1'",
+          "ObjectPath": "/Game/Characters/Slashers/Nurse/Models/Bodies/ACC/Physics/TN_Lamps_ACC019_REF_PhysicsAsset.3"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate'TN_Lamps_ACC019_REF_PhysicsAsset:PhysicsConstraintTemplate_0'",
+          "ObjectPath": "/Game/Characters/Slashers/Nurse/Models/Bodies/ACC/Physics/TN_Lamps_ACC019_REF_PhysicsAsset.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_0",
+    "Outer": "TN_Lamps_ACC019_REF_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "joint_TorsoC_01",
+        "ConstraintBone1": "joint_TorsoC_01",
+        "ConstraintBone2": "joint_TorsoA_01",
+        "Pos2": {
+          "X": 4.5602756,
+          "Y": -30.835747,
+          "Z": -1.9645742E-30
+        },
+        "PriAxis2": {
+          "X": 0.99170357,
+          "Y": 0.1285456,
+          "Z": 7.841913E-33
+        },
+        "SecAxis2": {
+          "X": -0.1285456,
+          "Y": 0.99170357,
+          "Z": -1.3085297E-31
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "TN_Lamps_ACC019_REF_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -10.220254,
+              "Y": -5.001163,
+              "Z": 4.6524353
+            },
+            "Rotation": {
+              "Pitch": -6.3611094E-15,
+              "Yaw": -122.80836,
+              "Roll": -65.51505
+            },
+            "Radius": 13.623091,
+            "Length": 21.52638,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "joint_TorsoA_01",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "59F109E64B711F6BE85675A1A30578CF"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "TN_Lamps_ACC019_REF_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -0.5146792,
+              "Y": 0.8992046,
+              "Z": -9.087035
+            },
+            "Rotation": {
+              "Pitch": 6.3611094E-15,
+              "Yaw": 92.807274,
+              "Roll": -75.529205
+            },
+            "Radius": 10.083839,
+            "Length": 25.063953,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "joint_TorsoC_01",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "1B79A1A24C6E44225D2A93AE41FA9EA4"
+  }
+]

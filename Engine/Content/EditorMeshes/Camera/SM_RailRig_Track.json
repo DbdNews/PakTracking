@@ -6,49 +6,49 @@
     "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "DefaultInstance": {
-        "ObjectType": "ECC_WorldStatic",
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
         "CollisionProfileName": "BlockAll",
         "CollisionResponses": {
           "ResponseArray": [
             {
               "Channel": "Interactable",
-              "Response": "ECR_Block"
+              "Response": "ECollisionResponse::ECR_Block"
             },
             {
               "Channel": "Slasher",
-              "Response": "ECR_Block"
+              "Response": "ECollisionResponse::ECR_Block"
             },
             {
               "Channel": "Blood",
-              "Response": "ECR_Block"
+              "Response": "ECollisionResponse::ECR_Block"
             },
             {
               "Channel": "InteractionDetector",
-              "Response": "ECR_Ignore"
+              "Response": "ECollisionResponse::ECR_Ignore"
             },
             {
               "Channel": "BlinkBlocker",
-              "Response": "ECR_Ignore"
+              "Response": "ECollisionResponse::ECR_Ignore"
             },
             {
               "Channel": "Ground",
-              "Response": "ECR_Ignore"
+              "Response": "ECollisionResponse::ECR_Ignore"
             },
             {
               "Channel": "Walkable",
-              "Response": "ECR_Block"
+              "Response": "ECollisionResponse::ECR_Block"
             }
           ]
         }
       }
     },
-    "BodySetupGuid": "0EAA33D84B2C00A4EF99379D6181F75A",
+    "BodySetupGuid": "F6F916844EC74A177C030A8FBE570E82",
     "CookedFormatData": {
       "PhysXPC": {
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
-        "ElementCount": 35049,
-        "SizeOnDisk": 35049,
-        "OffsetInFile": "0x21D60"
+        "ElementCount": 73202,
+        "SizeOnDisk": 73202,
+        "OffsetInFile": "0x90"
       }
     }
   },
@@ -58,11 +58,11 @@
     "Outer": "SM_RailRig_Track",
     "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
-      "NavCollision_X": {
+      "NavCollision_Chaos": {
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 21,
         "SizeOnDisk": 21,
-        "OffsetInFile": "0x2A691"
+        "OffsetInFile": "0x32"
       }
     }
   },
@@ -75,7 +75,7 @@
         {
           "MaterialInterface": {
             "ObjectName": "MaterialInstanceConstant'MI_CineMat_Rig'",
-            "ObjectPath": "Engine/Content/EditorMaterials/Camera/MI_CineMat_Rig.0"
+            "ObjectPath": "/Engine/EditorMaterials/Camera/MI_CineMat_Rig.0"
           },
           "MaterialSlotName": "MI_CineMat_Rig",
           "ImportedMaterialSlotName": "MI_CineMat_Rig",
@@ -103,16 +103,16 @@
           "Y": 4.0012503,
           "Z": 37.87151
         },
-        "SphereRadius": 45.053234
+        "SphereRadius": 45.0532341003418
       }
     },
     "BodySetup": {
       "ObjectName": "BodySetup'SM_RailRig_Track:BodySetup_0'",
-      "ObjectPath": "Engine/Content/EditorMeshes/Camera/SM_RailRig_Track.0"
+      "ObjectPath": "/Engine/EditorMeshes/Camera/SM_RailRig_Track.0"
     },
     "NavCollision": {
       "ObjectName": "NavCollision'SM_RailRig_Track:NavCollision_1'",
-      "ObjectPath": "Engine/Content/EditorMeshes/Camera/SM_RailRig_Track.1"
+      "ObjectPath": "/Engine/EditorMeshes/Camera/SM_RailRig_Track.1"
     },
     "LightingGuid": "87EF0A6F-47783B5D-3040AD85-C8964252",
     "RenderData": {
@@ -146,13 +146,180 @@
           "ColorVertexBuffer": {
             "Stride": 0,
             "NumVertices": 0
+          },
+          "CardRepresentationData": {
+            "Bounds": {
+              "Min": {
+                "X": -25.816837,
+                "Y": -5.011314,
+                "Z": -14.654816
+              },
+              "Max": {
+                "X": 24.990643,
+                "Y": 4.9911866,
+                "Z": 63.088203
+              },
+              "IsValid": 1
+            },
+            "MaxLodLevel": 0,
+            "bMostlyTwoSided": false,
+            "CardBuildData": [
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": -1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": -20.413097,
+                    "Y": -0.010063648,
+                    "Z": 24.216694
+                  },
+                  "Extent": {
+                    "X": 5.0,
+                    "Y": 38.871506,
+                    "Z": 10.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 0
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": 19.586903,
+                    "Y": -0.010063648,
+                    "Z": 24.216694
+                  },
+                  "Extent": {
+                    "X": 5.0,
+                    "Y": 38.871506,
+                    "Z": 10.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 1
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": -1.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": -0.41309738,
+                    "Y": -0.010063648,
+                    "Z": 24.216694
+                  },
+                  "Extent": {
+                    "X": 25.0,
+                    "Y": 38.871506,
+                    "Z": 10.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 2
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": -0.41309738,
+                    "Y": -0.010063648,
+                    "Z": 24.216694
+                  },
+                  "Extent": {
+                    "X": 25.0,
+                    "Y": 38.871506,
+                    "Z": 10.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 3
+              }
+            ]
           }
         }
       ],
+      "NaniteResources": {
+        "RootData": null,
+        "StreamablePages": {
+          "BulkDataFlags": "BULKDATA_None",
+          "ElementCount": 0,
+          "SizeOnDisk": 0,
+          "OffsetInFile": "0xEB49"
+        },
+        "ImposterAtlas": [],
+        "HierarchyNodes": [],
+        "HierarchyRootOffsets": [],
+        "PageStreamingStates": [],
+        "PageDependencies": [],
+        "NumRootPages": 0,
+        "PositionPrecision": 0,
+        "NormalPrecision": 0,
+        "TangentPrecision": 0,
+        "NumInputTriangles": 0,
+        "NumInputVertices": 0,
+        "NumInputMeshes": 0,
+        "NumInputTexCoords": 0,
+        "NumClusters": 0,
+        "ResourceFlags": 0
+      },
       "Bounds": {
         "Origin": {
-          "X": -0.41309738,
-          "Y": -0.010063648,
+          "X": -0.41309643,
+          "Y": -0.010063767,
           "Z": 24.216694
         },
         "BoxExtent": {
@@ -160,11 +327,11 @@
           "Y": 4.0012503,
           "Z": 37.87151
         },
-        "SphereRadius": 45.053234
+        "SphereRadius": 45.05323
       },
       "bLODsShareStaticLighting": true,
       "ScreenSize": [
-        1.0,
+        2.0,
         0.0,
         0.0,
         0.0,
