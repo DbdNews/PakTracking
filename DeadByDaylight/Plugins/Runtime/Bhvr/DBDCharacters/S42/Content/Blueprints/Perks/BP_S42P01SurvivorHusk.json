@@ -1,0 +1,4776 @@
+[
+  {
+    "Type": "AkComponent",
+    "Name": "Ak_Audio_S42P01_SurvivorHusk_GEN_VARIABLE",
+    "Outer": "BP_S42P01SurvivorHusk_C",
+    "Class": "UScriptClass'AkComponent'",
+    "Properties": {
+      "OcclusionAffect": 50.0,
+      "MaxDistance": 1600.0,
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 20.0
+      }
+    }
+  },
+  {
+    "Type": "BaseActorAttackableComponent",
+    "Name": "AttackableComponent",
+    "Outer": "Default__BP_S42P01SurvivorHusk_C",
+    "Class": "UScriptClass'BaseActorAttackableComponent'"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_S42P01SurvivorHusk_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "Timelines": [
+        {
+          "ObjectName": "TimelineTemplate'BP_S42P01SurvivorHusk_C:TML_Dissolve_In/Out_Template'",
+          "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.38"
+        },
+        {
+          "ObjectName": "TimelineTemplate'BP_S42P01SurvivorHusk_C:TML_Dither_Template'",
+          "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.39"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_S42P01SurvivorHusk_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.37"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'S42P01SurvivorHusk'",
+      "ObjectPath": "/Script/TheS42"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_S42P01SurvivorHusk_C:TML_Dissolve_In/Out__FinishedFunc'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.20"
+      },
+      {
+        "ObjectName": "Function'BP_S42P01SurvivorHusk_C:TML_Dissolve_In/Out__UpdateFunc'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.23"
+      },
+      {
+        "ObjectName": "Function'BP_S42P01SurvivorHusk_C:TML_Dissolve_In/Out__PlayAppearVFX__EventFunc'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.21"
+      },
+      {
+        "ObjectName": "Function'BP_S42P01SurvivorHusk_C:TML_Dissolve_In/Out__PlayVanishVFX__EventFunc'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.22"
+      },
+      {
+        "ObjectName": "Function'BP_S42P01SurvivorHusk_C:TML_Dither__FinishedFunc'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.24"
+      },
+      {
+        "ObjectName": "Function'BP_S42P01SurvivorHusk_C:TML_Dither__UpdateFunc'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.25"
+      },
+      {
+        "ObjectName": "Function'BP_S42P01SurvivorHusk_C:EventPlayDestructionEffects'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.18"
+      },
+      {
+        "ObjectName": "Function'BP_S42P01SurvivorHusk_C:Cosmetic_OnHuskDestroyed'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.15"
+      },
+      {
+        "ObjectName": "Function'BP_S42P01SurvivorHusk_C:Cosmetic_OnHuskSpawned'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.16"
+      },
+      {
+        "ObjectName": "Function'BP_S42P01SurvivorHusk_C:Cosmetic_HideIllusionEvent'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.14"
+      },
+      {
+        "ObjectName": "Function'BP_S42P01SurvivorHusk_C:Cosmetic_RevealIllusionEvent'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.17"
+      },
+      {
+        "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NS_WhispyDistortion_Overlap",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Ak_Audio_S42P01_SurvivorHusk",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'AkComponent'",
+          "ObjectPath": "/Script/AkAudio"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MaterialHelper",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialHelper'",
+          "ObjectPath": "/Script/GFXUtilities"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "TML_Dither_AuraOpacity_CA48D1564631FF31CFE682A241DE1859",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "TML_Dither_DitherNoiseLerp_CA48D1564631FF31CFE682A241DE1859",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "TML_Dither_DitherAmount_CA48D1564631FF31CFE682A241DE1859",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "TML_Dither__Direction_CA48D1564631FF31CFE682A241DE1859",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "TML_Dither",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "TML_Dissolve_In_Out_AuraOpacity_5ADD90C1427470C8F1F56BA20C58524A",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "TML_Dissolve_In_Out_DissolveProgress_5ADD90C1427470C8F1F56BA20C58524A",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "TML_Dissolve_In_Out__Direction_5ADD90C1427470C8F1F56BA20C58524A",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "TML_Dissolve_In/Out",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CurrentDitherValue",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_S42P01SurvivorHusk": {
+        "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+      },
+      "Cosmetic_RevealIllusionEvent": {
+        "ObjectName": "Function'BP_S42P01SurvivorHusk_C:Cosmetic_RevealIllusionEvent'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.17"
+      },
+      "Cosmetic_HideIllusionEvent": {
+        "ObjectName": "Function'BP_S42P01SurvivorHusk_C:Cosmetic_HideIllusionEvent'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.14"
+      },
+      "Cosmetic_OnHuskSpawned": {
+        "ObjectName": "Function'BP_S42P01SurvivorHusk_C:Cosmetic_OnHuskSpawned'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.16"
+      },
+      "Cosmetic_OnHuskDestroyed": {
+        "ObjectName": "Function'BP_S42P01SurvivorHusk_C:Cosmetic_OnHuskDestroyed'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.15"
+      },
+      "EventPlayDestructionEffects": {
+        "ObjectName": "Function'BP_S42P01SurvivorHusk_C:EventPlayDestructionEffects'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.18"
+      },
+      "TML_Dither__UpdateFunc": {
+        "ObjectName": "Function'BP_S42P01SurvivorHusk_C:TML_Dither__UpdateFunc'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.25"
+      },
+      "TML_Dither__FinishedFunc": {
+        "ObjectName": "Function'BP_S42P01SurvivorHusk_C:TML_Dither__FinishedFunc'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.24"
+      },
+      "TML_Dissolve_In/Out__PlayVanishVFX__EventFunc": {
+        "ObjectName": "Function'BP_S42P01SurvivorHusk_C:TML_Dissolve_In/Out__PlayVanishVFX__EventFunc'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.22"
+      },
+      "TML_Dissolve_In/Out__PlayAppearVFX__EventFunc": {
+        "ObjectName": "Function'BP_S42P01SurvivorHusk_C:TML_Dissolve_In/Out__PlayAppearVFX__EventFunc'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.21"
+      },
+      "TML_Dissolve_In/Out__UpdateFunc": {
+        "ObjectName": "Function'BP_S42P01SurvivorHusk_C:TML_Dissolve_In/Out__UpdateFunc'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.23"
+      },
+      "TML_Dissolve_In/Out__FinishedFunc": {
+        "ObjectName": "Function'BP_S42P01SurvivorHusk_C:TML_Dissolve_In/Out__FinishedFunc'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.20"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_S42P01SurvivorHusk_C'Default__BP_S42P01SurvivorHusk_C'",
+      "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_S42P01SurvivorHusk_C",
+    "Name": "Default__BP_S42P01SurvivorHusk_C",
+    "Class": "BlueprintGeneratedClass'/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.BP_S42P01SurvivorHusk_C'",
+    "Properties": {
+      "UberGraphFrame": {}
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CapsuleComponent",
+    "Outer": "Default__BP_S42P01SurvivorHusk_C",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Properties": {
+      "CapsuleHalfHeight": 80.0,
+      "CapsuleRadius": 45.0,
+      "DetailLevelBeforeCastShadows": "EDetailMode::DM_MAX",
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_S42P01SurvivorHusk_C:RootComponent'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.31"
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0",
+    "Outer": "BP_S42P01SurvivorHusk_C",
+    "Class": "UScriptClass'CurveFloat'",
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 2.3468099,
+            "Value": -0.0022306442,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      },
+      "bIsEventCurve": true
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_1",
+    "Outer": "BP_S42P01SurvivorHusk_C",
+    "Class": "UScriptClass'CurveFloat'",
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      },
+      "bIsEventCurve": true
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_1_2__F8FE0E88_0__695A75DA_0__256B4035_0__93CBDD9C_0__594B97E8",
+    "Outer": "BP_S42P01SurvivorHusk_C",
+    "Class": "UScriptClass'CurveFloat'",
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.29437995,
+            "Value": 0.0,
+            "ArriveTangent": -0.029714415,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": -0.029714415,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 2.29438,
+            "Value": 1.0,
+            "ArriveTangent": -0.030308546,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": -0.030308546,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_2",
+    "Outer": "BP_S42P01SurvivorHusk_C",
+    "Class": "UScriptClass'CurveFloat'",
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 1.0,
+            "Value": 0.6,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_3",
+    "Outer": "BP_S42P01SurvivorHusk_C",
+    "Class": "UScriptClass'CurveFloat'",
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 1.0,
+            "Value": 0.3,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_4",
+    "Outer": "BP_S42P01SurvivorHusk_C",
+    "Class": "UScriptClass'CurveFloat'",
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 1.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_7",
+    "Outer": "BP_S42P01SurvivorHusk_C",
+    "Class": "UScriptClass'CurveFloat'",
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.33531213,
+            "Value": 0.0,
+            "ArriveTangent": 3.3337607,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 3.333758,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 1.3353121,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 2.3353121,
+            "Value": 0.0,
+            "ArriveTangent": -2.902519,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": -2.9025314,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CustomizedSkeletalMesh",
+    "Name": "CustomizedSkeletalMesh",
+    "Outer": "Default__BP_S42P01SurvivorHusk_C",
+    "Class": "UScriptClass'CustomizedSkeletalMesh'",
+    "Properties": {
+      "_characterIdOverride": 0
+    }
+  },
+  {
+    "Type": "DBDSkeletalMeshComponentBudgeted",
+    "Name": "HuskMesh",
+    "Outer": "Default__BP_S42P01SurvivorHusk_C",
+    "Class": "UScriptClass'DBDSkeletalMeshComponentBudgeted'",
+    "Properties": {
+      "_significanceStrategy": {
+        "ObjectName": "LinearSignificanceStrategy'Default__BP_S42P01SurvivorHusk_C:HuskMesh.LinearSignificanceStrategy_0'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.26"
+      },
+      "_animBudgeterSignificanceStrategy": {
+        "ObjectName": "SimpleAnimBudgeterSignificanceStrategy'Default__BP_S42P01SurvivorHusk_C:HuskMesh.SimpleAnimBudgeterSignificanceStrategy_0'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.36"
+      },
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'AB_Survivor_Husk_S42Perk_C'",
+        "ObjectPath": "/S42/Blueprints/AnimationBlueprints/AB_Survivor_Husk_S42Perk.1"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'DF_DSkeleton_REF'",
+        "ObjectPath": "/Game/Characters/Campers/Dwight/Models/DF_DSkeleton_REF.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'DF_DSkeleton_REF'",
+        "ObjectPath": "/Game/Characters/Campers/Dwight/Models/DF_DSkeleton_REF.0"
+      },
+      "DetailLevelBeforeCastShadows": "EDetailMode::DM_MAX",
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_S42P01SurvivorHusk_C:RootComponent'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.31"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -80.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "Cosmetic_HideIllusionEvent",
+    "Outer": "BP_S42P01SurvivorHusk_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Class'S42P01SurvivorHusk:Cosmetic_HideIllusionEvent'",
+      "ObjectPath": "/Script/TheS42"
+    },
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 0,
+        "Function": {
+          "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+          "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 2679
+          }
+        ],
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[2679]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 15,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 17
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Cosmetic_OnHuskDestroyed",
+    "Outer": "BP_S42P01SurvivorHusk_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Class'S42P01SurvivorHusk:Cosmetic_OnHuskDestroyed'",
+      "ObjectPath": "/Script/TheS42"
+    },
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 0,
+        "Function": {
+          "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+          "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 2387
+          }
+        ],
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[2387]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 15,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 17
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Cosmetic_OnHuskSpawned",
+    "Outer": "BP_S42P01SurvivorHusk_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Class'S42P01SurvivorHusk:Cosmetic_OnHuskSpawned'",
+      "ObjectPath": "/Script/TheS42"
+    },
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 0,
+        "Function": {
+          "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+          "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 2500
+          }
+        ],
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[2500]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 15,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 17
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Cosmetic_RevealIllusionEvent",
+    "Outer": "BP_S42P01SurvivorHusk_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Class'S42P01SurvivorHusk:Cosmetic_RevealIllusionEvent'",
+      "ObjectPath": "/Script/TheS42"
+    },
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 0,
+        "Function": {
+          "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+          "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 2684
+          }
+        ],
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[2684]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 15,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 17
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EventPlayDestructionEffects",
+    "Outer": "BP_S42P01SurvivorHusk_C",
+    "Class": "UScriptClass'Function'",
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 0,
+        "Function": {
+          "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+          "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 445
+          }
+        ],
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[445]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 15,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 17
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_S42P01SurvivorHusk",
+    "Outer": "BP_S42P01SurvivorHusk_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsAnySurvivorOverlapping_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "Temp_delegate_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "PropertyFlags": "ConstParm",
+        "SignatureFunction": {
+          "ObjectName": "Class'OnAkPostEventCallback__DelegateSignature'",
+          "ObjectPath": "/Script/AkAudio"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "Temp_struct_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "Temp_struct_Variable",
+          "Flags": "RF_Public",
+          "ElementSize": 56,
+          "Struct": {
+            "ObjectName": "Class'AkExternalSourceInfo'",
+            "ObjectPath": "/Script/AkAudio"
+          }
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "Temp_delegate_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "PropertyFlags": "ConstParm",
+        "SignatureFunction": {
+          "ObjectName": "Class'OnAkPostEventCallback__DelegateSignature'",
+          "ObjectPath": "/Script/AkAudio"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "Temp_struct_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "Temp_struct_Variable_1",
+          "Flags": "RF_Public",
+          "ElementSize": 56,
+          "Struct": {
+            "ObjectName": "Class'AkExternalSourceInfo'",
+            "ObjectPath": "/Script/AkAudio"
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnSystemAttached_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnSystemAttached_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnSystemAttached_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnSystemAttached_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnSystemAttached_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnSystemAttached_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnSystemAttached_ReturnValue_6",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnSystemAttached_ReturnValue_7",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnSystemAttached_ReturnValue_8",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnSystemAttached_ReturnValue_9",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchEnum_CmpSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchEnum_CmpSuccess_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchEnum_CmpSuccess_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnSystemAtLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_PostAkEvent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_PostAkEvent_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "K2Node_VariableSet_CurrentDitherValue_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetScalarParameter_newValue_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "ConstParm"
+      }
+    ],
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_PushExecutionFlow",
+        "StatementIndex": 0,
+        "PushingAddress": 2689,
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[2689]"
+      },
+      {
+        "Inst": "EX_ComputedJump",
+        "StatementIndex": 5,
+        "OffsetExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "EntryPoint",
+              "Flags": "RF_Public",
+              "ElementSize": 4,
+              "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_FinalFunction",
+        "StatementIndex": 15,
+        "Function": {
+          "ObjectName": "Class'BaseHusk:SetHuskVisibility'",
+          "ObjectPath": "/Script/DBDGameplay"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_False"
+          }
+        ]
+      },
+      {
+        "Inst": "EX_PopExecutionFlow",
+        "StatementIndex": 26
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 27,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_IsAnySurvivorOverlapping_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'S42P01SurvivorHusk:IsAnySurvivorOverlapping'",
+            "ObjectPath": "/Script/TheS42"
+          },
+          "Parameters": []
+        }
+      },
+      {
+        "Inst": "EX_PopExecutionFlowIfNot",
+        "StatementIndex": 47,
+        "BooleanExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_IsAnySurvivorOverlapping_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 57,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+            },
+            "Property": {
+              "Type": "FloatProperty",
+              "Name": "CallFunc_SetScalarParameter_newValue_ImplicitCast",
+              "Flags": "RF_Public",
+              "ElementSize": 4,
+              "PropertyFlags": "ConstParm"
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Cast",
+          "ConversionType": "CST_DoubleToFloat",
+          "Target": {
+            "Inst": "EX_InstanceVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "BlueprintGeneratedClass'BP_S42P01SurvivorHusk_C'",
+                "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.2"
+              },
+              "Property": {
+                "Type": "DoubleProperty",
+                "Name": "CurrentDitherValue",
+                "Flags": "RF_Public | RF_LoadCompleted",
+                "ElementSize": 8,
+                "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 86,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_S42P01SurvivorHusk_C'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.2"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "MaterialHelper",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+              "PropertyClass": {
+                "ObjectName": "Class'MaterialHelper'",
+                "ObjectPath": "/Script/GFXUtilities"
+              }
+            }
+          }
+        },
+        "Offset": 32,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'BatchMeshCommands:SetScalarParameter'",
+            "ObjectPath": "/Script/GFXUtilities"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_NameConst",
+              "Value": "DitherAmount"
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+                  "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+                },
+                "Property": {
+                  "Type": "FloatProperty",
+                  "Name": "CallFunc_SetScalarParameter_newValue_ImplicitCast",
+                  "Flags": "RF_Public",
+                  "ElementSize": 4,
+                  "PropertyFlags": "ConstParm"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 140,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_S42P01SurvivorHusk_C'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.2"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "NS_WhispyDistortion_Overlap",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+              "PropertyClass": {
+                "ObjectName": "Class'NiagaraComponent'",
+                "ObjectPath": "/Script/Niagara"
+              }
+            }
+          }
+        },
+        "Offset": 16,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "SetActive",
+          "Parameters": [
+            {
+              "Inst": "EX_False"
+            },
+            {
+              "Inst": "EX_False"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_PopExecutionFlow",
+        "StatementIndex": 178
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 179,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+            },
+            "Property": {
+              "Type": "DoubleProperty",
+              "Name": "K2Node_VariableSet_CurrentDitherValue_ImplicitCast",
+              "Flags": "RF_Public",
+              "ElementSize": 8
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Cast",
+          "ConversionType": "CST_FloatToDouble",
+          "Target": {
+            "Inst": "EX_InstanceVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "BlueprintGeneratedClass'BP_S42P01SurvivorHusk_C'",
+                "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.2"
+              },
+              "Property": {
+                "Type": "FloatProperty",
+                "Name": "TML_Dither_DitherAmount_CA48D1564631FF31CFE682A241DE1859",
+                "Flags": "RF_Public | RF_LoadCompleted",
+                "ElementSize": 4
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 208,
+        "Variable": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_S42P01SurvivorHusk_C'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.2"
+            },
+            "Property": {
+              "Type": "DoubleProperty",
+              "Name": "CurrentDitherValue",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+            },
+            "Property": {
+              "Type": "DoubleProperty",
+              "Name": "K2Node_VariableSet_CurrentDitherValue_ImplicitCast",
+              "Flags": "RF_Public",
+              "ElementSize": 8
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_PopExecutionFlow",
+        "StatementIndex": 235
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 236,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_S42P01SurvivorHusk_C'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.2"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "TML_Dissolve_In/Out",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'TimelineComponent'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Offset": 15,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'TimelineComponent:SetPlayRate'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_FloatConst",
+              "Value": 1.4
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 273,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_S42P01SurvivorHusk_C'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.2"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "TML_Dissolve_In/Out",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'TimelineComponent'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Offset": 10,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'TimelineComponent:Reverse'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": []
+        }
+      },
+      {
+        "Inst": "EX_PopExecutionFlow",
+        "StatementIndex": 305
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 306,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_S42P01SurvivorHusk_C'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.2"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "TML_Dissolve_In/Out",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'TimelineComponent'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Offset": 15,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'TimelineComponent:SetPlayRate'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_FloatConst",
+              "Value": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 343,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_S42P01SurvivorHusk_C'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.2"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "TML_Dissolve_In/Out",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'TimelineComponent'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Offset": 10,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'TimelineComponent:Play'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": []
+        }
+      },
+      {
+        "Inst": "EX_PopExecutionFlow",
+        "StatementIndex": 375
+      },
+      {
+        "Inst": "EX_PushExecutionFlow",
+        "StatementIndex": 376,
+        "PushingAddress": 27,
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[27]"
+      },
+      {
+        "Inst": "EX_PushExecutionFlow",
+        "StatementIndex": 381,
+        "PushingAddress": 236,
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[236]"
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 386,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_S42P01SurvivorHusk_C'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.2"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "MaterialHelper",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+              "PropertyClass": {
+                "ObjectName": "Class'MaterialHelper'",
+                "ObjectPath": "/Script/GFXUtilities"
+              }
+            }
+          }
+        },
+        "Offset": 36,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'BatchMeshCommands:SetMaterial'",
+            "ObjectPath": "/Script/GFXUtilities"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_StringConst",
+              "Value": "DistortionGlitchSideways"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_PopExecutionFlow",
+        "StatementIndex": 444
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 445,
+        "CodeOffset": 376,
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[376]"
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 450,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_SpawnSystemAttached_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'NiagaraComponent'",
+                "ObjectPath": "/Script/Niagara"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'NiagaraFunctionLibrary:SpawnSystemAttached'",
+            "ObjectPath": "/Script/Niagara"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_ObjectConst",
+              "Value": {
+                "ObjectName": "NiagaraSystem'NS_WhispyDistortion_Vanish_Torso'",
+                "ObjectPath": "/S42/ArtAssets/Effects/Niagara/Illusion/NS_WhispyDistortion_Vanish_Torso.61"
+              }
+            },
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Path": [
+                  "_huskMesh"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'BaseHusk'",
+                  "ObjectPath": "/Script/DBDGameplay"
+                }
+              }
+            },
+            {
+              "Inst": "EX_NameConst",
+              "Value": "joint_TorsoB_01"
+            },
+            {
+              "Inst": "EX_VectorConst",
+              "Value": {
+                "X": 0.0,
+                "Y": -10.042718,
+                "Z": 0.0
+              }
+            },
+            {
+              "Inst": "EX_RotationConst",
+              "Value": {
+                "Pitch": 0.0,
+                "Yaw": 0.0,
+                "Roll": 0.0
+              }
+            },
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 0
+            },
+            {
+              "Inst": "EX_False"
+            },
+            {
+              "Inst": "EX_True"
+            },
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 0
+            },
+            {
+              "Inst": "EX_True"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_PopExecutionFlow",
+        "StatementIndex": 558
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 559,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_SpawnSystemAttached_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'NiagaraComponent'",
+                "ObjectPath": "/Script/Niagara"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'NiagaraFunctionLibrary:SpawnSystemAttached'",
+            "ObjectPath": "/Script/Niagara"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_ObjectConst",
+              "Value": {
+                "ObjectName": "NiagaraSystem'NS_WhispyDistortion_Vanish_Head'",
+                "ObjectPath": "/S42/ArtAssets/Effects/Niagara/Illusion/NS_WhispyDistortion_Vanish_Head.61"
+              }
+            },
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Path": [
+                  "_huskMesh"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'BaseHusk'",
+                  "ObjectPath": "/Script/DBDGameplay"
+                }
+              }
+            },
+            {
+              "Inst": "EX_NameConst",
+              "Value": "joint_Head_01"
+            },
+            {
+              "Inst": "EX_VectorConst",
+              "Value": {
+                "X": 0.0,
+                "Y": -7.093158,
+                "Z": 0.0
+              }
+            },
+            {
+              "Inst": "EX_RotationConst",
+              "Value": {
+                "Pitch": 0.0,
+                "Yaw": 0.0,
+                "Roll": 0.0
+              }
+            },
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 0
+            },
+            {
+              "Inst": "EX_False"
+            },
+            {
+              "Inst": "EX_True"
+            },
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 0
+            },
+            {
+              "Inst": "EX_True"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 667,
+        "CodeOffset": 450,
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[450]"
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 672,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_SpawnSystemAttached_ReturnValue_2",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'NiagaraComponent'",
+                "ObjectPath": "/Script/Niagara"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'NiagaraFunctionLibrary:SpawnSystemAttached'",
+            "ObjectPath": "/Script/Niagara"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_ObjectConst",
+              "Value": {
+                "ObjectName": "NiagaraSystem'NS_WhispyDistortion_Vanish_Arms'",
+                "ObjectPath": "/S42/ArtAssets/Effects/Niagara/Illusion/NS_WhispyDistortion_Vanish_Arms.61"
+              }
+            },
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Path": [
+                  "_huskMesh"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'BaseHusk'",
+                  "ObjectPath": "/Script/DBDGameplay"
+                }
+              }
+            },
+            {
+              "Inst": "EX_NameConst",
+              "Value": "joint_KneeRT_01"
+            },
+            {
+              "Inst": "EX_VectorConst",
+              "Value": {
+                "X": 4.896692,
+                "Y": 21.75243,
+                "Z": 0.0
+              }
+            },
+            {
+              "Inst": "EX_RotationConst",
+              "Value": {
+                "Pitch": 0.0,
+                "Yaw": 9.999922,
+                "Roll": 0.0
+              }
+            },
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 0
+            },
+            {
+              "Inst": "EX_False"
+            },
+            {
+              "Inst": "EX_True"
+            },
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 0
+            },
+            {
+              "Inst": "EX_True"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 780,
+        "CodeOffset": 559,
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[559]"
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 785,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_SpawnSystemAttached_ReturnValue_3",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'NiagaraComponent'",
+                "ObjectPath": "/Script/Niagara"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'NiagaraFunctionLibrary:SpawnSystemAttached'",
+            "ObjectPath": "/Script/Niagara"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_ObjectConst",
+              "Value": {
+                "ObjectName": "NiagaraSystem'NS_WhispyDistortion_Vanish_Arms'",
+                "ObjectPath": "/S42/ArtAssets/Effects/Niagara/Illusion/NS_WhispyDistortion_Vanish_Arms.61"
+              }
+            },
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Path": [
+                  "_huskMesh"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'BaseHusk'",
+                  "ObjectPath": "/Script/DBDGameplay"
+                }
+              }
+            },
+            {
+              "Inst": "EX_NameConst",
+              "Value": "joint_HipRT_01"
+            },
+            {
+              "Inst": "EX_VectorConst",
+              "Value": {
+                "X": 0.0,
+                "Y": 21.082523,
+                "Z": 0.0
+              }
+            },
+            {
+              "Inst": "EX_RotationConst",
+              "Value": {
+                "Pitch": 0.0,
+                "Yaw": 0.0,
+                "Roll": 0.0
+              }
+            },
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 0
+            },
+            {
+              "Inst": "EX_False"
+            },
+            {
+              "Inst": "EX_True"
+            },
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 0
+            },
+            {
+              "Inst": "EX_True"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 893,
+        "CodeOffset": 672,
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[672]"
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 898,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_SpawnSystemAttached_ReturnValue_4",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'NiagaraComponent'",
+                "ObjectPath": "/Script/Niagara"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'NiagaraFunctionLibrary:SpawnSystemAttached'",
+            "ObjectPath": "/Script/Niagara"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_ObjectConst",
+              "Value": {
+                "ObjectName": "NiagaraSystem'NS_WhispyDistortion_Vanish_Arms'",
+                "ObjectPath": "/S42/ArtAssets/Effects/Niagara/Illusion/NS_WhispyDistortion_Vanish_Arms.61"
+              }
+            },
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Path": [
+                  "_huskMesh"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'BaseHusk'",
+                  "ObjectPath": "/Script/DBDGameplay"
+                }
+              }
+            },
+            {
+              "Inst": "EX_NameConst",
+              "Value": "joint_KneeLT_01"
+            },
+            {
+              "Inst": "EX_VectorConst",
+              "Value": {
+                "X": -4.896692,
+                "Y": -21.75243,
+                "Z": 0.0
+              }
+            },
+            {
+              "Inst": "EX_RotationConst",
+              "Value": {
+                "Pitch": 0.0,
+                "Yaw": -9.999922,
+                "Roll": 0.0
+              }
+            },
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 0
+            },
+            {
+              "Inst": "EX_False"
+            },
+            {
+              "Inst": "EX_True"
+            },
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 0
+            },
+            {
+              "Inst": "EX_True"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 1006,
+        "CodeOffset": 785,
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[785]"
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 1011,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_SpawnSystemAttached_ReturnValue_5",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'NiagaraComponent'",
+                "ObjectPath": "/Script/Niagara"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'NiagaraFunctionLibrary:SpawnSystemAttached'",
+            "ObjectPath": "/Script/Niagara"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_ObjectConst",
+              "Value": {
+                "ObjectName": "NiagaraSystem'NS_WhispyDistortion_Vanish_Arms'",
+                "ObjectPath": "/S42/ArtAssets/Effects/Niagara/Illusion/NS_WhispyDistortion_Vanish_Arms.61"
+              }
+            },
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Path": [
+                  "_huskMesh"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'BaseHusk'",
+                  "ObjectPath": "/Script/DBDGameplay"
+                }
+              }
+            },
+            {
+              "Inst": "EX_NameConst",
+              "Value": "joint_HipLT_01"
+            },
+            {
+              "Inst": "EX_VectorConst",
+              "Value": {
+                "X": 0.0,
+                "Y": -21.082523,
+                "Z": 0.0
+              }
+            },
+            {
+              "Inst": "EX_RotationConst",
+              "Value": {
+                "Pitch": 0.0,
+                "Yaw": 0.0,
+                "Roll": 0.0
+              }
+            },
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 0
+            },
+            {
+              "Inst": "EX_False"
+            },
+            {
+              "Inst": "EX_True"
+            },
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 0
+            },
+            {
+              "Inst": "EX_True"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 1119,
+        "CodeOffset": 898,
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[898]"
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 1124,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_SpawnSystemAttached_ReturnValue_6",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'NiagaraComponent'",
+                "ObjectPath": "/Script/Niagara"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'NiagaraFunctionLibrary:SpawnSystemAttached'",
+            "ObjectPath": "/Script/Niagara"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_ObjectConst",
+              "Value": {
+                "ObjectName": "NiagaraSystem'NS_WhispyDistortion_Vanish_Arms'",
+                "ObjectPath": "/S42/ArtAssets/Effects/Niagara/Illusion/NS_WhispyDistortion_Vanish_Arms.61"
+              }
+            },
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Path": [
+                  "_huskMesh"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'BaseHusk'",
+                  "ObjectPath": "/Script/DBDGameplay"
+                }
+              }
+            },
+            {
+              "Inst": "EX_NameConst",
+              "Value": "joint_ShoulderRT_01"
+            },
+            {
+              "Inst": "EX_VectorConst",
+              "Value": {
+                "X": 0.0,
+                "Y": 9.829795,
+                "Z": 0.0
+              }
+            },
+            {
+              "Inst": "EX_RotationConst",
+              "Value": {
+                "Pitch": 0.0,
+                "Yaw": 0.0,
+                "Roll": 0.0
+              }
+            },
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 0
+            },
+            {
+              "Inst": "EX_False"
+            },
+            {
+              "Inst": "EX_True"
+            },
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 0
+            },
+            {
+              "Inst": "EX_True"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 1232,
+        "CodeOffset": 1011,
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[1011]"
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 1237,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_SpawnSystemAttached_ReturnValue_7",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'NiagaraComponent'",
+                "ObjectPath": "/Script/Niagara"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'NiagaraFunctionLibrary:SpawnSystemAttached'",
+            "ObjectPath": "/Script/Niagara"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_ObjectConst",
+              "Value": {
+                "ObjectName": "NiagaraSystem'NS_WhispyDistortion_Vanish_Arms'",
+                "ObjectPath": "/S42/ArtAssets/Effects/Niagara/Illusion/NS_WhispyDistortion_Vanish_Arms.61"
+              }
+            },
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Path": [
+                  "_huskMesh"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'BaseHusk'",
+                  "ObjectPath": "/Script/DBDGameplay"
+                }
+              }
+            },
+            {
+              "Inst": "EX_NameConst",
+              "Value": "joint_ElbowRT_01"
+            },
+            {
+              "Inst": "EX_VectorConst",
+              "Value": {
+                "X": 0.0,
+                "Y": 8.101536,
+                "Z": 0.0
+              }
+            },
+            {
+              "Inst": "EX_RotationConst",
+              "Value": {
+                "Pitch": 0.0,
+                "Yaw": 0.0,
+                "Roll": 0.0
+              }
+            },
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 0
+            },
+            {
+              "Inst": "EX_False"
+            },
+            {
+              "Inst": "EX_True"
+            },
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 0
+            },
+            {
+              "Inst": "EX_True"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 1345,
+        "CodeOffset": 1124,
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[1124]"
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 1350,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_SpawnSystemAttached_ReturnValue_8",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'NiagaraComponent'",
+                "ObjectPath": "/Script/Niagara"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'NiagaraFunctionLibrary:SpawnSystemAttached'",
+            "ObjectPath": "/Script/Niagara"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_ObjectConst",
+              "Value": {
+                "ObjectName": "NiagaraSystem'NS_WhispyDistortion_Vanish_Arms'",
+                "ObjectPath": "/S42/ArtAssets/Effects/Niagara/Illusion/NS_WhispyDistortion_Vanish_Arms.61"
+              }
+            },
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Path": [
+                  "_huskMesh"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'BaseHusk'",
+                  "ObjectPath": "/Script/DBDGameplay"
+                }
+              }
+            },
+            {
+              "Inst": "EX_NameConst",
+              "Value": "joint_ShoulderLT_01"
+            },
+            {
+              "Inst": "EX_VectorConst",
+              "Value": {
+                "X": 0.0,
+                "Y": -9.829795,
+                "Z": 0.0
+              }
+            },
+            {
+              "Inst": "EX_RotationConst",
+              "Value": {
+                "Pitch": 0.0,
+                "Yaw": 0.0,
+                "Roll": 0.0
+              }
+            },
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 0
+            },
+            {
+              "Inst": "EX_False"
+            },
+            {
+              "Inst": "EX_True"
+            },
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 0
+            },
+            {
+              "Inst": "EX_True"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 1458,
+        "CodeOffset": 1237,
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[1237]"
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 1463,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_SpawnSystemAttached_ReturnValue_9",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'NiagaraComponent'",
+                "ObjectPath": "/Script/Niagara"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'NiagaraFunctionLibrary:SpawnSystemAttached'",
+            "ObjectPath": "/Script/Niagara"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_ObjectConst",
+              "Value": {
+                "ObjectName": "NiagaraSystem'NS_WhispyDistortion_Vanish_Arms'",
+                "ObjectPath": "/S42/ArtAssets/Effects/Niagara/Illusion/NS_WhispyDistortion_Vanish_Arms.61"
+              }
+            },
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Path": [
+                  "_huskMesh"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'BaseHusk'",
+                  "ObjectPath": "/Script/DBDGameplay"
+                }
+              }
+            },
+            {
+              "Inst": "EX_NameConst",
+              "Value": "joint_ElbowLT_01"
+            },
+            {
+              "Inst": "EX_VectorConst",
+              "Value": {
+                "X": 0.0,
+                "Y": -16.32346,
+                "Z": 0.0
+              }
+            },
+            {
+              "Inst": "EX_RotationConst",
+              "Value": {
+                "Pitch": 0.0,
+                "Yaw": 0.0,
+                "Roll": 0.0
+              }
+            },
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 0
+            },
+            {
+              "Inst": "EX_False"
+            },
+            {
+              "Inst": "EX_True"
+            },
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 0
+            },
+            {
+              "Inst": "EX_True"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 1571,
+        "CodeOffset": 1350,
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[1350]"
+      },
+      {
+        "Inst": "EX_LocalVirtualFunction",
+        "StatementIndex": 1576,
+        "Function": "EventPlayDestructionEffects",
+        "Parameters": []
+      },
+      {
+        "Inst": "EX_PopExecutionFlow",
+        "StatementIndex": 1590
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 1591,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "K2Node_SwitchEnum_CmpSuccess",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:NotEqual_ByteByte'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_S42P01SurvivorHusk_C'",
+                  "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.2"
+                },
+                "Property": {
+                  "Type": "ByteProperty",
+                  "Name": "TML_Dissolve_In_Out__Direction_5ADD90C1427470C8F1F56BA20C58524A",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 1,
+                  "Enum": {
+                    "ObjectName": "Class'ETimelineDirection'",
+                    "ObjectPath": "/Script/Engine"
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 0
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_JumpIfNot",
+        "StatementIndex": 1622,
+        "CodeOffset": 1637,
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[1637]",
+        "BooleanExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "K2Node_SwitchEnum_CmpSuccess",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_PopExecutionFlow",
+        "StatementIndex": 1636
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1637,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_K2_GetComponentLocation_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 24,
+              "Struct": {
+                "ObjectName": "Class'Vector'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_InstanceVariable",
+            "Variable": {
+              "Path": [
+                "_huskMesh"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'BaseHusk'",
+                "ObjectPath": "/Script/DBDGameplay"
+              }
+            }
+          },
+          "Offset": 10,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_K2_GetComponentLocation_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 24,
+              "Struct": {
+                "ObjectName": "Class'Vector'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_FinalFunction",
+            "Function": {
+              "ObjectName": "Class'SceneComponent:K2_GetComponentLocation'",
+              "ObjectPath": "/Script/Engine"
+            },
+            "Parameters": []
+          }
+        }
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 1687,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_SpawnSystemAtLocation_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'NiagaraComponent'",
+                "ObjectPath": "/Script/Niagara"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'NiagaraFunctionLibrary:SpawnSystemAtLocation'",
+            "ObjectPath": "/Script/Niagara"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_Self"
+            },
+            {
+              "Inst": "EX_ObjectConst",
+              "Value": {
+                "ObjectName": "NiagaraSystem'NS_WhispyDistortion_Appear_V2'",
+                "ObjectPath": "/S42/ArtAssets/Effects/Niagara/Illusion/NS_WhispyDistortion_Appear_V2.26"
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+                  "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "CallFunc_K2_GetComponentLocation_ReturnValue",
+                  "Flags": "RF_Public",
+                  "ElementSize": 24,
+                  "Struct": {
+                    "ObjectName": "Class'Vector'",
+                    "ObjectPath": "/Script/CoreUObject"
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_RotationConst",
+              "Value": {
+                "Pitch": 0.0,
+                "Yaw": 0.0,
+                "Roll": 0.0
+              }
+            },
+            {
+              "Inst": "EX_VectorConst",
+              "Value": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            {
+              "Inst": "EX_True"
+            },
+            {
+              "Inst": "EX_True"
+            },
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 0
+            },
+            {
+              "Inst": "EX_True"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_CallMath",
+        "StatementIndex": 1781,
+        "Function": {
+          "ObjectName": "Class'NiagaraFunctionLibrary:OverrideSystemUserVariableSkeletalMeshComponent'",
+          "ObjectPath": "/Script/Niagara"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+                "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "CallFunc_SpawnSystemAtLocation_ReturnValue",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyFlags": "InstancedReference",
+                "PropertyClass": {
+                  "ObjectName": "Class'NiagaraComponent'",
+                  "ObjectPath": "/Script/Niagara"
+                }
+              }
+            }
+          },
+          {
+            "Inst": "EX_StringConst",
+            "Value": "Skeletal Mesh"
+          },
+          {
+            "Inst": "EX_InstanceVariable",
+            "Variable": {
+              "Path": [
+                "_huskMesh"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'BaseHusk'",
+                "ObjectPath": "/Script/DBDGameplay"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Inst": "EX_PopExecutionFlow",
+        "StatementIndex": 1824
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 1825,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "K2Node_SwitchEnum_CmpSuccess_1",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:NotEqual_ByteByte'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_S42P01SurvivorHusk_C'",
+                  "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.2"
+                },
+                "Property": {
+                  "Type": "ByteProperty",
+                  "Name": "TML_Dissolve_In_Out__Direction_5ADD90C1427470C8F1F56BA20C58524A",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 1,
+                  "Enum": {
+                    "ObjectName": "Class'ETimelineDirection'",
+                    "ObjectPath": "/Script/Engine"
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 1
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_JumpIfNot",
+        "StatementIndex": 1856,
+        "CodeOffset": 1463,
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[1463]",
+        "BooleanExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "K2Node_SwitchEnum_CmpSuccess_1",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_PopExecutionFlow",
+        "StatementIndex": 1870
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 1871,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "K2Node_SwitchEnum_CmpSuccess_2",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:NotEqual_ByteByte'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_S42P01SurvivorHusk_C'",
+                  "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.2"
+                },
+                "Property": {
+                  "Type": "ByteProperty",
+                  "Name": "TML_Dissolve_In_Out__Direction_5ADD90C1427470C8F1F56BA20C58524A",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 1,
+                  "Enum": {
+                    "ObjectName": "Class'ETimelineDirection'",
+                    "ObjectPath": "/Script/Engine"
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 1
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_JumpIfNot",
+        "StatementIndex": 1902,
+        "CodeOffset": 1917,
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[1917]",
+        "BooleanExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "K2Node_SwitchEnum_CmpSuccess_2",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_PopExecutionFlow",
+        "StatementIndex": 1916
+      },
+      {
+        "Inst": "EX_CallMath",
+        "StatementIndex": 1917,
+        "Function": {
+          "ObjectName": "Class'KismetSystemLibrary:Delay'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_Self"
+          },
+          {
+            "Inst": "EX_FloatConst",
+            "Value": 3.0
+          },
+          {
+            "Inst": "EX_StructConst",
+            "Struct": {
+              "ObjectName": "Class'LatentActionInfo'",
+              "ObjectPath": "/Script/Engine"
+            },
+            "Properties": [
+              {
+                "Inst": "EX_SkipOffsetConst",
+                "Value": 15
+              },
+              {
+                "Inst": "EX_IntConst",
+                "Value": 1622699055
+              },
+              {
+                "Inst": "EX_NameConst",
+                "Value": "ExecuteUbergraph_BP_S42P01SurvivorHusk"
+              },
+              {
+                "Inst": "EX_Self"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Inst": "EX_PopExecutionFlow",
+        "StatementIndex": 1971
+      },
+      {
+        "Inst": "EX_PushExecutionFlow",
+        "StatementIndex": 1972,
+        "PushingAddress": 306,
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[306]"
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 1977,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_S42P01SurvivorHusk_C'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.2"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "MaterialHelper",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+              "PropertyClass": {
+                "ObjectName": "Class'MaterialHelper'",
+                "ObjectPath": "/Script/GFXUtilities"
+              }
+            }
+          }
+        },
+        "Offset": 28,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'BatchMeshCommands:SetMaterial'",
+            "ObjectPath": "/Script/GFXUtilities"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_StringConst",
+              "Value": "DistortionGlitch"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_PopExecutionFlow",
+        "StatementIndex": 2027
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 2028,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_S42P01SurvivorHusk_C'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.2"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "MaterialHelper",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+              "PropertyClass": {
+                "ObjectName": "Class'MaterialHelper'",
+                "ObjectPath": "/Script/GFXUtilities"
+              }
+            }
+          }
+        },
+        "Offset": 32,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'BatchMeshCommands:SetScalarParameter'",
+            "ObjectPath": "/Script/GFXUtilities"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_NameConst",
+              "Value": "DissolveProgress"
+            },
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_S42P01SurvivorHusk_C'",
+                  "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.2"
+                },
+                "Property": {
+                  "Type": "FloatProperty",
+                  "Name": "TML_Dissolve_In_Out_DissolveProgress_5ADD90C1427470C8F1F56BA20C58524A",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 4
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 2082,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_S42P01SurvivorHusk_C'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.2"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "MaterialHelper",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+              "PropertyClass": {
+                "ObjectName": "Class'MaterialHelper'",
+                "ObjectPath": "/Script/GFXUtilities"
+              }
+            }
+          }
+        },
+        "Offset": 32,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'BatchMeshCommands:SetScalarParameter'",
+            "ObjectPath": "/Script/GFXUtilities"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_NameConst",
+              "Value": "IllusionAura_Opacity"
+            },
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_S42P01SurvivorHusk_C'",
+                  "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.2"
+                },
+                "Property": {
+                  "Type": "FloatProperty",
+                  "Name": "TML_Dissolve_In_Out_AuraOpacity_5ADD90C1427470C8F1F56BA20C58524A",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 4
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_PopExecutionFlow",
+        "StatementIndex": 2136
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 2137,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_S42P01SurvivorHusk_C'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.2"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "TML_Dither",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'TimelineComponent'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Offset": 10,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'TimelineComponent:Reverse'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": []
+        }
+      },
+      {
+        "Inst": "EX_PopExecutionFlow",
+        "StatementIndex": 2169
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 2170,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_S42P01SurvivorHusk_C'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.2"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "TML_Dither",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'TimelineComponent'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Offset": 10,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'TimelineComponent:Play'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": []
+        }
+      },
+      {
+        "Inst": "EX_PopExecutionFlow",
+        "StatementIndex": 2202
+      },
+      {
+        "Inst": "EX_FinalFunction",
+        "StatementIndex": 2203,
+        "Function": {
+          "ObjectName": "Class'BaseHusk:SetHuskVisibility'",
+          "ObjectPath": "/Script/DBDGameplay"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_True"
+          }
+        ]
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 2214,
+        "CodeOffset": 1972,
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[1972]"
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 2219,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_S42P01SurvivorHusk_C'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.2"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "MaterialHelper",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+              "PropertyClass": {
+                "ObjectName": "Class'MaterialHelper'",
+                "ObjectPath": "/Script/GFXUtilities"
+              }
+            }
+          }
+        },
+        "Offset": 32,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'BatchMeshCommands:SetScalarParameter'",
+            "ObjectPath": "/Script/GFXUtilities"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_NameConst",
+              "Value": "DitherAmount"
+            },
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_S42P01SurvivorHusk_C'",
+                  "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.2"
+                },
+                "Property": {
+                  "Type": "FloatProperty",
+                  "Name": "TML_Dither_DitherAmount_CA48D1564631FF31CFE682A241DE1859",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 4
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 2273,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_S42P01SurvivorHusk_C'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.2"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "MaterialHelper",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+              "PropertyClass": {
+                "ObjectName": "Class'MaterialHelper'",
+                "ObjectPath": "/Script/GFXUtilities"
+              }
+            }
+          }
+        },
+        "Offset": 32,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'BatchMeshCommands:SetScalarParameter'",
+            "ObjectPath": "/Script/GFXUtilities"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_NameConst",
+              "Value": "LerpToNoise"
+            },
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_S42P01SurvivorHusk_C'",
+                  "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.2"
+                },
+                "Property": {
+                  "Type": "FloatProperty",
+                  "Name": "TML_Dither_DitherNoiseLerp_CA48D1564631FF31CFE682A241DE1859",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 4
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 2327,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_S42P01SurvivorHusk_C'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.2"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "MaterialHelper",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+              "PropertyClass": {
+                "ObjectName": "Class'MaterialHelper'",
+                "ObjectPath": "/Script/GFXUtilities"
+              }
+            }
+          }
+        },
+        "Offset": 32,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'BatchMeshCommands:SetScalarParameter'",
+            "ObjectPath": "/Script/GFXUtilities"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_NameConst",
+              "Value": "IllusionAura_Opacity"
+            },
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_S42P01SurvivorHusk_C'",
+                  "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.2"
+                },
+                "Property": {
+                  "Type": "FloatProperty",
+                  "Name": "TML_Dither_AuraOpacity_CA48D1564631FF31CFE682A241DE1859",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 4
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 2381,
+        "CodeOffset": 179,
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[179]"
+      },
+      {
+        "Inst": "EX_PopExecutionFlow",
+        "StatementIndex": 2386
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 2387,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "CallFunc_PostAkEvent_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_InstanceVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "BlueprintGeneratedClass'BP_S42P01SurvivorHusk_C'",
+                "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.2"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "Ak_Audio_S42P01_SurvivorHusk",
+                "Flags": "RF_Public | RF_LoadCompleted",
+                "ElementSize": 8,
+                "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+                "PropertyClass": {
+                  "ObjectName": "Class'AkComponent'",
+                  "ObjectPath": "/Script/AkAudio"
+                }
+              }
+            }
+          },
+          "Offset": 48,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "CallFunc_PostAkEvent_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_VirtualFunction",
+            "Function": "PostAkEvent",
+            "Parameters": [
+              {
+                "Inst": "EX_ObjectConst",
+                "Value": {
+                  "ObjectName": "AkAudioEvent'AudioEvent_Perk_Mirrored_Illusion_Despawn'",
+                  "ObjectPath": "/S42/ArtAssets/Audio/AudioEvents/S42_P01/AudioEvent_Perk_Mirrored_Illusion_Despawn.0"
+                }
+              },
+              {
+                "Inst": "EX_IntConst",
+                "Value": 0
+              },
+              {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+                    "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+                  },
+                  "Property": {
+                    "Type": "DelegateProperty",
+                    "Name": "Temp_delegate_Variable_1",
+                    "Flags": "RF_Public",
+                    "ElementSize": 20,
+                    "PropertyFlags": "ConstParm",
+                    "SignatureFunction": {
+                      "ObjectName": "Class'OnAkPostEventCallback__DelegateSignature'",
+                      "ObjectPath": "/Script/AkAudio"
+                    }
+                  }
+                }
+              },
+              {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+                    "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+                  },
+                  "Property": {
+                    "Type": "ArrayProperty",
+                    "Name": "Temp_struct_Variable",
+                    "Flags": "RF_Public",
+                    "ElementSize": 16,
+                    "PropertyFlags": "ConstParm | ReferenceParm",
+                    "Inner": {
+                      "Type": "StructProperty",
+                      "Name": "Temp_struct_Variable",
+                      "Flags": "RF_Public",
+                      "ElementSize": 56,
+                      "Struct": {
+                        "ObjectName": "Class'AkExternalSourceInfo'",
+                        "ObjectPath": "/Script/AkAudio"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "Inst": "EX_StringConst",
+                "Value": ""
+              }
+            ]
+          }
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 2475,
+        "CodeOffset": 1576,
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[1576]"
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 2480,
+        "CodeOffset": 1825,
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[1825]"
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 2485,
+        "CodeOffset": 1591,
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[1591]"
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 2490,
+        "CodeOffset": 2028,
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[2028]"
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 2495,
+        "CodeOffset": 1871,
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[1871]"
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 2500,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "CallFunc_PostAkEvent_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_InstanceVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "BlueprintGeneratedClass'BP_S42P01SurvivorHusk_C'",
+                "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.2"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "Ak_Audio_S42P01_SurvivorHusk",
+                "Flags": "RF_Public | RF_LoadCompleted",
+                "ElementSize": 8,
+                "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+                "PropertyClass": {
+                  "ObjectName": "Class'AkComponent'",
+                  "ObjectPath": "/Script/AkAudio"
+                }
+              }
+            }
+          },
+          "Offset": 48,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "CallFunc_PostAkEvent_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_VirtualFunction",
+            "Function": "PostAkEvent",
+            "Parameters": [
+              {
+                "Inst": "EX_ObjectConst",
+                "Value": {
+                  "ObjectName": "AkAudioEvent'AudioEvent_Perk_Mirrored_Illusion_Spawn'",
+                  "ObjectPath": "/S42/ArtAssets/Audio/AudioEvents/S42_P01/AudioEvent_Perk_Mirrored_Illusion_Spawn.0"
+                }
+              },
+              {
+                "Inst": "EX_IntConst",
+                "Value": 0
+              },
+              {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+                    "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+                  },
+                  "Property": {
+                    "Type": "DelegateProperty",
+                    "Name": "Temp_delegate_Variable",
+                    "Flags": "RF_Public",
+                    "ElementSize": 20,
+                    "PropertyFlags": "ConstParm",
+                    "SignatureFunction": {
+                      "ObjectName": "Class'OnAkPostEventCallback__DelegateSignature'",
+                      "ObjectPath": "/Script/AkAudio"
+                    }
+                  }
+                }
+              },
+              {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+                    "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+                  },
+                  "Property": {
+                    "Type": "ArrayProperty",
+                    "Name": "Temp_struct_Variable_1",
+                    "Flags": "RF_Public",
+                    "ElementSize": 16,
+                    "PropertyFlags": "ConstParm | ReferenceParm",
+                    "Inner": {
+                      "Type": "StructProperty",
+                      "Name": "Temp_struct_Variable_1",
+                      "Flags": "RF_Public",
+                      "ElementSize": 56,
+                      "Struct": {
+                        "ObjectName": "Class'AkExternalSourceInfo'",
+                        "ObjectPath": "/Script/AkAudio"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "Inst": "EX_StringConst",
+                "Value": ""
+              }
+            ]
+          }
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 2588,
+        "CodeOffset": 2203,
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[2203]"
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 2593,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_S42P01SurvivorHusk_C'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.2"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "NS_WhispyDistortion_Overlap",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+              "PropertyClass": {
+                "ObjectName": "Class'NiagaraComponent'",
+                "ObjectPath": "/Script/Niagara"
+              }
+            }
+          }
+        },
+        "Offset": 16,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "SetActive",
+          "Parameters": [
+            {
+              "Inst": "EX_False"
+            },
+            {
+              "Inst": "EX_False"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 2631,
+        "CodeOffset": 2137,
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[2137]"
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 2636,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_S42P01SurvivorHusk_C'",
+              "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.2"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "NS_WhispyDistortion_Overlap",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+              "PropertyClass": {
+                "ObjectName": "Class'NiagaraComponent'",
+                "ObjectPath": "/Script/Niagara"
+              }
+            }
+          }
+        },
+        "Offset": 16,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "SetActive",
+          "Parameters": [
+            {
+              "Inst": "EX_True"
+            },
+            {
+              "Inst": "EX_False"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 2674,
+        "CodeOffset": 2170,
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[2170]"
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 2679,
+        "CodeOffset": 2593,
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[2593]"
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 2684,
+        "CodeOffset": 2636,
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[2636]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 2689,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 2691
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "TML_Dissolve_In/Out__FinishedFunc",
+    "Outer": "BP_S42P01SurvivorHusk_C",
+    "Class": "UScriptClass'Function'",
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 0,
+        "Function": {
+          "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+          "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 2495
+          }
+        ],
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[2495]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 15,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 17
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "TML_Dissolve_In/Out__PlayAppearVFX__EventFunc",
+    "Outer": "BP_S42P01SurvivorHusk_C",
+    "Class": "UScriptClass'Function'",
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 0,
+        "Function": {
+          "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+          "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 2485
+          }
+        ],
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[2485]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 15,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 17
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "TML_Dissolve_In/Out__PlayVanishVFX__EventFunc",
+    "Outer": "BP_S42P01SurvivorHusk_C",
+    "Class": "UScriptClass'Function'",
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 0,
+        "Function": {
+          "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+          "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 2480
+          }
+        ],
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[2480]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 15,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 17
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "TML_Dissolve_In/Out__UpdateFunc",
+    "Outer": "BP_S42P01SurvivorHusk_C",
+    "Class": "UScriptClass'Function'",
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 0,
+        "Function": {
+          "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+          "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 2490
+          }
+        ],
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[2490]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 15,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 17
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "TML_Dither__FinishedFunc",
+    "Outer": "BP_S42P01SurvivorHusk_C",
+    "Class": "UScriptClass'Function'",
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 0,
+        "Function": {
+          "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+          "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 2386
+          }
+        ],
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[2386]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 15,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 17
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "TML_Dither__UpdateFunc",
+    "Outer": "BP_S42P01SurvivorHusk_C",
+    "Class": "UScriptClass'Function'",
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 0,
+        "Function": {
+          "ObjectName": "Function'BP_S42P01SurvivorHusk_C:ExecuteUbergraph_BP_S42P01SurvivorHusk'",
+          "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.19"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 2219
+          }
+        ],
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.ExecuteUbergraph_BP_S42P01SurvivorHusk[2219]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 15,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 17
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "LinearSignificanceStrategy",
+    "Name": "LinearSignificanceStrategy_0",
+    "Outer": "HuskMesh",
+    "Class": "UScriptClass'LinearSignificanceStrategy'"
+  },
+  {
+    "Type": "MaterialHelper",
+    "Name": "MaterialHelper_GEN_VARIABLE",
+    "Outer": "BP_S42P01SurvivorHusk_C",
+    "Class": "UScriptClass'MaterialHelper'",
+    "Properties": {
+      "Groups": [
+        {
+          "GroupName": "Camper1",
+          "Maps": [
+            {
+              "SrcMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_Camper'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_Camper.0"
+              },
+              "DstMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_CamperDissolve'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/Variants/MI_CamperDissolve.0"
+              }
+            },
+            {
+              "SrcMaterial": {
+                "ObjectName": "Material'M_Hair'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/M_Hair.0"
+              },
+              "DstMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_Hair_Dissolve'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/Variants/MI_Hair_Dissolve.0"
+              }
+            },
+            {
+              "SrcMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_Camper_Dither'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_Camper_Dither.0"
+              },
+              "DstMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_CamperDissolve'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/Variants/MI_CamperDissolve.0"
+              }
+            },
+            {
+              "SrcMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_Camper_Cust'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_Camper_Cust.0"
+              },
+              "DstMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_CamperDissolve_Cust'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/Variants/MI_CamperDissolve_Cust.0"
+              }
+            },
+            {
+              "SrcMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_Camper_TransCust'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_Camper_TransCust.0"
+              },
+              "DstMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_CamperDissolve_TransCust'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/Variants/MI_CamperDissolve_TransCust.0"
+              }
+            },
+            {
+              "SrcMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_HairTAA'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/Instances/MI_HairTAA.0"
+              },
+              "DstMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_HairTAA_Dissolve'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/Variants/MI_HairTAA_Dissolve.0"
+              }
+            },
+            {
+              "SrcMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_Fur'",
+                "ObjectPath": "/Game/Materials/Instances/MI_Fur.0"
+              },
+              "DstMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MV_Fur_Dissolve'",
+                "ObjectPath": "/Game/Characters/Slashers/Materials/Variants/MV_Fur_Dissolve.0"
+              }
+            },
+            {
+              "SrcMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_CAMPER_CUST_GLASS'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_CAMPER_CUST_GLASS.0"
+              },
+              "DstMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_CAMPER_CUST_GLASS_Dissolve'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_CAMPER_CUST_GLASS_Dissolve.0"
+              }
+            },
+            {
+              "SrcMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_CharmSimplified'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_CharmSimplified.0"
+              },
+              "DstMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_CharmSimplified_Dissolve'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_CharmSimplified_Dissolve.0"
+              }
+            },
+            {
+              "SrcMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_HairNextGenTAA'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/Instances/MI_HairNextGenTAA.0"
+              },
+              "DstMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_HairNextGenTAA_Dissolve'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/Instances/MI_HairNextGenTAA_Dissolve.0"
+              }
+            },
+            {
+              "SrcMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_CAMPER_CUST_DARK_GLASS'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_CAMPER_CUST_DARK_GLASS.0"
+              },
+              "DstMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_CAMPER_CUST_DARK_GLASS_Disolve'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_CAMPER_CUST_DARK_GLASS_Disolve.0"
+              }
+            },
+            {
+              "SrcMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MIM_RealisticHair'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MIM_RealisticHair.0"
+              },
+              "DstMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MIMV_RealisticHair_dissolve'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MIMV_RealisticHair_dissolve.0"
+              }
+            }
+          ]
+        },
+        {
+          "GroupName": "DistortionGlitch",
+          "Maps": [
+            {
+              "SrcMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_Camper'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_Camper.0"
+              },
+              "DstMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_Camper_S42_Illusion'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_Camper_S42_Illusion.0"
+              }
+            },
+            {
+              "SrcMaterial": {
+                "ObjectName": "Material'M_Hair'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/M_Hair.0"
+              },
+              "DstMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_Hair_S42_Illusion'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_Hair_S42_Illusion.0"
+              }
+            },
+            {
+              "SrcMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_Camper_Dither'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_Camper_Dither.0"
+              },
+              "DstMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_Camper_Dither_S42_Illusion'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_Camper_Dither_S42_Illusion.0"
+              }
+            },
+            {
+              "SrcMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_Camper_Cust'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_Camper_Cust.0"
+              },
+              "DstMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_Camper_Cust_S42_Illusion'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_Camper_Cust_S42_Illusion.0"
+              }
+            },
+            {
+              "SrcMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_Camper_TransCust'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_Camper_TransCust.0"
+              },
+              "DstMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_Camper_TransCust_S42_Illusion'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_Camper_TransCust_S42_Illusion.0"
+              }
+            },
+            {
+              "SrcMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_HairTAA'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/Instances/MI_HairTAA.0"
+              },
+              "DstMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_HairTAA_S42_Illusion'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/Instances/MI_HairTAA_S42_Illusion.0"
+              }
+            },
+            {
+              "SrcMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_CAMPER_CUST_GLASS'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_CAMPER_CUST_GLASS.0"
+              },
+              "DstMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_CAMPER_CUST_GLASS_S42_Illusion'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_CAMPER_CUST_GLASS_S42_Illusion.0"
+              }
+            },
+            {
+              "SrcMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_Fur'",
+                "ObjectPath": "/Game/Materials/Instances/MI_Fur.0"
+              },
+              "DstMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MV_Fur_Dissolve'",
+                "ObjectPath": "/Game/Characters/Slashers/Materials/Variants/MV_Fur_Dissolve.0"
+              }
+            },
+            {
+              "SrcMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_HairNextGenTAA'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/Instances/MI_HairNextGenTAA.0"
+              },
+              "DstMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_HairNextGenTAA_Dissolve'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/Instances/MI_HairNextGenTAA_Dissolve.0"
+              }
+            },
+            {
+              "SrcMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MIM_RealisticHair'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MIM_RealisticHair.0"
+              },
+              "DstMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MIMV_RealisticHair_dissolve'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MIMV_RealisticHair_dissolve.0"
+              }
+            },
+            {
+              "SrcMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_CAMPER_CUST_DARK_GLASS'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_CAMPER_CUST_DARK_GLASS.0"
+              },
+              "DstMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_CAMPER_CUST_DARK_GLASS_Disolve'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_CAMPER_CUST_DARK_GLASS_Disolve.0"
+              }
+            }
+          ]
+        },
+        {
+          "GroupName": "DistortionGlitchSideways",
+          "Maps": [
+            {
+              "SrcMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_Camper'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_Camper.0"
+              },
+              "DstMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_Camper_S42_Illusion_Sideways'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_Camper_S42_Illusion_Sideways.0"
+              }
+            },
+            {
+              "SrcMaterial": {
+                "ObjectName": "Material'M_Hair'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/M_Hair.0"
+              },
+              "DstMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_Hair_S42_Illusion_Sideways'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_Hair_S42_Illusion_Sideways.0"
+              }
+            },
+            {
+              "SrcMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_Camper_Dither'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_Camper_Dither.0"
+              },
+              "DstMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_Camper_Dither_S42_Illusion_Sideways'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_Camper_Dither_S42_Illusion_Sideways.0"
+              }
+            },
+            {
+              "SrcMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_Camper_Cust'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_Camper_Cust.0"
+              },
+              "DstMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_Camper_Cust_S42_Illusion_Sideways'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_Camper_Cust_S42_Illusion_Sideways.0"
+              }
+            },
+            {
+              "SrcMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_Camper_TransCust'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_Camper_TransCust.0"
+              },
+              "DstMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_Camper_TransCust_S42_IllusionSideways'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_Camper_TransCust_S42_IllusionSideways.0"
+              }
+            },
+            {
+              "SrcMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_HairTAA'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/Instances/MI_HairTAA.0"
+              },
+              "DstMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_HairTAA_S42_Illusion_Sideways'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/Instances/MI_HairTAA_S42_Illusion_Sideways.0"
+              }
+            },
+            {
+              "SrcMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_CAMPER_CUST_GLASS'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_CAMPER_CUST_GLASS.0"
+              },
+              "DstMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_CAMPER_CUST_GLASS_S42_Illusion_Sideways'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_CAMPER_CUST_GLASS_S42_Illusion_Sideways.0"
+              }
+            },
+            {
+              "SrcMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_Fur'",
+                "ObjectPath": "/Game/Materials/Instances/MI_Fur.0"
+              },
+              "DstMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MV_Fur_Dissolve'",
+                "ObjectPath": "/Game/Characters/Slashers/Materials/Variants/MV_Fur_Dissolve.0"
+              }
+            },
+            {
+              "SrcMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_HairNextGenTAA'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/Instances/MI_HairNextGenTAA.0"
+              },
+              "DstMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_HairNextGenTAA_Dissolve'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/Instances/MI_HairNextGenTAA_Dissolve.0"
+              }
+            },
+            {
+              "SrcMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MIM_RealisticHair'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MIM_RealisticHair.0"
+              },
+              "DstMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MIMV_RealisticHair_dissolve'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MIMV_RealisticHair_dissolve.0"
+              }
+            },
+            {
+              "SrcMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_CAMPER_CUST_DARK_GLASS'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_CAMPER_CUST_DARK_GLASS.0"
+              },
+              "DstMaterial": {
+                "ObjectName": "MaterialInstanceConstant'MI_CAMPER_CUST_DARK_GLASS_Disolve'",
+                "ObjectPath": "/Game/Characters/Campers/Materials/MI_CAMPER_CUST_DARK_GLASS_Disolve.0"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NS_WhispyDistortion_Overlap_GEN_VARIABLE",
+    "Outer": "BP_S42P01SurvivorHusk_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'NS_WhispyDistortion_Overlap'",
+        "ObjectPath": "/S42/ArtAssets/Effects/Niagara/Illusion/NS_WhispyDistortion_Overlap.25"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Skeletal Mesh",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraDataInterfaceSkeletalMesh'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 1,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Skeletal Mesh",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraDataInterfaceSkeletalMesh'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 1,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.Skeletal Mesh",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraDataInterfaceSkeletalMesh'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 1,
+              "Flags": 0
+            }
+          }
+        ],
+        "DataInterfaces": [
+          {
+            "ObjectName": "NiagaraDataInterfaceSkeletalMesh'BP_S42P01SurvivorHusk_C:NS_WhispyDistortion_Overlap_GEN_VARIABLE.NiagaraDataInterfaceSkeletalMesh_0'",
+            "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.29"
+          }
+        ]
+      },
+      "DetailLevelBeforeCastShadows": "EDetailMode::DM_MAX",
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": -0.0
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "NiagaraDataInterfaceSkeletalMesh",
+    "Name": "NiagaraDataInterfaceSkeletalMesh_0",
+    "Outer": "NS_WhispyDistortion_Overlap_GEN_VARIABLE",
+    "Class": "UScriptClass'NiagaraDataInterfaceSkeletalMesh'",
+    "Properties": {
+      "SourceMode": "ENDISkeletalMesh_SourceMode::Source"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_S42P01SurvivorHusk_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "RootComponent",
+    "Outer": "Default__BP_S42P01SurvivorHusk_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_S42P01SurvivorHusk_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.30"
+      },
+      "VariableGuid": "24CC08F6-428915F6-40C4EEB9-DCAC4F2E",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'MaterialHelper'",
+        "ObjectPath": "/Script/GFXUtilities"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "MaterialHelper'BP_S42P01SurvivorHusk_C:MaterialHelper_GEN_VARIABLE'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.27"
+      },
+      "ParentComponentOrVariableName": "HuskMesh",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "ED4BDC77-4D94296E-FC7887B7-B7679F79",
+      "InternalVariableName": "MaterialHelper"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'AkComponent'",
+        "ObjectPath": "/Script/AkAudio"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "AkComponent'BP_S42P01SurvivorHusk_C:Ak_Audio_S42P01_SurvivorHusk_GEN_VARIABLE'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.0"
+      },
+      "ParentComponentOrVariableName": "RootComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "4F893E41-42338718-543B7BA1-3526CFCB",
+      "InternalVariableName": "Ak_Audio_S42P01_SurvivorHusk"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_S42P01SurvivorHusk_C:NS_WhispyDistortion_Overlap_GEN_VARIABLE'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.28"
+      },
+      "ParentComponentOrVariableName": "HuskMesh",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "E73C0BF7-4565F41A-ABD3CF87-40ED21D0",
+      "InternalVariableName": "NS_WhispyDistortion_Overlap"
+    }
+  },
+  {
+    "Type": "SimpleAnimBudgeterSignificanceStrategy",
+    "Name": "SimpleAnimBudgeterSignificanceStrategy_0",
+    "Outer": "HuskMesh",
+    "Class": "UScriptClass'SimpleAnimBudgeterSignificanceStrategy'"
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_S42P01SurvivorHusk_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_S42P01SurvivorHusk_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.33"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_S42P01SurvivorHusk_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.34"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_S42P01SurvivorHusk_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.35"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_S42P01SurvivorHusk_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.33"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_S42P01SurvivorHusk_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.34"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_S42P01SurvivorHusk_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.35"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_S42P01SurvivorHusk_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.32"
+      }
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "TML_Dissolve_In/Out_Template",
+    "Outer": "BP_S42P01SurvivorHusk_C",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Properties": {
+      "TimelineLength": 2.6,
+      "EventTracks": [
+        {
+          "FunctionName": "TML_Dissolve_In/Out__PlayVanishVFX__EventFunc",
+          "CurveKeys": {
+            "ObjectName": "CurveFloat'BP_S42P01SurvivorHusk_C:CurveFloat_0'",
+            "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.5"
+          },
+          "TrackName": "PlayVanishVFX",
+          "bIsExternalCurve": false
+        },
+        {
+          "FunctionName": "TML_Dissolve_In/Out__PlayAppearVFX__EventFunc",
+          "CurveKeys": {
+            "ObjectName": "CurveFloat'BP_S42P01SurvivorHusk_C:CurveFloat_1'",
+            "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.6"
+          },
+          "TrackName": "PlayAppearVFX",
+          "bIsExternalCurve": false
+        }
+      ],
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_S42P01SurvivorHusk_C:CurveFloat_1_2__F8FE0E88_0__695A75DA_0__256B4035_0__93CBDD9C_0__594B97E8'",
+            "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.7"
+          },
+          "PropertyName": "TML_Dissolve_In_Out_DissolveProgress_5ADD90C1427470C8F1F56BA20C58524A",
+          "TrackName": "DissolveProgress",
+          "bIsExternalCurve": false
+        },
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_S42P01SurvivorHusk_C:CurveFloat_7'",
+            "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.11"
+          },
+          "PropertyName": "TML_Dissolve_In_Out_AuraOpacity_5ADD90C1427470C8F1F56BA20C58524A",
+          "TrackName": "AuraOpacity",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "5ADD90C1-427470C8-F1F56BA2-0C58524A",
+      "VariableName": "TML_Dissolve_In/Out",
+      "DirectionPropertyName": "TML_Dissolve_In_Out__Direction_5ADD90C1427470C8F1F56BA20C58524A",
+      "UpdateFunctionName": "TML_Dissolve_In/Out__UpdateFunc",
+      "FinishedFunctionName": "TML_Dissolve_In/Out__FinishedFunc"
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "TML_Dither_Template",
+    "Outer": "BP_S42P01SurvivorHusk_C",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Properties": {
+      "TimelineLength": 1.0,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_S42P01SurvivorHusk_C:CurveFloat_2'",
+            "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.8"
+          },
+          "PropertyName": "TML_Dither_DitherAmount_CA48D1564631FF31CFE682A241DE1859",
+          "TrackName": "DitherAmount",
+          "bIsExternalCurve": false
+        },
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_S42P01SurvivorHusk_C:CurveFloat_3'",
+            "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.9"
+          },
+          "PropertyName": "TML_Dither_DitherNoiseLerp_CA48D1564631FF31CFE682A241DE1859",
+          "TrackName": "DitherNoiseLerp",
+          "bIsExternalCurve": false
+        },
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_S42P01SurvivorHusk_C:CurveFloat_4'",
+            "ObjectPath": "/S42/Blueprints/Perks/BP_S42P01SurvivorHusk.10"
+          },
+          "PropertyName": "TML_Dither_AuraOpacity_CA48D1564631FF31CFE682A241DE1859",
+          "TrackName": "AuraOpacity",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "CA48D156-4631FF31-CFE682A2-41DE1859",
+      "VariableName": "TML_Dither",
+      "DirectionPropertyName": "TML_Dither__Direction_CA48D1564631FF31CFE682A241DE1859",
+      "UpdateFunctionName": "TML_Dither__UpdateFunc",
+      "FinishedFunctionName": "TML_Dither__FinishedFunc"
+    }
+  }
+]

@@ -1,0 +1,978 @@
+[
+  {
+    "Type": "BodySetup",
+    "Name": "BodySetup_0",
+    "Outer": "SM_CHU_InfectedTree_Lobby_01",
+    "Class": "UScriptClass'BodySetup'",
+    "Properties": {
+      "DefaultInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Interactable",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "Slasher",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "Blood",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "InteractionDetector",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "BlinkBlocker",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Ground",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Walkable",
+              "Response": "ECollisionResponse::ECR_Block"
+            }
+          ]
+        }
+      },
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "312381594DDEBFC77AA068AB5921E554",
+    "CookedFormatData": {
+      "PhysXPC": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 28,
+        "SizeOnDisk": 28,
+        "OffsetInFile": "0x93"
+      }
+    }
+  },
+  {
+    "Type": "NavCollision",
+    "Name": "NavCollision_0",
+    "Outer": "SM_CHU_InfectedTree_Lobby_01",
+    "Class": "UScriptClass'NavCollision'",
+    "CookedFormatData": {
+      "NavCollision_Chaos": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 21,
+        "SizeOnDisk": 21,
+        "OffsetInFile": "0x32"
+      }
+    }
+  },
+  {
+    "Type": "StaticMesh",
+    "Name": "SM_CHU_InfectedTree_Lobby_01",
+    "Class": "UScriptClass'StaticMesh'",
+    "Properties": {
+      "ShadowMaxLOD": {
+        "PerDetailModeValue": [
+          {
+            "Key": "Ultra",
+            "Value": 3
+          },
+          {
+            "Key": "High",
+            "Value": 3
+          },
+          {
+            "Key": "Medium",
+            "Value": 3
+          },
+          {
+            "Key": "Low",
+            "Value": 3
+          },
+          {
+            "Key": "Mobile",
+            "Value": 3
+          }
+        ]
+      },
+      "StaticMaterials": [
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'MI_QTM_InfectedTree_01'",
+            "ObjectPath": "/Game/Materials/Instances/Quantum/Blockers/MI_QTM_InfectedTree_01.0"
+          },
+          "MaterialSlotName": "MI_QTM_InfectedTree_01",
+          "ImportedMaterialSlotName": "MI_QTM_InfectedTree_01",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 75.321304,
+            "LocalUVDensities": 1329.9877,
+            "LocalUVDensities": 1526.6727,
+            "LocalUVDensities": 0.0
+          }
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'MI_QTM_WoodShinglesMedieval'",
+            "ObjectPath": "/Game/Materials/Instances/Quantum/Structures/MI_QTM_WoodShinglesMedieval.0"
+          },
+          "MaterialSlotName": "MI_QTM_WoodShinglesMedieval",
+          "ImportedMaterialSlotName": "MI_QTM_WoodShinglesMedieval",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 142.53865,
+            "LocalUVDensities": 985.3246,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 0.0
+          }
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'MI_QTM_TrimWoodBeamsMedieval'",
+            "ObjectPath": "/Game/Materials/Instances/Quantum/Structures/MI_QTM_TrimWoodBeamsMedieval.0"
+          },
+          "MaterialSlotName": "MI_QTM_TrimWoodBeamsMedieval",
+          "ImportedMaterialSlotName": "MI_QTM_TrimWoodBeamsMedieval",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 172.9565,
+            "LocalUVDensities": 960.0026,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 0.0
+          }
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'MI_QTM_TrimWoodDamageMedieval'",
+            "ObjectPath": "/Game/Materials/Instances/Quantum/Structures/MI_QTM_TrimWoodDamageMedieval.0"
+          },
+          "MaterialSlotName": "MI_QTM_TrimWoodDamageMedieval",
+          "ImportedMaterialSlotName": "MI_QTM_TrimWoodDamageMedieval",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 135.86864,
+            "LocalUVDensities": 1017.573,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 0.0
+          }
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'MI_QTM_InfectedTree_WellBottom_01'",
+            "ObjectPath": "/Game/Materials/Instances/Quantum/Blockers/MI_QTM_InfectedTree_WellBottom_01.0"
+          },
+          "MaterialSlotName": "MI_QTM_InfectedTree_WellBottom_01",
+          "ImportedMaterialSlotName": "MI_QTM_InfectedTree_WellBottom_01",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 76.84339,
+            "LocalUVDensities": 998.3578,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 0.0
+          }
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'MI_QTM_TrimWoodLogsMedieval'",
+            "ObjectPath": "/Game/Materials/Instances/Quantum/Structures/MI_QTM_TrimWoodLogsMedieval.0"
+          },
+          "MaterialSlotName": "MI_QTM_TrimWoodLogsMedieval",
+          "ImportedMaterialSlotName": "MI_QTM_TrimWoodLogsMedieval",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 116.49612,
+            "LocalUVDensities": 991.9338,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 0.0
+          }
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'MI_QTM_InfectedTree_Well_01'",
+            "ObjectPath": "/Game/Materials/Instances/Quantum/Blockers/MI_QTM_InfectedTree_Well_01.0"
+          },
+          "MaterialSlotName": "MI_QTM_InfectedTree_Well_01",
+          "ImportedMaterialSlotName": "MI_QTM_InfectedTree_Well_01",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 108.45486,
+            "LocalUVDensities": 1028.1305,
+            "LocalUVDensities": 307.7775,
+            "LocalUVDensities": 0.0
+          }
+        }
+      ],
+      "LightmapUVDensity": 1268.8667,
+      "LightMapResolution": 256,
+      "LightMapCoordinateIndex": 1,
+      "ExtendedBounds": {
+        "Origin": {
+          "X": 173.48242,
+          "Y": 50.28476,
+          "Z": 413.13528
+        },
+        "BoxExtent": {
+          "X": 525.2549,
+          "Y": 303.172,
+          "Z": 458.21237
+        },
+        "SphereRadius": 685.2858135086683
+      }
+    },
+    "BodySetup": {
+      "ObjectName": "BodySetup'SM_CHU_InfectedTree_Lobby_01:BodySetup_0'",
+      "ObjectPath": "/Game/Meshes/Environment/Churros/Lobby/SM_CHU_InfectedTree_Lobby_01.0"
+    },
+    "NavCollision": {
+      "ObjectName": "NavCollision'SM_CHU_InfectedTree_Lobby_01:NavCollision_0'",
+      "ObjectPath": "/Game/Meshes/Environment/Churros/Lobby/SM_CHU_InfectedTree_Lobby_01.1"
+    },
+    "LightingGuid": "05F9DB55-48891EF5-C659D6AF-AB71CFAC",
+    "RenderData": {
+      "LODs": [
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 23358,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 14264,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 70074,
+              "NumTriangles": 1168,
+              "MinVertexIndex": 14265,
+              "MaxVertexIndex": 15609,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 2,
+              "FirstIndex": 73578,
+              "NumTriangles": 1356,
+              "MinVertexIndex": 15610,
+              "MaxVertexIndex": 17771,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 3,
+              "FirstIndex": 77646,
+              "NumTriangles": 809,
+              "MinVertexIndex": 17772,
+              "MaxVertexIndex": 19528,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 4,
+              "FirstIndex": 80073,
+              "NumTriangles": 72,
+              "MinVertexIndex": 19529,
+              "MaxVertexIndex": 19603,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 5,
+              "FirstIndex": 80289,
+              "NumTriangles": 4658,
+              "MinVertexIndex": 19604,
+              "MaxVertexIndex": 22472,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 6,
+              "FirstIndex": 94263,
+              "NumTriangles": 3152,
+              "MinVertexIndex": 22473,
+              "MaxVertexIndex": 26695,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 26696
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 3,
+            "NumVertices": 26696,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 4,
+            "NumVertices": 26696
+          },
+          "CardRepresentationData": {
+            "Bounds": {
+              "Min": {
+                "X": -352.77246,
+                "Y": -253.88724,
+                "Z": -46.077087
+              },
+              "Max": {
+                "X": 699.7373,
+                "Y": 354.45676,
+                "Z": 872.34766
+              },
+              "IsValid": 1
+            },
+            "MaxLodLevel": 0,
+            "bMostlyTwoSided": false,
+            "CardBuildData": [
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": -1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": 127.368774,
+                    "Y": 50.28476,
+                    "Z": 413.13528
+                  },
+                  "Extent": {
+                    "X": 296.01837,
+                    "Y": 459.2124,
+                    "Z": 490.14124
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 0
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": 127.368774,
+                    "Y": 50.28476,
+                    "Z": 413.13528
+                  },
+                  "Extent": {
+                    "X": 296.01837,
+                    "Y": 459.2124,
+                    "Z": 490.14124
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 1
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": -1.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": 140.59149,
+                    "Y": 50.28476,
+                    "Z": 397.32016
+                  },
+                  "Extent": {
+                    "X": 493.36395,
+                    "Y": 443.39722,
+                    "Z": 312.4638
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 2
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": 140.59149,
+                    "Y": 50.28476,
+                    "Z": 397.32016
+                  },
+                  "Extent": {
+                    "X": 493.36395,
+                    "Y": 443.39722,
+                    "Z": 312.4638
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 3
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": -1.0
+                  },
+                  "Origin": {
+                    "X": 157.03696,
+                    "Y": 66.730225,
+                    "Z": 400.54288
+                  },
+                  "Extent": {
+                    "X": 509.80942,
+                    "Y": 279.5729,
+                    "Z": 456.62
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 4
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": -1.0
+                  },
+                  "Origin": {
+                    "X": -40.308624,
+                    "Y": 99.621155,
+                    "Z": 446.0262
+                  },
+                  "Extent": {
+                    "X": 213.79105,
+                    "Y": 180.90012,
+                    "Z": 312.4638
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 4
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "Origin": {
+                    "X": 157.03696,
+                    "Y": 50.28476,
+                    "Z": 413.13525
+                  },
+                  "Extent": {
+                    "X": 509.80942,
+                    "Y": 296.01837,
+                    "Z": 444.0276
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 5
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "Origin": {
+                    "X": 107.70056,
+                    "Y": 99.621155,
+                    "Z": 199.34418
+                  },
+                  "Extent": {
+                    "X": 361.80023,
+                    "Y": 180.90012,
+                    "Z": 230.23653
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 5
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "Origin": {
+                    "X": 41.9187,
+                    "Y": 33.839294,
+                    "Z": 51.335022
+                  },
+                  "Extent": {
+                    "X": 131.56372,
+                    "Y": 115.118256,
+                    "Z": 82.227356
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 5
+              }
+            ]
+          }
+        },
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 20779,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 12676,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 62337,
+              "NumTriangles": 1168,
+              "MinVertexIndex": 12677,
+              "MaxVertexIndex": 14021,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 2,
+              "FirstIndex": 65841,
+              "NumTriangles": 1356,
+              "MinVertexIndex": 14022,
+              "MaxVertexIndex": 16183,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 3,
+              "FirstIndex": 69909,
+              "NumTriangles": 809,
+              "MinVertexIndex": 16184,
+              "MaxVertexIndex": 17940,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 4,
+              "FirstIndex": 72336,
+              "NumTriangles": 72,
+              "MinVertexIndex": 17941,
+              "MaxVertexIndex": 18015,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 5,
+              "FirstIndex": 72552,
+              "NumTriangles": 4658,
+              "MinVertexIndex": 18016,
+              "MaxVertexIndex": 20884,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 6,
+              "FirstIndex": 86526,
+              "NumTriangles": 3152,
+              "MinVertexIndex": 20885,
+              "MaxVertexIndex": 25107,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 25108
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 3,
+            "NumVertices": 25108,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 4,
+            "NumVertices": 25108
+          }
+        },
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 20076,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 12205,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 60228,
+              "NumTriangles": 1168,
+              "MinVertexIndex": 12206,
+              "MaxVertexIndex": 13550,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 2,
+              "FirstIndex": 63732,
+              "NumTriangles": 1356,
+              "MinVertexIndex": 13551,
+              "MaxVertexIndex": 15712,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 3,
+              "FirstIndex": 67800,
+              "NumTriangles": 809,
+              "MinVertexIndex": 15713,
+              "MaxVertexIndex": 17469,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 4,
+              "FirstIndex": 70227,
+              "NumTriangles": 72,
+              "MinVertexIndex": 17470,
+              "MaxVertexIndex": 17544,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 5,
+              "FirstIndex": 70443,
+              "NumTriangles": 4658,
+              "MinVertexIndex": 17545,
+              "MaxVertexIndex": 20413,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 6,
+              "FirstIndex": 84417,
+              "NumTriangles": 3152,
+              "MinVertexIndex": 20414,
+              "MaxVertexIndex": 24636,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 24637
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 3,
+            "NumVertices": 24637,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 4,
+            "NumVertices": 24637
+          }
+        },
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 18698,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 11304,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 56094,
+              "NumTriangles": 1168,
+              "MinVertexIndex": 11305,
+              "MaxVertexIndex": 12649,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 2,
+              "FirstIndex": 59598,
+              "NumTriangles": 1356,
+              "MinVertexIndex": 12650,
+              "MaxVertexIndex": 14811,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 3,
+              "FirstIndex": 63666,
+              "NumTriangles": 809,
+              "MinVertexIndex": 14812,
+              "MaxVertexIndex": 16568,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 4,
+              "FirstIndex": 66093,
+              "NumTriangles": 72,
+              "MinVertexIndex": 16569,
+              "MaxVertexIndex": 16643,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 5,
+              "FirstIndex": 66309,
+              "NumTriangles": 4658,
+              "MinVertexIndex": 16644,
+              "MaxVertexIndex": 19512,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 6,
+              "FirstIndex": 80283,
+              "NumTriangles": 3152,
+              "MinVertexIndex": 19513,
+              "MaxVertexIndex": 23735,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 23736
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 2,
+            "NumVertices": 23736,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 4,
+            "NumVertices": 23736
+          }
+        }
+      ],
+      "NaniteResources": {
+        "RootData": null,
+        "StreamablePages": {
+          "BulkDataFlags": "BULKDATA_None",
+          "ElementCount": 0,
+          "SizeOnDisk": 0,
+          "OffsetInFile": "0x64693B"
+        },
+        "ImposterAtlas": [],
+        "HierarchyNodes": [],
+        "HierarchyRootOffsets": [],
+        "PageStreamingStates": [],
+        "PageDependencies": [],
+        "NumRootPages": 0,
+        "PositionPrecision": 0,
+        "NormalPrecision": 0,
+        "TangentPrecision": 0,
+        "NumInputTriangles": 0,
+        "NumInputVertices": 0,
+        "NumInputMeshes": 0,
+        "NumInputTexCoords": 0,
+        "NumClusters": 0,
+        "ResourceFlags": 0
+      },
+      "Bounds": {
+        "Origin": {
+          "X": 173.48242,
+          "Y": 50.28476,
+          "Z": 413.13528
+        },
+        "BoxExtent": {
+          "X": 525.2549,
+          "Y": 303.172,
+          "Z": 458.21237
+        },
+        "SphereRadius": 685.2858
+      },
+      "bLODsShareStaticLighting": false,
+      "ScreenSize": [
+        2.0,
+        0.75,
+        0.5625,
+        0.421875,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  }
+]

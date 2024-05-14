@@ -1,0 +1,364 @@
+[
+  {
+    "Type": "BodySetup",
+    "Name": "BodySetup_1",
+    "Outer": "SM_CHU_DungeonKit_Ground_5x5m_04",
+    "Class": "UScriptClass'BodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "BoxElems": [
+          {
+            "Center": {
+              "X": 500.0,
+              "Y": 500.0,
+              "Z": -25.00001
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 90.0,
+              "Roll": -90.0
+            },
+            "X": 1000.0,
+            "Y": 49.99998,
+            "Z": 1000.0,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "DefaultInstance": {
+        "ObjectType": "ECollisionChannel::ECC_GameTraceChannel15",
+        "CollisionProfileName": "Ground",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Interactable",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "Slasher",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "Blood",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "InteractionDetector",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "World",
+              "Response": "ECollisionResponse::ECR_Overlap"
+            },
+            {
+              "Channel": "Walkable",
+              "Response": "ECollisionResponse::ECR_Block"
+            }
+          ]
+        }
+      },
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "8568E1DA46B366DAF6FE49A7F7E3289D",
+    "CookedFormatData": {
+      "PhysXPC": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 28,
+        "SizeOnDisk": 28,
+        "OffsetInFile": "0xD2"
+      }
+    }
+  },
+  {
+    "Type": "NavCollision",
+    "Name": "NavCollision_2",
+    "Outer": "SM_CHU_DungeonKit_Ground_5x5m_04",
+    "Class": "UScriptClass'NavCollision'",
+    "CookedFormatData": {
+      "NavCollision_Chaos": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 361,
+        "SizeOnDisk": 361,
+        "OffsetInFile": "0x32"
+      }
+    }
+  },
+  {
+    "Type": "StaticMesh",
+    "Name": "SM_CHU_DungeonKit_Ground_5x5m_04",
+    "Class": "UScriptClass'StaticMesh'",
+    "Properties": {
+      "MinLod": {
+        "bCooked": true,
+        "Default": 0,
+        "Value": 0
+      },
+      "ShadowMaxLOD": {
+        "PerDetailModeValue": [
+          {
+            "Key": "Ultra",
+            "Value": 2
+          },
+          {
+            "Key": "High",
+            "Value": 2
+          },
+          {
+            "Key": "Medium",
+            "Value": 2
+          },
+          {
+            "Key": "Low",
+            "Value": 2
+          },
+          {
+            "Key": "Mobile",
+            "Value": 2
+          }
+        ]
+      },
+      "StaticMaterials": [
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'MI_COM_TileMedievalFloor_Blend_01'",
+            "ObjectPath": "/Game/Materials/Instances/Common/Tilable/Blend/Ground/MI_COM_TileMedievalFloor_Blend_01.0"
+          },
+          "MaterialSlotName": "MI_COM_TileMedievalFloor_Blend_01",
+          "ImportedMaterialSlotName": "MI_COM_TileMedievalFloor_Blend_01",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 409.59918,
+            "LocalUVDensities": 1016.5842,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 0.0
+          }
+        }
+      ],
+      "LightmapUVDensity": 1016.5842,
+      "LightMapResolution": 64,
+      "LightMapCoordinateIndex": 1,
+      "LODForCollision": 2,
+      "ExtendedBounds": {
+        "Origin": {
+          "X": 500.0,
+          "Y": 500.0,
+          "Z": -7.6293945E-06
+        },
+        "BoxExtent": {
+          "X": 500.0,
+          "Y": 500.0,
+          "Z": 7.6293945E-06
+        },
+        "SphereRadius": 707.1068115234375
+      }
+    },
+    "BodySetup": {
+      "ObjectName": "BodySetup'SM_CHU_DungeonKit_Ground_5x5m_04:BodySetup_1'",
+      "ObjectPath": "/Game/Meshes/Environment/Churros/Structures/DungeonKit/SM_CHU_DungeonKit_Ground_5x5m_04.0"
+    },
+    "NavCollision": {
+      "ObjectName": "NavCollision'SM_CHU_DungeonKit_Ground_5x5m_04:NavCollision_2'",
+      "ObjectPath": "/Game/Meshes/Environment/Churros/Structures/DungeonKit/SM_CHU_DungeonKit_Ground_5x5m_04.1"
+    },
+    "LightingGuid": "37BD1551-445A0DE7-ADAC04AE-F380B881",
+    "RenderData": {
+      "LODs": [
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 400,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 230,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 231
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 2,
+            "NumVertices": 231,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 4,
+            "NumVertices": 231
+          },
+          "CardRepresentationData": {
+            "Bounds": {
+              "Min": {
+                "X": -1.0,
+                "Y": -1.0,
+                "Z": -1.0000153
+              },
+              "Max": {
+                "X": 1001.0,
+                "Y": 1001.0,
+                "Z": 1.0
+              },
+              "IsValid": 1
+            },
+            "MaxLodLevel": 0,
+            "bMostlyTwoSided": false,
+            "CardBuildData": [
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "Origin": {
+                    "X": 500.0,
+                    "Y": 500.0,
+                    "Z": -7.6293945E-06
+                  },
+                  "Extent": {
+                    "X": 501.0,
+                    "Y": 501.0,
+                    "Z": 11.000008
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 5
+              }
+            ]
+          }
+        },
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 200,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 120,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 121
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 2,
+            "NumVertices": 121,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 4,
+            "NumVertices": 121
+          }
+        },
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 96,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 62,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 63
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 2,
+            "NumVertices": 63,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 4,
+            "NumVertices": 63
+          }
+        }
+      ],
+      "NaniteResources": {
+        "RootData": null,
+        "StreamablePages": {
+          "BulkDataFlags": "BULKDATA_None",
+          "ElementCount": 0,
+          "SizeOnDisk": 0,
+          "OffsetInFile": "0x78C7"
+        },
+        "ImposterAtlas": [],
+        "HierarchyNodes": [],
+        "HierarchyRootOffsets": [],
+        "PageStreamingStates": [],
+        "PageDependencies": [],
+        "NumRootPages": 0,
+        "PositionPrecision": 0,
+        "NormalPrecision": 0,
+        "TangentPrecision": 0,
+        "NumInputTriangles": 0,
+        "NumInputVertices": 0,
+        "NumInputMeshes": 0,
+        "NumInputTexCoords": 0,
+        "NumClusters": 0,
+        "ResourceFlags": 0
+      },
+      "Bounds": {
+        "Origin": {
+          "X": 500.0,
+          "Y": 500.0,
+          "Z": -7.6293945E-06
+        },
+        "BoxExtent": {
+          "X": 500.0,
+          "Y": 500.0,
+          "Z": 7.6293945E-06
+        },
+        "SphereRadius": 707.1068
+      },
+      "bLODsShareStaticLighting": false,
+      "ScreenSize": [
+        1.0,
+        0.75,
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  }
+]

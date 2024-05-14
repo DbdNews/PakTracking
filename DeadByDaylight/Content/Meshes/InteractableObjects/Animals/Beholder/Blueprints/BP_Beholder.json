@@ -1,0 +1,724 @@
+[
+  {
+    "Type": "AkComponent",
+    "Name": "Ak_Audio_Beholder_GEN_VARIABLE",
+    "Outer": "BP_Beholder_C",
+    "Class": "UScriptClass'AkComponent'",
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 370.0,
+        "Z": 150.0
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Beholder_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Beholder_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.15"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Beholder_C:ExecuteUbergraph_BP_Beholder'",
+        "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.6"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Beholder_C:Bank Loaded'",
+        "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.5"
+      },
+      {
+        "ObjectName": "Function'BP_Beholder_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.7"
+      },
+      {
+        "ObjectName": "Function'BP_Beholder_C:ExecuteUbergraph_BP_Beholder'",
+        "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.6"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Ak_Audio_Beholder",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'AkComponent'",
+          "ObjectPath": "/Script/AkAudio"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerInRangeCollision",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'BoxComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Beholder",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DBDSkeletalMeshComponentBudgeted'",
+          "ObjectPath": "/Script/DBDAnimationBudgetAllocator"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Beholder": {
+        "ObjectName": "Function'BP_Beholder_C:ExecuteUbergraph_BP_Beholder'",
+        "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.6"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_Beholder_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.7"
+      },
+      "Bank Loaded": {
+        "ObjectName": "Function'BP_Beholder_C:Bank Loaded'",
+        "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.5"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Beholder_C'Default__BP_Beholder_C'",
+      "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "PlayerInRangeCollision_GEN_VARIABLE",
+    "Outer": "BP_Beholder_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 165.0,
+        "Y": 300.0,
+        "Z": 30.0
+      },
+      "LineThickness": 2.0,
+      "DetailLevelBeforeCastShadows": "EDetailMode::DM_MAX",
+      "CanCharacterStepUpOn": "ECanBeCharacterBase::ECB_No",
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionProfileName": "PlayerOverlapStaticDetector",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECollisionResponse::ECR_Overlap"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Interactable",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Audio",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Traps",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "InteractionDetector",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "BlinkBlocker",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Ground",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 360.0,
+        "Z": 60.0
+      },
+      "RelativeScale3D": {
+        "X": 1.489207,
+        "Y": 1.5,
+        "Z": 1.0
+      },
+      "ComponentTags": [
+        "AnimTrigger"
+      ]
+    }
+  },
+  {
+    "Type": "BP_Beholder_C",
+    "Name": "Default__BP_Beholder_C",
+    "Class": "BlueprintGeneratedClass'/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.BP_Beholder_C'",
+    "Properties": {
+      "UberGraphFrame": {}
+    }
+  },
+  {
+    "Type": "DBDSkeletalMeshComponentBudgeted",
+    "Name": "Beholder_GEN_VARIABLE",
+    "Outer": "BP_Beholder_C",
+    "Class": "UScriptClass'DBDSkeletalMeshComponentBudgeted'",
+    "Properties": {
+      "_significanceStrategy": {
+        "ObjectName": "LinearSignificanceStrategy'BP_Beholder_C:Beholder_GEN_VARIABLE.LinearSignificanceStrategy_0'",
+        "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.8"
+      },
+      "_animBudgeterSignificanceStrategy": {
+        "ObjectName": "SimpleAnimBudgeterSignificanceStrategy'BP_Beholder_C:Beholder_GEN_VARIABLE.SimpleAnimBudgeterSignificanceStrategy_1'",
+        "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.14"
+      },
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'AB_Beholder_C'",
+        "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/AB_Beholder.1"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_Beholder_REF'",
+        "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Models/SK_Beholder_REF.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'SK_Beholder_REF'",
+        "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Models/SK_Beholder_REF.0"
+      },
+      "DetailLevelBeforeCastShadows": "EDetailMode::DM_MAX"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "Bank Loaded",
+    "Outer": "BP_Beholder_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "Result",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Class'EAkResult'",
+          "ObjectPath": "/Script/AkAudio"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LetValueOnPersistentFrame",
+        "StatementIndex": 0,
+        "DestinationProperty": {
+          "Owner": {
+            "ObjectName": "Function'BP_Beholder_C:ExecuteUbergraph_BP_Beholder'",
+            "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.6"
+          },
+          "Property": {
+            "Type": "EnumProperty",
+            "Name": "K2Node_CustomEvent_Result",
+            "Flags": "RF_Public",
+            "ElementSize": 1,
+            "Enum": {
+              "ObjectName": "Class'EAkResult'",
+              "ObjectPath": "/Script/AkAudio"
+            },
+            "UnderlyingProp": {
+              "Type": "ByteProperty",
+              "Name": "UnderlyingType",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "Enum": null
+            }
+          }
+        },
+        "AssignmentExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_Beholder_C:Bank Loaded'",
+              "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.5"
+            },
+            "Property": {
+              "Type": "EnumProperty",
+              "Name": "Result",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+              "Enum": {
+                "ObjectName": "Class'EAkResult'",
+                "ObjectPath": "/Script/AkAudio"
+              },
+              "UnderlyingProp": {
+                "Type": "ByteProperty",
+                "Name": "UnderlyingType",
+                "Flags": "RF_Public",
+                "ElementSize": 1,
+                "Enum": null
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 18,
+        "Function": {
+          "ObjectName": "Function'BP_Beholder_C:ExecuteUbergraph_BP_Beholder'",
+          "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.6"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 66
+          }
+        ],
+        "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.ExecuteUbergraph_BP_Beholder[66]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 33,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 35
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Beholder",
+    "Outer": "BP_Beholder_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnAkBankCallback__DelegateSignature'",
+          "ObjectPath": "/Script/AkAudio"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_CustomEvent_Result",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EAkResult'",
+          "ObjectPath": "/Script/AkAudio"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_ComputedJump",
+        "StatementIndex": 0,
+        "OffsetExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_Beholder_C:ExecuteUbergraph_BP_Beholder'",
+              "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.6"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "EntryPoint",
+              "Flags": "RF_Public",
+              "ElementSize": 4,
+              "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_BindDelegate",
+        "StatementIndex": 10,
+        "FunctionName": "Bank Loaded",
+        "Delegate": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_Beholder_C:ExecuteUbergraph_BP_Beholder'",
+              "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.6"
+            },
+            "Property": {
+              "Type": "DelegateProperty",
+              "Name": "K2Node_CreateDelegate_OutputDelegate",
+              "Flags": "RF_Public",
+              "ElementSize": 20,
+              "SignatureFunction": {
+                "ObjectName": "Class'OnAkBankCallback__DelegateSignature'",
+                "ObjectPath": "/Script/AkAudio"
+              }
+            }
+          }
+        },
+        "ObjectTerm": {
+          "Inst": "EX_Self"
+        }
+      },
+      {
+        "Inst": "EX_CallMath",
+        "StatementIndex": 33,
+        "Function": {
+          "ObjectName": "Class'AkGameplayStatics:LoadBankAsync'",
+          "ObjectPath": "/Script/AkAudio"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_ObjectConst",
+            "Value": {
+              "ObjectName": "AkAudioBank'Beholder_T20'",
+              "ObjectPath": "/Game/Audio/SoundBanks/Beholder_T20.0"
+            }
+          },
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_Beholder_C:ExecuteUbergraph_BP_Beholder'",
+                "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.6"
+              },
+              "Property": {
+                "Type": "DelegateProperty",
+                "Name": "K2Node_CreateDelegate_OutputDelegate",
+                "Flags": "RF_Public",
+                "ElementSize": 20,
+                "SignatureFunction": {
+                  "ObjectName": "Class'OnAkBankCallback__DelegateSignature'",
+                  "ObjectPath": "/Script/AkAudio"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 61,
+        "CodeOffset": 66,
+        "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.ExecuteUbergraph_BP_Beholder[66]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 66,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 68
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BP_Beholder_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 0,
+        "Function": {
+          "ObjectName": "Function'BP_Beholder_C:ExecuteUbergraph_BP_Beholder'",
+          "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.6"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 10
+          }
+        ],
+        "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.ExecuteUbergraph_BP_Beholder[10]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 15,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 17
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "LinearSignificanceStrategy",
+    "Name": "LinearSignificanceStrategy_0",
+    "Outer": "Beholder_GEN_VARIABLE",
+    "Class": "UScriptClass'LinearSignificanceStrategy'",
+    "Properties": {
+      "_maxDistance": {
+        "PerDetailModeValue": [
+          {
+            "Key": "Ultra",
+            "Value": 1600.0
+          },
+          {
+            "Key": "High",
+            "Value": 1600.0
+          },
+          {
+            "Key": "Medium",
+            "Value": 1600.0
+          },
+          {
+            "Key": "Low",
+            "Value": 1600.0
+          },
+          {
+            "Key": "Mobile",
+            "Value": 1600.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_Beholder_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Beholder_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.9"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Beholder_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Beholder_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.12"
+        }
+      ],
+      "VariableGuid": "E553ED17-47340132-099A35AA-55630BAB",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DBDSkeletalMeshComponentBudgeted'",
+        "ObjectPath": "/Script/DBDAnimationBudgetAllocator"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DBDSkeletalMeshComponentBudgeted'BP_Beholder_C:Beholder_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.4"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Beholder_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.13"
+        }
+      ],
+      "VariableGuid": "C24E2D07-418CA6FE-89880E98-07E0DAB7",
+      "InternalVariableName": "Beholder"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'AkComponent'",
+        "ObjectPath": "/Script/AkAudio"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "AkComponent'BP_Beholder_C:Ak_Audio_Beholder_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.0"
+      },
+      "VariableGuid": "4820B0B1-47043D04-A3A9B085-374525DF",
+      "InternalVariableName": "Ak_Audio_Beholder"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BP_Beholder_C:PlayerInRangeCollision_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.2"
+      },
+      "VariableGuid": "71827DD4-4B29C1CF-36139F8A-437650AA",
+      "InternalVariableName": "PlayerInRangeCollision"
+    }
+  },
+  {
+    "Type": "SimpleAnimBudgeterSignificanceStrategy",
+    "Name": "SimpleAnimBudgeterSignificanceStrategy_1",
+    "Outer": "Beholder_GEN_VARIABLE",
+    "Class": "UScriptClass'SimpleAnimBudgeterSignificanceStrategy'"
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_Beholder_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Beholder_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.10"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Beholder_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Beholder_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Beholder_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Beholder_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.12"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Beholder_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Blueprints/BP_Beholder.10"
+      }
+    }
+  }
+]

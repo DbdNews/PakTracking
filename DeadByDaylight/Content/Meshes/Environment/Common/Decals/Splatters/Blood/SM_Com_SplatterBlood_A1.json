@@ -6,49 +6,49 @@
     "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "DefaultInstance": {
-        "ObjectType": "ECC_WorldStatic",
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
         "CollisionProfileName": "BlockAll",
         "CollisionResponses": {
           "ResponseArray": [
             {
               "Channel": "Interactable",
-              "Response": "ECR_Block"
+              "Response": "ECollisionResponse::ECR_Block"
             },
             {
               "Channel": "Slasher",
-              "Response": "ECR_Block"
+              "Response": "ECollisionResponse::ECR_Block"
             },
             {
               "Channel": "Blood",
-              "Response": "ECR_Block"
+              "Response": "ECollisionResponse::ECR_Block"
             },
             {
               "Channel": "InteractionDetector",
-              "Response": "ECR_Ignore"
+              "Response": "ECollisionResponse::ECR_Ignore"
             },
             {
               "Channel": "BlinkBlocker",
-              "Response": "ECR_Ignore"
+              "Response": "ECollisionResponse::ECR_Ignore"
             },
             {
               "Channel": "Ground",
-              "Response": "ECR_Ignore"
+              "Response": "ECollisionResponse::ECR_Ignore"
             },
             {
               "Channel": "Walkable",
-              "Response": "ECR_Block"
+              "Response": "ECollisionResponse::ECR_Block"
             }
           ]
         }
       }
     },
-    "BodySetupGuid": "C4E2360142A2CBEB34882599FF3501DA",
+    "BodySetupGuid": "7B58FF03437B89CA19CA2AB08F0F519A",
     "CookedFormatData": {
       "PhysXPC": {
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
-        "ElementCount": 1965,
-        "SizeOnDisk": 1965,
-        "OffsetInFile": "0x381B"
+        "ElementCount": 2994,
+        "SizeOnDisk": 2994,
+        "OffsetInFile": "0x90"
       }
     }
   },
@@ -58,11 +58,11 @@
     "Outer": "SM_Com_SplatterBlood_A1",
     "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
-      "NavCollision_X": {
+      "NavCollision_Chaos": {
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 21,
         "SizeOnDisk": 21,
-        "OffsetInFile": "0x4010"
+        "OffsetInFile": "0x32"
       }
     }
   },
@@ -71,7 +71,7 @@
     "Name": "SM_Com_SplatterBlood_A1",
     "Class": "UScriptClass'StaticMesh'",
     "Properties": {
-      "MinLOD": {
+      "MinLod": {
         "bCooked": true,
         "Default": 0,
         "Value": 0
@@ -80,7 +80,7 @@
         {
           "MaterialInterface": {
             "ObjectName": "MaterialInstanceConstant'MI_Com_SplattersBlood_A'",
-            "ObjectPath": "DeadByDaylight/Content/Materials/Instances/Common/Masked/Splatters/Blood/MI_Com_SplattersBlood_A.0"
+            "ObjectPath": "/Game/Materials/Instances/Common/Masked/Splatters/Blood/MI_Com_SplattersBlood_A.0"
           },
           "MaterialSlotName": "lambert2",
           "ImportedMaterialSlotName": "lambert2",
@@ -108,16 +108,16 @@
           "Y": 24.11719,
           "Z": 5.413342E-15
         },
-        "SphereRadius": 29.036877
+        "SphereRadius": 29.036876678466797
       }
     },
     "BodySetup": {
       "ObjectName": "BodySetup'SM_Com_SplatterBlood_A1:BodySetup_1'",
-      "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/Decals/Splatters/Blood/SM_Com_SplatterBlood_A1.0"
+      "ObjectPath": "/Game/Meshes/Environment/Common/Decals/Splatters/Blood/SM_Com_SplatterBlood_A1.0"
     },
     "NavCollision": {
       "ObjectName": "NavCollision'SM_Com_SplatterBlood_A1:NavCollision_1'",
-      "ObjectPath": "DeadByDaylight/Content/Meshes/Environment/Common/Decals/Splatters/Blood/SM_Com_SplatterBlood_A1.1"
+      "ObjectPath": "/Game/Meshes/Environment/Common/Decals/Splatters/Blood/SM_Com_SplatterBlood_A1.1"
     },
     "LightingGuid": "FACC54F3-49C9F3AD-7CB2AA97-8CF099CD",
     "RenderData": {
@@ -151,9 +151,83 @@
           "ColorVertexBuffer": {
             "Stride": 0,
             "NumVertices": 0
+          },
+          "CardRepresentationData": {
+            "Bounds": {
+              "Min": {
+                "X": -18.614304,
+                "Y": -25.11719,
+                "Z": -1.0
+              },
+              "Max": {
+                "X": 18.614304,
+                "Y": 25.11719,
+                "Z": 1.0
+              },
+              "IsValid": 1
+            },
+            "MaxLodLevel": 0,
+            "bMostlyTwoSided": false,
+            "CardBuildData": [
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "Origin": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Extent": {
+                    "X": 18.614304,
+                    "Y": 25.0,
+                    "Z": 10.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 5
+              }
+            ]
           }
         }
       ],
+      "NaniteResources": {
+        "RootData": null,
+        "StreamablePages": {
+          "BulkDataFlags": "BULKDATA_None",
+          "ElementCount": 0,
+          "SizeOnDisk": 0,
+          "OffsetInFile": "0xCCB"
+        },
+        "ImposterAtlas": [],
+        "HierarchyNodes": [],
+        "HierarchyRootOffsets": [],
+        "PageStreamingStates": [],
+        "PageDependencies": [],
+        "NumRootPages": 0,
+        "PositionPrecision": 0,
+        "NormalPrecision": 0,
+        "TangentPrecision": 0,
+        "NumInputTriangles": 0,
+        "NumInputVertices": 0,
+        "NumInputMeshes": 0,
+        "NumInputTexCoords": 0,
+        "NumClusters": 0,
+        "ResourceFlags": 0
+      },
       "Bounds": {
         "Origin": {
           "X": 0.0,
@@ -169,7 +243,7 @@
       },
       "bLODsShareStaticLighting": true,
       "ScreenSize": [
-        1.0,
+        2.0,
         0.0,
         0.0,
         0.0,

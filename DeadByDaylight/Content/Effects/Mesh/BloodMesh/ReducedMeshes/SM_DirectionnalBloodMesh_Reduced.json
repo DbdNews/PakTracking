@@ -1,0 +1,211 @@
+[
+  {
+    "Type": "BodySetup",
+    "Name": "BodySetup_0",
+    "Outer": "SM_DirectionnalBloodMesh_Reduced",
+    "Class": "UScriptClass'BodySetup'",
+    "Properties": {
+      "DefaultInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Interactable",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "Slasher",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "Blood",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "InteractionDetector",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "BlinkBlocker",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Ground",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Walkable",
+              "Response": "ECollisionResponse::ECR_Block"
+            }
+          ]
+        }
+      }
+    },
+    "BodySetupGuid": "09880BF848DACD25B4FF91AB0A2C51DB"
+  },
+  {
+    "Type": "NavCollision",
+    "Name": "NavCollision_2",
+    "Outer": "SM_DirectionnalBloodMesh_Reduced",
+    "Class": "UScriptClass'NavCollision'",
+    "CookedFormatData": {
+      "NavCollision_Chaos": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 21,
+        "SizeOnDisk": 21,
+        "OffsetInFile": "0x32"
+      }
+    }
+  },
+  {
+    "Type": "StaticMesh",
+    "Name": "SM_DirectionnalBloodMesh_Reduced",
+    "Class": "UScriptClass'StaticMesh'",
+    "Properties": {
+      "StaticMaterials": [
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'MI_BloodMesh_NOVAT'",
+            "ObjectPath": "/Game/Effects/Houdini/BloodSim_01/MI_BloodMesh_NOVAT.0"
+          },
+          "MaterialSlotName": "WorldGridMaterial",
+          "ImportedMaterialSlotName": "WorldGridMaterial",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 63.307762,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 0.0
+          }
+        }
+      ],
+      "LightmapUVDensity": 63.307762,
+      "LightMapResolution": 64,
+      "ExtendedBounds": {
+        "Origin": {
+          "X": -3.2989569,
+          "Y": 3.333799,
+          "Z": 20.205568
+        },
+        "BoxExtent": {
+          "X": 11.789777,
+          "Y": 13.220133,
+          "Z": 40.03869
+        },
+        "SphereRadius": 41.972801208496094
+      }
+    },
+    "BodySetup": {
+      "ObjectName": "BodySetup'SM_DirectionnalBloodMesh_Reduced:BodySetup_0'",
+      "ObjectPath": "/Game/Effects/Mesh/BloodMesh/ReducedMeshes/SM_DirectionnalBloodMesh_Reduced.0"
+    },
+    "NavCollision": {
+      "ObjectName": "NavCollision'SM_DirectionnalBloodMesh_Reduced:NavCollision_2'",
+      "ObjectPath": "/Game/Effects/Mesh/BloodMesh/ReducedMeshes/SM_DirectionnalBloodMesh_Reduced.1"
+    },
+    "LightingGuid": "1A68C489-40855EB1-7F592882-E4709EAC",
+    "RenderData": {
+      "LODs": [
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 1750,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 5243,
+              "bEnableCollision": false,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 1.9536382,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 5244
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 1,
+            "NumVertices": 5244,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 4,
+            "NumVertices": 5244
+          },
+          "CardRepresentationData": {
+            "Bounds": {
+              "Min": {
+                "X": -16.088734,
+                "Y": -10.886333,
+                "Z": -20.83312
+              },
+              "Max": {
+                "X": 9.49082,
+                "Y": 17.553932,
+                "Z": 61.244255
+              },
+              "IsValid": 1
+            },
+            "MaxLodLevel": 0,
+            "bMostlyTwoSided": true,
+            "CardBuildData": []
+          }
+        }
+      ],
+      "NaniteResources": {
+        "RootData": null,
+        "StreamablePages": {
+          "BulkDataFlags": "BULKDATA_None",
+          "ElementCount": 0,
+          "SizeOnDisk": 0,
+          "OffsetInFile": "0x2E321"
+        },
+        "ImposterAtlas": [],
+        "HierarchyNodes": [],
+        "HierarchyRootOffsets": [],
+        "PageStreamingStates": [],
+        "PageDependencies": [],
+        "NumRootPages": 0,
+        "PositionPrecision": 0,
+        "NormalPrecision": 0,
+        "TangentPrecision": 0,
+        "NumInputTriangles": 0,
+        "NumInputVertices": 0,
+        "NumInputMeshes": 0,
+        "NumInputTexCoords": 0,
+        "NumClusters": 0,
+        "ResourceFlags": 0
+      },
+      "Bounds": {
+        "Origin": {
+          "X": -3.2989569,
+          "Y": 3.333799,
+          "Z": 20.205568
+        },
+        "BoxExtent": {
+          "X": 11.789777,
+          "Y": 13.220133,
+          "Z": 40.03869
+        },
+        "SphereRadius": 41.9728
+      },
+      "bLODsShareStaticLighting": true,
+      "ScreenSize": [
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  }
+]

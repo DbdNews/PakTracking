@@ -1,0 +1,487 @@
+[
+  {
+    "Type": "AnimNotify_AkEvent_C",
+    "Name": "AnimNotify_AkEvent_C_0",
+    "Outer": "SK_Beholder_Activate",
+    "Class": "BlueprintGeneratedClass'/Wwise/AnimNotify_AkEvent.AnimNotify_AkEvent_C'",
+    "Template": {
+      "ObjectName": "AnimNotify_AkEvent_C'Default__AnimNotify_AkEvent_C'",
+      "ObjectPath": "/Wwise/AnimNotify_AkEvent.0"
+    },
+    "Properties": {
+      "Event": {
+        "ObjectName": "AkAudioEvent'AudioEvent_Beholder_Jumpscare'",
+        "ObjectPath": "/Game/Audio/AudioEvents/Objects/Beholder_T20/AudioEvent_Beholder_Jumpscare.0"
+      }
+    }
+  },
+  {
+    "Type": "AnimNotify_PlayNiagaraEffect",
+    "Name": "AnimNotify_PlayNiagaraEffect_0",
+    "Outer": "SK_Beholder_Activate",
+    "Class": "UScriptClass'AnimNotify_PlayNiagaraEffect'",
+    "Properties": {
+      "Template": {
+        "ObjectName": "NiagaraSystem'NS_CHU_BeholderRoar_Spit'",
+        "ObjectPath": "/Game/Effects/Niagara/NiagaraParticleSystem/Maps/Churros/Beholder/NS_CHU_BeholderRoar_Spit.41"
+      },
+      "LocationOffset": {
+        "X": 40.0,
+        "Y": -15.0,
+        "Z": 0.0
+      },
+      "SocketName": "joint_Jaw_01"
+    }
+  },
+  {
+    "Type": "AnimNotify_PlayNiagaraEffect",
+    "Name": "AnimNotify_PlayNiagaraEffect_1",
+    "Outer": "SK_Beholder_Activate",
+    "Class": "UScriptClass'AnimNotify_PlayNiagaraEffect'",
+    "Properties": {
+      "Template": {
+        "ObjectName": "NiagaraSystem'NS_CHU_BeholderRoar_Spit'",
+        "ObjectPath": "/Game/Effects/Niagara/NiagaraParticleSystem/Maps/Churros/Beholder/NS_CHU_BeholderRoar_Spit.41"
+      },
+      "LocationOffset": {
+        "X": 40.0,
+        "Y": -15.0,
+        "Z": 0.0
+      },
+      "SocketName": "joint_Jaw_01"
+    }
+  },
+  {
+    "Type": "AnimNotify_PlayNiagaraEffect",
+    "Name": "AnimNotify_PlayNiagaraEffect_2",
+    "Outer": "SK_Beholder_Activate",
+    "Class": "UScriptClass'AnimNotify_PlayNiagaraEffect'",
+    "Properties": {
+      "Template": {
+        "ObjectName": "NiagaraSystem'NS_CHU_BeholderRoar_Spit_Big'",
+        "ObjectPath": "/Game/Effects/Niagara/NiagaraParticleSystem/Maps/Churros/Beholder/NS_CHU_BeholderRoar_Spit_Big.25"
+      },
+      "LocationOffset": {
+        "X": 40.0,
+        "Y": -30.0,
+        "Z": 0.0
+      },
+      "SocketName": "joint_Jaw_01"
+    }
+  },
+  {
+    "Type": "AnimNotify_PlayNiagaraEffect",
+    "Name": "AnimNotify_PlayNiagaraEffect_3",
+    "Outer": "SK_Beholder_Activate",
+    "Class": "UScriptClass'AnimNotify_PlayNiagaraEffect'",
+    "Properties": {
+      "Template": {
+        "ObjectName": "NiagaraSystem'NS_CHU_Beholder_BarsDust_01'",
+        "ObjectPath": "/Game/Effects/Niagara/NiagaraParticleSystem/Maps/Churros/Beholder/NS_CHU_Beholder_BarsDust_01.18"
+      },
+      "LocationOffset": {
+        "X": 0.0,
+        "Y": -275.0,
+        "Z": 330.0
+      },
+      "SocketName": "joint_Char"
+    }
+  },
+  {
+    "Type": "AnimNotify_PlayNiagaraEffect",
+    "Name": "AnimNotify_PlayNiagaraEffect_4",
+    "Outer": "SK_Beholder_Activate",
+    "Class": "UScriptClass'AnimNotify_PlayNiagaraEffect'",
+    "Properties": {
+      "Template": {
+        "ObjectName": "NiagaraSystem'NS_CHU_Beholder_FallingDust+Debris_01'",
+        "ObjectPath": "/Game/Effects/Niagara/NiagaraParticleSystem/Maps/Churros/Beholder/NS_CHU_Beholder_FallingDust+Debris_01.39"
+      },
+      "LocationOffset": {
+        "X": 0.0,
+        "Y": -600.0,
+        "Z": 600.0
+      },
+      "RotationOffset": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": -90.0
+      },
+      "Attached": false,
+      "SocketName": "joint_Char"
+    }
+  },
+  {
+    "Type": "AnimSequence",
+    "Name": "SK_Beholder_Activate",
+    "Class": "UScriptClass'AnimSequence'",
+    "Properties": {
+      "BoneCompressionSettings": {
+        "ObjectName": "AnimBoneCompressionSettings'DefaultAnimBoneCompressionSettings'",
+        "ObjectPath": "/Game/Animation/DefaultAnimBoneCompressionSettings.1"
+      },
+      "CurveCompressionSettings": {
+        "ObjectName": "AnimCurveCompressionSettings'DefaultAnimCurveCompressionSettings'",
+        "ObjectPath": "/Game/Animation/DefaultAnimCurveCompressionSettings.2"
+      },
+      "Notifies": [
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "AkEvent_C",
+          "Notify": {
+            "ObjectName": "AnimNotify_AkEvent_C'SK_Beholder_Activate:AnimNotify_AkEvent_C_0'",
+            "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Animations/SK_Beholder_Activate.0"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.13392074,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 3,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 4.3333335,
+          "LinkValue": 0.13392074,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'SK_Beholder_Activate'",
+            "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Animations/SK_Beholder_Activate.6"
+          }
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "PlayNiagaraEffect",
+          "Notify": {
+            "ObjectName": "AnimNotify_PlayNiagaraEffect'SK_Beholder_Activate:AnimNotify_PlayNiagaraEffect_3'",
+            "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Animations/SK_Beholder_Activate.4"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.3611747,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 1,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 4.3333335,
+          "LinkValue": 0.3611747,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'SK_Beholder_Activate'",
+            "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Animations/SK_Beholder_Activate.6"
+          }
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "PlayNiagaraEffect",
+          "Notify": {
+            "ObjectName": "AnimNotify_PlayNiagaraEffect'SK_Beholder_Activate:AnimNotify_PlayNiagaraEffect_4'",
+            "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Animations/SK_Beholder_Activate.5"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.37070942,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 2,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 4.3333335,
+          "LinkValue": 0.37070942,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'SK_Beholder_Activate'",
+            "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Animations/SK_Beholder_Activate.6"
+          }
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "PlayNiagaraEffect",
+          "Notify": {
+            "ObjectName": "AnimNotify_PlayNiagaraEffect'SK_Beholder_Activate:AnimNotify_PlayNiagaraEffect_0'",
+            "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Animations/SK_Beholder_Activate.1"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.39060026,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 4.3333335,
+          "LinkValue": 0.39060026,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'SK_Beholder_Activate'",
+            "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Animations/SK_Beholder_Activate.6"
+          }
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "PlayNiagaraEffect",
+          "Notify": {
+            "ObjectName": "AnimNotify_PlayNiagaraEffect'SK_Beholder_Activate:AnimNotify_PlayNiagaraEffect_1'",
+            "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Animations/SK_Beholder_Activate.2"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 1.2663263,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 1,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 4.3333335,
+          "LinkValue": 1.2663263,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'SK_Beholder_Activate'",
+            "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Animations/SK_Beholder_Activate.6"
+          }
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "PlayNiagaraEffect",
+          "Notify": {
+            "ObjectName": "AnimNotify_PlayNiagaraEffect'SK_Beholder_Activate:AnimNotify_PlayNiagaraEffect_2'",
+            "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Animations/SK_Beholder_Activate.3"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 1.9880302,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 4.3333335,
+          "LinkValue": 1.9880302,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'SK_Beholder_Activate'",
+            "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Animations/SK_Beholder_Activate.6"
+          }
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "OnActivePhaseDone",
+          "Notify": null,
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 4.303776,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 4.3333335,
+          "LinkValue": 4.303776,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'SK_Beholder_Activate'",
+            "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Animations/SK_Beholder_Activate.6"
+          }
+        }
+      ],
+      "SequenceLength": 4.3333335,
+      "Skeleton": {
+        "ObjectName": "Skeleton'SK_Beholder_REF_Skeleton'",
+        "ObjectPath": "/Game/Meshes/InteractableObjects/Animals/Beholder/Models/SK_Beholder_REF_Skeleton.0"
+      }
+    },
+    "SkeletonGuid": "D3F7CAE2-4DFCC8B7-948FC1BF-3DA2F7D4",
+    "CompressedTrackToSkeletonMapTable": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      33,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      34,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41
+    ],
+    "CompressedDataStructure": {
+      "CompressedNumberOfFrames": 131
+    },
+    "BoneCompressionCodec": {
+      "ObjectName": "AnimBoneCompressionCodec_ACL'DefaultAnimBoneCompressionSettings:AnimBoneCompressionCodec_ACL_0'",
+      "ObjectPath": "/Game/Animation/DefaultAnimBoneCompressionSettings"
+    },
+    "CompressedRawDataSize": 286176
+  }
+]

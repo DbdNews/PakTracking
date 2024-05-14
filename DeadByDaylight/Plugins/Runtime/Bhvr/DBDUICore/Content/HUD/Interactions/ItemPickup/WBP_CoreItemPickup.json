@@ -1,0 +1,4830 @@
+[
+  {
+    "Type": "DBDImage",
+    "Name": "Background",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'DBDImage'",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 2048.0,
+          "Y": 832.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_UI_ItemPickupBG'",
+          "ObjectPath": "/DBDUICore/Assets/HUD/ItemPickup/T_UI_ItemPickupBG.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'WBP_CoreItemPickup_C:WidgetTree.Content.OverlaySlot_0'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.30"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "DBDImage",
+    "Name": "Separator",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'DBDImage'",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 4.0,
+          "Y": 4.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_UI_TabSeparator'",
+          "ObjectPath": "/DBDUICore/Assets/Store/Tab/T_UI_TabSeparator.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "GridSlot'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0.GridSlot_6'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.25"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "DBDImage",
+    "Name": "SwapIcon",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'DBDImage'",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 100.0,
+          "Y": 96.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_UI_ItemPickup_Icon'",
+          "ObjectPath": "/DBDUICore/Assets/HUD/ItemPickup/T_UI_ItemPickup_Icon.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "GridSlot'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0.GridSlot_3'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.22"
+      },
+      "RenderTransform": {
+        "Angle": 1.0
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "DBDRichTextBlock",
+    "Name": "PickupItemDescriptionRTB",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'DBDRichTextBlock'",
+    "Properties": {
+      "TextStyleSet": {
+        "ObjectName": "DataTable'CoreRichTextStyle'",
+        "ObjectPath": "/DBDUICore/Data/RichTexts/CoreRichTextStyle.0"
+      },
+      "DecoratorClasses": [
+        {
+          "ObjectName": "Class'RichTextNestedTagsDecorator'",
+          "ObjectPath": "/Script/DBDUIViewsCore"
+        }
+      ],
+      "bOverrideDefaultStyle": true,
+      "DefaultTextStyleOverride": {
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Font'DBDCoreFont'",
+            "ObjectPath": "/DBDUICore/Assets/Fonts/DBDCoreFont.0"
+          },
+          "TypefaceFontName": "Condensed"
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 0.984375,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "FFFEFF"
+          }
+        },
+        "SelectedBackgroundColor": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "FFFFFF"
+          },
+          "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+        }
+      },
+      "AutoWrapText": true,
+      "WrapTextAt": 800.0,
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WBP_CoreItemPickup_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_2'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.40"
+      }
+    }
+  },
+  {
+    "Type": "DBDTextBlock",
+    "Name": "CurrentItemNameTB",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'DBDTextBlock'",
+    "Properties": {
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 1.0,
+          "G": 1.0,
+          "B": 1.0,
+          "A": 0.5,
+          "Hex": "7FFFFFFF"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'DBDCoreFont'",
+          "ObjectPath": "/DBDUICore/Assets/Fonts/DBDCoreFont.0"
+        },
+        "TypefaceFontName": "Black",
+        "Size": 30
+      },
+      "WrapTextAt": 800.0,
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WBP_CoreItemPickup_C:WidgetTree.VerticalBox_1.VerticalBoxSlot_1'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.42"
+      },
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "DBDTextBlock",
+    "Name": "PickupItemNameTB",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'DBDTextBlock'",
+    "Properties": {
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'DBDCoreFont'",
+          "ObjectPath": "/DBDUICore/Assets/Fonts/DBDCoreFont.0"
+        },
+        "TypefaceFontName": "Black",
+        "Size": 30
+      },
+      "WrapTextAt": 800.0,
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WBP_CoreItemPickup_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.39"
+      },
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "DBDTextBlock",
+    "Name": "ReplaceTB",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'DBDTextBlock'",
+    "Properties": {
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 1.0,
+          "G": 1.0,
+          "B": 1.0,
+          "A": 0.5,
+          "Hex": "7FFFFFFF"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'DBDCoreFont'",
+          "ObjectPath": "/DBDUICore/Assets/Fonts/DBDCoreFont.0"
+        },
+        "TypefaceFontName": "Regular",
+        "Size": 20
+      },
+      "WrapTextAt": 800.0,
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'WBP_CoreItemPickup_C:WidgetTree.VerticalBox_1.VerticalBoxSlot_0'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.41"
+      },
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ClearItemWidgets",
+    "Outer": "WBP_CoreItemPickup_C",
+    "Class": "UScriptClass'Function'",
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 0,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemPickup_C'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.48"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CurrentItem",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+              "PropertyClass": {
+                "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemBundle_V2_C'",
+                "ObjectPath": "/DBDUICore/Common/LoadoutParts/WBP_CoreItemBundle_V2.16"
+              }
+            }
+          }
+        },
+        "Offset": 16,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "SetVisibility",
+          "Parameters": [
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 1
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 38,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemPickup_C'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.48"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CurrentK36Item",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+              "PropertyClass": {
+                "ObjectName": "WidgetBlueprintGeneratedClass'WBP_K36_ItemSlot_C'",
+                "ObjectPath": "/TheK36/K36/Blueprints/UI/WBP_K36_ItemSlot.17"
+              }
+            }
+          }
+        },
+        "Offset": 16,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "SetVisibility",
+          "Parameters": [
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 1
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 76,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemPickup_C'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.48"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "PickupItem",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+              "PropertyClass": {
+                "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemBundle_V2_C'",
+                "ObjectPath": "/DBDUICore/Common/LoadoutParts/WBP_CoreItemBundle_V2.16"
+              }
+            }
+          }
+        },
+        "Offset": 16,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "SetVisibility",
+          "Parameters": [
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 1
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 114,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemPickup_C'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.48"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "PickupK36Item",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+              "PropertyClass": {
+                "ObjectName": "WidgetBlueprintGeneratedClass'WBP_K36_ItemSlot_C'",
+                "ObjectPath": "/TheK36/K36/Blueprints/UI/WBP_K36_ItemSlot.17"
+              }
+            }
+          }
+        },
+        "Offset": 16,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "SetVisibility",
+          "Parameters": [
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 1
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 152,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 154
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WBP_CoreItemPickup",
+    "Outer": "WBP_CoreItemPickup_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_itemToPickUpData",
+        "Flags": "RF_Public",
+        "ElementSize": 456,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'ItemPickupViewData'",
+          "ObjectPath": "/Script/DBDUIViewInterfaces"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_currentItem",
+        "Flags": "RF_Public",
+        "ElementSize": 456,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'ItemPickupViewData'",
+          "ObjectPath": "/Script/DBDUIViewInterfaces"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValidSoftObjectReference_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_IsDesignTime",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_UpdateScale_scale_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_ComputedJump",
+        "StatementIndex": 0,
+        "OffsetExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreItemPickup_C:ExecuteUbergraph_WBP_CoreItemPickup'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.8"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "EntryPoint",
+              "Flags": "RF_Public",
+              "ElementSize": 4,
+              "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_VirtualFunction",
+        "StatementIndex": 10,
+        "Function": "SetVisibility",
+        "Parameters": [
+          {
+            "Inst": "EX_ByteConst",
+            "Value": 3
+          }
+        ]
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 26,
+        "CodeOffset": 334,
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.ExecuteUbergraph_WBP_CoreItemPickup[334]"
+      },
+      {
+        "Inst": "EX_JumpIfNot",
+        "StatementIndex": 31,
+        "CodeOffset": 82,
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.ExecuteUbergraph_WBP_CoreItemPickup[82]",
+        "BooleanExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemPickup_C'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.48"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "IsRegularItem",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 1,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LocalVirtualFunction",
+        "StatementIndex": 45,
+        "Function": "SetRegularItems",
+        "Parameters": [
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'WBP_CoreItemPickup_C:ExecuteUbergraph_WBP_CoreItemPickup'",
+                "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.8"
+              },
+              "Property": {
+                "Type": "StructProperty",
+                "Name": "K2Node_Event_itemToPickUpData",
+                "Flags": "RF_Public",
+                "ElementSize": 456,
+                "PropertyFlags": "ConstParm",
+                "Struct": {
+                  "ObjectName": "Class'ItemPickupViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              }
+            }
+          },
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'WBP_CoreItemPickup_C:ExecuteUbergraph_WBP_CoreItemPickup'",
+                "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.8"
+              },
+              "Property": {
+                "Type": "StructProperty",
+                "Name": "K2Node_Event_currentItem",
+                "Flags": "RF_Public",
+                "ElementSize": 456,
+                "PropertyFlags": "ConstParm",
+                "Struct": {
+                  "ObjectName": "Class'ItemPickupViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 77,
+        "CodeOffset": 334,
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.ExecuteUbergraph_WBP_CoreItemPickup[334]"
+      },
+      {
+        "Inst": "EX_LocalVirtualFunction",
+        "StatementIndex": 82,
+        "Function": "SetK36Items",
+        "Parameters": [
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'WBP_CoreItemPickup_C:ExecuteUbergraph_WBP_CoreItemPickup'",
+                "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.8"
+              },
+              "Property": {
+                "Type": "StructProperty",
+                "Name": "K2Node_Event_itemToPickUpData",
+                "Flags": "RF_Public",
+                "ElementSize": 456,
+                "PropertyFlags": "ConstParm",
+                "Struct": {
+                  "ObjectName": "Class'ItemPickupViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              }
+            }
+          },
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'WBP_CoreItemPickup_C:ExecuteUbergraph_WBP_CoreItemPickup'",
+                "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.8"
+              },
+              "Property": {
+                "Type": "StructProperty",
+                "Name": "K2Node_Event_currentItem",
+                "Flags": "RF_Public",
+                "ElementSize": 456,
+                "PropertyFlags": "ConstParm",
+                "Struct": {
+                  "ObjectName": "Class'ItemPickupViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 114,
+        "CodeOffset": 334,
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.ExecuteUbergraph_WBP_CoreItemPickup[334]"
+      },
+      {
+        "Inst": "EX_VirtualFunction",
+        "StatementIndex": 119,
+        "Function": "SetVisibility",
+        "Parameters": [
+          {
+            "Inst": "EX_ByteConst",
+            "Value": 1
+          }
+        ]
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 135,
+        "CodeOffset": 334,
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.ExecuteUbergraph_WBP_CoreItemPickup[334]"
+      },
+      {
+        "Inst": "EX_LocalVirtualFunction",
+        "StatementIndex": 140,
+        "Function": "ClearItemWidgets",
+        "Parameters": []
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 154,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreItemPickup_C:ExecuteUbergraph_WBP_CoreItemPickup'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.8"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_IsValidSoftObjectReference_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetSystemLibrary:IsValidSoftObjectReference'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_StructMemberContext",
+              "Property": {
+                "Path": [
+                  "SpecialIconTexture"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'ItemPickupViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              },
+              "StructExpression": {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'WBP_CoreItemPickup_C:ExecuteUbergraph_WBP_CoreItemPickup'",
+                    "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.8"
+                  },
+                  "Property": {
+                    "Type": "StructProperty",
+                    "Name": "K2Node_Event_itemToPickUpData",
+                    "Flags": "RF_Public",
+                    "ElementSize": 456,
+                    "PropertyFlags": "ConstParm",
+                    "Struct": {
+                      "ObjectName": "Class'ItemPickupViewData'",
+                      "ObjectPath": "/Script/DBDUIViewInterfaces"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 192,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreItemPickup_C:ExecuteUbergraph_WBP_CoreItemPickup'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.8"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_Not_PreBool_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:Not_PreBool'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_CoreItemPickup_C:ExecuteUbergraph_WBP_CoreItemPickup'",
+                  "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.8"
+                },
+                "Property": {
+                  "Type": "BoolProperty",
+                  "Name": "CallFunc_IsValidSoftObjectReference_ReturnValue",
+                  "Flags": "RF_Public",
+                  "ElementSize": 1,
+                  "FieldSize": 1,
+                  "ByteOffset": 0,
+                  "ByteMask": 1,
+                  "FieldMask": 255,
+                  "BoolSize": 1,
+                  "bIsNativeBool": true
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 221,
+        "Variable": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemPickup_C'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.48"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "IsRegularItem",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 1,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreItemPickup_C:ExecuteUbergraph_WBP_CoreItemPickup'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.8"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_Not_PreBool_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 240,
+        "CodeOffset": 31,
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.ExecuteUbergraph_WBP_CoreItemPickup[31]"
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 245,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreItemPickup_C:ExecuteUbergraph_WBP_CoreItemPickup'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.8"
+            },
+            "Property": {
+              "Type": "FloatProperty",
+              "Name": "CallFunc_UpdateScale_scale_ImplicitCast",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Cast",
+          "ConversionType": "CST_DoubleToFloat",
+          "Target": {
+            "Inst": "EX_InstanceVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemPickup_C'",
+                "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.48"
+              },
+              "Property": {
+                "Type": "DoubleProperty",
+                "Name": "CurrentItemScale",
+                "Flags": "RF_Public | RF_LoadCompleted",
+                "ElementSize": 8,
+                "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 274,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemPickup_C'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.48"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CurrentItem",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+              "PropertyClass": {
+                "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemBundle_V2_C'",
+                "ObjectPath": "/DBDUICore/Common/LoadoutParts/WBP_CoreItemBundle_V2.16"
+              }
+            }
+          }
+        },
+        "Offset": 23,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "UpdateScale",
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_CoreItemPickup_C:ExecuteUbergraph_WBP_CoreItemPickup'",
+                  "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.8"
+                },
+                "Property": {
+                  "Type": "FloatProperty",
+                  "Name": "CallFunc_UpdateScale_scale_ImplicitCast",
+                  "Flags": "RF_Public",
+                  "ElementSize": 4
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 319,
+        "CodeOffset": 334,
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.ExecuteUbergraph_WBP_CoreItemPickup[334]"
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 324,
+        "CodeOffset": 119,
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.ExecuteUbergraph_WBP_CoreItemPickup[119]"
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 329,
+        "CodeOffset": 245,
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.ExecuteUbergraph_WBP_CoreItemPickup[245]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 334,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 336
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "HideItemPickupPrompt",
+    "Outer": "WBP_CoreItemPickup_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Class'HudItemPickupViewInterface:HideItemPickupPrompt'",
+      "ObjectPath": "/Script/DBDUIViewInterfaces"
+    },
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 0,
+        "Function": {
+          "ObjectName": "Function'WBP_CoreItemPickup_C:ExecuteUbergraph_WBP_CoreItemPickup'",
+          "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.8"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 324
+          }
+        ],
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.ExecuteUbergraph_WBP_CoreItemPickup[324]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 15,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 17
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "PreConstruct",
+    "Outer": "WBP_CoreItemPickup_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget:PreConstruct'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "IsDesignTime",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LetValueOnPersistentFrame",
+        "StatementIndex": 0,
+        "DestinationProperty": {
+          "Owner": {
+            "ObjectName": "Function'WBP_CoreItemPickup_C:ExecuteUbergraph_WBP_CoreItemPickup'",
+            "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.8"
+          },
+          "Property": {
+            "Type": "BoolProperty",
+            "Name": "K2Node_Event_IsDesignTime",
+            "Flags": "RF_Public",
+            "ElementSize": 1,
+            "FieldSize": 1,
+            "ByteOffset": 0,
+            "ByteMask": 1,
+            "FieldMask": 255,
+            "BoolSize": 1,
+            "bIsNativeBool": true
+          }
+        },
+        "AssignmentExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreItemPickup_C:PreConstruct'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.10"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "IsDesignTime",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 18,
+        "Function": {
+          "ObjectName": "Function'WBP_CoreItemPickup_C:ExecuteUbergraph_WBP_CoreItemPickup'",
+          "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.8"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 329
+          }
+        ],
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.ExecuteUbergraph_WBP_CoreItemPickup[329]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 33,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 35
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetData",
+    "Outer": "WBP_CoreItemPickup_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Class'HudItemPickupViewInterface:SetData'",
+      "ObjectPath": "/Script/DBDUIViewInterfaces"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "itemToPickUpData",
+        "Flags": "RF_Public",
+        "ElementSize": 456,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'ItemPickupViewData'",
+          "ObjectPath": "/Script/DBDUIViewInterfaces"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "currentItem",
+        "Flags": "RF_Public",
+        "ElementSize": 456,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'ItemPickupViewData'",
+          "ObjectPath": "/Script/DBDUIViewInterfaces"
+        }
+      }
+    ],
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LetValueOnPersistentFrame",
+        "StatementIndex": 0,
+        "DestinationProperty": {
+          "Owner": {
+            "ObjectName": "Function'WBP_CoreItemPickup_C:ExecuteUbergraph_WBP_CoreItemPickup'",
+            "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.8"
+          },
+          "Property": {
+            "Type": "StructProperty",
+            "Name": "K2Node_Event_itemToPickUpData",
+            "Flags": "RF_Public",
+            "ElementSize": 456,
+            "PropertyFlags": "ConstParm",
+            "Struct": {
+              "ObjectName": "Class'ItemPickupViewData'",
+              "ObjectPath": "/Script/DBDUIViewInterfaces"
+            }
+          }
+        },
+        "AssignmentExpression": {
+          "Inst": "EX_LocalOutVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreItemPickup_C:SetData'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.11"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "itemToPickUpData",
+              "Flags": "RF_Public",
+              "ElementSize": 456,
+              "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+              "Struct": {
+                "ObjectName": "Class'ItemPickupViewData'",
+                "ObjectPath": "/Script/DBDUIViewInterfaces"
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LetValueOnPersistentFrame",
+        "StatementIndex": 18,
+        "DestinationProperty": {
+          "Owner": {
+            "ObjectName": "Function'WBP_CoreItemPickup_C:ExecuteUbergraph_WBP_CoreItemPickup'",
+            "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.8"
+          },
+          "Property": {
+            "Type": "StructProperty",
+            "Name": "K2Node_Event_currentItem",
+            "Flags": "RF_Public",
+            "ElementSize": 456,
+            "PropertyFlags": "ConstParm",
+            "Struct": {
+              "ObjectName": "Class'ItemPickupViewData'",
+              "ObjectPath": "/Script/DBDUIViewInterfaces"
+            }
+          }
+        },
+        "AssignmentExpression": {
+          "Inst": "EX_LocalOutVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreItemPickup_C:SetData'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.11"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "currentItem",
+              "Flags": "RF_Public",
+              "ElementSize": 456,
+              "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+              "Struct": {
+                "ObjectName": "Class'ItemPickupViewData'",
+                "ObjectPath": "/Script/DBDUIViewInterfaces"
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 36,
+        "Function": {
+          "ObjectName": "Function'WBP_CoreItemPickup_C:ExecuteUbergraph_WBP_CoreItemPickup'",
+          "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.8"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 140
+          }
+        ],
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.ExecuteUbergraph_WBP_CoreItemPickup[140]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 51,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 53
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetK36Items",
+    "Outer": "WBP_CoreItemPickup_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "PickupK36Data",
+        "Flags": "RF_Public",
+        "ElementSize": 456,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'ItemPickupViewData'",
+          "ObjectPath": "/Script/DBDUIViewInterfaces"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CurrentK36Data",
+        "Flags": "RF_Public",
+        "ElementSize": 456,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'ItemPickupViewData'",
+          "ObjectPath": "/Script/DBDUIViewInterfaces"
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_StringToText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsTexture_2D",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsTexture_2D_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_StringToText_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsTexture_2D_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_StringToText_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsTexture_2D_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_StringToText_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      }
+    ],
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 0,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemPickup_C'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.48"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CurrentK36Item",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+              "PropertyClass": {
+                "ObjectName": "WidgetBlueprintGeneratedClass'WBP_K36_ItemSlot_C'",
+                "ObjectPath": "/TheK36/K36/Blueprints/UI/WBP_K36_ItemSlot.17"
+              }
+            }
+          }
+        },
+        "Offset": 16,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "SetVisibility",
+          "Parameters": [
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 4
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 38,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemPickup_C'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.48"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "PickupK36Item",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+              "PropertyClass": {
+                "ObjectName": "WidgetBlueprintGeneratedClass'WBP_K36_ItemSlot_C'",
+                "ObjectPath": "/TheK36/K36/Blueprints/UI/WBP_K36_ItemSlot.17"
+              }
+            }
+          }
+        },
+        "Offset": 16,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "SetVisibility",
+          "Parameters": [
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 4
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 76,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemPickup_C'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.48"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "PickupK36Item",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+              "PropertyClass": {
+                "ObjectName": "WidgetBlueprintGeneratedClass'WBP_K36_ItemSlot_C'",
+                "ObjectPath": "/TheK36/K36/Blueprints/UI/WBP_K36_ItemSlot.17"
+              }
+            }
+          }
+        },
+        "Offset": 34,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_LocalVirtualFunction",
+          "Function": "SetActive",
+          "Parameters": [
+            {
+              "Inst": "EX_False"
+            },
+            {
+              "Inst": "EX_False"
+            },
+            {
+              "Inst": "EX_StructMemberContext",
+              "Property": {
+                "Path": [
+                  "ItemCustomIndex"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'ItemPickupViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              },
+              "StructExpression": {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+                    "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+                  },
+                  "Property": {
+                    "Type": "StructProperty",
+                    "Name": "PickupK36Data",
+                    "Flags": "RF_Public",
+                    "ElementSize": 456,
+                    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+                    "Struct": {
+                      "ObjectName": "Class'ItemPickupViewData'",
+                      "ObjectPath": "/Script/DBDUIViewInterfaces"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 132,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyClass": {
+                "ObjectName": "Class'Object'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetSystemLibrary:Conv_SoftObjectReferenceToObject'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_StructMemberContext",
+              "Property": {
+                "Path": [
+                  "IconTexture"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'BaseLoadoutPartViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              },
+              "StructExpression": {
+                "Inst": "EX_StructMemberContext",
+                "Property": {
+                  "Path": [
+                    "Item"
+                  ],
+                  "ResolvedOwner": {
+                    "ObjectName": "Class'ItemBundleViewData'",
+                    "ObjectPath": "/Script/DBDUIViewInterfaces"
+                  }
+                },
+                "StructExpression": {
+                  "Inst": "EX_StructMemberContext",
+                  "Property": {
+                    "Path": [
+                      "BundleViewData"
+                    ],
+                    "ResolvedOwner": {
+                      "ObjectName": "Class'ItemPickupViewData'",
+                      "ObjectPath": "/Script/DBDUIViewInterfaces"
+                    }
+                  },
+                  "StructExpression": {
+                    "Inst": "EX_LocalVariable",
+                    "Variable": {
+                      "Owner": {
+                        "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+                        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+                      },
+                      "Property": {
+                        "Type": "StructProperty",
+                        "Name": "PickupK36Data",
+                        "Flags": "RF_Public",
+                        "ElementSize": 456,
+                        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+                        "Struct": {
+                          "ObjectName": "Class'ItemPickupViewData'",
+                          "ObjectPath": "/Script/DBDUIViewInterfaces"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 188,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyClass": {
+                "ObjectName": "Class'Object'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetSystemLibrary:Conv_SoftObjectReferenceToObject'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_StructMemberContext",
+              "Property": {
+                "Path": [
+                  "SpecialIconTexture"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'ItemPickupViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              },
+              "StructExpression": {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+                    "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+                  },
+                  "Property": {
+                    "Type": "StructProperty",
+                    "Name": "PickupK36Data",
+                    "Flags": "RF_Public",
+                    "ElementSize": 456,
+                    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+                    "Struct": {
+                      "ObjectName": "Class'ItemPickupViewData'",
+                      "ObjectPath": "/Script/DBDUIViewInterfaces"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 226,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "K2Node_DynamicCast_AsTexture_2D",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyClass": {
+                "ObjectName": "Class'Texture2D'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_DynamicCast",
+          "InterfaceClass": {
+            "ObjectName": "Class'Texture2D'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Target": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+                "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'Object'",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 262,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "K2Node_DynamicCast_bSuccess",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Cast",
+          "ConversionType": "CST_ObjectToBool",
+          "Target": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+                "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "K2Node_DynamicCast_AsTexture_2D",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'Texture2D'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 291,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "K2Node_DynamicCast_AsTexture_2D_1",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyClass": {
+                "ObjectName": "Class'Texture2D'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_DynamicCast",
+          "InterfaceClass": {
+            "ObjectName": "Class'Texture2D'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Target": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+                "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue_1",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'Object'",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 327,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "K2Node_DynamicCast_bSuccess_1",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Cast",
+          "ConversionType": "CST_ObjectToBool",
+          "Target": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+                "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "K2Node_DynamicCast_AsTexture_2D_1",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'Texture2D'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 356,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemPickup_C'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.48"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "PickupK36Item",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+              "PropertyClass": {
+                "ObjectName": "WidgetBlueprintGeneratedClass'WBP_K36_ItemSlot_C'",
+                "ObjectPath": "/TheK36/K36/Blueprints/UI/WBP_K36_ItemSlot.17"
+              }
+            }
+          }
+        },
+        "Offset": 32,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_LocalVirtualFunction",
+          "Function": "SetDuoIcon",
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+                  "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+                },
+                "Property": {
+                  "Type": "ObjectProperty",
+                  "Name": "K2Node_DynamicCast_AsTexture_2D_1",
+                  "Flags": "RF_Public",
+                  "ElementSize": 8,
+                  "PropertyClass": {
+                    "ObjectName": "Class'Texture2D'",
+                    "ObjectPath": "/Script/Engine"
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+                  "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+                },
+                "Property": {
+                  "Type": "ObjectProperty",
+                  "Name": "K2Node_DynamicCast_AsTexture_2D",
+                  "Flags": "RF_Public",
+                  "ElementSize": 8,
+                  "PropertyClass": {
+                    "ObjectName": "Class'Texture2D'",
+                    "ObjectPath": "/Script/Engine"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 410,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+            },
+            "Property": {
+              "Type": "TextProperty",
+              "Name": "CallFunc_Conv_StringToText_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 24
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetTextLibrary:Conv_StringToText'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_StructMemberContext",
+              "Property": {
+                "Path": [
+                  "Description"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'ItemPickupViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              },
+              "StructExpression": {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+                    "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+                  },
+                  "Property": {
+                    "Type": "StructProperty",
+                    "Name": "PickupK36Data",
+                    "Flags": "RF_Public",
+                    "ElementSize": 456,
+                    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+                    "Struct": {
+                      "ObjectName": "Class'ItemPickupViewData'",
+                      "ObjectPath": "/Script/DBDUIViewInterfaces"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 456,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemPickup_C'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.48"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "PickupItemDescriptionRTB",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+              "PropertyClass": {
+                "ObjectName": "Class'DBDRichTextBlock'",
+                "ObjectPath": "/Script/DBDUIViewsCore"
+              }
+            }
+          }
+        },
+        "Offset": 19,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'DBDRichTextBlock:SetHTMLText'",
+            "ObjectPath": "/Script/DBDUIViewsCore"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+                  "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+                },
+                "Property": {
+                  "Type": "TextProperty",
+                  "Name": "CallFunc_Conv_StringToText_ReturnValue_1",
+                  "Flags": "RF_Public",
+                  "ElementSize": 24
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 497,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+            },
+            "Property": {
+              "Type": "TextProperty",
+              "Name": "CallFunc_Conv_StringToText_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 24
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetTextLibrary:Conv_StringToText'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_StructMemberContext",
+              "Property": {
+                "Path": [
+                  "DisplayName"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'BaseLoadoutPartViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              },
+              "StructExpression": {
+                "Inst": "EX_StructMemberContext",
+                "Property": {
+                  "Path": [
+                    "Item"
+                  ],
+                  "ResolvedOwner": {
+                    "ObjectName": "Class'ItemBundleViewData'",
+                    "ObjectPath": "/Script/DBDUIViewInterfaces"
+                  }
+                },
+                "StructExpression": {
+                  "Inst": "EX_StructMemberContext",
+                  "Property": {
+                    "Path": [
+                      "BundleViewData"
+                    ],
+                    "ResolvedOwner": {
+                      "ObjectName": "Class'ItemPickupViewData'",
+                      "ObjectPath": "/Script/DBDUIViewInterfaces"
+                    }
+                  },
+                  "StructExpression": {
+                    "Inst": "EX_LocalVariable",
+                    "Variable": {
+                      "Owner": {
+                        "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+                        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+                      },
+                      "Property": {
+                        "Type": "StructProperty",
+                        "Name": "PickupK36Data",
+                        "Flags": "RF_Public",
+                        "ElementSize": 456,
+                        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+                        "Struct": {
+                          "ObjectName": "Class'ItemPickupViewData'",
+                          "ObjectPath": "/Script/DBDUIViewInterfaces"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 561,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemPickup_C'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.48"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "PickupItemNameTB",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+              "PropertyClass": {
+                "ObjectName": "Class'DBDTextBlock'",
+                "ObjectPath": "/Script/DBDUIViewsCore"
+              }
+            }
+          }
+        },
+        "Offset": 23,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "SetText",
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+                  "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+                },
+                "Property": {
+                  "Type": "TextProperty",
+                  "Name": "CallFunc_Conv_StringToText_ReturnValue",
+                  "Flags": "RF_Public",
+                  "ElementSize": 24
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_JumpIfNot",
+        "StatementIndex": 606,
+        "CodeOffset": 1168,
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.SetK36Items[1168]",
+        "BooleanExpression": {
+          "Inst": "EX_StructMemberContext",
+          "Property": {
+            "Path": [
+              "IsValid"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Class'ItemPickupViewData'",
+              "ObjectPath": "/Script/DBDUIViewInterfaces"
+            }
+          },
+          "StructExpression": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+                "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+              },
+              "Property": {
+                "Type": "StructProperty",
+                "Name": "CurrentK36Data",
+                "Flags": "RF_Public",
+                "ElementSize": 456,
+                "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+                "Struct": {
+                  "ObjectName": "Class'ItemPickupViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 629,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemPickup_C'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.48"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CurrentK36Item",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+              "PropertyClass": {
+                "ObjectName": "WidgetBlueprintGeneratedClass'WBP_K36_ItemSlot_C'",
+                "ObjectPath": "/TheK36/K36/Blueprints/UI/WBP_K36_ItemSlot.17"
+              }
+            }
+          }
+        },
+        "Offset": 34,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_LocalVirtualFunction",
+          "Function": "SetActive",
+          "Parameters": [
+            {
+              "Inst": "EX_False"
+            },
+            {
+              "Inst": "EX_False"
+            },
+            {
+              "Inst": "EX_StructMemberContext",
+              "Property": {
+                "Path": [
+                  "ItemCustomIndex"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'ItemPickupViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              },
+              "StructExpression": {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+                    "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+                  },
+                  "Property": {
+                    "Type": "StructProperty",
+                    "Name": "CurrentK36Data",
+                    "Flags": "RF_Public",
+                    "ElementSize": 456,
+                    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+                    "Struct": {
+                      "ObjectName": "Class'ItemPickupViewData'",
+                      "ObjectPath": "/Script/DBDUIViewInterfaces"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 685,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue_2",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyClass": {
+                "ObjectName": "Class'Object'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetSystemLibrary:Conv_SoftObjectReferenceToObject'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_StructMemberContext",
+              "Property": {
+                "Path": [
+                  "SpecialIconTexture"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'ItemPickupViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              },
+              "StructExpression": {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+                    "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+                  },
+                  "Property": {
+                    "Type": "StructProperty",
+                    "Name": "CurrentK36Data",
+                    "Flags": "RF_Public",
+                    "ElementSize": 456,
+                    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+                    "Struct": {
+                      "ObjectName": "Class'ItemPickupViewData'",
+                      "ObjectPath": "/Script/DBDUIViewInterfaces"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 723,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "K2Node_DynamicCast_AsTexture_2D_2",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyClass": {
+                "ObjectName": "Class'Texture2D'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_DynamicCast",
+          "InterfaceClass": {
+            "ObjectName": "Class'Texture2D'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Target": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+                "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue_2",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'Object'",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 759,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "K2Node_DynamicCast_bSuccess_2",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Cast",
+          "ConversionType": "CST_ObjectToBool",
+          "Target": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+                "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "K2Node_DynamicCast_AsTexture_2D_2",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'Texture2D'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 788,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue_3",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyClass": {
+                "ObjectName": "Class'Object'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetSystemLibrary:Conv_SoftObjectReferenceToObject'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_StructMemberContext",
+              "Property": {
+                "Path": [
+                  "IconTexture"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'BaseLoadoutPartViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              },
+              "StructExpression": {
+                "Inst": "EX_StructMemberContext",
+                "Property": {
+                  "Path": [
+                    "Item"
+                  ],
+                  "ResolvedOwner": {
+                    "ObjectName": "Class'ItemBundleViewData'",
+                    "ObjectPath": "/Script/DBDUIViewInterfaces"
+                  }
+                },
+                "StructExpression": {
+                  "Inst": "EX_StructMemberContext",
+                  "Property": {
+                    "Path": [
+                      "BundleViewData"
+                    ],
+                    "ResolvedOwner": {
+                      "ObjectName": "Class'ItemPickupViewData'",
+                      "ObjectPath": "/Script/DBDUIViewInterfaces"
+                    }
+                  },
+                  "StructExpression": {
+                    "Inst": "EX_LocalVariable",
+                    "Variable": {
+                      "Owner": {
+                        "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+                        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+                      },
+                      "Property": {
+                        "Type": "StructProperty",
+                        "Name": "CurrentK36Data",
+                        "Flags": "RF_Public",
+                        "ElementSize": 456,
+                        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+                        "Struct": {
+                          "ObjectName": "Class'ItemPickupViewData'",
+                          "ObjectPath": "/Script/DBDUIViewInterfaces"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 844,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "K2Node_DynamicCast_AsTexture_2D_3",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyClass": {
+                "ObjectName": "Class'Texture2D'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_DynamicCast",
+          "InterfaceClass": {
+            "ObjectName": "Class'Texture2D'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Target": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+                "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue_3",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'Object'",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 880,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "K2Node_DynamicCast_bSuccess_3",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Cast",
+          "ConversionType": "CST_ObjectToBool",
+          "Target": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+                "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "K2Node_DynamicCast_AsTexture_2D_3",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'Texture2D'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 909,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemPickup_C'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.48"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CurrentK36Item",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+              "PropertyClass": {
+                "ObjectName": "WidgetBlueprintGeneratedClass'WBP_K36_ItemSlot_C'",
+                "ObjectPath": "/TheK36/K36/Blueprints/UI/WBP_K36_ItemSlot.17"
+              }
+            }
+          }
+        },
+        "Offset": 32,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_LocalVirtualFunction",
+          "Function": "SetDuoIcon",
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+                  "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+                },
+                "Property": {
+                  "Type": "ObjectProperty",
+                  "Name": "K2Node_DynamicCast_AsTexture_2D_2",
+                  "Flags": "RF_Public",
+                  "ElementSize": 8,
+                  "PropertyClass": {
+                    "ObjectName": "Class'Texture2D'",
+                    "ObjectPath": "/Script/Engine"
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+                  "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+                },
+                "Property": {
+                  "Type": "ObjectProperty",
+                  "Name": "K2Node_DynamicCast_AsTexture_2D_3",
+                  "Flags": "RF_Public",
+                  "ElementSize": 8,
+                  "PropertyClass": {
+                    "ObjectName": "Class'Texture2D'",
+                    "ObjectPath": "/Script/Engine"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 963,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+            },
+            "Property": {
+              "Type": "TextProperty",
+              "Name": "CallFunc_Conv_StringToText_ReturnValue_3",
+              "Flags": "RF_Public",
+              "ElementSize": 24
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetTextLibrary:Conv_StringToText'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_StructMemberContext",
+              "Property": {
+                "Path": [
+                  "Description"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'ItemPickupViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              },
+              "StructExpression": {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+                    "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+                  },
+                  "Property": {
+                    "Type": "StructProperty",
+                    "Name": "CurrentK36Data",
+                    "Flags": "RF_Public",
+                    "ElementSize": 456,
+                    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+                    "Struct": {
+                      "ObjectName": "Class'ItemPickupViewData'",
+                      "ObjectPath": "/Script/DBDUIViewInterfaces"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 1009,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemPickup_C'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.48"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "ReplaceTB",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+              "PropertyClass": {
+                "ObjectName": "Class'DBDTextBlock'",
+                "ObjectPath": "/Script/DBDUIViewsCore"
+              }
+            }
+          }
+        },
+        "Offset": 23,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "SetText",
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+                  "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+                },
+                "Property": {
+                  "Type": "TextProperty",
+                  "Name": "CallFunc_Conv_StringToText_ReturnValue_3",
+                  "Flags": "RF_Public",
+                  "ElementSize": 24
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1054,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+            },
+            "Property": {
+              "Type": "TextProperty",
+              "Name": "CallFunc_Conv_StringToText_ReturnValue_2",
+              "Flags": "RF_Public",
+              "ElementSize": 24
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetTextLibrary:Conv_StringToText'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_StructMemberContext",
+              "Property": {
+                "Path": [
+                  "DisplayName"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'BaseLoadoutPartViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              },
+              "StructExpression": {
+                "Inst": "EX_StructMemberContext",
+                "Property": {
+                  "Path": [
+                    "Item"
+                  ],
+                  "ResolvedOwner": {
+                    "ObjectName": "Class'ItemBundleViewData'",
+                    "ObjectPath": "/Script/DBDUIViewInterfaces"
+                  }
+                },
+                "StructExpression": {
+                  "Inst": "EX_StructMemberContext",
+                  "Property": {
+                    "Path": [
+                      "BundleViewData"
+                    ],
+                    "ResolvedOwner": {
+                      "ObjectName": "Class'ItemPickupViewData'",
+                      "ObjectPath": "/Script/DBDUIViewInterfaces"
+                    }
+                  },
+                  "StructExpression": {
+                    "Inst": "EX_LocalVariable",
+                    "Variable": {
+                      "Owner": {
+                        "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+                        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+                      },
+                      "Property": {
+                        "Type": "StructProperty",
+                        "Name": "CurrentK36Data",
+                        "Flags": "RF_Public",
+                        "ElementSize": 456,
+                        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+                        "Struct": {
+                          "ObjectName": "Class'ItemPickupViewData'",
+                          "ObjectPath": "/Script/DBDUIViewInterfaces"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 1118,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemPickup_C'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.48"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CurrentItemNameTB",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+              "PropertyClass": {
+                "ObjectName": "Class'DBDTextBlock'",
+                "ObjectPath": "/Script/DBDUIViewsCore"
+              }
+            }
+          }
+        },
+        "Offset": 23,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "SetText",
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+                  "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+                },
+                "Property": {
+                  "Type": "TextProperty",
+                  "Name": "CallFunc_Conv_StringToText_ReturnValue_2",
+                  "Flags": "RF_Public",
+                  "ElementSize": 24
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 1163,
+        "CodeOffset": 1246,
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.SetK36Items[1246]"
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 1168,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemPickup_C'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.48"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CurrentK36Item",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+              "PropertyClass": {
+                "ObjectName": "WidgetBlueprintGeneratedClass'WBP_K36_ItemSlot_C'",
+                "ObjectPath": "/TheK36/K36/Blueprints/UI/WBP_K36_ItemSlot.17"
+              }
+            }
+          }
+        },
+        "Offset": 15,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_LocalVirtualFunction",
+          "Function": "SetEmpty",
+          "Parameters": [
+            {
+              "Inst": "EX_False"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 1205,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemPickup_C'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.48"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CurrentK36Item",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+              "PropertyClass": {
+                "ObjectName": "WidgetBlueprintGeneratedClass'WBP_K36_ItemSlot_C'",
+                "ObjectPath": "/TheK36/K36/Blueprints/UI/WBP_K36_ItemSlot.17"
+              }
+            }
+          }
+        },
+        "Offset": 14,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_LocalVirtualFunction",
+          "Function": "HideIcons",
+          "Parameters": []
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 1241,
+        "CodeOffset": 963,
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.SetK36Items[963]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 1246,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 1248
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetRegularItems",
+    "Outer": "WBP_CoreItemPickup_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "PickupItemData",
+        "Flags": "RF_Public",
+        "ElementSize": 456,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'ItemPickupViewData'",
+          "ObjectPath": "/Script/DBDUIViewInterfaces"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CurrentItemData",
+        "Flags": "RF_Public",
+        "ElementSize": 456,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'ItemPickupViewData'",
+          "ObjectPath": "/Script/DBDUIViewInterfaces"
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_StringToText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_StringToText_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_StringToText_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_StringToText_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_SetData_self_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "InterfaceClass": {
+          "ObjectName": "Class'ItemBundleViewInterface'",
+          "ObjectPath": "/Script/DBDUIViewInterfaces"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_SetData_self_CastInput_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "InterfaceClass": {
+          "ObjectName": "Class'ItemBundleViewInterface'",
+          "ObjectPath": "/Script/DBDUIViewInterfaces"
+        }
+      }
+    ],
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 0,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemPickup_C'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.48"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "PickupItem",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+              "PropertyClass": {
+                "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemBundle_V2_C'",
+                "ObjectPath": "/DBDUICore/Common/LoadoutParts/WBP_CoreItemBundle_V2.16"
+              }
+            }
+          }
+        },
+        "Offset": 16,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "SetVisibility",
+          "Parameters": [
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 4
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 38,
+        "ObjectExpression": {
+          "Inst": "EX_InterfaceContext",
+          "InterfaceValue": {
+            "Inst": "EX_InstanceVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemPickup_C'",
+                "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.48"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "PickupItem",
+                "Flags": "RF_Public | RF_LoadCompleted",
+                "ElementSize": 8,
+                "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+                "PropertyClass": {
+                  "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemBundle_V2_C'",
+                  "ObjectPath": "/DBDUICore/Common/LoadoutParts/WBP_CoreItemBundle_V2.16"
+                }
+              }
+            }
+          }
+        },
+        "Offset": 32,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "SetData",
+          "Parameters": [
+            {
+              "Inst": "EX_StructMemberContext",
+              "Property": {
+                "Path": [
+                  "BundleViewData"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'ItemPickupViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              },
+              "StructExpression": {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'WBP_CoreItemPickup_C:SetRegularItems'",
+                    "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.13"
+                  },
+                  "Property": {
+                    "Type": "StructProperty",
+                    "Name": "PickupItemData",
+                    "Flags": "RF_Public",
+                    "ElementSize": 456,
+                    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+                    "Struct": {
+                      "ObjectName": "Class'ItemPickupViewData'",
+                      "ObjectPath": "/Script/DBDUIViewInterfaces"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 93,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreItemPickup_C:SetRegularItems'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.13"
+            },
+            "Property": {
+              "Type": "TextProperty",
+              "Name": "CallFunc_Conv_StringToText_ReturnValue_3",
+              "Flags": "RF_Public",
+              "ElementSize": 24
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetTextLibrary:Conv_StringToText'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_StructMemberContext",
+              "Property": {
+                "Path": [
+                  "Description"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'ItemPickupViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              },
+              "StructExpression": {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'WBP_CoreItemPickup_C:SetRegularItems'",
+                    "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.13"
+                  },
+                  "Property": {
+                    "Type": "StructProperty",
+                    "Name": "PickupItemData",
+                    "Flags": "RF_Public",
+                    "ElementSize": 456,
+                    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+                    "Struct": {
+                      "ObjectName": "Class'ItemPickupViewData'",
+                      "ObjectPath": "/Script/DBDUIViewInterfaces"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 139,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemPickup_C'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.48"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "PickupItemDescriptionRTB",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+              "PropertyClass": {
+                "ObjectName": "Class'DBDRichTextBlock'",
+                "ObjectPath": "/Script/DBDUIViewsCore"
+              }
+            }
+          }
+        },
+        "Offset": 19,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'DBDRichTextBlock:SetHTMLText'",
+            "ObjectPath": "/Script/DBDUIViewsCore"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_CoreItemPickup_C:SetRegularItems'",
+                  "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.13"
+                },
+                "Property": {
+                  "Type": "TextProperty",
+                  "Name": "CallFunc_Conv_StringToText_ReturnValue_3",
+                  "Flags": "RF_Public",
+                  "ElementSize": 24
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 180,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreItemPickup_C:SetRegularItems'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.13"
+            },
+            "Property": {
+              "Type": "TextProperty",
+              "Name": "CallFunc_Conv_StringToText_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 24
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetTextLibrary:Conv_StringToText'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_StructMemberContext",
+              "Property": {
+                "Path": [
+                  "DisplayName"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'BaseLoadoutPartViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              },
+              "StructExpression": {
+                "Inst": "EX_StructMemberContext",
+                "Property": {
+                  "Path": [
+                    "Item"
+                  ],
+                  "ResolvedOwner": {
+                    "ObjectName": "Class'ItemBundleViewData'",
+                    "ObjectPath": "/Script/DBDUIViewInterfaces"
+                  }
+                },
+                "StructExpression": {
+                  "Inst": "EX_StructMemberContext",
+                  "Property": {
+                    "Path": [
+                      "BundleViewData"
+                    ],
+                    "ResolvedOwner": {
+                      "ObjectName": "Class'ItemPickupViewData'",
+                      "ObjectPath": "/Script/DBDUIViewInterfaces"
+                    }
+                  },
+                  "StructExpression": {
+                    "Inst": "EX_LocalVariable",
+                    "Variable": {
+                      "Owner": {
+                        "ObjectName": "Function'WBP_CoreItemPickup_C:SetRegularItems'",
+                        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.13"
+                      },
+                      "Property": {
+                        "Type": "StructProperty",
+                        "Name": "PickupItemData",
+                        "Flags": "RF_Public",
+                        "ElementSize": 456,
+                        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+                        "Struct": {
+                          "ObjectName": "Class'ItemPickupViewData'",
+                          "ObjectPath": "/Script/DBDUIViewInterfaces"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 244,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemPickup_C'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.48"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "PickupItemNameTB",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+              "PropertyClass": {
+                "ObjectName": "Class'DBDTextBlock'",
+                "ObjectPath": "/Script/DBDUIViewsCore"
+              }
+            }
+          }
+        },
+        "Offset": 23,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "SetText",
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_CoreItemPickup_C:SetRegularItems'",
+                  "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.13"
+                },
+                "Property": {
+                  "Type": "TextProperty",
+                  "Name": "CallFunc_Conv_StringToText_ReturnValue",
+                  "Flags": "RF_Public",
+                  "ElementSize": 24
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 289,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemPickup_C'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.48"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CurrentItem",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+              "PropertyClass": {
+                "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemBundle_V2_C'",
+                "ObjectPath": "/DBDUICore/Common/LoadoutParts/WBP_CoreItemBundle_V2.16"
+              }
+            }
+          }
+        },
+        "Offset": 16,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "SetVisibility",
+          "Parameters": [
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 4
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 327,
+        "ObjectExpression": {
+          "Inst": "EX_InterfaceContext",
+          "InterfaceValue": {
+            "Inst": "EX_InstanceVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemPickup_C'",
+                "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.48"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "CurrentItem",
+                "Flags": "RF_Public | RF_LoadCompleted",
+                "ElementSize": 8,
+                "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+                "PropertyClass": {
+                  "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemBundle_V2_C'",
+                  "ObjectPath": "/DBDUICore/Common/LoadoutParts/WBP_CoreItemBundle_V2.16"
+                }
+              }
+            }
+          }
+        },
+        "Offset": 32,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "SetData",
+          "Parameters": [
+            {
+              "Inst": "EX_StructMemberContext",
+              "Property": {
+                "Path": [
+                  "BundleViewData"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'ItemPickupViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              },
+              "StructExpression": {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'WBP_CoreItemPickup_C:SetRegularItems'",
+                    "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.13"
+                  },
+                  "Property": {
+                    "Type": "StructProperty",
+                    "Name": "CurrentItemData",
+                    "Flags": "RF_Public",
+                    "ElementSize": 456,
+                    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+                    "Struct": {
+                      "ObjectName": "Class'ItemPickupViewData'",
+                      "ObjectPath": "/Script/DBDUIViewInterfaces"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 382,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreItemPickup_C:SetRegularItems'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.13"
+            },
+            "Property": {
+              "Type": "TextProperty",
+              "Name": "CallFunc_Conv_StringToText_ReturnValue_2",
+              "Flags": "RF_Public",
+              "ElementSize": 24
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetTextLibrary:Conv_StringToText'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_StructMemberContext",
+              "Property": {
+                "Path": [
+                  "Description"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'ItemPickupViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              },
+              "StructExpression": {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'WBP_CoreItemPickup_C:SetRegularItems'",
+                    "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.13"
+                  },
+                  "Property": {
+                    "Type": "StructProperty",
+                    "Name": "CurrentItemData",
+                    "Flags": "RF_Public",
+                    "ElementSize": 456,
+                    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+                    "Struct": {
+                      "ObjectName": "Class'ItemPickupViewData'",
+                      "ObjectPath": "/Script/DBDUIViewInterfaces"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 428,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemPickup_C'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.48"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "ReplaceTB",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+              "PropertyClass": {
+                "ObjectName": "Class'DBDTextBlock'",
+                "ObjectPath": "/Script/DBDUIViewsCore"
+              }
+            }
+          }
+        },
+        "Offset": 23,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "SetText",
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_CoreItemPickup_C:SetRegularItems'",
+                  "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.13"
+                },
+                "Property": {
+                  "Type": "TextProperty",
+                  "Name": "CallFunc_Conv_StringToText_ReturnValue_2",
+                  "Flags": "RF_Public",
+                  "ElementSize": 24
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 473,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'WBP_CoreItemPickup_C:SetRegularItems'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.13"
+            },
+            "Property": {
+              "Type": "TextProperty",
+              "Name": "CallFunc_Conv_StringToText_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 24
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetTextLibrary:Conv_StringToText'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_StructMemberContext",
+              "Property": {
+                "Path": [
+                  "DisplayName"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'BaseLoadoutPartViewData'",
+                  "ObjectPath": "/Script/DBDUIViewInterfaces"
+                }
+              },
+              "StructExpression": {
+                "Inst": "EX_StructMemberContext",
+                "Property": {
+                  "Path": [
+                    "Item"
+                  ],
+                  "ResolvedOwner": {
+                    "ObjectName": "Class'ItemBundleViewData'",
+                    "ObjectPath": "/Script/DBDUIViewInterfaces"
+                  }
+                },
+                "StructExpression": {
+                  "Inst": "EX_StructMemberContext",
+                  "Property": {
+                    "Path": [
+                      "BundleViewData"
+                    ],
+                    "ResolvedOwner": {
+                      "ObjectName": "Class'ItemPickupViewData'",
+                      "ObjectPath": "/Script/DBDUIViewInterfaces"
+                    }
+                  },
+                  "StructExpression": {
+                    "Inst": "EX_LocalVariable",
+                    "Variable": {
+                      "Owner": {
+                        "ObjectName": "Function'WBP_CoreItemPickup_C:SetRegularItems'",
+                        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.13"
+                      },
+                      "Property": {
+                        "Type": "StructProperty",
+                        "Name": "CurrentItemData",
+                        "Flags": "RF_Public",
+                        "ElementSize": 456,
+                        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+                        "Struct": {
+                          "ObjectName": "Class'ItemPickupViewData'",
+                          "ObjectPath": "/Script/DBDUIViewInterfaces"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 537,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemPickup_C'",
+              "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.48"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CurrentItemNameTB",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+              "PropertyClass": {
+                "ObjectName": "Class'DBDTextBlock'",
+                "ObjectPath": "/Script/DBDUIViewsCore"
+              }
+            }
+          }
+        },
+        "Offset": 23,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "SetText",
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'WBP_CoreItemPickup_C:SetRegularItems'",
+                  "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.13"
+                },
+                "Property": {
+                  "Type": "TextProperty",
+                  "Name": "CallFunc_Conv_StringToText_ReturnValue_1",
+                  "Flags": "RF_Public",
+                  "ElementSize": 24
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 582,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 584
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ShowItemPickupPrompt",
+    "Outer": "WBP_CoreItemPickup_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Class'HudItemPickupViewInterface:ShowItemPickupPrompt'",
+      "ObjectPath": "/Script/DBDUIViewInterfaces"
+    },
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 0,
+        "Function": {
+          "ObjectName": "Function'WBP_CoreItemPickup_C:ExecuteUbergraph_WBP_CoreItemPickup'",
+          "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.8"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 10
+          }
+        ],
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.ExecuteUbergraph_WBP_CoreItemPickup[10]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 15,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 17
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "GridPanel",
+    "Name": "GridPanel_0",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'GridPanel'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "GridSlot'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0.GridSlot_15'",
+          "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.19"
+        },
+        {
+          "ObjectName": "GridSlot'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0.GridSlot_9'",
+          "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.27"
+        },
+        {
+          "ObjectName": "GridSlot'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0.GridSlot_4'",
+          "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.23"
+        },
+        {
+          "ObjectName": "GridSlot'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0.GridSlot_7'",
+          "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.26"
+        },
+        {
+          "ObjectName": "GridSlot'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0.GridSlot_2'",
+          "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.21"
+        },
+        {
+          "ObjectName": "GridSlot'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0.GridSlot_1'",
+          "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.17"
+        },
+        {
+          "ObjectName": "GridSlot'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0.GridSlot_3'",
+          "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.22"
+        },
+        {
+          "ObjectName": "GridSlot'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0.GridSlot_6'",
+          "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.25"
+        },
+        {
+          "ObjectName": "GridSlot'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0.GridSlot_0'",
+          "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.16"
+        },
+        {
+          "ObjectName": "GridSlot'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0.GridSlot_5'",
+          "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.24"
+        },
+        {
+          "ObjectName": "GridSlot'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0.GridSlot_17'",
+          "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.20"
+        },
+        {
+          "ObjectName": "GridSlot'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0.GridSlot_11'",
+          "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.18"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WBP_CoreItemPickup_C:WidgetTree.Content.OverlaySlot_1'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.31"
+      }
+    }
+  },
+  {
+    "Type": "GridSlot",
+    "Name": "GridSlot_0",
+    "Outer": "GridPanel_0",
+    "Class": "UScriptClass'GridSlot'",
+    "Properties": {
+      "Row": 2,
+      "Parent": {
+        "ObjectName": "GridPanel'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.15"
+      },
+      "Content": {
+        "ObjectName": "Spacer'WBP_CoreItemPickup_C:WidgetTree.CURRENT_ITEM_SPACE'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.34"
+      }
+    }
+  },
+  {
+    "Type": "GridSlot",
+    "Name": "GridSlot_1",
+    "Outer": "GridPanel_0",
+    "Class": "UScriptClass'GridSlot'",
+    "Properties": {
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Column": 2,
+      "Parent": {
+        "ObjectName": "GridPanel'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.15"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'WBP_CoreItemPickup_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.37"
+      }
+    }
+  },
+  {
+    "Type": "GridSlot",
+    "Name": "GridSlot_11",
+    "Outer": "GridPanel_0",
+    "Class": "UScriptClass'GridSlot'",
+    "Properties": {
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Row": 2,
+      "Column": 2,
+      "Parent": {
+        "ObjectName": "GridPanel'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.15"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'WBP_CoreItemPickup_C:WidgetTree.VerticalBox_1'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.38"
+      }
+    }
+  },
+  {
+    "Type": "GridSlot",
+    "Name": "GridSlot_15",
+    "Outer": "GridPanel_0",
+    "Class": "UScriptClass'GridSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "GridPanel'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.15"
+      },
+      "Content": {
+        "ObjectName": "Spacer'WBP_CoreItemPickup_C:WidgetTree.PICKUP_ITEM_SPACE'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.35"
+      }
+    }
+  },
+  {
+    "Type": "GridSlot",
+    "Name": "GridSlot_17",
+    "Outer": "GridPanel_0",
+    "Class": "UScriptClass'GridSlot'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Row": 2,
+      "Layer": 1,
+      "Nudge": {
+        "X": 15.0,
+        "Y": 0.0
+      },
+      "Parent": {
+        "ObjectName": "GridPanel'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.15"
+      },
+      "Content": {
+        "ObjectName": "WBP_K36_ItemSlot_C'WBP_CoreItemPickup_C:WidgetTree.CurrentK36Item'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.46"
+      }
+    }
+  },
+  {
+    "Type": "GridSlot",
+    "Name": "GridSlot_2",
+    "Outer": "GridPanel_0",
+    "Class": "UScriptClass'GridSlot'",
+    "Properties": {
+      "RowSpan": 3,
+      "Column": 1,
+      "Parent": {
+        "ObjectName": "GridPanel'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.15"
+      },
+      "Content": {
+        "ObjectName": "Spacer'WBP_CoreItemPickup_C:WidgetTree.CENTERSPACER'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.33"
+      }
+    }
+  },
+  {
+    "Type": "GridSlot",
+    "Name": "GridSlot_3",
+    "Outer": "GridPanel_0",
+    "Class": "UScriptClass'GridSlot'",
+    "Properties": {
+      "Padding": {
+        "Top": 4.0,
+        "Bottom": 4.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Row": 1,
+      "Nudge": {
+        "X": 14.0,
+        "Y": 0.0
+      },
+      "Parent": {
+        "ObjectName": "GridPanel'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.15"
+      },
+      "Content": {
+        "ObjectName": "DBDImage'WBP_CoreItemPickup_C:WidgetTree.SwapIcon'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.2"
+      }
+    }
+  },
+  {
+    "Type": "GridSlot",
+    "Name": "GridSlot_4",
+    "Outer": "GridPanel_0",
+    "Class": "UScriptClass'GridSlot'",
+    "Properties": {
+      "Nudge": {
+        "X": 15.0,
+        "Y": 0.0
+      },
+      "Parent": {
+        "ObjectName": "GridPanel'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.15"
+      },
+      "Content": {
+        "ObjectName": "WBP_CoreItemBundle_V2_C'WBP_CoreItemPickup_C:WidgetTree.PickupItem'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.44"
+      }
+    }
+  },
+  {
+    "Type": "GridSlot",
+    "Name": "GridSlot_5",
+    "Outer": "GridPanel_0",
+    "Class": "UScriptClass'GridSlot'",
+    "Properties": {
+      "Row": 2,
+      "Parent": {
+        "ObjectName": "GridPanel'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.15"
+      },
+      "Content": {
+        "ObjectName": "WBP_CoreItemBundle_V2_C'WBP_CoreItemPickup_C:WidgetTree.CurrentItem'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.43"
+      }
+    }
+  },
+  {
+    "Type": "GridSlot",
+    "Name": "GridSlot_6",
+    "Outer": "GridPanel_0",
+    "Class": "UScriptClass'GridSlot'",
+    "Properties": {
+      "Padding": {
+        "Top": 10.0,
+        "Bottom": 10.0
+      },
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Row": 1,
+      "Column": 2,
+      "Parent": {
+        "ObjectName": "GridPanel'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.15"
+      },
+      "Content": {
+        "ObjectName": "DBDImage'WBP_CoreItemPickup_C:WidgetTree.Separator'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.1"
+      }
+    }
+  },
+  {
+    "Type": "GridSlot",
+    "Name": "GridSlot_7",
+    "Outer": "GridPanel_0",
+    "Class": "UScriptClass'GridSlot'",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Layer": 1,
+      "Nudge": {
+        "X": 18.0,
+        "Y": 0.0
+      },
+      "Parent": {
+        "ObjectName": "GridPanel'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.15"
+      },
+      "Content": {
+        "ObjectName": "WBP_K36_ItemSlot_C'WBP_CoreItemPickup_C:WidgetTree.PickupK36Item'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.47"
+      }
+    }
+  },
+  {
+    "Type": "GridSlot",
+    "Name": "GridSlot_9",
+    "Outer": "GridPanel_0",
+    "Class": "UScriptClass'GridSlot'",
+    "Properties": {
+      "Column": 2,
+      "Parent": {
+        "ObjectName": "GridPanel'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.15"
+      },
+      "Content": {
+        "ObjectName": "Spacer'WBP_CoreItemPickup_C:WidgetTree.TEXT_SPACE'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.36"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Content",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Overlay'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WBP_CoreItemPickup_C:WidgetTree.Content.OverlaySlot_0'",
+          "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.30"
+        },
+        {
+          "ObjectName": "OverlaySlot'WBP_CoreItemPickup_C:WidgetTree.Content.OverlaySlot_1'",
+          "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.31"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'WBP_CoreItemPickup_C:WidgetTree.Root.OverlaySlot_0'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.32"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Root",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Overlay'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'WBP_CoreItemPickup_C:WidgetTree.Root.OverlaySlot_0'",
+          "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.32"
+        }
+      ],
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Outer": "Content",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Overlay'WBP_CoreItemPickup_C:WidgetTree.Content'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.28"
+      },
+      "Content": {
+        "ObjectName": "DBDImage'WBP_CoreItemPickup_C:WidgetTree.Background'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.0"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Outer": "Content",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Properties": {
+      "Padding": {
+        "Left": -64.0,
+        "Top": 130.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'WBP_CoreItemPickup_C:WidgetTree.Content'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.28"
+      },
+      "Content": {
+        "ObjectName": "GridPanel'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.15"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Outer": "Root",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Properties": {
+      "Padding": {
+        "Bottom": 164.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "Overlay'WBP_CoreItemPickup_C:WidgetTree.Root'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.29"
+      },
+      "Content": {
+        "ObjectName": "Overlay'WBP_CoreItemPickup_C:WidgetTree.Content'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.28"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "CENTERSPACER",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Spacer'",
+    "Properties": {
+      "Size": {
+        "X": 40.0,
+        "Y": 1.0
+      },
+      "Slot": {
+        "ObjectName": "GridSlot'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0.GridSlot_2'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.21"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "CURRENT_ITEM_SPACE",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Spacer'",
+    "Properties": {
+      "Size": {
+        "X": 241.0,
+        "Y": 127.0
+      },
+      "Slot": {
+        "ObjectName": "GridSlot'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0.GridSlot_0'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.16"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "PICKUP_ITEM_SPACE",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Spacer'",
+    "Properties": {
+      "Size": {
+        "X": 362.0,
+        "Y": 192.0
+      },
+      "Slot": {
+        "ObjectName": "GridSlot'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0.GridSlot_15'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.19"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "TEXT_SPACE",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Spacer'",
+    "Properties": {
+      "Size": {
+        "X": 800.0,
+        "Y": 1.0
+      },
+      "Slot": {
+        "ObjectName": "GridSlot'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0.GridSlot_9'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.27"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_0",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'VerticalBox'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'WBP_CoreItemPickup_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0'",
+          "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.39"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'WBP_CoreItemPickup_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_2'",
+          "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.40"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "GridSlot'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0.GridSlot_1'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.17"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_1",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'VerticalBox'",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'WBP_CoreItemPickup_C:WidgetTree.VerticalBox_1.VerticalBoxSlot_0'",
+          "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.41"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'WBP_CoreItemPickup_C:WidgetTree.VerticalBox_1.VerticalBoxSlot_1'",
+          "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.42"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "GridSlot'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0.GridSlot_11'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.18"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Outer": "VerticalBox_0",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'WBP_CoreItemPickup_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.37"
+      },
+      "Content": {
+        "ObjectName": "DBDTextBlock'WBP_CoreItemPickup_C:WidgetTree.PickupItemNameTB'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.5"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Outer": "VerticalBox_0",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'WBP_CoreItemPickup_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.37"
+      },
+      "Content": {
+        "ObjectName": "DBDRichTextBlock'WBP_CoreItemPickup_C:WidgetTree.PickupItemDescriptionRTB'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.3"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Outer": "VerticalBox_1",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'WBP_CoreItemPickup_C:WidgetTree.VerticalBox_1'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.38"
+      },
+      "Content": {
+        "ObjectName": "DBDTextBlock'WBP_CoreItemPickup_C:WidgetTree.ReplaceTB'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.6"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Outer": "VerticalBox_1",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'WBP_CoreItemPickup_C:WidgetTree.VerticalBox_1'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.38"
+      },
+      "Content": {
+        "ObjectName": "DBDTextBlock'WBP_CoreItemPickup_C:WidgetTree.CurrentItemNameTB'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.4"
+      }
+    }
+  },
+  {
+    "Type": "WBP_CoreItemBundle_V2_C",
+    "Name": "CurrentItem",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'/DBDUICore/Common/LoadoutParts/WBP_CoreItemBundle_V2.WBP_CoreItemBundle_V2_C'",
+    "Template": {
+      "ObjectName": "WBP_CoreItemBundle_V2_C'Default__WBP_CoreItemBundle_V2_C'",
+      "ObjectPath": "/DBDUICore/Common/LoadoutParts/WBP_CoreItemBundle_V2.15"
+    },
+    "Properties": {
+      "ColorAndOpacity": {
+        "R": 1.0,
+        "G": 1.0,
+        "B": 1.0,
+        "A": 0.5,
+        "Hex": "7FFFFFFF"
+      },
+      "Slot": {
+        "ObjectName": "GridSlot'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0.GridSlot_5'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.24"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 0.9,
+          "Y": 0.9
+        }
+      }
+    }
+  },
+  {
+    "Type": "WBP_CoreItemBundle_V2_C",
+    "Name": "PickupItem",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'/DBDUICore/Common/LoadoutParts/WBP_CoreItemBundle_V2.WBP_CoreItemBundle_V2_C'",
+    "Template": {
+      "ObjectName": "WBP_CoreItemBundle_V2_C'Default__WBP_CoreItemBundle_V2_C'",
+      "ObjectPath": "/DBDUICore/Common/LoadoutParts/WBP_CoreItemBundle_V2.15"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "GridSlot'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0.GridSlot_4'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.23"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 0.9,
+          "Y": 0.9
+        }
+      }
+    }
+  },
+  {
+    "Type": "WBP_CoreItemPickup_C",
+    "Name": "Default__WBP_CoreItemPickup_C",
+    "Class": "WidgetBlueprintGeneratedClass'/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.WBP_CoreItemPickup_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "CurrentItemScale": 0.6
+    }
+  },
+  {
+    "Type": "WBP_K36_ItemSlot_C",
+    "Name": "CurrentK36Item",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'/TheK36/K36/Blueprints/UI/WBP_K36_ItemSlot.WBP_K36_ItemSlot_C'",
+    "Template": {
+      "ObjectName": "WBP_K36_ItemSlot_C'Default__WBP_K36_ItemSlot_C'",
+      "ObjectPath": "/TheK36/K36/Blueprints/UI/WBP_K36_ItemSlot.16"
+    },
+    "Properties": {
+      "ColorAndOpacity": {
+        "R": 1.0,
+        "G": 1.0,
+        "B": 1.0,
+        "A": 0.5,
+        "Hex": "7FFFFFFF"
+      },
+      "Slot": {
+        "ObjectName": "GridSlot'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0.GridSlot_17'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.20"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 1.5,
+          "Y": 1.5
+        }
+      }
+    }
+  },
+  {
+    "Type": "WBP_K36_ItemSlot_C",
+    "Name": "PickupK36Item",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'/TheK36/K36/Blueprints/UI/WBP_K36_ItemSlot.WBP_K36_ItemSlot_C'",
+    "Template": {
+      "ObjectName": "WBP_K36_ItemSlot_C'Default__WBP_K36_ItemSlot_C'",
+      "ObjectPath": "/TheK36/K36/Blueprints/UI/WBP_K36_ItemSlot.16"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "GridSlot'WBP_CoreItemPickup_C:WidgetTree.GridPanel_0.GridSlot_7'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.26"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 2.25,
+          "Y": 2.25
+        }
+      }
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WBP_CoreItemPickup_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WBP_CoreItemPickup_C:WidgetTree'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.49"
+      },
+      "bClassRequiresNativeTick": true,
+      "UberGraphFunction": {
+        "ObjectName": "Function'WBP_CoreItemPickup_C:ExecuteUbergraph_WBP_CoreItemPickup'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.8"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ItemPickupWidget'",
+      "ObjectPath": "/Script/DBDUIViewsCore"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WBP_CoreItemPickup_C:ClearItemWidgets'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.7"
+      },
+      {
+        "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+      },
+      {
+        "ObjectName": "Function'WBP_CoreItemPickup_C:SetRegularItems'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.13"
+      },
+      {
+        "ObjectName": "Function'WBP_CoreItemPickup_C:PreConstruct'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.10"
+      },
+      {
+        "ObjectName": "Function'WBP_CoreItemPickup_C:HideItemPickupPrompt'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.9"
+      },
+      {
+        "ObjectName": "Function'WBP_CoreItemPickup_C:ShowItemPickupPrompt'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.14"
+      },
+      {
+        "ObjectName": "Function'WBP_CoreItemPickup_C:SetData'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.11"
+      },
+      {
+        "ObjectName": "Function'WBP_CoreItemPickup_C:ExecuteUbergraph_WBP_CoreItemPickup'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.8"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Background",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'DBDImage'",
+          "ObjectPath": "/Script/DBDUIViewsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CurrentItem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemBundle_V2_C'",
+          "ObjectPath": "/DBDUICore/Common/LoadoutParts/WBP_CoreItemBundle_V2.16"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CurrentItemNameTB",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'DBDTextBlock'",
+          "ObjectPath": "/Script/DBDUIViewsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CurrentK36Item",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WBP_K36_ItemSlot_C'",
+          "ObjectPath": "/TheK36/K36/Blueprints/UI/WBP_K36_ItemSlot.17"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PickupItem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WBP_CoreItemBundle_V2_C'",
+          "ObjectPath": "/DBDUICore/Common/LoadoutParts/WBP_CoreItemBundle_V2.16"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PickupItemDescriptionRTB",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'DBDRichTextBlock'",
+          "ObjectPath": "/Script/DBDUIViewsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PickupItemNameTB",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'DBDTextBlock'",
+          "ObjectPath": "/Script/DBDUIViewsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PickupK36Item",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'WBP_K36_ItemSlot_C'",
+          "ObjectPath": "/TheK36/K36/Blueprints/UI/WBP_K36_ItemSlot.17"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReplaceTB",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'DBDTextBlock'",
+          "ObjectPath": "/Script/DBDUIViewsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Root",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Overlay'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Separator",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'DBDImage'",
+          "ObjectPath": "/Script/DBDUIViewsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SwapIcon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'DBDImage'",
+          "ObjectPath": "/Script/DBDUIViewsCore"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CurrentItemScale",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "IsRegularItem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WBP_CoreItemPickup": {
+        "ObjectName": "Function'WBP_CoreItemPickup_C:ExecuteUbergraph_WBP_CoreItemPickup'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.8"
+      },
+      "SetData": {
+        "ObjectName": "Function'WBP_CoreItemPickup_C:SetData'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.11"
+      },
+      "ShowItemPickupPrompt": {
+        "ObjectName": "Function'WBP_CoreItemPickup_C:ShowItemPickupPrompt'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.14"
+      },
+      "HideItemPickupPrompt": {
+        "ObjectName": "Function'WBP_CoreItemPickup_C:HideItemPickupPrompt'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.9"
+      },
+      "PreConstruct": {
+        "ObjectName": "Function'WBP_CoreItemPickup_C:PreConstruct'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.10"
+      },
+      "SetRegularItems": {
+        "ObjectName": "Function'WBP_CoreItemPickup_C:SetRegularItems'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.13"
+      },
+      "SetK36Items": {
+        "ObjectName": "Function'WBP_CoreItemPickup_C:SetK36Items'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.12"
+      },
+      "ClearItemWidgets": {
+        "ObjectName": "Function'WBP_CoreItemPickup_C:ClearItemWidgets'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.7"
+      }
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WBP_CoreItemPickup_C'Default__WBP_CoreItemPickup_C'",
+      "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.45"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "WBP_CoreItemPickup_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Overlay'WBP_CoreItemPickup_C:WidgetTree.Root'",
+        "ObjectPath": "/DBDUICore/HUD/Interactions/ItemPickup/WBP_CoreItemPickup.29"
+      }
+    }
+  }
+]
