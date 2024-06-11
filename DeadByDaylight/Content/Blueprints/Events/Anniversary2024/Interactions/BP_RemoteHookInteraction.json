@@ -1,0 +1,4005 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_RemoteHookInteraction_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'RemoteHookInteraction'",
+      "ObjectPath": "/Script/Anniversary2024"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_RemoteHookInteraction_C:Cosmetic_RemoteHookSurvivor'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.3"
+      },
+      {
+        "ObjectName": "Function'BP_RemoteHookInteraction_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.5"
+      },
+      {
+        "ObjectName": "Function'BP_RemoteHookInteraction_C:ReceiveTick'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.6"
+      },
+      {
+        "ObjectName": "Function'BP_RemoteHookInteraction_C:Cosmetic_BeginRemoteHook'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.2"
+      },
+      {
+        "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PP_ScreenFade",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "VignetteOpacity_Target",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "VignetteOpacity_Current",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "New Time",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Timer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "DBDTunableRowHandle",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 40,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'DBDTunableRowHandle'",
+          "ObjectPath": "/Script/DataTableUtilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "ShouldUpdateVignette",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "HookedVFX",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "TeleportedVFX",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "IsDissolving",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "DissolveAmount_Current",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "DissolveAmount_Target",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "DissolveDuration",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_RemoteHookInteraction": {
+        "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+      },
+      "Cosmetic_BeginRemoteHook": {
+        "ObjectName": "Function'BP_RemoteHookInteraction_C:Cosmetic_BeginRemoteHook'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.2"
+      },
+      "ReceiveTick": {
+        "ObjectName": "Function'BP_RemoteHookInteraction_C:ReceiveTick'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.6"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_RemoteHookInteraction_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.5"
+      },
+      "Cosmetic_RemoteHookSurvivor": {
+        "ObjectName": "Function'BP_RemoteHookInteraction_C:Cosmetic_RemoteHookSurvivor'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.3"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_RemoteHookInteraction_C'Default__BP_RemoteHookInteraction_C'",
+      "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_RemoteHookInteraction_C",
+    "Name": "Default__BP_RemoteHookInteraction_C",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.BP_RemoteHookInteraction_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "Timer": {
+        "Handle": 0
+      },
+      "DBDTunableRowHandle": {
+        "_dataTableRowHandle": {
+          "DataTable": {
+            "ObjectName": "DataTable'Anniversary2024TunablesDB'",
+            "ObjectPath": "/Game/Data/Events/Churros/Anniversary2024TunablesDB.0"
+          },
+          "RowName": "RemoteHookTravelTime"
+        },
+        "_defaultValue": 0.0,
+        "_isOptional": false
+      },
+      "DissolveDuration": 0.75,
+      "_remoteHookAvailabilityDelay": {
+        "_dataTableRowHandle": {
+          "DataTable": {
+            "ObjectName": "DataTable'Anniversary2024TunablesDB'",
+            "ObjectPath": "/Game/Data/Events/Churros/Anniversary2024TunablesDB.0"
+          },
+          "RowName": "RemoteHookDelay"
+        }
+      },
+      "_minimumHookSurvivorDistance": {
+        "_dataTableRowHandle": {
+          "DataTable": {
+            "ObjectName": "DataTable'Anniversary2024TunablesDB'",
+            "ObjectPath": "/Game/Data/Events/Churros/Anniversary2024TunablesDB.0"
+          },
+          "RowName": "RemoteHookMinimumSurvivorDistance"
+        }
+      },
+      "_abilityRange": {
+        "_dataTableRowHandle": {
+          "DataTable": {
+            "ObjectName": "DataTable'Anniversary2024TunablesDB'",
+            "ObjectPath": "/Game/Data/Events/Churros/Anniversary2024TunablesDB.0"
+          },
+          "RowName": "RemoteHookDistance"
+        }
+      },
+      "InteractionID": "RemoteHook",
+      "StopEnterMontageOnExit": false,
+      "SlasherCanInteract": true,
+      "CanInteractWhileCarrying": true,
+      "AllowNavigationInput": false,
+      "AllowOverridingWhenNotForced": true,
+      "InteractionTime": 1.5,
+      "InteractionInputType": "EInputInteractionType::VE_EventAbility",
+      "InteractionDescriptionText": {
+        "Namespace": "",
+        "Key": "EF1DB4034FD4046C505A0CBAD749E54B",
+        "SourceString": "INTERACTION_RemoteHook_DESC",
+        "LocalizedString": "REMOTE HOOK"
+      },
+      "EnterMontage": {
+        "MontageID": "HookSetup"
+      },
+      "UpdateMontage": {
+        "MontageID": "HookCamper"
+      },
+      "SnapSocketName": "socket_KillerAttach",
+      "PrimaryComponentTick": {
+        "bCanEverTick": true
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "Cosmetic_BeginRemoteHook",
+    "Outer": "BP_RemoteHookInteraction_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Class'RemoteHookInteraction:Cosmetic_BeginRemoteHook'",
+      "ObjectPath": "/Script/Anniversary2024"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "survivorBeingHooked",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'CamperPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      }
+    ],
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LetValueOnPersistentFrame",
+        "StatementIndex": 0,
+        "DestinationProperty": {
+          "Owner": {
+            "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+            "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+          },
+          "Property": {
+            "Type": "ObjectProperty",
+            "Name": "K2Node_Event_survivorBeingHooked",
+            "Flags": "RF_Public",
+            "ElementSize": 8,
+            "PropertyClass": {
+              "ObjectName": "Class'CamperPlayer'",
+              "ObjectPath": "/Script/DeadByDaylight"
+            }
+          }
+        },
+        "AssignmentExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:Cosmetic_BeginRemoteHook'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.2"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "survivorBeingHooked",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+              "PropertyClass": {
+                "ObjectName": "Class'CamperPlayer'",
+                "ObjectPath": "/Script/DeadByDaylight"
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 18,
+        "Function": {
+          "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+          "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 2605
+          }
+        ],
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.ExecuteUbergraph_BP_RemoteHookInteraction[2605]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 33,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 35
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Cosmetic_RemoteHookSurvivor",
+    "Outer": "BP_RemoteHookInteraction_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Class'RemoteHookInteraction:Cosmetic_RemoteHookSurvivor'",
+      "ObjectPath": "/Script/Anniversary2024"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "survivorBeingHooked",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'CamperPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      }
+    ],
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LetValueOnPersistentFrame",
+        "StatementIndex": 0,
+        "DestinationProperty": {
+          "Owner": {
+            "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+            "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+          },
+          "Property": {
+            "Type": "ObjectProperty",
+            "Name": "K2Node_Event_survivorBeingHooked_1",
+            "Flags": "RF_Public",
+            "ElementSize": 8,
+            "PropertyClass": {
+              "ObjectName": "Class'CamperPlayer'",
+              "ObjectPath": "/Script/DeadByDaylight"
+            }
+          }
+        },
+        "AssignmentExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:Cosmetic_RemoteHookSurvivor'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.3"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "survivorBeingHooked",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+              "PropertyClass": {
+                "ObjectName": "Class'CamperPlayer'",
+                "ObjectPath": "/Script/DeadByDaylight"
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 18,
+        "Function": {
+          "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+          "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 2600
+          }
+        ],
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.ExecuteUbergraph_BP_RemoteHookInteraction[2600]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 33,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 35
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_RemoteHookInteraction",
+    "Outer": "BP_RemoteHookInteraction_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnSystemAtLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Divide_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_NearlyEqual_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateDynamicMaterialInstance_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnSystemAtLocation_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_FInterpTo_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_BuildString_Double_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_survivorBeingHooked_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'CamperPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_survivorBeingHooked",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'CamperPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_RemoveStateTag_objectStateProvider_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'ObjectStateProvider'",
+          "ObjectPath": "/Script/GameplayTagUtilities"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_AddStateTag_objectStateProvider_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'ObjectStateProvider'",
+          "ObjectPath": "/Script/GameplayTagUtilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetSocketTransform_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 96,
+        "Struct": {
+          "ObjectName": "Class'Transform'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnAkComponentAtLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AkComponent'",
+          "ObjectPath": "/Script/AkAudio"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakTransform_Location",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakTransform_Rotation",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakTransform_Scale",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeTransform_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 96,
+        "Struct": {
+          "ObjectName": "Class'Transform'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetWorldTransform_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 240,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnAkComponentAtLocation_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AkComponent'",
+          "ObjectPath": "/Script/AkAudio"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetWorldLocation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 240,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_FInterpTo_InterpSpeed_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_FInterpTo_DeltaTime_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetScalarParameter_newValue_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "ConstParm"
+      }
+    ],
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_PushExecutionFlow",
+        "StatementIndex": 0,
+        "PushingAddress": 2621,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.ExecuteUbergraph_BP_RemoteHookInteraction[2621]"
+      },
+      {
+        "Inst": "EX_ComputedJump",
+        "StatementIndex": 5,
+        "OffsetExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "EntryPoint",
+              "Flags": "RF_Public",
+              "ElementSize": 4,
+              "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 15,
+        "Variable": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_RemoteHookInteraction_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.0"
+            },
+            "Property": {
+              "Type": "DoubleProperty",
+              "Name": "DissolveAmount_Target",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_DoubleConst",
+          "Value": -0.25
+        }
+      },
+      {
+        "Inst": "EX_CallMath",
+        "StatementIndex": 42,
+        "Function": {
+          "ObjectName": "Class'KismetSystemLibrary:RetriggerableDelay'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_Self"
+          },
+          {
+            "Inst": "EX_FloatConst",
+            "Value": 0.2
+          },
+          {
+            "Inst": "EX_StructConst",
+            "Struct": {
+              "ObjectName": "Class'LatentActionInfo'",
+              "ObjectPath": "/Script/Engine"
+            },
+            "Properties": [
+              {
+                "Inst": "EX_SkipOffsetConst",
+                "Value": 97
+              },
+              {
+                "Inst": "EX_IntConst",
+                "Value": -624024295
+              },
+              {
+                "Inst": "EX_NameConst",
+                "Value": "ExecuteUbergraph_BP_RemoteHookInteraction"
+              },
+              {
+                "Inst": "EX_Self"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Inst": "EX_PopExecutionFlow",
+        "StatementIndex": 96
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 97,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_K2_GetActorLocation_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 24,
+              "Struct": {
+                "ObjectName": "Class'Vector'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "K2Node_Event_survivorBeingHooked_1",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'CamperPlayer'",
+                  "ObjectPath": "/Script/DeadByDaylight"
+                }
+              }
+            }
+          },
+          "Offset": 10,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_K2_GetActorLocation_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 24,
+              "Struct": {
+                "ObjectName": "Class'Vector'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_FinalFunction",
+            "Function": {
+              "ObjectName": "Class'Actor:K2_GetActorLocation'",
+              "ObjectPath": "/Script/Engine"
+            },
+            "Parameters": []
+          }
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 147,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_RemoteHookInteraction_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.0"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "HookedVFX",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'NiagaraComponent'",
+                "ObjectPath": "/Script/Niagara"
+              }
+            }
+          }
+        },
+        "Offset": 30,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'SceneComponent:K2_SetWorldLocation'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "CallFunc_K2_GetActorLocation_ReturnValue_1",
+                  "Flags": "RF_Public",
+                  "ElementSize": 24,
+                  "Struct": {
+                    "ObjectName": "Class'Vector'",
+                    "ObjectPath": "/Script/CoreUObject"
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_False"
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "CallFunc_K2_SetWorldLocation_SweepHitResult",
+                  "Flags": "RF_Public",
+                  "ElementSize": 240,
+                  "PropertyFlags": "ContainsInstancedReference",
+                  "Struct": {
+                    "ObjectName": "Class'HitResult'",
+                    "ObjectPath": "/Script/Engine"
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_False"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 199,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_RemoteHookInteraction_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.0"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "HookedVFX",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'NiagaraComponent'",
+                "ObjectPath": "/Script/Niagara"
+              }
+            }
+          }
+        },
+        "Offset": 15,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "Activate",
+          "Parameters": [
+            {
+              "Inst": "EX_False"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 236,
+        "ObjectExpression": {
+          "Inst": "EX_ObjectConst",
+          "Value": {
+            "ObjectName": "BP_Audio_FunctionLibrary_C'Default__BP_Audio_FunctionLibrary_C'",
+            "ObjectPath": "/Game/Audio/BP_Audio_FunctionLibrary.1"
+          }
+        },
+        "Offset": 24,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_LocalVirtualFunction",
+          "Function": "Audio_Survivor_Grunt_Scream_Long",
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+                },
+                "Property": {
+                  "Type": "ObjectProperty",
+                  "Name": "K2Node_Event_survivorBeingHooked_1",
+                  "Flags": "RF_Public",
+                  "ElementSize": 8,
+                  "PropertyClass": {
+                    "ObjectName": "Class'CamperPlayer'",
+                    "ObjectPath": "/Script/DeadByDaylight"
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_Self"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 282,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_K2_GetActorLocation_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 24,
+              "Struct": {
+                "ObjectName": "Class'Vector'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "K2Node_Event_survivorBeingHooked_1",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'CamperPlayer'",
+                  "ObjectPath": "/Script/DeadByDaylight"
+                }
+              }
+            }
+          },
+          "Offset": 10,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_K2_GetActorLocation_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 24,
+              "Struct": {
+                "ObjectName": "Class'Vector'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_FinalFunction",
+            "Function": {
+              "ObjectName": "Class'Actor:K2_GetActorLocation'",
+              "ObjectPath": "/Script/Engine"
+            },
+            "Parameters": []
+          }
+        }
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 332,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_SpawnAkComponentAtLocation_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'AkComponent'",
+                "ObjectPath": "/Script/AkAudio"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_ObjectConst",
+            "Value": {
+              "ObjectName": "Class'Default__AkGameplayStatics'",
+              "ObjectPath": "/Script/AkAudio"
+            }
+          },
+          "Offset": 58,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_SpawnAkComponentAtLocation_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'AkComponent'",
+                "ObjectPath": "/Script/AkAudio"
+              }
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_FinalFunction",
+            "Function": {
+              "ObjectName": "Class'AkGameplayStatics:SpawnAkComponentAtLocation'",
+              "ObjectPath": "/Script/AkAudio"
+            },
+            "Parameters": [
+              {
+                "Inst": "EX_Self"
+              },
+              {
+                "Inst": "EX_ObjectConst",
+                "Value": {
+                  "ObjectName": "AkAudioEvent'AudioEvent_Masquerade_RemoteHook'",
+                  "ObjectPath": "/Game/Audio/AudioEvents/Objects/Anniversary/AudioEvent_Masquerade_RemoteHook.0"
+                }
+              },
+              {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                    "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+                  },
+                  "Property": {
+                    "Type": "StructProperty",
+                    "Name": "CallFunc_K2_GetActorLocation_ReturnValue_1",
+                    "Flags": "RF_Public",
+                    "ElementSize": 24,
+                    "Struct": {
+                      "ObjectName": "Class'Vector'",
+                      "ObjectPath": "/Script/CoreUObject"
+                    }
+                  }
+                }
+              },
+              {
+                "Inst": "EX_RotationConst",
+                "Value": {
+                  "Pitch": 0.0,
+                  "Yaw": 0.0,
+                  "Roll": 0.0
+                }
+              },
+              {
+                "Inst": "EX_True"
+              },
+              {
+                "Inst": "EX_StringConst",
+                "Value": ""
+              },
+              {
+                "Inst": "EX_True"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "Inst": "EX_PopExecutionFlow",
+        "StatementIndex": 422
+      },
+      {
+        "Inst": "EX_PushExecutionFlow",
+        "StatementIndex": 423,
+        "PushingAddress": 710,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.ExecuteUbergraph_BP_RemoteHookInteraction[710]"
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 428,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_SpawnSystemAtLocation_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'NiagaraComponent'",
+                "ObjectPath": "/Script/Niagara"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'NiagaraFunctionLibrary:SpawnSystemAtLocation'",
+            "ObjectPath": "/Script/Niagara"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_Self"
+            },
+            {
+              "Inst": "EX_ObjectConst",
+              "Value": {
+                "ObjectName": "NiagaraSystem'NS_8thAnniversary_PillarInteraction_Completed'",
+                "ObjectPath": "/Game/Effects/Niagara/NiagaraParticleSystem/Events/8thAnniversary/PillarInteraction/NS_8thAnniversary_PillarInteraction_Completed.84"
+              }
+            },
+            {
+              "Inst": "EX_VectorConst",
+              "Value": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              }
+            },
+            {
+              "Inst": "EX_RotationConst",
+              "Value": {
+                "Pitch": 0.0,
+                "Yaw": 0.0,
+                "Roll": 0.0
+              }
+            },
+            {
+              "Inst": "EX_VectorConst",
+              "Value": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            {
+              "Inst": "EX_False"
+            },
+            {
+              "Inst": "EX_False"
+            },
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 0
+            },
+            {
+              "Inst": "EX_True"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 538,
+        "Variable": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_RemoteHookInteraction_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.0"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "HookedVFX",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'NiagaraComponent'",
+                "ObjectPath": "/Script/Niagara"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_SpawnSystemAtLocation_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'NiagaraComponent'",
+                "ObjectPath": "/Script/Niagara"
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 557,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_CreateDynamicMaterialInstance_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyClass": {
+                "ObjectName": "Class'MaterialInstanceDynamic'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMaterialLibrary:CreateDynamicMaterialInstance'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_Self"
+            },
+            {
+              "Inst": "EX_ObjectConst",
+              "Value": {
+                "ObjectName": "MaterialInstanceConstant'MI_PP_K35_FadeToBlack_01'",
+                "ObjectPath": "/Game/Effects/Materials/SlasherK35/Killer/Cosmetic/Vignette/MI_PP_K35_FadeToBlack_01.0"
+              }
+            },
+            {
+              "Inst": "EX_NameConst",
+              "Value": "None"
+            },
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 0
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 602,
+        "Variable": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_RemoteHookInteraction_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.0"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "PP_ScreenFade",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+              "PropertyClass": {
+                "ObjectName": "Class'MaterialInstanceDynamic'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_CreateDynamicMaterialInstance_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyClass": {
+                "ObjectName": "Class'MaterialInstanceDynamic'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 621,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_RemoteHookInteraction_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.0"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "PP_ScreenFade",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+              "PropertyClass": {
+                "ObjectName": "Class'MaterialInstanceDynamic'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Offset": 28,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'MaterialInstanceDynamic:SetScalarParameterValue'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_NameConst",
+              "Value": "Vignette_BlendWeight"
+            },
+            {
+              "Inst": "EX_FloatConst",
+              "Value": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 671,
+        "Variable": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_RemoteHookInteraction_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.0"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "ShouldUpdateVignette",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 1,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_False"
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 682,
+        "Variable": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_RemoteHookInteraction_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.0"
+            },
+            "Property": {
+              "Type": "DoubleProperty",
+              "Name": "VignetteOpacity_Target",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_DoubleConst",
+          "Value": 0.0
+        }
+      },
+      {
+        "Inst": "EX_PopExecutionFlow",
+        "StatementIndex": 709
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 710,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_SpawnSystemAtLocation_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'NiagaraComponent'",
+                "ObjectPath": "/Script/Niagara"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'NiagaraFunctionLibrary:SpawnSystemAtLocation'",
+            "ObjectPath": "/Script/Niagara"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_Self"
+            },
+            {
+              "Inst": "EX_ObjectConst",
+              "Value": {
+                "ObjectName": "NiagaraSystem'NS_8thAnniv_RemoteHook_SurvivorDisappear'",
+                "ObjectPath": "/Game/Effects/Niagara/NiagaraParticleSystem/Events/8thAnniversary/RemoteHook/NS_8thAnniv_RemoteHook_SurvivorDisappear.29"
+              }
+            },
+            {
+              "Inst": "EX_VectorConst",
+              "Value": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              }
+            },
+            {
+              "Inst": "EX_RotationConst",
+              "Value": {
+                "Pitch": 0.0,
+                "Yaw": 0.0,
+                "Roll": 0.0
+              }
+            },
+            {
+              "Inst": "EX_VectorConst",
+              "Value": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            {
+              "Inst": "EX_False"
+            },
+            {
+              "Inst": "EX_False"
+            },
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 0
+            },
+            {
+              "Inst": "EX_True"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 820,
+        "Variable": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_RemoteHookInteraction_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.0"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "TeleportedVFX",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'NiagaraComponent'",
+                "ObjectPath": "/Script/Niagara"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_SpawnSystemAtLocation_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'NiagaraComponent'",
+                "ObjectPath": "/Script/Niagara"
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_PopExecutionFlow",
+        "StatementIndex": 839
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 840,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_RemoteHookInteraction_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.0"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "TeleportedVFX",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'NiagaraComponent'",
+                "ObjectPath": "/Script/Niagara"
+              }
+            }
+          }
+        },
+        "Offset": 15,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "Activate",
+          "Parameters": [
+            {
+              "Inst": "EX_False"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_PopExecutionFlow",
+        "StatementIndex": 877
+      },
+      {
+        "Inst": "EX_PopExecutionFlowIfNot",
+        "StatementIndex": 878,
+        "BooleanExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_RemoteHookInteraction_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.0"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "IsDissolving",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 1,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 888,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "FloatProperty",
+              "Name": "CallFunc_Divide_FloatFloat_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:Divide_FloatFloat'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_FloatConst",
+              "Value": 1.0
+            },
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_RemoteHookInteraction_C'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.0"
+                },
+                "Property": {
+                  "Type": "FloatProperty",
+                  "Name": "DissolveDuration",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 4,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 930,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "DoubleProperty",
+              "Name": "CallFunc_FInterpTo_DeltaTime_ImplicitCast",
+              "Flags": "RF_Public",
+              "ElementSize": 8
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Cast",
+          "ConversionType": "CST_FloatToDouble",
+          "Target": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+              },
+              "Property": {
+                "Type": "FloatProperty",
+                "Name": "K2Node_Event_DeltaSeconds",
+                "Flags": "RF_Public",
+                "ElementSize": 4
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 959,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "DoubleProperty",
+              "Name": "CallFunc_FInterpTo_InterpSpeed_ImplicitCast",
+              "Flags": "RF_Public",
+              "ElementSize": 8
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Cast",
+          "ConversionType": "CST_FloatToDouble",
+          "Target": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+              },
+              "Property": {
+                "Type": "FloatProperty",
+                "Name": "CallFunc_Divide_FloatFloat_ReturnValue",
+                "Flags": "RF_Public",
+                "ElementSize": 4
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 988,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "DoubleProperty",
+              "Name": "CallFunc_FInterpTo_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:FInterpTo'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_RemoteHookInteraction_C'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.0"
+                },
+                "Property": {
+                  "Type": "DoubleProperty",
+                  "Name": "DissolveAmount_Current",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 8,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+                }
+              }
+            },
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_RemoteHookInteraction_C'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.0"
+                },
+                "Property": {
+                  "Type": "DoubleProperty",
+                  "Name": "DissolveAmount_Target",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 8,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+                },
+                "Property": {
+                  "Type": "DoubleProperty",
+                  "Name": "CallFunc_FInterpTo_DeltaTime_ImplicitCast",
+                  "Flags": "RF_Public",
+                  "ElementSize": 8
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+                },
+                "Property": {
+                  "Type": "DoubleProperty",
+                  "Name": "CallFunc_FInterpTo_InterpSpeed_ImplicitCast",
+                  "Flags": "RF_Public",
+                  "ElementSize": 8
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1052,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "FloatProperty",
+              "Name": "CallFunc_SetScalarParameter_newValue_ImplicitCast",
+              "Flags": "RF_Public",
+              "ElementSize": 4,
+              "PropertyFlags": "ConstParm"
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Cast",
+          "ConversionType": "CST_DoubleToFloat",
+          "Target": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+              },
+              "Property": {
+                "Type": "DoubleProperty",
+                "Name": "CallFunc_FInterpTo_ReturnValue",
+                "Flags": "RF_Public",
+                "ElementSize": 8
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 1081,
+        "ObjectExpression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "K2Node_Event_survivorBeingHooked",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'CamperPlayer'",
+                  "ObjectPath": "/Script/DeadByDaylight"
+                }
+              }
+            }
+          },
+          "Offset": 9,
+          "RValuePointer": {
+            "Path": [
+              "MaterialHelper"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Class'DBDPlayer'",
+              "ObjectPath": "/Script/DeadByDaylight"
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_InstanceVariable",
+            "Variable": {
+              "Path": [
+                "MaterialHelper"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'DBDPlayer'",
+                "ObjectPath": "/Script/DeadByDaylight"
+              }
+            }
+          }
+        },
+        "Offset": 32,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'BatchMeshCommands:SetScalarParameter'",
+            "ObjectPath": "/Script/GFXUtilities"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_NameConst",
+              "Value": "DissolveProgress"
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+                },
+                "Property": {
+                  "Type": "FloatProperty",
+                  "Name": "CallFunc_SetScalarParameter_newValue_ImplicitCast",
+                  "Flags": "RF_Public",
+                  "ElementSize": 4,
+                  "PropertyFlags": "ConstParm"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1157,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "FloatProperty",
+              "Name": "CallFunc_Divide_FloatFloat_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:Divide_FloatFloat'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_FloatConst",
+              "Value": 1.0
+            },
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_RemoteHookInteraction_C'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.0"
+                },
+                "Property": {
+                  "Type": "FloatProperty",
+                  "Name": "DissolveDuration",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 4,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1199,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "DoubleProperty",
+              "Name": "CallFunc_FInterpTo_DeltaTime_ImplicitCast",
+              "Flags": "RF_Public",
+              "ElementSize": 8
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Cast",
+          "ConversionType": "CST_FloatToDouble",
+          "Target": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+              },
+              "Property": {
+                "Type": "FloatProperty",
+                "Name": "K2Node_Event_DeltaSeconds",
+                "Flags": "RF_Public",
+                "ElementSize": 4
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1228,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "DoubleProperty",
+              "Name": "CallFunc_FInterpTo_InterpSpeed_ImplicitCast",
+              "Flags": "RF_Public",
+              "ElementSize": 8
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Cast",
+          "ConversionType": "CST_FloatToDouble",
+          "Target": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+              },
+              "Property": {
+                "Type": "FloatProperty",
+                "Name": "CallFunc_Divide_FloatFloat_ReturnValue",
+                "Flags": "RF_Public",
+                "ElementSize": 4
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1257,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "DoubleProperty",
+              "Name": "CallFunc_FInterpTo_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:FInterpTo'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_RemoteHookInteraction_C'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.0"
+                },
+                "Property": {
+                  "Type": "DoubleProperty",
+                  "Name": "DissolveAmount_Current",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 8,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+                }
+              }
+            },
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_RemoteHookInteraction_C'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.0"
+                },
+                "Property": {
+                  "Type": "DoubleProperty",
+                  "Name": "DissolveAmount_Target",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 8,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+                },
+                "Property": {
+                  "Type": "DoubleProperty",
+                  "Name": "CallFunc_FInterpTo_DeltaTime_ImplicitCast",
+                  "Flags": "RF_Public",
+                  "ElementSize": 8
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+                },
+                "Property": {
+                  "Type": "DoubleProperty",
+                  "Name": "CallFunc_FInterpTo_InterpSpeed_ImplicitCast",
+                  "Flags": "RF_Public",
+                  "ElementSize": 8
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1321,
+        "Variable": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_RemoteHookInteraction_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.0"
+            },
+            "Property": {
+              "Type": "DoubleProperty",
+              "Name": "DissolveAmount_Current",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "DoubleProperty",
+              "Name": "CallFunc_FInterpTo_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1348,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "FloatProperty",
+              "Name": "CallFunc_Divide_FloatFloat_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:Divide_FloatFloat'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_FloatConst",
+              "Value": 1.0
+            },
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_RemoteHookInteraction_C'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.0"
+                },
+                "Property": {
+                  "Type": "FloatProperty",
+                  "Name": "DissolveDuration",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 4,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1390,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "DoubleProperty",
+              "Name": "CallFunc_FInterpTo_DeltaTime_ImplicitCast",
+              "Flags": "RF_Public",
+              "ElementSize": 8
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Cast",
+          "ConversionType": "CST_FloatToDouble",
+          "Target": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+              },
+              "Property": {
+                "Type": "FloatProperty",
+                "Name": "K2Node_Event_DeltaSeconds",
+                "Flags": "RF_Public",
+                "ElementSize": 4
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1419,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "DoubleProperty",
+              "Name": "CallFunc_FInterpTo_InterpSpeed_ImplicitCast",
+              "Flags": "RF_Public",
+              "ElementSize": 8
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Cast",
+          "ConversionType": "CST_FloatToDouble",
+          "Target": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+              },
+              "Property": {
+                "Type": "FloatProperty",
+                "Name": "CallFunc_Divide_FloatFloat_ReturnValue",
+                "Flags": "RF_Public",
+                "ElementSize": 4
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1448,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "DoubleProperty",
+              "Name": "CallFunc_FInterpTo_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:FInterpTo'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_RemoteHookInteraction_C'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.0"
+                },
+                "Property": {
+                  "Type": "DoubleProperty",
+                  "Name": "DissolveAmount_Current",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 8,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+                }
+              }
+            },
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_RemoteHookInteraction_C'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.0"
+                },
+                "Property": {
+                  "Type": "DoubleProperty",
+                  "Name": "DissolveAmount_Target",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 8,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+                },
+                "Property": {
+                  "Type": "DoubleProperty",
+                  "Name": "CallFunc_FInterpTo_DeltaTime_ImplicitCast",
+                  "Flags": "RF_Public",
+                  "ElementSize": 8
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+                },
+                "Property": {
+                  "Type": "DoubleProperty",
+                  "Name": "CallFunc_FInterpTo_InterpSpeed_ImplicitCast",
+                  "Flags": "RF_Public",
+                  "ElementSize": 8
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1512,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "StrProperty",
+              "Name": "CallFunc_BuildString_Double_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 16
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetStringLibrary:BuildString_Double'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_StringConst",
+              "Value": ""
+            },
+            {
+              "Inst": "EX_StringConst",
+              "Value": "HookedSurvivor_DissolveAmount = "
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+                },
+                "Property": {
+                  "Type": "DoubleProperty",
+                  "Name": "CallFunc_FInterpTo_ReturnValue",
+                  "Flags": "RF_Public",
+                  "ElementSize": 8
+                }
+              }
+            },
+            {
+              "Inst": "EX_StringConst",
+              "Value": ""
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_CallMath",
+        "StatementIndex": 1587,
+        "Function": {
+          "ObjectName": "Class'KismetSystemLibrary:PrintString'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_Self"
+          },
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+              },
+              "Property": {
+                "Type": "StrProperty",
+                "Name": "CallFunc_BuildString_Double_ReturnValue",
+                "Flags": "RF_Public",
+                "ElementSize": 16
+              }
+            }
+          },
+          {
+            "Inst": "EX_True"
+          },
+          {
+            "Inst": "EX_True"
+          },
+          {
+            "Inst": "EX_StructConst",
+            "Struct": {
+              "ObjectName": "Class'LinearColor'",
+              "ObjectPath": "/Script/CoreUObject"
+            },
+            "Properties": [
+              {
+                "Inst": "EX_FloatConst",
+                "Value": 0.0
+              },
+              {
+                "Inst": "EX_FloatConst",
+                "Value": 1.0
+              },
+              {
+                "Inst": "EX_FloatConst",
+                "Value": 0.687356
+              },
+              {
+                "Inst": "EX_FloatConst",
+                "Value": 1.0
+              }
+            ]
+          },
+          {
+            "Inst": "EX_FloatConst",
+            "Value": 2.0
+          },
+          {
+            "Inst": "EX_IntConst",
+            "Value": 1
+          }
+        ]
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 1653,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_NearlyEqual_FloatFloat_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:NearlyEqual_FloatFloat'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_RemoteHookInteraction_C'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.0"
+                },
+                "Property": {
+                  "Type": "DoubleProperty",
+                  "Name": "DissolveAmount_Current",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 8,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+                }
+              }
+            },
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_RemoteHookInteraction_C'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.0"
+                },
+                "Property": {
+                  "Type": "DoubleProperty",
+                  "Name": "DissolveAmount_Target",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 8,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+                }
+              }
+            },
+            {
+              "Inst": "EX_DoubleConst",
+              "Value": 0.001
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_PopExecutionFlowIfNot",
+        "StatementIndex": 1700,
+        "BooleanExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_NearlyEqual_FloatFloat_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 1710,
+        "Variable": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_RemoteHookInteraction_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.0"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "IsDissolving",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 1,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_False"
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 1721,
+        "ObjectExpression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "K2Node_Event_survivorBeingHooked",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'CamperPlayer'",
+                  "ObjectPath": "/Script/DeadByDaylight"
+                }
+              }
+            }
+          },
+          "Offset": 9,
+          "RValuePointer": {
+            "Path": [
+              "MaterialHelper"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Class'DBDPlayer'",
+              "ObjectPath": "/Script/DeadByDaylight"
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_InstanceVariable",
+            "Variable": {
+              "Path": [
+                "MaterialHelper"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'DBDPlayer'",
+                "ObjectPath": "/Script/DeadByDaylight"
+              }
+            }
+          }
+        },
+        "Offset": 10,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'BatchMeshCommands:ResetMaterials'",
+            "ObjectPath": "/Script/GFXUtilities"
+          },
+          "Parameters": []
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1775,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "InterfaceProperty",
+              "Name": "CallFunc_RemoveStateTag_objectStateProvider_CastInput",
+              "Flags": "RF_Public",
+              "ElementSize": 16,
+              "PropertyFlags": "ConstParm | UObjectWrapper",
+              "InterfaceClass": {
+                "ObjectName": "Class'ObjectStateProvider'",
+                "ObjectPath": "/Script/GameplayTagUtilities"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_ObjToInterfaceCast",
+          "InterfaceClass": {
+            "ObjectName": "Class'ObjectStateProvider'",
+            "ObjectPath": "/Script/GameplayTagUtilities"
+          },
+          "Target": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "K2Node_Event_survivorBeingHooked",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'CamperPlayer'",
+                  "ObjectPath": "/Script/DeadByDaylight"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_CallMath",
+        "StatementIndex": 1811,
+        "Function": {
+          "ObjectName": "Class'StateTagUtilities:RemoveStateTag'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+              },
+              "Property": {
+                "Type": "InterfaceProperty",
+                "Name": "CallFunc_RemoveStateTag_objectStateProvider_CastInput",
+                "Flags": "RF_Public",
+                "ElementSize": 16,
+                "PropertyFlags": "ConstParm | UObjectWrapper",
+                "InterfaceClass": {
+                  "ObjectName": "Class'ObjectStateProvider'",
+                  "ObjectPath": "/Script/GameplayTagUtilities"
+                }
+              }
+            }
+          },
+          {
+            "Inst": "EX_StructConst",
+            "Struct": {
+              "ObjectName": "Class'GameplayTag'",
+              "ObjectPath": "/Script/GameplayTags"
+            },
+            "Properties": [
+              {
+                "Inst": "EX_NameConst",
+                "Value": "None"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Inst": "EX_PopExecutionFlow",
+        "StatementIndex": 1857
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 1858,
+        "Variable": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_RemoteHookInteraction_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.0"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "IsDissolving",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 1,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_True"
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1869,
+        "Variable": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_RemoteHookInteraction_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.0"
+            },
+            "Property": {
+              "Type": "DoubleProperty",
+              "Name": "DissolveAmount_Target",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_DoubleConst",
+          "Value": 1.0
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 1896,
+        "ObjectExpression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "K2Node_Event_survivorBeingHooked",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'CamperPlayer'",
+                  "ObjectPath": "/Script/DeadByDaylight"
+                }
+              }
+            }
+          },
+          "Offset": 9,
+          "RValuePointer": {
+            "Path": [
+              "MaterialHelper"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Class'DBDPlayer'",
+              "ObjectPath": "/Script/DeadByDaylight"
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_InstanceVariable",
+            "Variable": {
+              "Path": [
+                "MaterialHelper"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'DBDPlayer'",
+                "ObjectPath": "/Script/DeadByDaylight"
+              }
+            }
+          }
+        },
+        "Offset": 28,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'BatchMeshCommands:SetScalarParameter'",
+            "ObjectPath": "/Script/GFXUtilities"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_NameConst",
+              "Value": "42 - InverseDissolve"
+            },
+            {
+              "Inst": "EX_FloatConst",
+              "Value": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_PopExecutionFlow",
+        "StatementIndex": 1968
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1969,
+        "Variable": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_RemoteHookInteraction_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.0"
+            },
+            "Property": {
+              "Type": "DoubleProperty",
+              "Name": "DissolveAmount_Current",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_DoubleConst",
+          "Value": 0.0
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 1996,
+        "CodeOffset": 1858,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.ExecuteUbergraph_BP_RemoteHookInteraction[1858]"
+      },
+      {
+        "Inst": "EX_PushExecutionFlow",
+        "StatementIndex": 2001,
+        "PushingAddress": 2512,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.ExecuteUbergraph_BP_RemoteHookInteraction[2512]"
+      },
+      {
+        "Inst": "EX_CallMath",
+        "StatementIndex": 2006,
+        "Function": {
+          "ObjectName": "Class'AudioUtilities:PostAkAudioEvent'",
+          "ObjectPath": "/Script/DBDAudio"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_ObjectConst",
+            "Value": {
+              "ObjectName": "AkAudioEvent'AudioEvent_HUD_Masquerade_RemoteHook_Activated'",
+              "ObjectPath": "/Game/Audio/AudioEvents/Objects/Anniversary/AudioEvent_HUD_Masquerade_RemoteHook_Activated.0"
+            }
+          }
+        ]
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 2025,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 24,
+              "Struct": {
+                "ObjectName": "Class'Vector'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "K2Node_Event_survivorBeingHooked",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'CamperPlayer'",
+                  "ObjectPath": "/Script/DeadByDaylight"
+                }
+              }
+            }
+          },
+          "Offset": 10,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 24,
+              "Struct": {
+                "ObjectName": "Class'Vector'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_FinalFunction",
+            "Function": {
+              "ObjectName": "Class'Actor:K2_GetActorLocation'",
+              "ObjectPath": "/Script/Engine"
+            },
+            "Parameters": []
+          }
+        }
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 2075,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_SpawnAkComponentAtLocation_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'AkComponent'",
+                "ObjectPath": "/Script/AkAudio"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_ObjectConst",
+            "Value": {
+              "ObjectName": "Class'Default__AkGameplayStatics'",
+              "ObjectPath": "/Script/AkAudio"
+            }
+          },
+          "Offset": 58,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_SpawnAkComponentAtLocation_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'AkComponent'",
+                "ObjectPath": "/Script/AkAudio"
+              }
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_FinalFunction",
+            "Function": {
+              "ObjectName": "Class'AkGameplayStatics:SpawnAkComponentAtLocation'",
+              "ObjectPath": "/Script/AkAudio"
+            },
+            "Parameters": [
+              {
+                "Inst": "EX_Self"
+              },
+              {
+                "Inst": "EX_ObjectConst",
+                "Value": {
+                  "ObjectName": "AkAudioEvent'AudioEvent_Masquerade_RemoteHook'",
+                  "ObjectPath": "/Game/Audio/AudioEvents/Objects/Anniversary/AudioEvent_Masquerade_RemoteHook.0"
+                }
+              },
+              {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                    "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+                  },
+                  "Property": {
+                    "Type": "StructProperty",
+                    "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+                    "Flags": "RF_Public",
+                    "ElementSize": 24,
+                    "Struct": {
+                      "ObjectName": "Class'Vector'",
+                      "ObjectPath": "/Script/CoreUObject"
+                    }
+                  }
+                }
+              },
+              {
+                "Inst": "EX_RotationConst",
+                "Value": {
+                  "Pitch": 0.0,
+                  "Yaw": 0.0,
+                  "Roll": 0.0
+                }
+              },
+              {
+                "Inst": "EX_True"
+              },
+              {
+                "Inst": "EX_StringConst",
+                "Value": ""
+              },
+              {
+                "Inst": "EX_True"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 2165,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "InterfaceProperty",
+              "Name": "CallFunc_AddStateTag_objectStateProvider_CastInput",
+              "Flags": "RF_Public",
+              "ElementSize": 16,
+              "PropertyFlags": "ConstParm | UObjectWrapper",
+              "InterfaceClass": {
+                "ObjectName": "Class'ObjectStateProvider'",
+                "ObjectPath": "/Script/GameplayTagUtilities"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_ObjToInterfaceCast",
+          "InterfaceClass": {
+            "ObjectName": "Class'ObjectStateProvider'",
+            "ObjectPath": "/Script/GameplayTagUtilities"
+          },
+          "Target": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "K2Node_Event_survivorBeingHooked",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'CamperPlayer'",
+                  "ObjectPath": "/Script/DeadByDaylight"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_CallMath",
+        "StatementIndex": 2201,
+        "Function": {
+          "ObjectName": "Class'StateTagUtilities:AddStateTag'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+              },
+              "Property": {
+                "Type": "InterfaceProperty",
+                "Name": "CallFunc_AddStateTag_objectStateProvider_CastInput",
+                "Flags": "RF_Public",
+                "ElementSize": 16,
+                "PropertyFlags": "ConstParm | UObjectWrapper",
+                "InterfaceClass": {
+                  "ObjectName": "Class'ObjectStateProvider'",
+                  "ObjectPath": "/Script/GameplayTagUtilities"
+                }
+              }
+            }
+          },
+          {
+            "Inst": "EX_StructConst",
+            "Struct": {
+              "ObjectName": "Class'GameplayTag'",
+              "ObjectPath": "/Script/GameplayTags"
+            },
+            "Properties": [
+              {
+                "Inst": "EX_NameConst",
+                "Value": "State.StopSetMaterialOnTick"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 2247,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_GetSocketTransform_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 96,
+              "Struct": {
+                "ObjectName": "Class'Transform'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_Context",
+            "ObjectExpression": {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+                },
+                "Property": {
+                  "Type": "ObjectProperty",
+                  "Name": "K2Node_Event_survivorBeingHooked",
+                  "Flags": "RF_Public",
+                  "ElementSize": 8,
+                  "PropertyClass": {
+                    "ObjectName": "Class'CamperPlayer'",
+                    "ObjectPath": "/Script/DeadByDaylight"
+                  }
+                }
+              }
+            },
+            "Offset": 9,
+            "RValuePointer": {
+              "Path": [
+                "Mesh"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'Character'",
+                "ObjectPath": "/Script/Engine"
+              }
+            },
+            "ContextExpression": {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Path": [
+                  "Mesh"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "Class'Character'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              }
+            }
+          },
+          "Offset": 29,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_GetSocketTransform_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 96,
+              "Struct": {
+                "ObjectName": "Class'Transform'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_VirtualFunction",
+            "Function": "GetSocketTransform",
+            "Parameters": [
+              {
+                "Inst": "EX_NameConst",
+                "Value": "joint_TorsoB_01"
+              },
+              {
+                "Inst": "EX_ByteConst",
+                "Value": 0
+              }
+            ]
+          }
+        }
+      },
+      {
+        "Inst": "EX_CallMath",
+        "StatementIndex": 2338,
+        "Function": {
+          "ObjectName": "Class'KismetMathLibrary:BreakTransform'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+              },
+              "Property": {
+                "Type": "StructProperty",
+                "Name": "CallFunc_GetSocketTransform_ReturnValue",
+                "Flags": "RF_Public",
+                "ElementSize": 96,
+                "Struct": {
+                  "ObjectName": "Class'Transform'",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              }
+            }
+          },
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+              },
+              "Property": {
+                "Type": "StructProperty",
+                "Name": "CallFunc_BreakTransform_Location",
+                "Flags": "RF_Public",
+                "ElementSize": 24,
+                "Struct": {
+                  "ObjectName": "Class'Vector'",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              }
+            }
+          },
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+              },
+              "Property": {
+                "Type": "StructProperty",
+                "Name": "CallFunc_BreakTransform_Rotation",
+                "Flags": "RF_Public",
+                "ElementSize": 24,
+                "Struct": {
+                  "ObjectName": "Class'Rotator'",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              }
+            }
+          },
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+              },
+              "Property": {
+                "Type": "StructProperty",
+                "Name": "CallFunc_BreakTransform_Scale",
+                "Flags": "RF_Public",
+                "ElementSize": 24,
+                "Struct": {
+                  "ObjectName": "Class'Vector'",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 2384,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_MakeTransform_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 96,
+              "Struct": {
+                "ObjectName": "Class'Transform'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:MakeTransform'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "CallFunc_BreakTransform_Location",
+                  "Flags": "RF_Public",
+                  "ElementSize": 24,
+                  "Struct": {
+                    "ObjectName": "Class'Vector'",
+                    "ObjectPath": "/Script/CoreUObject"
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "CallFunc_BreakTransform_Rotation",
+                  "Flags": "RF_Public",
+                  "ElementSize": 24,
+                  "Struct": {
+                    "ObjectName": "Class'Rotator'",
+                    "ObjectPath": "/Script/CoreUObject"
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_VectorConst",
+              "Value": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 2455,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_RemoteHookInteraction_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.0"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "TeleportedVFX",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'NiagaraComponent'",
+                "ObjectPath": "/Script/Niagara"
+              }
+            }
+          }
+        },
+        "Offset": 30,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'SceneComponent:K2_SetWorldTransform'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "CallFunc_MakeTransform_ReturnValue",
+                  "Flags": "RF_Public",
+                  "ElementSize": 96,
+                  "Struct": {
+                    "ObjectName": "Class'Transform'",
+                    "ObjectPath": "/Script/CoreUObject"
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_False"
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "CallFunc_K2_SetWorldTransform_SweepHitResult",
+                  "Flags": "RF_Public",
+                  "ElementSize": 240,
+                  "PropertyFlags": "ContainsInstancedReference",
+                  "Struct": {
+                    "ObjectName": "Class'HitResult'",
+                    "ObjectPath": "/Script/Engine"
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_False"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 2507,
+        "CodeOffset": 840,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.ExecuteUbergraph_BP_RemoteHookInteraction[840]"
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 2512,
+        "ObjectExpression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "K2Node_Event_survivorBeingHooked",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'CamperPlayer'",
+                  "ObjectPath": "/Script/DeadByDaylight"
+                }
+              }
+            }
+          },
+          "Offset": 9,
+          "RValuePointer": {
+            "Path": [
+              "MaterialHelper"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Class'DBDPlayer'",
+              "ObjectPath": "/Script/DeadByDaylight"
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_InstanceVariable",
+            "Variable": {
+              "Path": [
+                "MaterialHelper"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'DBDPlayer'",
+                "ObjectPath": "/Script/DeadByDaylight"
+              }
+            }
+          }
+        },
+        "Offset": 19,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'BatchMeshCommands:SetMaterial'",
+            "ObjectPath": "/Script/GFXUtilities"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_StringConst",
+              "Value": "Camper1"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 2575,
+        "CodeOffset": 1969,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.ExecuteUbergraph_BP_RemoteHookInteraction[1969]"
+      },
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 2580,
+        "Function": {
+          "ObjectName": "Class'ActorComponent:ReceiveBeginPlay'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "Parameters": []
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 2590,
+        "CodeOffset": 423,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.ExecuteUbergraph_BP_RemoteHookInteraction[423]"
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 2595,
+        "CodeOffset": 878,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.ExecuteUbergraph_BP_RemoteHookInteraction[878]"
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 2600,
+        "CodeOffset": 15,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.ExecuteUbergraph_BP_RemoteHookInteraction[15]"
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 2605,
+        "Variable": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_RemoteHookInteraction_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.0"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "IsDissolving",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 1,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_True"
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 2616,
+        "CodeOffset": 2001,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.ExecuteUbergraph_BP_RemoteHookInteraction[2001]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 2621,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 2623
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BP_RemoteHookInteraction_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Class'ActorComponent:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 0,
+        "Function": {
+          "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+          "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 2580
+          }
+        ],
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.ExecuteUbergraph_BP_RemoteHookInteraction[2580]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 15,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 17
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveTick",
+    "Outer": "BP_RemoteHookInteraction_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Class'ActorComponent:ReceiveTick'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LetValueOnPersistentFrame",
+        "StatementIndex": 0,
+        "DestinationProperty": {
+          "Owner": {
+            "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+            "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+          },
+          "Property": {
+            "Type": "FloatProperty",
+            "Name": "K2Node_Event_DeltaSeconds",
+            "Flags": "RF_Public",
+            "ElementSize": 4
+          }
+        },
+        "AssignmentExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteHookInteraction_C:ReceiveTick'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.6"
+            },
+            "Property": {
+              "Type": "FloatProperty",
+              "Name": "DeltaSeconds",
+              "Flags": "RF_Public",
+              "ElementSize": 4,
+              "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 18,
+        "Function": {
+          "ObjectName": "Function'BP_RemoteHookInteraction_C:ExecuteUbergraph_BP_RemoteHookInteraction'",
+          "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.4"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 2595
+          }
+        ],
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_RemoteHookInteraction.ExecuteUbergraph_BP_RemoteHookInteraction[2595]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 33,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 35
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  }
+]

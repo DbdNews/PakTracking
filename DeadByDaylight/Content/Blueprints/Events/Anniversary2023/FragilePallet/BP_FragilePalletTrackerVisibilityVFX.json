@@ -1,0 +1,3879 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_FragilePalletTrackerVisibilityVFX_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "Timelines": [
+        {
+          "ObjectName": "TimelineTemplate'BP_FragilePalletTrackerVisibilityVFX_C:TML_IndicatorVisibilityController_Template'",
+          "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.16"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_FragilePalletTrackerVisibilityVFX_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.15"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:TML_IndicatorVisibilityController__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.11"
+      },
+      {
+        "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:TML_IndicatorVisibilityController__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.12"
+      },
+      {
+        "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:SetVisibility'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.10"
+      },
+      {
+        "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:Initialize'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.7"
+      },
+      {
+        "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:SetPalletHighlightColor'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.9"
+      },
+      {
+        "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ReceiveTick'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.8"
+      },
+      {
+        "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TML_IndicatorVisibilityController_SmokeColor_243CCE38412A599788C6F496C527B183",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "TML_IndicatorVisibilityController_ErosionAmount_243CCE38412A599788C6F496C527B183",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "TML_IndicatorVisibilityController_Opacity_243CCE38412A599788C6F496C527B183",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "TML_IndicatorVisibilityController_ColorValue_243CCE38412A599788C6F496C527B183",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "TML_IndicatorVisibilityController__Direction_243CCE38412A599788C6F496C527B183",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "TML_IndicatorVisibilityController",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PalletTracker",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_PalletTracker_C'",
+          "ObjectPath": "/Game/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Indicator Material",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Debug Color",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Normal Color",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Selected Color",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Current Color",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Target Color",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "IsSwappingColors",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "TargetGlitterIntensity",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CurrentGlitterIntensity",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX": {
+        "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+      },
+      "ReceiveTick": {
+        "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ReceiveTick'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.8"
+      },
+      "SetPalletHighlightColor": {
+        "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:SetPalletHighlightColor'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.9"
+      },
+      "Initialize": {
+        "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:Initialize'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.7"
+      },
+      "SetVisibility": {
+        "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:SetVisibility'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.10"
+      },
+      "TML_IndicatorVisibilityController__UpdateFunc": {
+        "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:TML_IndicatorVisibilityController__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.12"
+      },
+      "TML_IndicatorVisibilityController__FinishedFunc": {
+        "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:TML_IndicatorVisibilityController__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.11"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_FragilePalletTrackerVisibilityVFX_C'Default__BP_FragilePalletTrackerVisibilityVFX_C'",
+      "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_FragilePalletTrackerVisibilityVFX_C",
+    "Name": "Default__BP_FragilePalletTrackerVisibilityVFX_C",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.BP_FragilePalletTrackerVisibilityVFX_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "TML_IndicatorVisibilityController_SmokeColor_243CCE38412A599788C6F496C527B183": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 0.0,
+        "Hex": "000000"
+      },
+      "Debug Color": {
+        "R": 1.0,
+        "G": 0.0,
+        "B": 0.852517,
+        "A": 1.0,
+        "Hex": "FF00EE"
+      },
+      "Normal Color": {
+        "R": 0.291667,
+        "G": 0.142974,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "936A00"
+      },
+      "Selected Color": {
+        "R": 0.059464,
+        "G": 0.115706,
+        "B": 0.973958,
+        "A": 1.0,
+        "Hex": "455FFD"
+      },
+      "Current Color": {
+        "R": 0.035933,
+        "G": 0.069919,
+        "B": 0.588542,
+        "A": 1.0,
+        "Hex": "354BCA"
+      },
+      "Target Color": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 0.0,
+        "Hex": "000000"
+      },
+      "PrimaryActorTick": {
+        "bCanEverTick": true
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0_1",
+    "Outer": "BP_FragilePalletTrackerVisibilityVFX_C",
+    "Class": "UScriptClass'CurveFloat'",
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.080067635,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.37170482,
+            "Value": 0.64428604,
+            "ArriveTangent": 1.5887152,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 1.5887156,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 1.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_1_2",
+    "Outer": "BP_FragilePalletTrackerVisibilityVFX_C",
+    "Class": "UScriptClass'CurveFloat'",
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": -0.0017059594,
+            "Value": 0.45906672,
+            "ArriveTangent": 4.033784,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 4.0337844,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.9946382,
+            "Value": 0.2,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_2_3",
+    "Outer": "BP_FragilePalletTrackerVisibilityVFX_C",
+    "Class": "UScriptClass'CurveFloat'",
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.7543717,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.23018417,
+            "Value": 0.8698045,
+            "ArriveTangent": 0.5819454,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.58194524,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 1.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CurveLinearColor",
+    "Name": "CurveLinearColor_0_1",
+    "Outer": "BP_FragilePalletTrackerVisibilityVFX_C",
+    "Class": "UScriptClass'CurveLinearColor'",
+    "FloatCurves": [
+      {
+        "Keys": [],
+        "DefaultValue": 3.4028235E+38,
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant"
+      },
+      {
+        "Keys": [],
+        "DefaultValue": 3.4028235E+38,
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant"
+      },
+      {
+        "Keys": [],
+        "DefaultValue": 3.4028235E+38,
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant"
+      },
+      {
+        "Keys": [],
+        "DefaultValue": 3.4028235E+38,
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant"
+      }
+    ]
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX",
+    "Outer": "BP_FragilePalletTrackerVisibilityVFX_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateDynamicMaterialInstance_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_K2_GetRootComponent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Temp_struct_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_CustomEvent_Visible",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_PalletTrackerOwner",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_PalletTracker_C'",
+          "ObjectPath": "/Game/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_K2_GetRootComponent_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_K2_GetRootComponent_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_CustomEvent_IsSelected",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_SelectFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_SelectColor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_CInterpTo_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_LinearColor_IsNearEqual_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_FInterpTo_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_FInterpTo_DeltaTime_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetScalarParameterValue_Value_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_ComputedJump",
+        "StatementIndex": 0,
+        "OffsetExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "EntryPoint",
+              "Flags": "RF_Public",
+              "ElementSize": 4,
+              "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 10,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "Indicator Material",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+              "PropertyClass": {
+                "ObjectName": "Class'MaterialInstanceDynamic'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Offset": 28,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'MaterialInstanceDynamic:SetScalarParameterValue'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_NameConst",
+              "Value": "Opacity"
+            },
+            {
+              "Inst": "EX_FloatConst",
+              "Value": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 60,
+        "CodeOffset": 2060,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX[2060]"
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 65,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_IsValid_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetSystemLibrary:IsValid'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+                },
+                "Property": {
+                  "Type": "ObjectProperty",
+                  "Name": "PalletTracker",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 8,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+                  "PropertyClass": {
+                    "ObjectName": "BlueprintGeneratedClass'BP_PalletTracker_C'",
+                    "ObjectPath": "/Game/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.0"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_JumpIfNot",
+        "StatementIndex": 94,
+        "CodeOffset": 426,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX[426]",
+        "BooleanExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_IsValid_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 108,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_IsValid_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetSystemLibrary:IsValid'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_Context",
+              "ObjectExpression": {
+                "Inst": "EX_InstanceVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+                    "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+                  },
+                  "Property": {
+                    "Type": "ObjectProperty",
+                    "Name": "PalletTracker",
+                    "Flags": "RF_Public | RF_LoadCompleted",
+                    "ElementSize": 8,
+                    "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+                    "PropertyClass": {
+                      "ObjectName": "BlueprintGeneratedClass'BP_PalletTracker_C'",
+                      "ObjectPath": "/Game/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.0"
+                    }
+                  }
+                }
+              },
+              "Offset": 9,
+              "RValuePointer": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_PalletTracker_C'",
+                  "ObjectPath": "/Game/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.0"
+                },
+                "Property": {
+                  "Type": "ObjectProperty",
+                  "Name": "SkeletalMeshComponent",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 8,
+                  "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+                  "PropertyClass": {
+                    "ObjectName": "Class'DBDSkeletalMeshComponentBudgeted'",
+                    "ObjectPath": "/Script/DBDAnimationBudgetAllocator"
+                  }
+                }
+              },
+              "ContextExpression": {
+                "Inst": "EX_InstanceVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "BlueprintGeneratedClass'BP_PalletTracker_C'",
+                    "ObjectPath": "/Game/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.0"
+                  },
+                  "Property": {
+                    "Type": "ObjectProperty",
+                    "Name": "SkeletalMeshComponent",
+                    "Flags": "RF_Public | RF_LoadCompleted",
+                    "ElementSize": 8,
+                    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+                    "PropertyClass": {
+                      "ObjectName": "Class'DBDSkeletalMeshComponentBudgeted'",
+                      "ObjectPath": "/Script/DBDAnimationBudgetAllocator"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_JumpIfNot",
+        "StatementIndex": 159,
+        "CodeOffset": 549,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX[549]",
+        "BooleanExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_IsValid_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 173,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_K2_GetRootComponent_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'SceneComponent'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_InstanceVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "PalletTracker",
+                "Flags": "RF_Public | RF_LoadCompleted",
+                "ElementSize": 8,
+                "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+                "PropertyClass": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_PalletTracker_C'",
+                  "ObjectPath": "/Game/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.0"
+                }
+              }
+            }
+          },
+          "Offset": 10,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_K2_GetRootComponent_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'SceneComponent'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_FinalFunction",
+            "Function": {
+              "ObjectName": "Class'Actor:K2_GetRootComponent'",
+              "ObjectPath": "/Script/Engine"
+            },
+            "Parameters": []
+          }
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 215,
+        "ObjectExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_K2_GetRootComponent_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'SceneComponent'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Offset": 16,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "SetVisibility",
+          "Parameters": [
+            {
+              "Inst": "EX_False"
+            },
+            {
+              "Inst": "EX_True"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 253,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_CreateDynamicMaterialInstance_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyClass": {
+                "ObjectName": "Class'MaterialInstanceDynamic'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_Context",
+            "ObjectExpression": {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+                },
+                "Property": {
+                  "Type": "ObjectProperty",
+                  "Name": "PalletTracker",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 8,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+                  "PropertyClass": {
+                    "ObjectName": "BlueprintGeneratedClass'BP_PalletTracker_C'",
+                    "ObjectPath": "/Game/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.0"
+                  }
+                }
+              }
+            },
+            "Offset": 9,
+            "RValuePointer": {
+              "Owner": {
+                "ObjectName": "BlueprintGeneratedClass'BP_PalletTracker_C'",
+                "ObjectPath": "/Game/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.0"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "SkeletalMeshComponent",
+                "Flags": "RF_Public | RF_LoadCompleted",
+                "ElementSize": 8,
+                "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+                "PropertyClass": {
+                  "ObjectName": "Class'DBDSkeletalMeshComponentBudgeted'",
+                  "ObjectPath": "/Script/DBDAnimationBudgetAllocator"
+                }
+              }
+            },
+            "ContextExpression": {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_PalletTracker_C'",
+                  "ObjectPath": "/Game/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.0"
+                },
+                "Property": {
+                  "Type": "ObjectProperty",
+                  "Name": "SkeletalMeshComponent",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 8,
+                  "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+                  "PropertyClass": {
+                    "ObjectName": "Class'DBDSkeletalMeshComponentBudgeted'",
+                    "ObjectPath": "/Script/DBDAnimationBudgetAllocator"
+                  }
+                }
+              }
+            }
+          },
+          "Offset": 41,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_CreateDynamicMaterialInstance_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyClass": {
+                "ObjectName": "Class'MaterialInstanceDynamic'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_VirtualFunction",
+            "Function": "CreateDynamicMaterialInstance",
+            "Parameters": [
+              {
+                "Inst": "EX_IntConst",
+                "Value": 0
+              },
+              {
+                "Inst": "EX_ObjectConst",
+                "Value": {
+                  "ObjectName": "MaterialInstanceConstant'MI_7thAnniversary_Glitter_FragilePalletSelector_01'",
+                  "ObjectPath": "/Game/Effects/Materials/Events/7thAnniversary/MI_7thAnniversary_Glitter_FragilePalletSelector_01.0"
+                }
+              },
+              {
+                "Inst": "EX_NameConst",
+                "Value": "None"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 348,
+        "Variable": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "Indicator Material",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+              "PropertyClass": {
+                "ObjectName": "Class'MaterialInstanceDynamic'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_CreateDynamicMaterialInstance_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyClass": {
+                "ObjectName": "Class'MaterialInstanceDynamic'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 367,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "Indicator Material",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+              "PropertyClass": {
+                "ObjectName": "Class'MaterialInstanceDynamic'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Offset": 32,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'MaterialInstanceDynamic:SetVectorParameterValue'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_NameConst",
+              "Value": "TrapColor"
+            },
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "Normal Color",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 16,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+                  "Struct": {
+                    "ObjectName": "Class'LinearColor'",
+                    "ObjectPath": "/Script/CoreUObject"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 421,
+        "CodeOffset": 10,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX[10]"
+      },
+      {
+        "Inst": "EX_CallMath",
+        "StatementIndex": 426,
+        "Function": {
+          "ObjectName": "Class'KismetSystemLibrary:PrintString'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_Self"
+          },
+          {
+            "Inst": "EX_StringConst",
+            "Value": "BP_FragilePalletTracker - Initialize- Invalid PalletTracker"
+          },
+          {
+            "Inst": "EX_True"
+          },
+          {
+            "Inst": "EX_True"
+          },
+          {
+            "Inst": "EX_StructConst",
+            "Struct": {
+              "ObjectName": "Class'LinearColor'",
+              "ObjectPath": "/Script/CoreUObject"
+            },
+            "Properties": [
+              {
+                "Inst": "EX_FloatConst",
+                "Value": 0.0
+              },
+              {
+                "Inst": "EX_FloatConst",
+                "Value": 0.66
+              },
+              {
+                "Inst": "EX_FloatConst",
+                "Value": 1.0
+              },
+              {
+                "Inst": "EX_FloatConst",
+                "Value": 1.0
+              }
+            ]
+          },
+          {
+            "Inst": "EX_FloatConst",
+            "Value": 2.0
+          },
+          {
+            "Inst": "EX_IntConst",
+            "Value": -1
+          }
+        ]
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 544,
+        "CodeOffset": 2060,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX[2060]"
+      },
+      {
+        "Inst": "EX_CallMath",
+        "StatementIndex": 549,
+        "Function": {
+          "ObjectName": "Class'KismetSystemLibrary:PrintString'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_Self"
+          },
+          {
+            "Inst": "EX_StringConst",
+            "Value": "BP_FragilePalletTracker - Initialize- Invalid SkeletalMesh"
+          },
+          {
+            "Inst": "EX_True"
+          },
+          {
+            "Inst": "EX_True"
+          },
+          {
+            "Inst": "EX_StructConst",
+            "Struct": {
+              "ObjectName": "Class'LinearColor'",
+              "ObjectPath": "/Script/CoreUObject"
+            },
+            "Properties": [
+              {
+                "Inst": "EX_FloatConst",
+                "Value": 0.0
+              },
+              {
+                "Inst": "EX_FloatConst",
+                "Value": 0.66
+              },
+              {
+                "Inst": "EX_FloatConst",
+                "Value": 1.0
+              },
+              {
+                "Inst": "EX_FloatConst",
+                "Value": 1.0
+              }
+            ]
+          },
+          {
+            "Inst": "EX_FloatConst",
+            "Value": 2.0
+          },
+          {
+            "Inst": "EX_IntConst",
+            "Value": -1
+          }
+        ]
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 666,
+        "CodeOffset": 2060,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX[2060]"
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 671,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "TML_IndicatorVisibilityController",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'TimelineComponent'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Offset": 10,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'TimelineComponent:Stop'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": []
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 703,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "Temp_struct_Variable",
+              "Flags": "RF_Public",
+              "ElementSize": 16,
+              "Struct": {
+                "ObjectName": "Class'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_StructConst",
+          "Struct": {
+            "ObjectName": "Class'LinearColor'",
+            "ObjectPath": "/Script/CoreUObject"
+          },
+          "Properties": [
+            {
+              "Inst": "EX_FloatConst",
+              "Value": 0.0
+            },
+            {
+              "Inst": "EX_FloatConst",
+              "Value": 0.0
+            },
+            {
+              "Inst": "EX_FloatConst",
+              "Value": 0.0
+            },
+            {
+              "Inst": "EX_FloatConst",
+              "Value": 0.0
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 755,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "Temp_bool_Variable",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "K2Node_CustomEvent_Visible",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 774,
+        "ObjectExpression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_InstanceVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "PalletTracker",
+                "Flags": "RF_Public | RF_LoadCompleted",
+                "ElementSize": 8,
+                "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+                "PropertyClass": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_PalletTracker_C'",
+                  "ObjectPath": "/Game/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.0"
+                }
+              }
+            }
+          },
+          "Offset": 9,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_PalletTracker_C'",
+              "ObjectPath": "/Game/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.0"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "DBDOutline",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+              "PropertyClass": {
+                "ObjectName": "Class'DBDOutlineComponent'",
+                "ObjectPath": "/Script/DeadByDaylight"
+              }
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_InstanceVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "BlueprintGeneratedClass'BP_PalletTracker_C'",
+                "ObjectPath": "/Game/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.0"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "DBDOutline",
+                "Flags": "RF_Public | RF_LoadCompleted",
+                "ElementSize": 8,
+                "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+                "PropertyClass": {
+                  "ObjectName": "Class'DBDOutlineComponent'",
+                  "ObjectPath": "/Script/DeadByDaylight"
+                }
+              }
+            }
+          }
+        },
+        "Offset": 63,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'DBDOutlineComponent:SetTargetColor'",
+            "ObjectPath": "/Script/DeadByDaylight"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_SwitchValue",
+              "IndexTerm": {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+                    "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+                  },
+                  "Property": {
+                    "Type": "BoolProperty",
+                    "Name": "Temp_bool_Variable",
+                    "Flags": "RF_Public",
+                    "ElementSize": 1,
+                    "FieldSize": 1,
+                    "ByteOffset": 0,
+                    "ByteMask": 1,
+                    "FieldMask": 255,
+                    "BoolSize": 1,
+                    "bIsNativeBool": true
+                  }
+                }
+              },
+              "EndGotoOffset": 880,
+              "Cases": [
+                {
+                  "CaseIndexValueTerm": {
+                    "Inst": "EX_False"
+                  },
+                  "NextOffset": 857,
+                  "CaseTerm": {
+                    "Inst": "EX_LocalVariable",
+                    "Variable": {
+                      "Owner": {
+                        "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+                        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+                      },
+                      "Property": {
+                        "Type": "StructProperty",
+                        "Name": "Temp_struct_Variable",
+                        "Flags": "RF_Public",
+                        "ElementSize": 16,
+                        "Struct": {
+                          "ObjectName": "Class'LinearColor'",
+                          "ObjectPath": "/Script/CoreUObject"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "CaseIndexValueTerm": {
+                    "Inst": "EX_True"
+                  },
+                  "NextOffset": 871,
+                  "CaseTerm": {
+                    "Inst": "EX_InstanceVariable",
+                    "Variable": {
+                      "Owner": {
+                        "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+                        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+                      },
+                      "Property": {
+                        "Type": "StructProperty",
+                        "Name": "Selected Color",
+                        "Flags": "RF_Public | RF_LoadCompleted",
+                        "ElementSize": 16,
+                        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+                        "Struct": {
+                          "ObjectName": "Class'LinearColor'",
+                          "ObjectPath": "/Script/CoreUObject"
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "DefaultTerm": {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+                    "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+                  },
+                  "Property": {
+                    "Type": "StructProperty",
+                    "Name": "K2Node_Select_Default",
+                    "Flags": "RF_Public",
+                    "ElementSize": 16,
+                    "Struct": {
+                      "ObjectName": "Class'LinearColor'",
+                      "ObjectPath": "/Script/CoreUObject"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 881,
+        "ObjectExpression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_InstanceVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "PalletTracker",
+                "Flags": "RF_Public | RF_LoadCompleted",
+                "ElementSize": 8,
+                "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+                "PropertyClass": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_PalletTracker_C'",
+                  "ObjectPath": "/Game/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.0"
+                }
+              }
+            }
+          },
+          "Offset": 9,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_PalletTracker_C'",
+              "ObjectPath": "/Game/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.0"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "DBDOutline",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+              "PropertyClass": {
+                "ObjectName": "Class'DBDOutlineComponent'",
+                "ObjectPath": "/Script/DeadByDaylight"
+              }
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_InstanceVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "BlueprintGeneratedClass'BP_PalletTracker_C'",
+                "ObjectPath": "/Game/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.0"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "DBDOutline",
+                "Flags": "RF_Public | RF_LoadCompleted",
+                "ElementSize": 8,
+                "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+                "PropertyClass": {
+                  "ObjectName": "Class'DBDOutlineComponent'",
+                  "ObjectPath": "/Script/DeadByDaylight"
+                }
+              }
+            }
+          }
+        },
+        "Offset": 37,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'DBDOutlineComponent:SetOutlineMaterialOverride'",
+            "ObjectPath": "/Script/DeadByDaylight"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_StructConst",
+              "Struct": {
+                "ObjectName": "Class'GameplayTag'",
+                "ObjectPath": "/Script/GameplayTags"
+              },
+              "Properties": [
+                {
+                  "Inst": "EX_NameConst",
+                  "Value": "OutlineMaterialOverride.Masquerade"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_JumpIfNot",
+        "StatementIndex": 962,
+        "CodeOffset": 1101,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX[1101]",
+        "BooleanExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "K2Node_CustomEvent_Visible",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 976,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_K2_GetRootComponent_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'SceneComponent'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_InstanceVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "PalletTracker",
+                "Flags": "RF_Public | RF_LoadCompleted",
+                "ElementSize": 8,
+                "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+                "PropertyClass": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_PalletTracker_C'",
+                  "ObjectPath": "/Game/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.0"
+                }
+              }
+            }
+          },
+          "Offset": 10,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_K2_GetRootComponent_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'SceneComponent'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_FinalFunction",
+            "Function": {
+              "ObjectName": "Class'Actor:K2_GetRootComponent'",
+              "ObjectPath": "/Script/Engine"
+            },
+            "Parameters": []
+          }
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 1018,
+        "ObjectExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_K2_GetRootComponent_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'SceneComponent'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Offset": 24,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "SetVisibility",
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+                },
+                "Property": {
+                  "Type": "BoolProperty",
+                  "Name": "K2Node_CustomEvent_Visible",
+                  "Flags": "RF_Public",
+                  "ElementSize": 1,
+                  "FieldSize": 1,
+                  "ByteOffset": 0,
+                  "ByteMask": 1,
+                  "FieldMask": 255,
+                  "BoolSize": 1,
+                  "bIsNativeBool": true
+                }
+              }
+            },
+            {
+              "Inst": "EX_True"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 1064,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "TML_IndicatorVisibilityController",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'TimelineComponent'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Offset": 10,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'TimelineComponent:PlayFromStart'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": []
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 1096,
+        "CodeOffset": 2060,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX[2060]"
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 1101,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "TML_IndicatorVisibilityController",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'TimelineComponent'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Offset": 15,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'TimelineComponent:SetPlayRate'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_FloatConst",
+              "Value": 2.0
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 1138,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "TML_IndicatorVisibilityController",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'TimelineComponent'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Offset": 10,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'TimelineComponent:ReverseFromEnd'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": []
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 1170,
+        "CodeOffset": 2060,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX[2060]"
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 1175,
+        "CodeOffset": 671,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX[671]"
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 1180,
+        "Variable": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "PalletTracker",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+              "PropertyClass": {
+                "ObjectName": "BlueprintGeneratedClass'BP_PalletTracker_C'",
+                "ObjectPath": "/Game/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.0"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "K2Node_CustomEvent_PalletTrackerOwner",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyClass": {
+                "ObjectName": "BlueprintGeneratedClass'BP_PalletTracker_C'",
+                "ObjectPath": "/Game/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.0"
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 1199,
+        "CodeOffset": 65,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX[65]"
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 1204,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "Indicator Material",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+              "PropertyClass": {
+                "ObjectName": "Class'MaterialInstanceDynamic'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Offset": 32,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'MaterialInstanceDynamic:SetScalarParameterValue'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_NameConst",
+              "Value": "ErosionAmount"
+            },
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+                },
+                "Property": {
+                  "Type": "FloatProperty",
+                  "Name": "TML_IndicatorVisibilityController_ErosionAmount_243CCE38412A599788C6F496C527B183",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 4
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 1258,
+        "CodeOffset": 2060,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX[2060]"
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 1263,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_K2_GetRootComponent_ReturnValue_2",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'SceneComponent'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_InstanceVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "PalletTracker",
+                "Flags": "RF_Public | RF_LoadCompleted",
+                "ElementSize": 8,
+                "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+                "PropertyClass": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_PalletTracker_C'",
+                  "ObjectPath": "/Game/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.0"
+                }
+              }
+            }
+          },
+          "Offset": 10,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_K2_GetRootComponent_ReturnValue_2",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'SceneComponent'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_FinalFunction",
+            "Function": {
+              "ObjectName": "Class'Actor:K2_GetRootComponent'",
+              "ObjectPath": "/Script/Engine"
+            },
+            "Parameters": []
+          }
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 1305,
+        "ObjectExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_K2_GetRootComponent_ReturnValue_2",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'SceneComponent'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Offset": 24,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "SetVisibility",
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+                },
+                "Property": {
+                  "Type": "BoolProperty",
+                  "Name": "K2Node_CustomEvent_Visible",
+                  "Flags": "RF_Public",
+                  "ElementSize": 1,
+                  "FieldSize": 1,
+                  "ByteOffset": 0,
+                  "ByteMask": 1,
+                  "FieldMask": 255,
+                  "BoolSize": 1,
+                  "bIsNativeBool": true
+                }
+              }
+            },
+            {
+              "Inst": "EX_True"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 1351,
+        "CodeOffset": 2060,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX[2060]"
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 1356,
+        "CodeOffset": 1263,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX[1263]"
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 1361,
+        "Variable": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "IsSwappingColors",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 1,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_True"
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1372,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_SelectColor_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 16,
+              "Struct": {
+                "ObjectName": "Class'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:SelectColor'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "Selected Color",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 16,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+                  "Struct": {
+                    "ObjectName": "Class'LinearColor'",
+                    "ObjectPath": "/Script/CoreUObject"
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "Normal Color",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 16,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+                  "Struct": {
+                    "ObjectName": "Class'LinearColor'",
+                    "ObjectPath": "/Script/CoreUObject"
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+                },
+                "Property": {
+                  "Type": "BoolProperty",
+                  "Name": "K2Node_CustomEvent_IsSelected",
+                  "Flags": "RF_Public",
+                  "ElementSize": 1,
+                  "FieldSize": 1,
+                  "ByteOffset": 0,
+                  "ByteMask": 1,
+                  "FieldMask": 255,
+                  "BoolSize": 1,
+                  "bIsNativeBool": true
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1427,
+        "Variable": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "Target Color",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 16,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+              "Struct": {
+                "ObjectName": "Class'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_SelectColor_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 16,
+              "Struct": {
+                "ObjectName": "Class'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1454,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "DoubleProperty",
+              "Name": "CallFunc_SelectFloat_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:SelectFloat'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_DoubleConst",
+              "Value": 8.0
+            },
+            {
+              "Inst": "EX_DoubleConst",
+              "Value": 20.0
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+                },
+                "Property": {
+                  "Type": "BoolProperty",
+                  "Name": "K2Node_CustomEvent_IsSelected",
+                  "Flags": "RF_Public",
+                  "ElementSize": 1,
+                  "FieldSize": 1,
+                  "ByteOffset": 0,
+                  "ByteMask": 1,
+                  "FieldMask": 255,
+                  "BoolSize": 1,
+                  "bIsNativeBool": true
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1509,
+        "Variable": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+            },
+            "Property": {
+              "Type": "DoubleProperty",
+              "Name": "TargetGlitterIntensity",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "DoubleProperty",
+              "Name": "CallFunc_SelectFloat_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 1536,
+        "CodeOffset": 2060,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX[2060]"
+      },
+      {
+        "Inst": "EX_JumpIfNot",
+        "StatementIndex": 1541,
+        "CodeOffset": 2060,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX[2060]",
+        "BooleanExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "IsSwappingColors",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 1,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1555,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_CInterpTo_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 16,
+              "Struct": {
+                "ObjectName": "Class'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:CInterpTo'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "Current Color",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 16,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+                  "Struct": {
+                    "ObjectName": "Class'LinearColor'",
+                    "ObjectPath": "/Script/CoreUObject"
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "Target Color",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 16,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+                  "Struct": {
+                    "ObjectName": "Class'LinearColor'",
+                    "ObjectPath": "/Script/CoreUObject"
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+                },
+                "Property": {
+                  "Type": "FloatProperty",
+                  "Name": "K2Node_Event_DeltaSeconds",
+                  "Flags": "RF_Public",
+                  "ElementSize": 4
+                }
+              }
+            },
+            {
+              "Inst": "EX_FloatConst",
+              "Value": 7.0
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1615,
+        "Variable": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "Current Color",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 16,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+              "Struct": {
+                "ObjectName": "Class'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_CInterpTo_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 16,
+              "Struct": {
+                "ObjectName": "Class'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 1642,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "Indicator Material",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+              "PropertyClass": {
+                "ObjectName": "Class'MaterialInstanceDynamic'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Offset": 32,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'MaterialInstanceDynamic:SetVectorParameterValue'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_NameConst",
+              "Value": "SmokeColor"
+            },
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "Current Color",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 16,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+                  "Struct": {
+                    "ObjectName": "Class'LinearColor'",
+                    "ObjectPath": "/Script/CoreUObject"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1696,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "DoubleProperty",
+              "Name": "CallFunc_FInterpTo_DeltaTime_ImplicitCast",
+              "Flags": "RF_Public",
+              "ElementSize": 8
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Cast",
+          "ConversionType": "CST_FloatToDouble",
+          "Target": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+              },
+              "Property": {
+                "Type": "FloatProperty",
+                "Name": "K2Node_Event_DeltaSeconds",
+                "Flags": "RF_Public",
+                "ElementSize": 4
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1725,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "DoubleProperty",
+              "Name": "CallFunc_FInterpTo_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:FInterpTo'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+                },
+                "Property": {
+                  "Type": "DoubleProperty",
+                  "Name": "CurrentGlitterIntensity",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 8,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+                }
+              }
+            },
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+                },
+                "Property": {
+                  "Type": "DoubleProperty",
+                  "Name": "TargetGlitterIntensity",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 8,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+                },
+                "Property": {
+                  "Type": "DoubleProperty",
+                  "Name": "CallFunc_FInterpTo_DeltaTime_ImplicitCast",
+                  "Flags": "RF_Public",
+                  "ElementSize": 8
+                }
+              }
+            },
+            {
+              "Inst": "EX_DoubleConst",
+              "Value": 7.0
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1789,
+        "Variable": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+            },
+            "Property": {
+              "Type": "DoubleProperty",
+              "Name": "CurrentGlitterIntensity",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "DoubleProperty",
+              "Name": "CallFunc_FInterpTo_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1816,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "DoubleProperty",
+              "Name": "CallFunc_FInterpTo_DeltaTime_ImplicitCast",
+              "Flags": "RF_Public",
+              "ElementSize": 8
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Cast",
+          "ConversionType": "CST_FloatToDouble",
+          "Target": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+              },
+              "Property": {
+                "Type": "FloatProperty",
+                "Name": "K2Node_Event_DeltaSeconds",
+                "Flags": "RF_Public",
+                "ElementSize": 4
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1845,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "DoubleProperty",
+              "Name": "CallFunc_FInterpTo_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:FInterpTo'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+                },
+                "Property": {
+                  "Type": "DoubleProperty",
+                  "Name": "CurrentGlitterIntensity",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 8,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+                }
+              }
+            },
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+                },
+                "Property": {
+                  "Type": "DoubleProperty",
+                  "Name": "TargetGlitterIntensity",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 8,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+                },
+                "Property": {
+                  "Type": "DoubleProperty",
+                  "Name": "CallFunc_FInterpTo_DeltaTime_ImplicitCast",
+                  "Flags": "RF_Public",
+                  "ElementSize": 8
+                }
+              }
+            },
+            {
+              "Inst": "EX_DoubleConst",
+              "Value": 7.0
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1909,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "FloatProperty",
+              "Name": "CallFunc_SetScalarParameterValue_Value_ImplicitCast",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Cast",
+          "ConversionType": "CST_DoubleToFloat",
+          "Target": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+              },
+              "Property": {
+                "Type": "DoubleProperty",
+                "Name": "CallFunc_FInterpTo_ReturnValue",
+                "Flags": "RF_Public",
+                "ElementSize": 8
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 1938,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "Indicator Material",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+              "PropertyClass": {
+                "ObjectName": "Class'MaterialInstanceDynamic'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Offset": 32,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'MaterialInstanceDynamic:SetScalarParameterValue'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_NameConst",
+              "Value": "Glitter_Intensity"
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+                },
+                "Property": {
+                  "Type": "FloatProperty",
+                  "Name": "CallFunc_SetScalarParameterValue_Value_ImplicitCast",
+                  "Flags": "RF_Public",
+                  "ElementSize": 4
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 1992,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_LinearColor_IsNearEqual_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:LinearColor_IsNearEqual'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "Current Color",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 16,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+                  "Struct": {
+                    "ObjectName": "Class'LinearColor'",
+                    "ObjectPath": "/Script/CoreUObject"
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "Target Color",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 16,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+                  "Struct": {
+                    "ObjectName": "Class'LinearColor'",
+                    "ObjectPath": "/Script/CoreUObject"
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_FloatConst",
+              "Value": 0.0001
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_JumpIfNot",
+        "StatementIndex": 2035,
+        "CodeOffset": 2060,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX[2060]",
+        "BooleanExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_LinearColor_IsNearEqual_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 2049,
+        "Variable": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_FragilePalletTrackerVisibilityVFX_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.0"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "IsSwappingColors",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 1,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_False"
+        }
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 2060,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 2062
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "Initialize",
+    "Outer": "BP_FragilePalletTrackerVisibilityVFX_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PalletTrackerOwner",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_PalletTracker_C'",
+          "ObjectPath": "/Game/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.0"
+        }
+      }
+    ],
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LetValueOnPersistentFrame",
+        "StatementIndex": 0,
+        "DestinationProperty": {
+          "Owner": {
+            "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+            "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+          },
+          "Property": {
+            "Type": "ObjectProperty",
+            "Name": "K2Node_CustomEvent_PalletTrackerOwner",
+            "Flags": "RF_Public",
+            "ElementSize": 8,
+            "PropertyClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_PalletTracker_C'",
+              "ObjectPath": "/Game/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.0"
+            }
+          }
+        },
+        "AssignmentExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:Initialize'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.7"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "PalletTrackerOwner",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+              "PropertyClass": {
+                "ObjectName": "BlueprintGeneratedClass'BP_PalletTracker_C'",
+                "ObjectPath": "/Game/Blueprints/GameplayElements/Interactable/Bookshelf/BP_PalletTracker.0"
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 18,
+        "Function": {
+          "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+          "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 1180
+          }
+        ],
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX[1180]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 33,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 35
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveTick",
+    "Outer": "BP_FragilePalletTrackerVisibilityVFX_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:ReceiveTick'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LetValueOnPersistentFrame",
+        "StatementIndex": 0,
+        "DestinationProperty": {
+          "Owner": {
+            "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+            "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+          },
+          "Property": {
+            "Type": "FloatProperty",
+            "Name": "K2Node_Event_DeltaSeconds",
+            "Flags": "RF_Public",
+            "ElementSize": 4
+          }
+        },
+        "AssignmentExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ReceiveTick'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.8"
+            },
+            "Property": {
+              "Type": "FloatProperty",
+              "Name": "DeltaSeconds",
+              "Flags": "RF_Public",
+              "ElementSize": 4,
+              "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 18,
+        "Function": {
+          "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+          "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 1541
+          }
+        ],
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX[1541]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 33,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 35
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetPalletHighlightColor",
+    "Outer": "BP_FragilePalletTrackerVisibilityVFX_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "IsSelected",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LetValueOnPersistentFrame",
+        "StatementIndex": 0,
+        "DestinationProperty": {
+          "Owner": {
+            "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+            "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+          },
+          "Property": {
+            "Type": "BoolProperty",
+            "Name": "K2Node_CustomEvent_IsSelected",
+            "Flags": "RF_Public",
+            "ElementSize": 1,
+            "FieldSize": 1,
+            "ByteOffset": 0,
+            "ByteMask": 1,
+            "FieldMask": 255,
+            "BoolSize": 1,
+            "bIsNativeBool": true
+          }
+        },
+        "AssignmentExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:SetPalletHighlightColor'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.9"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "IsSelected",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 18,
+        "Function": {
+          "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+          "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 1361
+          }
+        ],
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX[1361]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 33,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 35
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetVisibility",
+    "Outer": "BP_FragilePalletTrackerVisibilityVFX_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "Visible",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LetValueOnPersistentFrame",
+        "StatementIndex": 0,
+        "DestinationProperty": {
+          "Owner": {
+            "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+            "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+          },
+          "Property": {
+            "Type": "BoolProperty",
+            "Name": "K2Node_CustomEvent_Visible",
+            "Flags": "RF_Public",
+            "ElementSize": 1,
+            "FieldSize": 1,
+            "ByteOffset": 0,
+            "ByteMask": 1,
+            "FieldMask": 255,
+            "BoolSize": 1,
+            "bIsNativeBool": true
+          }
+        },
+        "AssignmentExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:SetVisibility'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.10"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "Visible",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 18,
+        "Function": {
+          "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+          "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 1175
+          }
+        ],
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX[1175]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 33,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 35
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "TML_IndicatorVisibilityController__FinishedFunc",
+    "Outer": "BP_FragilePalletTrackerVisibilityVFX_C",
+    "Class": "UScriptClass'Function'",
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 0,
+        "Function": {
+          "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+          "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 1356
+          }
+        ],
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX[1356]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 15,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 17
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "TML_IndicatorVisibilityController__UpdateFunc",
+    "Outer": "BP_FragilePalletTrackerVisibilityVFX_C",
+    "Class": "UScriptClass'Function'",
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 0,
+        "Function": {
+          "ObjectName": "Function'BP_FragilePalletTrackerVisibilityVFX_C:ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX'",
+          "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.6"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 1204
+          }
+        ],
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.ExecuteUbergraph_BP_FragilePalletTrackerVisibilityVFX[1204]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 15,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 17
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_FragilePalletTrackerVisibilityVFX_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_FragilePalletTrackerVisibilityVFX_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.13"
+      },
+      "VariableGuid": "4D029878-4621AEFE-0D848FAE-D79DD65B",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_FragilePalletTrackerVisibilityVFX_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_FragilePalletTrackerVisibilityVFX_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.14"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_FragilePalletTrackerVisibilityVFX_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.14"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_FragilePalletTrackerVisibilityVFX_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.14"
+      }
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "TML_IndicatorVisibilityController_Template",
+    "Outer": "BP_FragilePalletTrackerVisibilityVFX_C",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Properties": {
+      "TimelineLength": 1.0,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_FragilePalletTrackerVisibilityVFX_C:CurveFloat_0_1'",
+            "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.2"
+          },
+          "PropertyName": "TML_IndicatorVisibilityController_ColorValue_243CCE38412A599788C6F496C527B183",
+          "TrackName": "ColorValue",
+          "bIsExternalCurve": false
+        },
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_FragilePalletTrackerVisibilityVFX_C:CurveFloat_1_2'",
+            "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.3"
+          },
+          "PropertyName": "TML_IndicatorVisibilityController_Opacity_243CCE38412A599788C6F496C527B183",
+          "TrackName": "Opacity",
+          "bIsExternalCurve": false
+        },
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_FragilePalletTrackerVisibilityVFX_C:CurveFloat_2_3'",
+            "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.4"
+          },
+          "PropertyName": "TML_IndicatorVisibilityController_ErosionAmount_243CCE38412A599788C6F496C527B183",
+          "TrackName": "ErosionAmount",
+          "bIsExternalCurve": false
+        }
+      ],
+      "LinearColorTracks": [
+        {
+          "CurveLinearColor": {
+            "ObjectName": "CurveLinearColor'BP_FragilePalletTrackerVisibilityVFX_C:CurveLinearColor_0_1'",
+            "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/FragilePallet/BP_FragilePalletTrackerVisibilityVFX.5"
+          },
+          "PropertyName": "TML_IndicatorVisibilityController_SmokeColor_243CCE38412A599788C6F496C527B183",
+          "TrackName": "SmokeColor",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "243CCE38-412A5997-88C6F496-C527B183",
+      "VariableName": "TML_IndicatorVisibilityController",
+      "DirectionPropertyName": "TML_IndicatorVisibilityController__Direction_243CCE38412A599788C6F496C527B183",
+      "UpdateFunctionName": "TML_IndicatorVisibilityController__UpdateFunc",
+      "FinishedFunctionName": "TML_IndicatorVisibilityController__FinishedFunc"
+    }
+  }
+]

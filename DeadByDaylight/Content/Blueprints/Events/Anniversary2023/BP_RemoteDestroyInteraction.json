@@ -1,5 +1,277 @@
 [
   {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_RemoteDestroyInteraction_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'RemoteDestroyInteraction'",
+      "ObjectPath": "/Script/Anniversary2023"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_RemoteDestroyInteraction_C:Cosmetic_OnRemoteDestroy'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.2"
+      },
+      {
+        "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RemoteDestroyVFXActor",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_FX_7thAnniversary_RemoteDestroy_VFXActor_C'",
+          "ObjectPath": "/Game/Effects/Blueprints/Anniversary/2023/BP_FX_7thAnniversary_RemoteDestroy_VFXActor.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "IsPallet",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_RemoteDestroyInteraction": {
+        "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+      },
+      "Cosmetic_OnRemoteDestroy": {
+        "ObjectName": "Function'BP_RemoteDestroyInteraction_C:Cosmetic_OnRemoteDestroy'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.2"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_RemoteDestroyInteraction_C'Default__BP_RemoteDestroyInteraction_C'",
+      "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_RemoteDestroyInteraction_C",
+    "Name": "Default__BP_RemoteDestroyInteraction_C",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.BP_RemoteDestroyInteraction_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "_remoteDestroyDuration": {
+        "_dataTableRowHandle": {
+          "DataTable": {
+            "ObjectName": "DataTable'Anniversary2023TunablesDB'",
+            "ObjectPath": "/Game/Data/Events/Umbra/Anniversary2023TunablesDB.0"
+          },
+          "RowName": "RemoteDestroyDuration"
+        }
+      },
+      "_abilityRange": {
+        "_dataTableRowHandle": {
+          "DataTable": {
+            "ObjectName": "DataTable'Anniversary2024TunablesDB'",
+            "ObjectPath": "/Game/Data/Events/Churros/Anniversary2024TunablesDB.0"
+          },
+          "RowName": "RemoteDestroyDistance"
+        }
+      },
+      "InteractionID": "RemoteDestroy",
+      "StopInteractionOnTimerExpire": true,
+      "SlasherCanInteract": true,
+      "AllowNavigation": true,
+      "AllowRotation": true,
+      "UseCameraMontageMode": false,
+      "InteractionInputType": "EInputInteractionType::VE_EventAbility",
+      "InteractionDescriptionText": {
+        "Namespace": "",
+        "Key": "AF709B254E04FAB4ED95E8A902D1AB8D",
+        "SourceString": "INTERACTION_RemoteDestroy_DESC",
+        "LocalizedString": "DESTROY OBJECT REMOTELY"
+      },
+      "_tags": [
+        "Semantics.Interaction.Id.DestroyPallet",
+        "Semantics.Interaction.Id.DestroyBreakableWall"
+      ]
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "Cosmetic_OnRemoteDestroy",
+    "Outer": "BP_RemoteDestroyInteraction_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Class'RemoteDestroyInteraction:Cosmetic_OnRemoteDestroy'",
+      "ObjectPath": "/Script/Anniversary2023"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "interactingPlayer",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'DBDPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "interactable",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Interactable'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      }
+    ],
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LetValueOnPersistentFrame",
+        "StatementIndex": 0,
+        "DestinationProperty": {
+          "Owner": {
+            "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+            "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+          },
+          "Property": {
+            "Type": "ObjectProperty",
+            "Name": "K2Node_Event_interactingPlayer",
+            "Flags": "RF_Public",
+            "ElementSize": 8,
+            "PropertyClass": {
+              "ObjectName": "Class'DBDPlayer'",
+              "ObjectPath": "/Script/DeadByDaylight"
+            }
+          }
+        },
+        "AssignmentExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:Cosmetic_OnRemoteDestroy'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.2"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "interactingPlayer",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+              "PropertyClass": {
+                "ObjectName": "Class'DBDPlayer'",
+                "ObjectPath": "/Script/DeadByDaylight"
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LetValueOnPersistentFrame",
+        "StatementIndex": 18,
+        "DestinationProperty": {
+          "Owner": {
+            "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+            "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+          },
+          "Property": {
+            "Type": "ObjectProperty",
+            "Name": "K2Node_Event_interactable",
+            "Flags": "RF_Public",
+            "ElementSize": 8,
+            "PropertyClass": {
+              "ObjectName": "Class'Interactable'",
+              "ObjectPath": "/Script/DeadByDaylight"
+            }
+          }
+        },
+        "AssignmentExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:Cosmetic_OnRemoteDestroy'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.2"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "interactable",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+              "PropertyClass": {
+                "ObjectName": "Class'Interactable'",
+                "ObjectPath": "/Script/DeadByDaylight"
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 36,
+        "Function": {
+          "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+          "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 71
+          }
+        ],
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.ExecuteUbergraph_BP_RemoteDestroyInteraction[71]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 51,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 53
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
     "Type": "Function",
     "Name": "ExecuteUbergraph_BP_RemoteDestroyInteraction",
     "Outer": "BP_RemoteDestroyInteraction_C",
@@ -80,10 +352,10 @@
         "Type": "StructProperty",
         "Name": "CallFunc_GetTransform_ReturnValue",
         "Flags": "RF_Public",
-        "ElementSize": 48,
+        "ElementSize": 96,
         "PropertyFlags": "ConstParm",
         "Struct": {
-          "ObjectName": "ScriptStruct'Transform'",
+          "ObjectName": "Class'Transform'",
           "ObjectPath": "/Script/CoreUObject"
         }
       },
@@ -91,9 +363,9 @@
         "Type": "StructProperty",
         "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
         "Flags": "RF_Public",
-        "ElementSize": 12,
+        "ElementSize": 24,
         "Struct": {
-          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectName": "Class'Vector'",
           "ObjectPath": "/Script/CoreUObject"
         }
       },
@@ -101,10 +373,10 @@
         "Type": "StructProperty",
         "Name": "CallFunc_GetTransform_ReturnValue_1",
         "Flags": "RF_Public",
-        "ElementSize": 48,
+        "ElementSize": 96,
         "PropertyFlags": "ConstParm",
         "Struct": {
-          "ObjectName": "ScriptStruct'Transform'",
+          "ObjectName": "Class'Transform'",
           "ObjectPath": "/Script/CoreUObject"
         }
       },
@@ -112,9 +384,9 @@
         "Type": "StructProperty",
         "Name": "CallFunc_K2_GetActorLocation_ReturnValue_1",
         "Flags": "RF_Public",
-        "ElementSize": 12,
+        "ElementSize": 24,
         "Struct": {
-          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectName": "Class'Vector'",
           "ObjectPath": "/Script/CoreUObject"
         }
       },
@@ -122,9 +394,9 @@
         "Type": "StructProperty",
         "Name": "CallFunc_BreakTransform_Location",
         "Flags": "RF_Public",
-        "ElementSize": 12,
+        "ElementSize": 24,
         "Struct": {
-          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectName": "Class'Vector'",
           "ObjectPath": "/Script/CoreUObject"
         }
       },
@@ -132,9 +404,9 @@
         "Type": "StructProperty",
         "Name": "CallFunc_BreakTransform_Rotation",
         "Flags": "RF_Public",
-        "ElementSize": 12,
+        "ElementSize": 24,
         "Struct": {
-          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectName": "Class'Rotator'",
           "ObjectPath": "/Script/CoreUObject"
         }
       },
@@ -142,9 +414,9 @@
         "Type": "StructProperty",
         "Name": "CallFunc_BreakTransform_Scale",
         "Flags": "RF_Public",
-        "ElementSize": 12,
+        "ElementSize": 24,
         "Struct": {
-          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectName": "Class'Vector'",
           "ObjectPath": "/Script/CoreUObject"
         }
       },
@@ -152,9 +424,9 @@
         "Type": "StructProperty",
         "Name": "CallFunc_FindLookAtRotation_ReturnValue",
         "Flags": "RF_Public",
-        "ElementSize": 12,
+        "ElementSize": 24,
         "Struct": {
-          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectName": "Class'Rotator'",
           "ObjectPath": "/Script/CoreUObject"
         }
       },
@@ -180,9 +452,9 @@
         "Type": "StructProperty",
         "Name": "CallFunc_Conv_RotatorToVector_ReturnValue",
         "Flags": "RF_Public",
-        "ElementSize": 12,
+        "ElementSize": 24,
         "Struct": {
-          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectName": "Class'Vector'",
           "ObjectPath": "/Script/CoreUObject"
         }
       },
@@ -190,9 +462,9 @@
         "Type": "StructProperty",
         "Name": "CallFunc_InverseTransformDirection_ReturnValue",
         "Flags": "RF_Public",
-        "ElementSize": 12,
+        "ElementSize": 24,
         "Struct": {
-          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectName": "Class'Vector'",
           "ObjectPath": "/Script/CoreUObject"
         }
       },
@@ -200,9 +472,9 @@
         "Type": "StructProperty",
         "Name": "CallFunc_Conv_VectorToRotator_ReturnValue",
         "Flags": "RF_Public",
-        "ElementSize": 12,
+        "ElementSize": 24,
         "Struct": {
-          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectName": "Class'Rotator'",
           "ObjectPath": "/Script/CoreUObject"
         }
       },
@@ -225,10 +497,10 @@
         "ElementSize": 4
       },
       {
-        "Type": "FloatProperty",
+        "Type": "DoubleProperty",
         "Name": "CallFunc_Abs_ReturnValue",
         "Flags": "RF_Public",
-        "ElementSize": 4
+        "ElementSize": 8
       },
       {
         "Type": "BoolProperty",
@@ -243,10 +515,10 @@
         "bIsNativeBool": true
       },
       {
-        "Type": "FloatProperty",
+        "Type": "DoubleProperty",
         "Name": "CallFunc_SelectFloat_ReturnValue",
         "Flags": "RF_Public",
-        "ElementSize": 4
+        "ElementSize": 8
       },
       {
         "Type": "FloatProperty",
@@ -258,9 +530,9 @@
         "Type": "StructProperty",
         "Name": "CallFunc_MakeRotator_ReturnValue",
         "Flags": "RF_Public",
-        "ElementSize": 12,
+        "ElementSize": 24,
         "Struct": {
-          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectName": "Class'Rotator'",
           "ObjectPath": "/Script/CoreUObject"
         }
       },
@@ -268,9 +540,9 @@
         "Type": "StructProperty",
         "Name": "CallFunc_MakeTransform_ReturnValue",
         "Flags": "RF_Public",
-        "ElementSize": 48,
+        "ElementSize": 96,
         "Struct": {
-          "ObjectName": "ScriptStruct'Transform'",
+          "ObjectName": "Class'Transform'",
           "ObjectPath": "/Script/CoreUObject"
         }
       },
@@ -291,162 +563,3224 @@
         "ElementSize": 8,
         "PropertyClass": {
           "ObjectName": "BlueprintGeneratedClass'BP_FX_7thAnniversary_RemoteDestroy_VFXActor_C'",
-          "ObjectPath": "DeadByDaylight/Content/Effects/Blueprints/Anniversary/2023/BP_FX_7thAnniversary_RemoteDestroy_VFXActor.7"
+          "ObjectPath": "/Game/Effects/Blueprints/Anniversary/2023/BP_FX_7thAnniversary_RemoteDestroy_VFXActor.0"
         }
-      }
-    ],
-    "FunctionFlags": 8421377
-  },
-  {
-    "Type": "Function",
-    "Name": "Cosmetic_OnRemoteDestroy",
-    "Outer": "BP_RemoteDestroyInteraction_C",
-    "Class": "UScriptClass'Function'",
-    "SuperStruct": {
-      "ObjectName": "Function'RemoteDestroyInteraction:Cosmetic_OnRemoteDestroy'",
-      "ObjectPath": "/Script/Anniversary2023"
-    },
-    "ChildProperties": [
+      },
       {
-        "Type": "ObjectProperty",
-        "Name": "interactingPlayer",
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Abs_A_ImplicitCast",
         "Flags": "RF_Public",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
-        "PropertyClass": {
-          "ObjectName": "Class'DBDPlayer'",
-          "ObjectPath": "/Script/DeadByDaylight"
-        }
+        "ElementSize": 8
       },
       {
-        "Type": "ObjectProperty",
-        "Name": "interactable",
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Less_FloatFloat_A_ImplicitCast",
         "Flags": "RF_Public",
-        "ElementSize": 8,
-        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
-        "PropertyClass": {
-          "ObjectName": "Class'Interactable'",
-          "ObjectPath": "/Script/DeadByDaylight"
-        }
-      }
-    ],
-    "FunctionFlags": 134744072
-  },
-  {
-    "Type": "BlueprintGeneratedClass",
-    "Name": "BP_RemoteDestroyInteraction_C",
-    "Class": "UScriptClass'BlueprintGeneratedClass'",
-    "Properties": {
-      "UberGraphFunction": {
-        "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.0"
-      }
-    },
-    "SuperStruct": {
-      "ObjectName": "Class'RemoteDestroyInteraction'",
-      "ObjectPath": "/Script/Anniversary2023"
-    },
-    "Children": [
-      {
-        "ObjectName": "Function'BP_RemoteDestroyInteraction_C:Cosmetic_OnRemoteDestroy'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.1"
+        "ElementSize": 4
       },
       {
-        "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.0"
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Add_FloatFloat_B_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
       }
     ],
-    "ChildProperties": [
+    "ScriptBytecode": [
       {
-        "Type": "StructProperty",
-        "Name": "UberGraphFrame",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 16,
-        "PropertyFlags": "Transient | DuplicateTransient",
-        "Struct": {
-          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
-          "ObjectPath": "/Script/Engine"
+        "Inst": "EX_ComputedJump",
+        "StatementIndex": 0,
+        "OffsetExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "EntryPoint",
+              "Flags": "RF_Public",
+              "ElementSize": 4,
+              "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+            }
+          }
         }
       },
       {
-        "Type": "ObjectProperty",
-        "Name": "RemoteDestroyVFXActor",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 8,
-        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
-        "PropertyClass": {
-          "ObjectName": "BlueprintGeneratedClass'BP_FX_7thAnniversary_RemoteDestroy_VFXActor_C'",
-          "ObjectPath": "DeadByDaylight/Content/Effects/Blueprints/Anniversary/2023/BP_FX_7thAnniversary_RemoteDestroy_VFXActor.7"
+        "Inst": "EX_LetBool",
+        "StatementIndex": 10,
+        "Variable": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_RemoteDestroyInteraction_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.0"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "IsPallet",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 1,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_False"
         }
       },
       {
-        "Type": "BoolProperty",
-        "Name": "IsPallet",
-        "Flags": "RF_Public | RF_LoadCompleted",
-        "ElementSize": 1,
-        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      }
-    ],
-    "FuncMap": {
-      "ExecuteUbergraph_BP_RemoteDestroyInteraction": {
-        "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.0"
+        "Inst": "EX_Context",
+        "StatementIndex": 21,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_RemoteDestroyInteraction_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.0"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "RemoteDestroyVFXActor",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+              "PropertyClass": {
+                "ObjectName": "BlueprintGeneratedClass'BP_FX_7thAnniversary_RemoteDestroy_VFXActor_C'",
+                "ObjectPath": "/Game/Effects/Blueprints/Anniversary/2023/BP_FX_7thAnniversary_RemoteDestroy_VFXActor.0"
+              }
+            }
+          }
+        },
+        "Offset": 23,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_LocalVirtualFunction",
+          "Function": "BeginBreakVFX",
+          "Parameters": [
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_RemoteDestroyInteraction_C'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.0"
+                },
+                "Property": {
+                  "Type": "BoolProperty",
+                  "Name": "IsPallet",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 1,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+                  "FieldSize": 1,
+                  "ByteOffset": 0,
+                  "ByteMask": 1,
+                  "FieldMask": 255,
+                  "BoolSize": 1,
+                  "bIsNativeBool": true
+                }
+              }
+            }
+          ]
+        }
       },
-      "Cosmetic_OnRemoteDestroy": {
-        "ObjectName": "Function'BP_RemoteDestroyInteraction_C:Cosmetic_OnRemoteDestroy'",
-        "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.1"
-      }
-    },
-    "ClassFlags": 10754068,
-    "ClassWithin": {
-      "ObjectName": "Class'Object'",
-      "ObjectPath": "/Script/CoreUObject"
-    },
-    "ClassConfigName": "Engine",
-    "bCooked": true,
-    "ClassDefaultObject": {
-      "ObjectName": "BP_RemoteDestroyInteraction_C'Default__BP_RemoteDestroyInteraction_C'",
-      "ObjectPath": "DeadByDaylight/Content/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
-    }
-  },
-  {
-    "Type": "BP_RemoteDestroyInteraction_C",
-    "Name": "Default__BP_RemoteDestroyInteraction_C",
-    "Class": "BlueprintGeneratedClass'DeadByDaylight/Content/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.BP_RemoteDestroyInteraction_C'",
-    "Properties": {
-      "UberGraphFrame": {},
-      "_remoteDestroyDuration": {
-        "_dataTableRowHandle": {
-          "DataTable": {
-            "ObjectName": "DataTable'Anniversary2023TunablesDB'",
-            "ObjectPath": "DeadByDaylight/Content/Data/Events/Umbra/Anniversary2023TunablesDB.0"
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 66,
+        "CodeOffset": 2291,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.ExecuteUbergraph_BP_RemoteDestroyInteraction[2291]"
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 71,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_GetTransform_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 96,
+              "PropertyFlags": "ConstParm",
+              "Struct": {
+                "ObjectName": "Class'Transform'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "K2Node_Event_interactable",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'Interactable'",
+                  "ObjectPath": "/Script/DeadByDaylight"
+                }
+              }
+            }
           },
-          "RowName": "RemoteDestroyDuration"
+          "Offset": 10,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_GetTransform_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 96,
+              "PropertyFlags": "ConstParm",
+              "Struct": {
+                "ObjectName": "Class'Transform'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_FinalFunction",
+            "Function": {
+              "ObjectName": "Class'Actor:GetTransform'",
+              "ObjectPath": "/Script/Engine"
+            },
+            "Parameters": []
+          }
         }
       },
-      "InteractionID": "RemoteDestroy",
-      "StopInteractionOnTimerExpire": true,
-      "SlasherCanInteract": true,
-      "AllowNavigation": true,
-      "AllowRotation": true,
-      "UseCameraMontageMode": false,
-      "InteractionInputType": "EInputInteractionType::VE_EventAbility",
-      "InteractionDescriptionText": {
-        "Namespace": "",
-        "Key": "AF709B254E04FAB4ED95E8A902D1AB8D",
-        "SourceString": "INTERACTION_RemoteDestroy_DESC",
-        "LocalizedString": "DESTROY OBJECT REMOTELY"
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 121,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 24,
+              "Struct": {
+                "ObjectName": "Class'Vector'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "K2Node_Event_interactable",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'Interactable'",
+                  "ObjectPath": "/Script/DeadByDaylight"
+                }
+              }
+            }
+          },
+          "Offset": 10,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 24,
+              "Struct": {
+                "ObjectName": "Class'Vector'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_FinalFunction",
+            "Function": {
+              "ObjectName": "Class'Actor:K2_GetActorLocation'",
+              "ObjectPath": "/Script/Engine"
+            },
+            "Parameters": []
+          }
+        }
       },
-      "_tags": [
-        "Semantics.Interaction.Id.DestroyPallet",
-        "Semantics.Interaction.Id.DestroyBreakableWall"
-      ]
-    }
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 171,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_GetTransform_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 96,
+              "PropertyFlags": "ConstParm",
+              "Struct": {
+                "ObjectName": "Class'Transform'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "K2Node_Event_interactable",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'Interactable'",
+                  "ObjectPath": "/Script/DeadByDaylight"
+                }
+              }
+            }
+          },
+          "Offset": 10,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_GetTransform_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 96,
+              "PropertyFlags": "ConstParm",
+              "Struct": {
+                "ObjectName": "Class'Transform'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_FinalFunction",
+            "Function": {
+              "ObjectName": "Class'Actor:GetTransform'",
+              "ObjectPath": "/Script/Engine"
+            },
+            "Parameters": []
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 221,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_K2_GetActorLocation_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 24,
+              "Struct": {
+                "ObjectName": "Class'Vector'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "K2Node_Event_interactingPlayer",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'DBDPlayer'",
+                  "ObjectPath": "/Script/DeadByDaylight"
+                }
+              }
+            }
+          },
+          "Offset": 10,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_K2_GetActorLocation_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 24,
+              "Struct": {
+                "ObjectName": "Class'Vector'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_FinalFunction",
+            "Function": {
+              "ObjectName": "Class'Actor:K2_GetActorLocation'",
+              "ObjectPath": "/Script/Engine"
+            },
+            "Parameters": []
+          }
+        }
+      },
+      {
+        "Inst": "EX_CallMath",
+        "StatementIndex": 271,
+        "Function": {
+          "ObjectName": "Class'KismetMathLibrary:BreakTransform'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "StructProperty",
+                "Name": "CallFunc_GetTransform_ReturnValue_1",
+                "Flags": "RF_Public",
+                "ElementSize": 96,
+                "PropertyFlags": "ConstParm",
+                "Struct": {
+                  "ObjectName": "Class'Transform'",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              }
+            }
+          },
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "StructProperty",
+                "Name": "CallFunc_BreakTransform_Location",
+                "Flags": "RF_Public",
+                "ElementSize": 24,
+                "Struct": {
+                  "ObjectName": "Class'Vector'",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              }
+            }
+          },
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "StructProperty",
+                "Name": "CallFunc_BreakTransform_Rotation",
+                "Flags": "RF_Public",
+                "ElementSize": 24,
+                "Struct": {
+                  "ObjectName": "Class'Rotator'",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              }
+            }
+          },
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "StructProperty",
+                "Name": "CallFunc_BreakTransform_Scale",
+                "Flags": "RF_Public",
+                "ElementSize": 24,
+                "Struct": {
+                  "ObjectName": "Class'Vector'",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 317,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_FindLookAtRotation_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 24,
+              "Struct": {
+                "ObjectName": "Class'Rotator'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:FindLookAtRotation'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "CallFunc_K2_GetActorLocation_ReturnValue_1",
+                  "Flags": "RF_Public",
+                  "ElementSize": 24,
+                  "Struct": {
+                    "ObjectName": "Class'Vector'",
+                    "ObjectPath": "/Script/CoreUObject"
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+                  "Flags": "RF_Public",
+                  "ElementSize": 24,
+                  "Struct": {
+                    "ObjectName": "Class'Vector'",
+                    "ObjectPath": "/Script/CoreUObject"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_CallMath",
+        "StatementIndex": 363,
+        "Function": {
+          "ObjectName": "Class'KismetMathLibrary:BreakRotator'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "StructProperty",
+                "Name": "CallFunc_BreakTransform_Rotation",
+                "Flags": "RF_Public",
+                "ElementSize": 24,
+                "Struct": {
+                  "ObjectName": "Class'Rotator'",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              }
+            }
+          },
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "FloatProperty",
+                "Name": "CallFunc_BreakRotator_Roll",
+                "Flags": "RF_Public",
+                "ElementSize": 4
+              }
+            }
+          },
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "FloatProperty",
+                "Name": "CallFunc_BreakRotator_Pitch",
+                "Flags": "RF_Public",
+                "ElementSize": 4
+              }
+            }
+          },
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "FloatProperty",
+                "Name": "CallFunc_BreakRotator_Yaw",
+                "Flags": "RF_Public",
+                "ElementSize": 4
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 409,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_Conv_RotatorToVector_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 24,
+              "Struct": {
+                "ObjectName": "Class'Vector'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:Conv_RotatorToVector'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "CallFunc_FindLookAtRotation_ReturnValue",
+                  "Flags": "RF_Public",
+                  "ElementSize": 24,
+                  "Struct": {
+                    "ObjectName": "Class'Rotator'",
+                    "ObjectPath": "/Script/CoreUObject"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 446,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_InverseTransformDirection_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 24,
+              "Struct": {
+                "ObjectName": "Class'Vector'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:InverseTransformDirection'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "CallFunc_GetTransform_ReturnValue",
+                  "Flags": "RF_Public",
+                  "ElementSize": 96,
+                  "PropertyFlags": "ConstParm",
+                  "Struct": {
+                    "ObjectName": "Class'Transform'",
+                    "ObjectPath": "/Script/CoreUObject"
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "CallFunc_Conv_RotatorToVector_ReturnValue",
+                  "Flags": "RF_Public",
+                  "ElementSize": 24,
+                  "Struct": {
+                    "ObjectName": "Class'Vector'",
+                    "ObjectPath": "/Script/CoreUObject"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 492,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_Conv_VectorToRotator_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 24,
+              "Struct": {
+                "ObjectName": "Class'Rotator'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:Conv_VectorToRotator'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "CallFunc_InverseTransformDirection_ReturnValue",
+                  "Flags": "RF_Public",
+                  "ElementSize": 24,
+                  "Struct": {
+                    "ObjectName": "Class'Vector'",
+                    "ObjectPath": "/Script/CoreUObject"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_CallMath",
+        "StatementIndex": 529,
+        "Function": {
+          "ObjectName": "Class'KismetMathLibrary:BreakRotator'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "StructProperty",
+                "Name": "CallFunc_Conv_VectorToRotator_ReturnValue",
+                "Flags": "RF_Public",
+                "ElementSize": 24,
+                "Struct": {
+                  "ObjectName": "Class'Rotator'",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              }
+            }
+          },
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "FloatProperty",
+                "Name": "CallFunc_BreakRotator_Roll_1",
+                "Flags": "RF_Public",
+                "ElementSize": 4
+              }
+            }
+          },
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "FloatProperty",
+                "Name": "CallFunc_BreakRotator_Pitch_1",
+                "Flags": "RF_Public",
+                "ElementSize": 4
+              }
+            }
+          },
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "FloatProperty",
+                "Name": "CallFunc_BreakRotator_Yaw_1",
+                "Flags": "RF_Public",
+                "ElementSize": 4
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 575,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "DoubleProperty",
+              "Name": "CallFunc_Abs_A_ImplicitCast",
+              "Flags": "RF_Public",
+              "ElementSize": 8
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Cast",
+          "ConversionType": "CST_FloatToDouble",
+          "Target": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "FloatProperty",
+                "Name": "CallFunc_BreakRotator_Yaw_1",
+                "Flags": "RF_Public",
+                "ElementSize": 4
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 604,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "DoubleProperty",
+              "Name": "CallFunc_Abs_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:Abs'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "DoubleProperty",
+                  "Name": "CallFunc_Abs_A_ImplicitCast",
+                  "Flags": "RF_Public",
+                  "ElementSize": 8
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 641,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "FloatProperty",
+              "Name": "CallFunc_Less_FloatFloat_A_ImplicitCast",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Cast",
+          "ConversionType": "CST_DoubleToFloat",
+          "Target": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "DoubleProperty",
+                "Name": "CallFunc_Abs_ReturnValue",
+                "Flags": "RF_Public",
+                "ElementSize": 8
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 670,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_Less_FloatFloat_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:Less_FloatFloat'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "FloatProperty",
+                  "Name": "CallFunc_Less_FloatFloat_A_ImplicitCast",
+                  "Flags": "RF_Public",
+                  "ElementSize": 4
+                }
+              }
+            },
+            {
+              "Inst": "EX_FloatConst",
+              "Value": 90.0
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 704,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "DoubleProperty",
+              "Name": "CallFunc_SelectFloat_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:SelectFloat'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_DoubleConst",
+              "Value": 180.0
+            },
+            {
+              "Inst": "EX_DoubleConst",
+              "Value": 0.0
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "BoolProperty",
+                  "Name": "CallFunc_Less_FloatFloat_ReturnValue",
+                  "Flags": "RF_Public",
+                  "ElementSize": 1,
+                  "FieldSize": 1,
+                  "ByteOffset": 0,
+                  "ByteMask": 1,
+                  "FieldMask": 255,
+                  "BoolSize": 1,
+                  "bIsNativeBool": true
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 759,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "FloatProperty",
+              "Name": "CallFunc_Add_FloatFloat_B_ImplicitCast",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Cast",
+          "ConversionType": "CST_DoubleToFloat",
+          "Target": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "DoubleProperty",
+                "Name": "CallFunc_SelectFloat_ReturnValue",
+                "Flags": "RF_Public",
+                "ElementSize": 8
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 788,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "FloatProperty",
+              "Name": "CallFunc_Add_FloatFloat_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:Add_FloatFloat'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "FloatProperty",
+                  "Name": "CallFunc_BreakRotator_Yaw",
+                  "Flags": "RF_Public",
+                  "ElementSize": 4
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "FloatProperty",
+                  "Name": "CallFunc_Add_FloatFloat_B_ImplicitCast",
+                  "Flags": "RF_Public",
+                  "ElementSize": 4
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 834,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_MakeRotator_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 24,
+              "Struct": {
+                "ObjectName": "Class'Rotator'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:MakeRotator'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "FloatProperty",
+                  "Name": "CallFunc_BreakRotator_Roll",
+                  "Flags": "RF_Public",
+                  "ElementSize": 4
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "FloatProperty",
+                  "Name": "CallFunc_BreakRotator_Pitch",
+                  "Flags": "RF_Public",
+                  "ElementSize": 4
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "FloatProperty",
+                  "Name": "CallFunc_Add_FloatFloat_ReturnValue",
+                  "Flags": "RF_Public",
+                  "ElementSize": 4
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 889,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_MakeTransform_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 96,
+              "Struct": {
+                "ObjectName": "Class'Transform'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:MakeTransform'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "CallFunc_BreakTransform_Location",
+                  "Flags": "RF_Public",
+                  "ElementSize": 24,
+                  "Struct": {
+                    "ObjectName": "Class'Vector'",
+                    "ObjectPath": "/Script/CoreUObject"
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "CallFunc_MakeRotator_ReturnValue",
+                  "Flags": "RF_Public",
+                  "ElementSize": 24,
+                  "Struct": {
+                    "ObjectName": "Class'Rotator'",
+                    "ObjectPath": "/Script/CoreUObject"
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_VectorConst",
+              "Value": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 960,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyClass": {
+                "ObjectName": "Class'Actor'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'GameplayStatics:BeginDeferredActorSpawnFromClass'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_Self"
+            },
+            {
+              "Inst": "EX_ObjectConst",
+              "Value": {
+                "ObjectName": "BlueprintGeneratedClass'BP_FX_7thAnniversary_RemoteDestroy_VFXActor_C'",
+                "ObjectPath": "/Game/Effects/Blueprints/Anniversary/2023/BP_FX_7thAnniversary_RemoteDestroy_VFXActor.0"
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "CallFunc_MakeTransform_ReturnValue",
+                  "Flags": "RF_Public",
+                  "ElementSize": 96,
+                  "Struct": {
+                    "ObjectName": "Class'Transform'",
+                    "ObjectPath": "/Script/CoreUObject"
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 0
+            },
+            {
+              "Inst": "EX_NoObject"
+            },
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 0
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1004,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_GetTransform_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 96,
+              "PropertyFlags": "ConstParm",
+              "Struct": {
+                "ObjectName": "Class'Transform'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "K2Node_Event_interactable",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'Interactable'",
+                  "ObjectPath": "/Script/DeadByDaylight"
+                }
+              }
+            }
+          },
+          "Offset": 10,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_GetTransform_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 96,
+              "PropertyFlags": "ConstParm",
+              "Struct": {
+                "ObjectName": "Class'Transform'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_FinalFunction",
+            "Function": {
+              "ObjectName": "Class'Actor:GetTransform'",
+              "ObjectPath": "/Script/Engine"
+            },
+            "Parameters": []
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1054,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 24,
+              "Struct": {
+                "ObjectName": "Class'Vector'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "K2Node_Event_interactable",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'Interactable'",
+                  "ObjectPath": "/Script/DeadByDaylight"
+                }
+              }
+            }
+          },
+          "Offset": 10,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 24,
+              "Struct": {
+                "ObjectName": "Class'Vector'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_FinalFunction",
+            "Function": {
+              "ObjectName": "Class'Actor:K2_GetActorLocation'",
+              "ObjectPath": "/Script/Engine"
+            },
+            "Parameters": []
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1104,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_GetTransform_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 96,
+              "PropertyFlags": "ConstParm",
+              "Struct": {
+                "ObjectName": "Class'Transform'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "K2Node_Event_interactable",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'Interactable'",
+                  "ObjectPath": "/Script/DeadByDaylight"
+                }
+              }
+            }
+          },
+          "Offset": 10,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_GetTransform_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 96,
+              "PropertyFlags": "ConstParm",
+              "Struct": {
+                "ObjectName": "Class'Transform'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_FinalFunction",
+            "Function": {
+              "ObjectName": "Class'Actor:GetTransform'",
+              "ObjectPath": "/Script/Engine"
+            },
+            "Parameters": []
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1154,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_K2_GetActorLocation_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 24,
+              "Struct": {
+                "ObjectName": "Class'Vector'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "K2Node_Event_interactingPlayer",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'DBDPlayer'",
+                  "ObjectPath": "/Script/DeadByDaylight"
+                }
+              }
+            }
+          },
+          "Offset": 10,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_K2_GetActorLocation_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 24,
+              "Struct": {
+                "ObjectName": "Class'Vector'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_FinalFunction",
+            "Function": {
+              "ObjectName": "Class'Actor:K2_GetActorLocation'",
+              "ObjectPath": "/Script/Engine"
+            },
+            "Parameters": []
+          }
+        }
+      },
+      {
+        "Inst": "EX_CallMath",
+        "StatementIndex": 1204,
+        "Function": {
+          "ObjectName": "Class'KismetMathLibrary:BreakTransform'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "StructProperty",
+                "Name": "CallFunc_GetTransform_ReturnValue_1",
+                "Flags": "RF_Public",
+                "ElementSize": 96,
+                "PropertyFlags": "ConstParm",
+                "Struct": {
+                  "ObjectName": "Class'Transform'",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              }
+            }
+          },
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "StructProperty",
+                "Name": "CallFunc_BreakTransform_Location",
+                "Flags": "RF_Public",
+                "ElementSize": 24,
+                "Struct": {
+                  "ObjectName": "Class'Vector'",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              }
+            }
+          },
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "StructProperty",
+                "Name": "CallFunc_BreakTransform_Rotation",
+                "Flags": "RF_Public",
+                "ElementSize": 24,
+                "Struct": {
+                  "ObjectName": "Class'Rotator'",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              }
+            }
+          },
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "StructProperty",
+                "Name": "CallFunc_BreakTransform_Scale",
+                "Flags": "RF_Public",
+                "ElementSize": 24,
+                "Struct": {
+                  "ObjectName": "Class'Vector'",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1250,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_FindLookAtRotation_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 24,
+              "Struct": {
+                "ObjectName": "Class'Rotator'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:FindLookAtRotation'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "CallFunc_K2_GetActorLocation_ReturnValue_1",
+                  "Flags": "RF_Public",
+                  "ElementSize": 24,
+                  "Struct": {
+                    "ObjectName": "Class'Vector'",
+                    "ObjectPath": "/Script/CoreUObject"
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+                  "Flags": "RF_Public",
+                  "ElementSize": 24,
+                  "Struct": {
+                    "ObjectName": "Class'Vector'",
+                    "ObjectPath": "/Script/CoreUObject"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_CallMath",
+        "StatementIndex": 1296,
+        "Function": {
+          "ObjectName": "Class'KismetMathLibrary:BreakRotator'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "StructProperty",
+                "Name": "CallFunc_BreakTransform_Rotation",
+                "Flags": "RF_Public",
+                "ElementSize": 24,
+                "Struct": {
+                  "ObjectName": "Class'Rotator'",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              }
+            }
+          },
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "FloatProperty",
+                "Name": "CallFunc_BreakRotator_Roll",
+                "Flags": "RF_Public",
+                "ElementSize": 4
+              }
+            }
+          },
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "FloatProperty",
+                "Name": "CallFunc_BreakRotator_Pitch",
+                "Flags": "RF_Public",
+                "ElementSize": 4
+              }
+            }
+          },
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "FloatProperty",
+                "Name": "CallFunc_BreakRotator_Yaw",
+                "Flags": "RF_Public",
+                "ElementSize": 4
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1342,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_Conv_RotatorToVector_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 24,
+              "Struct": {
+                "ObjectName": "Class'Vector'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:Conv_RotatorToVector'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "CallFunc_FindLookAtRotation_ReturnValue",
+                  "Flags": "RF_Public",
+                  "ElementSize": 24,
+                  "Struct": {
+                    "ObjectName": "Class'Rotator'",
+                    "ObjectPath": "/Script/CoreUObject"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1379,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_InverseTransformDirection_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 24,
+              "Struct": {
+                "ObjectName": "Class'Vector'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:InverseTransformDirection'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "CallFunc_GetTransform_ReturnValue",
+                  "Flags": "RF_Public",
+                  "ElementSize": 96,
+                  "PropertyFlags": "ConstParm",
+                  "Struct": {
+                    "ObjectName": "Class'Transform'",
+                    "ObjectPath": "/Script/CoreUObject"
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "CallFunc_Conv_RotatorToVector_ReturnValue",
+                  "Flags": "RF_Public",
+                  "ElementSize": 24,
+                  "Struct": {
+                    "ObjectName": "Class'Vector'",
+                    "ObjectPath": "/Script/CoreUObject"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1425,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_Conv_VectorToRotator_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 24,
+              "Struct": {
+                "ObjectName": "Class'Rotator'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:Conv_VectorToRotator'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "CallFunc_InverseTransformDirection_ReturnValue",
+                  "Flags": "RF_Public",
+                  "ElementSize": 24,
+                  "Struct": {
+                    "ObjectName": "Class'Vector'",
+                    "ObjectPath": "/Script/CoreUObject"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_CallMath",
+        "StatementIndex": 1462,
+        "Function": {
+          "ObjectName": "Class'KismetMathLibrary:BreakRotator'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "StructProperty",
+                "Name": "CallFunc_Conv_VectorToRotator_ReturnValue",
+                "Flags": "RF_Public",
+                "ElementSize": 24,
+                "Struct": {
+                  "ObjectName": "Class'Rotator'",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              }
+            }
+          },
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "FloatProperty",
+                "Name": "CallFunc_BreakRotator_Roll_1",
+                "Flags": "RF_Public",
+                "ElementSize": 4
+              }
+            }
+          },
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "FloatProperty",
+                "Name": "CallFunc_BreakRotator_Pitch_1",
+                "Flags": "RF_Public",
+                "ElementSize": 4
+              }
+            }
+          },
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "FloatProperty",
+                "Name": "CallFunc_BreakRotator_Yaw_1",
+                "Flags": "RF_Public",
+                "ElementSize": 4
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1508,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "DoubleProperty",
+              "Name": "CallFunc_Abs_A_ImplicitCast",
+              "Flags": "RF_Public",
+              "ElementSize": 8
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Cast",
+          "ConversionType": "CST_FloatToDouble",
+          "Target": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "FloatProperty",
+                "Name": "CallFunc_BreakRotator_Yaw_1",
+                "Flags": "RF_Public",
+                "ElementSize": 4
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1537,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "DoubleProperty",
+              "Name": "CallFunc_Abs_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:Abs'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "DoubleProperty",
+                  "Name": "CallFunc_Abs_A_ImplicitCast",
+                  "Flags": "RF_Public",
+                  "ElementSize": 8
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1574,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "FloatProperty",
+              "Name": "CallFunc_Less_FloatFloat_A_ImplicitCast",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Cast",
+          "ConversionType": "CST_DoubleToFloat",
+          "Target": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "DoubleProperty",
+                "Name": "CallFunc_Abs_ReturnValue",
+                "Flags": "RF_Public",
+                "ElementSize": 8
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 1603,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_Less_FloatFloat_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:Less_FloatFloat'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "FloatProperty",
+                  "Name": "CallFunc_Less_FloatFloat_A_ImplicitCast",
+                  "Flags": "RF_Public",
+                  "ElementSize": 4
+                }
+              }
+            },
+            {
+              "Inst": "EX_FloatConst",
+              "Value": 90.0
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1637,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "DoubleProperty",
+              "Name": "CallFunc_SelectFloat_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:SelectFloat'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_DoubleConst",
+              "Value": 180.0
+            },
+            {
+              "Inst": "EX_DoubleConst",
+              "Value": 0.0
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "BoolProperty",
+                  "Name": "CallFunc_Less_FloatFloat_ReturnValue",
+                  "Flags": "RF_Public",
+                  "ElementSize": 1,
+                  "FieldSize": 1,
+                  "ByteOffset": 0,
+                  "ByteMask": 1,
+                  "FieldMask": 255,
+                  "BoolSize": 1,
+                  "bIsNativeBool": true
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1692,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "FloatProperty",
+              "Name": "CallFunc_Add_FloatFloat_B_ImplicitCast",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Cast",
+          "ConversionType": "CST_DoubleToFloat",
+          "Target": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "DoubleProperty",
+                "Name": "CallFunc_SelectFloat_ReturnValue",
+                "Flags": "RF_Public",
+                "ElementSize": 8
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1721,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "FloatProperty",
+              "Name": "CallFunc_Add_FloatFloat_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:Add_FloatFloat'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "FloatProperty",
+                  "Name": "CallFunc_BreakRotator_Yaw",
+                  "Flags": "RF_Public",
+                  "ElementSize": 4
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "FloatProperty",
+                  "Name": "CallFunc_Add_FloatFloat_B_ImplicitCast",
+                  "Flags": "RF_Public",
+                  "ElementSize": 4
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1767,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_MakeRotator_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 24,
+              "Struct": {
+                "ObjectName": "Class'Rotator'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:MakeRotator'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "FloatProperty",
+                  "Name": "CallFunc_BreakRotator_Roll",
+                  "Flags": "RF_Public",
+                  "ElementSize": 4
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "FloatProperty",
+                  "Name": "CallFunc_BreakRotator_Pitch",
+                  "Flags": "RF_Public",
+                  "ElementSize": 4
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "FloatProperty",
+                  "Name": "CallFunc_Add_FloatFloat_ReturnValue",
+                  "Flags": "RF_Public",
+                  "ElementSize": 4
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1822,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_MakeTransform_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 96,
+              "Struct": {
+                "ObjectName": "Class'Transform'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:MakeTransform'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "CallFunc_BreakTransform_Location",
+                  "Flags": "RF_Public",
+                  "ElementSize": 24,
+                  "Struct": {
+                    "ObjectName": "Class'Vector'",
+                    "ObjectPath": "/Script/CoreUObject"
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "CallFunc_MakeRotator_ReturnValue",
+                  "Flags": "RF_Public",
+                  "ElementSize": 24,
+                  "Struct": {
+                    "ObjectName": "Class'Rotator'",
+                    "ObjectPath": "/Script/CoreUObject"
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_VectorConst",
+              "Value": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 1893,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_FinishSpawningActor_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyClass": {
+                "ObjectName": "BlueprintGeneratedClass'BP_FX_7thAnniversary_RemoteDestroy_VFXActor_C'",
+                "ObjectPath": "/Game/Effects/Blueprints/Anniversary/2023/BP_FX_7thAnniversary_RemoteDestroy_VFXActor.0"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'GameplayStatics:FinishSpawningActor'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "ObjectProperty",
+                  "Name": "CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue",
+                  "Flags": "RF_Public",
+                  "ElementSize": 8,
+                  "PropertyClass": {
+                    "ObjectName": "Class'Actor'",
+                    "ObjectPath": "/Script/Engine"
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "CallFunc_MakeTransform_ReturnValue",
+                  "Flags": "RF_Public",
+                  "ElementSize": 96,
+                  "Struct": {
+                    "ObjectName": "Class'Transform'",
+                    "ObjectPath": "/Script/CoreUObject"
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 0
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 1933,
+        "Variable": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_RemoteDestroyInteraction_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.0"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "RemoteDestroyVFXActor",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+              "PropertyClass": {
+                "ObjectName": "BlueprintGeneratedClass'BP_FX_7thAnniversary_RemoteDestroy_VFXActor_C'",
+                "ObjectPath": "/Game/Effects/Blueprints/Anniversary/2023/BP_FX_7thAnniversary_RemoteDestroy_VFXActor.0"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_FinishSpawningActor_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyClass": {
+                "ObjectName": "BlueprintGeneratedClass'BP_FX_7thAnniversary_RemoteDestroy_VFXActor_C'",
+                "ObjectPath": "/Game/Effects/Blueprints/Anniversary/2023/BP_FX_7thAnniversary_RemoteDestroy_VFXActor.0"
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1952,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "K2Node_DynamicCast_AsPallet",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyClass": {
+                "ObjectName": "Class'Pallet'",
+                "ObjectPath": "/Script/DeadByDaylight"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_DynamicCast",
+          "InterfaceClass": {
+            "ObjectName": "Class'Pallet'",
+            "ObjectPath": "/Script/DeadByDaylight"
+          },
+          "Target": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "K2Node_Event_interactable",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'Interactable'",
+                  "ObjectPath": "/Script/DeadByDaylight"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 1988,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "K2Node_DynamicCast_bSuccess",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Cast",
+          "ConversionType": "CST_ObjectToBool",
+          "Target": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "K2Node_DynamicCast_AsPallet",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'Pallet'",
+                  "ObjectPath": "/Script/DeadByDaylight"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_JumpIfNot",
+        "StatementIndex": 2017,
+        "CodeOffset": 2128,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.ExecuteUbergraph_BP_RemoteDestroyInteraction[2128]",
+        "BooleanExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "K2Node_DynamicCast_bSuccess",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_CallMath",
+        "StatementIndex": 2031,
+        "Function": {
+          "ObjectName": "Class'KismetSystemLibrary:PrintString'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_Self"
+          },
+          {
+            "Inst": "EX_StringConst",
+            "Value": "Remote-breaking pallet"
+          },
+          {
+            "Inst": "EX_True"
+          },
+          {
+            "Inst": "EX_True"
+          },
+          {
+            "Inst": "EX_StructConst",
+            "Struct": {
+              "ObjectName": "Class'LinearColor'",
+              "ObjectPath": "/Script/CoreUObject"
+            },
+            "Properties": [
+              {
+                "Inst": "EX_FloatConst",
+                "Value": 0.0
+              },
+              {
+                "Inst": "EX_FloatConst",
+                "Value": 0.66
+              },
+              {
+                "Inst": "EX_FloatConst",
+                "Value": 1.0
+              },
+              {
+                "Inst": "EX_FloatConst",
+                "Value": 1.0
+              }
+            ]
+          },
+          {
+            "Inst": "EX_FloatConst",
+            "Value": 2.0
+          },
+          {
+            "Inst": "EX_IntConst",
+            "Value": -1
+          }
+        ]
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 2112,
+        "Variable": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_RemoteDestroyInteraction_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.0"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "IsPallet",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 1,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_True"
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 2123,
+        "CodeOffset": 21,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.ExecuteUbergraph_BP_RemoteDestroyInteraction[21]"
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 2128,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "K2Node_DynamicCast_AsBreakable_Base",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyClass": {
+                "ObjectName": "Class'BreakableBase'",
+                "ObjectPath": "/Script/DeadByDaylight"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_DynamicCast",
+          "InterfaceClass": {
+            "ObjectName": "Class'BreakableBase'",
+            "ObjectPath": "/Script/DeadByDaylight"
+          },
+          "Target": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "K2Node_Event_interactable",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'Interactable'",
+                  "ObjectPath": "/Script/DeadByDaylight"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 2164,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "K2Node_DynamicCast_bSuccess_1",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Cast",
+          "ConversionType": "CST_ObjectToBool",
+          "Target": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "K2Node_DynamicCast_AsBreakable_Base",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'BreakableBase'",
+                  "ObjectPath": "/Script/DeadByDaylight"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_JumpIfNot",
+        "StatementIndex": 2193,
+        "CodeOffset": 2291,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.ExecuteUbergraph_BP_RemoteDestroyInteraction[2291]",
+        "BooleanExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_RemoteDestroyInteraction_C:ExecuteUbergraph_BP_RemoteDestroyInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.3"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "K2Node_DynamicCast_bSuccess_1",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_CallMath",
+        "StatementIndex": 2207,
+        "Function": {
+          "ObjectName": "Class'KismetSystemLibrary:PrintString'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_Self"
+          },
+          {
+            "Inst": "EX_StringConst",
+            "Value": "Remote-breaking wall"
+          },
+          {
+            "Inst": "EX_True"
+          },
+          {
+            "Inst": "EX_True"
+          },
+          {
+            "Inst": "EX_StructConst",
+            "Struct": {
+              "ObjectName": "Class'LinearColor'",
+              "ObjectPath": "/Script/CoreUObject"
+            },
+            "Properties": [
+              {
+                "Inst": "EX_FloatConst",
+                "Value": 0.0
+              },
+              {
+                "Inst": "EX_FloatConst",
+                "Value": 0.66
+              },
+              {
+                "Inst": "EX_FloatConst",
+                "Value": 1.0
+              },
+              {
+                "Inst": "EX_FloatConst",
+                "Value": 1.0
+              }
+            ]
+          },
+          {
+            "Inst": "EX_FloatConst",
+            "Value": 2.0
+          },
+          {
+            "Inst": "EX_IntConst",
+            "Value": -1
+          }
+        ]
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 2286,
+        "CodeOffset": 10,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2023/BP_RemoteDestroyInteraction.ExecuteUbergraph_BP_RemoteDestroyInteraction[10]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 2291,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 2293
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
   }
 ]

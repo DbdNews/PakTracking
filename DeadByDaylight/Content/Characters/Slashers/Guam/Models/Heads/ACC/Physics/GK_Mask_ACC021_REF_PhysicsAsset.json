@@ -1,0 +1,132 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "GK_Mask_ACC021_REF_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'GK_Mask_ACC021_REF_PhysicsAsset:SkeletalBodySetup_0'",
+          "ObjectPath": "/Game/Characters/Slashers/Guam/Models/Heads/ACC/Physics/GK_Mask_ACC021_REF_PhysicsAsset.2"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'GK_Mask_ACC021_REF_PhysicsAsset:SkeletalBodySetup_1'",
+          "ObjectPath": "/Game/Characters/Slashers/Guam/Models/Heads/ACC/Physics/GK_Mask_ACC021_REF_PhysicsAsset.3"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate'GK_Mask_ACC021_REF_PhysicsAsset:PhysicsConstraintTemplate_0'",
+          "ObjectPath": "/Game/Characters/Slashers/Guam/Models/Heads/ACC/Physics/GK_Mask_ACC021_REF_PhysicsAsset.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_0",
+    "Outer": "GK_Mask_ACC021_REF_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "joint_Hair_RT_B_01",
+        "ConstraintBone1": "joint_Hair_RT_B_01",
+        "ConstraintBone2": "joint_Head_01",
+        "Pos2": {
+          "X": -15.984166,
+          "Y": -12.415303,
+          "Z": -6.24651
+        },
+        "PriAxis2": {
+          "X": -0.47538885,
+          "Y": 0.7372155,
+          "Z": -0.4801236
+        },
+        "SecAxis2": {
+          "X": 0.6849437,
+          "Y": 0.65263516,
+          "Z": 0.32391286
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "GK_Mask_ACC021_REF_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -15.817755,
+              "Y": -4.306336,
+              "Z": -1.0150037
+            },
+            "Rotation": {
+              "Pitch": 26.964964,
+              "Yaw": -90.0,
+              "Roll": 9.083747
+            },
+            "Radius": 13.996933,
+            "Length": 18.518036,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "joint_Head_01",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "87F8F6EB469E6E8568527C841DAFDF9B"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "GK_Mask_ACC021_REF_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 11.28698,
+              "Y": 3.7492063,
+              "Z": 0.112974264
+            },
+            "Rotation": {
+              "Pitch": -3.1805547E-15,
+              "Yaw": 114.01845,
+              "Roll": -89.38469
+            },
+            "Radius": 6.3221974,
+            "Length": 11.644241,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "joint_Hair_RT_B_01",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "2B9F1C08461331AACB0206B329B3F3C2"
+  }
+]

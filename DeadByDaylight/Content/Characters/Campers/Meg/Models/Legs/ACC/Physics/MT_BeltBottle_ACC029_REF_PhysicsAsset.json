@@ -1,0 +1,132 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "MT_BeltBottle_ACC029_REF_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'MT_BeltBottle_ACC029_REF_PhysicsAsset:SkeletalBodySetup_0'",
+          "ObjectPath": "/Game/Characters/Campers/Meg/Models/Legs/ACC/Physics/MT_BeltBottle_ACC029_REF_PhysicsAsset.2"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'MT_BeltBottle_ACC029_REF_PhysicsAsset:SkeletalBodySetup_1'",
+          "ObjectPath": "/Game/Characters/Campers/Meg/Models/Legs/ACC/Physics/MT_BeltBottle_ACC029_REF_PhysicsAsset.3"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate'MT_BeltBottle_ACC029_REF_PhysicsAsset:PhysicsConstraintTemplate_0'",
+          "ObjectPath": "/Game/Characters/Campers/Meg/Models/Legs/ACC/Physics/MT_BeltBottle_ACC029_REF_PhysicsAsset.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_0",
+    "Outer": "MT_BeltBottle_ACC029_REF_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "joint_HipLT_01",
+        "ConstraintBone1": "joint_HipLT_01",
+        "ConstraintBone2": "joint_HipMaster_01",
+        "Pos2": {
+          "X": 8.427197,
+          "Y": 3.6120284,
+          "Z": -2.0462162
+        },
+        "PriAxis2": {
+          "X": 0.22791207,
+          "Y": 0.00410252,
+          "Z": 0.97367305
+        },
+        "SecAxis2": {
+          "X": -0.030412953,
+          "Y": -0.9994732,
+          "Z": 0.011330126
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "MT_BeltBottle_ACC029_REF_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 1.5922213,
+              "Y": 4.995195,
+              "Z": -6.0181336
+            },
+            "Rotation": {
+              "Pitch": -20.122732,
+              "Yaw": -90.0,
+              "Roll": -31.380116
+            },
+            "Radius": 18.128122,
+            "Length": 23.004929,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "joint_HipMaster_01",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "1C887BCA411921D2C852F6BA0D2E4381"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "MT_BeltBottle_ACC029_REF_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -0.30679402,
+              "Y": -39.994637,
+              "Z": -0.77787185
+            },
+            "Rotation": {
+              "Pitch": 2.7829854E-15,
+              "Yaw": -174.88356,
+              "Roll": -80.109764
+            },
+            "Radius": 10.489739,
+            "Length": 41.53194,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "joint_HipLT_01",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "9B439EAB4EA6B2D88BC6B9AFB96BFDDD"
+  }
+]

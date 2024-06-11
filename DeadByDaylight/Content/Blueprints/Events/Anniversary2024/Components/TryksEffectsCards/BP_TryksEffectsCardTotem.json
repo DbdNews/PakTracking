@@ -1,0 +1,1348 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_TryksEffectsCardTotem_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_TryksEffectsCardTotem_C:ExecuteUbergraph_BP_TryksEffectsCardTotem'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.4"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'TryksCard'",
+      "ObjectPath": "/Script/Anniversary2024"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_TryksEffectsCardTotem_C:Cosmetic_OnCardActivation'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.2"
+      },
+      {
+        "ObjectName": "Function'BP_TryksEffectsCardTotem_C:Cosmetic_OnCardDeactivation'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.3"
+      },
+      {
+        "ObjectName": "Function'BP_TryksEffectsCardTotem_C:OnTryksTotemCompleted'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.5"
+      },
+      {
+        "ObjectName": "Function'BP_TryksEffectsCardTotem_C:ExecuteUbergraph_BP_TryksEffectsCardTotem'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.4"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "OnTotemCompletedHandle",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'GameEventDispatcherHandleBP'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_TryksEffectsCardTotem": {
+        "ObjectName": "Function'BP_TryksEffectsCardTotem_C:ExecuteUbergraph_BP_TryksEffectsCardTotem'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.4"
+      },
+      "OnTryksTotemCompleted": {
+        "ObjectName": "Function'BP_TryksEffectsCardTotem_C:OnTryksTotemCompleted'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.5"
+      },
+      "Cosmetic_OnCardDeactivation": {
+        "ObjectName": "Function'BP_TryksEffectsCardTotem_C:Cosmetic_OnCardDeactivation'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.3"
+      },
+      "Cosmetic_OnCardActivation": {
+        "ObjectName": "Function'BP_TryksEffectsCardTotem_C:Cosmetic_OnCardActivation'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.2"
+      }
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_TryksEffectsCardTotem_C'Default__BP_TryksEffectsCardTotem_C'",
+      "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_TryksEffectsCardTotem_C",
+    "Name": "Default__BP_TryksEffectsCardTotem_C",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.BP_TryksEffectsCardTotem_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "OnTotemCompletedHandle": {
+        "Filter": {
+          "TagName": "None"
+        },
+        "GameEventDelegate": {
+          "Num": 0,
+          "Name": "None"
+        }
+      },
+      "_effectCardRowHandle": {
+        "DataTable": {
+          "ObjectName": "DataTable'EffectCardDB'",
+          "ObjectPath": "/Game/Data/Events/Churros/EffectCardDB.0"
+        },
+        "RowName": "CardAnnivTotem"
+      },
+      "_cardEffects": [
+        {
+          "ObjectName": "TotemCardEffect'Default__BP_TryksEffectsCardTotem_C:TotemCardEffect_0'",
+          "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "Cosmetic_OnCardActivation",
+    "Outer": "BP_TryksEffectsCardTotem_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Class'TryksCard:Cosmetic_OnCardActivation'",
+      "ObjectPath": "/Script/Anniversary2024"
+    },
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 0,
+        "Function": {
+          "ObjectName": "Function'BP_TryksEffectsCardTotem_C:ExecuteUbergraph_BP_TryksEffectsCardTotem'",
+          "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.4"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 110
+          }
+        ],
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.ExecuteUbergraph_BP_TryksEffectsCardTotem[110]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 15,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 17
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Cosmetic_OnCardDeactivation",
+    "Outer": "BP_TryksEffectsCardTotem_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Class'TryksCard:Cosmetic_OnCardDeactivation'",
+      "ObjectPath": "/Script/Anniversary2024"
+    },
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 0,
+        "Function": {
+          "ObjectName": "Function'BP_TryksEffectsCardTotem_C:ExecuteUbergraph_BP_TryksEffectsCardTotem'",
+          "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.4"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 363
+          }
+        ],
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.ExecuteUbergraph_BP_TryksEffectsCardTotem[363]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 15,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 17
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_TryksEffectsCardTotem",
+    "Outer": "BP_TryksEffectsCardTotem_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameInstanceSubsystem_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'GameEventDispatcher'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_gameEventType",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_gameEventData",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'GameEventData'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameInstanceSubsystem_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'GameEventDispatcher'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class'GameEventDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Add_VectorVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_GameEventDispatcherHandleBP",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'GameEventDispatcherHandleBP'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnAkComponentAtLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AkComponent'",
+          "ObjectPath": "/Script/AkAudio"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnSystemAtLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      }
+    ],
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_ComputedJump",
+        "StatementIndex": 0,
+        "OffsetExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_TryksEffectsCardTotem_C:ExecuteUbergraph_BP_TryksEffectsCardTotem'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.4"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "EntryPoint",
+              "Flags": "RF_Public",
+              "ElementSize": 4,
+              "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 10,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_TryksEffectsCardTotem_C:ExecuteUbergraph_BP_TryksEffectsCardTotem'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.4"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_GetGameInstanceSubsystem_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyClass": {
+                "ObjectName": "Class'GameEventDispatcher'",
+                "ObjectPath": "/Script/DeadByDaylight"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'SubsystemBlueprintLibrary:GetGameInstanceSubsystem'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_Self"
+            },
+            {
+              "Inst": "EX_ObjectConst",
+              "Value": {
+                "ObjectName": "Class'GameEventDispatcher'",
+                "ObjectPath": "/Script/DeadByDaylight"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 40,
+        "ObjectExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_TryksEffectsCardTotem_C:ExecuteUbergraph_BP_TryksEffectsCardTotem'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.4"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_GetGameInstanceSubsystem_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyClass": {
+                "ObjectName": "Class'GameEventDispatcher'",
+                "ObjectPath": "/Script/DeadByDaylight"
+              }
+            }
+          }
+        },
+        "Offset": 19,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'GameEventDispatcher:UnregisterListener'",
+            "ObjectPath": "/Script/DeadByDaylight"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_TryksEffectsCardTotem_C'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.0"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "OnTotemCompletedHandle",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 32,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | ContainsInstancedReference",
+                  "Struct": {
+                    "ObjectName": "Class'GameEventDispatcherHandleBP'",
+                    "ObjectPath": "/Script/DeadByDaylight"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 81,
+        "CodeOffset": 732,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.ExecuteUbergraph_BP_TryksEffectsCardTotem[732]"
+      },
+      {
+        "Inst": "EX_CallMath",
+        "StatementIndex": 86,
+        "Function": {
+          "ObjectName": "Class'AudioUtilities:PostAkAudioEvent'",
+          "ObjectPath": "/Script/DBDAudio"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_ObjectConst",
+            "Value": {
+              "ObjectName": "AkAudioEvent'AudioEvent_HUD_Masquerade_Card_Activation_Positive'",
+              "ObjectPath": "/Game/Audio/AudioEvents/Objects/Anniversary/AudioEvent_HUD_Masquerade_Card_Activation_Positive.0"
+            }
+          }
+        ]
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 105,
+        "CodeOffset": 732,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.ExecuteUbergraph_BP_TryksEffectsCardTotem[732]"
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 110,
+        "Variable": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TryksEffectsCardTotem_C'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.0"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "OnTotemCompletedHandle",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 32,
+              "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | ContainsInstancedReference",
+              "Struct": {
+                "ObjectName": "Class'GameEventDispatcherHandleBP'",
+                "ObjectPath": "/Script/DeadByDaylight"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_StructConst",
+          "Struct": {
+            "ObjectName": "Class'GameEventDispatcherHandleBP'",
+            "ObjectPath": "/Script/DeadByDaylight"
+          },
+          "Properties": [
+            {
+              "Inst": "EX_StructConst",
+              "Struct": {
+                "ObjectName": "Class'GameplayTag'",
+                "ObjectPath": "/Script/GameplayTags"
+              },
+              "Properties": [
+                {
+                  "Inst": "EX_NameConst",
+                  "Value": "None"
+                }
+              ]
+            },
+            {
+              "Inst": "EX_InstanceDelegate",
+              "FunctionName": "None"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 182,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_TryksEffectsCardTotem_C:ExecuteUbergraph_BP_TryksEffectsCardTotem'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.4"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_GetGameInstanceSubsystem_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyClass": {
+                "ObjectName": "Class'GameEventDispatcher'",
+                "ObjectPath": "/Script/DeadByDaylight"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'SubsystemBlueprintLibrary:GetGameInstanceSubsystem'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_Self"
+            },
+            {
+              "Inst": "EX_ObjectConst",
+              "Value": {
+                "ObjectName": "Class'GameEventDispatcher'",
+                "ObjectPath": "/Script/DeadByDaylight"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_BindDelegate",
+        "StatementIndex": 212,
+        "FunctionName": "OnTryksTotemCompleted",
+        "Delegate": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_TryksEffectsCardTotem_C:ExecuteUbergraph_BP_TryksEffectsCardTotem'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.4"
+            },
+            "Property": {
+              "Type": "DelegateProperty",
+              "Name": "K2Node_CreateDelegate_OutputDelegate",
+              "Flags": "RF_Public",
+              "ElementSize": 20,
+              "SignatureFunction": {
+                "ObjectName": "Class'GameEventDelegate__DelegateSignature'",
+                "ObjectPath": "/Script/DeadByDaylight"
+              }
+            }
+          }
+        },
+        "ObjectTerm": {
+          "Inst": "EX_Self"
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 235,
+        "Variable": {
+          "Inst": "EX_StructMemberContext",
+          "Property": {
+            "Path": [
+              "Filter"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Class'GameEventDispatcherHandleBP'",
+              "ObjectPath": "/Script/DeadByDaylight"
+            }
+          },
+          "StructExpression": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_TryksEffectsCardTotem_C:ExecuteUbergraph_BP_TryksEffectsCardTotem'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.4"
+              },
+              "Property": {
+                "Type": "StructProperty",
+                "Name": "K2Node_MakeStruct_GameEventDispatcherHandleBP",
+                "Flags": "RF_Public",
+                "ElementSize": 32,
+                "PropertyFlags": "ContainsInstancedReference",
+                "Struct": {
+                  "ObjectName": "Class'GameEventDispatcherHandleBP'",
+                  "ObjectPath": "/Script/DeadByDaylight"
+                }
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_StructConst",
+          "Struct": {
+            "ObjectName": "Class'GameplayTag'",
+            "ObjectPath": "/Script/GameplayTags"
+          },
+          "Properties": [
+            {
+              "Inst": "EX_NameConst",
+              "Value": "GameEvent.TryksTotemCompleted"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_LetDelegate",
+        "StatementIndex": 289,
+        "Variable": {
+          "Inst": "EX_StructMemberContext",
+          "Property": {
+            "Path": [
+              "GameEventDelegate"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Class'GameEventDispatcherHandleBP'",
+              "ObjectPath": "/Script/DeadByDaylight"
+            }
+          },
+          "StructExpression": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_TryksEffectsCardTotem_C:ExecuteUbergraph_BP_TryksEffectsCardTotem'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.4"
+              },
+              "Property": {
+                "Type": "StructProperty",
+                "Name": "K2Node_MakeStruct_GameEventDispatcherHandleBP",
+                "Flags": "RF_Public",
+                "ElementSize": 32,
+                "PropertyFlags": "ContainsInstancedReference",
+                "Struct": {
+                  "ObjectName": "Class'GameEventDispatcherHandleBP'",
+                  "ObjectPath": "/Script/DeadByDaylight"
+                }
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_TryksEffectsCardTotem_C:ExecuteUbergraph_BP_TryksEffectsCardTotem'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.4"
+            },
+            "Property": {
+              "Type": "DelegateProperty",
+              "Name": "K2Node_CreateDelegate_OutputDelegate",
+              "Flags": "RF_Public",
+              "ElementSize": 20,
+              "SignatureFunction": {
+                "ObjectName": "Class'GameEventDelegate__DelegateSignature'",
+                "ObjectPath": "/Script/DeadByDaylight"
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 317,
+        "ObjectExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_TryksEffectsCardTotem_C:ExecuteUbergraph_BP_TryksEffectsCardTotem'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.4"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_GetGameInstanceSubsystem_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyClass": {
+                "ObjectName": "Class'GameEventDispatcher'",
+                "ObjectPath": "/Script/DeadByDaylight"
+              }
+            }
+          }
+        },
+        "Offset": 19,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'GameEventDispatcher:RegisterListener'",
+            "ObjectPath": "/Script/DeadByDaylight"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_TryksEffectsCardTotem_C:ExecuteUbergraph_BP_TryksEffectsCardTotem'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.4"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "K2Node_MakeStruct_GameEventDispatcherHandleBP",
+                  "Flags": "RF_Public",
+                  "ElementSize": 32,
+                  "PropertyFlags": "ContainsInstancedReference",
+                  "Struct": {
+                    "ObjectName": "Class'GameEventDispatcherHandleBP'",
+                    "ObjectPath": "/Script/DeadByDaylight"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 358,
+        "CodeOffset": 86,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.ExecuteUbergraph_BP_TryksEffectsCardTotem[86]"
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 363,
+        "CodeOffset": 10,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.ExecuteUbergraph_BP_TryksEffectsCardTotem[10]"
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 368,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_TryksEffectsCardTotem_C:ExecuteUbergraph_BP_TryksEffectsCardTotem'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.4"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 24,
+              "Struct": {
+                "ObjectName": "Class'Vector'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_StructMemberContext",
+            "Property": {
+              "Path": [
+                "Target"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'GameEventData'",
+                "ObjectPath": "/Script/DeadByDaylight"
+              }
+            },
+            "StructExpression": {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_TryksEffectsCardTotem_C:ExecuteUbergraph_BP_TryksEffectsCardTotem'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.4"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "K2Node_CustomEvent_gameEventData",
+                  "Flags": "RF_Public",
+                  "ElementSize": 40,
+                  "PropertyFlags": "ConstParm",
+                  "Struct": {
+                    "ObjectName": "Class'GameEventData'",
+                    "ObjectPath": "/Script/DeadByDaylight"
+                  }
+                }
+              }
+            }
+          },
+          "Offset": 10,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'BP_TryksEffectsCardTotem_C:ExecuteUbergraph_BP_TryksEffectsCardTotem'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.4"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 24,
+              "Struct": {
+                "ObjectName": "Class'Vector'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_FinalFunction",
+            "Function": {
+              "ObjectName": "Class'Actor:K2_GetActorLocation'",
+              "ObjectPath": "/Script/Engine"
+            },
+            "Parameters": []
+          }
+        }
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 427,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_TryksEffectsCardTotem_C:ExecuteUbergraph_BP_TryksEffectsCardTotem'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.4"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_SpawnSystemAtLocation_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'NiagaraComponent'",
+                "ObjectPath": "/Script/Niagara"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'NiagaraFunctionLibrary:SpawnSystemAtLocation'",
+            "ObjectPath": "/Script/Niagara"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_Self"
+            },
+            {
+              "Inst": "EX_ObjectConst",
+              "Value": {
+                "ObjectName": "NiagaraSystem'NS_8thAnniversary_PillarInteraction_Completed'",
+                "ObjectPath": "/Game/Effects/Niagara/NiagaraParticleSystem/Events/8thAnniversary/PillarInteraction/NS_8thAnniversary_PillarInteraction_Completed.84"
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_TryksEffectsCardTotem_C:ExecuteUbergraph_BP_TryksEffectsCardTotem'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.4"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+                  "Flags": "RF_Public",
+                  "ElementSize": 24,
+                  "Struct": {
+                    "ObjectName": "Class'Vector'",
+                    "ObjectPath": "/Script/CoreUObject"
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_RotationConst",
+              "Value": {
+                "Pitch": 0.0,
+                "Yaw": 0.0,
+                "Roll": 0.0
+              }
+            },
+            {
+              "Inst": "EX_VectorConst",
+              "Value": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            {
+              "Inst": "EX_True"
+            },
+            {
+              "Inst": "EX_True"
+            },
+            {
+              "Inst": "EX_ByteConst",
+              "Value": 0
+            },
+            {
+              "Inst": "EX_True"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 521,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_TryksEffectsCardTotem_C:ExecuteUbergraph_BP_TryksEffectsCardTotem'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.4"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 24,
+              "Struct": {
+                "ObjectName": "Class'Vector'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_StructMemberContext",
+            "Property": {
+              "Path": [
+                "Target"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'GameEventData'",
+                "ObjectPath": "/Script/DeadByDaylight"
+              }
+            },
+            "StructExpression": {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_TryksEffectsCardTotem_C:ExecuteUbergraph_BP_TryksEffectsCardTotem'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.4"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "K2Node_CustomEvent_gameEventData",
+                  "Flags": "RF_Public",
+                  "ElementSize": 40,
+                  "PropertyFlags": "ConstParm",
+                  "Struct": {
+                    "ObjectName": "Class'GameEventData'",
+                    "ObjectPath": "/Script/DeadByDaylight"
+                  }
+                }
+              }
+            }
+          },
+          "Offset": 10,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'BP_TryksEffectsCardTotem_C:ExecuteUbergraph_BP_TryksEffectsCardTotem'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.4"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 24,
+              "Struct": {
+                "ObjectName": "Class'Vector'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_FinalFunction",
+            "Function": {
+              "ObjectName": "Class'Actor:K2_GetActorLocation'",
+              "ObjectPath": "/Script/Engine"
+            },
+            "Parameters": []
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 580,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_TryksEffectsCardTotem_C:ExecuteUbergraph_BP_TryksEffectsCardTotem'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.4"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "CallFunc_Add_VectorVector_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 24,
+              "Struct": {
+                "ObjectName": "Class'Vector'",
+                "ObjectPath": "/Script/CoreUObject"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:Add_VectorVector'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_TryksEffectsCardTotem_C:ExecuteUbergraph_BP_TryksEffectsCardTotem'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.4"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+                  "Flags": "RF_Public",
+                  "ElementSize": 24,
+                  "Struct": {
+                    "ObjectName": "Class'Vector'",
+                    "ObjectPath": "/Script/CoreUObject"
+                  }
+                }
+              }
+            },
+            {
+              "Inst": "EX_VectorConst",
+              "Value": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 100.0
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 642,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_TryksEffectsCardTotem_C:ExecuteUbergraph_BP_TryksEffectsCardTotem'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.4"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_SpawnAkComponentAtLocation_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'AkComponent'",
+                "ObjectPath": "/Script/AkAudio"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_ObjectConst",
+            "Value": {
+              "ObjectName": "Class'Default__AkGameplayStatics'",
+              "ObjectPath": "/Script/AkAudio"
+            }
+          },
+          "Offset": 58,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'BP_TryksEffectsCardTotem_C:ExecuteUbergraph_BP_TryksEffectsCardTotem'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.4"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_SpawnAkComponentAtLocation_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'AkComponent'",
+                "ObjectPath": "/Script/AkAudio"
+              }
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_FinalFunction",
+            "Function": {
+              "ObjectName": "Class'AkGameplayStatics:SpawnAkComponentAtLocation'",
+              "ObjectPath": "/Script/AkAudio"
+            },
+            "Parameters": [
+              {
+                "Inst": "EX_Self"
+              },
+              {
+                "Inst": "EX_ObjectConst",
+                "Value": {
+                  "ObjectName": "AkAudioEvent'AudioEvent_Totem_Cleanse_Anniversary'",
+                  "ObjectPath": "/Game/Audio/AudioEvents/Objects/VFX/AudioEvent_Totem_Cleanse_Anniversary.0"
+                }
+              },
+              {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'BP_TryksEffectsCardTotem_C:ExecuteUbergraph_BP_TryksEffectsCardTotem'",
+                    "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.4"
+                  },
+                  "Property": {
+                    "Type": "StructProperty",
+                    "Name": "CallFunc_Add_VectorVector_ReturnValue",
+                    "Flags": "RF_Public",
+                    "ElementSize": 24,
+                    "Struct": {
+                      "ObjectName": "Class'Vector'",
+                      "ObjectPath": "/Script/CoreUObject"
+                    }
+                  }
+                }
+              },
+              {
+                "Inst": "EX_RotationConst",
+                "Value": {
+                  "Pitch": 0.0,
+                  "Yaw": 0.0,
+                  "Roll": 0.0
+                }
+              },
+              {
+                "Inst": "EX_True"
+              },
+              {
+                "Inst": "EX_StringConst",
+                "Value": ""
+              },
+              {
+                "Inst": "EX_True"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 732,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 734
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnTryksTotemCompleted",
+    "Outer": "BP_TryksEffectsCardTotem_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "gameEventType",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "gameEventData",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'GameEventData'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      }
+    ],
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LetValueOnPersistentFrame",
+        "StatementIndex": 0,
+        "DestinationProperty": {
+          "Owner": {
+            "ObjectName": "Function'BP_TryksEffectsCardTotem_C:ExecuteUbergraph_BP_TryksEffectsCardTotem'",
+            "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.4"
+          },
+          "Property": {
+            "Type": "StructProperty",
+            "Name": "K2Node_CustomEvent_gameEventType",
+            "Flags": "RF_Public",
+            "ElementSize": 12,
+            "PropertyFlags": "ConstParm",
+            "Struct": {
+              "ObjectName": "Class'GameplayTag'",
+              "ObjectPath": "/Script/GameplayTags"
+            }
+          }
+        },
+        "AssignmentExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_TryksEffectsCardTotem_C:OnTryksTotemCompleted'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.5"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "gameEventType",
+              "Flags": "RF_Public",
+              "ElementSize": 12,
+              "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm",
+              "Struct": {
+                "ObjectName": "Class'GameplayTag'",
+                "ObjectPath": "/Script/GameplayTags"
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LetValueOnPersistentFrame",
+        "StatementIndex": 18,
+        "DestinationProperty": {
+          "Owner": {
+            "ObjectName": "Function'BP_TryksEffectsCardTotem_C:ExecuteUbergraph_BP_TryksEffectsCardTotem'",
+            "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.4"
+          },
+          "Property": {
+            "Type": "StructProperty",
+            "Name": "K2Node_CustomEvent_gameEventData",
+            "Flags": "RF_Public",
+            "ElementSize": 40,
+            "PropertyFlags": "ConstParm",
+            "Struct": {
+              "ObjectName": "Class'GameEventData'",
+              "ObjectPath": "/Script/DeadByDaylight"
+            }
+          }
+        },
+        "AssignmentExpression": {
+          "Inst": "EX_LocalOutVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_TryksEffectsCardTotem_C:OnTryksTotemCompleted'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.5"
+            },
+            "Property": {
+              "Type": "StructProperty",
+              "Name": "gameEventData",
+              "Flags": "RF_Public",
+              "ElementSize": 40,
+              "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+              "Struct": {
+                "ObjectName": "Class'GameEventData'",
+                "ObjectPath": "/Script/DeadByDaylight"
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 36,
+        "Function": {
+          "ObjectName": "Function'BP_TryksEffectsCardTotem_C:ExecuteUbergraph_BP_TryksEffectsCardTotem'",
+          "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.4"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 368
+          }
+        ],
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Components/TryksEffectsCards/BP_TryksEffectsCardTotem.ExecuteUbergraph_BP_TryksEffectsCardTotem[368]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 51,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 53
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "TotemCardEffect",
+    "Name": "TotemCardEffect_0",
+    "Outer": "Default__BP_TryksEffectsCardTotem_C",
+    "Class": "UScriptClass'TotemCardEffect'",
+    "Properties": {
+      "_survivorTotemInteractionClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_SurvivorTryksTotemInteraction_C'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_SurvivorTryksTotemInteraction.0"
+      },
+      "_killerTotemInteractionClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_KillerTryksTotemInteraction_C'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_KillerTryksTotemInteraction.0"
+      }
+    }
+  }
+]

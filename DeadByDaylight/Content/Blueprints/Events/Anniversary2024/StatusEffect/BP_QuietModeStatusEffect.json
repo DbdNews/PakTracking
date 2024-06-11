@@ -1,0 +1,716 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_QuietModeStatusEffect_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_QuietModeStatusEffect_C:ExecuteUbergraph_BP_QuietModeStatusEffect'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/StatusEffect/BP_QuietModeStatusEffect.2"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ActivatableStatusEffect'",
+      "ObjectPath": "/Script/DBDCompetence"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_QuietModeStatusEffect_C:OnInitialized'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/StatusEffect/BP_QuietModeStatusEffect.3"
+      },
+      {
+        "ObjectName": "Function'BP_QuietModeStatusEffect_C:ExecuteUbergraph_BP_QuietModeStatusEffect'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/StatusEffect/BP_QuietModeStatusEffect.2"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "InjureNoiseReductionTunable",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 40,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'DBDTunableRowHandle'",
+          "ObjectPath": "/Script/DataTableUtilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "FootstepNoiseReductionTunable",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 40,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'DBDTunableRowHandle'",
+          "ObjectPath": "/Script/DataTableUtilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "BloodDecalDurationModifier",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 40,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'DBDTunableRowHandle'",
+          "ObjectPath": "/Script/DataTableUtilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "LoudNoiseRangeModifier",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 40,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'DBDTunableRowHandle'",
+          "ObjectPath": "/Script/DataTableUtilities"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_QuietModeStatusEffect": {
+        "ObjectName": "Function'BP_QuietModeStatusEffect_C:ExecuteUbergraph_BP_QuietModeStatusEffect'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/StatusEffect/BP_QuietModeStatusEffect.2"
+      },
+      "OnInitialized": {
+        "ObjectName": "Function'BP_QuietModeStatusEffect_C:OnInitialized'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/StatusEffect/BP_QuietModeStatusEffect.3"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_QuietModeStatusEffect_C'Default__BP_QuietModeStatusEffect_C'",
+      "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/StatusEffect/BP_QuietModeStatusEffect.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_QuietModeStatusEffect_C",
+    "Name": "Default__BP_QuietModeStatusEffect_C",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Events/Anniversary2024/StatusEffect/BP_QuietModeStatusEffect.BP_QuietModeStatusEffect_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "InjureNoiseReductionTunable": {
+        "_dataTableRowHandle": {
+          "DataTable": {
+            "ObjectName": "DataTable'Anniversary2024TunablesDB'",
+            "ObjectPath": "/Game/Data/Events/Churros/Anniversary2024TunablesDB.0"
+          },
+          "RowName": "QuietModeInjuredNoiseModifier"
+        },
+        "_defaultValue": 0.0,
+        "_isOptional": false
+      },
+      "FootstepNoiseReductionTunable": {
+        "_dataTableRowHandle": {
+          "DataTable": {
+            "ObjectName": "DataTable'Anniversary2024TunablesDB'",
+            "ObjectPath": "/Game/Data/Events/Churros/Anniversary2024TunablesDB.0"
+          },
+          "RowName": "QuietModeFootstepNoiseModifier"
+        },
+        "_defaultValue": 0.0,
+        "_isOptional": false
+      },
+      "BloodDecalDurationModifier": {
+        "_dataTableRowHandle": {
+          "DataTable": {
+            "ObjectName": "DataTable'Anniversary2024TunablesDB'",
+            "ObjectPath": "/Game/Data/Events/Churros/Anniversary2024TunablesDB.0"
+          },
+          "RowName": "QuietModeBloodPoolModifier"
+        },
+        "_defaultValue": 0.0,
+        "_isOptional": false
+      },
+      "LoudNoiseRangeModifier": {
+        "_dataTableRowHandle": {
+          "DataTable": {
+            "ObjectName": "DataTable'Anniversary2024TunablesDB'",
+            "ObjectPath": "/Game/Data/Events/Churros/Anniversary2024TunablesDB.0"
+          },
+          "RowName": "QuietModeLoudNoiseModifier"
+        },
+        "_defaultValue": -1.0,
+        "_isOptional": false
+      },
+      "ModifierData": {
+        "Conditions": [
+          {
+            "ObjectName": "Class'IsLifetimeActive'",
+            "ObjectPath": "/Script/DBDCompetence"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_QuietModeStatusEffect",
+    "Outer": "BP_QuietModeStatusEffect_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetTunableRowHandleValue_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetTunableRowHandleValue_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetTunableRowHandleValue_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetTunableRowHandleValue_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetTunableRowHandleValue_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_ComputedJump",
+        "StatementIndex": 0,
+        "OffsetExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_QuietModeStatusEffect_C:ExecuteUbergraph_BP_QuietModeStatusEffect'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/StatusEffect/BP_QuietModeStatusEffect.2"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "EntryPoint",
+              "Flags": "RF_Public",
+              "ElementSize": 4,
+              "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 10,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_QuietModeStatusEffect_C:ExecuteUbergraph_BP_QuietModeStatusEffect'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/StatusEffect/BP_QuietModeStatusEffect.2"
+            },
+            "Property": {
+              "Type": "FloatProperty",
+              "Name": "CallFunc_GetTunableRowHandleValue_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'DBDTunableUtilities:GetTunableRowHandleValue'",
+            "ObjectPath": "/Script/DeadByDaylight"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_QuietModeStatusEffect_C'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/StatusEffect/BP_QuietModeStatusEffect.0"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "InjureNoiseReductionTunable",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 40,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+                  "Struct": {
+                    "ObjectName": "Class'DBDTunableRowHandle'",
+                    "ObjectPath": "/Script/DataTableUtilities"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_FinalFunction",
+        "StatementIndex": 47,
+        "Function": {
+          "ObjectName": "Class'GameplayModifierContainer:SetModifierValue'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_StructConst",
+            "Struct": {
+              "ObjectName": "Class'GameplayTag'",
+              "ObjectPath": "/Script/GameplayTags"
+            },
+            "Properties": [
+              {
+                "Inst": "EX_NameConst",
+                "Value": "GameplayModifierType.ModifyInjuredVoiceLevel"
+              }
+            ]
+          },
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_QuietModeStatusEffect_C:ExecuteUbergraph_BP_QuietModeStatusEffect'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/StatusEffect/BP_QuietModeStatusEffect.2"
+              },
+              "Property": {
+                "Type": "FloatProperty",
+                "Name": "CallFunc_GetTunableRowHandleValue_ReturnValue_1",
+                "Flags": "RF_Public",
+                "ElementSize": 4
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 93,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_QuietModeStatusEffect_C:ExecuteUbergraph_BP_QuietModeStatusEffect'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/StatusEffect/BP_QuietModeStatusEffect.2"
+            },
+            "Property": {
+              "Type": "FloatProperty",
+              "Name": "CallFunc_GetTunableRowHandleValue_ReturnValue_2",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'DBDTunableUtilities:GetTunableRowHandleValue'",
+            "ObjectPath": "/Script/DeadByDaylight"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_QuietModeStatusEffect_C'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/StatusEffect/BP_QuietModeStatusEffect.0"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "FootstepNoiseReductionTunable",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 40,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+                  "Struct": {
+                    "ObjectName": "Class'DBDTunableRowHandle'",
+                    "ObjectPath": "/Script/DataTableUtilities"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_FinalFunction",
+        "StatementIndex": 130,
+        "Function": {
+          "ObjectName": "Class'GameplayModifierContainer:SetModifierValue'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_StructConst",
+            "Struct": {
+              "ObjectName": "Class'GameplayTag'",
+              "ObjectPath": "/Script/GameplayTags"
+            },
+            "Properties": [
+              {
+                "Inst": "EX_NameConst",
+                "Value": "GameplayModifierType.ModifyFootstepsSoundLevel"
+              }
+            ]
+          },
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_QuietModeStatusEffect_C:ExecuteUbergraph_BP_QuietModeStatusEffect'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/StatusEffect/BP_QuietModeStatusEffect.2"
+              },
+              "Property": {
+                "Type": "FloatProperty",
+                "Name": "CallFunc_GetTunableRowHandleValue_ReturnValue_2",
+                "Flags": "RF_Public",
+                "ElementSize": 4
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 176,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_QuietModeStatusEffect_C:ExecuteUbergraph_BP_QuietModeStatusEffect'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/StatusEffect/BP_QuietModeStatusEffect.2"
+            },
+            "Property": {
+              "Type": "FloatProperty",
+              "Name": "CallFunc_GetTunableRowHandleValue_ReturnValue_3",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'DBDTunableUtilities:GetTunableRowHandleValue'",
+            "ObjectPath": "/Script/DeadByDaylight"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_QuietModeStatusEffect_C'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/StatusEffect/BP_QuietModeStatusEffect.0"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "BloodDecalDurationModifier",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 40,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+                  "Struct": {
+                    "ObjectName": "Class'DBDTunableRowHandle'",
+                    "ObjectPath": "/Script/DataTableUtilities"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_FinalFunction",
+        "StatementIndex": 213,
+        "Function": {
+          "ObjectName": "Class'GameplayModifierContainer:SetModifierValue'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_StructConst",
+            "Struct": {
+              "ObjectName": "Class'GameplayTag'",
+              "ObjectPath": "/Script/GameplayTags"
+            },
+            "Properties": [
+              {
+                "Inst": "EX_NameConst",
+                "Value": "GameplayModifierType.ModifyBloodDecalDurationMultiplicative"
+              }
+            ]
+          },
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_QuietModeStatusEffect_C:ExecuteUbergraph_BP_QuietModeStatusEffect'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/StatusEffect/BP_QuietModeStatusEffect.2"
+              },
+              "Property": {
+                "Type": "FloatProperty",
+                "Name": "CallFunc_GetTunableRowHandleValue_ReturnValue_3",
+                "Flags": "RF_Public",
+                "ElementSize": 4
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 259,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_QuietModeStatusEffect_C:ExecuteUbergraph_BP_QuietModeStatusEffect'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/StatusEffect/BP_QuietModeStatusEffect.2"
+            },
+            "Property": {
+              "Type": "FloatProperty",
+              "Name": "CallFunc_GetTunableRowHandleValue_ReturnValue_4",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'DBDTunableUtilities:GetTunableRowHandleValue'",
+            "ObjectPath": "/Script/DeadByDaylight"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_QuietModeStatusEffect_C'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/StatusEffect/BP_QuietModeStatusEffect.0"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "LoudNoiseRangeModifier",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 40,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+                  "Struct": {
+                    "ObjectName": "Class'DBDTunableRowHandle'",
+                    "ObjectPath": "/Script/DataTableUtilities"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_FinalFunction",
+        "StatementIndex": 296,
+        "Function": {
+          "ObjectName": "Class'GameplayModifierContainer:SetModifierValue'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_StructConst",
+            "Struct": {
+              "ObjectName": "Class'GameplayTag'",
+              "ObjectPath": "/Script/GameplayTags"
+            },
+            "Properties": [
+              {
+                "Inst": "EX_NameConst",
+                "Value": "GameplayModifierType.ModifyQuickActionLoudNoiseRange"
+              }
+            ]
+          },
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_QuietModeStatusEffect_C:ExecuteUbergraph_BP_QuietModeStatusEffect'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/StatusEffect/BP_QuietModeStatusEffect.2"
+              },
+              "Property": {
+                "Type": "FloatProperty",
+                "Name": "CallFunc_GetTunableRowHandleValue_ReturnValue_4",
+                "Flags": "RF_Public",
+                "ElementSize": 4
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 342,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_QuietModeStatusEffect_C:ExecuteUbergraph_BP_QuietModeStatusEffect'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/StatusEffect/BP_QuietModeStatusEffect.2"
+            },
+            "Property": {
+              "Type": "FloatProperty",
+              "Name": "CallFunc_GetTunableRowHandleValue_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'DBDTunableUtilities:GetTunableRowHandleValue'",
+            "ObjectPath": "/Script/DeadByDaylight"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_QuietModeStatusEffect_C'",
+                  "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/StatusEffect/BP_QuietModeStatusEffect.0"
+                },
+                "Property": {
+                  "Type": "StructProperty",
+                  "Name": "InjureNoiseReductionTunable",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 40,
+                  "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+                  "Struct": {
+                    "ObjectName": "Class'DBDTunableRowHandle'",
+                    "ObjectPath": "/Script/DataTableUtilities"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_FinalFunction",
+        "StatementIndex": 379,
+        "Function": {
+          "ObjectName": "Class'GameplayModifierContainer:SetModifierValue'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_StructConst",
+            "Struct": {
+              "ObjectName": "Class'GameplayTag'",
+              "ObjectPath": "/Script/GameplayTags"
+            },
+            "Properties": [
+              {
+                "Inst": "EX_NameConst",
+                "Value": "GameplayModifierType.ModifyInteractionEffortGruntSoundLevel"
+              }
+            ]
+          },
+          {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_QuietModeStatusEffect_C:ExecuteUbergraph_BP_QuietModeStatusEffect'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/StatusEffect/BP_QuietModeStatusEffect.2"
+              },
+              "Property": {
+                "Type": "FloatProperty",
+                "Name": "CallFunc_GetTunableRowHandleValue_ReturnValue",
+                "Flags": "RF_Public",
+                "ElementSize": 4
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 425,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 427
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInitialized",
+    "Outer": "BP_QuietModeStatusEffect_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Class'GameplayModifierContainer:OnInitialized'",
+      "ObjectPath": "/Script/DeadByDaylight"
+    },
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 0,
+        "Function": {
+          "ObjectName": "Function'BP_QuietModeStatusEffect_C:ExecuteUbergraph_BP_QuietModeStatusEffect'",
+          "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/StatusEffect/BP_QuietModeStatusEffect.2"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 10
+          }
+        ],
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/StatusEffect/BP_QuietModeStatusEffect.ExecuteUbergraph_BP_QuietModeStatusEffect[10]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 15,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 17
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  }
+]

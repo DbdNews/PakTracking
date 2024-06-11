@@ -1,0 +1,630 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_QuietModeInteraction_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_QuietModeInteraction_C:ExecuteUbergraph_BP_QuietModeInteraction'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_QuietModeInteraction.4"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'QuietModeInteraction'",
+      "ObjectPath": "/Script/Anniversary2024"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_QuietModeInteraction_C:Cosmetic_Activated'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_QuietModeInteraction.2"
+      },
+      {
+        "ObjectName": "Function'BP_QuietModeInteraction_C:Cosmetic_Deactivated'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_QuietModeInteraction.3"
+      },
+      {
+        "ObjectName": "Function'BP_QuietModeInteraction_C:ExecuteUbergraph_BP_QuietModeInteraction'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_QuietModeInteraction.4"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_QuietModeInteraction": {
+        "ObjectName": "Function'BP_QuietModeInteraction_C:ExecuteUbergraph_BP_QuietModeInteraction'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_QuietModeInteraction.4"
+      },
+      "Cosmetic_Deactivated": {
+        "ObjectName": "Function'BP_QuietModeInteraction_C:Cosmetic_Deactivated'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_QuietModeInteraction.3"
+      },
+      "Cosmetic_Activated": {
+        "ObjectName": "Function'BP_QuietModeInteraction_C:Cosmetic_Activated'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_QuietModeInteraction.2"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_QuietModeInteraction_C'Default__BP_QuietModeInteraction_C'",
+      "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_QuietModeInteraction.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_QuietModeInteraction_C",
+    "Name": "Default__BP_QuietModeInteraction_C",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Events/Anniversary2024/Interactions/BP_QuietModeInteraction.BP_QuietModeInteraction_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "_quietModeEffectClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_QuietModeStatusEffect_C'",
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/StatusEffect/BP_QuietModeStatusEffect.0"
+      },
+      "_duration": {
+        "_dataTableRowHandle": {
+          "DataTable": {
+            "ObjectName": "DataTable'Anniversary2024TunablesDB'",
+            "ObjectPath": "/Game/Data/Events/Churros/Anniversary2024TunablesDB.0"
+          },
+          "RowName": "SurvivorNoiseCancelDuration"
+        }
+      },
+      "InteractionID": "QuietMode",
+      "StopInteractionOnMontageBlendingOut": true,
+      "AllowNavigation": true,
+      "CanCrouch": true,
+      "InteractionInputType": "EInputInteractionType::VE_EventAbility",
+      "OwnershipUsability": "EInteractionOwnership::OnlyOwnerCanUse",
+      "InteractionDescriptionText": {
+        "Namespace": "",
+        "Key": "863C93E2471A0C6F96EB82AEEA413166",
+        "SourceString": "INTERACTION_QuietMode_DESC",
+        "LocalizedString": "QUIET MODE"
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "Cosmetic_Activated",
+    "Outer": "BP_QuietModeInteraction_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Class'QuietModeInteraction:Cosmetic_Activated'",
+      "ObjectPath": "/Script/Anniversary2024"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "activatingSurvivor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'CamperPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      }
+    ],
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LetValueOnPersistentFrame",
+        "StatementIndex": 0,
+        "DestinationProperty": {
+          "Owner": {
+            "ObjectName": "Function'BP_QuietModeInteraction_C:ExecuteUbergraph_BP_QuietModeInteraction'",
+            "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_QuietModeInteraction.4"
+          },
+          "Property": {
+            "Type": "ObjectProperty",
+            "Name": "K2Node_Event_activatingSurvivor_1",
+            "Flags": "RF_Public",
+            "ElementSize": 8,
+            "PropertyClass": {
+              "ObjectName": "Class'CamperPlayer'",
+              "ObjectPath": "/Script/DeadByDaylight"
+            }
+          }
+        },
+        "AssignmentExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_QuietModeInteraction_C:Cosmetic_Activated'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_QuietModeInteraction.2"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "activatingSurvivor",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+              "PropertyClass": {
+                "ObjectName": "Class'CamperPlayer'",
+                "ObjectPath": "/Script/DeadByDaylight"
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 18,
+        "Function": {
+          "ObjectName": "Function'BP_QuietModeInteraction_C:ExecuteUbergraph_BP_QuietModeInteraction'",
+          "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_QuietModeInteraction.4"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 34
+          }
+        ],
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_QuietModeInteraction.ExecuteUbergraph_BP_QuietModeInteraction[34]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 33,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 35
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Cosmetic_Deactivated",
+    "Outer": "BP_QuietModeInteraction_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Class'QuietModeInteraction:Cosmetic_Deactivated'",
+      "ObjectPath": "/Script/Anniversary2024"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "activatingSurvivor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'CamperPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      }
+    ],
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LetValueOnPersistentFrame",
+        "StatementIndex": 0,
+        "DestinationProperty": {
+          "Owner": {
+            "ObjectName": "Function'BP_QuietModeInteraction_C:ExecuteUbergraph_BP_QuietModeInteraction'",
+            "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_QuietModeInteraction.4"
+          },
+          "Property": {
+            "Type": "ObjectProperty",
+            "Name": "K2Node_Event_activatingSurvivor",
+            "Flags": "RF_Public",
+            "ElementSize": 8,
+            "PropertyClass": {
+              "ObjectName": "Class'CamperPlayer'",
+              "ObjectPath": "/Script/DeadByDaylight"
+            }
+          }
+        },
+        "AssignmentExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_QuietModeInteraction_C:Cosmetic_Deactivated'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_QuietModeInteraction.3"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "activatingSurvivor",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+              "PropertyClass": {
+                "ObjectName": "Class'CamperPlayer'",
+                "ObjectPath": "/Script/DeadByDaylight"
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 18,
+        "Function": {
+          "ObjectName": "Function'BP_QuietModeInteraction_C:ExecuteUbergraph_BP_QuietModeInteraction'",
+          "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_QuietModeInteraction.4"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 118
+          }
+        ],
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_QuietModeInteraction.ExecuteUbergraph_BP_QuietModeInteraction[118]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 33,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 35
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_QuietModeInteraction",
+    "Outer": "BP_QuietModeInteraction_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_activatingSurvivor_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'CamperPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_activatingSurvivor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'CamperPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsLocallyObserved_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsLocallyObserved_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_ComputedJump",
+        "StatementIndex": 0,
+        "OffsetExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_QuietModeInteraction_C:ExecuteUbergraph_BP_QuietModeInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_QuietModeInteraction.4"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "EntryPoint",
+              "Flags": "RF_Public",
+              "ElementSize": 4,
+              "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_CallMath",
+        "StatementIndex": 10,
+        "Function": {
+          "ObjectName": "Class'AudioUtilities:PostAkAudioEvent'",
+          "ObjectPath": "/Script/DBDAudio"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_ObjectConst",
+            "Value": {
+              "ObjectName": "AkAudioEvent'AudioEvent_HUD_Masquerade_QuietMode_Deactivated'",
+              "ObjectPath": "/Game/Audio/AudioEvents/Objects/Anniversary/AudioEvent_HUD_Masquerade_QuietMode_Deactivated.0"
+            }
+          }
+        ]
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 29,
+        "CodeOffset": 183,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_QuietModeInteraction.ExecuteUbergraph_BP_QuietModeInteraction[183]"
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 34,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_QuietModeInteraction_C:ExecuteUbergraph_BP_QuietModeInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_QuietModeInteraction.4"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_IsLocallyObserved_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_QuietModeInteraction_C:ExecuteUbergraph_BP_QuietModeInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_QuietModeInteraction.4"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "K2Node_Event_activatingSurvivor_1",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'CamperPlayer'",
+                  "ObjectPath": "/Script/DeadByDaylight"
+                }
+              }
+            }
+          },
+          "Offset": 14,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'BP_QuietModeInteraction_C:ExecuteUbergraph_BP_QuietModeInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_QuietModeInteraction.4"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_IsLocallyObserved_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_VirtualFunction",
+            "Function": "IsLocallyObserved",
+            "Parameters": []
+          }
+        }
+      },
+      {
+        "Inst": "EX_JumpIfNot",
+        "StatementIndex": 80,
+        "CodeOffset": 183,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_QuietModeInteraction.ExecuteUbergraph_BP_QuietModeInteraction[183]",
+        "BooleanExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_QuietModeInteraction_C:ExecuteUbergraph_BP_QuietModeInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_QuietModeInteraction.4"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_IsLocallyObserved_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_CallMath",
+        "StatementIndex": 94,
+        "Function": {
+          "ObjectName": "Class'AudioUtilities:PostAkAudioEvent'",
+          "ObjectPath": "/Script/DBDAudio"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_ObjectConst",
+            "Value": {
+              "ObjectName": "AkAudioEvent'AudioEvent_HUD_Masquerade_QuietMode_Activated'",
+              "ObjectPath": "/Game/Audio/AudioEvents/Objects/Anniversary/AudioEvent_HUD_Masquerade_QuietMode_Activated.0"
+            }
+          }
+        ]
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 113,
+        "CodeOffset": 183,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_QuietModeInteraction.ExecuteUbergraph_BP_QuietModeInteraction[183]"
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 118,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_QuietModeInteraction_C:ExecuteUbergraph_BP_QuietModeInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_QuietModeInteraction.4"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_IsLocallyObserved_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_QuietModeInteraction_C:ExecuteUbergraph_BP_QuietModeInteraction'",
+                "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_QuietModeInteraction.4"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "K2Node_Event_activatingSurvivor",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'CamperPlayer'",
+                  "ObjectPath": "/Script/DeadByDaylight"
+                }
+              }
+            }
+          },
+          "Offset": 14,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'BP_QuietModeInteraction_C:ExecuteUbergraph_BP_QuietModeInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_QuietModeInteraction.4"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_IsLocallyObserved_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_VirtualFunction",
+            "Function": "IsLocallyObserved",
+            "Parameters": []
+          }
+        }
+      },
+      {
+        "Inst": "EX_JumpIfNot",
+        "StatementIndex": 164,
+        "CodeOffset": 183,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_QuietModeInteraction.ExecuteUbergraph_BP_QuietModeInteraction[183]",
+        "BooleanExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_QuietModeInteraction_C:ExecuteUbergraph_BP_QuietModeInteraction'",
+              "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_QuietModeInteraction.4"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_IsLocallyObserved_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 178,
+        "CodeOffset": 10,
+        "ObjectPath": "/Game/Blueprints/Events/Anniversary2024/Interactions/BP_QuietModeInteraction.ExecuteUbergraph_BP_QuietModeInteraction[10]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 183,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 185
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  }
+]

@@ -6,49 +6,49 @@
     "Class": "UScriptClass'BodySetup'",
     "Properties": {
       "DefaultInstance": {
-        "ObjectType": "ECC_WorldStatic",
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
         "CollisionProfileName": "BlockAll",
         "CollisionResponses": {
           "ResponseArray": [
             {
               "Channel": "Interactable",
-              "Response": "ECR_Block"
+              "Response": "ECollisionResponse::ECR_Block"
             },
             {
               "Channel": "Slasher",
-              "Response": "ECR_Block"
+              "Response": "ECollisionResponse::ECR_Block"
             },
             {
               "Channel": "Blood",
-              "Response": "ECR_Block"
+              "Response": "ECollisionResponse::ECR_Block"
             },
             {
               "Channel": "InteractionDetector",
-              "Response": "ECR_Ignore"
+              "Response": "ECollisionResponse::ECR_Ignore"
             },
             {
               "Channel": "BlinkBlocker",
-              "Response": "ECR_Ignore"
+              "Response": "ECollisionResponse::ECR_Ignore"
             },
             {
               "Channel": "Ground",
-              "Response": "ECR_Ignore"
+              "Response": "ECollisionResponse::ECR_Ignore"
             },
             {
               "Channel": "Walkable",
-              "Response": "ECR_Block"
+              "Response": "ECollisionResponse::ECR_Block"
             }
           ]
         }
       }
     },
-    "BodySetupGuid": "B378FD374A8C3F16780D50A7B9C6FDA5",
+    "BodySetupGuid": "5A1515914AF606AA76EAE094508033C7",
     "CookedFormatData": {
       "PhysXPC": {
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
-        "ElementCount": 743893,
-        "SizeOnDisk": 743893,
-        "OffsetInFile": "0x558133"
+        "ElementCount": 34618,
+        "SizeOnDisk": 34618,
+        "OffsetInFile": "0x90"
       }
     }
   },
@@ -58,11 +58,11 @@
     "Outer": "AnniDancer_MM",
     "Class": "UScriptClass'NavCollision'",
     "CookedFormatData": {
-      "NavCollision_X": {
+      "NavCollision_Chaos": {
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 21,
         "SizeOnDisk": 21,
-        "OffsetInFile": "0x60DB50"
+        "OffsetInFile": "0x32"
       }
     }
   },
@@ -71,23 +71,47 @@
     "Name": "AnniDancer_MM",
     "Class": "UScriptClass'StaticMesh'",
     "Properties": {
-      "MinLOD": {
+      "MinLod": {
         "bCooked": true,
         "Default": 0,
         "Value": 0
+      },
+      "ShadowMaxLOD": {
+        "PerDetailModeValue": [
+          {
+            "Key": "Ultra",
+            "Value": 3
+          },
+          {
+            "Key": "High",
+            "Value": 3
+          },
+          {
+            "Key": "Medium",
+            "Value": 3
+          },
+          {
+            "Key": "Low",
+            "Value": 3
+          },
+          {
+            "Key": "Mobile",
+            "Value": 3
+          }
+        ]
       },
       "StaticMaterials": [
         {
           "MaterialInterface": {
             "ObjectName": "MaterialInstanceConstant'MI_Anni_Dancer_M'",
-            "ObjectPath": "DeadByDaylight/Content/Materials/Instances/SpecialEvents/7thAnniversary/MI_Anni_Dancer_M.0"
+            "ObjectPath": "/Game/Materials/Instances/SpecialEvents/7thAnniversary/MI_Anni_Dancer_M.0"
           },
           "MaterialSlotName": "MI_Anni_Dancer_M",
           "ImportedMaterialSlotName": "MI_Anni_Dancer_M",
           "UVChannelData": {
             "bInitialized": true,
             "bOverrideDensities": false,
-            "LocalUVDensities": 175.3283,
+            "LocalUVDensities": 176.00945,
             "LocalUVDensities": 0.0,
             "LocalUVDensities": 0.0,
             "LocalUVDensities": 0.0
@@ -96,58 +120,59 @@
         {
           "MaterialInterface": {
             "ObjectName": "MaterialInstanceConstant'MI_Anni_Dancer_M'",
-            "ObjectPath": "DeadByDaylight/Content/Materials/Instances/SpecialEvents/7thAnniversary/MI_Anni_Dancer_M.0"
+            "ObjectPath": "/Game/Materials/Instances/SpecialEvents/7thAnniversary/MI_Anni_Dancer_M.0"
           },
           "MaterialSlotName": "MI_Anni_Dancer_M_ncl1_1",
           "ImportedMaterialSlotName": "MI_Anni_Dancer_M_ncl1_1",
           "UVChannelData": {
             "bInitialized": true,
             "bOverrideDensities": false,
-            "LocalUVDensities": 175.31473,
+            "LocalUVDensities": 175.92848,
             "LocalUVDensities": 0.0,
             "LocalUVDensities": 0.0,
             "LocalUVDensities": 0.0
           }
         }
       ],
-      "LightmapUVDensity": 175.3215,
+      "LightmapUVDensity": 175.969,
       "LightMapResolution": 64,
+      "LODForCollision": 3,
       "bSupportUniformlyDistributedSampling": true,
       "bAllowCPUAccess": true,
       "bSupportGpuUniformlyDistributedSampling": true,
       "Sockets": [
         {
           "ObjectName": "StaticMeshSocket'AnniDancer_MM:StaticMeshSocket_0'",
-          "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/SpecialEvents/7thAnniversary/Animation/AnniDancer_MM.3"
+          "ObjectPath": "/Game/Meshes/InteractableObjects/SpecialEvents/7thAnniversary/Animation/AnniDancer_MM.3"
         },
         {
           "ObjectName": "StaticMeshSocket'AnniDancer_MM:StaticMeshSocket_1'",
-          "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/SpecialEvents/7thAnniversary/Animation/AnniDancer_MM.4"
+          "ObjectPath": "/Game/Meshes/InteractableObjects/SpecialEvents/7thAnniversary/Animation/AnniDancer_MM.4"
         }
       ],
       "ExtendedBounds": {
         "Origin": {
           "X": 0.0,
           "Y": 0.0,
-          "Z": 109.28662
+          "Z": 109.28663
         },
         "BoxExtent": {
           "X": 40.28122,
           "Y": 99.27452,
           "Z": 109.81739
         },
-        "SphereRadius": 119.11189
+        "SphereRadius": 119.11189270019531
       }
     },
     "BodySetup": {
       "ObjectName": "BodySetup'AnniDancer_MM:BodySetup_0'",
-      "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/SpecialEvents/7thAnniversary/Animation/AnniDancer_MM.0"
+      "ObjectPath": "/Game/Meshes/InteractableObjects/SpecialEvents/7thAnniversary/Animation/AnniDancer_MM.0"
     },
     "NavCollision": {
       "ObjectName": "NavCollision'AnniDancer_MM:NavCollision_1'",
-      "ObjectPath": "DeadByDaylight/Content/Meshes/InteractableObjects/SpecialEvents/7thAnniversary/Animation/AnniDancer_MM.1"
+      "ObjectPath": "/Game/Meshes/InteractableObjects/SpecialEvents/7thAnniversary/Animation/AnniDancer_MM.1"
     },
-    "LightingGuid": "66E27740-4E2D7058-BC0A639E-B8FFF9ED",
+    "LightingGuid": "F262CCB1-43084A55-DC05269F-B4F39AC9",
     "RenderData": {
       "LODs": [
         {
@@ -157,7 +182,7 @@
               "FirstIndex": 0,
               "NumTriangles": 13800,
               "MinVertexIndex": 0,
-              "MaxVertexIndex": 41227,
+              "MaxVertexIndex": 7762,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
@@ -167,8 +192,8 @@
               "MaterialIndex": 1,
               "FirstIndex": 41400,
               "NumTriangles": 13800,
-              "MinVertexIndex": 41228,
-              "MaxVertexIndex": 82458,
+              "MinVertexIndex": 7763,
+              "MaxVertexIndex": 15525,
               "bEnableCollision": true,
               "bCastShadow": true,
               "bForceOpaque": false,
@@ -178,11 +203,404 @@
           "MaxDeviation": 0.0,
           "PositionVertexBuffer": {
             "Stride": 12,
-            "NumVertices": 82459
+            "NumVertices": 15526
           },
           "VertexBuffer": {
             "NumTexCoords": 1,
-            "NumVertices": 82459,
+            "NumVertices": 15526,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          },
+          "CardRepresentationData": {
+            "Bounds": {
+              "Min": {
+                "X": -41.28122,
+                "Y": -100.27452,
+                "Z": -1.5307617
+              },
+              "Max": {
+                "X": 41.28122,
+                "Y": 100.27452,
+                "Z": 220.10402
+              },
+              "IsValid": 1
+            },
+            "MaxLodLevel": 0,
+            "bMostlyTwoSided": false,
+            "CardBuildData": [
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": -1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 109.28663
+                  },
+                  "Extent": {
+                    "X": 100.0,
+                    "Y": 110.0,
+                    "Z": 45.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 0
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 109.28663
+                  },
+                  "Extent": {
+                    "X": 100.0,
+                    "Y": 110.0,
+                    "Z": 45.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 1
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": -1.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 109.28663
+                  },
+                  "Extent": {
+                    "X": 40.0,
+                    "Y": 110.0,
+                    "Z": 105.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 2
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": -1.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": 0.0,
+                    "Y": 30.0,
+                    "Z": 79.28663
+                  },
+                  "Extent": {
+                    "X": 20.0,
+                    "Y": 80.0,
+                    "Z": 35.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 2
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 109.28663
+                  },
+                  "Extent": {
+                    "X": 40.0,
+                    "Y": 110.0,
+                    "Z": 105.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 3
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": 0.0,
+                    "Y": -30.0,
+                    "Z": 79.28663
+                  },
+                  "Extent": {
+                    "X": 20.0,
+                    "Y": 80.0,
+                    "Z": 35.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 3
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": -1.0
+                  },
+                  "Origin": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 109.28663
+                  },
+                  "Extent": {
+                    "X": 40.0,
+                    "Y": 100.0,
+                    "Z": 115.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 4
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "Origin": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 109.28662
+                  },
+                  "Extent": {
+                    "X": 40.0,
+                    "Y": 100.0,
+                    "Z": 115.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 5
+              }
+            ]
+          }
+        },
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 5525,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 3369,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 16575,
+              "NumTriangles": 5515,
+              "MinVertexIndex": 3370,
+              "MaxVertexIndex": 6738,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 6739
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 1,
+            "NumVertices": 6739,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          }
+        },
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 3109,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 2053,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 9327,
+              "NumTriangles": 3101,
+              "MinVertexIndex": 2054,
+              "MaxVertexIndex": 4095,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 4096
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 1,
+            "NumVertices": 4096,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          }
+        },
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 338,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 337,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 1014,
+              "NumTriangles": 352,
+              "MinVertexIndex": 338,
+              "MaxVertexIndex": 692,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 693
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 1,
+            "NumVertices": 693,
             "Strides": -1,
             "UseHighPrecisionTangentBasis": false,
             "UseFullPrecisionUVs": false
@@ -193,11 +611,35 @@
           }
         }
       ],
+      "NaniteResources": {
+        "RootData": null,
+        "StreamablePages": {
+          "BulkDataFlags": "BULKDATA_None",
+          "ElementCount": 0,
+          "SizeOnDisk": 0,
+          "OffsetInFile": "0x202A7C"
+        },
+        "ImposterAtlas": [],
+        "HierarchyNodes": [],
+        "HierarchyRootOffsets": [],
+        "PageStreamingStates": [],
+        "PageDependencies": [],
+        "NumRootPages": 0,
+        "PositionPrecision": 0,
+        "NormalPrecision": 0,
+        "TangentPrecision": 0,
+        "NumInputTriangles": 0,
+        "NumInputVertices": 0,
+        "NumInputMeshes": 0,
+        "NumInputTexCoords": 0,
+        "NumClusters": 0,
+        "ResourceFlags": 0
+      },
       "Bounds": {
         "Origin": {
           "X": 0.0,
           "Y": 0.0,
-          "Z": 109.28662
+          "Z": 109.28663
         },
         "BoxExtent": {
           "X": 40.28122,
@@ -206,12 +648,12 @@
         },
         "SphereRadius": 119.11189
       },
-      "bLODsShareStaticLighting": true,
+      "bLODsShareStaticLighting": false,
       "ScreenSize": [
         1.0,
-        0.0,
-        0.0,
-        0.0,
+        0.6,
+        0.4,
+        0.1,
         0.0,
         0.0,
         0.0,
