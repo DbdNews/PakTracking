@@ -1,0 +1,132 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "K27_Flowers_ACC008_REF_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'K27_Flowers_ACC008_REF_PhysicsAsset:SkeletalBodySetup_0'",
+          "ObjectPath": "/Game/Characters/Slashers/K27/Models/Bodies/ACC/Physics/K27_Flowers_ACC008_REF_PhysicsAsset.2"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'K27_Flowers_ACC008_REF_PhysicsAsset:SkeletalBodySetup_1'",
+          "ObjectPath": "/Game/Characters/Slashers/K27/Models/Bodies/ACC/Physics/K27_Flowers_ACC008_REF_PhysicsAsset.3"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate'K27_Flowers_ACC008_REF_PhysicsAsset:PhysicsConstraintTemplate_0'",
+          "ObjectPath": "/Game/Characters/Slashers/K27/Models/Bodies/ACC/Physics/K27_Flowers_ACC008_REF_PhysicsAsset.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_0",
+    "Outer": "K27_Flowers_ACC008_REF_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "joint_ShoulderRT_01",
+        "ConstraintBone1": "joint_ShoulderRT_01",
+        "ConstraintBone2": "joint_TorsoC_01",
+        "Pos2": {
+          "X": 1.7523193,
+          "Y": -18.288172,
+          "Z": -14.5648
+        },
+        "PriAxis2": {
+          "X": 0.98252195,
+          "Y": -0.01033942,
+          "Z": 0.18585941
+        },
+        "SecAxis2": {
+          "X": 0.10818007,
+          "Y": 0.8442525,
+          "Z": -0.52491397
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "K27_Flowers_ACC008_REF_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 0.4913452,
+              "Y": -3.7212713,
+              "Z": 16.420643
+            },
+            "Rotation": {
+              "Pitch": 42.128487,
+              "Yaw": -90.0,
+              "Roll": 3.6649976
+            },
+            "Radius": 15.879057,
+            "Length": 42.250286,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "joint_TorsoC_01",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "9D589A1648E40AE96829A6B6DDCB6251"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "K27_Flowers_ACC008_REF_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -3.4597359,
+              "Y": -7.7759423,
+              "Z": 5.091426
+            },
+            "Rotation": {
+              "Pitch": 10.571644,
+              "Yaw": 174.54211,
+              "Roll": -88.19414
+            },
+            "Radius": 20.157642,
+            "Length": 11.966962,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "joint_ShoulderRT_01",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "35F582F2408B39ED4001F1964515086C"
+  }
+]

@@ -1,0 +1,205 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "S37_Torso016_CPA",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'S37_Torso016_CPA:SkeletalBodySetup_0'",
+          "ObjectPath": "/Game/Characters/Campers/S37/Models/Torsos/Physics/S37_Torso016_CPA.2"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'S37_Torso016_CPA:SkeletalBodySetup_1'",
+          "ObjectPath": "/Game/Characters/Campers/S37/Models/Torsos/Physics/S37_Torso016_CPA.3"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'S37_Torso016_CPA:SkeletalBodySetup_10'",
+          "ObjectPath": "/Game/Characters/Campers/S37/Models/Torsos/Physics/S37_Torso016_CPA.4"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'S37_Torso016_CPA:SkeletalBodySetup_11'",
+          "ObjectPath": "/Game/Characters/Campers/S37/Models/Torsos/Physics/S37_Torso016_CPA.5"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate'S37_Torso016_CPA:PhysicsConstraintTemplate_0'",
+          "ObjectPath": "/Game/Characters/Campers/S37/Models/Torsos/Physics/S37_Torso016_CPA.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_0",
+    "Outer": "S37_Torso016_CPA",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "joint_HipMaster_01",
+        "ConstraintBone1": "joint_HipMaster_01",
+        "ConstraintBone2": "joint_Pelvis_01",
+        "Pos2": {
+          "X": 0.0,
+          "Y": 2.842171E-14,
+          "Z": 0.0
+        },
+        "SecAxis2": {
+          "X": 0.0,
+          "Y": 0.99993414,
+          "Z": -0.011477774
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "S37_Torso016_CPA",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Rotation": {
+              "Pitch": -0.0,
+              "Yaw": -90.0,
+              "Roll": 0.0
+            },
+            "Radius": 0.505,
+            "Length": 0.505,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "joint_Pelvis_01",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "9F29B367416966463F52198F1E6CABB4"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "S37_Torso016_CPA",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -0.09744743,
+              "Y": 4.0604987,
+              "Z": -2.3948543
+            },
+            "Rotation": {
+              "Pitch": -6.3611094E-15,
+              "Yaw": 90.66112,
+              "Roll": -89.599
+            },
+            "Radius": 13.846582,
+            "Length": 11.23425,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "joint_HipMaster_01",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "583F580F47255BA422D74EB53EE21593"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_10",
+    "Outer": "S37_Torso016_CPA",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "TaperedCapsuleElems": [
+          {
+            "Center": {
+              "X": 0.41319385,
+              "Y": -11.863249,
+              "Z": -0.7658164
+            },
+            "Rotation": {
+              "Pitch": 0.0018482507,
+              "Yaw": -2.3027105,
+              "Roll": -88.1277
+            },
+            "Radius0": 10.322253,
+            "Radius1": 10.322253,
+            "Length": 16.82905,
+            "RestOffset": 0.0,
+            "Name": "joint_HipLT_01_tapered_capsule",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "joint_HipLT_01",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "BFE195144F819199887980B80049E778"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_11",
+    "Outer": "S37_Torso016_CPA",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "TaperedCapsuleElems": [
+          {
+            "Center": {
+              "X": -0.97039235,
+              "Y": 12.327221,
+              "Z": 0.3508714
+            },
+            "Rotation": {
+              "Pitch": 0.04788694,
+              "Yaw": -2.47056,
+              "Roll": 91.1092
+            },
+            "Radius0": 9.8658495,
+            "Radius1": 9.8658495,
+            "Length": 16.753326,
+            "RestOffset": 0.0,
+            "Name": "joint_HipRT_01_tapered_capsule",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "joint_HipRT_01",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "FA2A153A495D45AD5B75EEAB6450BD9D"
+  }
+]
