@@ -1,0 +1,239 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "DSBT_Nurse_Blink",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_SimpleParallel'DSBT_Nurse_Blink:BTComposite_SimpleParallel_6'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_Nurse_Blink.2"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Slasher'",
+        "ObjectPath": "/Game/AI/Slasher/BB_Slasher.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "DSBT_Nurse_Blink",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_InputPress'DSBT_Nurse_Blink:BTTask_InputPress_0'",
+            "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_Nurse_Blink.7"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'DSBT_Nurse_Blink:BTDecorator_Blackboard_0'",
+              "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_Nurse_Blink.3"
+            },
+            {
+              "ObjectName": "BTDecorator_ExtIsAtLocation'DSBT_Nurse_Blink:BTDecorator_ExtIsAtLocation_3'",
+              "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_Nurse_Blink.5"
+            },
+            {
+              "ObjectName": "BTDecorator_ConeCheck'DSBT_Nurse_Blink:BTDecorator_ConeCheck_0'",
+              "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_Nurse_Blink.4"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'DSBT_Nurse_Blink:BTTask_Wait_0'",
+            "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_Nurse_Blink.8"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Blink or Attack",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Nurse_Blink'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_Nurse_Blink.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'DSBT_Nurse_Blink:BTComposite_SimpleParallel_6'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_Nurse_Blink.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_6",
+    "Outer": "DSBT_Nurse_Blink",
+    "Class": "UScriptClass'BTComposite_SimpleParallel'",
+    "Properties": {
+      "FinishMode": "EBTParallelMode::WaitForBackground",
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ExtMoveTo'DSBT_Nurse_Blink:BTTask_ExtMoveTo_0'",
+            "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_Nurse_Blink.6"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'DSBT_Nurse_Blink:BTComposite_Selector_0'",
+            "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_Nurse_Blink.1"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Blink to Target",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Nurse_Blink'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_Nurse_Blink.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "DSBT_Nurse_Blink",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Properties": {
+      "CachedDescription": "IsHostileStimulusInSight is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "IsHostileStimulusInSight"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Nurse_Blink'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_Nurse_Blink.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_Nurse_Blink:BTComposite_Selector_0'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_Nurse_Blink.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ConeCheck",
+    "Name": "BTDecorator_ConeCheck_0",
+    "Outer": "DSBT_Nurse_Blink",
+    "Class": "UScriptClass'BTDecorator_ConeCheck'",
+    "Properties": {
+      "ConeHalfAngle": 30.0,
+      "ConeOrigin": {
+        "SelectedKeyName": "SelfActor"
+      },
+      "ConeDirection": {},
+      "Observed": {
+        "SelectedKeyName": "HostileStimulusNavLocation"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "If Aligned Enough",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Nurse_Blink'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_Nurse_Blink.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_Nurse_Blink:BTComposite_Selector_0'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_Nurse_Blink.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ExtIsAtLocation",
+    "Name": "BTDecorator_ExtIsAtLocation_3",
+    "Outer": "DSBT_Nurse_Blink",
+    "Class": "UScriptClass'BTDecorator_ExtIsAtLocation'",
+    "Properties": {
+      "BBLoc": {
+        "SelectedKeyName": "HostileStimulusNavLocation"
+      },
+      "AcceptableRadius": {
+        "DefaultValue": 200.0
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Is Near Enough",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Nurse_Blink'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_Nurse_Blink.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_Nurse_Blink:BTComposite_Selector_0'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_Nurse_Blink.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ExtMoveTo",
+    "Name": "BTTask_ExtMoveTo_0",
+    "Outer": "DSBT_Nurse_Blink",
+    "Class": "UScriptClass'BTTask_ExtMoveTo'",
+    "Properties": {
+      "BBStrafeFocus": {
+        "SelectedKeyName": "NurseBlinkDestination"
+      },
+      "StrafeFocus": "EExtMoveToStrafeFocusOptions::Always",
+      "StrafeFocusOwnerOnComponentBBKey": false,
+      "BBIgnoreGroupAvoidance": {},
+      "PathReachedPointRadius": 5.0,
+      "AcceptableRadius": 10.0,
+      "bReachTestIncludesAgentRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "NurseBlinkDestination"
+      },
+      "NodeName": "Move Toward Target",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Nurse_Blink'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_Nurse_Blink.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'DSBT_Nurse_Blink:BTComposite_SimpleParallel_6'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_Nurse_Blink.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_InputPress",
+    "Name": "BTTask_InputPress_0",
+    "Outer": "DSBT_Nurse_Blink",
+    "Class": "UScriptClass'BTTask_InputPress'",
+    "Properties": {
+      "Input": "EPawnInputPressTypes::Attack",
+      "InputMode": "ETaskInputPressModes::Hold",
+      "NodeName": "Lunge Attack",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Nurse_Blink'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_Nurse_Blink.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_Nurse_Blink:BTComposite_Selector_0'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_Nurse_Blink.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "DSBT_Nurse_Blink",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Properties": {
+      "WaitTime": 100.0,
+      "NodeName": "Blink",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_Nurse_Blink'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_Nurse_Blink.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_Nurse_Blink:BTComposite_Selector_0'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_Nurse_Blink.1"
+      }
+    }
+  }
+]

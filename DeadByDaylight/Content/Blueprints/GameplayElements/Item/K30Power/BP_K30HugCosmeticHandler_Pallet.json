@@ -1,0 +1,1874 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "Arrow_GEN_VARIABLE",
+    "Outer": "BP_K30HugCosmeticHandler_Pallet_C",
+    "Class": "UScriptClass'ArrowComponent'",
+    "Properties": {
+      "ArrowSize": 3.0,
+      "ArrowLength": 30.0,
+      "DetailLevelBeforeCastShadows": "EDetailMode::DM_MAX",
+      "RelativeLocation": {
+        "X": 1.9984014E-14,
+        "Y": 0.0,
+        "Z": 180.0
+      },
+      "RelativeRotation": {
+        "Pitch": -90.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_K30HugCosmeticHandler_Pallet_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "Timelines": [
+        {
+          "ObjectName": "TimelineTemplate'BP_K30HugCosmeticHandler_Pallet_C:TML_VFXVisibility_Template'",
+          "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.17"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_K30HugCosmeticHandler_Pallet_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.16"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet'",
+        "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.6"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'K30HugCosmeticHandler'",
+      "ObjectPath": "/Script/TheK30"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:TML_VFXVisibility__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.8"
+      },
+      {
+        "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:TML_VFXVisibility__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.9"
+      },
+      {
+        "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:Cosmetic_Hug'",
+        "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.5"
+      },
+      {
+        "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:HugTechTimedOut'",
+        "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.7"
+      },
+      {
+        "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet'",
+        "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.6"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Arrow",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ArrowComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NS_K30_Guards_Investigation_Pallet",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "TML_VFXVisibility_Visibility_ABFE245F49D784DA59FB1F83F20B29EC",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "TML_VFXVisibility__Direction_ABFE245F49D784DA59FB1F83F20B29EC",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "TML_VFXVisibility",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Timer_HugTechTimeOut",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet": {
+        "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet'",
+        "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.6"
+      },
+      "HugTechTimedOut": {
+        "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:HugTechTimedOut'",
+        "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.7"
+      },
+      "Cosmetic_Hug": {
+        "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:Cosmetic_Hug'",
+        "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.5"
+      },
+      "TML_VFXVisibility__UpdateFunc": {
+        "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:TML_VFXVisibility__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.9"
+      },
+      "TML_VFXVisibility__FinishedFunc": {
+        "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:TML_VFXVisibility__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.8"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_K30HugCosmeticHandler_Pallet_C'Default__BP_K30HugCosmeticHandler_Pallet_C'",
+      "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "BoxComponent",
+    "Outer": "Default__BP_K30HugCosmeticHandler_Pallet_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 110.0,
+        "Y": 100.0,
+        "Z": 70.0
+      },
+      "DetailLevelBeforeCastShadows": "EDetailMode::DM_MAX",
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionProfileName": "DetectPawn",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECollisionResponse::ECR_Overlap"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Interactable",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Audio",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Slasher",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Traps",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "InteractionDetector",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "BlinkBlocker",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Ground",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_K30HugCosmeticHandler_Pallet_C:Root'",
+        "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.12"
+      }
+    }
+  },
+  {
+    "Type": "BP_K30HugCosmeticHandler_Pallet_C",
+    "Name": "Default__BP_K30HugCosmeticHandler_Pallet_C",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.BP_K30HugCosmeticHandler_Pallet_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "Timer_HugTechTimeOut": {
+        "Handle": 0
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0",
+    "Outer": "BP_K30HugCosmeticHandler_Pallet_C",
+    "Class": "UScriptClass'CurveFloat'",
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 1.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "Cosmetic_Hug",
+    "Outer": "BP_K30HugCosmeticHandler_Pallet_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Class'K30HugCosmeticHandler:Cosmetic_Hug'",
+      "ObjectPath": "/Script/TheK30"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "isHugging",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "vaultableOwner",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "hugInstigator",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'CamperPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      }
+    ],
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LetValueOnPersistentFrame",
+        "StatementIndex": 0,
+        "DestinationProperty": {
+          "Owner": {
+            "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet'",
+            "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.6"
+          },
+          "Property": {
+            "Type": "BoolProperty",
+            "Name": "K2Node_Event_isHugging",
+            "Flags": "RF_Public",
+            "ElementSize": 1,
+            "FieldSize": 1,
+            "ByteOffset": 0,
+            "ByteMask": 1,
+            "FieldMask": 255,
+            "BoolSize": 1,
+            "bIsNativeBool": true
+          }
+        },
+        "AssignmentExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:Cosmetic_Hug'",
+              "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.5"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "isHugging",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LetValueOnPersistentFrame",
+        "StatementIndex": 18,
+        "DestinationProperty": {
+          "Owner": {
+            "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet'",
+            "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.6"
+          },
+          "Property": {
+            "Type": "ObjectProperty",
+            "Name": "K2Node_Event_vaultableOwner",
+            "Flags": "RF_Public",
+            "ElementSize": 8,
+            "PropertyClass": {
+              "ObjectName": "Class'Actor'",
+              "ObjectPath": "/Script/Engine"
+            }
+          }
+        },
+        "AssignmentExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:Cosmetic_Hug'",
+              "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.5"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "vaultableOwner",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+              "PropertyClass": {
+                "ObjectName": "Class'Actor'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LetValueOnPersistentFrame",
+        "StatementIndex": 36,
+        "DestinationProperty": {
+          "Owner": {
+            "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet'",
+            "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.6"
+          },
+          "Property": {
+            "Type": "ObjectProperty",
+            "Name": "K2Node_Event_hugInstigator",
+            "Flags": "RF_Public",
+            "ElementSize": 8,
+            "PropertyClass": {
+              "ObjectName": "Class'CamperPlayer'",
+              "ObjectPath": "/Script/DeadByDaylight"
+            }
+          }
+        },
+        "AssignmentExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:Cosmetic_Hug'",
+              "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.5"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "hugInstigator",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+              "PropertyClass": {
+                "ObjectName": "Class'CamperPlayer'",
+                "ObjectPath": "/Script/DeadByDaylight"
+              }
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 54,
+        "Function": {
+          "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet'",
+          "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.6"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 112
+          }
+        ],
+        "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet[112]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 69,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 71
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet",
+    "Outer": "BP_K30HugCosmeticHandler_Pallet_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsLocallyObservingAKiller_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_isHugging",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_vaultableOwner",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_hugInstigator",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'CamperPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsLocallyObserved_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_ComputedJump",
+        "StatementIndex": 0,
+        "OffsetExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet'",
+              "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.6"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "EntryPoint",
+              "Flags": "RF_Public",
+              "ElementSize": 4,
+              "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 10,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet'",
+              "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.6"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_IsValid_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetSystemLibrary:IsValid'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_K30HugCosmeticHandler_Pallet_C'",
+                  "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.1"
+                },
+                "Property": {
+                  "Type": "ObjectProperty",
+                  "Name": "NS_K30_Guards_Investigation_Pallet",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 8,
+                  "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+                  "PropertyClass": {
+                    "ObjectName": "Class'NiagaraComponent'",
+                    "ObjectPath": "/Script/Niagara"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_JumpIfNot",
+        "StatementIndex": 39,
+        "CodeOffset": 665,
+        "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet[665]",
+        "BooleanExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet'",
+              "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.6"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_IsValid_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 53,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_K30HugCosmeticHandler_Pallet_C'",
+              "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.1"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "NS_K30_Guards_Investigation_Pallet",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+              "PropertyClass": {
+                "ObjectName": "Class'NiagaraComponent'",
+                "ObjectPath": "/Script/Niagara"
+              }
+            }
+          }
+        },
+        "Offset": 32,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'NiagaraComponent:SetVariableFloat'",
+            "ObjectPath": "/Script/Niagara"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_NameConst",
+              "Value": "SystemOpacity"
+            },
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_K30HugCosmeticHandler_Pallet_C'",
+                  "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.1"
+                },
+                "Property": {
+                  "Type": "FloatProperty",
+                  "Name": "TML_VFXVisibility_Visibility_ABFE245F49D784DA59FB1F83F20B29EC",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 4
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 107,
+        "CodeOffset": 665,
+        "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet[665]"
+      },
+      {
+        "Inst": "EX_JumpIfNot",
+        "StatementIndex": 112,
+        "CodeOffset": 380,
+        "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet[380]",
+        "BooleanExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet'",
+              "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.6"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "K2Node_Event_isHugging",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 126,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet'",
+              "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.6"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_IsLocallyObservingAKiller_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'DBDUtilities:IsLocallyObservingAKiller'",
+            "ObjectPath": "/Script/DeadByDaylight"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_Self"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 147,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet'",
+              "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.6"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_IsLocallyObserved_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet'",
+                "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.6"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "K2Node_Event_hugInstigator",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'CamperPlayer'",
+                  "ObjectPath": "/Script/DeadByDaylight"
+                }
+              }
+            }
+          },
+          "Offset": 14,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet'",
+              "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.6"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_IsLocallyObserved_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_VirtualFunction",
+            "Function": "IsLocallyObserved",
+            "Parameters": []
+          }
+        }
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 193,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet'",
+              "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.6"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_BooleanOR_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetMathLibrary:BooleanOR'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet'",
+                  "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.6"
+                },
+                "Property": {
+                  "Type": "BoolProperty",
+                  "Name": "CallFunc_IsLocallyObserved_ReturnValue",
+                  "Flags": "RF_Public",
+                  "ElementSize": 1,
+                  "FieldSize": 1,
+                  "ByteOffset": 0,
+                  "ByteMask": 1,
+                  "FieldMask": 255,
+                  "BoolSize": 1,
+                  "bIsNativeBool": true
+                }
+              }
+            },
+            {
+              "Inst": "EX_LocalVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet'",
+                  "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.6"
+                },
+                "Property": {
+                  "Type": "BoolProperty",
+                  "Name": "CallFunc_IsLocallyObservingAKiller_ReturnValue",
+                  "Flags": "RF_Public",
+                  "ElementSize": 1,
+                  "FieldSize": 1,
+                  "ByteOffset": 0,
+                  "ByteMask": 1,
+                  "FieldMask": 255,
+                  "BoolSize": 1,
+                  "bIsNativeBool": true
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_JumpIfNot",
+        "StatementIndex": 231,
+        "CodeOffset": 665,
+        "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet[665]",
+        "BooleanExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet'",
+              "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.6"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_BooleanOR_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 245,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet'",
+              "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.6"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_IsValid_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetSystemLibrary:IsValid'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_K30HugCosmeticHandler_Pallet_C'",
+                  "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.1"
+                },
+                "Property": {
+                  "Type": "ObjectProperty",
+                  "Name": "NS_K30_Guards_Investigation_Pallet",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 8,
+                  "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+                  "PropertyClass": {
+                    "ObjectName": "Class'NiagaraComponent'",
+                    "ObjectPath": "/Script/Niagara"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_JumpIfNot",
+        "StatementIndex": 274,
+        "CodeOffset": 474,
+        "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet[474]",
+        "BooleanExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet'",
+              "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.6"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_IsValid_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 288,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_K30HugCosmeticHandler_Pallet_C'",
+              "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.1"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "NS_K30_Guards_Investigation_Pallet",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+              "PropertyClass": {
+                "ObjectName": "Class'NiagaraComponent'",
+                "ObjectPath": "/Script/Niagara"
+              }
+            }
+          }
+        },
+        "Offset": 28,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'NiagaraComponent:SetVariableFloat'",
+            "ObjectPath": "/Script/Niagara"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_NameConst",
+              "Value": "SystemOpacity"
+            },
+            {
+              "Inst": "EX_FloatConst",
+              "Value": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 338,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_K30HugCosmeticHandler_Pallet_C'",
+              "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.1"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "NS_K30_Guards_Investigation_Pallet",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+              "PropertyClass": {
+                "ObjectName": "Class'NiagaraComponent'",
+                "ObjectPath": "/Script/Niagara"
+              }
+            }
+          }
+        },
+        "Offset": 15,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "Activate",
+          "Parameters": [
+            {
+              "Inst": "EX_True"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 375,
+        "CodeOffset": 665,
+        "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet[665]"
+      },
+      {
+        "Inst": "EX_CallMath",
+        "StatementIndex": 380,
+        "Function": {
+          "ObjectName": "Class'KismetSystemLibrary:K2_ClearAndInvalidateTimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_Self"
+          },
+          {
+            "Inst": "EX_InstanceVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "BlueprintGeneratedClass'BP_K30HugCosmeticHandler_Pallet_C'",
+                "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.1"
+              },
+              "Property": {
+                "Type": "StructProperty",
+                "Name": "Timer_HugTechTimeOut",
+                "Flags": "RF_Public | RF_LoadCompleted",
+                "ElementSize": 8,
+                "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+                "Struct": {
+                  "ObjectName": "Class'TimerHandle'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 400,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_K30HugCosmeticHandler_Pallet_C'",
+              "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.1"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "TML_VFXVisibility",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'TimelineComponent'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Offset": 15,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'TimelineComponent:SetPlayRate'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_FloatConst",
+              "Value": 4.0
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 437,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_K30HugCosmeticHandler_Pallet_C'",
+              "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.1"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "TML_VFXVisibility",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference",
+              "PropertyClass": {
+                "ObjectName": "Class'TimelineComponent'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Offset": 10,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'TimelineComponent:PlayFromStart'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": []
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 469,
+        "CodeOffset": 665,
+        "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet[665]"
+      },
+      {
+        "Inst": "EX_CallMath",
+        "StatementIndex": 474,
+        "Function": {
+          "ObjectName": "Class'KismetSystemLibrary:PrintString'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_Self"
+          },
+          {
+            "Inst": "EX_StringConst",
+            "Value": "PALLET HUG VFX SYSTEM NOT VALID"
+          },
+          {
+            "Inst": "EX_True"
+          },
+          {
+            "Inst": "EX_True"
+          },
+          {
+            "Inst": "EX_StructConst",
+            "Struct": {
+              "ObjectName": "Class'LinearColor'",
+              "ObjectPath": "/Script/CoreUObject"
+            },
+            "Properties": [
+              {
+                "Inst": "EX_FloatConst",
+                "Value": 1.0
+              },
+              {
+                "Inst": "EX_FloatConst",
+                "Value": 0.0
+              },
+              {
+                "Inst": "EX_FloatConst",
+                "Value": 0.0
+              },
+              {
+                "Inst": "EX_FloatConst",
+                "Value": 1.0
+              }
+            ]
+          },
+          {
+            "Inst": "EX_FloatConst",
+            "Value": 2.0
+          },
+          {
+            "Inst": "EX_IntConst",
+            "Value": -1
+          }
+        ]
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 564,
+        "CodeOffset": 665,
+        "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet[665]"
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 569,
+        "CodeOffset": 400,
+        "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet[400]"
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 574,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet'",
+              "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.6"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_IsValid_ReturnValue_2",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_CallMath",
+          "Function": {
+            "ObjectName": "Class'KismetSystemLibrary:IsValid'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_K30HugCosmeticHandler_Pallet_C'",
+                  "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.1"
+                },
+                "Property": {
+                  "Type": "ObjectProperty",
+                  "Name": "NS_K30_Guards_Investigation_Pallet",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 8,
+                  "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+                  "PropertyClass": {
+                    "ObjectName": "Class'NiagaraComponent'",
+                    "ObjectPath": "/Script/Niagara"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_JumpIfNot",
+        "StatementIndex": 603,
+        "CodeOffset": 665,
+        "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet[665]",
+        "BooleanExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet'",
+              "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.6"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_IsValid_ReturnValue_2",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 617,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_K30HugCosmeticHandler_Pallet_C'",
+              "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.1"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "NS_K30_Guards_Investigation_Pallet",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+              "PropertyClass": {
+                "ObjectName": "Class'NiagaraComponent'",
+                "ObjectPath": "/Script/Niagara"
+              }
+            }
+          }
+        },
+        "Offset": 16,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "SetActive",
+          "Parameters": [
+            {
+              "Inst": "EX_False"
+            },
+            {
+              "Inst": "EX_False"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 655,
+        "CodeOffset": 665,
+        "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet[665]"
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 660,
+        "CodeOffset": 574,
+        "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet[574]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 665,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 667
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "HugTechTimedOut",
+    "Outer": "BP_K30HugCosmeticHandler_Pallet_C",
+    "Class": "UScriptClass'Function'",
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 0,
+        "Function": {
+          "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet'",
+          "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.6"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 569
+          }
+        ],
+        "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet[569]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 15,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 17
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "TML_VFXVisibility__FinishedFunc",
+    "Outer": "BP_K30HugCosmeticHandler_Pallet_C",
+    "Class": "UScriptClass'Function'",
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 0,
+        "Function": {
+          "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet'",
+          "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.6"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 660
+          }
+        ],
+        "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet[660]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 15,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 17
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "TML_VFXVisibility__UpdateFunc",
+    "Outer": "BP_K30HugCosmeticHandler_Pallet_C",
+    "Class": "UScriptClass'Function'",
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 0,
+        "Function": {
+          "ObjectName": "Function'BP_K30HugCosmeticHandler_Pallet_C:ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet'",
+          "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.6"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 10
+          }
+        ],
+        "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.ExecuteUbergraph_BP_K30HugCosmeticHandler_Pallet[10]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 15,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 17
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NS_K30_Guards_Investigation_Pallet_GEN_VARIABLE",
+    "Outer": "BP_K30HugCosmeticHandler_Pallet_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'NS_K30_Guards_Investigation_Pallet'",
+        "ObjectPath": "/Game/Effects/Niagara/NiagaraParticleSystem/Slasher/K30/K30_Guards/Interactible_Objetcs/PalletVaultInvestigation/NS_K30_Guards_Investigation_Pallet.78"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "SpawnBoxDimensions",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'Vector3f'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.SpawnBoxDimensions",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'Vector3f'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "SystemOpacity",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.SystemOpacity",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.SpawnBoxDimensions",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'Vector3f'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 12,
+            "Name": "User.SystemOpacity",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          190,
+          66,
+          0,
+          0,
+          128,
+          63,
+          0,
+          0,
+          62,
+          67,
+          0,
+          0,
+          128,
+          63
+        ]
+      },
+      "DetailLevelBeforeCastShadows": "EDetailMode::DM_MAX",
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -100.0,
+        "Z": -70.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 60.0
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_K30HugCosmeticHandler_Pallet_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Root",
+    "Outer": "Default__BP_K30HugCosmeticHandler_Pallet_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_K30HugCosmeticHandler_Pallet_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.11"
+      },
+      "VariableGuid": "AC170CD5-475E01F2-3A09579A-887B12C2",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_K30HugCosmeticHandler_Pallet_C:NS_K30_Guards_Investigation_Pallet_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.10"
+      },
+      "ParentComponentOrVariableName": "Root",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "7130F722-452235DA-095E31A5-7561D9BD",
+      "InternalVariableName": "NS_K30_Guards_Investigation_Pallet"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ArrowComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ArrowComponent'BP_K30HugCosmeticHandler_Pallet_C:Arrow_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.0"
+      },
+      "ParentComponentOrVariableName": "Root",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "7C06896A-421B5DE1-CBEC0E94-433F14F8",
+      "InternalVariableName": "Arrow"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_K30HugCosmeticHandler_Pallet_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_K30HugCosmeticHandler_Pallet_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_K30HugCosmeticHandler_Pallet_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.15"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_K30HugCosmeticHandler_Pallet_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_K30HugCosmeticHandler_Pallet_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.15"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_K30HugCosmeticHandler_Pallet_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.13"
+      }
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "TML_VFXVisibility_Template",
+    "Outer": "BP_K30HugCosmeticHandler_Pallet_C",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Properties": {
+      "TimelineLength": 1.0,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_K30HugCosmeticHandler_Pallet_C:CurveFloat_0'",
+            "ObjectPath": "/Game/Blueprints/GameplayElements/Item/K30Power/BP_K30HugCosmeticHandler_Pallet.4"
+          },
+          "PropertyName": "TML_VFXVisibility_Visibility_ABFE245F49D784DA59FB1F83F20B29EC",
+          "TrackName": "Visibility",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "ABFE245F-49D784DA-59FB1F83-F20B29EC",
+      "VariableName": "TML_VFXVisibility",
+      "DirectionPropertyName": "TML_VFXVisibility__Direction_ABFE245F49D784DA59FB1F83F20B29EC",
+      "UpdateFunctionName": "TML_VFXVisibility__UpdateFunc",
+      "FinishedFunctionName": "TML_VFXVisibility__FinishedFunc"
+    }
+  }
+]

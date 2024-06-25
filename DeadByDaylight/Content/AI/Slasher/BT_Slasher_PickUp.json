@@ -1,0 +1,366 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Slasher_PickUp",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_PickUp:BTComposite_Selector_3'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Slasher'",
+        "ObjectPath": "/Game/AI/Slasher/BB_Slasher.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_3",
+    "Outer": "BT_Slasher_PickUp",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_PickUp:BTComposite_SimpleParallel_0'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.2"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CanRunSkill'BT_Slasher_PickUp:BTDecorator_CanRunSkill_0'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.4"
+            },
+            {
+              "ObjectName": "BTDecorator_Loop'BT_Slasher_PickUp:BTDecorator_Loop_0'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.6"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_PickUp:BTComposite_SimpleParallel_1'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Loop'BT_Slasher_PickUp:BTDecorator_Loop_1'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.7"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_PushObjectFocus'BT_Slasher_PickUp:BTService_PushObjectFocus_2'",
+          "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.8"
+        },
+        {
+          "ObjectName": "BTService_RunSkills'BT_Slasher_PickUp:BTService_RunSkills_1'",
+          "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.9"
+        }
+      ],
+      "NodeName": "Skill vs Pick Up Crawler",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_PickUp'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_0",
+    "Outer": "BT_Slasher_PickUp",
+    "Class": "UScriptClass'BTComposite_SimpleParallel'",
+    "Properties": {
+      "FinishMode": "EBTParallelMode::WaitForBackground",
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ExtMoveTo'BT_Slasher_PickUp:BTTask_ExtMoveTo_1'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.11"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunSkills'BT_Slasher_PickUp:BTTask_RunSkills_0'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.13"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Run Crawling Skill Task",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_PickUp'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_PickUp:BTComposite_Selector_3'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_1",
+    "Outer": "BT_Slasher_PickUp",
+    "Class": "UScriptClass'BTComposite_SimpleParallel'",
+    "Properties": {
+      "FinishMode": "EBTParallelMode::WaitForBackground",
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ExtMoveTo'BT_Slasher_PickUp:BTTask_ExtMoveTo_0'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.10"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_InputPress'BT_Slasher_PickUp:BTTask_InputPress_0'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.12"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsAtLocation'BT_Slasher_PickUp:BTDecorator_IsAtLocation_0'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.5"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Pick Up Crawler",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_PickUp'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_PickUp:BTComposite_Selector_3'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CanRunSkill",
+    "Name": "BTDecorator_CanRunSkill_0",
+    "Outer": "BT_Slasher_PickUp",
+    "Class": "UScriptClass'BTDecorator_CanRunSkill'",
+    "Properties": {
+      "Context": {
+        "TagName": "AI.Skills.Contexts.Task.Slasher.CrawlingTarget"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "If Can Run Crawler Skill Task",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_PickUp'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_PickUp:BTComposite_Selector_3'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_0",
+    "Outer": "BT_Slasher_PickUp",
+    "Class": "UScriptClass'BTDecorator_IsAtLocation'",
+    "Properties": {
+      "AcceptableRadius": 80.0,
+      "BlackboardKey": {
+        "SelectedKeyName": "DyingSurvivorLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_PickUp'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_PickUp:BTComposite_SimpleParallel_1'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Loop",
+    "Name": "BTDecorator_Loop_0",
+    "Outer": "BT_Slasher_PickUp",
+    "Class": "UScriptClass'BTDecorator_Loop'",
+    "Properties": {
+      "bInfiniteLoop": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_PickUp'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_PickUp:BTComposite_Selector_3'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Loop",
+    "Name": "BTDecorator_Loop_1",
+    "Outer": "BT_Slasher_PickUp",
+    "Class": "UScriptClass'BTDecorator_Loop'",
+    "Properties": {
+      "bInfiniteLoop": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_PickUp'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_PickUp:BTComposite_Selector_3'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.1"
+      }
+    }
+  },
+  {
+    "Type": "BTService_PushObjectFocus",
+    "Name": "BTService_PushObjectFocus_2",
+    "Outer": "BT_Slasher_PickUp",
+    "Class": "UScriptClass'BTService_PushObjectFocus'",
+    "Properties": {
+      "BBFocusObj": {
+        "SelectedKeyName": "DyingSurvivorInteractable"
+      },
+      "NodeName": "Focus On Dying Survivor",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_PickUp'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_PickUp:BTComposite_Selector_3'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.1"
+      }
+    }
+  },
+  {
+    "Type": "BTService_RunSkills",
+    "Name": "BTService_RunSkills_1",
+    "Outer": "BT_Slasher_PickUp",
+    "Class": "UScriptClass'BTService_RunSkills'",
+    "Properties": {
+      "Context": {
+        "TagName": "AI.Skills.Contexts.Service.Slasher.CrawlingTarget"
+      },
+      "NodeName": "Run Crawler Skill Service",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_PickUp'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_PickUp:BTComposite_Selector_3'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ExtMoveTo",
+    "Name": "BTTask_ExtMoveTo_0",
+    "Outer": "BT_Slasher_PickUp",
+    "Class": "UScriptClass'BTTask_ExtMoveTo'",
+    "Properties": {
+      "BBStrafeFocus": {
+        "SelectedKeyName": "DyingSurvivorLocation"
+      },
+      "StrafeFocus": "EExtMoveToStrafeFocusOptions::NearFocus",
+      "EndMoveStrafeFocusPrecisionAngle": 10.0,
+      "BBIgnoreGroupAvoidance": {
+        "SelectedKeyName": "DyingSurvivorActor"
+      },
+      "AcceptableRadius": 10.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "DyingSurvivorLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_PickUp'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_PickUp:BTComposite_SimpleParallel_1'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ExtMoveTo",
+    "Name": "BTTask_ExtMoveTo_1",
+    "Outer": "BT_Slasher_PickUp",
+    "Class": "UScriptClass'BTTask_ExtMoveTo'",
+    "Properties": {
+      "BBStrafeFocus": {
+        "SelectedKeyName": "DyingSurvivorLocation"
+      },
+      "StrafeFocus": "EExtMoveToStrafeFocusOptions::NearFocus",
+      "StrafeNearFocusModeUnderDistance": 800.0,
+      "EndMoveStrafeFocusPrecisionAngle": 10.0,
+      "BBIgnoreGroupAvoidance": {
+        "SelectedKeyName": "DyingSurvivorInteractable"
+      },
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "DyingSurvivorLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_PickUp'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_PickUp:BTComposite_SimpleParallel_0'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_InputPress",
+    "Name": "BTTask_InputPress_0",
+    "Outer": "BT_Slasher_PickUp",
+    "Class": "UScriptClass'BTTask_InputPress'",
+    "Properties": {
+      "Input": "EPawnInputPressTypes::Interact",
+      "NodeName": "Pickup Input",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_PickUp'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_PickUp:BTComposite_SimpleParallel_1'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunSkills",
+    "Name": "BTTask_RunSkills_0",
+    "Outer": "BT_Slasher_PickUp",
+    "Class": "UScriptClass'BTTask_RunSkills'",
+    "Properties": {
+      "Context": {
+        "TagName": "AI.Skills.Contexts.Task.Slasher.CrawlingTarget"
+      },
+      "NodeName": "Run Skill Task",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_PickUp'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_PickUp:BTComposite_SimpleParallel_0'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_PickUp.2"
+      }
+    }
+  }
+]

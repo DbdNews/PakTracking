@@ -1,0 +1,362 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "DSBT_SetBearTrap",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_SetBearTrap:BTComposite_Selector_0'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Slasher'",
+        "ObjectPath": "/Game/AI/Slasher/BB_Slasher.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "DSBT_SetBearTrap",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'DSBT_SetBearTrap:BTComposite_Selector_1'",
+            "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.2"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'DSBT_SetBearTrap:BTDecorator_Blackboard_0'",
+              "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.5"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_SetBearTrap'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "DSBT_SetBearTrap",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ExtMoveTo'DSBT_SetBearTrap:BTTask_ExtMoveTo_0'",
+            "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.10"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ExtIsAtLocation'DSBT_SetBearTrap:BTDecorator_ExtIsAtLocation_1'",
+              "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.6"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_SimpleParallel'DSBT_SetBearTrap:BTComposite_SimpleParallel_0'",
+            "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Loop'DSBT_SetBearTrap:BTDecorator_Loop_0'",
+              "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.9"
+            },
+            {
+              "ObjectName": "BTDecorator_ExtIsAtLocation'DSBT_SetBearTrap:BTDecorator_ExtIsAtLocation_2'",
+              "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.7"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_SetBearTrap'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_SetBearTrap:BTComposite_Selector_0'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "DSBT_SetBearTrap",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetRandomNavPoint'DSBT_SetBearTrap:BTTask_SetRandomNavPoint_0'",
+            "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.13"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RotateToFaceBBEntry'DSBT_SetBearTrap:BTTask_RotateToFaceBBEntry_2'",
+            "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.12"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_SetBearTrap'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'DSBT_SetBearTrap:BTComposite_SimpleParallel_0'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_0",
+    "Outer": "DSBT_SetBearTrap",
+    "Class": "UScriptClass'BTComposite_SimpleParallel'",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_InputPress'DSBT_SetBearTrap:BTTask_InputPress_0'",
+            "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.11"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsInteractionAvailable'DSBT_SetBearTrap:BTDecorator_IsInteractionAvailable_0'",
+              "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.8"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'DSBT_SetBearTrap:BTComposite_Sequence_0'",
+            "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.3"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_SetBearTrap'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_SetBearTrap:BTComposite_Selector_1'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "DSBT_SetBearTrap",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Properties": {
+      "CachedDescription": "TrapTargetLocation is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "TrapTargetLocation"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "Is Location Set",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_SetBearTrap'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_SetBearTrap:BTComposite_Selector_0'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ExtIsAtLocation",
+    "Name": "BTDecorator_ExtIsAtLocation_1",
+    "Outer": "DSBT_SetBearTrap",
+    "Class": "UScriptClass'BTDecorator_ExtIsAtLocation'",
+    "Properties": {
+      "BBLoc": {
+        "SelectedKeyName": "TrapTargetLocation"
+      },
+      "AcceptableRadius": {
+        "DefaultValue": 200.0
+      },
+      "bInverseCondition": true,
+      "NodeName": "Is Not At Location",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_SetBearTrap'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_SetBearTrap:BTComposite_Selector_1'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ExtIsAtLocation",
+    "Name": "BTDecorator_ExtIsAtLocation_2",
+    "Outer": "DSBT_SetBearTrap",
+    "Class": "UScriptClass'BTDecorator_ExtIsAtLocation'",
+    "Properties": {
+      "BBLoc": {
+        "SelectedKeyName": "TrapTargetLocation"
+      },
+      "AcceptableRadius": {
+        "DefaultValue": 200.0
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_SetBearTrap'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_SetBearTrap:BTComposite_Selector_1'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsInteractionAvailable",
+    "Name": "BTDecorator_IsInteractionAvailable_0",
+    "Outer": "DSBT_SetBearTrap",
+    "Class": "UScriptClass'BTDecorator_IsInteractionAvailable'",
+    "Properties": {
+      "InteractionCheckType": "EInteractionCheckType::InputType",
+      "InputType": "EInputInteractionType::VE_ItemUse",
+      "BBInteractor": {},
+      "BBInputType": {},
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_SetBearTrap'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'DSBT_SetBearTrap:BTComposite_SimpleParallel_0'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Loop",
+    "Name": "BTDecorator_Loop_0",
+    "Outer": "DSBT_SetBearTrap",
+    "Class": "UScriptClass'BTDecorator_Loop'",
+    "Properties": {
+      "bInfiniteLoop": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_SetBearTrap'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_SetBearTrap:BTComposite_Selector_1'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ExtMoveTo",
+    "Name": "BTTask_ExtMoveTo_0",
+    "Outer": "DSBT_SetBearTrap",
+    "Class": "UScriptClass'BTTask_ExtMoveTo'",
+    "Properties": {
+      "BBStrafeFocus": {},
+      "BBIgnoreGroupAvoidance": {},
+      "AcceptableRadius": 50.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "TrapTargetLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_SetBearTrap'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'DSBT_SetBearTrap:BTComposite_Selector_1'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_InputPress",
+    "Name": "BTTask_InputPress_0",
+    "Outer": "DSBT_SetBearTrap",
+    "Class": "UScriptClass'BTTask_InputPress'",
+    "Properties": {
+      "Input": "EPawnInputPressTypes::UseItem",
+      "InputMode": "ETaskInputPressModes::Hold",
+      "NodeName": "Set Trap",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_SetBearTrap'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'DSBT_SetBearTrap:BTComposite_SimpleParallel_0'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RotateToFaceBBEntry",
+    "Name": "BTTask_RotateToFaceBBEntry_2",
+    "Outer": "DSBT_SetBearTrap",
+    "Class": "UScriptClass'BTTask_RotateToFaceBBEntry'",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "AdjustmentLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_SetBearTrap'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'DSBT_SetBearTrap:BTComposite_Sequence_0'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetRandomNavPoint",
+    "Name": "BTTask_SetRandomNavPoint_0",
+    "Outer": "DSBT_SetBearTrap",
+    "Class": "UScriptClass'BTTask_SetRandomNavPoint'",
+    "Properties": {
+      "BBFromLocation": {
+        "SelectedKeyName": "SelfActor"
+      },
+      "BBToLocation": {
+        "SelectedKeyName": "AdjustmentLocation"
+      },
+      "MinAroundRadius": 100.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'DSBT_SetBearTrap'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'DSBT_SetBearTrap:BTComposite_Sequence_0'",
+        "ObjectPath": "/Game/AI/Slasher/PowerDynamicSubtrees/DSBT_SetBearTrap.3"
+      }
+    }
+  }
+]

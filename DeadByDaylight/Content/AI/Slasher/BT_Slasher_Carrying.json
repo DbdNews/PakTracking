@@ -1,0 +1,959 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Slasher_Carrying",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Carrying:BTComposite_Selector_13'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Slasher'",
+        "ObjectPath": "/Game/AI/Slasher/BB_Slasher.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_13",
+    "Outer": "BT_Slasher_Carrying",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Slasher_Carrying:BTComposite_Selector_3'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Slasher_Carrying:BTDecorator_Blackboard_20'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.10"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Slasher_Carrying:BTComposite_Sequence_8'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.5"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Slasher_Carrying:BTDecorator_Blackboard_2'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.9"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_FindInteractor_MeatHook'BT_Slasher_Carrying:BTService_FindInteractor_MeatHook_0'",
+          "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.23"
+        }
+      ],
+      "NodeName": "Carrying",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Carrying'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_26",
+    "Outer": "BT_Slasher_Carrying",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Slasher_Carrying:BTComposite_Selector_28'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ExtIsAtLocation'BT_Slasher_Carrying:BTDecorator_ExtIsAtLocation_0'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.17"
+            },
+            {
+              "ObjectName": "BTDecorator_ExtConeCheck'BT_Slasher_Carrying:BTDecorator_ExtConeCheck_0'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.13"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_InputPress'BT_Slasher_Carrying:BTTask_InputPress_3'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.28"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ExtIsAtLocation'BT_Slasher_Carrying:BTDecorator_ExtIsAtLocation_2'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.18"
+            },
+            {
+              "ObjectName": "BTDecorator_ExtConeCheck'BT_Slasher_Carrying:BTDecorator_ExtConeCheck_3'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.15"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Attack Trolling Camper",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Carrying'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Carrying:BTComposite_Selector_3'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_28",
+    "Outer": "BT_Slasher_Carrying",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_Carrying:BTComposite_SimpleParallel_0'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.6"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ExtTimeLimit'BT_Slasher_Carrying:BTDecorator_ExtTimeLimit_0'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.20"
+            },
+            {
+              "ObjectName": "BTDecorator_ExtConeCheck'BT_Slasher_Carrying:BTDecorator_ExtConeCheck_1'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.14"
+            },
+            {
+              "ObjectName": "BTDecorator_Cooldown'BT_Slasher_Carrying:BTDecorator_Cooldown_1'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.12"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Filter Chase Target",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Carrying'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Carrying:BTComposite_Selector_26'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_3",
+    "Outer": "BT_Slasher_Carrying",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Slasher_Carrying:BTComposite_Selector_26'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.2"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Slasher_Carrying:BTDecorator_Blackboard_15'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.8"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Slasher_Carrying:BTDecorator_Blackboard_6'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.11"
+            },
+            {
+              "ObjectName": "BTDecorator_IsCamperState'BT_Slasher_Carrying:BTDecorator_IsCamperState_0'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.22"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_Carrying:BTComposite_SimpleParallel_8'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.7"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_PushObjectFocus'BT_Slasher_Carrying:BTService_PushObjectFocus_0'",
+          "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.24"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Carrying'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Carrying:BTComposite_Selector_13'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_8",
+    "Outer": "BT_Slasher_Carrying",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Slasher_Carrying:BTTask_Wait_4'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.33"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_InputPress'BT_Slasher_Carrying:BTTask_InputPress_4'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.29"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetFocusCooldown'BT_Slasher_Carrying:BTTask_SetFocusCooldown_0'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.32"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Drop",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Carrying'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Carrying:BTComposite_Selector_13'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_0",
+    "Outer": "BT_Slasher_Carrying",
+    "Class": "UScriptClass'BTComposite_SimpleParallel'",
+    "Properties": {
+      "FinishMode": "EBTParallelMode::WaitForBackground",
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ExtMoveTo'BT_Slasher_Carrying:BTTask_ExtMoveTo_2'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.26"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_InputPress'BT_Slasher_Carrying:BTTask_InputPress_7'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.30"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ExtIsAtLocation'BT_Slasher_Carrying:BTDecorator_ExtIsAtLocation_4'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.19"
+            },
+            {
+              "ObjectName": "BTDecorator_ExtConeCheck'BT_Slasher_Carrying:BTDecorator_ExtConeCheck_4'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.16"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_PushObjectFocus'BT_Slasher_Carrying:BTService_PushObjectFocus_1'",
+          "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.25"
+        }
+      ],
+      "NodeName": "Chase Target Loop",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Carrying'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Carrying:BTComposite_Selector_28'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_8",
+    "Outer": "BT_Slasher_Carrying",
+    "Class": "UScriptClass'BTComposite_SimpleParallel'",
+    "Properties": {
+      "FinishMode": "EBTParallelMode::WaitForBackground",
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ExtMoveTo'BT_Slasher_Carrying:BTTask_ExtMoveTo_3'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.27"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Interact'BT_Slasher_Carrying:BTTask_Interact_0'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.31"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsAtLocation'BT_Slasher_Carrying:BTDecorator_IsAtLocation_2'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.21"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Hook",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Carrying'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Carrying:BTComposite_Selector_3'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_15",
+    "Outer": "BT_Slasher_Carrying",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Properties": {
+      "CachedDescription": "IsHostileStimulusInSight is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "IsHostileStimulusInSight"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "If In Sight Stimulus",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Carrying'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Carrying:BTComposite_Selector_3'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_2",
+    "Outer": "BT_Slasher_Carrying",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Properties": {
+      "CachedDescription": "MeatHookInteractor is Is Not Set",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "MeatHookInteractor"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "If Has Not Found Any Hook",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Carrying'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Carrying:BTComposite_Selector_13'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_20",
+    "Outer": "BT_Slasher_Carrying",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Properties": {
+      "CachedDescription": "MeatHookInteractor is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "MeatHookInteractor"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "If Found Available Hook",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Carrying'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Carrying:BTComposite_Selector_13'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_6",
+    "Outer": "BT_Slasher_Carrying",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Properties": {
+      "CachedDescription": "HostileStimulusNavLocation is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "HostileStimulusNavLocation"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "If Stimulus Navigation Location Valid",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Carrying'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Carrying:BTComposite_Selector_3'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Cooldown",
+    "Name": "BTDecorator_Cooldown_1",
+    "Outer": "BT_Slasher_Carrying",
+    "Class": "UScriptClass'BTDecorator_Cooldown'",
+    "Properties": {
+      "CoolDownTime": 3.0,
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "If Last Chase Not Too Early Ago",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Carrying'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Carrying:BTComposite_Selector_28'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ExtConeCheck",
+    "Name": "BTDecorator_ExtConeCheck_0",
+    "Outer": "BT_Slasher_Carrying",
+    "Class": "UScriptClass'BTDecorator_ExtConeCheck'",
+    "Properties": {
+      "BBConeOrigin": {
+        "SelectedKeyName": "SelfActor"
+      },
+      "BBConeDirection": {
+        "SelectedKeyName": "MeatHookInteractor"
+      },
+      "BBWith": {
+        "SelectedKeyName": "HostileStimulusNavLocation"
+      },
+      "ConeHalfAngle": {
+        "DefaultValue": 60.0
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "If Not Deviating From Meat Hook Start",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Carrying'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Carrying:BTComposite_Selector_26'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ExtConeCheck",
+    "Name": "BTDecorator_ExtConeCheck_1",
+    "Outer": "BT_Slasher_Carrying",
+    "Class": "UScriptClass'BTDecorator_ExtConeCheck'",
+    "Properties": {
+      "BBConeOrigin": {
+        "SelectedKeyName": "SelfActor"
+      },
+      "BBConeDirection": {
+        "SelectedKeyName": "MeatHookInteractor"
+      },
+      "BBWith": {
+        "SelectedKeyName": "HostileStimulusNavLocation"
+      },
+      "ConeHalfAngle": {
+        "DefaultValue": 90.0
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "NodeName": "If Not Deviating From Meat Hook End",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Carrying'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Carrying:BTComposite_Selector_28'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ExtConeCheck",
+    "Name": "BTDecorator_ExtConeCheck_3",
+    "Outer": "BT_Slasher_Carrying",
+    "Class": "UScriptClass'BTDecorator_ExtConeCheck'",
+    "Properties": {
+      "BBConeOrigin": {
+        "SelectedKeyName": "SelfActor"
+      },
+      "BBConeDirection": {},
+      "BBWith": {
+        "SelectedKeyName": "HostileStimulusNavLocation"
+      },
+      "ConeHalfAngle": {
+        "DefaultValue": 30.0
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "If Aligned Enough From Target",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Carrying'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Carrying:BTComposite_Selector_26'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ExtConeCheck",
+    "Name": "BTDecorator_ExtConeCheck_4",
+    "Outer": "BT_Slasher_Carrying",
+    "Class": "UScriptClass'BTDecorator_ExtConeCheck'",
+    "Properties": {
+      "BBConeOrigin": {
+        "SelectedKeyName": "SelfActor"
+      },
+      "BBConeDirection": {},
+      "BBWith": {
+        "SelectedKeyName": "HostileStimulusNavLocation"
+      },
+      "ConeHalfAngle": {
+        "DefaultValue": 30.0
+      },
+      "NodeName": "If Aligned Enough From Target",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Carrying'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_Carrying:BTComposite_SimpleParallel_0'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ExtIsAtLocation",
+    "Name": "BTDecorator_ExtIsAtLocation_0",
+    "Outer": "BT_Slasher_Carrying",
+    "Class": "UScriptClass'BTDecorator_ExtIsAtLocation'",
+    "Properties": {
+      "BBLoc": {
+        "SelectedKeyName": "HostileStimulusNavLocation"
+      },
+      "AcceptableRadius": {
+        "DefaultValue": 500.0,
+        "TunableName": "HookStartChaseRange"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "NodeName": "Is Near Enough From Target",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Carrying'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Carrying:BTComposite_Selector_26'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ExtIsAtLocation",
+    "Name": "BTDecorator_ExtIsAtLocation_2",
+    "Outer": "BT_Slasher_Carrying",
+    "Class": "UScriptClass'BTDecorator_ExtIsAtLocation'",
+    "Properties": {
+      "BBLoc": {
+        "SelectedKeyName": "HostileStimulusNavLocation"
+      },
+      "AcceptableRadius": {
+        "DefaultValue": 100.0
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "Is Near Enough From Target",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Carrying'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Carrying:BTComposite_Selector_26'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ExtIsAtLocation",
+    "Name": "BTDecorator_ExtIsAtLocation_4",
+    "Outer": "BT_Slasher_Carrying",
+    "Class": "UScriptClass'BTDecorator_ExtIsAtLocation'",
+    "Properties": {
+      "BBLoc": {
+        "SelectedKeyName": "HostileStimulusNavLocation"
+      },
+      "AcceptableRadius": {
+        "DefaultValue": 100.0
+      },
+      "NodeName": "Is Near Enough From Target",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Carrying'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_Carrying:BTComposite_SimpleParallel_0'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ExtTimeLimit",
+    "Name": "BTDecorator_ExtTimeLimit_0",
+    "Outer": "BT_Slasher_Carrying",
+    "Class": "UScriptClass'BTDecorator_ExtTimeLimit'",
+    "Properties": {
+      "MaxTimeLimit": {
+        "TunableName": "HookChaseTimeLimit"
+      },
+      "NodeName": "Time Out After A While",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Carrying'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Carrying:BTComposite_Selector_28'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_2",
+    "Outer": "BT_Slasher_Carrying",
+    "Class": "UScriptClass'BTDecorator_IsAtLocation'",
+    "Properties": {
+      "AcceptableRadius": 100.0,
+      "BlackboardKey": {
+        "SelectedKeyName": "MeatHookLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Carrying'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_Carrying:BTComposite_SimpleParallel_8'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsCamperState",
+    "Name": "BTDecorator_IsCamperState_0",
+    "Outer": "BT_Slasher_Carrying",
+    "Class": "UScriptClass'BTDecorator_IsCamperState'",
+    "Properties": {
+      "BBCamper": {
+        "SelectedKeyName": "HostileStimulusActor"
+      },
+      "DamageState": "ECamperDamageState::VE_KO",
+      "DamageOp": "EArithmeticKeyOperation::Less",
+      "ImmobilizeState": "EImmobilizedState::VE_Hiding",
+      "ImmobilizeOp": "EArithmeticKeyOperation::NotEqual",
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "If Camper Is Standing And Not Hidding",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Carrying'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Carrying:BTComposite_Selector_3'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.4"
+      }
+    }
+  },
+  {
+    "Type": "BTService_FindInteractor_MeatHook",
+    "Name": "BTService_FindInteractor_MeatHook_0",
+    "Outer": "BT_Slasher_Carrying",
+    "Class": "UScriptClass'BTService_FindInteractor_MeatHook'",
+    "Properties": {
+      "StatusFilter": "EFindInteractableMeatHookStatus::Available",
+      "BBOnlyFromActor": {},
+      "BBInteractLocation": {
+        "SelectedKeyName": "MeatHookLocation"
+      },
+      "BBInteractorObj": {
+        "SelectedKeyName": "MeatHookInteractor"
+      },
+      "BBUnsafeActionID": {},
+      "BBUnsafeActionUsesItemAddons": {
+        "SelectedKeyName": "IsCarrying"
+      },
+      "BBUnsafeActionIsSelfInteraction": {
+        "SelectedKeyName": "IsCarrying"
+      },
+      "BBUnsafeActionRange": {
+        "SelectedKeyName": "StartInvestigationTime"
+      },
+      "SearchInterval": 3.66E-43,
+      "SearchHeightAmplifierActivationHeight": "NaN"
+    }
+  },
+  {
+    "Type": "BTService_PushObjectFocus",
+    "Name": "BTService_PushObjectFocus_0",
+    "Outer": "BT_Slasher_Carrying",
+    "Class": "UScriptClass'BTService_PushObjectFocus'",
+    "Properties": {
+      "BBFocusObj": {
+        "SelectedKeyName": "MeatHookInteractor"
+      },
+      "NodeName": "Focus On Hook Interactor",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Carrying'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Carrying:BTComposite_Selector_3'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.4"
+      }
+    }
+  },
+  {
+    "Type": "BTService_PushObjectFocus",
+    "Name": "BTService_PushObjectFocus_1",
+    "Outer": "BT_Slasher_Carrying",
+    "Class": "UScriptClass'BTService_PushObjectFocus'",
+    "Properties": {
+      "BBFocusObj": {
+        "SelectedKeyName": "HostileStimulusActor"
+      },
+      "NodeName": "Focus On Stimulus Actor",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Carrying'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_Carrying:BTComposite_SimpleParallel_0'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ExtMoveTo",
+    "Name": "BTTask_ExtMoveTo_2",
+    "Outer": "BT_Slasher_Carrying",
+    "Class": "UScriptClass'BTTask_ExtMoveTo'",
+    "Properties": {
+      "BBStrafeFocus": {
+        "SelectedKeyName": "HostileStimulusOriginLocation"
+      },
+      "StrafeFocus": "EExtMoveToStrafeFocusOptions::NearFocus",
+      "EndMoveStrafeFocusPrecisionAngle": 5.0,
+      "BBIgnoreGroupAvoidance": {
+        "SelectedKeyName": "HostileStimulusActor"
+      },
+      "FilterClass": {
+        "ObjectName": "Class'NavigationQueryFilter_Slasher_Limited'",
+        "ObjectPath": "/Script/DBDBots"
+      },
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "HostileStimulusNavLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Carrying'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_Carrying:BTComposite_SimpleParallel_0'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ExtMoveTo",
+    "Name": "BTTask_ExtMoveTo_3",
+    "Outer": "BT_Slasher_Carrying",
+    "Class": "UScriptClass'BTTask_ExtMoveTo'",
+    "Properties": {
+      "BBStrafeFocus": {
+        "SelectedKeyName": "MeatHookInteractor"
+      },
+      "StrafeFocus": "EExtMoveToStrafeFocusOptions::NearFocus",
+      "BBIgnoreGroupAvoidance": {},
+      "AcceptableRadius": 10.0,
+      "FilterClass": {
+        "ObjectName": "Class'NavigationQueryFilter_Slasher_Limited'",
+        "ObjectPath": "/Script/DBDBots"
+      },
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "MeatHookLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Carrying'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_Carrying:BTComposite_SimpleParallel_8'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_InputPress",
+    "Name": "BTTask_InputPress_3",
+    "Outer": "BT_Slasher_Carrying",
+    "Class": "UScriptClass'BTTask_InputPress'",
+    "Properties": {
+      "Input": "EPawnInputPressTypes::Attack",
+      "NodeName": "Input Press To Attack",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Carrying'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Carrying:BTComposite_Selector_26'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_InputPress",
+    "Name": "BTTask_InputPress_4",
+    "Outer": "BT_Slasher_Carrying",
+    "Class": "UScriptClass'BTTask_InputPress'",
+    "Properties": {
+      "Input": "EPawnInputPressTypes::DropItem",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Carrying'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Slasher_Carrying:BTComposite_Sequence_8'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_InputPress",
+    "Name": "BTTask_InputPress_7",
+    "Outer": "BT_Slasher_Carrying",
+    "Class": "UScriptClass'BTTask_InputPress'",
+    "Properties": {
+      "Input": "EPawnInputPressTypes::Attack",
+      "NodeName": "Input Press To Attack",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Carrying'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_Carrying:BTComposite_SimpleParallel_0'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Interact",
+    "Name": "BTTask_Interact_0",
+    "Outer": "BT_Slasher_Carrying",
+    "Class": "UScriptClass'BTTask_Interact'",
+    "Properties": {
+      "BBInteractorObj": {
+        "SelectedKeyName": "MeatHookInteractor"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Carrying'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_Carrying:BTComposite_SimpleParallel_8'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetFocusCooldown",
+    "Name": "BTTask_SetFocusCooldown_0",
+    "Outer": "BT_Slasher_Carrying",
+    "Class": "UScriptClass'BTTask_SetFocusCooldown'",
+    "Properties": {
+      "BBOnObject": {
+        "SelectedKeyName": "HostileStimulusActor"
+      },
+      "ContextName": "CantPickup",
+      "Duration": 30.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Carrying'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Slasher_Carrying:BTComposite_Sequence_8'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_4",
+    "Outer": "BT_Slasher_Carrying",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Properties": {
+      "WaitTime": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Carrying'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Slasher_Carrying:BTComposite_Sequence_8'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Carrying.5"
+      }
+    }
+  }
+]

@@ -1,0 +1,999 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Chasing:BTComposite_Selector_16'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Slasher'",
+        "ObjectPath": "/Game/AI/Slasher/BB_Slasher.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_16",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Slasher_Chasing:BTComposite_Selector_8'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsCamperState'BT_Slasher_Chasing:BTDecorator_IsCamperState_1'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.16"
+            },
+            {
+              "ObjectName": "BTDecorator_Loop'BT_Slasher_Chasing:BTDecorator_Loop_8'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.20"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Slasher_Chasing:BTComposite_Selector_4'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsCamperState'BT_Slasher_Chasing:BTDecorator_IsCamperState_2'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.17"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Slasher_Chasing:BTTask_Wait_0'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.35"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Loop'BT_Slasher_Chasing:BTDecorator_Loop_0'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.19"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_PushObjectFocus'BT_Slasher_Chasing:BTService_PushObjectFocus_3'",
+          "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.22"
+        }
+      ],
+      "NodeName": "Track In Sight Stimulus",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_22",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunSkills'BT_Slasher_Chasing:BTTask_RunSkills_0'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.34"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CanRunSkill'BT_Slasher_Chasing:BTDecorator_CanRunSkill_0'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.9"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_InputPress'BT_Slasher_Chasing:BTTask_InputPress_0'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.30"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ExtIsAtLocation'BT_Slasher_Chasing:BTDecorator_ExtIsAtLocation_3'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.13"
+            },
+            {
+              "ObjectName": "BTDecorator_ConeCheck'BT_Slasher_Chasing:BTDecorator_ConeCheck_0'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.10"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_InputPress'BT_Slasher_Chasing:BTTask_InputPress_5'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.31"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsTunable'BT_Slasher_Chasing:BTDecorator_IsTunable_2'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.18"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Slasher_Chasing:BTDecorator_Blackboard_24'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.8"
+            },
+            {
+              "ObjectName": "BTDecorator_ExtIsAtLocation'BT_Slasher_Chasing:BTDecorator_ExtIsAtLocation_1'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.12"
+            },
+            {
+              "ObjectName": "BTDecorator_ConeCheck'BT_Slasher_Chasing:BTDecorator_ConeCheck_1'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.11"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Skill vs Slash Attack",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_Chasing:BTComposite_SimpleParallel_6'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_4",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_Chasing:BTComposite_SimpleParallel_7'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.6"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Slasher_Chasing:BTDecorator_Blackboard_12'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.7"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_FindInteractor_Locker'BT_Slasher_Chasing:BTService_FindInteractor_Locker_1'",
+          "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.21"
+        }
+      ],
+      "NodeName": "Find Occupied Locker",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Chasing:BTComposite_Selector_16'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_8",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehaviorDynamic'BT_Slasher_Chasing:BTTask_RunBehaviorDynamic_2'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.33"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_HasDynamicSubtree'BT_Slasher_Chasing:BTDecorator_HasDynamicSubtree_0'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.14"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_Chasing:BTComposite_SimpleParallel_6'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.5"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_RunSkills'BT_Slasher_Chasing:BTService_RunSkills_1'",
+          "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.24"
+        }
+      ],
+      "NodeName": "Attack Standing Target",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Chasing:BTComposite_Selector_16'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_6",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTComposite_SimpleParallel'",
+    "Properties": {
+      "FinishMode": "EBTParallelMode::WaitForBackground",
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ExtMoveTo'BT_Slasher_Chasing:BTTask_ExtMoveTo_5'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.28"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Slasher_Chasing:BTComposite_Selector_22'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.2"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Attack Standing Target",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Chasing:BTComposite_Selector_8'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_7",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTComposite_SimpleParallel'",
+    "Properties": {
+      "FinishMode": "EBTParallelMode::WaitForBackground",
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ExtMoveTo'BT_Slasher_Chasing:BTTask_ExtMoveTo_6'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.29"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Interact'BT_Slasher_Chasing:BTTask_Interact_2'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.32"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsAtLocation'BT_Slasher_Chasing:BTDecorator_IsAtLocation_7'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.15"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_PushObjectFocus'BT_Slasher_Chasing:BTService_PushObjectFocus_4'",
+          "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.23"
+        }
+      ],
+      "NodeName": "Pick Up Target In Locker",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Chasing:BTComposite_Selector_4'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_12",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Properties": {
+      "CachedDescription": "LockerInteractor is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "LockerInteractor"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "If Found Locker",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Chasing:BTComposite_Selector_4'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_24",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Properties": {
+      "CachedDescription": "IsDummyAttackEnabled is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "IsDummyAttackEnabled"
+      },
+      "NodeName": "Is Dummy Attack Enabled",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Chasing:BTComposite_Selector_22'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CanRunSkill",
+    "Name": "BTDecorator_CanRunSkill_0",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTDecorator_CanRunSkill'",
+    "Properties": {
+      "Context": {
+        "TagName": "AI.Skills.Contexts.Task.Slasher.AttackTarget"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "If Can Run Attack Skill Task",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Chasing:BTComposite_Selector_22'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ConeCheck",
+    "Name": "BTDecorator_ConeCheck_0",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTDecorator_ConeCheck'",
+    "Properties": {
+      "ConeHalfAngle": 30.0,
+      "ConeOrigin": {
+        "SelectedKeyName": "SelfActor"
+      },
+      "ConeDirection": {},
+      "Observed": {
+        "SelectedKeyName": "HostileStimulusNavLocation"
+      },
+      "NodeName": "If Aligned Enough",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Chasing:BTComposite_Selector_22'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ConeCheck",
+    "Name": "BTDecorator_ConeCheck_1",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTDecorator_ConeCheck'",
+    "Properties": {
+      "ConeHalfAngle": 30.0,
+      "ConeOrigin": {
+        "SelectedKeyName": "SelfActor"
+      },
+      "ConeDirection": {},
+      "Observed": {
+        "SelectedKeyName": "HostileStimulusNavLocation"
+      },
+      "NodeName": "If Aligned Enough",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Chasing:BTComposite_Selector_22'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ExtIsAtLocation",
+    "Name": "BTDecorator_ExtIsAtLocation_1",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTDecorator_ExtIsAtLocation'",
+    "Properties": {
+      "BBLoc": {
+        "SelectedKeyName": "HostileStimulusNavLocation"
+      },
+      "AcceptableRadius": {
+        "DefaultValue": 100.0,
+        "TunableName": "DummyAttackDistance"
+      },
+      "NodeName": "Is Near Enough",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Chasing:BTComposite_Selector_22'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ExtIsAtLocation",
+    "Name": "BTDecorator_ExtIsAtLocation_3",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTDecorator_ExtIsAtLocation'",
+    "Properties": {
+      "BBLoc": {
+        "SelectedKeyName": "HostileStimulusNavLocation"
+      },
+      "AcceptableRadius": {
+        "DefaultValue": 100.0,
+        "TunableName": "AttackDistance"
+      },
+      "NodeName": "Is Near Enough",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Chasing:BTComposite_Selector_22'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_HasDynamicSubtree",
+    "Name": "BTDecorator_HasDynamicSubtree_0",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTDecorator_HasDynamicSubtree'",
+    "Properties": {
+      "InjectTag": {
+        "TagName": "AI.Skills.Contexts.Service.Slasher.AttackTarget"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "Has Attack Target Dynamic Subtree",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Chasing:BTComposite_Selector_8'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_7",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTDecorator_IsAtLocation'",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "LockerLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_Chasing:BTComposite_SimpleParallel_7'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsCamperState",
+    "Name": "BTDecorator_IsCamperState_1",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTDecorator_IsCamperState'",
+    "Properties": {
+      "BBCamper": {
+        "SelectedKeyName": "HostileStimulusActor"
+      },
+      "DamageState": "ECamperDamageState::VE_KO",
+      "DamageOp": "EArithmeticKeyOperation::Less",
+      "ImmobilizeState": "EImmobilizedState::VE_Hiding",
+      "ImmobilizeOp": "EArithmeticKeyOperation::NotEqual",
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "If Camper Is Standing And Not Hiding",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Chasing:BTComposite_Selector_16'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsCamperState",
+    "Name": "BTDecorator_IsCamperState_2",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTDecorator_IsCamperState'",
+    "Properties": {
+      "BBCamper": {
+        "SelectedKeyName": "HostileStimulusActor"
+      },
+      "DamageState": "ECamperDamageState::VE_KO",
+      "DamageOp": "EArithmeticKeyOperation::Less",
+      "ImmobilizeState": "EImmobilizedState::VE_Hiding",
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "If Camper is Hiding",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Chasing:BTComposite_Selector_16'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsTunable",
+    "Name": "BTDecorator_IsTunable_2",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTDecorator_IsTunable'",
+    "Properties": {
+      "Operator": "ETunableComparison::NotEqual",
+      "TunableValue": {
+        "DefaultValue": 1.0,
+        "TunableName": "RegularAttackChance"
+      },
+      "CompareToValue": 1.0,
+      "NodeName": "Has Tutorial Dummy Attack Chance",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Chasing:BTComposite_Selector_22'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Loop",
+    "Name": "BTDecorator_Loop_0",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTDecorator_Loop'",
+    "Properties": {
+      "bInfiniteLoop": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Chasing:BTComposite_Selector_16'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Loop",
+    "Name": "BTDecorator_Loop_8",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTDecorator_Loop'",
+    "Properties": {
+      "bInfiniteLoop": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Chasing:BTComposite_Selector_16'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.1"
+      }
+    }
+  },
+  {
+    "Type": "BTService_FindInteractor_Locker",
+    "Name": "BTService_FindInteractor_Locker_1",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTService_FindInteractor_Locker'",
+    "Properties": {
+      "StatusFilter": "EFindInteractableLockerStatusFilter::Occupied",
+      "BBOnlyFromActor": {},
+      "RejectAboveRange": 200.0,
+      "BBInteractLocation": {
+        "SelectedKeyName": "LockerLocation"
+      },
+      "BBInteractorObj": {
+        "SelectedKeyName": "LockerInteractor"
+      },
+      "BBUnsafeActionID": {},
+      "BBUnsafeActionUsesItemAddons": {
+        "SelectedKeyName": "IsCarrying"
+      },
+      "BBUnsafeActionIsSelfInteraction": {
+        "SelectedKeyName": "IsCarrying"
+      },
+      "BBUnsafeActionRange": {
+        "SelectedKeyName": "StartInvestigationTime"
+      },
+      "SearchInterval": 4.60255E-40,
+      "BBObject": {},
+      "GoalBasicWeight": {
+        "TunableName": "GeneratorLocation"
+      },
+      "ParentNode": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      }
+    }
+  },
+  {
+    "Type": "BTService_PushObjectFocus",
+    "Name": "BTService_PushObjectFocus_3",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTService_PushObjectFocus'",
+    "Properties": {
+      "BBFocusObj": {
+        "SelectedKeyName": "HostileStimulusActor"
+      },
+      "NodeName": "Focus On Stimulus Actor",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Chasing:BTComposite_Selector_16'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.1"
+      }
+    }
+  },
+  {
+    "Type": "BTService_PushObjectFocus",
+    "Name": "BTService_PushObjectFocus_4",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTService_PushObjectFocus'",
+    "Properties": {
+      "BBFocusObj": {
+        "SelectedKeyName": "LockerInteractor"
+      },
+      "NodeName": "Focus On Locker Interactor",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_Chasing:BTComposite_SimpleParallel_7'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.6"
+      }
+    }
+  },
+  {
+    "Type": "BTService_RunSkills",
+    "Name": "BTService_RunSkills_1",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTService_RunSkills'",
+    "Properties": {
+      "Context": {
+        "TagName": "AI.Skills.Contexts.Service.Slasher.AttackTarget"
+      },
+      "NodeName": "Run Attack Skill Service",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Chasing:BTComposite_Selector_8'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.4"
+      }
+    }
+  },
+  {
+    "Type": "BTService_SetBBEntry",
+    "Name": "BTService_SetBBEntry_5",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTService_SetBBEntry'",
+    "Properties": {
+      "BBToSetKey": {
+        "SelectedKeyName": "IsDummyAttackEnabled"
+      },
+      "ToSetValue": "1",
+      "When": "EAINodeRelevancyOptions::OnEnterAndExit",
+      "NodeName": "Enable Dummy Attack",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Chasing:BTComposite_Selector_22'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.2"
+      }
+    }
+  },
+  {
+    "Type": "BTService_SetBBEntry",
+    "Name": "BTService_SetBBEntry_6",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTService_SetBBEntry'",
+    "Properties": {
+      "BBToSetKey": {
+        "SelectedKeyName": "IsDummyAttackEnabled"
+      },
+      "ToSetValue": "1",
+      "When": "EAINodeRelevancyOptions::OnEnterAndExit",
+      "NodeName": "Enable Dummy Attack",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Chasing:BTComposite_Selector_22'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.2"
+      }
+    }
+  },
+  {
+    "Type": "BTService_SetBBEntry",
+    "Name": "BTService_SetBBEntry_7",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTService_SetBBEntry'",
+    "Properties": {
+      "BBToSetKey": {
+        "SelectedKeyName": "IsDummyAttackEnabled"
+      },
+      "ToSetValue": "0",
+      "RandomSetChance": {
+        "TunableName": "RegularAttackChance"
+      },
+      "When": "EAINodeRelevancyOptions::OnExit",
+      "NodeName": "Disable Dummy Attack",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Chasing:BTComposite_Selector_22'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ExtMoveTo",
+    "Name": "BTTask_ExtMoveTo_5",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTTask_ExtMoveTo'",
+    "Properties": {
+      "BBStrafeFocus": {
+        "SelectedKeyName": "HostileStimulusOriginLocation"
+      },
+      "StrafeFocus": "EExtMoveToStrafeFocusOptions::EExtMoveToStrafeFocusOptions_MAX",
+      "EndMoveStrafeFocusPrecisionAngle": 5.0,
+      "BBIgnoreGroupAvoidance": {
+        "SelectedKeyName": "HostileStimulusActor"
+      },
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "HostileStimulusNavLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_Chasing:BTComposite_SimpleParallel_6'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ExtMoveTo",
+    "Name": "BTTask_ExtMoveTo_6",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTTask_ExtMoveTo'",
+    "Properties": {
+      "BBStrafeFocus": {
+        "SelectedKeyName": "LockerInteractor"
+      },
+      "StrafeFocus": "EExtMoveToStrafeFocusOptions::EExtMoveToStrafeFocusOptions_MAX",
+      "IntermittentOnStrafeFocusInterval": 2.0,
+      "IntermittentOnStrafeFocusDeviation": 0.5,
+      "IntermittentOffStrafeFocusInterval": 4.0,
+      "IntermittentOffStrafeFocusDeviation": 1.0,
+      "EndMoveStrafeFocusPrecisionAngle": 10.0,
+      "BBIgnoreGroupAvoidance": {
+        "SelectedKeyName": "HostileStimulusActor"
+      },
+      "AcceptableRadius": 10.0,
+      "bReachTestIncludesAgentRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "LockerLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_Chasing:BTComposite_SimpleParallel_7'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_InputPress",
+    "Name": "BTTask_InputPress_0",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTTask_InputPress'",
+    "Properties": {
+      "Input": "EPawnInputPressTypes::Attack",
+      "Services": [
+        {
+          "ObjectName": "BTService_SetBBEntry'BT_Slasher_Chasing:BTService_SetBBEntry_6'",
+          "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.26"
+        }
+      ],
+      "NodeName": "Basic Attack",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Chasing:BTComposite_Selector_22'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_InputPress",
+    "Name": "BTTask_InputPress_5",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTTask_InputPress'",
+    "Properties": {
+      "Input": "EPawnInputPressTypes::Attack",
+      "Services": [
+        {
+          "ObjectName": "BTService_SetBBEntry'BT_Slasher_Chasing:BTService_SetBBEntry_7'",
+          "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.27"
+        }
+      ],
+      "NodeName": "Dummy Attack",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Chasing:BTComposite_Selector_22'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Interact",
+    "Name": "BTTask_Interact_2",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTTask_Interact'",
+    "Properties": {
+      "BBInteractorObj": {
+        "SelectedKeyName": "LockerInteractor"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_Chasing:BTComposite_SimpleParallel_7'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehaviorDynamic",
+    "Name": "BTTask_RunBehaviorDynamic_2",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTTask_RunBehaviorDynamic'",
+    "Properties": {
+      "InjectionTag": {
+        "TagName": "AI.Skills.Contexts.Service.Slasher.AttackTarget"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Chasing:BTComposite_Selector_8'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunSkills",
+    "Name": "BTTask_RunSkills_0",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTTask_RunSkills'",
+    "Properties": {
+      "Context": {
+        "TagName": "AI.Skills.Contexts.Task.Slasher.AttackTarget"
+      },
+      "Services": [
+        {
+          "ObjectName": "BTService_SetBBEntry'BT_Slasher_Chasing:BTService_SetBBEntry_5'",
+          "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.25"
+        }
+      ],
+      "NodeName": "Special Attack, Including Lunge",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Chasing:BTComposite_Selector_22'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_Slasher_Chasing",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Properties": {
+      "WaitTime": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Chasing'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_Chasing:BTComposite_Selector_16'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Chasing.1"
+      }
+    }
+  }
+]
