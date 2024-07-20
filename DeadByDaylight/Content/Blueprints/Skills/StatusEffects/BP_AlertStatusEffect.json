@@ -1,0 +1,761 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_AlertStatusEffect_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_AlertStatusEffect_C:ExecuteUbergraph_BP_AlertStatusEffect'",
+        "ObjectPath": "/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.2"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ActivateOnEventTimedStatusEffect'",
+      "ObjectPath": "/Script/DBDCompetence"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_AlertStatusEffect_C:OnInitialized'",
+        "ObjectPath": "/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.4"
+      },
+      {
+        "ObjectName": "Function'BP_AlertStatusEffect_C:OnApplyBegin'",
+        "ObjectPath": "/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.3"
+      },
+      {
+        "ObjectName": "Function'BP_AlertStatusEffect_C:ExecuteUbergraph_BP_AlertStatusEffect'",
+        "ObjectPath": "/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.2"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_AlertStatusEffect": {
+        "ObjectName": "Function'BP_AlertStatusEffect_C:ExecuteUbergraph_BP_AlertStatusEffect'",
+        "ObjectPath": "/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.2"
+      },
+      "OnApplyBegin": {
+        "ObjectName": "Function'BP_AlertStatusEffect_C:OnApplyBegin'",
+        "ObjectPath": "/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.3"
+      },
+      "OnInitialized": {
+        "ObjectName": "Function'BP_AlertStatusEffect_C:OnInitialized'",
+        "ObjectPath": "/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.4"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_AlertStatusEffect_C'Default__BP_AlertStatusEffect_C'",
+      "ObjectPath": "/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_AlertStatusEffect_C",
+    "Name": "Default__BP_AlertStatusEffect_C",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.BP_AlertStatusEffect_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "_activationStrategyClass": {
+        "ObjectName": "Class'ActivateOnEventInstigatorActivationStrategy'",
+        "ObjectPath": "/Script/DBDCompetence"
+      },
+      "_eventsToActivateOn": [
+        "GameEvent.DestroyBreakable.Start",
+        "GameEvent.DestroyBreakableWithPower.Start",
+        "GameEvent.Slasher.DamageGenerator.Kick.Start"
+      ]
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_AlertStatusEffect",
+    "Outer": "BP_AlertStatusEffect_C",
+    "Class": "UScriptClass'Function'",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOriginatingPlayer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DBDPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "Temp_struct_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "Temp_struct_Variable",
+          "Flags": "RF_Public",
+          "ElementSize": 56,
+          "Struct": {
+            "ObjectName": "Class'AkExternalSourceInfo'",
+            "ObjectPath": "/Script/AkAudio"
+          }
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsLocallyObserved_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "Temp_delegate_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "PropertyFlags": "ConstParm",
+        "SignatureFunction": {
+          "ObjectName": "Class'OnAkPostEventCallback__DelegateSignature'",
+          "ObjectPath": "/Script/AkAudio"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_PostEvent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOriginatingPlayer_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DBDPlayer'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsLocallyObserved_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_ComputedJump",
+        "StatementIndex": 0,
+        "OffsetExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_AlertStatusEffect_C:ExecuteUbergraph_BP_AlertStatusEffect'",
+              "ObjectPath": "/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.2"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "EntryPoint",
+              "Flags": "RF_Public",
+              "ElementSize": 4,
+              "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 10,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_AlertStatusEffect_C:ExecuteUbergraph_BP_AlertStatusEffect'",
+              "ObjectPath": "/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.2"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_GetOriginatingPlayer_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyClass": {
+                "ObjectName": "Class'DBDPlayer'",
+                "ObjectPath": "/Script/DeadByDaylight"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'StatusEffect:GetOriginatingPlayer'",
+            "ObjectPath": "/Script/DeadByDaylight"
+          },
+          "Parameters": []
+        }
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 30,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_AlertStatusEffect_C:ExecuteUbergraph_BP_AlertStatusEffect'",
+              "ObjectPath": "/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.2"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_IsLocallyObserved_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_AlertStatusEffect_C:ExecuteUbergraph_BP_AlertStatusEffect'",
+                "ObjectPath": "/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.2"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "CallFunc_GetOriginatingPlayer_ReturnValue",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'DBDPlayer'",
+                  "ObjectPath": "/Script/DeadByDaylight"
+                }
+              }
+            }
+          },
+          "Offset": 14,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'BP_AlertStatusEffect_C:ExecuteUbergraph_BP_AlertStatusEffect'",
+              "ObjectPath": "/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.2"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_IsLocallyObserved_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_VirtualFunction",
+            "Function": "IsLocallyObserved",
+            "Parameters": []
+          }
+        }
+      },
+      {
+        "Inst": "EX_JumpIfNot",
+        "StatementIndex": 76,
+        "CodeOffset": 337,
+        "ObjectPath": "/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.ExecuteUbergraph_BP_AlertStatusEffect[337]",
+        "BooleanExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_AlertStatusEffect_C:ExecuteUbergraph_BP_AlertStatusEffect'",
+              "ObjectPath": "/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.2"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_IsLocallyObserved_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 90,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_AlertStatusEffect_C:ExecuteUbergraph_BP_AlertStatusEffect'",
+              "ObjectPath": "/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.2"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_GetOriginatingPlayer_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyClass": {
+                "ObjectName": "Class'DBDPlayer'",
+                "ObjectPath": "/Script/DeadByDaylight"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'StatusEffect:GetOriginatingPlayer'",
+            "ObjectPath": "/Script/DeadByDaylight"
+          },
+          "Parameters": []
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 110,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_AlertStatusEffect_C:ExecuteUbergraph_BP_AlertStatusEffect'",
+              "ObjectPath": "/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.2"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "CallFunc_PostEvent_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_ObjectConst",
+            "Value": {
+              "ObjectName": "Class'Default__AkGameplayStatics'",
+              "ObjectPath": "/Script/AkAudio"
+            }
+          },
+          "Offset": 54,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'BP_AlertStatusEffect_C:ExecuteUbergraph_BP_AlertStatusEffect'",
+              "ObjectPath": "/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.2"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "CallFunc_PostEvent_ReturnValue",
+              "Flags": "RF_Public",
+              "ElementSize": 4
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_FinalFunction",
+            "Function": {
+              "ObjectName": "Class'AkGameplayStatics:PostEvent'",
+              "ObjectPath": "/Script/AkAudio"
+            },
+            "Parameters": [
+              {
+                "Inst": "EX_ObjectConst",
+                "Value": {
+                  "ObjectName": "AkAudioEvent'AudioEvent_Perks_Alert'",
+                  "ObjectPath": "/Game/Audio/AudioEvents/Perks/AudioEvent_Perks_Alert.0"
+                }
+              },
+              {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'BP_AlertStatusEffect_C:ExecuteUbergraph_BP_AlertStatusEffect'",
+                    "ObjectPath": "/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.2"
+                  },
+                  "Property": {
+                    "Type": "ObjectProperty",
+                    "Name": "CallFunc_GetOriginatingPlayer_ReturnValue",
+                    "Flags": "RF_Public",
+                    "ElementSize": 8,
+                    "PropertyClass": {
+                      "ObjectName": "Class'DBDPlayer'",
+                      "ObjectPath": "/Script/DeadByDaylight"
+                    }
+                  }
+                }
+              },
+              {
+                "Inst": "EX_IntConst",
+                "Value": 0
+              },
+              {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'BP_AlertStatusEffect_C:ExecuteUbergraph_BP_AlertStatusEffect'",
+                    "ObjectPath": "/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.2"
+                  },
+                  "Property": {
+                    "Type": "DelegateProperty",
+                    "Name": "Temp_delegate_Variable",
+                    "Flags": "RF_Public",
+                    "ElementSize": 20,
+                    "PropertyFlags": "ConstParm",
+                    "SignatureFunction": {
+                      "ObjectName": "Class'OnAkPostEventCallback__DelegateSignature'",
+                      "ObjectPath": "/Script/AkAudio"
+                    }
+                  }
+                }
+              },
+              {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'BP_AlertStatusEffect_C:ExecuteUbergraph_BP_AlertStatusEffect'",
+                    "ObjectPath": "/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.2"
+                  },
+                  "Property": {
+                    "Type": "ArrayProperty",
+                    "Name": "Temp_struct_Variable",
+                    "Flags": "RF_Public",
+                    "ElementSize": 16,
+                    "PropertyFlags": "ConstParm | ReferenceParm",
+                    "Inner": {
+                      "Type": "StructProperty",
+                      "Name": "Temp_struct_Variable",
+                      "Flags": "RF_Public",
+                      "ElementSize": 56,
+                      "Struct": {
+                        "ObjectName": "Class'AkExternalSourceInfo'",
+                        "ObjectPath": "/Script/AkAudio"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "Inst": "EX_False"
+              },
+              {
+                "Inst": "EX_StringConst",
+                "Value": ""
+              }
+            ]
+          }
+        }
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 204,
+        "CodeOffset": 337,
+        "ObjectPath": "/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.ExecuteUbergraph_BP_AlertStatusEffect[337]"
+      },
+      {
+        "Inst": "EX_LetObj",
+        "StatementIndex": 209,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_AlertStatusEffect_C:ExecuteUbergraph_BP_AlertStatusEffect'",
+              "ObjectPath": "/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.2"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "CallFunc_GetOriginatingPlayer_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 8,
+              "PropertyClass": {
+                "ObjectName": "Class'DBDPlayer'",
+                "ObjectPath": "/Script/DeadByDaylight"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Class'StatusEffect:GetOriginatingPlayer'",
+            "ObjectPath": "/Script/DeadByDaylight"
+          },
+          "Parameters": []
+        }
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 229,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_AlertStatusEffect_C:ExecuteUbergraph_BP_AlertStatusEffect'",
+              "ObjectPath": "/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.2"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_IsLocallyObserved_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_Context",
+          "ObjectExpression": {
+            "Inst": "EX_LocalVariable",
+            "Variable": {
+              "Owner": {
+                "ObjectName": "Function'BP_AlertStatusEffect_C:ExecuteUbergraph_BP_AlertStatusEffect'",
+                "ObjectPath": "/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.2"
+              },
+              "Property": {
+                "Type": "ObjectProperty",
+                "Name": "CallFunc_GetOriginatingPlayer_ReturnValue_1",
+                "Flags": "RF_Public",
+                "ElementSize": 8,
+                "PropertyClass": {
+                  "ObjectName": "Class'DBDPlayer'",
+                  "ObjectPath": "/Script/DeadByDaylight"
+                }
+              }
+            }
+          },
+          "Offset": 14,
+          "RValuePointer": {
+            "Owner": {
+              "ObjectName": "Function'BP_AlertStatusEffect_C:ExecuteUbergraph_BP_AlertStatusEffect'",
+              "ObjectPath": "/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.2"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_IsLocallyObserved_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          },
+          "ContextExpression": {
+            "Inst": "EX_VirtualFunction",
+            "Function": "IsLocallyObserved",
+            "Parameters": []
+          }
+        }
+      },
+      {
+        "Inst": "EX_JumpIfNot",
+        "StatementIndex": 275,
+        "CodeOffset": 337,
+        "ObjectPath": "/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.ExecuteUbergraph_BP_AlertStatusEffect[337]",
+        "BooleanExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_AlertStatusEffect_C:ExecuteUbergraph_BP_AlertStatusEffect'",
+              "ObjectPath": "/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.2"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "CallFunc_IsLocallyObserved_ReturnValue_1",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_FinalFunction",
+        "StatementIndex": 289,
+        "Function": {
+          "ObjectName": "Class'GameplayModifierContainer:SetFlag'",
+          "ObjectPath": "/Script/DeadByDaylight"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_StructConst",
+            "Struct": {
+              "ObjectName": "Class'GameplayTag'",
+              "ObjectPath": "/Script/GameplayTags"
+            },
+            "Properties": [
+              {
+                "Inst": "EX_NameConst",
+                "Value": "GameplayModifierFlag.Killer.RevealToSurvivors"
+              }
+            ]
+          },
+          {
+            "Inst": "EX_True"
+          }
+        ]
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 327,
+        "CodeOffset": 337,
+        "ObjectPath": "/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.ExecuteUbergraph_BP_AlertStatusEffect[337]"
+      },
+      {
+        "Inst": "EX_Jump",
+        "StatementIndex": 332,
+        "CodeOffset": 10,
+        "ObjectPath": "/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.ExecuteUbergraph_BP_AlertStatusEffect[10]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 337,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 339
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnApplyBegin",
+    "Outer": "BP_AlertStatusEffect_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Class'GameplayModifierContainer:OnApplyBegin'",
+      "ObjectPath": "/Script/DeadByDaylight"
+    },
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 0,
+        "Function": {
+          "ObjectName": "Function'BP_AlertStatusEffect_C:ExecuteUbergraph_BP_AlertStatusEffect'",
+          "ObjectPath": "/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.2"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 332
+          }
+        ],
+        "ObjectPath": "/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.ExecuteUbergraph_BP_AlertStatusEffect[332]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 15,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 17
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInitialized",
+    "Outer": "BP_AlertStatusEffect_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Class'GameplayModifierContainer:OnInitialized'",
+      "ObjectPath": "/Script/DeadByDaylight"
+    },
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 0,
+        "Function": {
+          "ObjectName": "Function'BP_AlertStatusEffect_C:ExecuteUbergraph_BP_AlertStatusEffect'",
+          "ObjectPath": "/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.2"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 209
+          }
+        ],
+        "ObjectPath": "/Game/Blueprints/Skills/StatusEffects/BP_AlertStatusEffect.ExecuteUbergraph_BP_AlertStatusEffect[209]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 15,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 17
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  }
+]

@@ -1,0 +1,148 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Slasher_BreakPallet",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_BreakPallet:BTComposite_SimpleParallel_0'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_BreakPallet.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Slasher'",
+        "ObjectPath": "/Game/AI/Slasher/BB_Slasher.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_0",
+    "Outer": "BT_Slasher_BreakPallet",
+    "Class": "UScriptClass'BTComposite_SimpleParallel'",
+    "Properties": {
+      "FinishMode": "EBTParallelMode::WaitForBackground",
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ExtMoveTo'BT_Slasher_BreakPallet:BTTask_ExtMoveTo_2'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_BreakPallet.4"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Interact'BT_Slasher_BreakPallet:BTTask_Interact_0'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_BreakPallet.5"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsAtLocation'BT_Slasher_BreakPallet:BTDecorator_IsAtLocation_13'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_BreakPallet.2"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_PushObjectFocus'BT_Slasher_BreakPallet:BTService_PushObjectFocus_11'",
+          "ObjectPath": "/Game/AI/Slasher/BT_Slasher_BreakPallet.3"
+        }
+      ],
+      "NodeName": "Break Pallet",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_BreakPallet'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_BreakPallet.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_13",
+    "Outer": "BT_Slasher_BreakPallet",
+    "Class": "UScriptClass'BTDecorator_IsAtLocation'",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "PalletLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_BreakPallet'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_BreakPallet.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_BreakPallet:BTComposite_SimpleParallel_0'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_BreakPallet.1"
+      }
+    }
+  },
+  {
+    "Type": "BTService_PushObjectFocus",
+    "Name": "BTService_PushObjectFocus_11",
+    "Outer": "BT_Slasher_BreakPallet",
+    "Class": "UScriptClass'BTService_PushObjectFocus'",
+    "Properties": {
+      "BBFocusObj": {
+        "SelectedKeyName": "PalletInteractor"
+      },
+      "NodeName": "Focus On Pallet Interactor",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_BreakPallet'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_BreakPallet.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_BreakPallet:BTComposite_SimpleParallel_0'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_BreakPallet.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ExtMoveTo",
+    "Name": "BTTask_ExtMoveTo_2",
+    "Outer": "BT_Slasher_BreakPallet",
+    "Class": "UScriptClass'BTTask_ExtMoveTo'",
+    "Properties": {
+      "BBStrafeFocus": {
+        "SelectedKeyName": "PalletInteractor"
+      },
+      "StrafeFocus": "EExtMoveToStrafeFocusOptions::NearFocus",
+      "EndMoveStrafeFocusPrecisionAngle": 10.0,
+      "BBIgnoreGroupAvoidance": {},
+      "AcceptableRadius": 10.0,
+      "bReachTestIncludesAgentRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PalletLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_BreakPallet'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_BreakPallet.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_BreakPallet:BTComposite_SimpleParallel_0'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_BreakPallet.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Interact",
+    "Name": "BTTask_Interact_0",
+    "Outer": "BT_Slasher_BreakPallet",
+    "Class": "UScriptClass'BTTask_Interact'",
+    "Properties": {
+      "BBInteractorObj": {
+        "SelectedKeyName": "PalletInteractor"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_BreakPallet'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_BreakPallet.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_BreakPallet:BTComposite_SimpleParallel_0'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_BreakPallet.1"
+      }
+    }
+  }
+]

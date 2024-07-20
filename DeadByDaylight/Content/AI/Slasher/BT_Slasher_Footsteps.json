@@ -1,0 +1,113 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Slasher_Footsteps",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_Footsteps:BTComposite_SimpleParallel_1'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Footsteps.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Slasher'",
+        "ObjectPath": "/Game/AI/Slasher/BB_Slasher.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_1",
+    "Outer": "BT_Slasher_Footsteps",
+    "Class": "UScriptClass'BTComposite_SimpleParallel'",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo'BT_Slasher_Footsteps:BTTask_MoveTo_0'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Footsteps.4"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ClearBBEntry'BT_Slasher_Footsteps:BTTask_ClearBBEntry_1'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Footsteps.3"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsAtLocation'BT_Slasher_Footsteps:BTDecorator_IsAtLocation_3'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Footsteps.2"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Footsteps'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Footsteps.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_3",
+    "Outer": "BT_Slasher_Footsteps",
+    "Class": "UScriptClass'BTDecorator_IsAtLocation'",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "FootstepLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Footsteps'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Footsteps.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_Footsteps:BTComposite_SimpleParallel_1'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Footsteps.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ClearBBEntry",
+    "Name": "BTTask_ClearBBEntry_1",
+    "Outer": "BT_Slasher_Footsteps",
+    "Class": "UScriptClass'BTTask_ClearBBEntry'",
+    "Properties": {
+      "BBToResetKey": {
+        "SelectedKeyName": "FootstepLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Footsteps'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Footsteps.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_Footsteps:BTComposite_SimpleParallel_1'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Footsteps.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_0",
+    "Outer": "BT_Slasher_Footsteps",
+    "Class": "UScriptClass'BTTask_MoveTo'",
+    "Properties": {
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "FootstepLocation"
+      },
+      "NodeName": "Move To Footsteps Location",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_Footsteps'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Footsteps.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_Footsteps:BTComposite_SimpleParallel_1'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_Footsteps.1"
+      }
+    }
+  }
+]

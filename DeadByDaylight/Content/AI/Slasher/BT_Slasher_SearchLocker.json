@@ -1,0 +1,273 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Slasher_SearchLocker",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_SearchLocker:BTComposite_SimpleParallel_2'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_SearchLocker.2"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Slasher'",
+        "ObjectPath": "/Game/AI/Slasher/BB_Slasher.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_Slasher_SearchLocker",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Interact'BT_Slasher_SearchLocker:BTTask_Interact_5'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_SearchLocker.9"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsInteractionAvailable'BT_Slasher_SearchLocker:BTDecorator_IsInteractionAvailable_0'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_SearchLocker.4"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Slasher_SearchLocker:BTTask_Wait_0'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_SearchLocker.10"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_SetCameraFocus'BT_Slasher_SearchLocker:BTService_SetCameraFocus_0'",
+          "ObjectPath": "/Game/AI/Slasher/BT_Slasher_SearchLocker.6"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_SearchLocker'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_SearchLocker.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_SearchLocker:BTComposite_SimpleParallel_2'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_SearchLocker.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_2",
+    "Outer": "BT_Slasher_SearchLocker",
+    "Class": "UScriptClass'BTComposite_SimpleParallel'",
+    "Properties": {
+      "FinishMode": "EBTParallelMode::WaitForBackground",
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ExtMoveTo'BT_Slasher_SearchLocker:BTTask_ExtMoveTo_11'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_SearchLocker.8"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Slasher_SearchLocker:BTComposite_Selector_0'",
+            "ObjectPath": "/Game/AI/Slasher/BT_Slasher_SearchLocker.1"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsAtLocation'BT_Slasher_SearchLocker:BTDecorator_IsAtLocation_0'",
+              "ObjectPath": "/Game/AI/Slasher/BT_Slasher_SearchLocker.3"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_PushObjectFocus'BT_Slasher_SearchLocker:BTService_PushObjectFocus_9'",
+          "ObjectPath": "/Game/AI/Slasher/BT_Slasher_SearchLocker.5"
+        },
+        {
+          "ObjectName": "BTService_SetFocusCooldown'BT_Slasher_SearchLocker:BTService_SetFocusCooldown_0'",
+          "ObjectPath": "/Game/AI/Slasher/BT_Slasher_SearchLocker.7"
+        }
+      ],
+      "NodeName": "Search Inside Locker",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_SearchLocker'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_SearchLocker.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_0",
+    "Outer": "BT_Slasher_SearchLocker",
+    "Class": "UScriptClass'BTDecorator_IsAtLocation'",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "LockerLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_SearchLocker'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_SearchLocker.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_SearchLocker:BTComposite_SimpleParallel_2'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_SearchLocker.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsInteractionAvailable",
+    "Name": "BTDecorator_IsInteractionAvailable_0",
+    "Outer": "BT_Slasher_SearchLocker",
+    "Class": "UScriptClass'BTDecorator_IsInteractionAvailable'",
+    "Properties": {
+      "InteractionIds": [
+        "Search"
+      ],
+      "OnFilter": "EIsInteractionAvailableOnFilter::Interactor",
+      "BBInteractor": {
+        "SelectedKeyName": "LockerInteractor"
+      },
+      "BBInputType": {},
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_SearchLocker'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_SearchLocker.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_SearchLocker:BTComposite_Selector_0'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_SearchLocker.1"
+      }
+    }
+  },
+  {
+    "Type": "BTService_PushObjectFocus",
+    "Name": "BTService_PushObjectFocus_9",
+    "Outer": "BT_Slasher_SearchLocker",
+    "Class": "UScriptClass'BTService_PushObjectFocus'",
+    "Properties": {
+      "BBFocusObj": {
+        "SelectedKeyName": "LockerInteractor"
+      },
+      "NodeName": "Focus On Locker Interactor",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_SearchLocker'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_SearchLocker.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_SearchLocker:BTComposite_SimpleParallel_2'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_SearchLocker.2"
+      }
+    }
+  },
+  {
+    "Type": "BTService_SetCameraFocus",
+    "Name": "BTService_SetCameraFocus_0",
+    "Outer": "BT_Slasher_SearchLocker",
+    "Class": "UScriptClass'BTService_SetCameraFocus'"
+  },
+  {
+    "Type": "BTService_SetFocusCooldown",
+    "Name": "BTService_SetFocusCooldown_0",
+    "Outer": "BT_Slasher_SearchLocker",
+    "Class": "UScriptClass'BTService_SetFocusCooldown'",
+    "Properties": {
+      "BBOnObject": {
+        "SelectedKeyName": "LockerInteractor"
+      },
+      "ContextName": "SearchLocker",
+      "Duration": 30.0,
+      "When": "EAINodeRelevancyOptions::OnExit",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_SearchLocker'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_SearchLocker.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_SearchLocker:BTComposite_SimpleParallel_2'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_SearchLocker.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ExtMoveTo",
+    "Name": "BTTask_ExtMoveTo_11",
+    "Outer": "BT_Slasher_SearchLocker",
+    "Class": "UScriptClass'BTTask_ExtMoveTo'",
+    "Properties": {
+      "BBStrafeFocus": {
+        "SelectedKeyName": "LockerInteractable"
+      },
+      "StrafeFocus": "EExtMoveToStrafeFocusOptions::EExtMoveToStrafeFocusOptions_MAX",
+      "StrafeNearFocusModeUnderDistance": 600.0,
+      "IntermittentOnStrafeFocusInterval": 2.0,
+      "IntermittentOnStrafeFocusDeviation": 0.5,
+      "IntermittentOffStrafeFocusInterval": 4.0,
+      "IntermittentOffStrafeFocusDeviation": 1.0,
+      "EndMoveStrafeFocusPrecisionAngle": 10.0,
+      "BBIgnoreGroupAvoidance": {},
+      "AcceptableRadius": 10.0,
+      "bReachTestIncludesAgentRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "LockerLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_SearchLocker'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_SearchLocker.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Slasher_SearchLocker:BTComposite_SimpleParallel_2'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_SearchLocker.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Interact",
+    "Name": "BTTask_Interact_5",
+    "Outer": "BT_Slasher_SearchLocker",
+    "Class": "UScriptClass'BTTask_Interact'",
+    "Properties": {
+      "BBInteractorObj": {
+        "SelectedKeyName": "LockerInteractor"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_SearchLocker'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_SearchLocker.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_SearchLocker:BTComposite_Selector_0'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_SearchLocker.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_Slasher_SearchLocker",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Properties": {
+      "WaitTime": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Slasher_SearchLocker'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_SearchLocker.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Slasher_SearchLocker:BTComposite_Selector_0'",
+        "ObjectPath": "/Game/AI/Slasher/BT_Slasher_SearchLocker.1"
+      }
+    }
+  }
+]
