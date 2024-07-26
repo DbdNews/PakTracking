@@ -1,0 +1,136 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "EQS_Investigation_Random",
+    "Class": "UScriptClass'EnvQuery'",
+    "Properties": {
+      "QueryName": "EQS_Investigation_Random",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption'EQS_Investigation_Random:EnvQueryOption_0'",
+          "ObjectPath": "/Game/AI/Slasher/EQS_Investigation_Random.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_SimpleGrid",
+    "Name": "EnvQueryGenerator_SimpleGrid_0",
+    "Outer": "EQS_Investigation_Random",
+    "Class": "UScriptClass'EnvQueryGenerator_SimpleGrid'",
+    "Properties": {
+      "GridSize": {
+        "DefaultValue": 900.0
+      },
+      "SpaceBetween": {
+        "DefaultValue": 300.0
+      },
+      "GenerateAround": {
+        "ObjectName": "Class'EnvQueryContext_InvestigationLocation'",
+        "ObjectPath": "/Script/DBDBots"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "NavigationFilter": {
+          "ObjectName": "BlueprintGeneratedClass'NavQueryFilter_Slasher_Default_C'",
+          "ObjectPath": "/Game/AI/Slasher/NavQueryFilter_Slasher_Default.0"
+        },
+        "SerializedChannel": "ECollisionChannel::ECC_Visibility"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_0",
+    "Outer": "EQS_Investigation_Random",
+    "Class": "UScriptClass'EnvQueryOption'",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_SimpleGrid'EQS_Investigation_Random:EnvQueryGenerator_SimpleGrid_0'",
+        "ObjectPath": "/Game/AI/Slasher/EQS_Investigation_Random.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_IsValidDestination'EQS_Investigation_Random:EnvQueryTest_IsValidDestination_0'",
+          "ObjectPath": "/Game/AI/Slasher/EQS_Investigation_Random.4"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance'EQS_Investigation_Random:EnvQueryTest_Distance_0'",
+          "ObjectPath": "/Game/AI/Slasher/EQS_Investigation_Random.3"
+        },
+        {
+          "ObjectName": "EnvQueryTest_LineOfSight'EQS_Investigation_Random:EnvQueryTest_LineOfSight_0'",
+          "ObjectPath": "/Game/AI/Slasher/EQS_Investigation_Random.5"
+        },
+        {
+          "ObjectName": "EnvQueryTest_PathfindingBatch'EQS_Investigation_Random:EnvQueryTest_PathfindingBatch_0'",
+          "ObjectPath": "/Game/AI/Slasher/EQS_Investigation_Random.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_0",
+    "Outer": "EQS_Investigation_Random",
+    "Class": "UScriptClass'EnvQueryTest_Distance'",
+    "Properties": {
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "FilterType": "EEnvTestFilterType::Minimum",
+      "FloatValueMin": {
+        "DefaultValue": 200.0
+      },
+      "ScoringFactor": {
+        "DefaultValue": -1.0
+      },
+      "VerNum": 2
+    }
+  },
+  {
+    "Type": "EnvQueryTest_IsValidDestination",
+    "Name": "EnvQueryTest_IsValidDestination_0",
+    "Outer": "EQS_Investigation_Random",
+    "Class": "UScriptClass'EnvQueryTest_IsValidDestination'",
+    "Properties": {
+      "VerNum": 2
+    }
+  },
+  {
+    "Type": "EnvQueryTest_LineOfSight",
+    "Name": "EnvQueryTest_LineOfSight_0",
+    "Outer": "EQS_Investigation_Random",
+    "Class": "UScriptClass'EnvQueryTest_LineOfSight'",
+    "Properties": {
+      "QuerierContext": null,
+      "ToContext": {
+        "ObjectName": "Class'EnvQueryContext_Querier'",
+        "ObjectPath": "/Script/AIModule"
+      },
+      "Invert": {
+        "DefaultValue": true
+      },
+      "EnableToContextAttachParent": {
+        "DefaultValue": false
+      },
+      "TestOrder": 2,
+      "VerNum": 2
+    }
+  },
+  {
+    "Type": "EnvQueryTest_PathfindingBatch",
+    "Name": "EnvQueryTest_PathfindingBatch_0",
+    "Outer": "EQS_Investigation_Random",
+    "Class": "UScriptClass'EnvQueryTest_PathfindingBatch'",
+    "Properties": {
+      "FilterClass": {
+        "ObjectName": "BlueprintGeneratedClass'NavQueryFilter_Slasher_Default_C'",
+        "ObjectPath": "/Game/AI/Slasher/NavQueryFilter_Slasher_Default.0"
+      },
+      "TestOrder": 3,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "VerNum": 2
+    }
+  }
+]
